@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <!-- ================================================================== -->
+    <!-- waits for a keypress fom the user -->
+    <window name="keygrabpopup">
+
+        <!-- darkens the entire background so that the popup is better readable -->
+        <shape name="darken_background">
+            <area>0,0,1280,720</area>
+            <type>box</type>
+            <fill color="#000000" alpha="127" />
+        </shape>
+
+        <shape name="keygrabpopup_background">
+            <area>390,260,500,200</area>
+            <type>roundbox</type>
+            <fill color="#000000" alpha="255" />
+            <line color="#FFFFFF" alpha="255" width="1" />
+            <cornerradius>2</cornerradius>
+        </shape>
+
+        <textarea name="message" from="base_textarea">
+            <area>410,280,460,100</area>
+            <multiline>yes</multiline>
+            <align>left,top</align>
+        </textarea>
+
+        <shape name="message_separator" from="base_separator_shape">
+            <area>410,380,460,1</area>
+        </shape>
+
+        <button name="cancel" from="base_button">
+            <position>475,400</position>
+        </button>
+
+        <button name="ok" from="base_button">
+            <position>655,400</position>
+        </button>
+    </window>
+
+
+    <!-- ================================================================== -->
+    <!-- allows the user to change the keyboard associations -->
+    <window name="controls">
+
+        <!-- the background image -->
+        <imagetype name="background">
+            <area>0,0,1280,720</area>
+            <filename>images/background.png</filename>
+        </imagetype>
+
+        <!-- The heading (name) of the screen -->
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Key Shortcuts</value>
+            </textarea>
+        </textarea>
+
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- this is the background around the covers  -->
+        <shape name="controls_background" from="base_background_shape">
+            <area>260,80,760,595</area>
+        </shape>
+
+        <textarea name="description" from="base_textarea">
+            <area>275,95,700,40</area>
+            <multiline>yes</multiline>
+            <align>left,vcenter</align>
+            <font>text</font>
+            <value>This screen displays the status of various system components</value>
+        </textarea>
+
+        <shape name="description_separator" from="base_separator_shape">
+            <area>275,150,720,1</area>
+        </shape>
+
+        <!-- the left configuration list with the text -->
+        <textarea name="leftdesc" from="base_textarea">
+            <area>275,155,350,30</area>
+            <value>Contexts</value>
+            <font>text_small</font>
+            <align>left,vcenter</align>
+        </textarea>
+
+        <buttonlist name="leftlist" from="base_buttonlist">
+            <area>275,185,350,400</area>
+            <showarrow>no</showarrow>
+        </buttonlist>
+
+        <!-- the right configuration list with the text -->
+        <textarea name="rightdesc" from="base_textarea">
+            <area>645,155,350,30</area>
+            <value>Actions</value>
+            <font>text_small</font>
+            <align>left,vcenter</align>
+        </textarea>
+
+        <buttonlist name="rightlist" from="base_buttonlist">
+            <area>645,185,350,400</area>
+        </buttonlist>
+
+        <shape name="button_separator" from="base_separator_shape">
+            <area>275,595,720,1</area>
+        </shape>
+
+        <!-- these four buttons show the assigned key on it.
+            If there is none assigned, its empty. -->
+        <button name="action_0" from="base_button">
+            <position>275,615</position>
+        </button>
+
+        <button name="action_1" from="base_button">
+            <position>465,615</position>
+        </button>
+
+        <button name="action_2" from="base_button">
+            <position>655,615</position>
+        </button>
+
+        <button name="action_3" from="base_button">
+            <position>845,615</position>
+        </button>
+
+    </window>
+
+
+</mythuitheme>

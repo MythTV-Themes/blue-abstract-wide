@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <!-- ================================================================== -->
+    <!-- this is the screen where the user can choose from the avialable
+        dvd formats where the recordings will be saved to. -->
+    <window name="selectdestination">
+
+        <!-- the background image -->
+        <imagetype name="background">
+            <area>0,0,1280,720</area>
+            <filename>images/background.png</filename>
+        </imagetype>
+
+        <!-- The heading (name) of the screen -->
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Select Destination</value>
+            </textarea>
+        </textarea>
+
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- destination selector -->
+        <shape name="topbackground" from="base_background_shape">
+            <area>280,150,705,460</area>
+        </shape>
+
+        <buttonlist name="destination_selector" from="base_selector_wide">
+            <position>300,170</position>
+        </buttonlist>
+        <textarea name="destination_text" from="base_textarea">
+            <area>300,220,1190,40</area>
+            <value>description goes here.</value>
+            <multiline>yes</multiline>
+        </textarea>
+
+        <textedit name="filename_edit" from="base_textedit">
+            <position>300,270</position>
+        </textedit>
+        <button name="find_button" from="base_button">
+            <position>690,270</position>
+            <value>Find</value>
+        </button>
+
+        <textarea name="freespace_label" from="base_textarea">
+            <area>300,320,160,40</area>
+            <align>right,vcenter</align>
+            <value>Free Space:</value>
+        </textarea>
+        <textarea name="freespace_text" from="base_textarea">
+            <area>470,320,200,40</area>
+            <value>0.00 GB</value>
+        </textarea>
+
+    <shape name="checkbox_separator" from="base_separator_shape">
+            <area>300,370,665,1</area>
+        </shape>
+
+        <textarea name="title" from="base_textarea">
+            <area>340,380,500,40</area>
+            <value>Make ISO Image</value>
+        </textarea>
+        <textarea name="burntodvdr_text" from="base_textarea">
+            <area>340,430,500,40</area>
+            <value>Burn to DVD</value>
+        </textarea>
+        <textarea name="erasedvdrw_text" from="base_textarea">
+            <area>340,480,500,40</area>
+            <value>Force Overwrite of DVD-RW Media</value>
+        </textarea>
+
+        <checkbox name="makeisoimage_check" from="base_checkbox">
+            <position>300,385</position>
+        </checkbox>
+        <checkbox name="burntodvdr_check" from="base_checkbox">
+            <position>300,435</position>
+        </checkbox>
+        <checkbox name="erasedvdrw_check" from="base_checkbox">
+            <position>300,485</position>
+        </checkbox>
+
+        <shape name="button_separator" from="base_separator_shape">
+            <area>300,530,665,1</area>
+        </shape>
+
+        <button name="cancel_button" from="base_button">
+            <position>300,550</position>
+            <value>Cancel</value>
+        </button>
+        <button name="prev_button" from="base_button">
+            <position>645,550</position>
+            <value>Previous</value>
+        </button>
+        <button name="next_button" from="base_button">
+            <position>815,550</position>
+            <value>Next</value>
+        </button>
+
+    </window>
+
+
+    <!-- ================================================================== -->
+    <!-- this is the screen where the user can select the avialable
+        recordings that will be saved to dvd. -->
+    <window name="recording_selector">
+
+        <!-- the background image -->
+        <imagetype name="background">
+            <area>0,0,1280,720</area>
+            <filename>images/background.png</filename>
+        </imagetype>
+
+        <!-- The heading (name) of the screen -->
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Select Recordings</value>
+            </textarea>
+        </textarea>
+
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- destination selector -->
+        <shape name="topbackground" from="base_background_shape">
+            <area>25,70,1230,347</area>
+        </shape>
+
+        <buttonlist name="category_selector" from="base_buttonlist">
+            <area>45,91,350,312</area>
+            <spacing>4</spacing>
+            <scrollstyle>top</scrollstyle>
+            <wrapstyle>items</wrapstyle>
+        </buttonlist>
+
+        <buttonlist name="recordinglist" from="base_buttonlist_very_wide">
+            <area>412,91,825,312</area>
+            <buttonarea>0,0,825,315</buttonarea>
+            <spacing>4</spacing>
+            <wrapstyle>captive</wrapstyle>
+        </buttonlist>
+
+        <!-- ================================================================== -->
+        <!-- this is the background for the information at the bottom -->
+        <shape name="bottom_background" from="base_background_shape">
+            <area>25,441,1230,255</area>
+        </shape>
+
+        <!-- the shape around the preview -->
+        <shape name="preview_shape" from="base_background_shape">
+            <area>45,465,355,208</area>
+        </shape>
+
+        <!-- the preview image or video itself -->
+        <imagetype name="preview_image">
+            <area>48,468,349,202</area>
+            <preserveaspect>yes</preserveaspect>
+        </imagetype>
+
+        <!-- the vertical separator -->
+        <shape name="recording_description_separator" from="base_separator_shape">
+            <area>419,455,1,225</area>
+        </shape>
+
+        <!-- shows the title and the plot of the selected video -->
+        <textarea name="progtitle" from="base_textarea">
+            <area>435,458,770,30</area>
+            <multiline>no</multiline>
+            <align>left,vcenter</align>
+            <cutdown>yes</cutdown>
+            <font>title</font>
+        </textarea>
+
+        <imagetype name="cutlist_image_off">
+            <position>1200,460</position>
+            <filename>images/shared/archive/cutlist.png</filename>
+            <alpha>55</alpha>
+        </imagetype>
+        <imagetype name="cutlist_image">
+            <position>1200,460</position>
+            <filename>images/shared/archive/cutlist.png</filename>
+            <alpha>255</alpha>
+        </imagetype>
+
+        <shape name="title_separator" from="base_separator_shape">
+            <area>420,502,818,1</area>
+        </shape>
+
+        <!-- show the plot of the recording -->
+        <textarea name="progdescription" from="base_textarea">
+            <area>435,523,805,100</area>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <align>left,top</align>
+            <template>%|"SUBTITLE|"% %|(ORIGINALAIRDATE|)% %STARS% %DESCRIPTION%</template>
+        </textarea>
+
+        <shape name="button_separator" from="base_separator_shape">
+            <area>420,636,475,1</area>
+        </shape>
+
+        <textarea name="filesize" from="base_textarea">
+            <area>440,646,110,40</area>
+            <font>text_small</font>
+            <cutdown>yes</cutdown>
+        </textarea>
+
+        <textarea name="progdatetime" from="base_textarea">
+            <area>570,646,280,40</area>
+            <cutdown>yes</cutdown>
+            <font>text_small</font>
+            <align>left,vcenter</align>
+        </textarea>
+
+        <button name="cancel_button" from="base_button">
+            <position>915,636</position>
+            <value>Cancel</value>
+        </button>
+        <button name="ok_button" from="base_button">
+            <position>1085,636</position>
+            <value>Ok</value>
+        </button>
+
+    </window>
+
+
+    <!-- ================================================================== -->
+    <!-- this is the screen where the user can select the
+        files from the harddisk that will be saved to dvd. -->
+    <window name="file_selector">
+
+        <!-- the background image -->
+        <imagetype name="background">
+            <area>0,0,1280,720</area>
+            <filename>images/background.png</filename>
+        </imagetype>
+
+        <!-- The heading (name) of the screen -->
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>File Finder</value>
+            </textarea>
+        </textarea>
+
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="topbackground" from="base_background_shape">
+            <area>290,75,690,600</area>
+        </shape>
+
+        <textedit name="location_edit" from="base_textedit">
+            <position>310,95</position>
+        </textedit>
+        <button name="back_button" from="base_button_narrow">
+            <position>800,95</position>
+            <imagetype name="folderimage">
+                <area>20,0,30,40</area>
+                <filename>images/shared/back.png</filename>
+                <preserveaspect>yes</preserveaspect>
+            </imagetype>
+        </button>
+        <button name="home_button" from="base_button_narrow">
+            <position>890,95</position>
+            <imagetype name="folderimage">
+                <area>20,0,30,40</area>
+                <filename>images/shared/folder_up_open.png</filename>
+                <preserveaspect>yes</preserveaspect>
+            </imagetype>
+        </button>
+
+        <shape name="search_separator" from="base_separator_shape">
+            <area>310,155,650,1</area>
+        </shape>
+
+        <buttonlist name="filelist" from="base_buttonlist_wide">
+            <area>310,175,650,409</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <imagetype name="buttonbackground" from="base_image_active">
+                        <filename>images/widgets/buttonlist_inactive_wide.png</filename>
+                    </imagetype>
+                    <imagetype name="folderimage">
+                        <area>7,0,30,40</area>
+                        <filename>images/shared/folder.png</filename>
+                        <preserveaspect>yes</preserveaspect>
+                    </imagetype>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>44,0,345,40</area>
+                        <align>left,vcenter</align>
+                        <cutdown>yes</cutdown>
+                    </textarea>
+                </state>
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selected">
+                        <filename>images/widgets/buttonlist_active_wide.png</filename>
+                        <!--<alphapulse min="160" max="255" change="2"/>-->
+                    </imagetype>
+                    <imagetype name="icon">
+                        <area>7,0,30,40</area>
+                        <filename>images/shared/folder_open.png</filename>
+                        <preserveaspect>yes</preserveaspect>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_inactive">
+                        <filename>images/widgets/buttonlist_active_wide.png</filename>
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <font>text_inactive</font>
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <shape name="button_separator" from="base_separator_shape">
+            <area>310,595,650,1</area>
+        </shape>
+
+        <button name="cancel_button" from="base_button">
+            <position>310,615</position>
+            <value>Cancel</value>
+        </button>
+        <button name="ok_button" from="base_button">
+            <position>810,615</position>
+            <value>Ok</value>
+        </button>
+
+    </window>
+
+
+    <!-- ================================================================== -->
+    <!-- this is the screen where the user can select the avialable
+        videos that will be saved to dvd. -->
+    <window name="video_selector">
+
+        <!-- the background image -->
+        <imagetype name="background">
+            <area>0,0,1280,720</area>
+            <filename>images/background.png</filename>
+        </imagetype>
+
+        <!-- The heading (name) of the screen -->
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Select Videos</value>
+            </textarea>
+        </textarea>
+
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- destination selector -->
+        <shape name="topbackground" from="base_background_shape">
+            <area>25,80,1230,347</area>
+        </shape>
+
+    <textarea name="warning_text" from="base_textarea">
+            <area>25,80,1230,347</area>
+            <align>allcenter</align>
+            <value>No videos available</value>
+        </textarea>
+
+        <buttonlist name="category_selector" from="base_buttonlist">
+            <area>45,101,350,312</area>
+            <spacing>4</spacing>
+            <scrollstyle>top</scrollstyle>
+            <wrapstyle>items</wrapstyle>
+        </buttonlist>
+
+        <buttonlist name="videolist" from="base_buttonlist_very_wide">
+            <area>412,101,825,312</area>
+            <buttonarea>0,0,825,315</buttonarea>
+            <spacing>4</spacing>
+            <wrapstyle>captive</wrapstyle>
+        </buttonlist>
+
+        <!-- ================================================================== -->
+        <!-- this is the background for the information at the bottom -->
+        <shape name="bottom_background" from="base_background_shape">
+            <area>25,455,1230,230</area>
+        </shape>
+
+        <shape name="cover_background" from="base_background_shape">
+            <area>45,475,130,190</area>
+        </shape>
+
+        <imagetype name="cover_image">
+            <area>46,477,128,186</area>
+            <filename />
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
+        <textarea name="videotitle" from="base_textarea">
+            <area>195,474,1040,30</area>
+            <multiline>no</multiline>
+            <font>title</font>
+            <align>left,vcenter</align>
+            <cutdown>yes</cutdown>
+        </textarea>
+
+        <shape name="title_separator" from="base_separator_shape">
+            <area>195,520,1040,1</area>
+        </shape>
+
+        <textarea name="videoplot" from="base_textarea">
+            <area>195,537,1040,100</area>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <align>left,top</align>
+        </textarea>
+
+        <shape name="button_separator" from="base_separator_shape">
+            <area>195,626,700,1</area>
+        </shape>
+
+        <textarea name="filesize" from="base_textarea">
+            <area>195,636,100,40</area>
+            <font>text_small</font>
+            <cutdown>yes</cutdown>
+            <value>x.xx Gb</value>
+        </textarea>
+        <textarea name="label" from="base_textarea">
+            <area>330,636,60,40</area>
+            <align>right,vcenter</align>
+            <value>PL:</value>
+        </textarea>
+        <textarea name="parentallevel_text" from="base_textarea">
+            <area>400,636,60,40</area>
+            <align>left,vcenter</align>
+            <value>?</value>
+        </textarea>
+
+        <button name="cancel_button" from="base_button">
+            <position>915,626</position>
+            <value>Cancel</value>
+        </button>
+        <button name="ok_button" from="base_button">
+            <position>1085,626</position>
+            <value>Ok</value>
+        </button>
+
+    </window>
+
+
+    <!-- ================================================================== -->
+    <!-- this is the screen shows the logs of the dvd creation -->
+    <window name="logviewer">
+
+        <!-- the background image -->
+        <imagetype name="background">
+            <area>0,0,1280,720</area>
+            <filename>images/background.png</filename>
+        </imagetype>
+
+        <!-- The heading (name) of the screen -->
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Log Viewer</value>
+            </textarea>
+        </textarea>
+
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="topbackground" from="base_background_shape">
+            <area>25,70,1230,437</area>
+        </shape>
+        <buttonlist name="loglist" from="base_buttonlist_extra_wide">
+            <area>45,90,1190,404</area>
+            <spacing>4</spacing>
+            <wrapstyle>items</wrapstyle>
+        </buttonlist>
+
+
+        <shape name="bottombackground" from="base_background_shape">
+            <area>25,532,1230,160</area>
+        </shape>
+
+        <textarea name="logitem_text" from="base_textarea">
+            <area>45,553,1190,120</area>
+            <align>left,top</align>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+        </textarea>
+
+        <shape name="button_separator" from="base_separator_shape">
+            <area>45,615,1190,1</area>
+        </shape>
+
+        <button name="cancel_button" from="base_button">
+            <position>395,635</position>
+            <value>Cancel</value>
+        </button>
+        <button name="update_button" from="base_button">
+            <position>565,635</position>
+            <value>Update</value>
+        </button>
+        <button name="exit_button" from="base_button">
+            <position>735,635</position>
+            <value>Exit</value>
+        </button>
+
+    </window>
+
+</mythuitheme>

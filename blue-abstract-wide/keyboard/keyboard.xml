@@ -1,0 +1,446 @@
+<mythuitheme>
+
+    <window name="keyboard">
+        <area>-1,-1,580,165</area>
+
+		<!-- the background image of the popup dialog box -->
+		<shape name="popup_background">
+			<area>10,10,685,270</area>
+			<type>roundbox</type>
+			<fill color="#000000" alpha="255" />
+			<line color="#999999" alpha="255" width="1" />
+            <cornerradius>2</cornerradius>
+        </shape>
+
+        <!-- top row -->
+        <button name="key_1">
+            <position>26,29</position>
+            <statetype name="buttonstate">
+                <state name="active">
+					<imagetype name="background" from="base_image_active">
+						<position>0,0</position>
+						<filename>images/widgets/button_inactive_very_narrow.png</filename>
+                	</imagetype>
+                    <textarea name="text" from="base_textarea">
+                        <area>0,0,40,40</area>
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+                <state name="selected" from="active">
+					<imagetype name="background" from="base_image_selected">
+						<position>0,0</position>
+						<filename>images/widgets/button_active_very_narrow.png</filename>
+                	</imagetype>
+                </state>
+                <state name="disabled" from="active" />
+                <state name="pushed" from="selected">
+					<imagetype name="background">
+						<position>0,0</position>
+						<filename>images/widgets/button_active_very_narrow.png</filename>
+						<alpha>200</alpha>
+                	</imagetype>
+				</state>
+            </statetype>
+        </button>
+
+        <button name="key_2" from="key_1">
+            <position>73,29</position>
+        </button>
+        <button name="key_3" from="key_1">
+            <position>120,29</position>
+        </button>
+        <button name="key_4" from="key_1">
+            <position>167,29</position>
+        </button>
+        <button name="key_5" from="key_1">
+            <position>214,29</position>
+        </button>
+        <button name="key_6" from="key_1">
+            <position>261,29</position>
+        </button>
+        <button name="key_7" from="key_1">
+            <position>308,29</position>
+        </button>
+        <button name="key_8" from="key_1">
+            <position>355,29</position>
+        </button>
+        <button name="key_9" from="key_1">
+            <position>402,29</position>
+        </button>
+        <button name="key_0" from="key_1">
+            <position>449,29</position>
+        </button>
+        <button name="key_-" from="key_1">
+            <position>496,29</position>
+        </button>
+        <button name="key_=" from="key_1">
+            <position>543,29</position>
+        </button>
+        <button name="key_#" from="key_1">
+            <position>590,29</position>
+        </button>
+        <button name="key_`" from="key_1">
+            <position>637,29</position>
+        </button>
+
+        <!-- row 2 -->
+        <button name="key_q" from="key_1">
+            <!--<position>31,77</position>-->
+			<position>41,77</position>
+        </button>
+        <button name="key_w" from="key_1">
+            <position>88,77</position>
+        </button>
+        <button name="key_e" from="key_1">
+            <position>135,77</position>
+        </button>
+        <button name="key_r" from="key_1">
+            <position>182,77</position>
+        </button>
+        <button name="key_t" from="key_1">
+            <position>229,77</position>
+        </button>
+        <button name="key_y" from="key_1">
+            <position>276,77</position>
+        </button>
+        <button name="key_u" from="key_1">
+            <position>323,77</position>
+        </button>
+        <button name="key_i" from="key_1">
+            <position>370,77</position>
+        </button>
+        <button name="key_o" from="key_1">
+            <position>417,77</position>
+        </button>
+        <button name="key_p" from="key_1">
+            <position>464,77</position>
+        </button>
+        <button name="key_[" from="key_1">
+            <position>511,77</position>
+        </button>
+        <button name="key_]" from="key_1">
+            <position>558,77</position>
+        </button>
+
+        <!-- row 3 -->
+        <button name="key_a" from="key_1">
+            <!--<position>43,125</position>-->
+			<position>56,125</position>
+        </button>
+        <button name="key_s" from="key_1">
+            <position>103,125</position>
+        </button>
+        <button name="key_d" from="key_1">
+            <position>150,125</position>
+        </button>
+        <button name="key_f" from="key_1">
+            <position>197,125</position>
+        </button>
+        <button name="key_g" from="key_1">
+            <position>244,125</position>
+        </button>
+        <button name="key_h" from="key_1">
+            <position>291,125</position>
+        </button>
+        <button name="key_j" from="key_1">
+            <position>338,125</position>
+        </button>
+        <button name="key_k" from="key_1">
+            <position>385,125</position>
+        </button>
+        <button name="key_l" from="key_1">
+            <position>432,125</position>
+        </button>
+        <button name="key_;" from="key_1">
+            <position>479,125</position>
+        </button>
+        <button name="key_'" from="key_1">
+            <position>526,125</position>
+        </button>
+
+        <!-- row 4 -->
+        <button name="key_\" from="key_1">
+            <position>25,173</position>
+        </button>
+        <button name="key_z" from="key_1">
+            <position>72,173</position>
+        </button>
+        <button name="key_x" from="key_1">
+            <position>119,173</position>
+        </button>
+        <button name="key_c" from="key_1">
+            <position>166,173</position>
+        </button>
+        <button name="key_v" from="key_1">
+            <position>213,173</position>
+        </button>
+        <button name="key_b" from="key_1">
+            <position>260,173</position>
+        </button>
+        <button name="key_n" from="key_1">
+            <position>307,173</position>
+        </button>
+        <button name="key_m" from="key_1">
+            <position>354,173</position>
+        </button>
+        <button name="key_," from="key_1">
+            <position>401,173</position>
+        </button>
+        <button name="key_." from="key_1">
+            <position>448,173</position>
+        </button>
+        <button name="key_/" from="key_1">
+            <position>495,173</position>
+        </button>
+
+        <!-- special keys -->
+        <button name="key_lshift">
+            <position>30,221</position>
+			<statetype name="buttonstate">
+				<state name="active">
+					<imagetype name="background" from="base_image_active">
+						<position>0,0</position>
+						<filename>images/widgets/button_inactive_very_narrow.png</filename>
+					</imagetype>
+					<textarea name="text" from="base_textarea">
+						<area>0,0,70,40</area>
+						<align>allcenter</align>
+					</textarea>
+				</state>
+				<state name="selected" from="active">
+					<imagetype name="background" from="base_image_selected">
+						<position>0,0</position>
+						<filename>images/widgets/button_active_very_narrow.png</filename>
+					</imagetype>
+				</state>
+				<state name="disabled" from="active" />
+				<state name="pushed" from="selected">
+					<imagetype name="background">
+						<position>0,0</position>
+						<filename>images/widgets/button_active_very_narrow.png</filename>
+						<alpha>200</alpha>
+					</imagetype>
+				</state>
+            </statetype>
+        </button>
+
+
+		<button name="key_lock">
+            <position>77,221</position>
+			<statetype name="buttonstate">
+				<state name="active">
+					<imagetype name="background" from="base_image_active">
+						<position>0,0</position>
+						<filename>images/widgets/button_inactive_narrow.png</filename>
+					</imagetype>
+					<textarea name="text" from="base_textarea">
+						<area>0,0,70,40</area>
+						<align>allcenter</align>
+					</textarea>
+				</state>
+				<state name="selected" from="active">
+					<imagetype name="background" from="base_image_selected">
+						<position>0,0</position>
+						<filename>images/widgets/button_active_narrow.png</filename>
+					</imagetype>
+				</state>
+				<state name="disabled" from="active" />
+				<state name="pushed" from="selected">
+					<imagetype name="background">
+						<position>0,0</position>
+						<filename>images/widgets/button_active_narrow.png</filename>
+						<alpha>200</alpha>
+					</imagetype>
+				</state>
+            </statetype>
+        </button>
+
+		<!-- row 5 -->
+		<button name="key_space">
+			<position>154,221</position>
+			<statetype name="buttonstate">
+				<state name="active">
+					<imagetype name="background" from="base_image_active">
+						<position>0,0</position>
+						<filename>images/widgets/button_inactive_wide.png</filename>
+					</imagetype>
+					<textarea name="text" from="base_textarea">
+						<area>0,0,150,40</area>
+						<align>allcenter</align>
+						<value>Space</value>
+					</textarea>
+				</state>
+				<state name="selected" from="active">
+					<imagetype name="background" from="base_image_selected">
+						<position>0,0</position>
+						<filename>images/widgets/button_active_wide.png</filename>
+					</imagetype>
+				</state>
+				<state name="disabled" from="active" />
+				<state name="pushed" from="selected">
+					<imagetype name="background">
+						<position>0,0</position>
+						<filename>images/widgets/button_active_wide.png</filename>
+						<alpha>200</alpha>
+					</imagetype>
+				</state>
+			</statetype>
+        </button>
+
+		<button name="key_alt" from="key_lock">
+			<position>461,221</position>
+        </button>
+
+		<button name="key_moveleft">
+            <position>538,221</position>
+			<statetype name="buttonstate">
+				<state name="active">
+					<imagetype name="background" from="base_image_active">
+						<position>0,0</position>
+						<filename>images/widgets/button_inactive_very_narrow.png</filename>
+					</imagetype>
+					<imagetype name="arrow" from="base_image_active">
+						<position>4,4</position>
+						<filename>images/widgets/keyboard/arrow_left.png</filename>
+					</imagetype>
+					<textarea name="text" from="base_textarea">
+						<area>0,0,70,40</area>
+						<align>allcenter</align>
+					</textarea>
+				</state>
+				<state name="selected" from="active">
+					<imagetype name="background" from="base_image_selected">
+						<position>0,0</position>
+						<filename>images/widgets/button_active_very_narrow.png</filename>
+					</imagetype>
+				</state>
+				<state name="disabled" from="active" />
+				<state name="pushed" from="selected">
+					<imagetype name="background">
+						<position>0,0</position>
+						<filename>images/widgets/button_active_very_narrow.png</filename>
+						<alpha>200</alpha>
+					</imagetype>
+				</state>
+            </statetype>
+        </button>
+
+
+        <button name="key_moveright">
+            <position>585,221</position>
+			<statetype name="buttonstate">
+				<state name="active">
+					<imagetype name="background" from="base_image_active">
+						<position>0,0</position>
+						<filename>images/widgets/button_inactive_very_narrow.png</filename>
+					</imagetype>
+					<imagetype name="arrow" from="base_image_active">
+						<position>4,4</position>
+						<filename>images/widgets/keyboard/arrow_right.png</filename>
+					</imagetype>
+					<textarea name="text" from="base_textarea">
+						<area>0,0,70,40</area>
+						<align>allcenter</align>
+					</textarea>
+				</state>
+				<state name="selected" from="active">
+					<imagetype name="background" from="base_image_selected">
+						<position>0,0</position>
+						<filename>images/widgets/button_active_very_narrow.png</filename>
+					</imagetype>
+				</state>
+				<state name="disabled" from="active" />
+				<state name="pushed" from="selected">
+					<imagetype name="background">
+						<position>0,0</position>
+						<filename>images/widgets/button_active_very_narrow.png</filename>
+						<alpha>200</alpha>
+					</imagetype>
+				</state>
+            </statetype>
+        </button>
+
+
+		<button name="key_rshift" from="key_lshift">
+            <position>633,221</position>
+        </button>
+
+		<button name="key_back">
+            <position>605,77</position>
+			<statetype name="buttonstate">
+				<state name="active">
+					<imagetype name="background" from="base_image_active">
+						<position>0,0</position>
+						<filename>images/widgets/button_inactive_narrow.png</filename>
+					</imagetype>
+					<imagetype name="arrow" from="base_image_active">
+						<position>19,4</position>
+						<filename>images/widgets/keyboard/arrow_back.png</filename>
+					</imagetype>
+					<!--<textarea name="text" from="base_textarea">
+						<area>0,0,70,40</area>
+						<align>allcenter</align>
+					</textarea>-->
+				</state>
+				<state name="selected" from="active">
+					<imagetype name="background" from="base_image_selected">
+						<position>0,0</position>
+						<filename>images/widgets/button_active_narrow.png</filename>
+					</imagetype>
+				</state>
+				<state name="disabled" from="active" />
+				<state name="pushed" from="selected">
+					<imagetype name="background">
+						<position>0,0</position>
+						<filename>images/widgets/button_active_narrow.png</filename>
+						<alpha>200</alpha>
+					</imagetype>
+				</state>
+            </statetype>
+        </button>
+
+        <button name="key_comp" from="key_lock">
+            <position>542,173</position>
+        </button>
+		<button name="key_del" from="key_lock">
+            <position>618,173</position>
+        </button>
+
+
+		<button name="key_done">
+            <position>570,125</position>
+			<statetype name="buttonstate">
+				<state name="active">
+					<imagetype name="background" from="base_image_active">
+						<position>0,0</position>
+						<filename>images/widgets/button_inactive_narrow.png</filename>
+					</imagetype>
+					<imagetype name="arrow" from="base_image_active">
+						<position>19,4</position>
+						<filename>images/widgets/keyboard/arrow_return.png</filename>
+					</imagetype>
+					<textarea name="text" from="base_textarea">
+						<area>0,0,70,40</area>
+						<align>allcenter</align>
+					</textarea>
+				</state>
+				<state name="selected" from="active">
+					<imagetype name="background" from="base_image_selected">
+						<position>0,0</position>
+						<filename>images/widgets/button_active_narrow.png</filename>
+					</imagetype>
+				</state>
+				<state name="disabled" from="active" />
+				<state name="pushed" from="selected">
+					<imagetype name="background">
+						<position>0,0</position>
+						<filename>images/widgets/button_active_narrow.png</filename>
+						<alpha>200</alpha>
+					</imagetype>
+				</state>
+            </statetype>
+        </button>
+
+    </window>
+
+</mythuitheme>

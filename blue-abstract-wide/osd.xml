@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <!-- ================================================================== -->
+    <!-- shows a message on the screen -->
+    <window name="osd_message">
+        <area>0,0,1280,720</area>
+
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- the background image of the popup dialog box -->
+        <shape name="background" from="base_background_shape">
+            <area>440,-4,400,44</area>
+        </shape>
+
+        <!-- shows the message -->
+        <textarea name="message_text" from="base_textarea">
+            <area>460,3,360,30</area>
+            <align>allcenter</align>
+        </textarea>
+    </window>
+
+
+    <!-- ================================================================== -->
+    <!-- shows an input  message on the screen -->
+    <window name="osd_input">
+        <area>0,0,1280,720</area>
+
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- the background image of the popup dialog box -->
+        <shape name="background" from="base_background_shape">
+            <area>540,-4,200,44</area>
+        </shape>
+
+        <!-- shows the message -->
+        <textarea name="osd_number_entry" from="base_textarea">
+            <area>560,3,160,30</area>
+            <align>allcenter</align>
+        </textarea>
+    </window>
+
+
+    <!-- ================================================================== -->
+    <!-- shows the title and the progress of the current recording/movie/tv -->
+    <window name="osd_status">
+        <area>0,0,1280,720</area>
+
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- the background image of the popup dialog box -->
+        <shape name="background" from="base_background_shape">
+            <area>220,575,840,100</area>
+        </shape>
+
+        <textarea name="title">
+            <font>normal</font>
+            <area>240,590,380,30</area>
+            <align>left,vcenter</align>
+        </textarea>
+        <textarea name="description">
+            <font>normal</font>
+            <area>640,590,400,30</area>
+            <align>right,vcenter</align>
+            <template>%DESCRIPTION% %VALUE%%UNITS%</template>
+        </textarea>
+
+        <progressbar name="position" from="base_progressbar_wide_flat">
+            <position>240,635</position>
+        </progressbar>
+    </window>
+
+
+    <!-- ================================================================== -->
+    <!-- shows the icon and the details/description of the current recording/movie/tv -->
+    <window name="program_info">
+        <area>0,0,1280,720</area>
+
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- the background image of the popup dialog box -->
+        <shape name="background" from="base_background_shape">
+            <area>100,370,1080,300</area>
+        </shape>
+
+        <!-- shows the title and the plot of the selected video -->
+        <textarea name="title" from="base_textarea">
+            <area>120,390,820,30</area>
+            <multiline>no</multiline>
+            <align>left,vcenter</align>
+            <cutdown>yes</cutdown>
+            <font>title</font>
+        </textarea>
+
+        <textarea name="starttime" from="base_textarea">
+            <area>120,430,400,20</area>
+            <align>left,vcenter</align>
+            <font>text_small</font>
+            <template>%STARTTIME%-%ENDTIME% : %LENMINS%</template>
+        </textarea>
+
+        <!-- separates the title and channel and the status icons from the description -->
+        <shape name="program_info_separator" from="base_separator_shape">
+            <area>120,465,1040,1</area>
+        </shape>
+
+        <!-- show the channel and the recorded time of the recording -->
+        <shape name="channelicon_background" from="base_background_shape">
+            <area>120,485,126,126</area>
+        </shape>
+        <imagetype name="iconpath">
+            <area>122,487,121,121</area>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
+        <!-- channel number and name -->
+        <textarea name="channum" from="base_textarea">
+            <area>120,625,30,30</area>
+            <align>left,vcenter</align>
+            <font>text_small</font>
+        </textarea>
+        <textarea name="callsign" from="base_textarea">
+            <area>150,625,95,30</area>
+            <align>left,vcenter</align>
+            <font>text_small</font>
+        </textarea>
+
+        <shape name="description_separator" from="base_separator_shape">
+            <area>265,466,1,180</area>
+        </shape>
+
+        <!-- show the plot of the recording -->
+        <textarea name="description" from="base_textarea">
+            <area>285,485,880,180</area>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <align>left,top</align>
+            <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
+        </textarea>
+        
+        
+        <!-- show some images about the type of recording, audio and video codecs -->
+        <statetype name="tvstate">
+            
+            <state name="WatchingLiveTV">
+                <!--<imagetype name="image">
+                    <area>1100,405,45,45</area>
+                    <filename>images/widgets/codecs/tv.png</filename>
+                    <preserveaspect>true</preserveaspect>
+                </imagetype>-->
+                <textarea name="livetv_label" from="base_textarea">
+                    <align>right,vcenter</align>
+                    <area>1060,430,100,20</area>
+                    <font>text_small</font>
+                    <value>Live TV</value>
+                </textarea>
+            </state>
+            <state name="WatchingPreRecorded">
+                <textarea name="livetv_label" from="base_textarea">
+                    <align>right,vcenter</align>
+                    <area>1060,430,100,20</area>
+                    <font>text_small</font>
+                    <value>Recorded</value>
+                </textarea>
+            </state>
+            <state name="WatchingVideo">
+                <textarea name="livetv_label" from="base_textarea">
+                    <align>right,vcenter</align>
+                    <area>1060,430,100,20</area>
+                    <font>text_small</font>
+                    <value>Video</value>
+                </textarea>
+            </state>
+            <state name="WatchingDVD">
+                <!--<imagetype name="image">
+                    <area>1100,405,45,45</area>
+                    <filename>images/widgets/codecs/dvd.png</filename>
+                    <preserveaspect>true</preserveaspect>
+                </imagetype>-->
+                <textarea name="livetv_label" from="base_textarea">
+                    <align>right,vcenter</align>
+                    <area>1060,430,100,20</area>
+                    <font>text_small</font>
+                    <value>DVD</value>
+                </textarea>
+            </state>
+            <state name="WatchingBD">
+                <!--<imagetype name="image">
+                    <area>1100,405,45,45</area>
+                    <filename>images/widgets/codecs/bd.png</filename>
+                    <preserveaspect>true</preserveaspect>
+                </imagetype>-->
+                <textarea name="image" from="base_textarea">
+                    <align>right,vcenter</align>
+                    <area>1060,430,100,20</area>
+                    <font>text_small</font>
+                    <value>Bluray</value>
+                </textarea>
+            </state>
+            <state name="WatchingRecording">
+                <!--<imagetype name="image">
+                    <area>1100,405,45,45</area>
+                    <filename>images/widgets/codecs/recording.png</filename>
+                    <preserveaspect>true</preserveaspect>
+                </imagetype>-->
+                <textarea name="image" from="base_textarea">
+                    <align>right,vcenter</align>
+                    <area>1060,430,100,20</area>
+                    <font>text_small</font>
+                    <value>Recording</value>
+                </textarea>
+            </state>
+        </statetype>
+
+        <statetype name="audiocodec">
+            <state name="PCM_DVD">
+                <textarea name="audiocodec_label" from="base_textarea">
+                    <font>text_small</font>
+                    <area>1080,430,80,20</area>
+                    <value>PCM</value>
+                </textarea>
+            </state>
+            <state name="PCM_BLURAY">
+                <textarea name="audiocodec_label" from="base_textarea">
+                    <font>text_small</font>
+                    <area>1080,430,80,20</area>
+                    <value>PCM BD</value>
+                </textarea>
+            </state>
+            <state name="AC3">
+                <textarea name="audiocodec_label" from="base_textarea">
+                    <font>text_small</font>
+                    <area>1080,430,80,20</area>
+                    <value>AC3</value>
+                </textarea>
+            </state>
+            <state name="E-AC3">
+                <textarea name="audiocodec_label" from="base_textarea">
+                    <font>text_small</font>
+                    <area>1080,430,80,20</area>
+                    <value>E-AC3</value>
+                </textarea>
+            </state>
+            <state name="TRUEHD">
+                <textarea name="audiocodec_label" from="base_textarea">
+                    <font>text_small</font>
+                    <area>1080,430,80,20</area>
+                    <value>True HD</value>
+                </textarea>
+            </state>
+            <state name="WMAPRO">
+                <textarea name="audiocodec_label" from="base_textarea">
+                    <font>text_small</font>
+                    <area>1080,430,80,20</area>
+                    <value>WMA Pro</value>
+                </textarea>
+            </state>
+            <state name="DTS">
+                <textarea name="audiocodec_label" from="base_textarea">
+                    <font>text_small</font>
+                    <area>1080,430,80,20</area>
+                    <value>DTS</value>
+                </textarea>
+            </state>
+            <state name="AAC">
+                <textarea name="audiocodec_label" from="base_textarea">
+                    <font>text_small</font>
+                    <area>1080,430,80,20</area>
+                    <value>AAC</value>
+                </textarea>
+            </state>
+            <state name="MP2">
+                <textarea name="audiocodec_label" from="base_textarea">
+                    <font>text_small</font>
+                    <area>980,430,80,20</area>
+                    <value>MP2</value>
+                </textarea>
+            </state>
+            <state name="MP3">
+                <textarea name="audiocodec_label" from="base_textarea">
+                    <font>text_small</font>
+                    <area>1080,430,80,20</area>
+                    <value>MP3</value>
+                </textarea>
+            </state>
+            <state name="VORBIS">
+                <textarea name="audiocodec_label" from="base_textarea">
+                    <font>text_small</font>
+                    <area>1080,430,80,20</area>
+                    <value>Vorbis</value>
+                </textarea>
+            </state>
+        </statetype>
+
+        <statetype name="audiochannels">
+            <state name="1">
+                <textarea name="audiochannels_label" from="base_textarea">
+                    <align>right,vcenter</align>
+                    <font>text_small</font>
+                    <area>880,430,100,20</area>
+                    <value>1 Channel:</value>
+                </textarea>
+            </state>
+            <state name="2">
+                <textarea name="audiochannels_label" from="base_textarea">
+                    <align>left,vcenter</align>
+                    <font>text_small</font>
+                    <area>880,430,100,20</area>
+                    <value>2 Channels:</value>
+                </textarea>
+            </state>
+            <state name="5">
+                <textarea name="audiochannels_label" from="base_textarea">
+                    <align>right,vcenter</align>
+                    <font>text_small</font>
+                    <area>880,430,100,20</area>
+                    <value>5 Channels:</value>
+                </textarea>
+            </state>
+            <state name="6">
+                <textarea name="audiochannels_label" from="base_textarea">
+                    <align>right,vcenter</align>
+                    <font>text_small</font>
+                    <area>880,430,100,20</area>
+                    <value>6 Channels:</value>
+                </textarea>
+            </state>
+            <state name="7">
+                <textarea name="audiochannels_label" from="base_textarea">
+                    <align>right,vcenter</align>
+                    <font>text_small</font>
+                    <area>880,430,100,20</area>
+                    <value>7 Channels:</value>
+                </textarea>
+            </state>
+            <state name="8">
+                <textarea name="audiochannels_label" from="base_textarea">
+                    <align>right,vcenter</align>
+                    <font>text_small</font>
+                    <area>880,430,100,20</area>
+                    <value>8 Channels:</value>
+                </textarea>
+            </state>
+        </statetype>
+
+        <statetype name="videocodec">
+            <state name="MPEG-2">
+                <textarea name="videocodec_label" from="base_textarea">
+                    <font>text_small</font>
+                    <area>780,430,100,20</area>
+                    <value>MPEG-2</value>
+                </textarea>
+            </state>
+            <state name="VC-1">
+                <textarea name="videocodec_label" from="base_textarea">
+                    <font>text_small</font>
+                    <area>780,430,100,20</area>
+                    <value>VC-1</value>
+                </textarea>
+            </state>
+            <state name="H.264">
+                <textarea name="videocodec_label" from="base_textarea">
+                    <font>text_small</font>
+                    <area>780,430,100,20</area>
+                    <value>H.264</value>
+                </textarea>
+            </state>
+            <state name="MPEG-4">
+                <textarea name="videocodec_label" from="base_textarea">
+                    <font>text_small</font>
+                    <area>780,430,100,20</area>
+                    <value>MPEG-4</value>
+                </textarea>
+            </state>
+            <state name="RTjpeg">
+                <textarea name="videocodec_label" from="base_textarea">
+                    <font>text_small</font>
+                    <area>780,430,100,20</area>
+                    <value>RTjpeg</value>
+                </textarea>
+            </state>
+            <state name="WMV3">
+                <textarea name="videocodec_label" from="base_textarea">
+                    <font>text_small</font>
+                    <area>780,430,100,20</area>
+                    <value>WMV 3</value>
+                </textarea>
+            </state>
+            <state name="H.263">
+                <textarea name="videocodec_label" from="base_textarea">
+                    <font>text_small</font>
+                    <area>780,430,100,20</area>
+                    <value>H.263</value>
+                </textarea>
+            </state>
+        </statetype>
+
+        <statetype name="videodescrip">
+            <state name="SD">
+                <!--<imagetype name="image">
+                    <area>680,405,100,45</area>
+                    <filename>images/widgets/codecs/sd.png</filename>
+                    <preserveaspect>true</preserveaspect>
+                </imagetype>-->
+                <textarea name="videodescrip_label" from="base_textarea">
+                    <align>right,vcenter</align>
+                    <font>text_small</font>
+                    <area>680,430,100,20</area>
+                    <value>SD:</value>
+                </textarea>
+            </state>
+            <state name="HD_720_P">
+                <!--<imagetype name="image">
+                    <area>680,405,100,45</area>
+                    <filename>images/widgets/codecs/720p.png</filename>
+                    <preserveaspect>true</preserveaspect>
+                </imagetype>-->
+                <textarea name="videodescrip_label" from="base_textarea">
+                    <align>right,vcenter</align>
+                    <font>text_small</font>
+                    <area>680,430,100,20</area>
+                    <value>HD 720p:</value>
+                </textarea>
+            </state>
+            <state name="HD_1080_I">
+                <!--<imagetype name="image">
+                    <area>680,405,100,45</area>
+                    <filename>images/widgets/codecs/1080i.png</filename>
+                    <preserveaspect>true</preserveaspect>
+                </imagetype>-->
+                <textarea name="videodescrip_label" from="base_textarea">
+                    <align>right,vcenter</align>
+                    <font>text_small</font>
+                    <area>680,430,100,20</area>
+                    <value>HD 1080i:</value>
+                </textarea>
+            </state>
+            <state name="HD_1080_P">
+                <!--<imagetype name="image">
+                    <area>680,405,100,45</area>
+                    <filename>images/widgets/codecs/1080p.png</filename>
+                    <preserveaspect>true</preserveaspect>
+                </imagetype>-->
+                <textarea name="videodescrip_label" from="base_textarea">
+                    <align>right,vcenter</align>
+                    <font>text_small</font>
+                    <area>680,430,100,20</area>
+                    <value>HD 1080p:</value>
+                </textarea>
+            </state>
+        </statetype>
+        
+    </window>
+    
+    
+    <!-- ================================================================== -->
+    <!-- shows the icon and the details/description of the current recording/movie/tv -->
+    <window name="browse_info">
+        <area>0,0,1280,720</area>
+
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- the background image of the popup dialog box -->
+        <shape name="background" from="base_background_shape">
+            <area>100,370,1080,300</area>
+        </shape>
+
+        <!-- shows the title and the plot of the selected video -->
+        <textarea name="title" from="base_textarea">
+            <area>120,390,800,30</area>
+            <multiline>no</multiline>
+            <align>left,vcenter</align>
+            <cutdown>yes</cutdown>
+            <font>title</font>
+        </textarea>
+
+        <textarea name="starttime" from="base_textarea">
+            <area>120,430,800,20</area>
+            <align>left,vcenter</align>
+            <font>text_small</font>
+            <template>%STARTTIME%-%ENDTIME% : %LENMINS%</template>
+        </textarea>
+
+        <!-- separates the title and channel and the status icons from the description -->
+        <shape name="program_info_separator" from="base_separator_shape">
+            <area>120,465,1040,1</area>
+        </shape>
+
+        <!-- show the channel and the recorded time of the recording -->
+        <shape name="channelicon_background" from="base_background_shape">
+            <area>120,485,126,126</area>
+        </shape>
+        <imagetype name="iconpath">
+            <area>122,487,121,121</area>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
+        <!-- channel number and name -->
+        <textarea name="channum" from="base_textarea">
+            <area>120,625,30,30</area>
+            <align>left,vcenter</align>
+            <font>text_small</font>
+        </textarea>
+        <textarea name="callsign" from="base_textarea">
+            <area>150,625,95,30</area>
+            <align>left,vcenter</align>
+            <font>text_small</font>
+        </textarea>
+
+        <shape name="description_separator" from="base_separator_shape">
+            <area>265,466,1,180</area>
+        </shape>
+
+        <!-- show the plot of the recording -->
+        <textarea name="description" from="base_textarea">
+            <area>285,485,880,180</area>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <align>left,top</align>
+            <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
+        </textarea>
+        
+    </window>
+    
+    
+    <!-- ================================================================== -->
+    <!-- dialog box that shows the current channel options. The user can edit these -->
+    <window name="ChannelEditor">
+        <area>0,0,1280,720</area>
+
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- the background image of the popup dialog box -->
+        <shape name="background" from="base_background_shape">
+            <area>345,190,585,395</area>
+        </shape>
+
+        <imagetype name="title_background_overlay" from="base_image_selected">
+            <area>360,205,555,65</area>
+            <filename>images/widgets/popup_background_overlay.png</filename>
+        </imagetype>
+
+        <!-- shows the title -->
+        <textarea name="title" from="base_textarea">
+            <area>360,225,550,30</area>
+            <align>allcenter</align>
+            <value>Channel Editor</value>
+        </textarea>
+
+        <shape name="title_separator" from="base_separator_shape">
+            <area>360,285,555,1</area>
+        </shape>
+
+        <textarea name="callsign_label" from="base_textarea">
+            <area>360,305,165,30</area>
+            <align>right,vcenter</align>
+            <value>Callsign</value>
+        </textarea>
+        <textarea name="channum_label" from="base_textarea">
+            <area>360,355,165,30</area>
+            <align>right,vcenter</align>
+            <value>Channel #</value>
+        </textarea>
+        <textarea name="channame_label" from="base_textarea">
+            <area>360,405,165,30</area>
+            <align>right,vcenter</align>
+            <value>Channel Name</value>
+        </textarea>
+        <textarea name="xmltv_label" from="base_textarea">
+            <area>360,455,165,30</area>
+            <align>right,vcenter</align>
+            <value>XMLTV ID</value>
+        </textarea>
+        
+        <textedit name="callsign" from="base_textedit">
+            <area>540,300,300,40</area>
+        </textedit>
+        <textedit name="channum" from="base_textedit">
+            <area>540,350,300,40</area>
+        </textedit>
+        <textedit name="channame" from="base_textedit">
+            <area>540,400,300,40</area>
+        </textedit>
+        <textedit name="XMLTV" from="base_textedit">
+            <area>540,450,300,40</area>
+        </textedit>
+
+        <shape name="button_separator" from="base_separator_shape">
+            <area>360,505,555,1</area>
+        </shape>
+        
+        <button name="probe" from="base_button">
+            <position>465,525</position>
+            <value>Probe</value>
+        </button>
+        <button name="ok" from="base_button">
+            <position>665,525</position>
+            <value>OK</value>
+        </button>
+    </window>
+
+
+    <!-- ================================================================== -->
+    <!-- dialog box that shows the current channel options. The user can edit these -->
+    <window name="osd_program_editor">
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- the background image of the popup dialog box -->
+        <shape name="background" from="base_background_shape">
+            <area>100,370,1080,300</area>
+        </shape>
+
+        <!-- shows the title and the plot of the selected video -->
+        <textarea name="title" from="base_textarea">
+            <area>120,390,800,30</area>
+            <multiline>no</multiline>
+            <align>left,vcenter</align>
+            <cutdown>yes</cutdown>
+            <font>title</font>
+        </textarea>
+        
+        <textarea name="seekamount" from="title">
+            <area>770,10,300,30</area>
+            <align>right,top</align>
+        </textarea>
+        <textarea name="timedisplay" from="title">
+            <area>10,50,1060,30</area>
+            <align>hcenter,bottom</align>
+        </textarea>
+        <textarea name="cutindicator" from="title">
+            <area>10,50,300,30</area>
+            <align>left,bottom</align>
+        </textarea>
+        <textarea name="framedisplay" from="title">
+            <area>770,50,300,30</area>
+            <align>right,bottom</align>
+        </textarea>
+        <editbar name="editbar">
+            <area>10,30,1060,30</area>
+            <shape name="position">
+                <area>0,0,8,100%</area>
+                <fill color="#FFFFFF" alpha="255" />
+            </shape>
+            <shape name="keep">
+                <area>0,11,100%,8</area>
+                <fill color="#00FF00" alpha="255" />
+                <type>roundbox</type>
+                <cornerradius>6</cornerradius>
+            </shape>
+            <shape name="cut">
+                <area>0,11,100%,8</area>
+                <fill color="#FF0000" alpha="255" />
+                <type>roundbox</type>
+                <cornerradius>6</cornerradius>
+            </shape>
+            <shape name="cuttoright">
+                <area>0,5,4,20</area>
+                <fill color="#FF0000" alpha="255" />
+            </shape>
+            <shape name="cuttoleft">
+                <area>0,5,4,20</area>
+                <fill color="#FF0000" alpha="255" />
+            </shape>
+            <shape name="keeptoright">
+                <area>0,5,4,20</area>
+                <fill color="#00FF00" alpha="255" />
+            </shape>
+            <shape name="keeptoleft">
+                <area>0,5,4,20</area>
+                <fill color="#00FF00" alpha="255" />
+            </shape>
+        </editbar>
+    </window>
+    
+    
+    <!-- ================================================================== -->
+    <!-- dialog box that shows the most important options and controls -->
+    <window name="MythPopupBox">
+    
+        <!-- Font that acts as a base for all other fonts here. -->
+        <fontdef name="normal" face="DejaVu Sans">
+            <color>#FFFFFF</color>
+            <pixelsize>22</pixelsize>
+            <weight>normal</weight>
+        </fontdef>
+        
+        <!-- General Font that is used in many screens (normal size)-->
+        <fontdef name="text" from="normal">
+            <pixelsize>20</pixelsize>
+        </fontdef>
+        
+        <!-- Font for the title/description in the dialog boxes and popups -->
+        <fontdef name="popup_title" from="normal" />
+
+        <!-- Font for the title descriptions that
+            is visible on most of the screens -->
+        <fontdef name="title" from="normal">
+            <pixelsize>25</pixelsize>
+        </fontdef>
+        
+        <!-- darkens the entire background so that the popup is better readable -->
+        <!--<shape name="darken_background" from="base_darken_background">
+            <area>0,0,1280,720</area>
+        </shape>-->
+
+        <!-- the background image of the popup dialog box -->
+        <shape name="popup_background">
+            <area>450,130,380,428</area>
+            <type>roundbox</type>
+            <fill color="#000000" alpha="255" />
+            <line color="#999999" alpha="255" width="1" />
+            <cornerradius>2</cornerradius>
+        </shape>
+
+        <imagetype name="message_background_overlay" from="base_image_selected">
+            <area>466,146,348,75</area>
+            <filename>images/widgets/popup_background_overlay.png</filename>
+        </imagetype>
+
+        <!-- the text that is shown in the popup box -->
+        <textarea name="messagearea" from="base_textarea">
+            <area>485,146,320,75</area>
+            <font>popup_title</font>
+            <multiline>yes</multiline>
+            <align>allcenter</align>
+        </textarea>
+
+        <buttonlist name="list">
+            <area>466,275,349,265</area>
+            <layout>vertical</layout>
+            <spacing>4</spacing>
+            <scrollstyle>free</scrollstyle>
+            <wrapstyle>selection</wrapstyle>
+            <buttonarea>0,0,100%,97%</buttonarea>
+            
+            <statetype name="buttonitem">
+                <!-- general settings for the menu entry -->
+                <state name="active">
+                    <area>0,0,100%,39</area>
+                    <imagetype name="buttonbackground" from="base_image_active">
+                        <filename>images/widgets/buttonlist_inactive.png</filename>
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <area>8,5,311,30</area>
+                        <font>text</font>
+                        <cutdown>yes</cutdown>
+                        <align>left,vcenter</align>
+                    </textarea>
+                    <imagetype name="buttonarrow">
+                        <position>321,6</position>
+                        <filename>images/shared/arrow_right.png</filename>
+                        <alpha>90</alpha>
+                    </imagetype>
+                </state>
+                <!-- menu entry has been selected and is active -->
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selected">
+                        <filename>images/widgets/buttonlist_active.png</filename>
+                        <!--<alphapulse min="160" max="255" change="2"/>-->
+                    </imagetype>
+                    <imagetype name="buttonarrow">
+                        <position>321,6</position>
+                        <filename>images/shared/arrow_right.png</filename>
+                        <alpha>255</alpha>
+                    </imagetype>
+                </state>
+                <!-- menu entry has been selected and is inactive -->
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_inactive">
+                        <filename>images/widgets/buttonlist_active.png</filename>
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <font>text_inactive</font>
+                    </textarea>
+                    <imagetype name="buttonarrow">
+                        <position>321,6</position>
+                        <filename>images/shared/arrow_right.png</filename>
+                        <alpha>90</alpha>
+                    </imagetype>
+                </state>
+            </statetype>            
+                        
+            <statetype name="upscrollarrow">
+                <position>295,257</position>
+                <state type="off">
+                    <imagetype name="upon">
+                        <area>0,0,30,20</area>
+                        <filename>images/shared/arrow_up.png</filename>
+                        <alpha>90</alpha>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="upoff">
+                        <area>0,0,30,20</area>
+                        <filename>images/shared/arrow_up.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+            <statetype name="downscrollarrow">
+                <position>320,257</position>
+                <state type="off">
+                    <imagetype name="dnon">
+                        <area>0,0,30,20</area>
+                        <filename>images/shared/arrow_down.png</filename>
+                        <alpha>90</alpha>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="dnoff">
+                        <area>0,0,30,20</area>
+                        <filename>images/shared/arrow_down.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+        </buttonlist>
+
+    </window>
+    
+</mythuitheme>

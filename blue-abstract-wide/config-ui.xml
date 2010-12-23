@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <!-- ================================================================== -->
+    <!-- (Main window) shows the available channels in a lists where
+        the user can select them and download the logos, edit them,... -->
+    <window name="channeloverview">
+
+        <!-- the background image -->
+        <imagetype name="fanart">
+            <area>0,0,1280,720</area>
+            <filename>images/background.png</filename>
+        </imagetype>
+
+        <!-- The heading (name) of the screen -->
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Channel Editor</value>
+            </textarea>
+        </textarea>
+
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="channel_background" from="base_background_shape">
+            <area>210,70,860,350</area>
+        </shape>
+
+        <buttonlist name="channels" from="base_buttonlist_very_wide">
+            <area>230,90,825,316</area>
+            <buttonarea>0,0,825,315</buttonarea>
+            <spacing>4</spacing>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <shape name="channelicon_background" from="base_background_shape">
+                        <area>3,3,33,33</area>
+                    </shape>
+                    <imagetype name="icon">
+                        <area>4,4,31,31</area>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
+                    <textarea name="channum" from="base_textarea">
+                        <area>50,0,50,40</area>
+                        <align>right,vcenter</align>
+                        <cutdown>yes</cutdown>
+                    </textarea>
+                    <textarea name="name" from="base_textarea">
+                        <area>130,0,500,40</area>
+                        <align>left,vcenter</align>
+                        <cutdown>yes</cutdown>
+                    </textarea>
+                    <textarea name="sourcename" from="base_textarea">
+                        <area>650,0,160,40</area>
+                        <align>right,vcenter</align>
+                        <cutdown>yes</cutdown>
+                    </textarea>
+                </state>
+                <!-- menu entry has been selected and is active -->
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selected">
+                        <filename>images/widgets/buttonlist_active_very_wide.png</filename>
+                        <!--<alphapulse min="160" max="255" change="2"/>-->
+                    </imagetype>
+                </state>
+
+                <!-- menu entry has been selected and is inactive -->
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_inactive">
+                        <filename>images/widgets/buttonlist_active_very_wide.png</filename>
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <font>text_inactive</font>
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <shape name="channeloptions_background" from="base_background_shape">
+            <area>130,440,1020,250</area>
+        </shape>
+
+        <textarea name="sort_label" from="base_textarea">
+            <area>150,460,400,40</area>
+            <value>Sort Mode:</value>
+            <align>right,vcenter</align>
+        </textarea>
+        <textarea name="source_label" from="base_textarea">
+            <area>150,510,400,40</area>
+            <value>Video Source:</value>
+            <align>right,vcenter</align>
+        </textarea>
+        <textarea name="nochannum_label" from="base_textarea">
+            <area>150,560,400,40</area>
+            <value>Hide Channels without channel number.</value>
+            <align>right,vcenter</align>
+        </textarea>
+
+        <buttonlist name="sorting" from="base_selector_wide">
+            <position>570,460</position>
+        </buttonlist>
+        <buttonlist name="source" from="base_selector_wide">
+            <position>570,510</position>
+        </buttonlist>
+        <button name="delete" from="base_button">
+            <position>960,510</position>
+            <value>Delete</value>
+        </button>
+        <checkbox name="nochannum" from="base_checkbox">
+            <position>570,565</position>
+        </checkbox>
+
+        <shape name="button_separator" from="base_separator_shape">
+            <area>150,610,980,1</area>
+        </shape>
+
+        <button name="scan" from="base_button_wide">
+            <position>150,630</position>
+            <value>Channel Scan</value>
+        </button>
+        <button name="importicons" from="base_button_wide">
+            <position>490,630</position>
+            <value>Icon Download</value>
+        </button>
+        <button name="edittransport" from="base_button_wide">
+            <position>830,630</position>
+            <value>Edit Transports</value>
+        </button>
+
+    </window>
+
+
+    <!-- ================================================================== -->
+    <!-- (Main window) shows two vertical lists where the user can select
+        which entries he wants to see in the OSD menu -->
+    <window name="osdmenueditor">
+
+        <!-- the background image -->
+        <imagetype name="fanart">
+            <area>0,0,1280,720</area>
+            <filename>images/background.png</filename>
+        </imagetype>
+
+        <!-- The heading (name) of the screen -->
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>OSD Menu Editor</value>
+            </textarea>
+        </textarea>
+
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="osd_background" from="base_background_shape">
+            <area>260,80,760,595</area>
+        </shape>
+
+        <buttonlist name="states" from="base_buttonlist">
+            <area>280,100,350,488</area>
+            <showarrow>no</showarrow>
+        </buttonlist>
+
+        <buttonlist name="categories" from="base_buttonlist">
+            <area>650,100,350,488</area>
+        </buttonlist>
+
+        <shape name="button_separator" from="base_separator_shape">
+            <area>280,595,720,1</area>
+        </shape>
+
+        <button name="done" from="base_button">
+            <position>575,615</position>
+            <value>Done</value>
+        </button>
+    </window>
+
+</mythuitheme>
