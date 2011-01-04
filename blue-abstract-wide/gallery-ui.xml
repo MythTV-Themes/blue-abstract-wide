@@ -2,15 +2,21 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
+
+<!-- 
+    - alignment fixes due to changes in base.xml
+    - more widgets are derived from widgets in the base.xml file
+    - moved arrows to the top of the screen
+    - added image filename
+    - moved image path below the title
+-->
+
+
+    <!-- Default screen that shows the the available images in a list -->
     <window name="gallery">
 
-        <!-- the background image -->
-        <imagetype name="fanart">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
-
-        <!-- The heading (name) of the screen -->
+        <imagetype name="fanart" from="base_background"/>
+        
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -18,19 +24,17 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>
         </textarea>
 
-        <!-- the shape where the imagelist is displayed -->
-        <shape name="imagelist_shape" from="base_background_shape">
-            <area>25,70,1230,625</area>
+        <shape name="imagelist_background" from="base_background_shape">
+            <area>25,60,1230,633</area>
         </shape>
 
         <!-- shows the name of the folder or image -->
         <textarea name="title" from="base_textarea">
-            <area>45,90,1000,30</area>
+            <area>45,80,900,30</area>
             <cutdown>yes</cutdown>
             <font>title</font>
             <align>left,vcenter</align>
@@ -38,51 +42,49 @@
 
         <!-- optional - shows current position in grid eg '1 of 123' -->
         <textarea name="position" from="base_textarea">
-            <area>1000,90,235,30</area>
+            <area>985,80,250,30</area>
             <align>right,vcenter</align>
-            <font>title</font>
         </textarea>
 
-        <!-- optional - shows path to current image -->
+        <!-- shows path to current image -->
         <textarea name="breadcrumbs" from="base_textarea">
-            <area>245,41,790,30</area>
-            <font>text_small</font>
-            <align>allcenter</align>
+            <area>45,120,1000,20</area>
+            <font>text_very_small</font>
             <cutdown>yes</cutdown>
         </textarea>
 
-        <!-- separates the folder or image name from the selection list -->
-        <shape name="images_separator" from="base_separator_shape">
-            <area>46,137,1188,1</area>
-        </shape>
-
         <!-- the list that shows the images in the screen -->
         <buttonlist name="images">
-            <area>47,159,1170,535</area>
+            <area>45,155,1170,535</area>
             <buttonarea>0,0,1190,535</buttonarea>
             <wrapstyle>flowing</wrapstyle>
             <layout>grid</layout>
-            <spacing>5</spacing>
+            <spacing>7</spacing>
             <statetype name="buttonitem">
+                
                 <state name="active">
-                    <!-- this shows the shape behind the small preview image -->
-                    <imagetype name="buttonbackground">
-                        <shape name="buttonbackground_shape">
-                            <area>0,0,165,125</area>
-                            <type>roundbox</type>
-                            <fill color="#000000" alpha="255" />
-                            <line color="#DDDDDD" alpha="180" width="1" />
-                            <cornerradius>2</cornerradius>
+                    <area>0,0,164,124</area>
+                    
+                    <imagetype name="buttonimage_background">
+                        <shape name="buttonimage_background_shape" from="base_background_shape">
+                            <area>0,0,164,124</area>
+                            <line color="#000000" alpha="0" width="1" />
                         </shape>
                     </imagetype>
+                    
                     <!-- this shows the actual image -->
                     <imagetype name="buttonimage">
-                        <area>2,2,161,121</area>
-                        <alpha>255</alpha>
-                        <filename />
+                        <area>2,2,160,120</area>
                         <preserveaspect>yes</preserveaspect>
                     </imagetype>
 
+                    <imagetype name="buttonimage_border">
+                        <shape name="buttonimage_border_shape" from="base_background_shape">
+                            <area>0,0,164,124</area>
+                            <fill color="#000000" alpha="0" />
+                        </shape>
+                    </imagetype>
+                    
                     <!-- shows that the image was marked/selected and
                         might be manipulated with other images -->
                     <statetype name="buttoncheck">
@@ -101,10 +103,16 @@
 
                     <!-- shows the name of the currently active file.
                         this is the same as the title in the top -->
-                    <!--<textarea name="buttontext">
-                        <area>5,133,165,25</area>
-                        <font>text</font>
-                        <align>hcenter,bottom</align>
+                    <!--<shape name="buttonimage_shape" from="base_background_shape">
+                        <area>1,1,162,26</area>
+                        <type>box</type>
+                        <line color="#000000" alpha="0" width="1" />
+                    </shape>
+                    <textarea name="buttontext">
+                        <area>0,4,164,20</area>
+                        <font>text_very_small</font>
+                        <align>allcenter</align>
+                        <cutdown>yes</cutdown>
                     </textarea>-->
 
                     <!-- show a folder above the image if its a folder and not an image.
@@ -113,7 +121,8 @@
                         <position>0,0</position>
                         <state name="subfolder">
                             <shape name="buttonimage_shape" from="base_background_shape">
-                                <area>1,94,163,30</area>
+                                <area>1,93,162,30</area>
+                                <type>box</type>
                                 <line color="#000000" alpha="0" width="1" />
                             </shape>
                             <imagetype name="icon">
@@ -135,30 +144,33 @@
 
 
                 <state name="selectedactive">
-                    <area>-32,-25,230,174</area>
+                    <area>-38,-28,240,180</area>
 
-                    <!-- this shows the shape behind the small preview image -->
-                    <imagetype name="buttonbackground">
-                        <shape name="buttonbackground_shape">
-                            <area>0,0,230,174</area>
-                            <type>roundbox</type>
-                            <fill color="#000000" alpha="255" />
-                            <line color="#DDDDDD" alpha="180" width="2" />
-                            <cornerradius>2</cornerradius>
+                    <imagetype name="buttonimage_background">
+                        <shape name="buttonimage_background_shape" from="base_background_shape_dark">
+                            <area>0,0,240,180</area>
+                            <line color="#000000" alpha="0" width="1" />
                         </shape>
                     </imagetype>
-
+                    
                     <!-- this shows the actual image -->
                     <imagetype name="buttonimage">
-                        <area>3,3,224,168</area>
-                        <filename />
+                        <area>2,2,235,176</area>
                         <preserveaspect>yes</preserveaspect>
                     </imagetype>
 
+                    <imagetype name="buttonimage_border">
+                        <shape name="buttonimage_border_shape" from="base_background_shape">
+                            <area>0,0,240,180</area>
+                            <fill color="#000000" alpha="0" />
+                            <line color="#AAAAAA" alpha="150" width="2" />
+                        </shape>
+                    </imagetype>
+                    
                     <!-- shows that the image was marked/selected and
                         might be manipulated with other images -->
                     <statetype name="buttoncheck">
-                        <position>3,3</position>
+                        <position>1,1</position>
                         <showempty>yes</showempty>
                         <state type="full">
                             <shape name="marked_background" from="base_background_shape">
@@ -173,10 +185,16 @@
 
                     <!-- shows the name of the currently active file.
                         this is the same as the title in the top -->
-                    <!--<textarea name="buttontext">
-                        <area>15,127,200,30</area>
-                        <font>text_small</font>
-                        <align>left,vcenter</align>
+                    <!--<shape name="buttonimage_shape" from="base_background_shape">
+                        <area>1,1,238,26</area>
+                        <type>box</type>
+                        <line color="#000000" alpha="0" width="1" />
+                    </shape>
+                    <textarea name="buttontext">
+                        <area>0,4,240,20</area>
+                        <font>text_very_small</font>
+                        <align>allcenter</align>
+                        <cutdown>yes</cutdown>
                     </textarea>-->
 
                     <!-- show a folder above the image if its a folder and not an image.
@@ -185,11 +203,11 @@
                         <position>0,0</position>
                         <state name="subfolder">
                             <shape name="buttonimage_shape" from="base_background_shape">
-                                <area>3,132,222,40</area>
+                                <area>1,139,238,40</area>
                                 <line color="#000000" alpha="0" width="1" />
                             </shape>
                             <imagetype name="icon">
-                                <area>9,137,32,32</area>
+                                <area>9,144,32,32</area>
                                 <filename>images/shared/folder_open.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
@@ -199,7 +217,7 @@
 
                     <!-- show how many images / directories are in this directory -->
                     <textarea name="childcount" from="base_textarea">
-                        <area>49,138,60,30</area>
+                        <area>49,145,60,30</area>
                         <font>text_small</font>
                         <align>left,vcenter</align>
                     </textarea>
@@ -210,15 +228,14 @@
             <!-- Show the arrow image that indicates that there are
                 more menu entries above the first visible menu -->
             <statetype name="upscrollarrow">
-                <position>1134,541</position>
+                <position>1135,-20</position>
                 <state type="off">
-                    <imagetype name="upon">
+                    <imagetype name="upon" from="base_arrow_inactive">
                         <filename>images/shared/arrow_up.png</filename>
-                        <alpha>90</alpha>
                     </imagetype>
                 </state>
                 <state type="full">
-                    <imagetype name="upoff">
+                    <imagetype name="upoff" from="base_arrow_selectedactive">
                         <filename>images/shared/arrow_up.png</filename>
                     </imagetype>
                 </state>
@@ -227,256 +244,24 @@
             <!-- Show the arrow image that indicates that there are
                 more menu entries below the last visible menu -->
             <statetype name="downscrollarrow">
-                <position>1160,540</position>
+                <position>1160,-20</position>
                 <state type="off">
-                    <imagetype name="dnon">
+                    <imagetype name="dnon" from="base_arrow_inactive">
                         <filename>images/shared/arrow_down.png</filename>
-                        <alpha>90</alpha>
                     </imagetype>
                 </state>
                 <state type="full">
-                    <imagetype name="dnoff">
+                    <imagetype name="dnoff" from="base_arrow_selectedactive">
                         <filename>images/shared/arrow_down.png</filename>
                     </imagetype>
                 </state>
             </statetype>
         </buttonlist>
 
-        <!-- the text that is shown when there
-            are no images in the selected directory -->
         <textarea name="noimages" from="base_textarea">
             <area>45,370,1190,40</area>
             <align>allcenter</align>
         </textarea>
-
-    </window>
-
-
-    <window name="generalsettings">
-
-        <!-- the background image of the screen -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
-        <!-- the description of the screen that is shown in the top left corner -->
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>General Settings</value>
-            </textarea>
-        </textarea>
-        <!-- the clock that is shown in the top right corner -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <!-- the large rectangular shape -->
-        <shape name="generalsetting_background" from="base_background_shape">
-            <area>175,120,930,540</area>
-        </shape>
-
-        <textarea name="gallerydir_label" from="base_textarea">
-            <area>200,140,440,40</area>
-            <align>right,vcenter</align>
-            <value>Directory that holds images:</value>
-        </textarea>
-        <textarea name="gallerydirfilter_label" from="base_textarea">
-            <area>200,190,440,40</area>
-            <align>right,vcenter</align>
-            <value>Directory filter:</value>
-        </textarea>
-        <textarea name="defaultthumbnaildir_label" from="base_textarea">
-            <area>200,240,440,40</area>
-            <align>right,vcenter</align>
-            <value>Store thumbnails in image directory:</value>
-        </textarea>
-        <textarea name="scalemax_label" from="base_textarea">
-            <area>200,290,440,40</area>
-            <align>right,vcenter</align>
-            <value>Scale image to the maximum screen size:</value>
-        </textarea>
-        <textarea name="filesortorder_label" from="base_textarea">
-            <area>200,340,440,40</area>
-            <align>right,vcenter</align>
-            <value>Sort order when browsing:</value>
-        </textarea>
-        <textarea name="importdirs_label" from="base_textarea">
-            <area>200,390,440,40</area>
-            <align>right,vcenter</align>
-            <value>Paths to import images from:</value>
-        </textarea>
-        <textarea name="movieplayercmd_label" from="base_textarea">
-            <area>200,440,440,40</area>
-            <align>right,vcenter</align>
-            <value>Command run to display movie files:</value>
-        </textarea>
-
-        <textedit name="gallerydir" from="base_textedit">
-            <position>650,140</position>
-        </textedit>
-        <textedit name="gallerydirfilter" from="base_textedit">
-            <position>650,190</position>
-        </textedit>
-        <checkbox name="defaultthumbnaildir" from="base_checkbox">
-            <position>650,245</position>
-        </checkbox>
-        <checkbox name="scalemax" from="base_checkbox">
-            <position>650,295</position>
-        </checkbox>
-        <buttonlist name="filesortorder" from="base_selector_wide">
-            <position>650,340</position>
-        </buttonlist>
-        <textedit name="importdirs" from="base_textedit">
-            <position>650,390</position>
-        </textedit>
-        <textedit name="movieplayercmd" from="base_textedit">
-            <position>650,440</position>
-        </textedit>
-
-        <shape name="helptext_background" from="base_background_shape">
-            <area>195,500,890,80</area>
-        </shape>
-        <textarea name="helptext" from="base_textarea">
-            <area>215,500,850,80</area>
-            <cutdown>yes</cutdown>
-            <align>allcenter</align>
-            <multiline>yes</multiline>
-        </textarea>
-
-        <button name="save" from="base_button">
-            <position>480,600</position>
-            <value>Save</value>
-        </button>
-        <button name="cancel" from="base_button">
-            <position>650,600</position>
-            <value>Cancel</value>
-        </button>
-
-    </window>
-
-
-    <window name="slideshowsettings">
-
-        <!-- the background image of the screen -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
-        <!-- the description of the screen that is shown in the top left corner -->
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Slideshow Settings</value>
-            </textarea>
-        </textarea>
-        <!-- the clock that is shown in the top right corner -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <!-- the large rectangular shape -->
-        <shape name="slideshowsetting_background" from="base_background_shape">
-            <area>215,70,850,630</area>
-        </shape>
-
-        <textarea name="slideshowdelay_label" from="base_textarea">
-            <area>240,90,400,40</area>
-            <align>right,vcenter</align>
-            <value>Slideshow Delay:</value>
-        </textarea>
-        <textarea name="recursiveslideshow_label" from="base_textarea">
-            <area>240,140,400,40</area>
-            <align>right,vcenter</align>
-            <value>Recurse into directories:</value>
-        </textarea>
-        <textarea name="useopengl_label" from="base_textarea">
-            <area>240,190,400,40</area>
-            <align>right,vcenter</align>
-            <value>Use OpenGL transitions:</value>
-        </textarea>
-
-        <textarea name="opengltransition_label" from="base_textarea">
-            <area>240,255,400,40</area>
-            <align>right,vcenter</align>
-            <value>Type of OpenGL transition:</value>
-        </textarea>
-        <textarea name="opengltransitionlength_label" from="base_textarea">
-            <area>240,310,400,40</area>
-            <align>right,vcenter</align>
-            <value>Duration of OpenGL Transition (milliseconds):</value>
-        </textarea>
-
-        <textarea name="showcaption_label" from="base_textarea">
-            <area>240,380,400,40</area>
-            <align>right,vcenter</align>
-            <value>Overlay caption:</value>
-        </textarea>
-        <textarea name="slideshowtransition_label" from="base_textarea">
-            <area>240,430,400,40</area>
-            <align>right,vcenter</align>
-            <value>Type of transition:</value>
-        </textarea>
-        <textarea name="slideshowbackground_label" from="base_textarea">
-            <area>240,480,400,40</area>
-            <align>right,vcenter</align>
-            <value>Type of background:</value>
-        </textarea>
-
-        <spinbox name="slideshowdelay" from="base_spinbox">
-            <position>650,90</position>
-        </spinbox>
-        <checkbox name="recursiveslideshow" from="base_checkbox">
-            <position>650,145</position>
-        </checkbox>
-        <checkbox name="useopengl" from="base_checkbox">
-            <position>650,195</position>
-        </checkbox>
-
-        <shape name="opengl_separator" from="base_separator_shape">
-            <area>235,240,810,1</area>
-        </shape>
-
-        <buttonlist name="opengltransition" from="base_selector">
-            <position>650,255</position>
-        </buttonlist>
-        <spinbox name="opengltransitionlength" from="base_spinbox">
-            <position>650,310</position>
-        </spinbox>
-
-        <shape name="slideshow_separator" from="base_separator_shape">
-            <area>235,364,810,1</area>
-        </shape>
-
-        <spinbox name="showcaption" from="base_spinbox">
-            <position>650,380</position>
-        </spinbox>
-        <buttonlist name="slideshowtransition" from="base_selector">
-            <position>650,430</position>
-        </buttonlist>
-        <buttonlist name="slideshowbackground" from="base_selector">
-            <position>650,480</position>
-        </buttonlist>
-
-        <shape name="helptext_background" from="base_background_shape">
-            <area>235,540,810,80</area>
-        </shape>
-        <textarea name="helptext" from="base_textarea">
-            <area>255,540,770,80</area>
-            <cutdown>yes</cutdown>
-            <align>allcenter</align>
-            <multiline>yes</multiline>
-        </textarea>
-
-        <button name="save" from="base_button">
-            <position>480,640</position>
-            <value>Save</value>
-        </button>
-        <button name="cancel" from="base_button">
-            <position>650,640</position>
-            <value>Cancel</value>
-        </button>
-
     </window>
 
 </mythuitheme>
