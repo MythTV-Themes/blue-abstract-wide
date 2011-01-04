@@ -2,15 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-
-<!-- 
-    - alignment and layout changes due to changes in base.xml
-    - more widgets are derived from widgets in the base.xml file
-    - moved description field to the bottom in the controls screen
-    - decreased text for context and actions headlines
--->
-
-
     <!-- waits for a keypress fom the user -->
     <window name="keygrabpopup">
 

@@ -2,11 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-<!-- 
-    - alignment and layout changes due to changes in base.xml
-    - more widgets are derived from widgets in the base.xml file
--->
-
     <window name="keyboard">
         <area>-1,-1,580,165</area>
 

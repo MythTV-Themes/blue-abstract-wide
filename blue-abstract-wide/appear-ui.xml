@@ -2,13 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-<!-- 
-    - alignment fixes due to changes in base.xml
-    - replaced arrow icons with shapes
-    - more widgets are derived from widgets in the base.xml file
--->
-
-
     <!-- The screen where the user can adjust the monitor. -->
     <window name="appearance">
 

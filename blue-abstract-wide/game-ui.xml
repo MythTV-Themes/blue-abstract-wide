@@ -2,13 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-<!-- 
-    - alignment fixes due to changes in base.xml
-    - more widgets are derived from widgets in the base.xml file
-    - changed layout in the gameui screen
--->
-
-
     <!-- Shows the list of available games that 
         the metadata grabber has returned -->
     <window name="gamesel">

@@ -2,18 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-<!-- 
-    - alignment fixes due to changes in base.xml
-    - renamed base_image_selected to base_image_selectedactive and 
-      base_image_inactive to base_image_selectedinactive to be in line 
-      with the widget statetypes
-    - more widgets are derived from widgets in the base.xml file
-    - more channels are shows in the channeloverview
-    - Added language selection screen
-    - improved language selection screen to show also the native language
--->
-
-
     <!-- Shows the available channels in a lists where
         the user can select them and download the logos, edit them,... -->
     <window name="channeloverview">

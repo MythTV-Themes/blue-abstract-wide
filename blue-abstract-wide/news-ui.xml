@@ -2,16 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-
-<!--
-    - alignment fixes due to changes in base.xml
-    - more widgets are derived from widgets in the base.xml file
-    - plugincheck widget added in settings screen
-    - made the input widgets in the editor screen wider
-    - alignment and layout changes in the config screen, removed two unused widgets
--->
-
-
     <!-- shows the news with its short description -->
     <window name="news">
 

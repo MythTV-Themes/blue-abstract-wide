@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
-
-<!--
-    - alignment fixes due to changes in base.xml
-    - more widgets are derived from widgets in the base.xml file
-    - alignment and layout changes in the widgets the themechooser screen
-    - added description label in rawsettingseditor
--->
-
     
     <window name="rawsettingseditor">
 

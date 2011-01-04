@@ -2,11 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-
-<!-- 
-    - background widget is derived from widget in the base.xml file
--->
-
     <window name="moviesui">
 
         <imagetype name="background" from="base_background"/>

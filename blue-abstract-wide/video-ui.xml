@@ -2,31 +2,8 @@
 <!DOCTYPE mythuitheme SYSTEM "../mythuitheme.dtd">
 <mythuitheme>
 
-<!-- 
-    - alignment fixes due to changes in base.xml
-    - replaced arrow icons with shapes
-    - gallery screen shows more videos
-    - used smaller fonts to show more details
-    - improved display of videos in gallery screen
-    - more area to show video description
-    - more area to show video cast
-    - added video position indication to gallery screen
-    - alignment and layout changes in the moviesel screen
-    - alignment and layout changes in the descriptionpopup screen
-    - alignment and layout changes in the manager screen
-    - alignment and layout changes in the file_associations screen
-    - alignment and layout changes in the itemdetailpopup screen
-    - alignment and layout changes in the edit_metadata screen
-    - alignment and layout changes in the playersettings screen
-    - alignment and layout changes in the metadatasettings screen
-    - alignment and layout changes in the filter screen
-    - removed unused settings screens
--->
-
-
-    <!-- Popup for selecting from multiple results from the grabber scripts.
-        (Popup) shows the screen where the user can select the diffrent choices
-        that the imdb or the other movie databases offer -->
+    <!-- Shows the screen where the user can select the different 
+        choices that the imdb or the other movie databases offers -->
     <window name="moviesel">
 
         <shape name="darken_background" from="base_darken_background"/>

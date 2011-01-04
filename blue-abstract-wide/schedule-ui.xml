@@ -2,16 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-
-<!--
-    - alignment fixes due to changes in base.xml
-    - more widgets are derived from widgets in the base.xml file
-    - Incorporated parts of the patch from 
-      Mark Bobak to show the program description
-    - smaller font to show more EPG description
--->
-
-
     <!-- The Non-LiveTV program guide.
         Shows the available tv program in a table like view. -->
     <window name="programguide">

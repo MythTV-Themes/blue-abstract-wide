@@ -2,21 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-<!--
-    - renamed base_image_selected to base_image_selectedactive and 
-      base_image_inactive to base_image_selectedinactive to be in line 
-      with the widget statetypes
-    - changed password changer screen title
-    - changed group view changer screen title
-    - alignment fixes due to changes in base.xml
-    - themed editmetadata screen
-    - more widgets are derived from widgets in the base.xml file
-    - more area to show recording description in watchrecordings screen
-    - added new icons for video, audio and subtitle states 
-      in watchrecordings and deleterecordings screens
--->
-
-
     <!-- shows a list of available recording groups and its recordings
         together with some detail information about the recording -->
     <window name="watchrecordings">

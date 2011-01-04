@@ -2,16 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-<!--
-    - alignment fixes due to changes in base.xml
-    - more widgets are derived from widgets in the base.xml file
-    - alignment and layout changes in the netsearch screen
-    - alignment and layout changes in the treeeditor screen
-    - alignment and layout changes in the rsseditpopup screen
-    - alignment and layout changes in the tree screen
--->
-
-
     <!-- shows a list of available sites that the user can search for videos
         the results will be presented on the right and information with a
         preview image at the bottom -->

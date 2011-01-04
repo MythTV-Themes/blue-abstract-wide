@@ -2,26 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-<!--
-    - removed unneccessary comments
-    - alignment fixes
-    - removed unneccessary fonts
-    - renamed base_image_selected to base_image_selectedactive and 
-      base_image_inactive to base_image_selectedinactive to be in line 
-      with the widget statetypes
-    - Reworked the MythFileBrowser widget
-    - button and buttonlist images have been changed to use a general image
-    - checkbox images in buttonlist and checkbox widgets have been changed 
-    - changed popup background image
-    - message area increased in MythConfirmationPopup
-    - message area increased in MythPopupBox
-    - made the buttonlist images 40px high
-    - added base class for the popup background image
-    - added new base classes for the alpha valus so that all images, arrows 
-      depending on their state have the same transparency value
--->
-
-
     <!-- background image within the theme -->
     <window name="backgroundwindow">
         <imagetype name="background">

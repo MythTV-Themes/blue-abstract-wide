@@ -2,16 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-
-<!-- 
-    - alignment fixes due to changes in base.xml
-    - more widgets are derived from widgets in the base.xml file
-    - moved arrows to the top of the screen
-    - added image filename
-    - moved image path below the title
--->
-
-
     <!-- Default screen that shows the the available images in a list -->
     <window name="gallery">
 
