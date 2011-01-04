@@ -2,16 +2,21 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
+
+<!--
+    - alignment fixes due to changes in base.xml
+    - more widgets are derived from widgets in the base.xml file
+    - plugincheck widget added in settings screen
+    - made the input widgets in the editor screen wider
+    - alignment and layout changes in the config screen, removed two unused widgets
+-->
+
+
     <!-- shows the news with its short description -->
     <window name="news">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background"/>
 
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -19,7 +24,6 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>
         </textarea>
@@ -35,7 +39,6 @@
 
         <buttonlist name="articleslist" from="base_buttonlist_wide">
             <area>500,110,650,356</area>
-            <showarrow>no</showarrow>
         </buttonlist>
 
         <textarea name="nosites" from="base_textarea">
@@ -44,7 +47,6 @@
             <multiline>yes</multiline>
         </textarea>
 
-        <!-- ================================================================== -->
         <!-- this is the background for the information at the bottom -->
         <shape name="news_details_background" from="base_background_shape">
             <area>110,505,1060,174</area>
@@ -52,21 +54,21 @@
 
         <!-- the shape around the thumbnail -->
         <shape name="thumbnail_shape" from="base_background_shape">
-            <area>128,525,174,133</area>
+            <area>132,527,174,130</area>
         </shape>
         <imagetype name="thumbnail">
-            <area>130,527,170,129</area>
+            <area>134,528,170,129</area>
             <preserveaspect>true</preserveaspect>
         </imagetype>
 
         <!-- the vertical separator -->
         <shape name="news_description_separator" from="base_separator_shape">
-            <area>320,520,1,136</area>
+            <area>325,520,1,140</area>
         </shape>
 
         <!-- shows the title and the plot of the selected video -->
         <textarea name="title" from="base_textarea">
-            <area>340,515,650,40</area>
+            <area>343,513,650,40</area>
             <multiline>no</multiline>
             <align>left,vcenter</align>
             <cutdown>yes</cutdown>
@@ -75,20 +77,20 @@
 
         <!-- show the channel and the recorded time of the recording -->
         <textarea name="updated" from="base_textarea">
-            <area>340,561,300,20</area>
+            <area>343,555,300,20</area>
             <font>text_small</font>
         </textarea>
 
-        <!-- ================================================================== -->
         <!-- separates the time and channel and the status icons from the plot -->
         <shape name="news_details_separator" from="base_separator_shape">
-            <area>321,596,830,1</area>
+            <area>325,587,825,1</area>
         </shape>
 
         <!-- show the plot of the recording -->
         <textarea name="description" from="base_textarea">
-            <area>340,612,815,60</area>
+            <area>343,602,805,80</area>
             <multiline>yes</multiline>
+            <font>text_small</font>
             <cutdown>yes</cutdown>
             <align>left,top</align>
         </textarea>
@@ -96,47 +98,46 @@
         <!-- status icons -->
         <imagetype name="download_background">
             <filename>images/shared/news/need-download.png</filename>
-            <position>1028,521</position>
+            <position>1025,521</position>
             <alpha>60</alpha>
         </imagetype>
         <imagetype name="download" from="base_image_active">
             <filename>images/shared/news/need-download.png</filename>
-            <position>1028,521</position>
+            <position>1025,521</position>
         </imagetype>
 
         <imagetype name="enclosures_background">
             <filename>images/shared/news/enclosures.png</filename>
-            <position>1073,520</position>
+            <position>1070,520</position>
             <alpha>60</alpha>
         </imagetype>
         <imagetype name="enclosures" from="base_image_active">
             <filename>images/shared/news/enclosures.png</filename>
-            <position>1073,520</position>
+            <position>1070,520</position>
         </imagetype>
 
         <imagetype name="ispodcast_background">
             <filename>images/shared/news/podcast.png</filename>
-            <position>1118,520</position>
+            <position>1115,520</position>
             <alpha>60</alpha>
         </imagetype>
         <imagetype name="ispodcast" from="base_image_active">
             <filename>images/shared/news/podcast.png</filename>
-            <position>1118,520</position>
+            <position>1115,520</position>
         </imagetype>
 
     </window>
 
 
+
+
+
+
     <!-- allows the user to add a new news site -->
     <window name="editor">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
-
-        <!-- The heading (name) of the screen -->
+        <imagetype name="background" from="base_background"/>
+        
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -144,90 +145,80 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
         <textarea name="clock" from="base_clock">
             <position>1060,0</position>
         </textarea>
 
         <shape name="editor_background" from="base_background_shape">
-            <area>370,175,540,370</area>
+            <area>200,185,880,375</area>
         </shape>
 
-
+        <imagetype name="message_background_overlay" from="base_popup_background">
+            <area>220,205,840,70</area>
+        </imagetype>
         <textarea name="title" from="base_textarea">
+            <area>220,205,840,70</area>
             <font>title</font>
-            <area>370,195,540,30</area>
             <align>allcenter</align>
         </textarea>
 
-        <!-- ================================================================== -->
-        <!-- separates the title -->
-        <shape name="title_separator" from="base_separator_shape">
-            <area>390,245,500,1</area>
-        </shape>
-
-
         <textarea name="namelabel" from="base_textarea">
-            <area>400,270,100,30</area>
+            <area>220,295,180,40</area>
             <align>right,vcenter</align>
         </textarea>
-        <textedit name="name" from="base_textedit">
-            <position>515,265</position>
+        <textedit name="name" from="base_textedit_wide">
+            <position>410,295</position>
         </textedit>
 
         <textarea name="urllabel" from="base_textarea">
-            <area>400,320,100,30</area>
+            <area>220,340,180,40</area>
             <align>right,vcenter</align>
         </textarea>
-        <textedit name="url" from="base_textedit">
-            <position>515,315</position>
+        <textedit name="url" from="base_textedit_wide">
+            <position>410,340</position>
         </textedit>
 
         <textarea name="iconlabel" from="base_textarea">
-            <area>400,370,100,30</area>
+            <area>220,385,180,40</area>
             <align>right,vcenter</align>
         </textarea>
-        <textedit name="icon" from="base_textedit">
-            <position>515,365</position>
+        <textedit name="icon" from="base_textedit_wide">
+            <position>410,385</position>
         </textedit>
 
         <textarea name="podcastlabel" from="base_textarea">
-            <area>400,420,100,30</area>
+            <area>220,430,180,40</area>
             <align>right,vcenter</align>
         </textarea>
         <checkbox name="podcast_check" from="base_checkbox">
-            <position>515,420</position>
+            <position>410,435</position>
         </checkbox>
 
-
-        <!-- ================================================================== -->
-        <!-- separates the title -->
         <shape name="button_separator" from="base_separator_shape">
-            <area>390,465,500,1</area>
+            <area>220,480,840,1</area>
         </shape>
 
         <button name="ok" from="base_button">
-            <position>470,485</position>
+            <position>470,500</position>
             <value>Ok</value>
         </button>
         <button name="cancel" from="base_button">
-            <position>660,485</position>
+            <position>660,500</position>
             <value>Cancel</value>
         </button>
 
     </window>
 
 
+
+
+
+
     <!-- this is the configuration window for mythnews -->
     <window name="config">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
-
-        <!-- The heading (name) of the screen -->
+        <imagetype name="background" from="base_background"/>
+        
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -235,40 +226,38 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>
         </textarea>
 
-
         <shape name="newsconfig_background" from="base_background_shape">
-            <area>110,80,1060,592</area>
+            <area>120,80,1050,580</area>
         </shape>
 
         <textarea name="category_label" from="base_textarea">
-            <area>135,93,350,30</area>
+            <area>140,95,350,20</area>
             <value>Available Categories</value>
-            <font>text_small</font>
+            <font>text_very_small</font>
             <align>left,vcenter</align>
         </textarea>
 
         <buttonlist name="category" from="base_buttonlist">
-            <area>130,130,350,533</area>
+            <area>140,120,350,533</area>
         </buttonlist>
 
         <textarea name="sites_label" from="base_textarea">
-            <area>505,93,350,30</area>
+            <area>500,95,350,20</area>
             <value>Available Sites</value>
-            <font>text_small</font>
+            <font>text_very_small</font>
             <align>left,vcenter</align>
         </textarea>
 
         <buttonlist name="sites" from="base_buttonlist_wide">
-            <area>500,130,650,533</area>
+            <area>500,120,650,533</area>
             <showarrow>no</showarrow>
         </buttonlist>
 
-        <textarea name="context_switch" from="base_textarea">
+        <!--<textarea name="context_switch" from="base_textarea">
             <area>130,620,350,50</area>
             <align>left,top</align>
             <multiline>yes</multiline>
@@ -278,10 +267,8 @@
             <area>500,620,650,50</area>
             <align>left,top</align>
             <multiline>yes</multiline>
-        </textarea>
+        </textarea>-->
 
     </window>
-
-
 
 </mythuitheme>
