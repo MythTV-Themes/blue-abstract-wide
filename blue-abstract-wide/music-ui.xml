@@ -2,10 +2,17 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
+
+<!--
+    - alignment fixes due to changes in base.xml
+    - more widgets are derived from widgets in the base.xml file
+    - removed unused settings screens
+-->
+
+
     <!--<window name="albumart_browser">-->
 
 
-    <!-- ================================================================== -->
     <!-- shows all the available music in a column list. the
         user can select it and add it to a playlist. -->
     <window name="music_select">
@@ -118,7 +125,10 @@
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
+
     <!-- shows the music in a three column list. the user can select the playlists and the
         songs. The screen also displays information about the currently active song. -->
     <window name="music_play">
@@ -288,8 +298,8 @@
             </textarea>
             <statusbar name="progress_bar" draworder="2" whitespace="5">
                 <position>305,145</position>
-                <container fleximage="no">images/widgets/progressbar/progressbar_empty_flat.png</container>
-                <fill>images/widgets/progressbar/progressbar_full_flat.png</fill>
+                <container fleximage="no">images/widgets/progressbar/progressbar_inactive.png</container>
+                <fill>images/widgets/progressbar/progressbar_active.png</fill>
                 <orientation>LeftToRight</orientation>
             </statusbar>
 
@@ -330,7 +340,7 @@
 
         <!-- All the buttons -->
         <container name="musicbuttons">
-            <area>305,635,720,40</area>
+            <area>305,635,820,40</area>
 
             <textbutton name="shuffle_button" draworder="0">
                 <position>0,0</position>
@@ -357,7 +367,7 @@
             </textbutton>
 
             <textbutton name="vis_button" draworder="0">
-                <position>510,0</position>
+                <position>660,0</position>
                 <image function="on" filename="images/widgets/button_active.png"></image>
                 <image function="off" filename="images/widgets/button_inactive.png"></image>
                 <image function="pushed" filename="images/widgets/button_active.png"></image>
@@ -534,17 +544,15 @@
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
+
     <!-- this is the screen where the user can rip audio cds. -->
     <window name="cdripper">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
-
-        <!-- The heading (name) of the screen -->
+        <imagetype name="background" from="base_background"/>
+        
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -552,7 +560,6 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>
         </textarea>
@@ -671,8 +678,8 @@
                     </textarea>
                 </state>
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground">
-                        <filename>images/widgets/buttonlist_active_very_wide.png</filename>
+                    <imagetype name="buttonbackground" from="button_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
                     </imagetype>
                 </state>
                 <state name="selectedinactive" from="active" />
@@ -694,7 +701,10 @@
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
+
     <!-- this is the screen that shows the progress of the cd rip. -->
     <window name="ripstatus">
 
@@ -775,19 +785,20 @@
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
+
     <!-- this is the small screen that pops up on every screen when a new
         song is played. it shows some information about the song. -->
     <window name="miniplayer">
 
-        <shape name="track_info_background" from="base_background_shape">
+        <shape name="track_info_background" from="base_background_shape_dark">
             <area>555,520,700,180</area>
-            <fill color="#000000" alpha="180" />
-            <line color="#AAAAAA" alpha="150" width="1" />
         </shape>
 
         <textarea name="title" from="base_textarea">
-            <area>735,540,450,30</area>
+            <area>735,540,380,30</area>
             <cutdown>yes</cutdown>
             <font>title</font>
         </textarea>
@@ -800,31 +811,47 @@
             <cutdown>yes</cutdown>
         </textarea>
 
+        <imagetype name="playicon" from="base_icon_inactive">
+            <position>1140,535</position>
+            <filename>images/shared/music/play.png</filename>
+        </imagetype>
+        
+        <imagetype name="pauseicon" from="base_icon_inactive">
+            <position>1175,535</position>
+            <filename>images/shared/music/pause.png</filename>
+        </imagetype>
+
+        <imagetype name="stopicon" from="base_icon_inactive">
+            <position>1210,535</position>
+            <filename>images/shared/music/stop.png</filename>
+        </imagetype>
+        
         <statetype name="playbackstate">
-            <position>1200,540</position>
-            <showempty>yes</showempty>
             <state name="playing">
-                <imagetype name="playicon">
+                <imagetype name="playicon" from="base_icon_selected">
+            		<position>1140,535</position>
                     <filename>images/shared/music/play.png</filename>
                 </imagetype>
             </state>
             <state name="paused">
-                <imagetype name="pauseicon">
+                <imagetype name="pauseicon" from="base_icon_selected">
+            		<position>1175,535</position>
                     <filename>images/shared/music/pause.png</filename>
                 </imagetype>
             </state>
             <state name="stopped">
-                <imagetype name="stopicon">
+                <imagetype name="stopicon" from="base_icon_selected">
+            		<position>1210,535</position>
                     <filename>images/shared/music/stop.png</filename>
                 </imagetype>
             </state>
         </statetype>
         
         <imagetype name="rating_background" from="base_rating_background">
-            <position>1145,587</position>
+            <position>1145,583</position>
         </imagetype>
         <statetype name="ratings_state" from="base_rating">
-            <position>1145,587</position>
+            <position>1145,583</position>
         </statetype>
 
         <!--<textarea name="info" from="base_textarea">
@@ -863,21 +890,20 @@
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
+
     <!-- this is the popup screen that shows the volume progressbar. -->
     <window name="volume_popup">
 
-        <shape name="shape">
-            <area>370,285,540,150</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="255" />
-            <line color="#999999" alpha="255" width="1" />
-            <cornerradius>2</cornerradius>
+        <shape name="volume_background" from="base_background_shape_dark">
+            <area>370,285,540,130</area>
         </shape>
 
         <textarea name="message" from="base_textarea">
             <area>390,305,500,30</area>
-            <font>popup_title</font>
+            <font>text</font>
             <align>allcenter</align>
             <value>Volume</value>
         </textarea>
@@ -901,30 +927,29 @@
             </state>
         </statetype>
         
-        <progressbar name="volume_progress" from="base_progressbar">
+        <progressbar name="volume_progress" from="base_progressbar_flat">
             <position>390,375</position>
         </progressbar>
 
-        <textarea name="volume_text" from="base_textarea">
+<!--        <textarea name="volume_text" from="base_textarea">
             <area>390,375,500,40</area>
             <align>allcenter</align>
             <value>0%</value>
-        </textarea>
+        </textarea>-->
         
     </window>
     
-    <!-- ================================================================== -->
+
+
+
+
+
     <!-- this is a screen where the user can import new cover images for the
         music from a choosen directory. It will be added to the collection. -->
     <window name="import_coverart">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background"/>
 
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -932,7 +957,6 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>
         </textarea>
@@ -1021,18 +1045,16 @@
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
+
     <!-- this is a screen where the user can import new music from a
         choosen directory. It will be added to the collection. -->
     <window name="import_music">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background"/>
 
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -1040,7 +1062,6 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>
         </textarea>
@@ -1187,710 +1208,20 @@
 
 
 
-    <window name="generalsettings">
-
-        <!-- the background image of the screen -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
-        <!-- the description of the screen that is shown in the top left corner -->
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>General Settings</value>
-            </textarea>
-        </textarea>
-        <!-- the clock that is shown in the top right corner -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <!-- the large rectangular shape -->
-        <shape name="generalsettings_background" from="base_background_shape">
-            <area>165,80,950,610</area>
-        </shape>
-
-        <textarea name="musiclocation_label" from="base_textarea">
-            <area>240,100,400,40</area>
-            <align>right,vcenter</align>
-            <value>Directory to hold music:</value>
-        </textarea>
-        <textarea name="musiccddevice_label" from="base_textarea">
-            <area>240,150,400,40</area>
-            <align>right,vcenter</align>
-            <value>CD device:</value>
-        </textarea>
-        <textarea name="musicaudiodevice_label" from="base_textarea">
-            <area>240,200,400,40</area>
-            <align>right,vcenter</align>
-            <value>Audio device:</value>
-        </textarea>
-        <textarea name="musicdefaultupmix_label" from="base_textarea">
-            <area>240,250,400,40</area>
-            <align>right,vcenter</align>
-            <value>Convert stereo to 5.1 sound:</value>
-        </textarea>
-        <textedit name="musiclocation" from="base_textedit">
-            <area>650,100,280,40</area>
-        </textedit>
-        <textedit name="musiccddevice" from="base_textedit">
-            <area>650,150,280,40</area>
-        </textedit>
-        <textedit name="musicaudiodevice" from="base_textedit">
-            <area>650,200,280,40</area>
-        </textedit>
-        <checkbox name="musicdefaultupmix" from="base_checkbox">
-            <area>650,255,280,40</area>
-        </checkbox>
-
-        <shape name="separator1" from="base_separator_shape">
-            <area>185,300,910,1</area>
-        </shape>
-
-        <textarea name="keyboardaccelerators_label" from="base_textarea">
-            <area>200,310,440,40</area>
-            <align>right,vcenter</align>
-            <value>Use Keyboard/Remote Accelerated Buttons:</value>
-        </textarea>
-        <checkbox name="keyboardaccelerators" from="base_checkbox">
-            <position>650,315</position>
-        </checkbox>
-
-        <shape name="separator2" from="base_separator_shape">
-            <area>185,360,910,1</area>
-        </shape>
-
-        <textarea name="nonid3filenameformat_label" from="base_textarea">
-            <area>240,375,400,40</area>
-            <align>right,vcenter</align>
-            <value>Filename Format:</value>
-        </textarea>
-        <textarea name="ignoreid3tags_label" from="base_textarea">
-            <area>240,425,400,40</area>
-            <align>right,vcenter</align>
-            <value>Ignore ID3 Tags:</value>
-        </textarea>
-        <textarea name="tagencoding_label" from="base_textarea">
-            <area>240,475,400,40</area>
-            <align>right,vcenter</align>
-            <value>Tag Encoding:</value>
-        </textarea>
-
-        <textedit name="nonid3filenameformat" from="base_textedit">
-            <area>650,375,550,40</area>
-        </textedit>
-        <checkbox name="ignoreid3tags" from="base_checkbox">
-            <position>650,430</position>
-        </checkbox>
-        <buttonlist name="tagencoding" from="base_selector">
-            <position>650,475</position>
-        </buttonlist>
-
-        <shape name="helptext_background" from="base_background_shape">
-            <area>185,531,910,80</area>
-        </shape>
-        <textarea name="helptext" from="base_textarea">
-            <area>205,531,870,80</area>
-            <cutdown>yes</cutdown>
-            <align>allcenter</align>
-            <multiline>yes</multiline>
-        </textarea>
-
-        <button name="save" from="base_button">
-            <position>480,630</position>
-            <value>Save</value>
-        </button>
-        <button name="cancel" from="base_button">
-            <position>650,630</position>
-            <value>Cancel</value>
-        </button>
-    </window>
-
-    <window name="playersettings">
-
-        <!-- the background image of the screen -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
-        <!-- the description of the screen that is shown in the top left corner -->
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Player Settings</value>
-            </textarea>
-        </textarea>
-        <!-- the clock that is shown in the top right corner -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <!-- the large rectangular shape -->
-        <shape name="playersettings_background" from="base_background_shape">
-            <area>215,150,850,445</area>
-        </shape>
-
-        <textarea name="playmode_label" from="base_textarea">
-            <area>240,170,400,40</area>
-            <align>right,vcenter</align>
-            <value>Play mode:</value>
-        </textarea>
-        <textarea name="resumemode_label" from="base_textarea">
-            <area>240,220,400,40</area>
-            <align>right,vcenter</align>
-            <value>Resume mode:</value>
-        </textarea>
-        <textarea name="exitaction_label" from="base_textarea">
-            <area>240,270,400,40</area>
-            <align>right,vcenter</align>
-            <value>Action on exit:</value>
-        </textarea>
-
-        <buttonlist name="playmode" from="base_selector">
-            <position>650,170</position>
-        </buttonlist>
-        <buttonlist name="resumemode" from="base_selector">
-            <position>650,220</position>
-        </buttonlist>
-        <buttonlist name="exitaction" from="base_selector">
-            <position>650,270</position>
-        </buttonlist>
-
-        <shape name="separator1" from="base_separator_shape">
-            <area>235,325,810,1</area>
-        </shape>
-
-        <textarea name="autolookupcd_label" from="base_textarea">
-            <area>240,335,400,40</area>
-            <align>right,vcenter</align>
-            <value>Automatically lookup CDs:</value>
-        </textarea>
-        <textarea name="autoplaycd_label" from="base_textarea">
-            <area>240,385,400,40</area>
-            <align>right,vcenter</align>
-            <value>Automatically Play CDs:</value>
-        </textarea>
-
-        <checkbox name="autolookupcd" from="base_checkbox">
-            <position>650,340</position>
-        </checkbox>
-        <checkbox name="autoplaycd" from="base_checkbox">
-            <position>650,390</position>
-        </checkbox>
-
-        <shape name="helptext_background" from="base_background_shape">
-            <area>235,435,810,80</area>
-        </shape>
-        <textarea name="helptext" from="base_textarea">
-            <area>255,435,770,80</area>
-            <cutdown>yes</cutdown>
-            <align>allcenter</align>
-            <multiline>yes</multiline>
-        </textarea>
-
-        <button name="save" from="base_button">
-            <position>480,535</position>
-            <value>Save</value>
-        </button>
-        <button name="cancel" from="base_button">
-            <position>650,535</position>
-            <value>Cancel</value>
-        </button>
-    </window>
-
-    <window name="ratingsettings">
-
-        <!-- the background image of the screen -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
-        <!-- the description of the screen that is shown in the top left corner -->
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Rating Settings</value>
-            </textarea>
-        </textarea>
-        <!-- the clock that is shown in the top right corner -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <!-- the large rectangular shape -->
-        <shape name="ratingsettings_background" from="base_background_shape">
-            <area>215,150,850,460</area>
-        </shape>
-
-        <textarea name="showratings_label" from="base_textarea">
-            <area>240,170,400,40</area>
-            <align>right,vcenter</align>
-            <value>Show Song Ratings:</value>
-        </textarea>
-        <textarea name="ratingweight_label" from="base_textarea">
-            <area>240,220,400,40</area>
-            <align>right,vcenter</align>
-            <value>Rating Weight:</value>
-        </textarea>
-        <textarea name="playcountweight_label" from="base_textarea">
-            <area>240,270,400,40</area>
-            <align>right,vcenter</align>
-            <value>Play Count Weight:</value>
-        </textarea>
-        <textarea name="lastplayweight_label" from="base_textarea">
-            <area>240,320,400,40</area>
-            <align>right,vcenter</align>
-            <value>Last Play Weight:</value>
-        </textarea>
-        <textarea name="randomweight_label" from="base_textarea">
-            <area>240,370,400,40</area>
-            <align>right,vcenter</align>
-            <value>Random Weight:</value>
-        </textarea>
-
-        <checkbox name="showratings" from="base_checkbox">
-            <position>650,175</position>
-        </checkbox>
-        <spinbox name="ratingweight" from="base_spinbox">
-            <position>650,220</position>
-        </spinbox>
-        <spinbox name="playcountweight" from="base_spinbox">
-            <position>650,270</position>
-        </spinbox>
-        <spinbox name="lastplayweight" from="base_spinbox">
-            <position>650,320</position>
-        </spinbox>
-        <spinbox name="randomweight" from="base_spinbox">
-            <position>650,370</position>
-        </spinbox>
-
-        <shape name="helptext_background" from="base_background_shape">
-            <area>235,430,810,100</area>
-        </shape>
-        <textarea name="helptext" from="base_textarea">
-            <area>255,430,770,100</area>
-            <cutdown>yes</cutdown>
-            <align>allcenter</align>
-            <multiline>yes</multiline>
-        </textarea>
-
-        <button name="save" from="base_button">
-            <position>480,550</position>
-            <value>Save</value>
-        </button>
-        <button name="cancel" from="base_button">
-            <position>650,550</position>
-            <value>Cancel</value>
-        </button>
-    </window>
-
-    <window name="displaysettings">
-
-        <!-- the background image of the screen -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
-        <!-- the description of the screen that is shown in the top left corner -->
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Display Settings</value>
-            </textarea>
-        </textarea>
-        <!-- the clock that is shown in the top right corner -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <!-- the large rectangular shape -->
-        <shape name="displaysettings_background" from="base_background_shape">
-            <area>145,170,990,450</area>
-        </shape>
-
-        <textarea name="showwholetree_label" from="base_textarea">
-            <area>240,190,400,40</area>
-            <align>right,vcenter</align>
-            <value>Show entire music tree:</value>
-        </textarea>
-        <textarea name="treelevels_label" from="base_textarea">
-            <area>240,240,400,40</area>
-            <align>right,vcenter</align>
-            <value>Tree Sorting:</value>
-        </textarea>
-        <textarea name="artisttreegroups_label" from="base_textarea">
-            <area>240,290,400,40</area>
-            <align>right,vcenter</align>
-            <value>Number of Artists Tree Groups:</value>
-        </textarea>
-        <textarea name="searchmaxresults_label" from="base_textarea">
-            <area>240,340,400,40</area>
-            <align>right,vcenter</align>
-            <value>Maximum Search Results:</value>
-        </textarea>
-        <textarea name="listshuffled_label" from="base_textarea">
-            <area>240,390,400,40</area>
-            <align>right,vcenter</align>
-            <value>List as Shuffled:</value>
-        </textarea>
-
-        <checkbox name="showwholetree" from="base_checkbox">
-            <position>650,195</position>
-        </checkbox>
-        <textedit name="treelevels" from="base_textedit">
-            <area>650,240,490,40</area>
-        </textedit>
-        <buttonlist name="artisttreegroups" from="base_selector">
-            <position>650,290</position>
-        </buttonlist>
-        <spinbox name="searchmaxresults" from="base_spinbox">
-            <position>650,340</position>
-        </spinbox>
-        <checkbox name="listshuffled" from="base_checkbox">
-            <position>650,395</position>
-        </checkbox>
-
-        <shape name="helptext_background" from="base_background_shape">
-            <area>165,441,950,100</area>
-        </shape>
-        <textarea name="helptext" from="base_textarea">
-            <area>185,441,910,100</area>
-            <cutdown>yes</cutdown>
-            <align>allcenter</align>
-            <multiline>yes</multiline>
-        </textarea>
-
-        <button name="save" from="base_button">
-            <position>480,560</position>
-            <value>Save</value>
-        </button>
-        <button name="cancel" from="base_button">
-            <position>650,560</position>
-            <value>Cancel</value>
-        </button>
-    </window>
-
-    <window name="importsettings">
-
-        <!-- the background image of the screen -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
-        <!-- the description of the screen that is shown in the top left corner -->
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Import Settings</value>
-            </textarea>
-        </textarea>
-        <!-- the clock that is shown in the top right corner -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <!-- the large rectangular shape -->
-        <shape name="importsettings_background" from="base_background_shape">
-            <area>215,80,850,590</area>
-        </shape>
-
-        <textarea name="paranoialevel_label" from="base_textarea">
-            <area>240,100,400,40</area>
-            <align>right,vcenter</align>
-            <value>Paranoia Level:</value>
-        </textarea>
-        <textarea name="filenametemplate_label" from="base_textarea">
-            <area>240,150,400,40</area>
-            <align>right,vcenter</align>
-            <value>File storage location:</value>
-        </textarea>
-        <textarea name="nowhitespace_label" from="base_textarea">
-            <area>240,200,400,40</area>
-            <align>right,vcenter</align>
-            <value>Replace space with underscore:</value>
-        </textarea>
-        <textarea name="encoding_label" from="base_textarea">
-            <area>240,250,400,40</area>
-            <align>right,vcenter</align>
-            <value>Encoding Type:</value>
-        </textarea>
-        <textarea name="defaultripquality_label" from="base_textarea">
-            <area>240,300,400,40</area>
-            <align>right,vcenter</align>
-            <value>Default Rip Quality:</value>
-        </textarea>
-        <textarea name="mp3usevbr_label" from="base_textarea">
-            <area>240,350,400,40</area>
-            <align>right,vcenter</align>
-            <value>Use variable bitrates:</value>
-        </textarea>
-        <textarea name="ejectcd_label" from="base_textarea">
-            <area>240,400,400,40</area>
-            <align>right,vcenter</align>
-            <value>Automatically eject CDs after ripping:</value>
-        </textarea>
-        <textarea name="postcdripscript_label" from="base_textarea">
-            <area>240,450,400,40</area>
-            <align>right,vcenter</align>
-            <value>Script Path:</value>
-        </textarea>
-
-
-        <buttonlist name="paranoialevel" from="base_selector">
-            <position>650,100</position>
-        </buttonlist>
-        <textedit name="filenametemplate" from="base_textedit">
-            <area>650,150,280,40</area>
-        </textedit>
-        <checkbox name="nowhitespace" from="base_checkbox">
-            <position>650,205</position>
-        </checkbox>
-        <buttonlist name="encodertype" from="base_selector">
-            <position>650,250</position>
-        </buttonlist>
-        <buttonlist name="defaultripquality" from="base_selector">
-            <position>650,300</position>
-        </buttonlist>
-        <checkbox name="mp3usevbr" from="base_checkbox">
-            <position>650,355</position>
-        </checkbox>
-        <checkbox name="ejectcd" from="base_checkbox">
-            <position>650,405</position>
-        </checkbox>
-        <textedit name="postcdripscript" from="base_textedit">
-            <area>650,450,280,40</area>
-        </textedit>
-
-        <!--<shape name="helptext_separator" from="base_separator_shape">
-            <area>315,465,650,1</area>
-        </shape>-->
-
-        <shape name="helptext_background" from="base_background_shape">
-            <area>235,511,810,80</area>
-        </shape>
-        <textarea name="helptext" from="base_textarea">
-            <area>255,511,770,80</area>
-            <cutdown>yes</cutdown>
-            <align>allcenter</align>
-            <multiline>yes</multiline>
-        </textarea>
-
-        <!--<shape name="button_separator" from="base_separator_shape">
-            <area>315,570,650,1</area>
-        </shape>-->
-
-        <button name="save" from="base_button">
-            <position>480,610</position>
-            <value>Save</value>
-        </button>
-        <button name="cancel" from="base_button">
-            <position>650,610</position>
-            <value>Cancel</value>
-        </button>
-    </window>
-
-    <window name="burningsettings">
-
-        <!-- the background image of the screen -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
-        <!-- the description of the screen that is shown in the top left corner -->
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Burning Settings</value>
-            </textarea>
-        </textarea>
-        <!-- the clock that is shown in the top right corner -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <!-- the large rectangular shape -->
-        <shape name="burnsetting_background" from="base_background_shape">
-            <area>215,140,850,490</area>
-        </shape>
-
-        <textarea name="cdwriterenabled_label" from="base_textarea">
-            <area>240,160,400,40</area>
-            <align>right,vcenter</align>
-            <value>Enable CD Writing:</value>
-        </textarea>
-        <textarea name="cdwriterdevice_label" from="base_textarea">
-            <area>240,210,400,40</area>
-            <align>right,vcenter</align>
-            <value>CD-Writer Device:</value>
-        </textarea>
-        <textarea name="cddisksize_label" from="base_textarea">
-            <area>240,260,400,40</area>
-            <align>right,vcenter</align>
-            <value>Disk Size:</value>
-        </textarea>
-        <textarea name="cdwritespeed_label" from="base_textarea">
-            <area>240,310,400,40</area>
-            <align>right,vcenter</align>
-            <value>CD Write Speed:</value>
-        </textarea>
-        <textarea name="cdblanktype_label" from="base_textarea">
-            <area>240,360,400,40</area>
-            <align>right,vcenter</align>
-            <value>CD Blanking Type:</value>
-        </textarea>
-        <textarea name="cdcreatedir_label" from="base_textarea">
-            <area>240,410,400,40</area>
-            <align>right,vcenter</align>
-            <value>Enable directories on MP3 Creation:</value>
-        </textarea>
-
-        <checkbox name="cdwriterenabled" from="base_checkbox">
-            <position>650,165</position>
-        </checkbox>
-        <textedit name="cdwriterdevice" from="base_textedit">
-            <position>650,210</position>
-        </textedit>
-        <buttonlist name="cddisksize" from="base_selector">
-            <position>650,260</position>
-        </buttonlist>
-        <buttonlist name="cdwritespeed" from="base_selector">
-            <position>650,310</position>
-        </buttonlist>
-        <buttonlist name="cdblanktype" from="base_selector">
-            <position>650,360</position>
-        </buttonlist>
-        <checkbox name="cdcreatedir" from="base_checkbox">
-            <position>650,415</position>
-        </checkbox>
-
-        <shape name="helptext_background" from="base_background_shape">
-            <area>235,470,810,80</area>
-        </shape>
-        <textarea name="helptext" from="base_textarea">
-            <area>255,470,770,80</area>
-            <cutdown>yes</cutdown>
-            <align>allcenter</align>
-            <multiline>yes</multiline>
-        </textarea>
-
-        <button name="save" from="base_button">
-            <position>480,570</position>
-            <value>Save</value>
-        </button>
-        <button name="cancel" from="base_button">
-            <position>650,570</position>
-            <value>Cancel</value>
-        </button>
-
-    </window>
-
-    <window name="inetradiosettings">
-
-        <!-- the background image of the screen -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
-        <!-- the description of the screen that is shown in the top left corner -->
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Ineternet Radio</value>
-            </textarea>
-        </textarea>
-        <!-- the clock that is shown in the top right corner -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <!-- the large rectangular shape -->
-        <shape name="inetradiosettings_background" from="base_background_shape">
-            <area>215,80,850,580</area>
-        </shape>
-
-        <shape name="helptext_background" from="base_background_shape">
-            <area>235,501,810,80</area>
-        </shape>
-        <textarea name="helptext" from="base_textarea">
-            <area>255,501,770,80</area>
-            <cutdown>yes</cutdown>
-            <align>allcenter</align>
-            <multiline>yes</multiline>
-        </textarea>
-
-        <button name="save" from="base_button">
-            <position>480,600</position>
-            <value>Save</value>
-        </button>
-
-        <button name="cancel" from="base_button">
-            <position>650,600</position>
-            <value>Exit</value>
-        </button>
-    </window>
-
-    <window name="visualizationsettings">
-
-        <!-- the background image of the screen -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
-        <!-- the description of the screen that is shown in the top left corner -->
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Visualization Settings</value>
-            </textarea>
-        </textarea>
-        <!-- the clock that is shown in the top right corner -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <!-- the large rectangular shape -->
-        <shape name="visualizationsettings_background" from="base_background_shape">
-            <area>215,80,850,580</area>
-        </shape>
-
-        <shape name="helptext_background" from="base_background_shape">
-            <area>235,501,810,80</area>
-        </shape>
-        <textarea name="helptext" from="base_textarea">
-            <area>255,501,770,80</area>
-            <cutdown>yes</cutdown>
-            <align>allcenter</align>
-            <multiline>yes</multiline>
-        </textarea>
-
-        <button name="save" from="base_button">
-            <position>480,600</position>
-            <value>Save</value>
-        </button>
-        <button name="cancel" from="base_button">
-            <position>650,600</position>
-            <value>Cancel</value>
-        </button>
-    </window>
 
 
 
     <window name="stream_manager">
 
-        <!-- the background image of the screen -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
-        <!-- the description of the screen that is shown in the top left corner -->
+        <imagetype name="background" from="base_background"/>
+        
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
                 <value>Internet Radio</value>
             </textarea>
         </textarea>
-        <!-- the clock that is shown in the top right corner -->
+        
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>
         </textarea>
@@ -1931,5 +1262,3 @@
     </window>
 
 </mythuitheme>
-
-
