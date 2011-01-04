@@ -2,57 +2,62 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- ================================================================== -->
+<!-- 
+    - alignment fixes due to changes in base.xml
+    - replaced arrow icons with shapes
+    - more widgets are derived from widgets in the base.xml file
+-->
+
+
     <!-- The screen where the user can adjust the monitor. -->
     <window name="appearance">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background"/>
 
-        <!-- The heading (name) of the screen -->
-        <textarea name="base_heading">
-            <shape name="heading_background" from="base_background_shape">
-                <area>470,-4,339,44</area>
-            </shape>
-            <textarea name="text" from="base_textarea">
-                <area>474,0,335,38</area>
-                <font>text</font>
-                <align>allcenter</align>
-                <value>Appearance Wizard</value>
-            </textarea>
+        <!-- The name of the screen needs to be defined 
+             again because it is in the center of the screen -->
+        <shape name="heading_background" from="base_background_shape">
+            <area>470,-4,350,36</area>
+        </shape>
+        <textarea name="text" from="base_textarea">
+            <area>475,0,340,30</area>
+            <align>allcenter</align>
+            <value>Appearance Wizard</value>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>
         </textarea>
 
         <!-- this is the background for the information at the bottom -->
         <shape name="appearance_background" from="base_background_shape">
-            <area>350,210,580,295</area>
+            <area>350,240,580,240</area>
         </shape>
 
         <imagetype name="topleft">
             <position>0,0</position>
-            <filename>images/shared/arrow_topleft.png</filename>
+            <filename />
+            <shape name="topleft_shape" from="base_background_shape_dark">
+                <area>0,0,40,40</area>
+            </shape>
         </imagetype>
         <imagetype name="bottomright">
-            <position>800,600</position>
-            <filename>images/shared/arrow_bottomright.png</filename>
+            <position>1240,640</position>
+            <filename />
+            <shape name="bottomright_shape" from="base_background_shape_dark">
+                <area>1240,640,40,40</area>
+            </shape>
         </imagetype>
 
         <textarea name="part1" from="base_textarea">
-            <area>370,230,540,80</area>
+            <area>370,240,540,100</area>
             <value>Move the selected arrow to the corner of the TV screen. Press SELECT to edit the other arrow. Press MENU for options and ESC to quit.</value>
             <multiline>yes</multiline>
-            <align>hcenter,top</align>
+            <align>allcenter</align>
         </textarea>
 
         <shape name="title_separator" from="base_separator_shape">
-            <area>370,320,540,1</area>
+            <area>370,340,540,1</area>
         </shape>
 
         <textarea name="size" from="base_textarea">
