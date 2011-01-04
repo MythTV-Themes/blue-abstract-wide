@@ -4,13 +4,8 @@
 
     <window name="welcome_screen">
         
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background"/>
         
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -18,7 +13,6 @@
             </textarea>
         </textarea>
         
-        <!-- The clock that is shown at the top right of each screen -->
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>	
         </textarea>
