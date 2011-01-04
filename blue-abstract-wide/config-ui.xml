@@ -2,18 +2,25 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- ================================================================== -->
-    <!-- (Main window) shows the available channels in a lists where
+<!-- 
+    - alignment fixes due to changes in base.xml
+    - renamed base_image_selected to base_image_selectedactive and 
+      base_image_inactive to base_image_selectedinactive to be in line 
+      with the widget statetypes
+    - more widgets are derived from widgets in the base.xml file
+    - more channels are shows in the channeloverview
+    - Added language selection screen
+    - improved language selection screen to show also the native language
+-->
+
+
+    <!-- Shows the available channels in a lists where
         the user can select them and download the logos, edit them,... -->
     <window name="channeloverview">
 
         <!-- the background image -->
-        <imagetype name="fanart">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
-
-        <!-- The heading (name) of the screen -->
+        <imagetype name="fanart" from="base_background"/>
+        
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -21,7 +28,6 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>
         </textarea>
@@ -31,16 +37,16 @@
         </shape>
 
         <buttonlist name="channels" from="base_buttonlist_very_wide">
-            <area>230,90,825,316</area>
+            <area>230,90,820,317</area>
             <buttonarea>0,0,825,315</buttonarea>
-            <spacing>4</spacing>
+            <spacing>-6</spacing>
             <statetype name="buttonitem">
                 <state name="active">
                     <shape name="channelicon_background" from="base_background_shape">
-                        <area>3,3,33,33</area>
+                        <area>4,4,32,32</area>
                     </shape>
                     <imagetype name="icon">
-                        <area>4,4,31,31</area>
+                        <area>5,5,30,30</area>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
                     <textarea name="channum" from="base_textarea">
@@ -61,16 +67,17 @@
                 </state>
                 <!-- menu entry has been selected and is active -->
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selected">
-                        <filename>images/widgets/buttonlist_active_very_wide.png</filename>
-                        <!--<alphapulse min="160" max="255" change="2"/>-->
+                    <imagetype name="buttonbackground" from="base_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,820,40</area>
                     </imagetype>
                 </state>
 
                 <!-- menu entry has been selected and is inactive -->
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_inactive">
-                        <filename>images/widgets/buttonlist_active_very_wide.png</filename>
+                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,820,40</area>
                     </imagetype>
                     <textarea name="buttontext">
                         <font>text_inactive</font>
@@ -80,16 +87,16 @@
         </buttonlist>
 
         <shape name="channeloptions_background" from="base_background_shape">
-            <area>130,440,1020,250</area>
+            <area>130,450,1020,240</area>
         </shape>
 
         <textarea name="sort_label" from="base_textarea">
-            <area>150,460,400,40</area>
+            <area>150,470,400,40</area>
             <value>Sort Mode:</value>
             <align>right,vcenter</align>
         </textarea>
         <textarea name="source_label" from="base_textarea">
-            <area>150,510,400,40</area>
+            <area>150,515,400,40</area>
             <value>Video Source:</value>
             <align>right,vcenter</align>
         </textarea>
@@ -100,13 +107,13 @@
         </textarea>
 
         <buttonlist name="sorting" from="base_selector_wide">
-            <position>570,460</position>
+            <position>570,470</position>
         </buttonlist>
         <buttonlist name="source" from="base_selector_wide">
-            <position>570,510</position>
+            <position>570,515</position>
         </buttonlist>
         <button name="delete" from="base_button">
-            <position>960,510</position>
+            <position>960,515</position>
             <value>Delete</value>
         </button>
         <checkbox name="nochannum" from="base_checkbox">
@@ -133,18 +140,16 @@
     </window>
 
 
-    <!-- ================================================================== -->
-    <!-- (Main window) shows two vertical lists where the user can select
+
+
+
+
+    <!-- Shows two vertical lists where the user can select
         which entries he wants to see in the OSD menu -->
     <window name="osdmenueditor">
 
-        <!-- the background image -->
-        <imagetype name="fanart">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="fanart" from="base_background"/>
 
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -152,7 +157,6 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>
         </textarea>
@@ -178,6 +182,172 @@
             <position>575,615</position>
             <value>Done</value>
         </button>
+    </window>
+
+
+    
+    
+    
+    
+    <!-- Shows two vertical lists where the user can select
+        the language and country that the frontend shall use -->
+    <window name="languageselection">
+
+        <imagetype name="fanart" from="base_background"/>
+        
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Language Selection</value>
+            </textarea>
+        </textarea>
+        
+        <shape name="background" from="base_background_shape">
+            <area>220,80,850,580</area>
+        </shape>
+
+        <textarea name="countrylabel" from="base_textarea">
+            <area>240,90,450,20</area>
+            <value>Country</value>
+            <font>text_very_small</font>
+        </textarea>
+
+        <!-- shows the list of available languages -->
+        <buttonlist name="countries" from="base_buttonlist_wide">
+            <area>240,110,450,400</area>
+            <buttonarea>0,0,450,390</buttonarea>
+            <spacing>5</spacing>
+            <statetype name="buttonitem">
+                
+                <state name="active">
+                    <imagetype name="buttonbackground" from="base_image_active">
+                        <filename>images/widgets/widget_inactive.png</filename>
+                        <area>0,0,450,60</area>
+                    </imagetype>
+                    <shape name="channelicon_background" from="base_background_shape">
+                        <area>3,4,87,52</area>
+                    </shape>
+                    <imagetype name="buttonimage">
+                        <area>4,5,85,50</area>
+                    </imagetype>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>100,5,340,30</area>
+                        <align>left,vcenter</align>
+                        <cutdown>yes</cutdown>
+                    </textarea>
+                    <textarea name="nativecountry" from="base_textarea">
+                        <area>100,35,340,20</area>
+                        <align>left,vcenter</align>
+                        <font>text_very_small</font>
+                        <cutdown>yes</cutdown>
+                    </textarea>
+                </state>
+                
+                <state name="inactive" from="active" />
+                
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,450,60</area>
+                    </imagetype>
+                </state>
+
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,450,60</area>
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <font>text_inactive</font>
+                    </textarea>
+                </state>
+            </statetype>
+
+            <statetype name="upscrollarrow">
+                <position>395,97%</position>
+            </statetype>
+            
+            <statetype name="downscrollarrow">
+                <position>420,97%</position>
+            </statetype>
+        
+            <helptext>Select the country in which you currently reside</helptext>
+        </buttonlist>
+
+        <textarea name="languagelabel" from="base_textarea">
+            <area>700,90,350,20</area>
+            <value>Language</value>
+            <font>text_very_small</font>
+        </textarea>
+
+        <!-- shows the list of available languages -->
+        <buttonlist name="languages" from="base_buttonlist">
+            <area>700,110,350,400</area>
+            <buttonarea>0,0,350,390</buttonarea>
+            <spacing>5</spacing>
+            <statetype name="buttonitem">
+                
+                <state name="active">
+                    <imagetype name="buttonbackground" from="base_image_active">
+                        <filename>images/widgets/widget_inactive.png</filename>
+                        <area>0,0,350,60</area>
+                    </imagetype>                    
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,5,330,30</area>
+                        <align>left,vcenter</align>
+                        <cutdown>yes</cutdown>
+                    </textarea>
+                    <textarea name="language" from="base_textarea">
+                        <area>8,35,330,20</area>
+                        <align>left,vcenter</align>
+                        <font>text_very_small</font>
+                        <cutdown>yes</cutdown>
+                    </textarea>
+                </state>
+                
+                <state name="inactive" from="active" />
+                
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,350,60</area>
+                    </imagetype>
+                </state>
+                
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,350,60</area>
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <font>text_inactive</font>
+                    </textarea>
+                </state>
+            </statetype>
+            
+            <helptext>Select your preferred language</helptext>
+        </buttonlist>
+
+        <shape name="helptext_background" from="base_background_shape">
+            <area>240,520,810,60</area>
+        </shape>
+        <textarea name="helptext" from="base_textarea">
+            <area>260,520,770,60</area>
+            <align>allcenter</align>
+            <multiline>no</multiline>
+            <cutdown>yes</cutdown>
+        </textarea>
+
+        <button name="save" from="base_button">
+            <position>490,600</position>
+            <value>Save</value>
+        </button>
+
+        <button name="cancel" from="base_button">
+            <position>650,600</position>
+            <value>Cancel</value>
+        </button>
+
     </window>
 
 </mythuitheme>
