@@ -2,16 +2,23 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- ================================================================== -->
+<!--
+    - alignment fixes due to changes in base.xml
+    - more widgets are derived from widgets in the base.xml file
+    - rearranged the widgets the status screen
+    - rearranged the widgets the global-setup screen
+    - alignment and layout changes in the screen-setup screen
+    - alignment and layout changes in the source-setup screen
+    - alignment and layout changes in the setup-location screen
+-->
+
+
+    <!-- base screen that acs as a background for the other 
+         screens that show the actual weather information -->
     <window name="weatherbase">
 
-        <!-- the background image -->
-        <imagetype name="fanart">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="fanart" from="base_background"/>
 
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -19,44 +26,48 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>
         </textarea>
 
         <!-- the shape where the weather information is displayed -->
-        <shape name="imagelist_shape" from="base_background_shape">
-            <area>25,70,1230,625</area>
+        <shape name="weather_background" from="base_background_shape">
+            <area>70,70,1140,610</area>
         </shape>
 
         <textarea name="header" from="base_textarea">
-            <area>45,90,500,30</area>
+            <area>90,86,450,30</area>
             <cutdown>yes</cutdown>
             <font>title</font>
             <align>left,vcenter</align>
         </textarea>
+        <textarea name="update_text" from="base_textarea">
+            <area>550,86,300,30</area>
+            <align>vcenter</align>
+        </textarea>
+        
         <textarea name="pause_text" from="base_textarea">
-            <area>580,90,120,30</area>
+            <area>580,50,120,20</area>
             <align>allcenter</align>
+            <font>text_very_small</font>
         </textarea>
 
         <shape name="title_separator" from="base_separator_shape">
-            <area>45,137,1190,1</area>
+            <area>90,130,1100,1</area>
         </shape>
 
         <shape name="update_separator" from="base_separator_shape">
-            <area>45,635,1190,1</area>
+            <area>90,630,1100,1</area>
         </shape>
-
-        <textarea name="update_text" from="base_textarea">
-            <area>45,650,600,30</area>
-            <align>vcenter</align>
-        </textarea>
 
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
+
+    <!-- shows the surrent conditions of the weather -->
     <window name="Current Conditions">
 
         <shape name="background1" from="base_background_shape">
@@ -65,7 +76,7 @@
         </shape>
 
         <textarea name="cclocation" from="base_textarea">
-            <area>700,90,535,30</area>
+            <area>800,86,390,30</area>
             <align>right,vcenter</align>
             <cutdown>yes</cutdown>
         </textarea>
@@ -145,23 +156,24 @@
 
         <!-- the labels on the bottom -->
         <textarea name="observation_time" from="base_textarea">
-            <area>45,650,500,30</area>
-            <align>left,vcenter</align>
+            <area>90,595,500,20</area>
+            <font>text_small</font>
         </textarea>
         <textarea name="copyright" from="base_textarea">
-            <area>600,640,635,50</area>
-            <align>right,vcenter</align>
+            <area>90,645,800,20</area>
             <font>text_small</font>
-            <multiline>yes</multiline>
         </textarea>
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
+
     <window name="Three Day Forecast">
 
         <textarea name="3dlocation" from="base_textarea">
-            <area>700,90,535,30</area>
+            <area>800,86,390,30</area>
             <align>right,vcenter</align>
             <cutdown>yes</cutdown>
         </textarea>
@@ -245,10 +257,8 @@
         </textarea>
 
         <textarea name="copyright" from="base_textarea">
-            <area>600,640,635,50</area>
-            <align>right,vcenter</align>
+            <area>90,645,800,20</area>
             <font>text_small</font>
-            <multiline>yes</multiline>
         </textarea>
     </window>
 
@@ -257,7 +267,7 @@
     <window name="Six Day Forecast">
 
         <textarea name="6dlocation" from="base_textarea">
-            <area>700,90,535,30</area>
+            <area>800,86,390,30</area>
             <align>right,vcenter</align>
             <cutdown>yes</cutdown>
         </textarea>
@@ -406,19 +416,20 @@
         </textarea>
 
         <textarea name="copyright" from="base_textarea">
-            <area>600,640,635,50</area>
-            <align>right,vcenter</align>
+            <area>90,645,800,20</area>
             <font>text_small</font>
-            <multiline>yes</multiline>
         </textarea>
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
+
     <window name="Static Map">
 
         <textarea name="smdesc" from="base_textarea">
-            <area>700,90,535,30</area>
+            <area>800,86,390,30</area>
             <align>right,vcenter</align>
             <cutdown>yes</cutdown>
         </textarea>
@@ -431,19 +442,20 @@
         </imagetype>
 
         <textarea name="copyright" from="base_textarea">
-            <area>600,640,635,50</area>
-            <align>right,vcenter</align>
+            <area>90,645,800,20</area>
             <font>text_small</font>
-            <multiline>yes</multiline>
         </textarea>
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
+
     <window name="Animated Map">
 
         <textarea name="amdesc" from="base_textarea">
-            <area>700,90,535,30</area>
+            <area>800,86,390,30</area>
             <align>right,vcenter</align>
             <cutdown>yes</cutdown>
         </textarea>
@@ -456,19 +468,20 @@
         </imagetype>
 
         <textarea name="copyright" from="base_textarea">
-            <area>600,640,635,50</area>
-            <align>right,vcenter</align>
+            <area>90,645,800,20</area>
             <font>text_small</font>
-            <multiline>yes</multiline>
         </textarea>
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
+
     <window name="Severe Weather Alerts">
 
         <textarea name="swlocation" from="base_textarea">
-            <area>700,90,535,30</area>
+            <area>800,86,390,30</area>
             <align>right,vcenter</align>
             <cutdown>yes</cutdown>
         </textarea>
@@ -481,19 +494,20 @@
         </textarea>
 
         <textarea name="copyright" from="base_textarea">
-            <area>600,640,635,50</area>
-            <align>right,vcenter</align>
+            <area>90,645,800,20</area>
             <font>text_small</font>
-            <multiline>yes</multiline>
         </textarea>
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
+
     <window name="18 Hour Forecast">
 
         <textarea name="18hrlocation" from="base_textarea">
-            <area>700,90,535,30</area>
+            <area>800,86,390,30</area>
             <align>right,vcenter</align>
             <cutdown>yes</cutdown>
         </textarea>
@@ -642,246 +656,209 @@
         </textarea>
 
         <textarea name="copyright" from="base_textarea">
-            <area>600,640,635,50</area>
-            <align>right,vcenter</align>
+            <area>90,645,800,20</area>
             <font>text_small</font>
-            <multiline>yes</multiline>
         </textarea>
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
+
     <!-- global settings of the weather screen -->
     <window name="global-setup">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
-
-        <!-- The heading (name) of the screen -->
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Weather settings</value>
-            </textarea>
+        <imagetype name="background" from="base_background"/>
+        
+        <shape name="heading_background" from="base_background_shape">
+            <area>-4,-4,300,36</area>
+        </shape>
+        <textarea name="text" from="base_textarea">
+            <area>0,0,296,30</area>
+            <font>text</font>
+            <align>allcenter</align>
+            <value>Global Settings</value>
         </textarea>
-
-        <!-- The clock that is shown at the top right of each screen -->
+        
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>
         </textarea>
 
         <shape name="weather_settings_background" from="base_background_shape">
-            <area>350,200,580,275</area>
-        </shape>
-
-        <textarea name="header" from="base_textarea">
-            <area>370,220,540,30</area>
-            <font>title</font>
-            <value>Global Settings</value>
-            <align>allcenter</align>
-        </textarea>
-
-        <shape name="header_separator" from="base_separator_shape">
-            <area>370,270,540,1</area>
+            <area>350,260,580,205</area>
         </shape>
 
         <textarea name="timeout_label" from="base_textarea">
-            <area>350,288,460,40</area>
+            <area>350,280,460,40</area>
             <value>Seconds to display each page:</value>
             <align>right,vcenter</align>
         </textarea>
 
         <spinbox name="timeout_spinbox" from="base_spinbox">
-            <position>820,290</position>
+            <position>820,280</position>
         </spinbox>
 
         <textarea name="background_label" from="base_textarea">
-            <area>350,339,460,40</area>
+            <area>350,330,460,40</area>
             <value>Retrieve data in the background:</value>
             <align>right,vcenter</align>
         </textarea>
 
         <checkbox name="backgroundcheck" from="base_checkbox">
-            <position>820,345</position>
+            <position>820,335</position>
         </checkbox>
 
         <shape name="button_separator" from="base_separator_shape">
-            <area>370,395,540,1</area>
+            <area>370,385,540,1</area>
         </shape>
 
         <button name="finishbutton" from="base_button">
-            <position>565,415</position>
+            <position>565,405</position>
             <value>Finish</value>
         </button>
 
     </window>
+
+
+
+
+
 
     <!-- alows the user to select and activate the sources
         where the weather will be fetched from -->
     <window name="screen-setup">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background"/>
 
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
-                <value>Weather settings</value>
+                <value>Screen Setup</value>
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>
         </textarea>
 
         <shape name="weather_settings_background" from="base_background_shape">
-            <area>260,95,760,570</area>
-        </shape>
-
-        <textarea name="header">
-            <area>0,115,1280,30</area>
-            <font>title</font>
-            <value>Screen Setup</value>
-            <align>allcenter</align>
-        </textarea>
-
-        <shape name="header_separator" from="base_separator_shape">
-            <area>280,165,720,1</area>
+            <area>260,120,760,510</area>
         </shape>
 
         <textarea name="inactivehdr" from="base_textarea">
-            <area>285,175,350,30</area>
-            <font>text_small</font>
+            <area>285,135,350,20</area>
+            <font>text_very_small</font>
             <align>left,vcenter</align>
         </textarea>
 
         <buttonlist name="inactivelist" from="base_buttonlist">
-            <area>280,205,350,225</area>
+            <area>280,160,350,225</area>
         </buttonlist>
 
         <textarea name="activehdr" from="inactivehdr">
-            <area>655,175,350,30</area>
-            <font>text_small</font>
+            <area>655,135,350,20</area>
+            <font>text_very_small</font>
             <align>left,vcenter</align>
         </textarea>
 
         <buttonlist name="activelist" from="base_buttonlist">
-            <area>650,205,350,225</area>
+            <area>650,160,350,225</area>
         </buttonlist>
 
         <shape name="helptext_background" from="base_background_shape">
-            <area>280,450,720,130</area>
+            <area>280,400,720,150</area>
         </shape>
         <textarea name="helptxt" from="base_textarea">
-            <area>300,450,680,130</area>
+            <area>300,400,680,150</area>
             <multiline>yes</multiline>
             <align>allcenter</align>
+            <font>text_small</font>
         </textarea>
 
         <button name="finishbutton" from="base_button">
-            <position>565,600</position>
+            <position>565,570</position>
             <value>Finish</value>
         </button>
 
     </window>
 
 
-    <!-- alows the user to set up some values of the sources that he has choosen  -->
+
+
+
+
+    <!-- alows the user to set up some values 
+         of the sources that he has choosen  -->
     <window name="source-setup">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background"/>
 
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
-                <value>Weather settings</value>
+                <value>Source Setup</value>
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>
         </textarea>
 
         <shape name="weather_settings_background" from="base_background_shape">
-            <area>150,190,980,365</area>
-        </shape>
-
-        <textarea name="header">
-            <area>0,210,1280,30</area>
-            <font>title</font>
-            <value>Source Setup</value>
-            <align>allcenter</align>
-        </textarea>
-
-        <shape name="header_separator" from="base_separator_shape">
-            <area>170,260,940,1</area>
+            <area>150,230,980,295</area>
         </shape>
 
         <buttonlist name="srclist" from="base_buttonlist">
-            <area>170,280,350,178</area>
-            <drawfrombottom>no</drawfrombottom>
+            <area>170,250,350,178</area>
         </buttonlist>
 
         <textarea name="update_label" from="base_textarea">
-            <area>530,285,480,30</area>
+            <area>530,255,480,30</area>
             <value>Data Retrieval Interval (minutes):</value>
             <align>right,vcenter</align>
         </textarea>
         <spinbox name="update_spinbox" from="base_spinbox">
-            <position>1020,280</position>
+            <position>1020,250</position>
         </spinbox>
 
         <textarea name="retrieve_label" from="base_textarea">
-            <area>530,335,480,30</area>
+            <area>530,305,480,30</area>
             <value>Source Update Timeout (seconds):</value>
             <align>right,vcenter</align>
         </textarea>
         <spinbox name="retrieve_spinbox" from="base_spinbox">
-            <position>1020,330</position>
+            <position>1020,300</position>
         </spinbox>
 
         <textarea name="srcinfo" from="base_textarea">
-            <area>610,376,480,90</area>
+            <area>530,350,480,90</area>
             <multiline>yes</multiline>
+            <font>text_small</font>
             <align>right,vcenter</align>
         </textarea>
 
         <shape name="button_separator" from="base_separator_shape">
-            <area>170,475,940,1</area>
+            <area>170,445,940,1</area>
         </shape>
 
         <button name="finishbutton" from="base_button">
-            <position>565,495</position>
+            <position>565,465</position>
             <value>Finish</value>
         </button>
     </window>
+
+
+
+
 
 
     <!-- allows the user to search for the nearest city
         that provides weather information source -->
     <window name="setup-location">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background"/>
 
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -889,61 +866,60 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>
         </textarea>
 
         <shape name="weather_settings_background" from="base_background_shape">
-            <area>250,140,790,480</area>
+            <area>210,120,860,500</area>
         </shape>
 
-        <textarea name="helptext" from="base_textarea">
-            <area>270,155,740,54</area>
+        <imagetype name="title_background_overlay" from="base_popup_background">
+            <area>230,140,820,90</area>
+        </imagetype>  
+        <textarea name="helptext_label" from="base_textarea">
+            <area>250,140,780,90</area>
             <value>Enter your current location, nearest large town or city. In some countries postal codes are also supported.</value>
             <multiline>yes</multiline>
-            <align>left,vcenter</align>
+            <align>allcenter</align>
         </textarea>
 
-        <shape name="helptext_separator" from="base_separator_shape">
-            <area>270,220,740,1</area>
-        </shape>
-
         <textarea name="loc-edit_label" from="base_textarea">
-            <area>270,241,190,40</area>
+            <area>250,250,210,40</area>
             <value>Enter Location:</value>
             <align>right,vcenter</align>
         </textarea>
 
         <textedit name="loc-edit" from="base_textedit">
-            <position>470,241</position>
+            <position>470,250</position>
         </textedit>
 
         <button name="searchbtn" from="base_button">
-            <position>860,241</position>
+            <position>900,250</position>
             <value>Search</value>
         </button>
 
         <shape name="search_separator" from="base_separator_shape">
-            <area>270,300,740,1</area>
+            <area>230,310,820,1</area>
         </shape>
 
-        <buttonlist name="results" from="base_buttonlist_wide">
-            <area>315,320,620,222</area>
+        <buttonlist name="results" from="base_buttonlist_very_wide">
+            <area>230,330,820,224</area>
         </buttonlist>
 
         <shape name="result_separator" from="base_separator_shape">
-            <area>270,562,740,1</area>
+            <area>230,570,820,1</area>
         </shape>
 
         <textarea name="numresults" from="base_textarea">
-            <area>270,576,350,30</area>
-            <align>left,vcenter</align>
+            <area>230,585,400,20</area>
+            <font>text_small</font>
         </textarea>
 
         <textarea name="source" from="base_textarea">
-            <area>630,576,370,30</area>
+            <area>650,585,400,20</area>
             <cutdown>yes</cutdown>
+            <font>text_small</font>
             <align>right,vcenter</align>
         </textarea>
     </window>
