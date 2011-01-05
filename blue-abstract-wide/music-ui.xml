@@ -281,17 +281,17 @@
             <!-- draw the progressbar and the (elapsed) time of the current song -->
             <textarea name="time_text" draworder="1">
                 <font>text</font>
-                <area>825,144,200,40</area>
+                <area>825,142,200,40</area>
                 <cutdown>no</cutdown>
             </textarea>
             <textarea name="info_text" draworder="1">
                 <font>text</font>
-                <area>1025,144,230,40</area>
+                <area>1025,142,230,40</area>
             </textarea>
             <statusbar name="progress_bar" draworder="2" whitespace="5">
                 <position>305,145</position>
-                <container fleximage="no">images/widgets/progressbar/progressbar_inactive.png</container>
-                <fill>images/widgets/progressbar/progressbar_active.png</fill>
+                <container fleximage="no">images/widgets/progressbar/progressbar_inactive_old.png</container>
+                <fill>images/widgets/progressbar/progressbar_active_old.png</fill>
                 <orientation>LeftToRight</orientation>
             </statusbar>
 
@@ -321,7 +321,7 @@
 
         <!-- On screen volume display -->
         <container name="volumedisplay">
-            <area>1168,360,40,200</area>
+            <area>1210,450,40,200</area>
             <statusbar name="volume_status" draworder="-1" whitespace="5">
                 <container fleximage="no">mm_volume_background.png</container>
                 <fill>mm_volume_tick.png</fill>
@@ -352,14 +352,14 @@
 
             <textbutton name="pledit_button" draworder="0">
                 <position>340,0</position>
-                <image function="on" filename="images/widgets/button_active.png"></image>
-                <image function="off" filename="images/widgets/button_inactive.png"></image>
-                <image function="pushed" filename="images/widgets/button_active.png"></image>
+                <image function="on" filename="images/widgets/button_active_wide.png"></image>
+                <image function="off" filename="images/widgets/button_inactive_wide.png"></image>
+                <image function="pushed" filename="images/widgets/button_active_wide.png"></image>
                 <font>text_small</font>
             </textbutton>
 
             <textbutton name="vis_button" draworder="0">
-                <position>660,0</position>
+                <position>560,0</position>
                 <image function="on" filename="images/widgets/button_active.png"></image>
                 <image function="off" filename="images/widgets/button_inactive.png"></image>
                 <image function="pushed" filename="images/widgets/button_active.png"></image>
@@ -422,15 +422,15 @@
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
+
     <!-- shows the music in a three column list. Not required until the port
         to mythui is complete. -->
     <window name="musicplayer">
 
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-                </imagetype>
+        <imagetype name="background" from="base_background"/>
 
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
@@ -447,7 +447,6 @@
             <area>25,70,1230,625</area>
         </shape>
 
-        <!-- ================================================================== -->
         <!-- this is the background behind the music directory list -->
         <shape name="music_tree_background" from="base_background_shape">
             <area>70,70,1135,375</area>
@@ -472,10 +471,8 @@
             <buttonlist name="listtemplate" from="base_buttonlist" />
         </buttontree>
 
-        <!-- ================================================================== -->
         <!-- this is the background for the information at the bottom -->
         <shape name="music_details_background" from="base_background_shape">
-            <!--<area>125,70,1030,436</area>-->
             <area>25,465,1230,230</area>
         </shape>
 
