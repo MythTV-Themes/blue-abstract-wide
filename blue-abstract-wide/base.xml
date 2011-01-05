@@ -1387,7 +1387,6 @@
             
             <!-- available but not highlighted -->
             <state name="active">
-                <area>0,0,100%,100%</area>
                 <imagetype name="buttonbackground" from="base_image_active">
                     <filename>images/widgets/widget_inactive.png</filename>
                     <area>0,0,70,40</area>
@@ -1451,7 +1450,6 @@
         
         <statetype name="buttonitem">
             <state name="active">
-                <area>0,0,100%,100%</area>
                 <imagetype name="buttonbackground" from="base_image_active">
                     <filename>images/widgets/widget_inactive.png</filename>
                     <area>0,0,350,40</area>
@@ -1469,7 +1467,12 @@
                     <area>0,0,350,40</area>
                 </imagetype>
             </state>
-            <state name="selectedinactive" from="active" />
+            <state name="selectedinactive" from="active">
+                <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                    <filename>images/widgets/widget_active.png</filename>
+                    <area>0,0,350,40</area>
+                </imagetype>
+            </state>
         </statetype>
 
         <statetype name="downscrollarrow">
@@ -1506,14 +1509,14 @@
 
     <!-- Spinbox with a width of 650px -->
     <spinbox name="base_spinbox_very_wide">
-        <area>0,0,350,40</area>
+        <area>0,0,650,40</area>
         <layout>horizontal</layout>
         
         <statetype name="buttonitem">
             <state name="active">
                 <imagetype name="buttonbackground" from="base_image_active">
                     <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,350,40</area>
+                    <area>0,0,650,40</area>
                 </imagetype>
                 <textarea name="buttontext">
                     <area>5,5,635,30</area>
@@ -1525,10 +1528,15 @@
             <state name="selectedactive" from="active">
                 <imagetype name="buttonbackground" from="base_image_selectedactive">
                     <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,350,40</area>
+                    <area>0,0,650,40</area>
                 </imagetype>
             </state>
-            <state name="selectedinactive" from="active" />
+            <state name="selectedinactive" from="active">
+                <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                    <filename>images/widgets/widget_active.png</filename>
+                    <area>0,0,650,40</area>
+                </imagetype>
+            </state>
         </statetype>
 
         <statetype name="downscrollarrow">
