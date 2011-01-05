@@ -20,7 +20,7 @@
                         <area>0,0,40,40</area>
                     </imagetype>
                     <textarea name="text" from="base_textarea">
-                        <area>0,0,40,40</area>
+                        <area>2,0,38,40</area>
                         <align>allcenter</align>
                     </textarea>
                 </state>
@@ -155,42 +155,42 @@
 
         <!-- row 4 -->
         <button name="key_\" from="key_1">
-            <position>25,173</position>
+            <position>26,173</position>
         </button>
         <button name="key_z" from="key_1">
-            <position>72,173</position>
+            <position>73,173</position>
         </button>
         <button name="key_x" from="key_1">
-            <position>119,173</position>
+            <position>120,173</position>
         </button>
         <button name="key_c" from="key_1">
-            <position>166,173</position>
+            <position>167,173</position>
         </button>
         <button name="key_v" from="key_1">
-            <position>213,173</position>
+            <position>214,173</position>
         </button>
         <button name="key_b" from="key_1">
-            <position>260,173</position>
+            <position>261,173</position>
         </button>
         <button name="key_n" from="key_1">
-            <position>307,173</position>
+            <position>308,173</position>
         </button>
         <button name="key_m" from="key_1">
-            <position>354,173</position>
+            <position>355,173</position>
         </button>
         <button name="key_," from="key_1">
-            <position>401,173</position>
+            <position>402,173</position>
         </button>
         <button name="key_." from="key_1">
-            <position>448,173</position>
+            <position>449,173</position>
         </button>
         <button name="key_/" from="key_1">
-            <position>495,173</position>
+            <position>496,173</position>
         </button>
 
         <!-- special keys -->
         <button name="key_lshift">
-            <position>30,221</position>
+            <position>28,221</position>
             <statetype name="buttonstate">
                 <state name="active">
                     <imagetype name="background" from="base_image_active">
@@ -220,15 +220,15 @@
 
 
         <button name="key_lock">
-            <position>87,221</position>
+            <position>85,221</position>
             <statetype name="buttonstate">
                 <state name="active">
                     <imagetype name="background" from="base_image_active">
                         <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,60,40</area>
+                        <area>0,0,62,40</area>
                     </imagetype>
                     <textarea name="text" from="base_textarea">
-                        <area>0,0,60,40</area>
+                        <area>0,0,62,40</area>
                         <align>allcenter</align>
                         <font>text_small</font>
                     </textarea>
@@ -236,22 +236,29 @@
                 <state name="selected" from="active">
                     <imagetype name="background" from="base_image_selected">
                         <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,60,40</area>
+                        <area>0,0,62,40</area>
                     </imagetype>
                 </state>
                 <state name="disabled" from="active" />
                 <state name="pushed" from="selected">
                     <imagetype name="background" from="base_image_pushed">
                         <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,60,40</area>
+                        <area>0,0,62,40</area>
                     </imagetype>
                 </state>
             </statetype>
         </button>
 
+        <button name="key_comp" from="key_lock">
+            <position>543,173</position>
+        </button>
+        <button name="key_del" from="key_lock">
+            <position>612,173</position>
+        </button>
+        
         <!-- row 5 -->
         <button name="key_space">
-            <position>154,221</position>
+            <position>152,221</position>
             <statetype name="buttonstate">
                 <state name="active">
                     <imagetype name="background" from="base_image_active">
@@ -281,7 +288,7 @@
         </button>
 
         <button name="key_alt" from="key_lock">
-            <position>461,221</position>
+            <position>459,221</position>
         </button>
 
         <button name="key_moveleft">
@@ -293,8 +300,8 @@
                         <area>0,0,40,40</area>
                     </imagetype>
                     <imagetype name="arrow" from="base_image_active">
-                        <position>4,4</position>
                         <filename>images/widgets/keyboard/arrow_left.png</filename>
+                        <area>5,5,30,30</area>
                     </imagetype>
                     <textarea name="text" from="base_textarea">
                         <area>0,0,40,40</area>
@@ -327,8 +334,8 @@
                         <area>0,0,40,40</area>
                     </imagetype>
                     <imagetype name="arrow" from="base_image_active">
-                        <position>4,4</position>
                         <filename>images/widgets/keyboard/arrow_right.png</filename>
+                        <area>5,5,30,30</area>
                     </imagetype>
                     <textarea name="text" from="base_textarea">
                         <area>0,0,40,40</area>
@@ -365,8 +372,8 @@
                         <area>0,0,70,40</area>
                     </imagetype>
                     <imagetype name="arrow" from="base_image_active">
-                        <position>19,4</position>
                         <filename>images/widgets/keyboard/arrow_back.png</filename>
+                        <area>19,4,32,32</area>
                     </imagetype>
                     <!--<textarea name="text" from="base_textarea">
                         <area>0,0,70,40</area>
@@ -389,25 +396,17 @@
             </statetype>
         </button>
 
-        <button name="key_comp" from="key_lock">
-            <position>542,173</position>
-        </button>
-        <button name="key_del" from="key_lock">
-            <position>608,173</position>
-        </button>
-
-
         <button name="key_done">
-            <position>570,125</position>
+            <position>575,125</position>
             <statetype name="buttonstate">
                 <state name="active">
                     <imagetype name="background" from="base_image_active">
                         <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,70,40</area>
+                        <area>0,0,100,40</area>
                     </imagetype>
                     <imagetype name="arrow" from="base_image_active">
-                        <position>19,4</position>
                         <filename>images/widgets/keyboard/arrow_return.png</filename>
+                        <area>49,5,32,32</area>
                     </imagetype>
                     <textarea name="text" from="base_textarea">
                         <area>0,0,70,40</area>
@@ -417,14 +416,14 @@
                 <state name="selected" from="active">
                     <imagetype name="background" from="base_image_selected">
                         <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,70,40</area>
+                        <area>0,0,100,40</area>
                     </imagetype>
                 </state>
                 <state name="disabled" from="active" />
                 <state name="pushed" from="selected">
                     <imagetype name="background" from="base_image_pushed">
                         <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,70,40</area>
+                        <area>0,0,100,40</area>
                     </imagetype>
                 </state>
             </statetype>
