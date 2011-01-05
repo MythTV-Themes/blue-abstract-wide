@@ -797,7 +797,7 @@
                     <area>0,0,200,40</area>
                 </imagetype>
             </state>
-            <state name="selectedinactive" from="active" />
+            <state name="selectedinactive" from="active"/>
         </statetype>
         
         <statetype name="downscrollarrow">
@@ -859,7 +859,7 @@
                     <area>0,0,350,40</area>
                 </imagetype>
             </state>
-            <state name="selectedinactive" from="active" />
+            <state name="selectedinactive" from="active"/>
         </statetype>
         
         <statetype name="downscrollarrow">
@@ -914,14 +914,14 @@
                     <align>left,vcenter</align>
                 </textarea>
             </state>
-            <state name="inactive" from="active" />
+            <state name="inactive" from="active"/>
             <state name="selectedactive" from="active">
                 <imagetype name="buttonbackground" from="base_image_selectedactive">
                     <filename>images/widgets/widget_active.png</filename>
                     <area>0,0,650,40</area>
                 </imagetype>
             </state>
-            <state name="selectedinactive" from="active" />
+            <state name="selectedinactive" from="active"/>
         </statetype>
         
         <statetype name="downscrollarrow">
@@ -1392,7 +1392,7 @@
                     <area>0,0,70,40</area>
                 </imagetype>
                 <textarea name="buttontext">
-                    <area>5,5,55,30</area>
+                    <area>8,5,54,30</area>
                     <font>text</font>
                     <cutdown>yes</cutdown>
                     <align>right,vcenter</align>
@@ -1455,7 +1455,7 @@
                     <area>0,0,350,40</area>
                 </imagetype>
                 <textarea name="buttontext">
-                    <area>5,5,335,30</area>
+                    <area>8,5,334,30</area>
                     <font>text</font>
                     <cutdown>yes</cutdown>
                     <align>left,vcenter</align>
@@ -1467,12 +1467,7 @@
                     <area>0,0,350,40</area>
                 </imagetype>
             </state>
-            <state name="selectedinactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,350,40</area>
-                </imagetype>
-            </state>
+            <state name="selectedinactive" from="active"/>
         </statetype>
 
         <statetype name="downscrollarrow">
@@ -1519,7 +1514,7 @@
                     <area>0,0,650,40</area>
                 </imagetype>
                 <textarea name="buttontext">
-                    <area>5,5,635,30</area>
+                    <area>8,5,634,30</area>
                     <font>text</font>
                     <cutdown>yes</cutdown>
                     <align>left,vcenter</align>
@@ -1531,12 +1526,7 @@
                     <area>0,0,650,40</area>
                 </imagetype>
             </state>
-            <state name="selectedinactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,650,40</area>
-                </imagetype>
-            </state>
+            <state name="selectedinactive" from="active"/>
         </statetype>
 
         <statetype name="downscrollarrow">
