@@ -1962,40 +1962,39 @@
         <shape name="darken_background" from="base_darken_background"/>
 
         <shape name="dialog_background" from="base_background_shape_dark">
-            <area>432,107,415,510</area>
+            <area>300,90,690,530</area>
         </shape>
 
         <!-- the title of the window -->
+        <imagetype name="title_background" from="base_popup_background">
+            <area>320,110,650,70</area>
+        </imagetype>
         <textarea name="title" from="base_textarea">
-            <area>452,127,375,30</area>
+            <area>340,110,610,70</area>
             <align>allcenter</align>
             <font>text</font>
         </textarea>
 
-        <shape name="title_separator" from="base_separator_shape">
-            <area>452,177,375,1</area>
-        </shape>
-
         <!-- the search field -->
-        <textedit name="input" from="base_textedit">
-            <position>452,197</position>
+        <textedit name="input" from="base_textedit_wide">
+            <position>320,200</position>
         </textedit>
 
-        <buttonlist name="itemlist" from="base_buttonlist">
-            <area>464,257,350,265</area>
+        <buttonlist name="itemlist" from="base_buttonlist_wide">
+            <area>320,260,650,265</area>
             <showarrow>no</showarrow>
         </buttonlist>
 
         <shape name="button_separator" from="base_separator_shape">
-            <area>452,537,375,1</area>
+            <area>320,540,650,1</area>
         </shape>
 
         <button name="ok" from="base_button">
-            <position>452,557</position>
+            <position>452,560</position>
             <value>OK</value>
         </button>
         <button name="cancel" from="base_button">
-            <position>669,557</position>
+            <position>669,560</position>
             <value>Cancel</value>
         </button>
     </window>
