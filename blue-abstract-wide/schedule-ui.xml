@@ -21,21 +21,21 @@
 
         <!-- this is the background for the information at the bottom -->
         <shape name="program_background" from="base_background_shape">
-            <area>25,496,1230,200</area>
+            <area>25,490,1230,204</area>
         </shape>
 
         <!-- show the channel and the recorded time of the recording -->
         <shape name="channelicon_background" from="base_background_shape">
-            <area>40,511,66,66</area>
+            <area>40,505,66,66</area>
         </shape>
         <imagetype name="channelicon">
-            <area>42,513,61,61</area>
+            <area>42,507,61,61</area>
             <preserveaspect>true</preserveaspect>
         </imagetype>
 
         <!-- shows the title and the plot of the selected video -->
         <textarea name="title" from="base_textarea">
-            <area>120,512,770,30</area>
+            <area>120,506,770,30</area>
             <multiline>no</multiline>
             <align>left,vcenter</align>
             <cutdown>yes</cutdown>
@@ -43,7 +43,7 @@
         </textarea>
 
         <textarea name="subtitle" from="base_textarea">
-            <area>120,554,770,20</area>
+            <area>120,548,770,20</area>
             <align>left,vcenter</align>
             <font>text_small</font>
         </textarea>
@@ -53,26 +53,26 @@
         </shape>-->
 
         <textarea name="timedate" from="base_textarea">
-            <area>900,512,338,30</area>
+            <area>900,506,338,30</area>
             <align>right,vcenter</align>
             <cutdown>yes</cutdown>
             <font>text_small</font>
         </textarea>
 
         <textarea name="rectypestatus" from="base_textarea">
-            <area>900,554,338,20</area>
+            <area>900,548,338,20</area>
             <align>right,vcenter</align>
             <font>text_small</font>
         </textarea>
 
         <!-- separates the time and channel and the status icons from the plot -->
         <shape name="recording_time_separator" from="base_separator_shape">
-            <area>40,591,1200,1</area>
+            <area>40,586,1200,1</area>
         </shape>
 
         <!-- show the plot of the recording -->
         <textarea name="description" from="base_textarea">
-            <area>40,600,1200,100</area>
+            <area>40,596,1200,100</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>left,top</align>
@@ -83,27 +83,27 @@
 
         <!-- this is the background for the entire tv program list -->
         <shape name="programlist_background" from="base_background_shape">
-            <area>25,70,1230,404</area>
+            <area>25,60,1230,404</area>
         </shape>
 
         <shape name="timelist_separator" from="base_separator_shape">
-            <area>26,105,1228,1</area>
+            <area>26,95,1228,1</area>
         </shape>
 
         <shape name="channellist_separator" from="base_separator_shape">
-            <area>276,71,1,403</area>
+            <area>276,61,1,403</area>
         </shape>
 
         <!-- shows the channel group in the top left corner -->
         <textarea name="channelgroup" from="base_textarea">
-            <area>40,79,226,20</area>
+            <area>40,69,226,20</area>
             <align>left,vcenter</align>
             <font>text_small</font>
         </textarea>
 
         <!-- this is the vertical list of the available channels -->
         <buttonlist name="channellist" from="base_buttonlist">
-            <area>38,115,230,370</area>
+            <area>38,105,230,370</area>
             <layout>vertical</layout>
             <spacing>0</spacing>
             <buttonarea>0,0,230,370</buttonarea>
@@ -145,7 +145,7 @@
 
         <!-- this is the horizontal list of the time slots -->
         <buttonlist name="timelist">
-            <area>270,79,986,20</area>
+            <area>270,69,986,20</area>
             <layout>horizontal</layout>
             <spacing>0</spacing>
             <buttonarea>0,0,986,20</buttonarea>
@@ -172,12 +172,12 @@
                 <position>11,-4</position>
                 <state type="off">
                     <imagetype name="upon" from="base_arrow_inactive">
-                        <filename>images/shared/arrow_up.png</filename>
+                        <filename>images/shared/arrow_left.png</filename>
                     </imagetype>
                 </state>
                 <state type="full">
                     <imagetype name="upoff" from="base_arrow_selectedactive">
-                        <filename>images/shared/arrow_up.png</filename>
+                        <filename>images/shared/arrow_left.png</filename>
                     </imagetype>
                 </state>
             </statetype>
@@ -187,12 +187,12 @@
                 <position>960,-4</position>
                 <state type="off">
                     <imagetype name="dnon" from="base_arrow_inactive">
-                        <filename>images/shared/arrow_down.png</filename>
+                        <filename>images/shared/arrow_right.png</filename>
                     </imagetype>
                 </state>
                 <state type="full">
                     <imagetype name="dnoff" from="base_arrow_selectedactive">
-                        <filename>images/shared/arrow_down.png</filename>
+                        <filename>images/shared/arrow_right.png</filename>
                     </imagetype>
                 </state>
             </statetype>
@@ -200,7 +200,7 @@
 
         <!-- this is the list with the tv program -->
         <guidegrid name="guidegrid">
-            <area>286,115,960,350</area>
+            <area>286,95,960,350</area>
             <layout>horizontal</layout>
             <channels>5</channels>
             <timeslots>5</timeslots>
@@ -253,36 +253,36 @@
 
         <!-- this is the background for the information at the bottom -->
         <shape name="program_background" from="base_background_shape">
-            <area>25,496,1230,200</area>
+            <area>25,490,1230,204</area>
         </shape>
 
         <!-- the shape around the livetv video -->
         <shape name="video_shape" from="base_background_shape">
-            <area>40,515,290,165</area>
+            <area>40,505,290,165</area>
         </shape>
 
         <!-- the livetv video itself -->
         <imagetype name="video">
-            <area>42,517,286,161</area>
+            <area>42,507,286,161</area>
         </imagetype>
 
         <!-- the vertical separator -->
         <shape name="video_description_separator" from="base_separator_shape">
-            <area>345,515,1,165</area>
+            <area>345,505,1,165</area>
         </shape>
 
         <!-- show the channel and the recorded time of the recording -->
         <shape name="channelicon_background" from="base_background_shape">
-            <area>360,515,66,66</area>
+            <area>360,505,66,66</area>
         </shape>
         <imagetype name="channelicon">
-            <area>362,517,61,61</area>
+            <area>362,507,61,61</area>
             <preserveaspect>true</preserveaspect>
         </imagetype>
 
         <!-- shows the title and the plot of the selected video -->
         <textarea name="title" from="base_textarea">
-            <area>440,512,455,30</area>
+            <area>440,506,455,30</area>
             <multiline>no</multiline>
             <align>left,vcenter</align>
             <cutdown>yes</cutdown>
@@ -290,7 +290,7 @@
         </textarea>
 
         <textarea name="subtitle" from="base_textarea">
-            <area>440,554,455,20</area>
+            <area>440,548,455,20</area>
             <align>left,vcenter</align>
             <font>text_small</font>
         </textarea>
@@ -307,26 +307,26 @@
         </clock>-->
 
         <textarea name="timedate" from="base_textarea">
-            <area>900,512,338,30</area>
+            <area>900,506,338,30</area>
             <align>right,vcenter</align>
             <cutdown>yes</cutdown>
             <font>text_small</font>
         </textarea>
 
         <textarea name="rectypestatus" from="base_textarea">
-            <area>900,554,338,20</area>
+            <area>900,548,338,20</area>
             <align>right,vcenter</align>
             <font>text_small</font>
         </textarea>
 
         <!-- separates the time and channel and the status icons from the plot -->
         <shape name="recording_time_separator" from="base_separator_shape">
-            <area>360,591,880,1</area>
+            <area>360,586,880,1</area>
         </shape>
 
         <!-- show the plot of the recording -->
         <textarea name="description" from="base_textarea">
-            <area>360,600,880,100</area>
+            <area>360,596,880,100</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>left,top</align>
@@ -336,27 +336,27 @@
 
         <!-- this is the background for the entire tv program list -->
         <shape name="programlist_background" from="base_background_shape">
-            <area>25,70,1230,405</area>
+            <area>25,60,1230,404</area>
         </shape>
 
         <shape name="timelist_separator" from="base_separator_shape">
-            <area>26,105,1228,1</area>
+            <area>26,95,1228,1</area>
         </shape>
 
         <shape name="channellist_separator" from="base_separator_shape">
-            <area>276,71,1,403</area>
+            <area>276,61,1,403</area>
         </shape>
 
         <!-- shows the channel group in the top left corner -->
         <textarea name="channelgroup" from="base_textarea">
-            <area>40,79,226,20</area>
+            <area>40,69,226,20</area>
             <align>left,vcenter</align>
             <font>text_small</font>
         </textarea>
 
         <!-- this is the vertical list of the available channels -->
         <buttonlist name="channellist" from="base_buttonlist">
-            <area>38,115,230,370</area>
+            <area>38,105,230,370</area>
             <layout>vertical</layout>
             <spacing>0</spacing>
             <buttonarea>0,0,230,370</buttonarea>
@@ -398,7 +398,7 @@
 
         <!-- this is the horizontal list of the time slots -->
         <buttonlist name="timelist">
-            <area>270,79,986,20</area>
+            <area>270,69,986,20</area>
             <layout>horizontal</layout>
             <spacing>0</spacing>
             <buttonarea>0,0,986,20</buttonarea>
@@ -425,12 +425,12 @@
                 <position>11,-4</position>
                 <state type="off">
                     <imagetype name="upon" from="base_arrow_inactive">
-                        <filename>images/shared/arrow_up.png</filename>
+                        <filename>images/shared/arrow_left.png</filename>
                     </imagetype>
                 </state>
                 <state type="full">
                     <imagetype name="upoff" from="base_arrow_selectedactive">
-                        <filename>images/shared/arrow_up.png</filename>
+                        <filename>images/shared/arrow_left.png</filename>
                     </imagetype>
                 </state>
             </statetype>
@@ -440,12 +440,12 @@
                 <position>960,-4</position>
                 <state type="off">
                     <imagetype name="dnon" from="base_arrow_inactive">
-                        <filename>images/shared/arrow_down.png</filename>
+                        <filename>images/shared/arrow_right.png</filename>
                     </imagetype>
                 </state>
                 <state type="full">
                     <imagetype name="dnoff" from="base_arrow_selectedactive">
-                        <filename>images/shared/arrow_down.png</filename>
+                        <filename>images/shared/arrow_right.png</filename>
                     </imagetype>
                 </state>
             </statetype>
@@ -453,7 +453,7 @@
 
         <!-- this is the list with the tv program -->
         <guidegrid name="guidegrid">
-            <area>286,115,960,350</area>
+            <area>286,105,960,350</area>
             <layout>horizontal</layout>
             <channels>5</channels>
             <timeslots>5</timeslots>
@@ -513,47 +513,46 @@
 
         <!-- the labels -->
         <textarea name="title_label" from="base_textarea">
-            <area>20,216,400,30</area>
-            <font>text</font>
-            <align>right</align>
+            <area>20,210,410,30</area>
+            <align>right,vcenter</align>
             <value>Title (Optional):</value>
         </textarea>
         <textarea name="channel_label" from="title_label">
-            <position>20,260</position>
+            <position>20,255</position>
             <value>Channel:</value>
         </textarea>
         <textarea name="date_label" from="title_label">
-            <position>20,304</position>
+            <position>20,300</position>
             <value>Date, or day of week:</value>
         </textarea>
         <textarea name="time_label" from="title_label">
-            <position>20,348</position>
+            <position>20,345</position>
             <value>Start Time (hh:mm):</value>
             <align>right</align>
         </textarea>
         <textarea name="durationlabel" from="title_label">
-            <position>20,392</position>
+            <position>20,390</position>
             <value>Duration (min):</value>
         </textarea>
 
         <!-- the widgets to the labels -->
         <textedit name="title" from="base_textedit">
-            <position>440,210</position>
+            <position>440,205</position>
         </textedit>
         <buttonlist name="channel" from="base_selector_wide">
-            <position>440,254</position>
+            <position>440,250</position>
         </buttonlist>
         <buttonlist name="startdate" from="base_selector_very_wide">
-            <position>440,298</position>
+            <position>440,295</position>
         </buttonlist>
         <spinbox name="starthour" from="base_spinbox">
-            <position>440,342</position>
+            <position>440,340</position>
         </spinbox>
         <spinbox name="startminute" from="base_spinbox">
-            <position>560,342</position>
+            <position>560,340</position>
         </spinbox>
         <spinbox name="duration" from="base_spinbox">
-            <position>440,386</position>
+            <position>440,385</position>
         </spinbox>
 
         <!-- separates the result text from the buttons -->
@@ -597,18 +596,18 @@
 
         <!-- this is the background around the recording information -->
         <shape name="recording_background" from="base_background_shape">
-            <area>25,70,1230,347</area>
+            <area>25,60,1230,347</area>
         </shape>
 
         <!-- information about the sorting order -->
         <textarea name="keyinstr" from="base_textarea">
-            <area>0,42,630,30</area>
+            <area>0,32,630,30</area>
             <align>right,vcenter</align>
             <font>text_very_small</font>
             <value>Sort by (1) All, (2) Important:</value>
         </textarea>
         <textarea name="status" from="base_textarea">
-            <area>650,42,640,30</area>
+            <area>650,32,640,30</area>
             <font>text_very_small</font>
             <font state="warning">text_small_warning</font>
             <align>left,vcenter</align>
@@ -624,14 +623,14 @@
 
         <!-- the selection of available recording groups -->
         <buttonlist name="groups" from="base_buttonlist">
-            <area>46,91,350,312</area>
+            <area>46,81,350,312</area>
             <spacing>4</spacing>
             <scrollstyle>top</scrollstyle>
             <wrapstyle>items</wrapstyle>
         </buttonlist>
 
         <buttonlist name="schedules" from="base_buttonlist_very_wide">
-            <area>414,91,820,312</area>
+            <area>414,81,820,312</area>
             <buttonarea>0,0,820,315</buttonarea>
             <spacing>4</spacing>
             <statetype name="buttonitem">
@@ -669,53 +668,53 @@
 
         <!-- this is the background for the information at the bottom -->
         <shape name="recording_info_background" from="base_background_shape">
-            <area>25,441,1230,255</area>
+            <area>25,431,1230,265</area>
         </shape>
 
         <!-- shows the title and the plot of the selected video -->
         <textarea name="title" from="base_textarea">
-            <area>40,455,770,30</area>
+            <area>45,445,790,30</area>
             <multiline>no</multiline>
-            <align>left,vcenter</align>
             <cutdown>yes</cutdown>
             <font>title</font>
         </textarea>
 
         <!-- show the channel and the recorded time of the recording -->
         <textarea name="channel" from="base_textarea">
-            <area>40,507,120,20</area>
+            <area>45,485,250,20</area>
             <font>text_small</font>
         </textarea>
-
         <textarea name="timedate" from="base_textarea">
-            <area>175,507,300,20</area>
+            <area>310,485,300,20</area>
             <cutdown>yes</cutdown>
             <font>text_small</font>
         </textarea>
-
+        
         <textarea name="rectypestatus" from="base_textarea">
-            <area>800,507,438,20</area>
+            <area>730,485,500,20</area>
+            <cutdown>yes</cutdown>
             <align>right,vcenter</align>
             <font>text_small</font>
         </textarea>
 
         <!-- separates the time and channel and the status icons from the plot -->
-        <shape name="recording_time_separator" from="base_separator_shape">
-            <area>40,541,1200,1</area>
+        <shape name="recording_info_separator" from="base_separator_shape">
+            <area>45,517,1190,1</area>
         </shape>
 
         <!-- show the plot of the recording -->
         <textarea name="description" from="base_textarea">
-            <area>40,557,1200,130</area>
+            <area>45,530,1190,150</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>left,top</align>
+            <font>text_small</font>
             <template>%"|SUBTITLE|" %%(|ORIGINALAIRDATE|)\n%%YEARSTARS| %%DESCRIPTION%</template>
         </textarea>
 
         <!-- info text if there are no recordings available -->
         <textarea name="norecordings_info" from="base_textarea">
-            <area>250,70,780,347</area>
+            <area>250,60,780,347</area>
             <align>allcenter</align>
             <value>You Haven't Scheduled Any Programs To Be Recorded.
                 To schedule a recording, exit this screen and select
@@ -738,7 +737,7 @@
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
-                <value>Channel Rec. Prio.</value>
+                <value>Channel Recording Priority</value>
             </textarea>
         </textarea>
 
@@ -1152,26 +1151,77 @@
             <position>1040,0</position>
         </textarea>
 
-        <!-- The background behind the details of the found program -->
+
+
+
+
+
+
         <shape name="program_details_background" from="base_background_shape">
-            <area>25,70,1230,265</area>
+            <area>25,60,1230,234</area>
         </shape>
 
+        <textarea name="title" from="base_textarea">
+            <area>45,80,980,30</area>
+            <font>title</font>
+        </textarea>
+        <textarea name="channel" from="base_textarea">
+            <area>45,120,380,20</area>
+            <font>text_small</font>
+        </textarea>
+        <textarea name="timedate" from="base_textarea">
+            <area>535,120,300,20</area>
+            <cutdown>yes</cutdown>
+            <font>text_small</font>
+            <align>right,vcenter</align>
+        </textarea>
+        <textarea name="rectypestatus" from="base_textarea">
+            <area>935,120,300,20</area>
+            <cutdown>yes</cutdown>
+            <align>right,vcenter</align>
+            <font>text_small</font>
+        </textarea>
+
+        <shape name="title_separator" from="base_separator_shape">
+            <area>45,155,1190,1</area>
+        </shape>
+
+        <!-- show the plot of the recording -->
+        <textarea name="description" from="base_textarea">
+            <area>45,172,1190,110</area>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <align>left,top</align>
+            <font>text_small</font>
+            <template>%"|SUBTITLE|"\n%%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
+        </textarea>
+
+        <!-- text that is displayed if no tim eis selected. they are only for help -->
+        <textarea name="help1text" from="base_textarea">
+            <area>145,60,990,100</area>
+            <align>allcenter</align>
+        </textarea>
+        <textarea name="help2text" from="base_textarea">
+            <area>145,172,990,110</area>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+        </textarea>
+        
         <!-- The background behind the three search buttonlists -->
         <shape name="program_finder_background" from="base_background_shape">
-            <area>25,360,1230,330</area>
+            <area>25,320,1230,370</area>
         </shape>
 
         <!-- the description above the first buttonlist -->
         <textarea name="alphalabel" from="base_textarea">
-            <area>45,375,120,20</area>
+            <area>45,333,120,20</area>
             <font>text_small</font>
             <align>allcenter</align>
             <value>Letter:</value>
         </textarea>
 
         <buttonlist name="alphabet" from="base_buttonlist_narrow">
-            <area>70,405,70,268</area>
+            <area>70,360,70,314</area>
             <scrollstyle>top</scrollstyle>
             <wrapstyle>items</wrapstyle>
             <statetype name="buttonitem">
@@ -1195,7 +1245,7 @@
         </buttonlist>
 
         <textarea name="showlabel" from="base_textarea">
-            <area>185,375,650,20</area>
+            <area>185,333,650,20</area>
             <font>text_small</font>
             <align>left,vcenter</align>
             <value>Show Name:</value>
@@ -1203,7 +1253,7 @@
 
         <!-- the buttonlist widget that is wider then the previous one -->
         <buttonlist name="shows" from="base_buttonlist_wide">
-            <area>185,405,650,268</area>
+            <area>185,360,650,314</area>
             <scrollstyle>top</scrollstyle>
             <wrapstyle>captive</wrapstyle>
             <statetype name="buttonitem">
@@ -1227,14 +1277,14 @@
         </buttonlist>
 
         <textarea name="airdatelabel" from="base_textarea">
-            <area>880,375,150,20</area>
+            <area>880,333,150,20</area>
             <font>text_small</font>
             <align>left,vcenter</align>
             <value>Air Date:</value>
         </textarea>
 
         <buttonlist name="times" from="base_buttonlist">
-            <area>880,405,350,268</area>
+            <area>880,360,350,314</area>
             <scrollstyle>top</scrollstyle>
             <wrapstyle>captive</wrapstyle>
             <statetype name="buttonitem">
@@ -1257,59 +1307,6 @@
             </statetype>
         </buttonlist>
 
-        <!-- shows the title and the plot of the selected video -->
-        <textarea name="title" from="base_textarea">
-            <area>45,90,765,30</area>
-            <multiline>no</multiline>
-            <align>left,vcenter</align>
-            <cutdown>yes</cutdown>
-            <font>title</font>
-        </textarea>
-
-        <!-- show the channel and the recorded time of the recording -->
-        <textarea name="channel" from="base_textarea">
-            <area>45,135,115,20</area>
-            <font>text_small</font>
-        </textarea>
-
-        <textarea name="timedate" from="base_textarea">
-            <area>175,135,270,20</area>
-            <cutdown>yes</cutdown>
-            <font>text_small</font>
-        </textarea>
-
-        <!-- separates the time and channel and the status icons from the plot -->
-        <shape name="recording_time_separator" from="base_separator_shape">
-            <area>45,173,1190,1</area>
-        </shape>
-
-        <!-- show the plot of the recording -->
-        <textarea name="description" from="base_textarea">
-            <area>45,195,1190,140</area>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-            <align>left,top</align>
-            <template>%"|SUBTITLE|"\n%%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
-        </textarea>
-
-        <textarea name="rectypestatus" from="base_textarea">
-            <area>400,135,830,20</area>
-            <cutdown>yes</cutdown>
-            <align>right,vcenter</align>
-            <font>text_small</font>
-        </textarea>
-
-        <!-- text that is displayed if no tim eis selected. they are only for help -->
-        <textarea name="help1text" from="base_textarea">
-            <area>145,200,990,70</area>
-            <align>allcenter</align>
-        </textarea>
-        <textarea name="help2text" from="base_textarea">
-            <area>145,230,990,70</area>
-            <align>allcenter</align>
-            <multiline>yes</multiline>
-        </textarea>
-
     </window>
 
 
@@ -1323,53 +1320,48 @@
 
         <shape name="darken_background" from="base_darken_background"/>
 
-        <shape name="iconhelp_background">
-            <area>375,145,530,430</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="255" />
-            <line color="#CCCCCC" alpha="255" width="1" />
-            <cornerradius>2</cornerradius>
+        <shape name="iconhelp_background" from="base_background_shape_dark">
+            <area>300,125,690,445</area>
         </shape>
 
         <!-- the title of the window -->
+        <imagetype name="title_background" from="base_popup_background">
+            <area>320,145,650,70</area>
+        </imagetype>
         <textarea name="title_text" from="base_textarea">
-            <area>395,165,490,30</area>
+            <area>340,145,610,70</area>
             <value>Search Term</value>
             <align>allcenter</align>
             <font>text</font>
         </textarea>
 
-        <shape name="title_separator" from="base_separator_shape">
-            <area>395,215,490,1</area>
-        </shape>
-
         <!-- list with the search phrases -->
-        <buttonlist name="phrase_list" from="base_buttonlist">
-            <area>465,235,349,180</area>
+        <buttonlist name="phrase_list" from="base_buttonlist_wide">
+            <area>320,235,650,180</area>
             <layout>vertical</layout>
             <showarrow>no</showarrow>
         </buttonlist>
 
-        <textedit name="phrase_edit" from="base_textedit">
-            <position>455,435</position>
+        <textedit name="phrase_edit" from="base_textedit_wide">
+            <position>320,435</position>
         </textedit>
 
         <shape name="button_separator" from="base_separator_shape">
-            <area>395,495,490,1</area>
+            <area>320,490,650,1</area>
         </shape>
 
         <button name="delete_button" from="base_button">
-            <position>395,515</position>
+            <position>400,510</position>
             <value>Delete</value>
         </button>
 
         <button name="ok_button" from="base_button">
-            <position>565,515</position>
+            <position>570,510</position>
             <value>OK</value>
         </button>
 
         <button name="record_button" from="base_button">
-            <position>735,515</position>
+            <position>740,510</position>
             <value>Record</value>
         </button>
     </window>
@@ -1436,46 +1428,46 @@
         <shape name="darken_background" from="base_darken_background"/>
 
         <shape name="iconhelp_background" from="base_background_shape_dark">
-            <area>375,150,530,410</area>
+            <area>300,155,690,385</area>
         </shape>
 
         <!-- the title of the window -->
+        <imagetype name="title_background" from="base_popup_background">
+            <area>320,175,650,70</area>
+        </imagetype>
         <textarea name="title_text" from="base_textarea">
-            <area>395,170,490,30</area>
+            <area>340,175,610,70</area>
             <value>Select Search</value>
             <align>allcenter</align>
             <font>text</font>
         </textarea>
 
-        <shape name="title_separator" from="base_separator_shape">
-            <area>395,220,490,1</area>
-        </shape>
-
         <!-- list with the search phrases -->
-        <buttonlist name="phrase_list" from="base_buttonlist">
-            <area>465,240,349,223</area>
+        <buttonlist name="phrase_list" from="base_buttonlist_wide">
+            <area>320,265,650,180</area>
             <layout>vertical</layout>
             <showarrow>no</showarrow>
         </buttonlist>
 
         <shape name="button_separator" from="base_separator_shape">
-            <area>395,480,490,1</area>
+            <area>320,460,650,1</area>
         </shape>
 
         <button name="edit_button" from="base_button">
-            <position>395,500</position>
+            <position>400,480</position>
             <value>Edit</value>
         </button>
 
         <button name="delete_button" from="base_button">
-            <position>565,500</position>
+            <position>570,480</position>
             <value>Delete</value>
         </button>
 
         <button name="record_button" from="base_button">
-            <position>735,500</position>
+            <position>740,480</position>
             <value>Record</value>
         </button>
+        
     </window>
 
 
@@ -1965,13 +1957,15 @@
 
         <imagetype name="background" from="base_background"/>
 
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Custom Rec. Rules</value>
-            </textarea>
+       <shape name="heading_background" from="base_background_shape">
+            <area>-4,-4,340,36</area>
+        </shape>
+        <textarea name="text" from="base_textarea">
+            <area>0,0,336,30</area>
+            <align>allcenter</align>
+            <value>Custom Recording Rules</value>
         </textarea>
-
+        
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>
         </textarea>
@@ -1981,24 +1975,24 @@
         </shape>
 
         <textarea name="ruleslabel" from="base_textarea">
-            <area>305,180,180,40</area>
+            <area>310,180,280,40</area>
             <align>right,vcenter</align>
             <value>Existing Rules:</value>
         </textarea>
 
         <buttonlist name="rules" from="base_selector_wide">
-            <position>505,180</position>
+            <position>600,180</position>
             <wrapstyle>items</wrapstyle>
         </buttonlist>
 
         <textarea name="titlelabel" from="base_textarea">
-            <area>305,224,180,40</area>
+            <area>310,224,280,40</area>
             <value>Rule Name:</value>
             <align>right,vcenter</align>
         </textarea>
 
         <textedit name="title" from="base_textedit">
-            <position>505,224</position>
+            <position>600,224</position>
         </textedit>
 
         <shape name="rules_separator" from="base_separator_shape">
@@ -2012,6 +2006,7 @@
         <textarea name="clausetext" from="base_textarea">
             <area>305,358,660,55</area>
             <align>left,top</align>
+            <font>text_small</font>
             <cutdown>yes</cutdown>
             <multiline>yes</multiline>
         </textarea>
@@ -2021,21 +2016,21 @@
         </shape>
 
         <textarea name="descriptionlabel" from="base_textarea">
-            <area>305,443,190,30</area>
+            <area>310,443,190,30</area>
             <value>Tables:</value>
             <align>right,vcenter</align>
         </textarea>
         <textedit name="description" from="base_textedit">
-            <position>505,438</position>
+            <position>600,438</position>
         </textedit>
 
         <textarea name="subtitlelabel" from="base_textarea">
-            <area>305,487,190,30</area>
+            <area>310,487,190,30</area>
             <value>Additional Tables:</value>
             <align>right,vcenter</align>
         </textarea>
         <textedit name="subtitle" from="base_textedit">
-            <position>505,482</position>
+            <position>600,482</position>
         </textedit>
 
         <shape name="button_separator" from="base_separator_shape">
@@ -2083,41 +2078,41 @@
             <position>1040,0</position>
         </textarea>
 
-
         <shape name="schedule_editor_background" from="base_background_shape">
-            <area>25,70,1230,224</area>
+            <area>25,60,1230,234</area>
         </shape>
 
         <textarea name="title" from="base_textarea">
-            <area>45,85,980,30</area>
+            <area>45,80,980,30</area>
             <font>title</font>
         </textarea>
         <textarea name="subtitle" from="base_textarea">
-            <area>45,127,880,20</area>
+            <area>45,120,880,20</area>
             <font>text_small</font>
         </textarea>
         <textarea name="channel" from="base_textarea">
-            <area>1040,90,200,20</area>
+            <area>1035,80,200,20</area>
             <font>text_small</font>
             <align>right,vcenter</align>
         </textarea>
         <textarea name="timedate" from="base_textarea">
-            <area>940,127,300,20</area>
+            <area>935,120,300,20</area>
             <cutdown>yes</cutdown>
             <font>text_small</font>
             <align>right,vcenter</align>
         </textarea>
 
         <shape name="title_separator" from="base_separator_shape">
-            <area>45,163,1200,1</area>
+            <area>45,155,1190,1</area>
         </shape>
 
         <!-- show the plot of the recording -->
         <textarea name="description" from="base_textarea">
-            <area>45,181,1190,100</area>
+            <area>45,172,1190,110</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>left,top</align>
+            <font>text_small</font>
             <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
 
@@ -2193,36 +2188,36 @@
         </textarea>
 
         <shape name="schedule_editor_background" from="base_background_shape">
-            <area>25,70,1230,187</area>
+            <area>25,60,1230,195</area>
         </shape>
 
         <textarea name="title" from="base_textarea">
-            <area>45,85,980,30</area>
+            <area>45,80,980,30</area>
             <font>title</font>
         </textarea>
         <textarea name="subtitle" from="base_textarea">
-            <area>45,127,880,20</area>
+            <area>45,120,880,20</area>
             <font>text_small</font>
         </textarea>
         <textarea name="channel" from="base_textarea">
-            <area>1040,90,200,20</area>
+            <area>1035,80,200,20</area>
             <font>text_small</font>
             <align>right,vcenter</align>
         </textarea>
         <textarea name="timedate" from="base_textarea">
-            <area>940,127,300,20</area>
+            <area>935,120,300,20</area>
             <cutdown>yes</cutdown>
             <font>text_small</font>
             <align>right,vcenter</align>
         </textarea>
 
         <shape name="title_separator" from="base_separator_shape">
-            <area>45,163,1200,1</area>
+            <area>45,155,1190,1</area>
         </shape>
 
         <!-- show the plot of the recording -->
         <textarea name="description" from="base_textarea">
-            <area>45,178,1190,75</area>
+            <area>45,172,1190,75</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>left,top</align>
@@ -2311,36 +2306,36 @@
         </textarea>
 
         <shape name="schedule_editor_background" from="base_background_shape">
-            <area>25,70,1230,187</area>
+            <area>25,60,1230,195</area>
         </shape>
 
         <textarea name="title" from="base_textarea">
-            <area>45,85,980,30</area>
+            <area>45,80,980,30</area>
             <font>title</font>
         </textarea>
         <textarea name="subtitle" from="base_textarea">
-            <area>45,127,880,20</area>
+            <area>45,120,880,20</area>
             <font>text_small</font>
         </textarea>
         <textarea name="channel" from="base_textarea">
-            <area>1040,90,200,20</area>
+            <area>1035,80,200,20</area>
             <font>text_small</font>
             <align>right,vcenter</align>
         </textarea>
         <textarea name="timedate" from="base_textarea">
-            <area>940,127,300,20</area>
+            <area>935,120,300,20</area>
             <cutdown>yes</cutdown>
             <font>text_small</font>
             <align>right,vcenter</align>
         </textarea>
 
         <shape name="title_separator" from="base_separator_shape">
-            <area>45,163,1200,1</area>
+            <area>45,155,1190,1</area>
         </shape>
 
         <!-- show the plot of the recording -->
         <textarea name="description" from="base_textarea">
-            <area>45,178,1190,75</area>
+            <area>45,172,1190,75</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>left,top</align>
@@ -2410,7 +2405,7 @@
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
-                <value>Post Proc. Options</value>
+                <value>Post Processing Options</value>
             </textarea>
         </textarea>
 
@@ -2419,36 +2414,36 @@
         </textarea>
 
         <shape name="schedule_editor_background" from="base_background_shape">
-            <area>25,70,1230,187</area>
+            <area>25,60,1230,195</area>
         </shape>
 
         <textarea name="title" from="base_textarea">
-            <area>45,85,980,30</area>
+            <area>45,80,980,30</area>
             <font>title</font>
         </textarea>
         <textarea name="subtitle" from="base_textarea">
-            <area>45,127,880,20</area>
+            <area>45,120,880,20</area>
             <font>text_small</font>
         </textarea>
         <textarea name="channel" from="base_textarea">
-            <area>1040,90,200,20</area>
+            <area>1035,80,200,20</area>
             <font>text_small</font>
             <align>right,vcenter</align>
         </textarea>
         <textarea name="timedate" from="base_textarea">
-            <area>940,127,300,20</area>
+            <area>935,120,300,20</area>
             <cutdown>yes</cutdown>
             <font>text_small</font>
             <align>right,vcenter</align>
         </textarea>
 
         <shape name="title_separator" from="base_separator_shape">
-            <area>45,163,1200,1</area>
+            <area>45,155,1190,1</area>
         </shape>
 
         <!-- show the plot of the recording -->
         <textarea name="description" from="base_textarea">
-            <area>45,178,1190,75</area>
+            <area>45,172,1190,75</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>left,top</align>
@@ -2457,68 +2452,63 @@
         </textarea>
 
         <shape name="schedule_button_background" from="base_background_shape">
-            <area>285,281,710,414</area>
+            <area>285,281,710,400</area>
         </shape>
 
         <checkbox name="autocommflag" from="base_checkbox">
-            <position>305,301</position>
+            <position>305,300</position>
         </checkbox>
+        <checkbox name="autotranscode" from="base_checkbox">
+            <position>305,340</position>
+        </checkbox>
+        <buttonlist name="transcodeprofile" from="base_selector_very_wide">
+            <position>305,380</position>
+        </buttonlist>
+        <checkbox name="userjob1" from="base_checkbox">
+            <position>305,430</position>
+        </checkbox>
+        <checkbox name="userjob2" from="base_checkbox">
+            <position>305,470</position>
+        </checkbox>
+        <checkbox name="userjob3" from="base_checkbox">
+            <position>305,510</position>
+        </checkbox>
+        <checkbox name="userjob4" from="base_checkbox">
+            <position>305,550</position>
+        </checkbox>
+        
         <textarea name="autocommflaglabel" from="base_textarea">
-            <area>350,301,450,30</area>
+            <area>350,300,450,30</area>
             <value>Commercial Flag new recordings</value>
         </textarea>
-
-        <checkbox name="autotranscode" from="base_checkbox">
-            <position>305,345</position>
-        </checkbox>
         <textarea name="autotranscodelabel" from="base_textarea">
-            <area>350,345,300,30</area>
+            <area>350,340,300,30</area>
             <value>Transcode new recordings</value>
         </textarea>
-
-        <buttonlist name="transcodeprofile" from="base_selector_very_wide">
-            <position>305,387</position>
-            <helptext></helptext>
-        </buttonlist>
-
-        <checkbox name="userjob1" from="base_checkbox">
-            <position>305,439</position>
-        </checkbox>
+        
         <textarea name="userjob1label" from="base_textarea">
-            <area>350,439,300,30</area>
+            <area>350,430,300,30</area>
             <value>Run User Job #1</value>
         </textarea>
-
-        <checkbox name="userjob2" from="base_checkbox">
-            <position>305,483</position>
-        </checkbox>
         <textarea name="userjob2label" from="base_textarea">
-            <area>350,483,300,30</area>
+            <area>350,470,300,30</area>
             <value>Run User job #2</value>
         </textarea>
-
-        <checkbox name="userjob3" from="base_checkbox">
-            <position>305,526</position>
-        </checkbox>
         <textarea name="userjob3label" from="base_textarea">
-            <area>350,526,300,30</area>
+            <area>350,510,300,30</area>
             <value>Run User Job #3</value>
         </textarea>
-
-        <checkbox name="userjob4" from="base_checkbox">
-            <position>305,570</position>
-        </checkbox>
         <textarea name="userjob4label" from="base_textarea">
-            <area>350,570,300,30</area>
+            <area>350,550,300,30</area>
             <value>Run User Job #4</value>
         </textarea>
 
         <shape name="button_separator" from="base_separator_shape">
-            <area>305,615,670,1</area>
+            <area>305,600,670,1</area>
         </shape>
 
         <button name="back" from="base_button">
-            <position>565,635</position>
+            <position>565,620</position>
             <value>Back</value>
         </button>
     </window>
@@ -2530,33 +2520,29 @@
 
     <!-- The schedule changes screen. -->
     <window name="schedulediff">
-<!--
+
         <imagetype name="background" from="base_background"/>
 
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Preview Schedule Changes</value>
-            </textarea>
+        <shape name="heading_background" from="base_background_shape">
+            <area>-4,-4,470,36</area>
+        </shape>
+        <textarea name="text" from="base_textarea">
+            <area>0,0,466,30</area>
+            <font>text</font>
+            <align>allcenter</align>
+            <value>Preview Schedule Changes</value>
         </textarea>
-
+        
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>
         </textarea>
--->
-        <textarea name="sched" from="basetextarea">
-            <area>20,5,700,40</area>
-            <font>baselarge</font>
-            <align>left,bottom</align>
-            <value>Preview Schedule Changes</value>
-        </textarea>
 
         <shape name="schedule_background" from="base_background_shape">
-            <area>25,70,1230,347</area>
+            <area>25,60,1230,347</area>
         </shape>
 
         <textarea name="nochanges" from="base_textarea">
-            <area>225,70,830,347</area>
+            <area>225,60,830,347</area>
             <align>allcenter</align>
             <value>You Haven't Scheduled Any Programs To Be Recorded</value>
             <multiline>yes</multiline>
@@ -2564,7 +2550,7 @@
 
         <!-- the list with the recordings -->
         <buttonlist name="conflictlist" from="base_buttonlist_extra_wide">
-            <area>45,91,1190,312</area>
+            <area>45,81,1190,312</area>
             <spacing>4</spacing>
             <buttonarea>0,0,1190,315</buttonarea>
             <statetype name="buttonitem">
@@ -2605,51 +2591,54 @@
 
         <!-- this is the background for the information at the bottom -->
         <shape name="schedule_info_background" from="base_background_shape">
-            <area>25,441,1230,255</area>
+            <area>25,431,1230,265</area>
         </shape>
 
         <!-- shows the title and the plot of the selected video -->
         <textarea name="title" from="base_textarea">
-            <area>40,458,770,30</area>
+            <area>45,445,790,30</area>
             <multiline>no</multiline>
-            <align>left,vcenter</align>
             <cutdown>yes</cutdown>
             <font>title</font>
         </textarea>
 
         <!-- show the channel and the recorded time of the recording -->
         <textarea name="channel" from="base_textarea">
-            <area>40,507,120,20</area>
+            <area>45,485,250,20</area>
             <font>text_small</font>
         </textarea>
         <textarea name="timedate" from="base_textarea">
-            <area>175,507,300,20</area>
+            <area>310,485,300,20</area>
             <cutdown>yes</cutdown>
             <font>text_small</font>
         </textarea>
+        
         <textarea name="type" from="base_textarea">
-            <area>500,670,400,20</area>
+            <area>930,445,300,20</area>
             <cutdown>yes</cutdown>
+            <align>right,vcenter</align>
             <font>text_small</font>
         </textarea>
         <textarea name="programid" from="base_textarea">
-            <area>900,670,100,20</area>
+            <area>930,485,300,20</area>
             <cutdown>yes</cutdown>
+            <align>right,vcenter</align>
             <font>text_small</font>
         </textarea>
 
         <!-- separates the time and channel and the status icons from the plot -->
         <shape name="schedule_time_separator" from="base_separator_shape">
-            <area>40,542,1200,1</area>
+            <area>45,517,1190,1</area>
         </shape>
 
         <!-- show the plot of the recording -->
         <textarea name="description" from="base_textarea">
-            <area>40,558,1200,130</area>
+            <area>45,530,1190,150</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>left,top</align>
-            <template>%"|SUBTITLE|"\n%%YEARSTARS %%DESCRIPTION%</template>
+            <font>text_small</font>
+            <template>%"|SUBTITLE|"\n%%YEARSTARS| %%DESCRIPTION%</template>
         </textarea>
 
     </window>
