@@ -149,7 +149,7 @@
 
         <!-- shows the title and the plot of the selected video -->
         <textarea name="title" from="base_textarea">
-            <area>468,450,530,30</area>
+            <area>468,450,510,30</area>
             <multiline>no</multiline>
             <align>left,vcenter</align>
             <cutdown>yes</cutdown>
@@ -283,29 +283,29 @@
         </statetype>
 
         <imagetype name="no_subtitletypes" from="base_icon_inactive">
-            <area>1045,488,39,37</area>
+            <area>1045,489,38,36</area>
             <filename>images/shared/recordings/subtitles/subs_cc.png</filename>
         </imagetype>
         
         <statetype name="subtitletypes">
-            <position>1045,488</position>
+            <position>1045,489</position>
             <showempty>yes</showempty>
             <state name="cc">
                 <imagetype name="cc" from="base_icon_selected">
                     <filename>images/shared/recordings/subtitles/subs_cc.png</filename>
-                    <area>0,0,39,37</area>
+                    <area>0,0,38,36</area>
                 </imagetype>
             </state>
             <state name="subtitles">
                 <imagetype name="subtitles" from="base_icon_selected">
                     <filename>images/shared/recordings/subtitles/subs_subtitles.png</filename>
-                    <area>0,0,39,37</area>
+                    <area>0,0,38,36</area>
                 </imagetype>
             </state>
             <state name="onscreensub">
                 <imagetype name="onscreensub" from="base_icon_selected">
                     <filename>images/shared/recordings/subtitles/subs_osd.png</filename>
-                    <area>0,0,39,37</area>
+                    <area>0,0,38,36</area>
                 </imagetype>
             </state>
         </statetype>
@@ -932,7 +932,7 @@
 
         <!-- shows the title and the plot of the selected video -->
         <textarea name="title" from="base_textarea">
-            <area>468,450,530,30</area>
+            <area>468,450,510,30</area>
             <multiline>no</multiline>
             <align>left,vcenter</align>
             <cutdown>yes</cutdown>
@@ -1083,29 +1083,29 @@
         </statetype>
 
         <imagetype name="no_subtitletypes" from="base_icon_inactive">
-            <area>1045,488,39,37</area>
+            <area>1045,489,38,36</area>
             <filename>images/shared/recordings/subtitles/subs_cc.png</filename>
         </imagetype>
         
         <statetype name="subtitletypes">
-            <position>1045,488</position>
+            <position>1045,489</position>
             <showempty>yes</showempty>
             <state name="cc">
                 <imagetype name="cc" from="base_icon_selected">
                     <filename>images/shared/recordings/subtitles/subs_cc.png</filename>
-                    <area>0,0,39,37</area>
+                    <area>0,0,38,36</area>
                 </imagetype>
             </state>
             <state name="subtitles">
                 <imagetype name="subtitles" from="base_icon_selected">
                     <filename>images/shared/recordings/subtitles/subs_subtitles.png</filename>
-                    <area>0,0,39,37</area>
+                    <area>0,0,38,36</area>
                 </imagetype>
             </state>
             <state name="onscreensub">
                 <imagetype name="onscreensub" from="base_icon_selected">
                     <filename>images/shared/recordings/subtitles/subs_osd.png</filename>
-                    <area>0,0,39,37</area>
+                    <area>0,0,38,36</area>
                 </imagetype>
             </state>
         </statetype>
