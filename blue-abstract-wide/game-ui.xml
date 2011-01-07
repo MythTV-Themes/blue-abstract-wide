@@ -114,7 +114,7 @@
             <value>Year:</value>
         </textarea>
         <textarea name="year" from="base_textarea">
-            <area>455,490,50,20</area>
+            <area>455,490,60,20</area>
             <font>text_small</font>
         </textarea>        
 
@@ -123,7 +123,7 @@
             <value>System:</value>
         </textarea>
          <textarea name="system" from="year">
-            <area>625,490,140,20</area>
+            <area>625,490,150,20</area>
         </textarea>
         
         <textarea name="genre_label" from="year_label">
@@ -135,20 +135,20 @@
         </textarea>
         
         <textarea name="favorite_label" from="year_label">
-            <area>1030,490,100,20</area>
+            <area>1020,490,100,20</area>
             <value>Favorite:</value>
         </textarea>
         <statetype name="favorite">
             <state name="no">
                 <textarea name="favorite" from="base_textarea">
-                    <area>1035,490,50,20</area>
+                    <area>1125,490,50,20</area>
                     <font>text_small</font>
                     <value>No</value>
                 </textarea>
             </state>
             <state name="yes" from="no">
                 <textarea name="favorite" from="base_textarea">
-                    <area>1035,490,50,20</area>
+                    <area>1125,490,50,20</area>
                     <font>text_small</font>
                     <value>Yes</value>
                 </textarea>
