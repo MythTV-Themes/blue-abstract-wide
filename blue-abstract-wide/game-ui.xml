@@ -18,24 +18,24 @@
             <statetype name="buttonitem">
                 <state name="active">
                     <textarea name="buttontext" from="base_textarea">
-                        <area>8,5,450,30</area>
+                        <area>8,5,350,30</area>
                         <cutdown>yes</cutdown>
                     </textarea>
                     <textarea name="year" from="base_textarea">
-                        <area>480,5,160,30</area>
+                        <area>380,5,260,30</area>
                         <align>right,vcenter</align>
                         <template>Released %1</template>
                     </textarea>
                 </state>
                 <state name="inactive" from="active" />
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selected">
-                        <filename>images/widgets/buttonlist_active_wide.png</filename>
+                    <imagetype name="buttonbackground" from="base_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
                     </imagetype>
                 </state>
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selected">
-                        <filename>images/widgets/buttonlist_active_wide.png</filename>
+                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_active.png</filename>
                     </imagetype>
                 </state>
             </statetype>
