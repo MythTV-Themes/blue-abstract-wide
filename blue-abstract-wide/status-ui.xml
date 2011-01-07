@@ -19,7 +19,7 @@
 
         <!-- This is the background in which the status is displayed -->
         <shape name="status_background" from="base_background_shape">
-            <area>30,140,1220,470</area>
+            <area>30,140,1220,480</area>
         </shape>
 
         <!-- This is the internal buttonlist that is shown on the left -->
@@ -53,12 +53,13 @@
 
         <!-- shows some information text about the current selection -->
         <shape name="helptext_background" from="base_background_shape">
-            <area>50,490,1180,100</area>
+            <area>50,490,1180,110</area>
         </shape>
         <textarea name="helptext" from="base_textarea">
-            <area>70,490,1140,100</area>
+            <area>67,490,1140,110</area>
             <value>This screen displays the status of various system components</value>
             <multiline>yes</multiline>
+            <font>text_small</font>
             <align>left,vcenter</align>
         </textarea>
         
