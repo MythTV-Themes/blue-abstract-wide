@@ -90,11 +90,11 @@
             <filename />
             <preserveaspect>true</preserveaspect>
         </imagetype>
-        <imagetype name="screenshot">
+        <!--<imagetype name="screenshot">
             <area>101,452,246,186</area>
             <filename />
             <preserveaspect>true</preserveaspect>
-        </imagetype>
+        </imagetype>-->
 
         <shape name="screenshot_separator" from="base_separator_shape">
             <area>370,450,1,190</area>
