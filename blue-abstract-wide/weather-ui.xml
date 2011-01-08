@@ -675,35 +675,42 @@
         </textarea>
 
         <shape name="weather_settings_background" from="base_background_shape">
-            <area>350,260,580,205</area>
+            <area>300,200,680,360</area>
         </shape>
 
         <textarea name="timeout_label" from="base_textarea">
-            <area>350,280,460,40</area>
+            <area>300,220,560,40</area>
             <value>Seconds to display each page:</value>
             <align>right,vcenter</align>
         </textarea>
 
         <spinbox name="timeout_spinbox" from="base_spinbox">
-            <position>820,280</position>
+            <position>870,220</position>
         </spinbox>
 
         <textarea name="background_label" from="base_textarea">
-            <area>350,330,460,40</area>
+            <area>300,270,560,40</area>
             <value>Retrieve data in the background:</value>
             <align>right,vcenter</align>
         </textarea>
 
         <checkbox name="backgroundcheck" from="base_checkbox">
-            <position>820,335</position>
+            <position>870,275</position>
         </checkbox>
 
-        <shape name="button_separator" from="base_separator_shape">
-            <area>370,385,540,1</area>
+        <shape name="helparea_background" from="base_background_shape">
+            <area>320,320,640,160</area>
         </shape>
+        <textarea name="helparea" from="basetextarea">
+            <area>340,322,600,160</area>
+            <multiline>yes</multiline>
+            <font>text_small</font>
+            <align>allcenter</align>
+            <value>This screen governs the behavior of the weather screens. You can enable a background weather update which will run regardless of being on the weather screen, and configure how many seconds each screen will display.\nWhen you are done configuring the weather plugin, click "Finish" to continue.</value>
+        </textarea>
 
         <button name="finishbutton" from="base_button">
-            <position>565,405</position>
+            <position>565,500</position>
             <value>Finish</value>
         </button>
 
