@@ -734,11 +734,13 @@
 
         <imagetype name="background" from="base_background"/>
 
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Channel Recording Priority</value>
-            </textarea>
+        <shape name="heading_background" from="base_background_shape">
+            <area>-4,-4,340,36</area>
+        </shape>
+        <textarea name="text" from="base_textarea">
+            <area>0,0,336,30</area>
+            <align>allcenter</align>
+            <value>Channel Recording Priorities</value>
         </textarea>
 
         <textarea name="clock" from="base_clock">
@@ -872,12 +874,12 @@
 
         <!-- this is the background around the recording information -->
         <shape name="schedule_background" from="base_background_shape">
-            <area>25,70,1230,347</area>
+            <area>25,60,1230,347</area>
         </shape>
 
         <!-- information about the sorting order -->
         <textarea name="keyinstr" from="base_textarea">
-            <area>0,42,630,30</area>
+            <area>0,32,630,30</area>
             <align>right,vcenter</align>
             <font>text_very_small</font>
             <value>Sort by (1) Title, (2) Priority, (4) Type</value>
@@ -888,13 +890,13 @@
             <align>left,vcenter</align>
         </textarea>-->
         <textarea name="prioritylabel" from="base_textarea">
-            <area>935,42,95,30</area>
+            <area>935,32,95,30</area>
             <value>Priority</value>
             <align>right,vcenter</align>
             <font>text_very_small</font>
         </textarea>
         <textarea name="finalrecprioritylabel" from="base_textarea">
-            <area>1120,42,95,30</area>
+            <area>1120,32,95,30</area>
             <value>Final</value>
             <align>right,vcenter</align>
             <font>text_very_small</font>
@@ -902,7 +904,7 @@
 
         <!-- the list with the recordings -->
         <buttonlist name="programs" from="base_buttonlist_extra_wide">
-            <area>45,91,1190,312</area>
+            <area>45,81,1190,312</area>
             <spacing>4</spacing>
             <buttonarea>0,0,1190,315</buttonarea>
             <statetype name="buttonitem">
@@ -940,12 +942,12 @@
 
         <!-- this is the background for the information at the bottom -->
         <shape name="recording_info_background" from="base_background_shape">
-            <area>25,441,1230,255</area>
+            <area>25,431,1230,265</area>
         </shape>
 
         <!-- shows the title and the plot of the selected video -->
         <textarea name="title" from="base_textarea">
-            <area>40,458,770,30</area>
+            <area>40,448,770,30</area>
             <multiline>no</multiline>
             <align>left,vcenter</align>
             <cutdown>yes</cutdown>
@@ -954,12 +956,12 @@
 
         <!-- show the channel and the recorded time of the recording -->
         <textarea name="channel" from="base_textarea">
-            <area>40,507,120,20</area>
+            <area>40,497,120,20</area>
             <font>text_small</font>
         </textarea>
 
         <textarea name="timedate" from="base_textarea">
-            <area>175,507,300,20</area>
+            <area>175,497,300,20</area>
             <cutdown>yes</cutdown>
             <font>text_small</font>
         </textarea>
@@ -972,62 +974,63 @@
 
         <!-- separates the time and channel and the status icons from the plot -->
         <shape name="recording_time_separator" from="base_separator_shape">
-            <area>40,542,818,1</area>
+            <area>40,532,818,1</area>
         </shape>
 
         <!-- show the plot of the recording -->
         <textarea name="description" from="base_textarea">
-            <area>40,558,805,130</area>
+            <area>40,548,805,130</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
+            <font>text_small</font>
             <align>left,top</align>
             <template>%"|SUBTITLE|" %%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
 
         <!-- the vertical separator -->
         <shape name="recording_description_separator" from="base_separator_shape">
-            <area>857,455,1,225</area>
+            <area>857,445,1,235</area>
         </shape>
 
         <!-- the text and info about the priorities that are
             shown on the bottom right side of the screen -->
         <textarea name="scheduleinfo" from="base_textarea">
-            <area>880,455,380,30</area>
+            <area>880,445,380,30</area>
         </textarea>
         <textarea name="rec_str" from="base_textarea">
-            <area>880,499,380,30</area>
+            <area>880,489,380,30</area>
         </textarea>
 
         <textarea name="recpriority_label" from="base_textarea">
-            <area>880,557,170,30</area>
+            <area>880,547,170,30</area>
             <value>Priority:</value>
             <align>right,vcenter</align>
         </textarea>
         <textarea name="rectypepriority_label" from="base_textarea">
-            <area>880,601,170,30</area>
+            <area>880,591,170,30</area>
             <value>Type Priority:</value>
             <align>right,vcenter</align>
         </textarea>
         <textarea name="finalpriority_label" from="base_textarea">
-            <area>880,645,170,30</area>
+            <area>880,635,170,30</area>
             <value>Final Priority:</value>
             <align>right,vcenter</align>
         </textarea>
 
         <textarea name="finalpriority" from="base_textarea">
-            <area>1050,645,40,30</area>
+            <area>1050,635,40,30</area>
             <align>allcenter</align>
         </textarea>
         <textarea name="rectypepriority" from="base_textarea">
-            <area>1050,601,40,30</area>
+            <area>1050,591,40,30</area>
             <align>allcenter</align>
         </textarea>
         <textarea name="recpriority" from="base_textarea">
-            <area>1050,557,40,30</area>
+            <area>1050,547,40,30</area>
             <align>allcenter</align>
         </textarea>
         <textarea name="recpriorityB" from="base_textarea">
-            <area>1120,557,40,30</area>
+            <area>1120,547,40,30</area>
             <align>allcenter</align>
         </textarea>
 
@@ -1044,11 +1047,13 @@
 
         <imagetype name="background" from="base_background"/>
 
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Custom Prio. Rules</value>
-            </textarea>
+        <shape name="heading_background" from="base_background_shape">
+            <area>-4,-4,310,36</area>
+        </shape>
+        <textarea name="text" from="base_textarea">
+            <area>0,0,306,30</area>
+            <align>allcenter</align>
+            <value>Custom Priority Rules</value>
         </textarea>
 
         <textarea name="clock" from="base_clock">
@@ -1583,25 +1588,25 @@
 
         <!-- this is the background around the recording information -->
         <shape name="recording_background" from="base_background_shape">
-            <area>25,70,1230,347</area>
+            <area>25,60,1230,347</area>
         </shape>
 
         <!-- information about the sorting order -->
         <textarea name="keyinstr" from="base_textarea">
-            <area>0,42,630,30</area>
+            <area>0,32,630,30</area>
             <align>right,vcenter</align>
             <font>text_very_small</font>
             <value>Sort by (1) Time, (2) Title:</value>
         </textarea>
         <textarea name="curview" from="base_textarea">
-            <area>650,42,640,30</area>
+            <area>650,32,640,30</area>
             <font>text_very_small</font>
             <align>left,vcenter</align>
         </textarea>
 
         <!-- the list with the old recordings -->
         <buttonlist name="proglist" from="base_buttonlist_extra_wide">
-            <area>45,91,1190,312</area>
+            <area>45,81,1190,312</area>
             <spacing>4</spacing>
             <buttonarea>0,0,1190,315</buttonarea>
             <statetype name="buttonitem">
@@ -1638,12 +1643,12 @@
 
         <!-- this is the background for the information at the bottom -->
         <shape name="recording_info_background" from="base_background_shape">
-            <area>25,441,1230,255</area>
+            <area>25,431,1230,265</area>
         </shape>
 
         <!-- shows the title and the plot of the selected video -->
         <textarea name="title" from="base_textarea">
-            <area>40,455,770,30</area>
+            <area>40,447,770,30</area>
             <multiline>no</multiline>
             <align>left,vcenter</align>
             <cutdown>yes</cutdown>
@@ -1652,12 +1657,12 @@
 
         <!-- show the channel and the recorded time of the recording -->
         <textarea name="channel" from="base_textarea">
-            <area>40,500,120,20</area>
+            <area>40,490,120,20</area>
             <font>text_small</font>
         </textarea>
 
         <textarea name="timedate" from="base_textarea">
-            <area>175,500,300,20</area>
+            <area>175,490,300,20</area>
             <cutdown>yes</cutdown>
             <font>text_small</font>
         </textarea>
@@ -1668,19 +1673,19 @@
         </textarea>-->
 
         <textarea name="rectypestatus" from="base_textarea">
-            <area>800,500,438,20</area>
+            <area>800,490,438,20</area>
             <align>right,vcenter</align>
             <font>text_small</font>
         </textarea>
 
         <!-- separates the time and channel and the status icons from the plot -->
         <shape name="recording_time_separator" from="base_separator_shape">
-            <area>40,530,1200,1</area>
+            <area>40,520,1200,1</area>
         </shape>
 
         <!-- show the plot of the recording -->
         <textarea name="description" from="base_textarea">
-            <area>40,542,1200,150</area>
+            <area>40,535,1200,150</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>left,top</align>
