@@ -273,10 +273,10 @@
 
         <!-- show the channel and the recorded time of the recording -->
         <shape name="channelicon_background" from="base_background_shape">
-            <area>378,505,66,66</area>
+            <area>377,505,66,66</area>
         </shape>
         <imagetype name="channelicon">
-            <area>380,507,61,61</area>
+            <area>379,507,61,61</area>
             <preserveaspect>true</preserveaspect>
         </imagetype>
 
@@ -321,12 +321,12 @@
 
         <!-- separates the time and channel and the status icons from the plot -->
         <shape name="recording_time_separator" from="base_separator_shape">
-            <area>378,585,862,1</area>
+            <area>360,585,880,1</area>
         </shape>
 
         <!-- show the plot of the recording -->
         <textarea name="description" from="base_textarea">
-            <area>378,596,862,100</area>
+            <area>377,596,862,100</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>left,top</align>
