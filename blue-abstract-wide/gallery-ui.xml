@@ -121,7 +121,18 @@
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
-                        <!--<state name="upfolder">-->
+                        <state name="upfolder">
+                            <shape name="buttonimage_shape" from="base_background_shape">
+                                <area>1,93,162,30</area>
+                                <type>box</type>
+                                <line color="#000000" alpha="0" width="1" />
+                            </shape>
+                            <imagetype name="icon">
+                                <area>7,97,24,24</area>
+                                <filename>images/shared/folder_up.png</filename>
+                                <preserveaspect>yes</preserveaspect>
+                            </imagetype>
+                        </state>
                     </statetype>
 
                     <!-- show how many images / directories are in this directory -->
@@ -202,7 +213,17 @@
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
-                        <!--<state name="upfolder">-->
+                        <state name="upfolder">
+                            <shape name="buttonimage_shape" from="base_background_shape">
+                                <area>1,139,238,40</area>
+                                <line color="#000000" alpha="0" width="1" />
+                            </shape>
+                            <imagetype name="icon">
+                                <area>9,144,32,32</area>
+                                <filename>images/shared/folder_up_open.png</filename>
+                                <preserveaspect>yes</preserveaspect>
+                            </imagetype>
+                        </state>
                     </statetype>
 
                     <!-- show how many images / directories are in this directory -->
@@ -249,7 +270,7 @@
         </buttonlist>
 
         <textarea name="noimages" from="base_textarea">
-            <area>45,370,1190,40</area>
+            <area>225,60,830,633</area>
             <align>allcenter</align>
         </textarea>
     </window>
