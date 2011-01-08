@@ -78,7 +78,7 @@
                     <!-- shows that the image was marked/selected and
                         might be manipulated with other images -->
                     <statetype name="buttoncheck">
-                        <position>1,1</position>
+                        <position>2,2</position>
                         <showempty>yes</showempty>
                         <state type="full">
                             <shape name="marked_background" from="base_background_shape">
@@ -160,7 +160,7 @@
                     <!-- shows that the image was marked/selected and
                         might be manipulated with other images -->
                     <statetype name="buttoncheck">
-                        <position>1,1</position>
+                        <position>2,2</position>
                         <showempty>yes</showempty>
                         <state type="full">
                             <shape name="marked_background" from="base_background_shape">
