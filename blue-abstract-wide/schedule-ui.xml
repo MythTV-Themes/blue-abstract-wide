@@ -258,31 +258,31 @@
 
         <!-- the shape around the livetv video -->
         <shape name="video_shape" from="base_background_shape">
-            <area>40,505,290,165</area>
+            <area>40,505,304,174</area>
         </shape>
 
         <!-- the livetv video itself -->
         <imagetype name="video">
-            <area>42,507,286,161</area>
+            <area>42,507,300,170</area>
         </imagetype>
 
         <!-- the vertical separator -->
         <shape name="video_description_separator" from="base_separator_shape">
-            <area>345,505,1,165</area>
+            <area>360,504,1,175</area>
         </shape>
 
         <!-- show the channel and the recorded time of the recording -->
         <shape name="channelicon_background" from="base_background_shape">
-            <area>360,505,66,66</area>
+            <area>378,505,66,66</area>
         </shape>
         <imagetype name="channelicon">
-            <area>362,507,61,61</area>
+            <area>380,507,61,61</area>
             <preserveaspect>true</preserveaspect>
         </imagetype>
 
         <!-- shows the title and the plot of the selected video -->
         <textarea name="title" from="base_textarea">
-            <area>440,506,455,30</area>
+            <area>455,506,455,30</area>
             <multiline>no</multiline>
             <align>left,vcenter</align>
             <cutdown>yes</cutdown>
@@ -290,7 +290,7 @@
         </textarea>
 
         <textarea name="subtitle" from="base_textarea">
-            <area>440,548,455,20</area>
+            <area>455,548,455,20</area>
             <align>left,vcenter</align>
             <font>text_small</font>
         </textarea>
@@ -321,12 +321,12 @@
 
         <!-- separates the time and channel and the status icons from the plot -->
         <shape name="recording_time_separator" from="base_separator_shape">
-            <area>360,586,880,1</area>
+            <area>378,585,862,1</area>
         </shape>
 
         <!-- show the plot of the recording -->
         <textarea name="description" from="base_textarea">
-            <area>360,596,880,100</area>
+            <area>378,596,862,100</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>left,top</align>
