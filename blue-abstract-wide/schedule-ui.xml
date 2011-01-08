@@ -716,9 +716,7 @@
         <textarea name="norecordings_info" from="base_textarea">
             <area>250,60,780,347</area>
             <align>allcenter</align>
-            <value>You Haven't Scheduled Any Programs To Be Recorded.
-                To schedule a recording, exit this screen and select
-                'Program Guide' or 'Program Finder'</value>
+            <value>You Haven't Scheduled Any Programs To Be Recorded\n To schedule a recording, exit this screen and select 'Program Guide' or 'Program Finder'</value>
             <multiline>yes</multiline>
         </textarea>
     </window>
@@ -1746,13 +1744,15 @@
 
         <imagetype name="background" from="base_background"/>
 
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Manage Rec. Rules</value>
-            </textarea>
+       <shape name="heading_background" from="base_background_shape">
+            <area>-4,-4,340,36</area>
+        </shape>
+        <textarea name="text" from="base_textarea">
+            <area>0,0,336,30</area>
+            <align>allcenter</align>
+            <value>Manage Recording Rules</value>
         </textarea>
-
+        
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>
         </textarea>

@@ -211,13 +211,13 @@
             <textarea name="page_title_text" draworder="1">
                 <font>text</font>
                 <area>15,7,215,40</area>
-                <value>Listen to music</value>
+                <value>Listen to Music</value>
             </textarea>
-            <textarea name="clock_text" draworder="1">
+            <!--<textarea name="clock_text" draworder="1">
                 <font>text</font>
                 <area>1080,7,215,40</area>
                 <value>Not supported yet</value>
-            </textarea>
+            </textarea>-->
 
             <!-- First appearance of a managedtreelist. I'll explain as we go
                 bins is how many visible layers of the	tree there are. -->
