@@ -338,4 +338,539 @@
 
     </window>
 
+
+
+
+
+
+    <!-- Shows a list of the grabbers that are available -->
+    <window name="grabbersettings">
+
+        <imagetype name="fanart" from="base_background"/>
+
+        <shape name="heading_background" from="base_background_shape">
+            <area>-4,-4,350,36</area>
+        </shape>
+        <textarea name="text" from="base_textarea">
+            <area>0,0,346,30</area>
+            <align>allcenter</align>
+            <value>Artwork and Metadata Sources</value>
+        </textarea>
+        
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="grabbersettings_background" from="base_background_shape">
+            <area>280,195,720,385</area>
+        </shape>
+        
+        <textarea name="moviegrabber_text" from="base_textarea">
+            <area>300,220,295,30</area>
+            <align>right,vcenter</align>
+            <value>Movie Metadata Source:</value>
+        </textarea>
+        
+        <textarea name="tvgrabber_text" from="base_textarea">
+            <area>300,270,295,30</area>
+            <align>right,vcenter</align>
+            <value>Television Metadata Source:</value>
+        </textarea>
+        
+        <textarea name="gamegrabber_text" from="base_textarea">
+            <area>300,320,295,30</area>
+            <align>right,vcenter</align>
+            <value>Game Metadata Source:</value>
+        </textarea>
+
+        <buttonlist name="moviegrabber" from="base_selector_wide">
+            <position>605,215</position>
+        </buttonlist>
+        
+        <buttonlist name="tvgrabber" from="base_selector_wide">
+            <position>605,265</position>
+        </buttonlist>
+        
+        <buttonlist name="gamegrabber" from="base_selector_wide">
+            <position>605,315</position>
+        </buttonlist>
+  
+        <shape name="helptext_background" from="base_background_shape">
+            <area>300,370,680,130</area>
+        </shape>
+        <textarea name="helptext" from="base_textarea">
+            <area>320,370,640,130</area>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <align>allcenter</align>
+        </textarea>
+        
+        <button name="ok" from="base_button">
+            <position>470,520</position>
+            <value>Ok</value>
+        </button>
+        <button name="cancel" from="base_button">
+            <position>660,520</position>
+            <value>Cancel</value>
+        </button>
+
+    </window>
+
+
+
+
+
+
+    <!-- Shows a screen where the user can 
+         specify the display of the date and time -->
+    <window name="generalwizard">
+
+        <imagetype name="fanart" from="base_background"/>
+
+        <shape name="heading_background" from="base_background_shape">
+            <area>-4,-4,350,36</area>
+        </shape>
+        <textarea name="text" from="base_textarea">
+            <area>0,0,346,30</area>
+            <align>allcenter</align>
+            <value>MythTV Configuration Wizard</value>
+        </textarea>
+        
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="generalwizard_background" from="base_background_shape">
+            <area>280,195,720,385</area>
+        </shape>
+        
+        <textarea name="ldate_text" from="base_textarea">
+            <area>300,220,295,30</area>
+            <align>right,vcenter</align>
+            <value>Long Date Format:</value>
+        </textarea>
+        
+        <textarea name="sdate_text" from="base_textarea">
+            <area>300,270,295,30</area>
+            <align>right,vcenter</align>
+            <value>Short Date Format:</value>
+        </textarea>
+        
+        <textarea name="time_text" from="base_textarea">
+            <area>300,320,295,30</area>
+            <align>right,vcenter</align>
+            <value>Time Format:</value>
+        </textarea>
+
+        <buttonlist name="longdate" from="base_selector_wide">
+            <position>605,215</position>
+        </buttonlist>
+        
+        <buttonlist name="shortdate" from="base_selector_wide">
+            <position>605,265</position>
+        </buttonlist>
+        
+        <buttonlist name="timeformat" from="base_selector_wide">
+            <position>605,315</position>
+        </buttonlist>
+  
+        <shape name="helptext_background" from="base_background_shape">
+            <area>300,370,680,130</area>
+        </shape>
+        <textarea name="helptext" from="base_textarea">
+            <area>320,370,640,130</area>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <align>allcenter</align>
+        </textarea>
+
+        <button name="cancel" from="base_button">
+            <position>470,520</position>
+            <value>Cancel</value>
+        </button>
+        <button name="next" from="base_button">
+            <position>660,520</position>
+            <value>Next</value>
+        </button>
+
+    </window>
+
+
+
+
+
+
+    <!-- Shows a screen where the user can set his audio settings -->
+    <window name="audiowizard">
+
+        <imagetype name="fanart" from="base_background"/>
+
+        <shape name="heading_background" from="base_background_shape">
+            <area>-4,-4,310,36</area>
+        </shape>
+        <textarea name="text" from="base_textarea">
+            <area>0,0,306,30</area>
+            <align>allcenter</align>
+            <value>Audio Configuration</value>
+        </textarea>
+
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="audiowizard_background" from="base_background_shape">
+            <area>280,095,720,585</area>
+        </shape>
+
+        <textarea name="auddev_text" from="base_textarea">
+            <area>300,120,295,30</area>
+            <align>right,vcenter</align>
+            <value>Audio Device:</value>
+        </textarea>
+
+        <textarea name="speaktext_text" from="base_textarea">
+            <area>300,170,295,30</area>
+            <align>right,vcenter</align>
+            <value>Number of Speakers:</value>
+        </textarea>
+
+        <textarea name="ac3_text" from="base_textarea">
+            <area>300,220,605,30</area>
+            <align>right,vcenter</align>
+            <value>My speaker supports Dolby Digital</value>
+        </textarea>
+
+        <textarea name="dts_text" from="base_textarea">
+            <area>300,270,605,30</area>
+            <align>right,vcenter</align>
+            <value>My speaker supports DTS</value>
+        </textarea>
+
+        <textarea name="hd_text" from="base_textarea">
+            <area>300,320,605,30</area>
+            <align>right,vcenter</align>
+            <value>My speaker supports E-AC-3 of DTS-HD</value>
+        </textarea>
+
+        <textarea name="hdplus_text" from="base_textarea">
+            <area>300,370,605,30</area>
+            <align>right,vcenter</align>
+            <value>My speaker supports TrueHD or DTS-HD MA</value>
+        </textarea>
+
+        <buttonlist name="audiodevices" from="base_selector_wide">
+            <position>605,115</position>
+        </buttonlist>
+
+        <buttonlist name="speakers" from="base_selector_wide">
+            <position>605,165</position>
+        </buttonlist>
+
+        <checkbox name="ac3check" from="base_checkbox">
+            <position>920,220</position>
+        </checkbox>
+
+        <checkbox name="dtscheck" from="base_checkbox">
+            <position>920,270</position>
+        </checkbox>
+
+        <checkbox name="hdcheck" from="base_checkbox">
+            <position>920,320</position>
+        </checkbox>
+
+        <checkbox name="hdpluscheck" from="base_checkbox">
+            <position>920,370</position>
+        </checkbox>
+
+        <button name="testspeakers" from="base_button_wide">
+            <position>490,415</position>
+        </button>
+
+        <shape name="helptext_background" from="base_background_shape">
+            <area>300,470,680,130</area>
+        </shape>
+        <textarea name="helptext" from="base_textarea">
+            <area>320,470,640,130</area>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <align>allcenter</align>
+        </textarea>
+
+        <button name="previous" from="base_button">
+            <position>470,620</position>
+            <value>Previous</value>
+        </button>
+        <button name="next" from="base_button">
+            <position>660,620</position>
+            <value>Next</value>
+        </button>
+
+    </window>
+
+
+
+
+
+
+    <!-- Shows a screen where the user can 
+         choose the vdpau playback profile, -->
+    <window name="videowizard">
+
+        <imagetype name="fanart" from="base_background"/>
+
+        <shape name="heading_background" from="base_background_shape">
+            <area>-4,-4,330,36</area>
+        </shape>
+        <textarea name="text" from="base_textarea">
+            <area>0,0,326,30</area>
+            <align>allcenter</align>
+            <value>Video Configuration</value>
+        </textarea>
+        
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="videowizard_background" from="base_background_shape">
+            <area>280,195,720,385</area>
+        </shape>
+        
+        <textarea name="prof_text" from="base_textarea">
+            <area>300,220,295,30</area>
+            <align>right,vcenter</align>
+            <value>Long Date Format:</value>
+        </textarea>
+
+        <buttonlist name="playbackprofiles" from="base_selector_wide">
+            <position>605,215</position>
+        </buttonlist>
+        
+        <button name="testsd" from="base_button_wide">
+            <position>605,265</position>
+            <value>Test Standard Definition</value>
+        </button>
+        
+        <button name="testhd" from="base_button_wide">
+            <position>605,315</position>
+            <value>Test High Definition</value>
+        </button>
+  
+        <shape name="helptext_background" from="base_background_shape">
+            <area>300,370,680,130</area>
+        </shape>
+        <textarea name="helptext" from="base_textarea">
+            <area>320,370,640,130</area>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <align>allcenter</align>
+        </textarea>
+        
+        <button name="previous" from="base_button">
+            <position>470,520</position>
+            <value>Previous</value>
+        </button>
+        <button name="next" from="base_button">
+            <position>660,520</position>
+            <value>Finish</value>
+        </button>
+
+    </window>
+
+
+
+
+
+
+    <!-- Shows a list of available backends -->
+    <window name="backendselection">
+
+        <imagetype name="fanart" from="base_background"/>
+
+        <shape name="heading_background" from="base_background_shape">
+            <area>-4,-4,310,36</area>
+        </shape>
+        <textarea name="text" from="base_textarea">
+            <area>0,0,306,30</area>
+            <align>allcenter</align>
+            <value>MythTV Servers</value>
+        </textarea>
+        
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+        
+        
+        <shape name="listbackground" from="basebackground">
+            <area>20,55,760,410</area>
+        </shape>
+
+        <buttonlist name="backends">
+            <area>30,65,650,265</area>
+            <layout>vertical</layout>
+            <spacing>3</spacing>
+            <scrollstyle>free</scrollstyle>
+            <wrapstyle>items</wrapstyle>
+            <buttonarea>0,0,100%,97%</buttonarea>
+
+            <statetype name="buttonitem">
+                <state name="active">
+                    <imagetype name="buttonbackground" from="base_image_active">
+                        <filename>images/widgets/widget_inactive.png</filename>
+                        <area>0,0,650,40</area>
+                    </imagetype>
+                    
+                    <textarea name="buttontext">
+                        <area>8,5,400,30</area>
+                        <font>text</font>
+                        <cutdown>yes</cutdown>
+                        <align>left,vcenter</align>
+                    </textarea>
+                    
+                    <!-- Workaround for vanishing buttontext bug -->
+                    <textarea name="modelname" from="buttontext" />
+                    
+                    <textarea name="protocolversion">
+                        <area>15,30,300,25</area>
+                        <font>text</font>
+                        <cutdown>yes</cutdown>
+                        <align>left,vcenter</align>
+                    </textarea>
+
+                    <textarea name="version">
+                        <area>570,2,100,50</area>
+                        <font>text</font>
+                        <cutdown>yes</cutdown>
+                        <align>right,vcenter</align>
+                    </textarea>
+
+                    <statetype name="connection">
+                        <area>470,2,100,50</area>
+                        <state name="good">
+                            <area>0,0,100,50</area>
+                        </state>
+                        <state name="protocolmismatch" from="good">
+                            <textarea name="description">
+                                <area>0,0,100%,100%</area>
+                                <align>hcenter</align>
+                                <value>Version Mismatch</value>
+                                <font>text_red</font>
+                                <multiline>yes</multiline>
+                            </textarea>
+                        </state>
+                        <state name="blocked" from="protocolmismatch">
+                            <textarea name="description">
+                                <value>Firewall</value>
+                            </textarea>
+                        </state>
+                    </statetype>
+
+                    <statetype name="securitypin">
+                        <area>680,7,40,40</area>
+                        <state name="yes">
+                            <area>0,0,40,40</area>
+                            <shape name="pin">
+                                <area>0,0,40,40</area>
+                                <type>roundbox</type>
+                                <cornerradius>6</cornerradius>
+                                <fill color="#990000" />
+                            </shape>
+                            <imagetype name="locked">
+                                <position>6,5</position>
+                                <filename>shared/secure.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="no">
+                            <area>0,0,40,40</area>
+                            <shape name="nopin">
+                                <area>0,0,40,40</area>
+                                <type>roundbox</type>
+                                <cornerradius>6</cornerradius>
+                                <fill color="#009900" />
+                            </shape>
+                            <imagetype name="unlocked">
+                                <position>2,5</position>
+                                <filename>shared/unsecure.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
+                </state>
+
+                <state name="inactive" from="active" />
+
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,650,40</area>
+                    </imagetype>
+                </state>
+
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,650,40</area>
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <font>text_inactive</font>
+                    </textarea>
+                </state>
+            </statetype>
+            
+            <statetype name="upscrollarrow">
+                <position>10,97%</position>
+                <state type="off">
+                    <imagetype name="upon" from="base_arrow_inactive">
+                        <filename>images/shared/arrow_up.png</filename>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="upoff" from="base_arrow_selectedactive">
+                        <filename>images/shared/arrow_up.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+
+            <statetype name="downscrollarrow">
+                <position>35,97%</position>
+                <state type="off">
+                    <imagetype name="dnon" from="base_arrow_inactive">
+                        <filename>images/shared/arrow_down.png</filename>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="dnoff" from="base_arrow_selectedactive">
+                        <filename>images/shared/arrow_down.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+            
+            <helptext>Select the server you wish to connect to</helptext>
+        </buttonlist>
+
+        <shape name="helptext_background" from="base_background_shape">
+            <area>300,370,680,130</area>
+        </shape>
+        <textarea name="helptext" from="base_textarea">
+            <area>320,370,640,130</area>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <align>allcenter</align>
+        </textarea>
+
+        <button name="save" from="base_button">
+            <position>610,530</position>
+            <value>Save</value>
+        </button>
+
+        <button name="manual" from="base_button">
+            <position>310,530</position>
+            <value>Manual</value>
+        </button>
+
+        <button name="cancel" from="base_button">
+            <position>40,530</position>
+            <value>Cancel</value>
+        </button>
+
+    </window>
+
 </mythuitheme>
