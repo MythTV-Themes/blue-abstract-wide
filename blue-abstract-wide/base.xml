@@ -37,6 +37,12 @@
         <pixelsize>24</pixelsize>
     </fontdef>
 
+    <!-- This is the font that shows the "Please wait..." -->
+    <fontdef name="title_wait" from="normal">
+        <pixelsize>30</pixelsize>
+        <weight>bold</weight>
+    </fontdef>
+
 
     <!-- General font that is used in many screens -->
     <fontdef name="text" from="normal">
@@ -2362,17 +2368,16 @@
             <position>1040,0</position>
         </textarea>
 
-        <textarea name="title" from="basetextarea">
-            <area>500,335,280,50</area>
-            <font>title</font>
+        <textarea name="title" from="base_textarea">
+            <area>450,335,380,60</area>
+            <font>title_wait</font>
             <align>allcenter</align>
             <value>Please Wait...</value>
         </textarea>
 
         <progressbar name="progress" from="base_progressbar_flat">
-            <position>372,425</position>
+            <position>372,435</position>
         </progressbar>
     </window>
-	
-	
+
 </mythuitheme>
