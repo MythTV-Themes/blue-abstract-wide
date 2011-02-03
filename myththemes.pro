@@ -13,6 +13,7 @@ win32:QMAKE_COPY_DIR = sh ./cpsimple
 themes.path = $${PREFIX}/share/mythtv/themes/
 themes.files = Graphite metallurgy Mythbuntu Arclight
 themes.files += Childish
+themes.files += blue-abstract-wide
 
 INSTALLS += themes
 
