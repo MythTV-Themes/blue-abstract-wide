@@ -62,7 +62,9 @@
     <fontdef name="text_yellow" from="text">
         <color>#FFFF33</color>
     </fontdef>
-
+    <fontdef name="text_red" from="text">
+        <color>#FF3333</color>
+    </fontdef>
 
     <!-- Smaller font that is used in many screens -->
     <fontdef name="text_small" from="normal">
@@ -2344,4 +2346,33 @@
         </button>
     </window>
 
+
+
+    <!-- Screen that shows the please wait and a progressbar -->
+    <window name="videowindow">
+
+        <shape name="background">
+            <area>0,0,1280,720</area>
+            <type>box</type>
+            <fill color="#000000" alpha="255"></fill>
+        </shape>
+
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <textarea name="title" from="basetextarea">
+            <area>500,335,280,50</area>
+            <font>title</font>
+            <align>allcenter</align>
+            <value>Please Wait...</value>
+        </textarea>
+
+        <progressbar name="progress" from="base_progressbar_flat">
+            <position>372,425</position>
+        </progressbar>
+    </window>
+	
+	
 </mythuitheme>
