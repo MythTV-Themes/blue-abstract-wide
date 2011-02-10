@@ -37,6 +37,7 @@
         <pixelsize>24</pixelsize>
     </fontdef>
 
+
     <!-- This is the font that shows the "Please wait..." -->
     <fontdef name="title_wait" from="normal">
         <pixelsize>30</pixelsize>
@@ -2378,6 +2379,70 @@
         <progressbar name="progress" from="base_progressbar_flat">
             <position>372,435</position>
         </progressbar>
+    </window>
+
+
+
+
+
+
+    <!-- Popup search dialog used to search button lists -->
+    <window name="MythSearchListDialog">
+       
+        <shape name="darken_background" from="base_darken_background" />
+
+        <shape name="dialog_background" from="base_background_shape_dark">
+            <area>440,210,405,300</area>
+        </shape>
+
+        <imagetype name="title_background_overlay" from="base_popup_background">
+            <area>455,225,375,90</area>
+        </imagetype>
+        <textarea name="title" from="base_textarea">
+            <area>475,225,350,90</area>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <align>allcenter</align>
+            <value>Search List</value>
+        </textarea>
+
+        <!-- the search field -->
+        <textedit name="searchedit" from="base_textedit">
+            <position>455,340</position>
+        </textedit>
+
+        <statetype name="searchstate">
+            <area>455,390,375,40</area>
+            <state name="found">
+                <textarea name="statustext" from="base_textarea">
+                    <area>0,0,375,40</area>
+                    <align>allcenter</align>
+                    <value>Found</value>
+                </textarea>
+            </state>
+            <state name="notfound">
+                <textarea name="statustext" from="base_textarea">
+                    <area>0,0,375,40</area>
+                    <align>allcenter</align>
+                    <value>Not Found</value>
+                </textarea>
+            </state>
+        </statetype>
+        
+        <shape name="button_separator" from="base_separator_shape">
+            <area>455,440,375,1</area>
+        </shape>
+
+        <button name="prevbutton" from="base_button">
+            <position>455,455</position>
+            <value>Previous</value>
+        </button>
+
+        <button name="nextbutton" from="base_button">
+            <position>680,455</position>
+            <value>Next</value>
+        </button>
+
     </window>
 
 </mythuitheme>
