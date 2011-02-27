@@ -2125,17 +2125,17 @@
             <position>340,230</position>
             <value>Enable Random Trailer Playback:</value>
         </textarea>
-        <textarea name="unknownfilecheck_text" from="autometacheck_text">
+        <textarea name="trailerplay_text" from="autometacheck_text">
             <position>340,275</position>
-            <value>Display unknown file types:</value>
+            <value>Trailers to Play:</value>
         </textarea>
         <textarea name="treeloadsmetacheck_text" from="autometacheck_text">
             <position>340,320</position>
             <value>Enable metadata in file browse mode:</value>
         </textarea>
-        <textarea name="trailerplay_text" from="autometacheck_text">
+        <textarea name="unknownfilecheck_text" from="autometacheck_text">
             <position>340,360</position>
-            <value>Trailers to Play:</value>
+            <value>Display unknown file types:</value>
         </textarea>
 
         <checkbox name="autometaupdatecheck" from="base_checkbox">
