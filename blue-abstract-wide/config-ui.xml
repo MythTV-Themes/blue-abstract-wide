@@ -519,89 +519,99 @@
         </textarea>
 
         <shape name="audiowizard_background" from="base_background_shape">
-            <area>280,095,720,585</area>
+            <area>280,65,720,635</area>
         </shape>
 
         <textarea name="auddev_text" from="base_textarea">
-            <area>300,120,295,30</area>
+            <area>300,90,295,30</area>
             <align>right,vcenter</align>
             <value>Audio Device:</value>
         </textarea>
 
         <textarea name="speaktext_text" from="base_textarea">
-            <area>300,170,295,30</area>
+            <area>300,140,295,30</area>
             <align>right,vcenter</align>
             <value>Number of Speakers:</value>
         </textarea>
 
         <textarea name="ac3_text" from="base_textarea">
-            <area>300,220,605,30</area>
+            <area>300,190,605,30</area>
             <align>right,vcenter</align>
             <value>My speaker supports Dolby Digital</value>
         </textarea>
 
         <textarea name="dts_text" from="base_textarea">
-            <area>300,270,605,30</area>
+            <area>300,240,605,30</area>
             <align>right,vcenter</align>
             <value>My speaker supports DTS</value>
         </textarea>
 
-        <textarea name="hd_text" from="base_textarea">
-            <area>300,320,605,30</area>
+        <textarea name="eac3_text" from="base_textarea">
+            <area>300,290,605,30</area>
             <align>right,vcenter</align>
-            <value>My speaker supports E-AC-3 of DTS-HD</value>
+            <value>My speaker supports E-AC-3</value>
+        </textarea>
+        
+        <textarea name="truehd_text" from="base_textarea">
+            <area>300,340,605,30</area>
+            <align>right,vcenter</align>
+            <value>My speaker supports TrueHD</value>
         </textarea>
 
-        <textarea name="hdplus_text" from="base_textarea">
-            <area>300,370,605,30</area>
+        <textarea name="dtshd_text" from="base_textarea">
+            <area>300,390,605,30</area>
             <align>right,vcenter</align>
-            <value>My speaker supports TrueHD or DTS-HD MA</value>
+            <value>My speaker supports DTS-HD</value>
         </textarea>
 
         <buttonlist name="audiodevices" from="base_selector_wide">
-            <position>605,115</position>
+            <position>605,85</position>
         </buttonlist>
 
         <buttonlist name="speakers" from="base_selector_wide">
-            <position>605,165</position>
+            <position>605,135</position>
         </buttonlist>
 
         <checkbox name="ac3check" from="base_checkbox">
-            <position>920,220</position>
+            <position>920,190</position>
         </checkbox>
 
         <checkbox name="dtscheck" from="base_checkbox">
-            <position>920,270</position>
+            <position>920,240</position>
         </checkbox>
 
-        <checkbox name="hdcheck" from="base_checkbox">
-            <position>920,320</position>
+        <checkbox name="eac3check" from="base_checkbox">
+            <position>920,290</position>
+        </checkbox>
+        
+        <checkbox name="truehdcheck" from="base_checkbox">
+            <position>920,340</position>
         </checkbox>
 
-        <checkbox name="hdpluscheck" from="base_checkbox">
-            <position>920,370</position>
+        <checkbox name="dtshdcheck" from="base_checkbox">
+            <position>920,390</position>
         </checkbox>
 
         <button name="testspeakers" from="base_button_wide">
-            <position>490,415</position>
+            <position>490,435</position>
         </button>
 
         <shape name="helptext_background" from="base_background_shape">
-            <area>300,470,680,130</area>
+            <area>300,490,680,130</area>
         </shape>
         <textarea name="helptext" from="base_textarea">
-            <area>320,470,640,130</area>
+            <area>320,490,640,130</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>allcenter</align>
         </textarea>
 
         <button name="previous" from="base_button">
-            <position>470,620</position>
+            <position>470,640</position>
             <value>Previous</value>
         </button>
         <button name="next" from="base_button">
-            <position>660,620</position>
+            <position>660,640</position>
             <value>Next</value>
         </button>
 
