@@ -275,4 +275,129 @@
         </textarea>
     </window>
 
+
+    <!-- Configuration dialog. This is currently used by the MythImage plugin only -->
+    <window name="galleryconfig">
+
+        <!-- the background image -->
+        <imagetype name="background">
+            <area>0,0,1280,720</area>
+            <filename>images/background.png</filename>
+        </imagetype>
+
+        <!-- The heading (name) of the screen -->
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+            <value>Gallery Settings</value>
+            </textarea>
+        </textarea>
+
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- the shape where the imagelist is displayed -->
+        <shape name="settings_shape" from="base_background_shape">
+            <area>160,170,960,410</area>
+        </shape>
+
+        <textarea name="directory_label" from="base_textarea">
+            <area>180,190,540,40</area>
+            <align>right,vcenter</align>
+            <value>Directory where the images are located:</value>
+        </textarea>
+        <textarea name="directoryfilter_label" from="directory_label">
+            <position>180,240</position>
+            <value>Directories that should be hidden:</value>
+        </textarea>
+        <textarea name="sortorder_label" from="directory_label">
+            <position>180,290</position>
+            <value>Sorting order of the images in each directory:</value>
+        </textarea>
+        <textarea name="slideshowtime_label" from="directory_label">
+            <position>180,340</position>
+            <value>Time to display each image (ms):</value>
+        </textarea>
+        <textarea name="slideshowtype_label" from="directory_label">
+            <position>180,390</position>
+            <value>Transition used between pictures in slideshow mode:</value>
+        </textarea>
+        <textarea name="slideshowtransitiontime_label" from="directory_label">
+            <position>180,440</position>
+            <value>Duration of an image transition (ms):</value>
+        </textarea>
+
+        <textedit name="directory" from="base_textedit">
+            <position>730,190</position>
+        </textedit>
+        <textedit name="directoryfilter" from="base_textedit">
+            <position>730,240</position>
+        </textedit>
+        <buttonlist name="sortorder" from="base_selector_wide">
+            <position>730,290</position>
+        </buttonlist>
+        <spinbox name="slideshowtime" from="base_spinbox">
+            <position>730,340</position>
+        </spinbox>
+        <buttonlist name="slideshowtype" from="base_selector">
+            <position>730,390</position>
+        </buttonlist>
+        <spinbox name="slideshowtransitiontime" from="base_spinbox">
+            <position>730,440</position>
+        </spinbox>
+
+        <shape name="description_separator" from="base_separator_shape">
+            <area>180,500,920,1</area>
+        </shape>
+
+        <button name="save" from="base_button">
+            <position>510,520</position>
+            <value>Save</value>
+        </button>
+        <button name="cancel" from="base_button">
+            <position>680,520</position>
+            <value>Cancel</value>
+        </button>
+
+    </window>
+
+
+
+    <!-- Slideshow window which shows the a single image only or a slideshow.
+         This is currently used by the MythImage plugin only -->
+    <window name="slideshow">
+
+        <!-- the background image -->
+        <imagetype name="background">
+            <area>0,0,1280,720</area>
+            <filename>images/background.png</filename>
+        </imagetype>
+
+        <!-- The heading (name) of the screen -->
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+            <value>Gallery Settings</value>
+            </textarea>
+        </textarea>
+
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- the shape around the image -->
+        <shape name="selectedimage_shape" from="base_background_shape">
+            <area>25,55,1230,640</area>
+        </shape>
+
+        <imagetype name="selectedimage">
+            <area>27,57,1226,636</area>
+            <preserveaspect>yes</preserveaspect>
+        </imagetype>
+
+    </window>
+
 </mythuitheme>
