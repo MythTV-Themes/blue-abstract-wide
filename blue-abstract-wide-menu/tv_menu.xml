@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mythmenu name="TV_MENU">
+
+    <button>
+        <type>TV_WATCH_TV</type>
+        <text>Live TV</text>
+        <text lang="DE">Fernsehen</text>
+        <description>Watch live television</description>
+        <description lang="DE">Jetzt Fernsehen schauen</description>
+        <action>TV_WATCH_LIVE</action>
+    </button>
+
+    <button>
+        <type>TV_PROGRAM_GUIDE</type>
+        <text>Program Guide</text>
+        <text lang="DE">Fernsehprogramm</text>
+        <description>Look at the program list and schedule them</description>
+        <description lang="DE">Das aktuelle TV-Programm zum planen</description>
+        <action>TV_SCHEDULE</action>
+    </button>
+
+    <button>
+        <type>TV_PLANNING_MENU</type>
+        <text>Organize Recordings</text>
+        <text lang="DE">TV-Aufnahmen organisieren</text>
+        <description>Find shows or pick shows to record or delete</description>
+        <description lang="DE">Sendungen suchen, aufnehmen oder löschen</description>
+        <action>MENU tv_planning_menu.xml</action>
+    </button>
+
+    <button>
+        <type>TV_WATCH_RECORDINGS</type>
+        <text>Watch Recordings</text>
+        <text lang="DE">TV-Aufnahmen ansehen</text>
+        <description>Browse your recordings</description>
+        <description lang="DE">Aufgenommene TV-Sendunden ansehen</description>
+        <action>TV_WATCH_RECORDING</action>
+    </button>
+
+</mythmenu>

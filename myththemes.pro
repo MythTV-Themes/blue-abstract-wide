@@ -14,6 +14,7 @@ themes.path = $${PREFIX}/share/mythtv/themes/
 themes.files = Graphite metallurgy Mythbuntu Arclight
 themes.files += Childish
 themes.files += blue-abstract-wide
+themes.files += blue-abstract-wide-menu
 
 INSTALLS += themes
 

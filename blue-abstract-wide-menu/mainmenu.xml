@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mythmenu name="MAIN">
+
+    <button>
+        <type>MENU_TV</type>
+        <text>Watch TV</text>
+        <text lang="DE">Fernsehen</text>
+        <description>Watch live TV or schedule recordeding</description>
+        <description lang="DE">TV und Aufnahmen anschauen oder planen</description>
+        <action>MENU tv_menu.xml</action>
+    </button>
+
+    <button>
+        <type>MENU_VIDEOS</type>
+        <text>Videos</text>
+        <text lang="DE">Videos</text>
+        <description>Browse the internet or your video library</description>
+        <description lang="DE">Filme, Serien und Internetvideos anschauen</description>
+        <action>MENU videos_menu.xml</action>
+    </button>
+
+    <button>
+        <type>MENU_MUSIC</type>
+        <text>Music</text>
+        <text lang="DE">Musik</text>
+        <description>Browse your music library or the net</description>
+        <description lang="DE">Aus deiner Sammlung oder dem Internet</description>
+        <action>JUMP Play music</action>
+        <depends>mythmusic</depends>
+    </button>
+
+    <button>
+        <type>MENU_PICTURES</type>
+        <text>Pictures</text>
+        <text lang="DE">Bilder</text>
+        <description>Look at Pictures</description>
+        <description lang="DE">Bilder aus deiner Sammlung anschauen</description>
+        <action>PLUGIN mythgallery</action>
+        <depends>mythgallery</depends>
+    </button>
+
+    <button>
+        <type>MENU_IMAGES</type>
+        <text>Picture (new Plugin)</text>
+        <text lang="DE">Bilder (neues Plugin)</text>
+        <description>Look at Pictures</description>
+        <description lang="DE">Bilder aus deiner Sammlung anschauen</description>
+        <action>PLUGIN mythimage</action>
+        <depends>mythimage</depends>
+    </button>
+
+    <button>
+        <type>MENU_GAMES</type>
+        <text>Games</text>
+        <text lang="DE">Spiele</text>
+        <description>Play video games</description>
+        <description lang="DE">Konsolen- und andere Spieleklassiker</description>
+        <action>PLUGIN mythgame</action>
+        <depends>mythgame</depends>
+    </button>
+
+    <button>
+        <type>MENU_INFO</type>
+        <text>Internet and Information</text>
+        <text lang="DE">Internet und Infos</text>
+        <description>Surf the net, read news and more</description>
+        <description lang="DE">Surfen, Nachrichten lesen und Weiteres</description>
+        <action>MENU info_menu.xml</action>
+    </button>
+
+    <button>
+        <type>MENU_UTILITIES_SETUP</type>
+        <text>Setup</text>
+        <description>Configure MythTV and plugins</description>
+        <action>MENU main_settings.xml</action>
+    </button>
+
+</mythmenu>
