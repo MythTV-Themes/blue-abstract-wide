@@ -391,6 +391,7 @@
         <!-- the shape around the image -->
         <shape name="selectedimage_shape" from="base_background_shape">
             <area>25,55,1230,640</area>
+            <fill color="#000000" alpha="255" />
         </shape>
 
         <imagetype name="selectedimage">
