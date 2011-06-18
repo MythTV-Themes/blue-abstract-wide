@@ -362,19 +362,19 @@
             <area>170,200,210,150</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
-        <imagetype name="18icon-1" from="icon-0">
+        <imagetype name="18icon-1" from="18icon-0">
             <position>545,200</position>
         </imagetype>
-        <imagetype name="18icon-2" from="icon-0">
+        <imagetype name="18icon-2" from="18icon-0">
             <position>920,200</position>
         </imagetype>
-        <imagetype name="18icon-3" from="icon-0">
+        <imagetype name="18icon-3" from="18icon-0">
             <position>170,435</position>
         </imagetype>
-        <imagetype name="18icon-4" from="icon-0">
+        <imagetype name="18icon-4" from="18icon-0">
             <position>545,435</position>
         </imagetype>
-        <imagetype name="18icon-5" from="icon-0">
+        <imagetype name="18icon-5" from="18icon-0">
             <position>920,435</position>
         </imagetype>
         
@@ -402,19 +402,19 @@
             <align>left,vcenter</align>
             <cutdown>yes</cutdown>
         </textarea>
-        <textarea name="time-1" from="date-0">
+        <textarea name="time-1" from="time-0">
             <position>485,160</position>
         </textarea>
-        <textarea name="time-2" from="date-0">
+        <textarea name="time-2" from="time-0">
             <position>860,160</position>
         </textarea>
-        <textarea name="time-3" from="date-0">
+        <textarea name="time-3" from="time-0">
             <position>110,395</position>
         </textarea>
-        <textarea name="time-4" from="date-0">
+        <textarea name="time-4" from="time-0">
             <position>485,395</position>
         </textarea>
-        <textarea name="time-5" from="date-0">
+        <textarea name="time-5" from="time-0">
             <position>860,395</position>
         </textarea>
         
@@ -423,19 +423,19 @@
             <font>text_small</font>
             <template>Temperature:  %1</template>
         </textarea>
-        <textarea name="temp-1" from="high-0">
+        <textarea name="temp-1" from="temp-0">
             <position>485,295</position>
         </textarea>
-        <textarea name="temp-2" from="high-0">
+        <textarea name="temp-2" from="temp-0">
             <position>860,295</position>
         </textarea>
-        <textarea name="temp-3" from="high-0">
+        <textarea name="temp-3" from="temp-0">
             <position>110,530</position>
         </textarea>
-        <textarea name="temp-4" from="high-0">
+        <textarea name="temp-4" from="temp-0">
             <position>485,530</position>
         </textarea>
-        <textarea name="temp-5" from="high-0">
+        <textarea name="temp-5" from="temp-0">
             <position>860,530</position>
         </textarea>
 
@@ -444,19 +444,19 @@
             <font>text_small</font>
             <template>Chance of Precipitation:  %1</template>
         </textarea>
-        <textarea name="pop-1" from="low-0">
+        <textarea name="pop-1" from="pop-0">
             <position>485,325</position>
         </textarea>
-        <textarea name="pop-2" from="low-0">
+        <textarea name="pop-2" from="pop-0">
             <position>860,325</position>
         </textarea>
-        <textarea name="pop-3" from="low-0">
+        <textarea name="pop-3" from="pop-0">
             <position>110,560</position>
         </textarea>
-        <textarea name="pop-4" from="low-0">
+        <textarea name="pop-4" from="pop-0">
             <position>485,560</position>
         </textarea>
-        <textarea name="pop-5" from="low-0">
+        <textarea name="pop-5" from="pop-0">
             <position>860,560</position>
         </textarea>
         
