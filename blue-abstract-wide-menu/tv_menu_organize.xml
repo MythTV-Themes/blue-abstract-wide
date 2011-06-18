@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<mythmenu name="TV_PLANNING_MENU">
+<mythmenu name="TV_MENU_ORGANIZE">
 
     <button>
         <type>TV_UPCOMING_RECORDINGS</type>
@@ -16,7 +16,7 @@
         <text lang="DE">Erweiterte Planung</text>
         <description>Search for shows and more options</description>
         <description lang="DE">Sendungen suchen und weitere Optionen</description>
-        <action>MENU tv_planning_adv_menu.xml</action>
+        <action>MENU tv_menu_schedule.xml</action>
     </button>
 
     <button>

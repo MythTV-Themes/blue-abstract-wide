@@ -7,8 +7,7 @@
         <text lang="DE">Filme und Serien</text>
         <description>Browse your video library</description>
         <description lang="DE">Videos aus deiner Sammlung anschauen</description>
-        <action>JUMP MythVideo</action>
-        <depends>mythvideo</depends>
+        <action>JUMP Video Default</action>
     </button>
 
     <button>
@@ -24,10 +23,9 @@
         <type>DISC_PLAY</type>
         <text>Play DVD</text>
         <text lang="DE">DVD abspielen</text>
-        <description>Play a film on DVD</description>
-        <description lang="DE">Filme von DVD ansehen</description>
+        <description>Play a film on Blu-ray or DVD</description>
+        <description lang="DE">Filme von DVD oder BD ansehen</description>
         <action>JUMP Play Disc</action>
-        <depends>mythvideo</depends>
     </button>
 <!--
     <button>
@@ -37,7 +35,6 @@
         <description>Import video from a movie DVD</description>
         <description lang="DE">Filme von DVD importieren</description>
         <action>JUMP Rip DVD</action>
-        <depends>mythvideo</depends>
     </button>
 -->
 

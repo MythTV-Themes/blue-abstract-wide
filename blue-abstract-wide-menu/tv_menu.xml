@@ -20,7 +20,7 @@
     </button>
 
     <button>
-        <type>TV_PLANNING_MENU</type>
+        <type>TV_MENU_ORGANIZE</type>
         <text>Organize Recordings</text>
         <text lang="DE">TV-Aufnahmen organisieren</text>
         <description>Find shows or pick shows to record or delete</description>
