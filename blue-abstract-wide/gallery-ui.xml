@@ -394,7 +394,16 @@
             <fill color="#000000" alpha="255" />
         </shape>
 
-        <imagetype name="selectedimage">
+        <!-- this is the image that shown in the foreground.
+             when fading is enabled this image is faded out. -->
+        <imagetype name="first_image">
+            <area>27,57,1226,636</area>
+            <preserveaspect>yes</preserveaspect>
+        </imagetype>
+
+        <!-- this is the image that shown in the background
+             when fading is enabled this image is faded in. -->
+        <imagetype name="second_image">
             <area>27,57,1226,636</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
