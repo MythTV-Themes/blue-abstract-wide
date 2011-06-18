@@ -28,9 +28,18 @@
             <statetype name="buttonitem">
                 <state name="active">
                     <imagetype name="favicon">
-                        <filename>images/shared/browser/no_favicon.png</filename>
                         <area>6,6,28,28</area>
                     </imagetype>
+                    <statetype name="loadingstate">
+                        <area>6,6,28,28</area>
+                        <state name="loading">
+                            <imagetype name="animation">
+                                <position>0,0</position>
+                                <filepattern low="1" high="8">images/shared/browser/loading_%1.png</filepattern>
+                                <delay>160</delay>
+                            </imagetype>
+                        </state>
+                    </statetype>
                     <textarea name="buttontext">
                         <area>45,5,600,30</area>
                         <font>text</font>
