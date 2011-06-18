@@ -25,6 +25,29 @@
 
         <buttonlist name="pagelist" from="base_selector_very_wide">
             <area>310,19,650,40</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <imagetype name="favicon">
+                        <filename>images/shared/browser/no_favicon.png</filename>
+                        <area>6,6,28,28</area>
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <area>45,5,600,30</area>
+                        <font>text</font>
+                        <cutdown>yes</cutdown>
+                        <align>left,vcenter</align>
+                    </textarea>
+                </state>
+                <state name="inactive" from="active"/>
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,650,40</area>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active"/>
+            </statetype>
+
         </buttonlist>
 
         <shape name="webbrowser_shape" from="base_background_shape">
