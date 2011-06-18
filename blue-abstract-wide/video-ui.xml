@@ -269,10 +269,10 @@
                         <position>950,10</position>
                     </statetype>
 
-                    <imagetype name="parentallevel_background" from="base_parentallevel_background">
+                    <imagetype name="videolevel_background" from="base_parentallevel_background">
                         <position>1070,10</position>
                     </imagetype>
-                    <statetype name="parentallevel" from="base_parentallevel">
+                    <statetype name="videolevel" from="base_parentallevel">
                         <position>1070,10</position>
                     </statetype>
 
@@ -327,10 +327,10 @@
                         <position>950,10</position>
                     </statetype>
 
-                    <imagetype name="parentallevel_background" from="base_parentallevel_background">
+                    <imagetype name="videolevel_background" from="base_parentallevel_background">
                         <position>1070,10</position>
                     </imagetype>
-                    <statetype name="parentallevel" from="base_parentallevel">
+                    <statetype name="videolevel" from="base_parentallevel">
                         <position>1070,10</position>
                     </statetype>
                 </state>
@@ -544,10 +544,10 @@
         <textarea name="length" from="season">
             <position>765,420</position>
         </textarea>
-        <imagetype name="parentallevel_background" from="base_parentallevel_background">
+        <imagetype name="videolevel_background" from="base_parentallevel_background">
             <position>765,455</position>
         </imagetype>
-        <statetype name="parentallevel" from="base_parentallevel">
+        <statetype name="videolevel" from="base_parentallevel">
             <position>765,455</position>
         </statetype>
 
@@ -1105,10 +1105,10 @@
         <textarea name="length" from="director">
             <position>1110,625</position>
         </textarea>
-        <imagetype name="parentallevel_background" from="base_parentallevel_background">
+        <imagetype name="videolevel_background" from="base_parentallevel_background">
             <position>1110,660</position>
         </imagetype>
-        <statetype name="parentallevel" from="base_parentallevel">
+        <statetype name="videolevel" from="base_parentallevel">
             <position>1110,660</position>
         </statetype>
     </window>
@@ -1303,10 +1303,10 @@
         <textarea name="length" from="director">
             <position>950,609</position>
         </textarea>
-        <imagetype name="parentallevel_background" from="base_parentallevel_background">
+        <imagetype name="videolevel_background" from="base_parentallevel_background">
             <position>1100,649</position>
         </imagetype>
-        <statetype name="parentallevel" from="base_parentallevel">
+        <statetype name="videolevel" from="base_parentallevel">
             <position>1100,649</position>
         </statetype>
     </window>
@@ -1707,10 +1707,10 @@
         <textarea name="length" from="season">
             <position>785,490</position>
         </textarea>
-        <imagetype name="parentallevel_background" from="base_parentallevel_background">
+        <imagetype name="videolevel_background" from="base_parentallevel_background">
             <position>785,525</position>
         </imagetype>
-        <statetype name="parentallevel" from="base_parentallevel">
+        <statetype name="videolevel" from="base_parentallevel">
             <position>785,525</position>
         </statetype>
 
