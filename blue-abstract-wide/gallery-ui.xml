@@ -303,33 +303,33 @@
             <area>160,170,960,410</area>
         </shape>
 
-        <textarea name="directory_label" from="base_textarea">
+        <textarea name="sgname_label" from="base_textarea">
             <area>180,190,540,40</area>
             <align>right,vcenter</align>
-            <value>Directory where the images are located:</value>
+            <value>Name of the storage group for the images:</value>
         </textarea>
-        <textarea name="directoryfilter_label" from="directory_label">
+        <textarea name="directoryfilter_label" from="sgname_label">
             <position>180,240</position>
             <value>Directories that should be hidden:</value>
         </textarea>
-        <textarea name="sortorder_label" from="directory_label">
+        <textarea name="sortorder_label" from="sgname_label">
             <position>180,290</position>
-            <value>Sorting order of the images in each directory:</value>
+            <value>Sorting order of the images that are shown:</value>
         </textarea>
-        <textarea name="slideshowtime_label" from="directory_label">
+        <textarea name="slideshowtime_label" from="sgname_label">
             <position>180,340</position>
-            <value>Time to display each image (ms):</value>
+            <value>Time to display each image during a slideshow (ms):</value>
         </textarea>
-        <textarea name="slideshowtype_label" from="directory_label">
+        <textarea name="slideshowtype_label" from="sgname_label">
             <position>180,390</position>
             <value>Transition used between pictures in slideshow mode:</value>
         </textarea>
-        <textarea name="slideshowtransitiontime_label" from="directory_label">
+        <textarea name="slideshowtransitiontime_label" from="sgname_label">
             <position>180,440</position>
             <value>Duration of an image transition (ms):</value>
         </textarea>
 
-        <textedit name="directory" from="base_textedit">
+        <textedit name="storagegroupname" from="base_textedit">
             <position>730,190</position>
         </textedit>
         <textedit name="directoryfilter" from="base_textedit">
