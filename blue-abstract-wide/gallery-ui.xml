@@ -314,17 +314,17 @@
         </textarea>
         <textarea name="sortorder_label" from="sgname_label">
             <position>180,290</position>
-            <value>Sorting order of the images that are shown:</value>
+            <value>Sorting order of the shown images:</value>
         </textarea>
         <textarea name="slideshowtime_label" from="sgname_label">
             <position>180,340</position>
             <value>Time to display each image during a slideshow (ms):</value>
         </textarea>
-        <textarea name="slideshowtype_label" from="sgname_label">
+        <textarea name="transitiontype_label" from="sgname_label">
             <position>180,390</position>
-            <value>Transition used between pictures in slideshow mode:</value>
+            <value>Type of transition between two images:</value>
         </textarea>
-        <textarea name="slideshowtransitiontime_label" from="sgname_label">
+        <textarea name="transitiontime_label" from="sgname_label">
             <position>180,440</position>
             <value>Duration of an image transition (ms):</value>
         </textarea>
@@ -341,10 +341,10 @@
         <spinbox name="slideshowtime" from="base_spinbox">
             <position>730,340</position>
         </spinbox>
-        <buttonlist name="slideshowtype" from="base_selector">
+        <buttonlist name="transitiontype" from="base_selector">
             <position>730,390</position>
         </buttonlist>
-        <spinbox name="slideshowtransitiontime" from="base_spinbox">
+        <spinbox name="transitiontime" from="base_spinbox">
             <position>730,440</position>
         </spinbox>
 
