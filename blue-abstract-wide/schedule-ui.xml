@@ -2491,21 +2491,17 @@
             <value>Transcode new recordings</value>
         </textarea>
         
-        <textarea name="userjob1label" from="base_textarea">
+        <textarea name="userjob1text" from="base_textarea">
             <area>350,430,300,30</area>
-            <value>Run User Job #1</value>
         </textarea>
-        <textarea name="userjob2label" from="base_textarea">
+        <textarea name="userjob2text" from="base_textarea">
             <area>350,470,300,30</area>
-            <value>Run User job #2</value>
         </textarea>
-        <textarea name="userjob3label" from="base_textarea">
+        <textarea name="userjob3text" from="base_textarea">
             <area>350,510,300,30</area>
-            <value>Run User Job #3</value>
         </textarea>
-        <textarea name="userjob4label" from="base_textarea">
+        <textarea name="userjob4text" from="base_textarea">
             <area>350,550,300,30</area>
-            <value>Run User Job #4</value>
         </textarea>
 
         <shape name="button_separator" from="base_separator_shape">
