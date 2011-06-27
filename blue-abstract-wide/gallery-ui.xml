@@ -375,36 +375,24 @@
             <filename>images/background.png</filename>
         </imagetype>
 
-        <!-- The heading (name) of the screen -->
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-            <value>Gallery Settings</value>
-            </textarea>
-        </textarea>
-
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <!-- the shape around the image -->
-        <shape name="selectedimage_shape" from="base_background_shape">
-            <area>25,55,1230,640</area>
+        <!-- the background behind the images -->
+        <shape name="background_shape" from="base_background_shape">
+            <area>0,0,1280,720</area>
             <fill color="#000000" alpha="255" />
+            <line color="#000000" alpha="255" />
         </shape>
 
         <!-- this is the image that shown in the foreground.
              when fading is enabled this image is faded out. -->
         <imagetype name="first_image">
-            <area>27,57,1226,636</area>
+            <area>0,0,1280,720</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
 
         <!-- this is the image that shown in the background
              when fading is enabled this image is faded in. -->
         <imagetype name="second_image">
-            <area>27,57,1226,636</area>
+            <area>0,0,1280,720</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
 
