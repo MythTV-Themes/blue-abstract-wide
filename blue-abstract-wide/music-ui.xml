@@ -921,7 +921,7 @@
         </progressbar>
 
         <textarea name="volume" from="base_textarea">
-            <area>390,375,500,40</area>
+            <area>390,365,500,40</area>
             <align>allcenter</align>
             <template>%VOLUMEPERCENT%</template>
         </textarea>
