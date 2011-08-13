@@ -21,107 +21,117 @@
         </textarea>
 
         <shape name="channel_background" from="base_background_shape">
-            <area>210,70,860,350</area>
+            <area>395,60,490,420</area>
         </shape>
 
-        <buttonlist name="channels" from="base_buttonlist_very_wide">
-            <area>230,90,820,317</area>
-            <buttonarea>0,0,825,315</buttonarea>
-            <spacing>-6</spacing>
+        <buttonlist name="channels" from="base_buttonlist_wide">
+            <area>415,80,450,388</area>
+            <buttonarea>0,0,450,380</buttonarea>
+            <spacing>4</spacing>
             <statetype name="buttonitem">
+
                 <state name="active">
+                    <imagetype name="buttonbackground" from="base_image_active">
+                        <filename>images/widgets/widget_inactive.png</filename>
+                        <area>0,0,450,60</area>
+                    </imagetype>
                     <shape name="channelicon_background" from="base_background_shape">
-                        <area>4,4,32,32</area>
+                        <area>3,4,87,52</area>
                     </shape>
                     <imagetype name="icon">
-                        <area>5,5,30,30</area>
+                        <area>4,5,85,50</area>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
                     <textarea name="channum" from="base_textarea">
-                        <area>50,0,50,40</area>
+                        <area>100,5,50,30</area>
                         <align>right,vcenter</align>
                         <cutdown>yes</cutdown>
                     </textarea>
                     <textarea name="name" from="base_textarea">
-                        <area>130,0,500,40</area>
-                        <align>left,vcenter</align>
+                        <area>170,5,260,30</area>
                         <cutdown>yes</cutdown>
                     </textarea>
                     <textarea name="sourcename" from="base_textarea">
-                        <area>650,0,160,40</area>
-                        <align>right,vcenter</align>
+                        <area>170,35,240,20</area>
+                        <align>left,vcenter</align>
+                        <font>text_very_small</font>
                         <cutdown>yes</cutdown>
                     </textarea>
                 </state>
-                <!-- menu entry has been selected and is active -->
+                <state name="inactive" from="active" />
                 <state name="selectedactive" from="active">
                     <imagetype name="buttonbackground" from="base_image_selectedactive">
                         <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,820,40</area>
+                        <area>0,0,450,60</area>
                     </imagetype>
                 </state>
-
-                <!-- menu entry has been selected and is inactive -->
                 <state name="selectedinactive" from="active">
                     <imagetype name="buttonbackground" from="base_image_selectedinactive">
                         <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,820,40</area>
+                        <area>0,0,450,60</area>
                     </imagetype>
                     <textarea name="buttontext">
                         <font>text_inactive</font>
                     </textarea>
                 </state>
             </statetype>
+
+            <statetype name="upscrollarrow">
+                <position>395,97%</position>
+            </statetype>
+            <statetype name="downscrollarrow">
+                <position>420,97%</position>
+            </statetype>
         </buttonlist>
 
+
         <shape name="channeloptions_background" from="base_background_shape">
-            <area>130,450,1020,240</area>
+            <area>135,505,1010,190</area>
         </shape>
 
         <textarea name="sort_label" from="base_textarea">
-            <area>150,470,400,40</area>
+            <area>100,520,220,40</area>
             <value>Sort Mode:</value>
             <align>right,vcenter</align>
         </textarea>
         <textarea name="source_label" from="base_textarea">
-            <area>150,515,400,40</area>
+            <area>100,570,220,40</area>
             <value>Video Source:</value>
             <align>right,vcenter</align>
         </textarea>
         <textarea name="nochannum_label" from="base_textarea">
-            <area>150,560,400,40</area>
+            <area>610,570,520,40</area>
             <value>Hide Channels without channel number.</value>
-            <align>right,vcenter</align>
         </textarea>
 
-        <buttonlist name="sorting" from="base_selector_wide">
-            <position>570,470</position>
+        <buttonlist name="sorting" from="base_selector">
+            <position>330,520</position>
         </buttonlist>
-        <buttonlist name="source" from="base_selector_wide">
-            <position>570,515</position>
+        <buttonlist name="source" from="base_selector">
+            <position>330,570</position>
         </buttonlist>
         <button name="delete" from="base_button">
-            <position>960,515</position>
+            <position>980,520</position>
             <value>Delete</value>
         </button>
         <checkbox name="nochannum" from="base_checkbox">
-            <position>570,565</position>
+            <position>570,575</position>
         </checkbox>
 
         <shape name="button_separator" from="base_separator_shape">
-            <area>150,610,980,1</area>
+            <area>150,625,980,1</area>
         </shape>
 
         <button name="scan" from="base_button_wide">
-            <position>150,630</position>
+            <position>150,640</position>
             <value>Channel Scan</value>
         </button>
         <button name="importicons" from="base_button_wide">
-            <position>490,630</position>
+            <position>490,640</position>
             <value>Icon Download</value>
         </button>
         <button name="edittransport" from="base_button_wide">
-            <position>830,630</position>
+            <position>830,640</position>
             <value>Edit Transports</value>
         </button>
 
