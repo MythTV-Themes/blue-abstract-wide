@@ -2385,6 +2385,67 @@
 
 
 
+    <!-- Shows the screen where the user can select the different
+        choices that the imdb or the other movie databases offers -->
+    <window name="MythMetadataResults">
+
+        <shape name="darken_background" from="base_darken_background"/>
+
+        <shape name="metadata_selection_background" from="base_background_shape_dark">
+            <area>295,100,690,475</area>
+        </shape>
+
+        <imagetype name="title_background" from="base_popup_background">
+            <area>315,120,650,70</area>
+        </imagetype>
+        <textarea name="title" from="base_textarea">
+            <area>335,120,610,70</area>
+            <value>Metadata Search Results</value>
+            <align>allcenter</align>
+        </textarea>
+
+        <buttonlist name="results" from="base_buttonlist_wide">
+            <area>315,205,650,356</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,5,350,30</area>
+                        <cutdown>yes</cutdown>
+                    </textarea>
+                    <textarea name="year" from="base_textarea">
+                        <area>380,5,260,30</area>
+                        <align>right,vcenter</align>
+                        <template>Released %1</template>
+                    </textarea>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+        </buttonlist>
+    </window>
+
+
+
+
+
+
+    <!-- Shows the screen where the user can select the different
+         artwork choices that the search has returned -->
+    <!--<window name="MythArtworkResults">-->
+
+
+
+
+
 
     <!-- Popup search dialog used to search button lists -->
     <window name="MythSearchListDialog">
