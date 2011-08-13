@@ -56,7 +56,7 @@
                         <align>left,vcenter</align>
                         <cutdown>yes</cutdown>
                     </textarea>
-                    <textarea name="shortdate" from="base_textarea">
+                    <textarea name="shortstartdate" from="base_textarea">
                         <area>520,5,110,30</area>
                         <align>right,vcenter</align>
                     </textarea>
