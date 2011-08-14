@@ -488,42 +488,22 @@
 
         <textarea name="title" from="base_textarea">
             <area>255,484,580,30</area>
-            <multiline>no</multiline>
-            <font>title</font>
-            <align>left</align>
-            <cutdown>yes</cutdown>
         </textarea>
 
-        <textarea name="album" from="base_textarea">
+        <textarea name="album" from="title">
             <area>255,520,580,30</area>
-            <multiline>no</multiline>
-            <font>text_small</font>
-            <align>left,vcenter</align>
-            <cutdown>yes</cutdown>
         </textarea>
 
-        <textarea name="artist" from="base_textarea">
+        <textarea name="artist" from="title">
             <area>255,560,580,30</area>
-            <multiline>no</multiline>
-            <font>text_small</font>
-            <align>left,vcenter</align>
-            <cutdown>yes</cutdown>
         </textarea>
 
-        <textarea name="time" from="base_textarea">
+        <textarea name="time" from="title">
             <area>255,600,580,30</area>
-            <multiline>no</multiline>
-            <font>text_small</font>
-            <align>left,vcenter</align>
-            <cutdown>yes</cutdown>
         </textarea>
 
-        <textarea name="info" from="base_textarea">
+        <textarea name="info" from="title">
             <area>255,640,580,30</area>
-            <multiline>no</multiline>
-            <font>text_small</font>
-            <align>left,vcenter</align>
-            <cutdown>yes</cutdown>
         </textarea>
 
         <progressbar name="progress" from="base_progressbar">
@@ -1199,7 +1179,9 @@
 
 
 
-
+    <!-- Screen that shows the available internet streams.
+         This is required by the mythstream plugin only.
+         (NOT TESTED) -->
     <window name="stream_manager">
 
         <imagetype name="background" from="base_background"/>
