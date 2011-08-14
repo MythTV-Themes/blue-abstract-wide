@@ -2011,7 +2011,7 @@
         </textarea>
 
         <textarea name="descriptionlabel" from="base_textarea">
-            <area>310,423,270,30</area>
+            <area>310,423,280,30</area>
             <value>Tables:</value>
             <align>right,vcenter</align>
         </textarea>
@@ -2020,7 +2020,7 @@
         </textedit>
 
         <textarea name="subtitlelabel" from="base_textarea">
-            <area>310,467,270,30</area>
+            <area>310,467,280,30</area>
             <value>Additional Tables:</value>
             <align>right,vcenter</align>
         </textarea>
