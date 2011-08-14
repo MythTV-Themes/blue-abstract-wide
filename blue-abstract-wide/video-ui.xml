@@ -1127,7 +1127,6 @@
         </buttontree>
 
 
-        <!-- ================================================================== -->
         <!-- this is the background for the information at the bottom -->
         <shape name="video_details_background" from="base_background_shape">
             <area>25,465,1230,230</area>
