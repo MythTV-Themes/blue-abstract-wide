@@ -1230,6 +1230,149 @@
             <position>650,600</position>
             <value>Exit</value>
         </button>
+
+    </window>
+
+
+
+
+
+
+    <!-- Shows the details of a song including coverart -->
+    <window name="trackdetail_popup">
+
+        <imagetype name="background" from="base_background" />
+
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Track Details</value>
+            </textarea>
+        </textarea>
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- this is the background around the covers  -->
+        <shape name="coverart_background" from="base_background_shape">
+            <area>100,130,450,450</area>
+        </shape>
+
+        <shape name="coverart_shape" from="base_background_shape">
+            <area>120,150,410,410</area>
+        </shape>
+        <imagetype name="coverart">
+            <area>123,153,404,404</area>
+            <filename />
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
+        <!-- this is the background around the video details -->
+        <shape name="trackdetails_background" from="base_background_shape">
+            <area>570,130,610,450</area>
+        </shape>
+
+        <!-- separates the title, album and artist information from the rest -->
+        <shape name="title_separator" from="base_separator_shape">
+            <area>590,255,570,1</area>
+        </shape>
+
+        <!-- separates the filename from the rest -->
+        <shape name="filename_separator" from="base_separator_shape">
+            <area>590,480,570,1</area>
+        </shape>
+
+        <textarea name="title_label" from="base_textarea">
+            <area>590,145,160,30</area>
+            <value>Title:</value>
+            <align>right,vcenter</align>
+        </textarea>
+        <textarea name="artist_label" from="title_label">
+            <position>590,180</position>
+            <value>Artist:</value>
+        </textarea>
+        <textarea name="album_label" from="title_label">
+            <position>590,215</position>
+            <value>Album:</value>
+        </textarea>
+        <textarea name="genre_label" from="title_label">
+            <position>590,265</position>
+            <value>Genre:</value>
+        </textarea>
+        <textarea name="tracknum_label" from="title_label">
+            <position>590,300</position>
+            <value>Track No.:</value>
+        </textarea>
+        <textarea name="length_label" from="title_label">
+            <position>840,300</position>
+            <value>Length:</value>
+        </textarea>
+        <textarea name="year_label" from="title_label">
+            <position>590,335</position>
+            <value>Year:</value>
+        </textarea>
+        <textarea name="playcount_label" from="title_label">
+            <position>590,370</position>
+            <value>Played:</value>
+        </textarea>
+        <textarea name="lastplayed_label" from="title_label">
+            <position>590,405</position>
+            <value>Last Played:</value>
+        </textarea>
+        <textarea name="rating_label" from="title_label">
+            <position>590,440</position>
+            <value>Rating:</value>
+        </textarea>
+        <textarea name="filename_label" from="title_label">
+            <position>590,490</position>
+            <value>Filename:</value>
+        </textarea>
+
+        <textarea name="title" from="base_textarea">
+            <area>760,145,450,30</area>
+            <cutdown>yes</cutdown>
+        </textarea>
+        <textarea name="artist" from="title">
+            <position>760,180</position>
+        </textarea>
+        <textarea name="album" from="title">
+            <position>760,215</position>
+        </textarea>
+        <textarea name="genre" from="title">
+            <position>760,265</position>
+        </textarea>
+        <textarea name="tracknum" from="title">
+            <position>760,300</position>
+        </textarea>
+        <textarea name="length" from="title">
+            <position>1030,300</position>
+        </textarea>
+        <textarea name="year" from="title">
+            <position>760,335</position>
+        </textarea>
+        <textarea name="playcount" from="title">
+            <position>760,370</position>
+            <template>%playcount% times</template>
+        </textarea>
+        <textarea name="lastplayed" from="title">
+            <position>760,405</position>
+            <value>Last Value</value>
+        </textarea>
+
+        <imagetype name="userratingstate_background" from="base_rating_background">
+            <position>760,447</position>
+        </imagetype>
+        <statetype name="rating_state" from="base_rating">
+            <position>760,447</position>
+        </statetype>
+
+        <textarea name="filename" from="base_textarea">
+            <area>760,495,400,90</area>
+            <align>left,top</align>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+        </textarea>
+
     </window>
 
 </mythuitheme>
