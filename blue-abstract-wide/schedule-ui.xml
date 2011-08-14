@@ -1154,12 +1154,6 @@
             <position>1040,0</position>
         </textarea>
 
-
-
-
-
-
-
         <shape name="program_details_background" from="base_background_shape">
             <area>25,60,1230,234</area>
         </shape>
@@ -1779,13 +1773,13 @@
         </textarea>-->
         <textarea name="lastrecordedlabel" from="base_textarea">
             <area>770,42,290,30</area>
-            <font>text_small</font>
+            <font>text_very_small</font>
             <value>Last Recorded</value>
             <align>right,vcenter</align>
         </textarea>
         <textarea name="prioritylabel" from="base_textarea">
             <area>1130,42,95,30</area>
-            <font>text_small</font>
+            <font>text_very_small</font>
             <value>Priority</value>
             <align>right,vcenter</align>
         </textarea>
@@ -1976,7 +1970,7 @@
         </textarea>
 
         <shape name="customedit_background" from="base_background_shape">
-            <area>285,160,710,462</area>
+            <area>285,160,710,442</area>
         </shape>
 
         <textarea name="ruleslabel" from="base_textarea">
@@ -2000,62 +1994,58 @@
             <position>600,224</position>
         </textedit>
 
-        <shape name="rules_separator" from="base_separator_shape">
-            <area>305,284,670,1</area>
-        </shape>
-
         <buttonlist name="clauses" from="base_selector_very_wide">
-            <position>305,304</position>
+            <position>305,268</position>
             <wrapstyle>items</wrapstyle>
         </buttonlist>
+
+        <shape name="numvideos_background" from="base_background_shape">
+            <area>305,328,670,70</area>
+        </shape>
         <textarea name="clausetext" from="base_textarea">
-            <area>305,358,660,55</area>
-            <align>left,top</align>
+            <area>325,328,630,70</area>
+            <align>allcenter</align>
             <font>text_small</font>
             <cutdown>yes</cutdown>
             <multiline>yes</multiline>
         </textarea>
 
-        <shape name="clause_separator" from="base_separator_shape">
-            <area>305,418,670,1</area>
-        </shape>
-
         <textarea name="descriptionlabel" from="base_textarea">
-            <area>310,443,190,30</area>
+            <area>310,423,270,30</area>
             <value>Tables:</value>
             <align>right,vcenter</align>
         </textarea>
         <textedit name="description" from="base_textedit">
-            <position>600,438</position>
+            <position>600,418</position>
         </textedit>
 
         <textarea name="subtitlelabel" from="base_textarea">
-            <area>310,487,190,30</area>
+            <area>310,467,270,30</area>
             <value>Additional Tables:</value>
             <align>right,vcenter</align>
         </textarea>
         <textedit name="subtitle" from="base_textedit">
-            <position>600,482</position>
+            <position>600,462</position>
         </textedit>
 
         <shape name="button_separator" from="base_separator_shape">
-            <area>305,542,670,1</area>
+            <area>305,522,670,1</area>
         </shape>
 
         <button name="test" from="base_button">
-            <position>310,562</position>
+            <position>310,542</position>
             <value>Test</value>
         </button>
         <button name="record" from="base_button">
-            <position>480,562</position>
+            <position>480,542</position>
             <value>Record</value>
         </button>
         <button name="store" from="base_button">
-            <position>650,562</position>
+            <position>650,542</position>
             <value>Store</value>
         </button>
         <button name="cancel" from="base_button">
-            <position>820,562</position>
+            <position>820,542</position>
             <value>Cancel</value>
         </button>
 
@@ -2084,7 +2074,7 @@
         </textarea>
 
         <shape name="schedule_editor_background" from="base_background_shape">
-            <area>25,60,1230,234</area>
+            <area>25,60,1230,195</area>
         </shape>
 
         <textarea name="title" from="base_textarea">
@@ -2113,7 +2103,7 @@
 
         <!-- show the plot of the recording -->
         <textarea name="description" from="base_textarea">
-            <area>45,172,1190,110</area>
+            <area>45,172,1190,75</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>left,top</align>
@@ -2122,42 +2112,47 @@
         </textarea>
 
         <shape name="schedule_button_background" from="base_background_shape">
-            <area>285,317,710,380</area>
+            <area>285,281,710,413</area>
         </shape>
 
         <!-- the buttons for the different options -->
         <buttonlist name="rules" from="base_selector_very_wide">
-            <position>305,337</position>
+            <position>305,301</position>
             <helptext>Select the recording rule</helptext>
         </buttonlist>
         <button name="schedoptions" from="base_button_wide">
-            <position>490,381</position>
+            <position>490,345</position>
             <value>Schedule Options</value>
             <helptext></helptext>
         </button>
         <button name="storeoptions" from="base_button_wide">
-            <position>490,425</position>
+            <position>490,389</position>
             <value>Storage Options</value>
             <helptext></helptext>
         </button>
         <button name="postprocessing" from="base_button_wide">
-            <position>490,469</position>
+            <position>490,433</position>
             <value>Post Processing</value>
             <helptext></helptext>
         </button>
         <button name="schedinfo" from="base_button_wide">
-            <position>490,513</position>
+            <position>490,477</position>
             <value>Schedule Info</value>
             <helptext></helptext>
         </button>
         <button name="preview" from="base_button_wide">
-            <position>490,557</position>
+            <position>490,521</position>
             <value>Preview</value>
+            <helptext></helptext>
+        </button>
+        <button name="metadata" from="base_button_wide">
+            <position>490,565</position>
+            <value>Metadata Options</value>
             <helptext></helptext>
         </button>
 
         <shape name="button_separator" from="base_separator_shape">
-            <area>305,616,670,1</area>
+            <area>305,620,670,1</area>
         </shape>
 
         <button name="save" from="base_button">
@@ -2281,6 +2276,80 @@
         <shape name="button_separator" from="base_separator_shape">
             <area>305,615,670,1</area>
         </shape>
+
+        <button name="back" from="base_button">
+            <position>565,635</position>
+            <value>Back</value>
+        </button>
+    </window>
+
+
+
+
+
+
+    <!-- The Schedule Filter Options screen.
+        Shows the schedule filter options for the currently scheduled recording. -->
+    <window name="schedulefiltereditor">
+
+        <imagetype name="background" from="base_background"/>
+
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Schedule Filter</value>
+            </textarea>
+        </textarea>
+
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="schedule_filtereditor_background" from="base_background_shape">
+            <area>25,60,1230,195</area>
+        </shape>
+
+        <textarea name="title" from="base_textarea">
+            <area>45,80,980,30</area>
+            <font>title</font>
+        </textarea>
+        <textarea name="subtitle" from="base_textarea">
+            <area>45,120,880,20</area>
+            <font>text_small</font>
+        </textarea>
+        <textarea name="channel" from="base_textarea">
+            <area>1035,80,200,20</area>
+            <font>text_small</font>
+            <align>right,vcenter</align>
+        </textarea>
+        <textarea name="timedate" from="base_textarea">
+            <area>935,120,300,20</area>
+            <cutdown>yes</cutdown>
+            <font>text_small</font>
+            <align>right,vcenter</align>
+        </textarea>
+
+        <shape name="title_separator" from="base_separator_shape">
+            <area>45,155,1190,1</area>
+        </shape>
+
+        <!-- show the plot of the recording -->
+        <textarea name="description" from="base_textarea">
+            <area>45,172,1190,75</area>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <align>left,top</align>
+            <font>text_small</font>
+            <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
+        </textarea>
+
+        <shape name="schedule_button_background" from="base_background_shape">
+            <area>285,281,710,414</area>
+        </shape>
+
+        <buttonlist name="filters" from="base_buttonlist">
+            <area>305,301,350,300</area>
+        </buttonlist>
 
         <button name="back" from="base_button">
             <position>565,635</position>
@@ -2642,6 +2711,130 @@
             <template>%"|SUBTITLE|"\n%%YEARSTARS| %%DESCRIPTION%</template>
         </textarea>
 
+    </window>
+
+
+
+
+
+    <!-- Allows the user to download fanart, coverart
+         by specifying an IMDB number -->
+    <window name="metadataoptions">
+
+        <imagetype name="background" from="base_background"/>
+
+        <!-- The heading (name) of the screen -->
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+            <value>Metadata Options</value>
+            </textarea>
+        </textarea>
+
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="metadataoptions_background" from="base_background_shape">
+            <area>285,70,710,95</area>
+        </shape>
+
+        <textarea name="title" from="base_textarea">
+            <area>305,85,580,30</area>
+            <font>title</font>
+        </textarea>
+        <textarea name="subtitle" from="base_textarea">
+            <area>305,130,580,20</area>
+            <font>text_small</font>
+        </textarea>
+        <textarea name="channel" from="base_textarea">
+            <area>775,90,200,20</area>
+            <font>text_small</font>
+            <align>right,vcenter</align>
+        </textarea>
+        <textarea name="timedate" from="base_textarea">
+            <area>675,130,300,20</area>
+            <cutdown>yes</cutdown>
+            <font>text_small</font>
+            <align>right,vcenter</align>
+        </textarea>
+
+        <shape name="metadata_button_background" from="base_background_shape">
+            <area>285,191,710,503</area>
+        </shape>
+
+        <!-- the buttons for the different options -->
+        <textarea name="inet" from="base_textarea">
+            <area>300,213,180,40</area>
+            <align>right,vcenter</align>
+            <value>TMDB/TVDB #:</value>
+        </textarea>
+        <textedit name="inetref_edit" from="base_textedit">
+            <position>490,213</position>
+        </textedit>
+
+        <textarea name="season_spinbox_label" from="base_textarea">
+            <area>370,257,110,40</area>
+            <align>right,vcenter</align>
+            <value>Season:</value>
+        </textarea>
+        <spinbox name="season_spinbox" from="base_spinbox">
+            <position>490,257</position>
+        </spinbox>
+
+        <textarea name="episode_spinbox_label" from="base_textarea">
+            <area>600,257,110,40</area>
+            <align>right,vcenter</align>
+            <value>Episode:</value>
+        </textarea>
+        <spinbox name="episode_spinbox" from="base_spinbox">
+            <position>720,257</position>
+        </spinbox>
+
+        <button name="query_button" from="base_button_wide">
+            <position>490,301</position>
+            <value>Perform Query</value>
+            <helptext></helptext>
+        </button>
+        <button name="online_coverart_button" from="base_button_wide">
+            <position>490,345</position>
+            <value>Find Online Coverart</value>
+            <helptext></helptext>
+        </button>
+        <button name="online_fanart_button" from="base_button_wide">
+            <position>490,389</position>
+            <value>Find Online Fanart</value>
+            <helptext></helptext>
+        </button>
+        <button name="online_banner_button" from="base_button_wide">
+            <position>490,433</position>
+            <value>Find Online Banners</value>
+            <helptext></helptext>
+        </button>
+        <button name="local_coverart_button" from="base_button_wide">
+            <position>490,477</position>
+            <value>Find Local Coverart</value>
+            <helptext></helptext>
+        </button>
+        <button name="local_fanart_button" from="base_button_wide">
+            <position>490,521</position>
+            <value>Find Local Fanart</value>
+            <helptext></helptext>
+        </button>
+        <button name="local_banner_button" from="base_button_wide">
+            <position>490,565</position>
+            <value>Find Local Banners</value>
+            <helptext></helptext>
+        </button>
+
+        <shape name="button_separator" from="base_separator_shape">
+            <area>305,620,670,1</area>
+        </shape>
+
+        <button name="back" from="base_button">
+            <position>565,636</position>
+            <value>Back</value>
+        </button>
     </window>
 
 </mythuitheme>
