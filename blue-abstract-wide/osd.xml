@@ -2,6 +2,12 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
+    <!-- shows some debug information on the screen -->
+    <!--<window name="osd_debug">-->
+
+
+
+
 
     <!-- shows a message on the screen -->
     <window name="osd_message">
