@@ -105,6 +105,18 @@
                         <cutdown>yes</cutdown>
                     </textarea>-->
 
+                    <statetype name="nodestate">
+                        <position>0,0</position>
+                        <state name="hidden">
+                            <shape name="hidden_background_shape" from="base_background_shape_dark">
+                                <area>1,1,162,122</area>
+                                <line color="#000000" alpha="0" width="1" />
+                            </shape>
+                        </state>
+                        <state name="visible">
+                        </state>
+                    </statetype>
+
                     <!-- show a folder above the image if its a folder and not an image.
                         the node is a folder and it is currently not selected -->
                     <statetype name="nodetype">
@@ -197,6 +209,18 @@
                         <align>allcenter</align>
                         <cutdown>yes</cutdown>
                     </textarea>-->
+
+                    <statetype name="nodestate">
+                        <position>0,0</position>
+                        <state name="hidden">
+                            <shape name="hidden_background_shape" from="base_background_shape_dark">
+                                <area>1,1,237,178</area>
+                                <line color="#000000" alpha="0" width="1" />
+                            </shape>
+                        </state>
+                        <state name="visible">
+                        </state>
+                    </statetype>
 
                     <!-- show a folder above the image if its a folder and not an image.
                         the node is a folder and it is currently not selected -->
@@ -385,64 +409,57 @@
 
         <!-- the shape where the imagelist is displayed -->
         <shape name="galleryconfig_background" from="base_background_shape">
-            <area>160,170,960,410</area>
+            <area>160,190,960,360</area>
         </shape>
 
         <textarea name="sgname_label" from="base_textarea">
-            <area>180,190,540,40</area>
+            <area>180,210,540,40</area>
             <align>right,vcenter</align>
             <value>Name of the storage group for the images:</value>
         </textarea>
-        <textarea name="directoryfilter_label" from="sgname_label">
-            <position>180,240</position>
-            <value>Directories that should be hidden:</value>
-        </textarea>
         <textarea name="sortorder_label" from="sgname_label">
-            <position>180,290</position>
+            <position>180,260</position>
             <value>Sorting order of the shown images:</value>
         </textarea>
         <textarea name="slideshowtime_label" from="sgname_label">
-            <position>180,340</position>
+            <position>180,310</position>
             <value>Time to display each image during a slideshow (ms):</value>
         </textarea>
         <textarea name="transitiontype_label" from="sgname_label">
-            <position>180,390</position>
+            <position>180,360</position>
             <value>Type of transition between two images:</value>
         </textarea>
         <textarea name="transitiontime_label" from="sgname_label">
-            <position>180,440</position>
+            <position>180,410</position>
             <value>Duration of an image transition (ms):</value>
         </textarea>
 
         <textedit name="storagegroupname" from="base_textedit">
-            <position>730,190</position>
-        </textedit>
-        <textedit name="directoryfilter" from="base_textedit">
-            <position>730,240</position>
+            <position>730,210</position>
         </textedit>
         <buttonlist name="sortorder" from="base_selector_wide">
-            <position>730,290</position>
+            <position>730,260</position>
         </buttonlist>
         <spinbox name="slideshowtime" from="base_spinbox">
-            <position>730,340</position>
+            <position>730,310</position>
         </spinbox>
         <buttonlist name="transitiontype" from="base_selector">
-            <position>730,390</position>
+            <position>730,360</position>
         </buttonlist>
         <spinbox name="transitiontime" from="base_spinbox">
-            <position>730,440</position>
+            <position>730,410</position>
         </spinbox>
 
         <shape name="description_separator" from="base_separator_shape">
-            <area>180,500,920,1</area>
+            <area>180,470,920,1</area>
         </shape>
 
         <button name="save" from="base_button">
-            <position>510,520</position>
+            <position>510,490</position>
             <value>Save</value>
         </button>
         <button name="cancel" from="base_button">
-            <position>680,520</position>
+            <position>680,490</position>
             <value>Cancel</value>
         </button>
 
