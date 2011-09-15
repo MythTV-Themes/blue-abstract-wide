@@ -507,4 +507,82 @@
 
     </window>
 
+
+
+
+
+
+    <!-- Show the details of the selected image.
+         This is currently used by the MythImage plugin only -->
+    <window name="details">
+
+        <!-- the background image -->
+        <imagetype name="background" from="base_background"/>
+
+        <!-- this is the image that shown in the background -->
+        <imagetype name="image">
+            <area>0,0,1280,720</area>
+            <preserveaspect>yes</preserveaspect>
+        </imagetype>
+
+        <!-- The heading (name) of the screen -->
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+            <value>Image Details</value>
+            </textarea>
+        </textarea>
+
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- the shape where the imagelist is displayed -->
+        <shape name="gallerydetails_background" from="base_background_shape">
+            <area>160,170,960,410</area>
+        </shape>
+
+
+        <textarea name="filename_label" from="base_textarea">
+            <area>180,190,440,40</area>
+            <align>right,vcenter</align>
+            <value>Filename:</value>
+        </textarea>
+        <textarea name="directory_label" from="filename_label">
+            <position>180,240</position>
+            <value>Directory:</value>
+        </textarea>
+        <textarea name="size_label" from="filename_label">
+            <position>180,290</position>
+            <value>Size (Bytes):</value>
+        </textarea>
+        <textarea name="modtime_label" from="filename_label">
+            <position>180,340</position>
+            <value>Modification Time:</value>
+        </textarea>
+
+        <textarea name="filename" from="base_textarea">
+            <area>630,190,540,40</area>
+            <align>left,vcenter</align>
+        </textarea>
+        <textarea name="directory" from="filename">
+            <position>630,240</position>
+        </textarea>
+        <textarea name="size" from="filename">
+            <position>630,290</position>
+        </textarea>
+        <textarea name="modtime" from="filename">
+            <position>630,340</position>
+        </textarea>
+
+
+
+        <button name="close" from="base_button">
+            <position>680,520</position>
+            <value>Close</value>
+        </button>
+
+    </window>
+
 </mythuitheme>
