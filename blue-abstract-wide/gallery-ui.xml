@@ -516,15 +516,6 @@
          This is currently used by the MythImage plugin only -->
     <window name="details">
 
-        <!-- the background image -->
-        <imagetype name="background" from="base_background"/>
-
-        <!-- this is the image that shown in the background -->
-        <imagetype name="image">
-            <area>0,0,1280,720</area>
-            <preserveaspect>yes</preserveaspect>
-        </imagetype>
-
         <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
@@ -557,9 +548,33 @@
             <position>180,290</position>
             <value>Size (Bytes):</value>
         </textarea>
-        <textarea name="modtime_label" from="filename_label">
+        <textarea name="modified_label" from="filename_label">
             <position>180,340</position>
             <value>Modification Time:</value>
+        </textarea>
+        <textarea name="created_label" from="filename_label">
+            <position>180,390</position>
+            <value>Creation Time:</value>
+        </textarea>
+        <textarea name="height_label" from="filename_label">
+            <position>180,440</position>
+            <value>Image Height:</value>
+        </textarea>
+        <textarea name="width_label" from="filename_label">
+            <position>180,490</position>
+            <value>Image Width:</value>
+        </textarea>
+        <textarea name="pixelcount_label" from="filename_label">
+            <position>180,540</position>
+            <value>Pixel Count:</value>
+        </textarea>
+        <textarea name="comment_label" from="filename_label">
+            <position>180,590</position>
+            <value>User Comment:</value>
+        </textarea>
+        <textarea name="description_label" from="filename_label">
+            <position>180,640</position>
+            <value>Image Description:</value>
         </textarea>
 
         <textarea name="filename" from="base_textarea">
@@ -572,10 +587,27 @@
         <textarea name="size" from="filename">
             <position>630,290</position>
         </textarea>
-        <textarea name="modtime" from="filename">
+        <textarea name="modified" from="filename">
             <position>630,340</position>
         </textarea>
-
+        <textarea name="created" from="filename">
+            <position>630,390</position>
+        </textarea>
+        <textarea name="height" from="filename">
+            <position>630,440</position>
+        </textarea>
+        <textarea name="width" from="filename">
+            <position>630,490</position>
+        </textarea>
+        <textarea name="pixelcount" from="filename">
+            <position>630,540</position>
+        </textarea>
+        <textarea name="comment" from="filename">
+            <position>630,590</position>
+        </textarea>
+        <textarea name="description" from="filename">
+            <position>630,640</position>
+        </textarea>
 
 
         <button name="close" from="base_button">
