@@ -4,6 +4,151 @@
 
     <!-- shows some debug information on the screen -->
     <!--<window name="osd_debug">-->
+    <window name="osd_debug">
+        
+        <!-- The clock that is shown at the top right of each screen -->
+        <shape name="clock_background">
+            <area>1040,-4,244,36</area>
+            <type>roundbox</type>
+            <fill color="#000000" alpha="130" />
+            <line color="#AAAAAA" alpha="150" width="1" />
+            <cornerradius>2</cornerradius>
+        </shape>
+        <clock name="text">
+            <area>1040,0,244,30</area>
+            <font>text</font>
+            <template>%DATE%, %TIME%</template>
+            <align>allcenter</align>
+        </clock>
+
+        <!-- the background image of the popup dialog box -->
+        <shape name="background">
+            <area>140,60,1000,330</area>
+            <type>roundbox</type>
+            <fill color="#000000" alpha="130" />
+            <line color="#AAAAAA" alpha="150" width="1" />
+            <cornerradius>2</cornerradius>
+        </shape>
+        
+        <textarea name="filename_label" from="base_textarea">
+            <area>160,75,210,40</area>
+            <align>right,vcenter</align>
+            <value>Filename :</value>
+        </textarea>
+        <textarea name="filename" from="base_textarea">
+            <area>380,75,750,40</area>
+            <cutdown>yes</cutdown>
+            <align>left,vcenter</align>
+        </textarea>
+        
+        <!-- separates the filename from the other information -->
+        <shape name="filename_separator">
+            <area>160,125,960,1</area>
+            <type>box</type>
+            <line color="#AAAAAA" alpha="150" width="1" />
+        </shape>
+        
+        <!-- First column with information -->
+        <textarea name="storagerate_label" from="base_textarea">
+            <area>160,140,210,40</area>
+            <align>right,vcenter</align>
+            <value>Storage to Buffer :</value>
+        </textarea>
+        <textarea name="decoderrate_label" from="storagerate_label">
+            <position>160,180</position>
+            <value>Buffer to Decoder :</value>
+        </textarea>
+        <textarea name="bufferavail_label" from="storagerate_label">
+            <position>160,220</position>
+            <value>Available Buffer :</value>
+        </textarea>
+        <textarea name="videowidth_label" from="storagerate_label">
+            <position>160,260</position>
+            <value>Video :</value>
+        </textarea>
+        <textarea name="videocodec_label" from="storagerate_label">
+            <position>160,300</position>
+            <value>Codec/Dec :</value>
+        </textarea>
+        <textarea name="load_label" from="storagerate_label">
+            <position>160,340</position>
+            <value>CPUs :</value>
+        </textarea>
+        
+        <textarea name="storagerate" from="base_textarea">
+            <area>380,140,240,40</area>
+            <cutdown>yes</cutdown>
+            <align>left,vcenter</align>
+        </textarea>
+        <textarea name="decoderrate" from="storagerate">
+            <position>380,180</position>
+        </textarea>
+        <textarea name="bufferavail" from="storagerate">
+            <position>380,220</position>
+            <template>%BUFFERAVAIL% of %BUFFERSIZE%Mb</template>
+        </textarea>
+        <textarea name="videowidth" from="storagerate">
+            <position>380,260</position>
+            <template>%VIDEOWIDTH%x%VIDEOHEIGHT%@%VIDEOFRAMERATE%fps</template>
+        </textarea>
+        <textarea name="videocodec" from="storagerate">
+            <position>380,300</position>
+            <template>%VIDEOCODEC% %VIDEODECODER%</template>
+        </textarea>
+        <textarea name="load" from="storagerate">
+            <position>380,340</position>
+        </textarea>
+
+        <!-- Second column with information -->
+        <textarea name="framerate_label" from="base_textarea">
+            <area>640,140,260,40</area>
+            <align>right,vcenter</align>
+            <value>FPS :</value>
+        </textarea>
+        <textarea name="avsync_label" from="framerate_label">
+            <position>640,180</position>
+            <value>A/V Sync :</value>
+        </textarea>
+        <textarea name="videoframes_label" from="framerate_label">
+            <position>640,220</position>
+            <value>Frames decoded/free :</value>
+        </textarea>
+        <textarea name="audiocodec_label" from="framerate_label">
+            <position>640,260</position>
+            <value>Audio :</value>
+        </textarea>
+        <textarea name="audiochannels_label" from="framerate_label">
+            <position>640,300</position>
+            <value>Channels :</value>
+        </textarea>
+        <textarea name="samplerate_label" from="framerate_label">
+            <position>640,340</position>
+            <value>Sample rate :</value>
+        </textarea>
+
+        <textarea name="framerate" from="base_textarea">
+            <area>910,140,190,40</area>
+            <cutdown>yes</cutdown>
+            <align>left,vcenter</align>
+        </textarea>
+        <textarea name="avsync" from="framerate">
+            <position>910,180</position>
+        </textarea>
+        <textarea name="videoframes" from="framerate">
+            <position>910,220</position>
+        </textarea>
+        <textarea name="audiocodec" from="framerate">
+            <position>910,260</position>
+        </textarea>
+        <textarea name="audiochannels" from="framerate">
+            <position>910,300</position>
+        </textarea>
+        <textarea name="samplerate" from="framerate">
+            <position>910,340</position>
+        </textarea>
+
+    </window>
+
 
 
 
