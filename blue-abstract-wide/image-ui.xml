@@ -483,7 +483,7 @@
 
         <!-- the background behind the images (black) -->
         <shape name="background_shape" from="base_background_shape">
-            <area>0,0,1280,720</area>
+            <area>-2,-2,1284,724</area>
             <fill color="#000000" alpha="255" />
             <line color="#000000" alpha="255" />
         </shape>
@@ -491,14 +491,14 @@
         <!-- this is the image that shown in the foreground.
              when fading is enabled this image is faded out. -->
         <imagetype name="first_image">
-            <area>0,0,1280,720</area>
+            <area>-2,-2,1284,724</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
 
         <!-- this is the image that shown in the background
              when fading is enabled this image is faded in. -->
         <imagetype name="second_image">
-            <area>0,0,1280,720</area>
+            <area>-2,-2,1284,724</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
 
