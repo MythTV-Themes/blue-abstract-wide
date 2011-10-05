@@ -2035,7 +2035,7 @@
         </textarea>
 
         <!-- this is the background around the file browser -->
-        <shape name="filebrowser_background" from="base_background_shape_dark">
+        <shape name="filebrowser_background" from="base_background_shape">
             <area>80,80,1120,600</area>
         </shape>
 
