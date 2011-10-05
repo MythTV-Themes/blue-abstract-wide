@@ -372,55 +372,62 @@
         </textarea>
 
         <shape name="grabbersettings_background" from="base_background_shape">
-            <area>280,195,720,385</area>
+            <area>180,165,920,435</area>
         </shape>
         
         <textarea name="moviegrabber_text" from="base_textarea">
-            <area>300,220,295,30</area>
+            <area>200,190,485,30</area>
             <align>right,vcenter</align>
             <value>Movie Metadata Source:</value>
         </textarea>
         
-        <textarea name="tvgrabber_text" from="base_textarea">
-            <area>300,270,295,30</area>
-            <align>right,vcenter</align>
+        <textarea name="tvgrabber_text" from="moviegrabber_text">
+            <position>200,240</position>
             <value>Television Metadata Source:</value>
         </textarea>
         
-        <textarea name="gamegrabber_text" from="base_textarea">
-            <area>300,320,295,30</area>
-            <align>right,vcenter</align>
+        <textarea name="gamegrabber_text" from="moviegrabber_text">
+            <position>200,290</position>
             <value>Game Metadata Source:</value>
         </textarea>
 
+        <textarea name="dailyupdates_text" from="moviegrabber_text">
+            <position>200,340</position>
+            <value>Perform daily updates of recording artwork</value>
+        </textarea>
+
         <buttonlist name="moviegrabber" from="base_selector_wide">
-            <position>605,215</position>
+            <position>705,185</position>
         </buttonlist>
         
         <buttonlist name="tvgrabber" from="base_selector_wide">
-            <position>605,265</position>
+            <position>705,235</position>
         </buttonlist>
         
         <buttonlist name="gamegrabber" from="base_selector_wide">
-            <position>605,315</position>
+            <position>705,285</position>
         </buttonlist>
   
+        <checkbox name="dailyupdates" from="base_checkbox">
+            <position>705,340</position>
+        </checkbox>
+  
         <shape name="helptext_background" from="base_background_shape">
-            <area>300,370,680,130</area>
+            <area>200,390,880,130</area>
         </shape>
         <textarea name="helptext" from="base_textarea">
-            <area>320,370,640,130</area>
+            <area>220,390,840,130</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>allcenter</align>
         </textarea>
         
         <button name="ok" from="base_button">
-            <position>470,520</position>
+            <position>470,540</position>
             <value>Ok</value>
         </button>
         <button name="cancel" from="base_button">
-            <position>660,520</position>
+            <position>660,540</position>
             <value>Cancel</value>
         </button>
 
