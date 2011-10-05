@@ -458,56 +458,50 @@
         </textarea>
 
         <shape name="generalwizard_background" from="base_background_shape">
-            <area>280,195,720,385</area>
+            <area>280,200,720,310</area>
         </shape>
-        
-        <textarea name="ldate_text" from="base_textarea">
-            <area>300,220,295,30</area>
+ 
+        <textarea name="profiletext_label" from="base_textarea">
+            <area>300,220,200,40</area>
             <align>right,vcenter</align>
-            <value>Long Date Format:</value>
+			<value>Current Profile:</value>
         </textarea>
-        
-        <textarea name="sdate_text" from="base_textarea">
-            <area>300,270,295,30</area>
-            <align>right,vcenter</align>
-            <value>Short Date Format:</value>
+        <textarea name="profiletext" from="base_textarea">
+            <area>510,220,470,40</area>
+            <align>left,vcenter</align>
         </textarea>
-        
-        <textarea name="time_text" from="base_textarea">
-            <area>300,320,295,30</area>
-            <align>right,vcenter</align>
-            <value>Time Format:</value>
-        </textarea>
-
-        <buttonlist name="longdate" from="base_selector_wide">
-            <position>605,215</position>
-        </buttonlist>
-        
-        <buttonlist name="shortdate" from="base_selector_wide">
-            <position>605,265</position>
-        </buttonlist>
-        
-        <buttonlist name="timeformat" from="base_selector_wide">
-            <position>605,315</position>
-        </buttonlist>
   
         <shape name="helptext_background" from="base_background_shape">
-            <area>300,370,680,130</area>
+            <area>300,270,680,100</area>
         </shape>
         <textarea name="helptext" from="base_textarea">
-            <area>320,370,640,130</area>
+            <area>320,270,640,100</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>allcenter</align>
         </textarea>
 
+        <button name="view" from="base_button">
+            <position>300,390</position>
+            <value>View</value>
+        </button>
+        <button name="submit" from="base_button">
+            <position>480,390</position>
+            <value>Submit</value>
+        </button>
+
         <button name="cancel" from="base_button">
-            <position>470,520</position>
+            <position>480,450</position>
             <value>Cancel</value>
         </button>
         <button name="next" from="base_button">
-            <position>660,520</position>
+            <position>660,450</position>
             <value>Next</value>
+        </button>
+
+        <button name="delete" from="base_button">
+            <position>830,390</position>
+            <value>Delete</value>
         </button>
 
     </window>
@@ -552,32 +546,28 @@
         </textarea>
 
         <textarea name="ac3_text" from="base_textarea">
-            <area>300,190,605,30</area>
+            <area>300,190,445,30</area>
             <align>right,vcenter</align>
             <value>My speaker supports Dolby Digital</value>
         </textarea>
 
-        <textarea name="dts_text" from="base_textarea">
-            <area>300,240,605,30</area>
-            <align>right,vcenter</align>
+        <textarea name="dts_text" from="ac3_text">
+            <position>300,240</position>
             <value>My speaker supports DTS</value>
         </textarea>
 
-        <textarea name="eac3_text" from="base_textarea">
-            <area>300,290,605,30</area>
-            <align>right,vcenter</align>
+        <textarea name="eac3_text" from="ac3_text">
+            <position>300,290</position>
             <value>My speaker supports E-AC-3</value>
         </textarea>
         
-        <textarea name="truehd_text" from="base_textarea">
-            <area>300,340,605,30</area>
-            <align>right,vcenter</align>
+        <textarea name="truehd_text" from="ac3_text">
+            <position>300,340</position>
             <value>My speaker supports TrueHD</value>
         </textarea>
 
-        <textarea name="dtshd_text" from="base_textarea">
-            <area>300,390,605,30</area>
-            <align>right,vcenter</align>
+        <textarea name="dtshd_text" from="ac3_text">
+            <position>300,390</position>
             <value>My speaker supports DTS-HD</value>
         </textarea>
 
@@ -590,23 +580,23 @@
         </buttonlist>
 
         <checkbox name="ac3check" from="base_checkbox">
-            <position>920,190</position>
+            <position>760,190</position>
         </checkbox>
 
         <checkbox name="dtscheck" from="base_checkbox">
-            <position>920,240</position>
+            <position>760,240</position>
         </checkbox>
 
         <checkbox name="eac3check" from="base_checkbox">
-            <position>920,290</position>
+            <position>760,290</position>
         </checkbox>
         
         <checkbox name="truehdcheck" from="base_checkbox">
-            <position>920,340</position>
+            <position>760,340</position>
         </checkbox>
 
         <checkbox name="dtshdcheck" from="base_checkbox">
-            <position>920,390</position>
+            <position>760,390</position>
         </checkbox>
 
         <button name="testspeakers" from="base_button_wide">
