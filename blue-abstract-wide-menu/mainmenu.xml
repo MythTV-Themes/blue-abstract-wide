@@ -31,8 +31,8 @@
 
     <button>
         <type>MENU_PICTURES</type>
-        <text>Pictures</text>
-        <text lang="DE">Bilder</text>
+        <text>Pictures (MythGallery)</text>
+        <text lang="DE">Bilder (MythGallery)</text>
         <description>Look at Pictures</description>
         <description lang="DE">Bilder aus deiner Sammlung anschauen</description>
         <action>PLUGIN mythgallery</action>
@@ -41,8 +41,8 @@
 
     <button>
         <type>MENU_IMAGES</type>
-        <text>Picture (new Plugin)</text>
-        <text lang="DE">Bilder (neues Plugin)</text>
+        <text>Picture</text>
+        <text lang="DE">Bilder</text>
         <description>Look at Pictures</description>
         <description lang="DE">Bilder aus deiner Sammlung anschauen</description>
         <action>PLUGIN mythimage</action>
