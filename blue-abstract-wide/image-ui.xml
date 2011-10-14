@@ -505,10 +505,11 @@
         <!-- shows some information if required -->
         <textarea name="status" from="base_textarea">
             <area>500,-4,280,30</area>
-            <align>allcenter</align>
             <shape name="background" from="base_background_shape">
                 <area>0,0,280,50</area>
             </shape>
+            <align>allcenter</align>
+            <value>Image Loading...</value>
         </textarea>
 
     </window>
