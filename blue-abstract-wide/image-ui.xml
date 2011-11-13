@@ -506,10 +506,13 @@
         <textarea name="status" from="base_textarea">
             <area>500,-4,280,30</area>
             <shape name="background" from="base_background_shape">
-                <area>0,0,280,50</area>
+                <area>0,0,280,40</area>
             </shape>
-            <align>allcenter</align>
-            <value>Image Loading...</value>
+            <textarea name="status_text" from="base_textarea">
+                <area>0,0,280,40</area>
+                <align>allcenter</align>
+                <value>Image Loading...</value>
+            </textarea>
         </textarea>
 
     </window>
@@ -532,7 +535,7 @@
 
         <!-- the image that shown in the background -->
         <imagetype name="image">
-            <area>0,0,1280,720</area>
+            <area>-2,-2,1284,724</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
 
