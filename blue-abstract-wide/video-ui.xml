@@ -291,7 +291,7 @@
         <!-- labels and widgets on the right side -->
         <textarea name="description" from="base_textarea">
             <area>45,510,485,180</area>
-            <align>righ,top</align>
+            <align>left,top</align>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <font>text_small</font>
