@@ -377,15 +377,15 @@
 
         <!-- channel number and name -->
         <textarea name="channum">
-            <area>120,635,30,30</area>
-            <align>left,vcenter</align>
+            <area>100,635,40,30</area>
+            <align>right,vcenter</align>
             <multiline>no</multiline>
-            <cutdown>yes</cutdown>
+            <cutdown>no</cutdown>
             <font>text_small</font>
         </textarea>
         
         <textarea name="callsign">
-            <area>150,635,95,30</area>
+            <area>150,635,120,30</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>yes</cutdown>
@@ -420,7 +420,7 @@
                 </imagetype>-->
                 <textarea name="livetv_label" from="base_textarea">
                     <align>right,vcenter</align>
-                    <area>1060,440,100,20</area>
+                    <area>1055,440,100,20</area>
                     <font>text_small</font>
                     <value>Live TV</value>
                 </textarea>
@@ -428,7 +428,7 @@
             <state name="WatchingPreRecorded">
                 <textarea name="livetv_label" from="base_textarea">
                     <align>right,vcenter</align>
-                    <area>1060,440,100,20</area>
+                    <area>1055,440,100,20</area>
                     <font>text_small</font>
                     <value>Recorded</value>
                 </textarea>
@@ -436,7 +436,7 @@
             <state name="WatchingVideo">
                 <textarea name="livetv_label" from="base_textarea">
                     <align>right,vcenter</align>
-                    <area>1060,440,100,20</area>
+                    <area>1055,440,100,20</area>
                     <font>text_small</font>
                     <value>Video</value>
                 </textarea>
@@ -449,7 +449,7 @@
                 </imagetype>-->
                 <textarea name="livetv_label" from="base_textarea">
                     <align>right,vcenter</align>
-                    <area>1060,440,100,20</area>
+                    <area>1055,440,100,20</area>
                     <font>text_small</font>
                     <value>DVD</value>
                 </textarea>
@@ -462,7 +462,7 @@
                 </imagetype>-->
                 <textarea name="image" from="base_textarea">
                     <align>right,vcenter</align>
-                    <area>1060,440,100,20</area>
+                    <area>1055,440,100,20</area>
                     <font>text_small</font>
                     <value>Bluray</value>
                 </textarea>
@@ -567,23 +567,23 @@
                 <textarea name="audiochannels_label" from="base_textarea">
                     <align>right,vcenter</align>
                     <font>text_small</font>
-                    <area>880,440,100,20</area>
-                    <value>1 Channel:</value>
+                    <area>840,440,130,20</area>
+                    <value>Mono:</value>
                 </textarea>
             </state>
             <state name="2">
                 <textarea name="audiochannels_label" from="base_textarea">
-                    <align>left,vcenter</align>
+                    <align>right,vcenter</align>
                     <font>text_small</font>
-                    <area>880,440,100,20</area>
-                    <value>2 Channels:</value>
+                    <area>840,440,130,20</area>
+                    <value>Stereo:</value>
                 </textarea>
             </state>
             <state name="5">
                 <textarea name="audiochannels_label" from="base_textarea">
                     <align>right,vcenter</align>
                     <font>text_small</font>
-                    <area>880,440,100,20</area>
+                    <area>840,440,130,20</area>
                     <value>5 Channels:</value>
                 </textarea>
             </state>
@@ -591,7 +591,7 @@
                 <textarea name="audiochannels_label" from="base_textarea">
                     <align>right,vcenter</align>
                     <font>text_small</font>
-                    <area>880,440,100,20</area>
+                    <area>840,440,130,20</area>
                     <value>6 Channels:</value>
                 </textarea>
             </state>
@@ -599,7 +599,7 @@
                 <textarea name="audiochannels_label" from="base_textarea">
                     <align>right,vcenter</align>
                     <font>text_small</font>
-                    <area>880,440,100,20</area>
+                    <area>840,440,130,20</area>
                     <value>7 Channels:</value>
                 </textarea>
             </state>
@@ -607,7 +607,7 @@
                 <textarea name="audiochannels_label" from="base_textarea">
                     <align>right,vcenter</align>
                     <font>text_small</font>
-                    <area>880,440,100,20</area>
+                    <area>840,440,130,20</area>
                     <value>8 Channels:</value>
                 </textarea>
             </state>
@@ -617,49 +617,49 @@
             <state name="MPEG-2">
                 <textarea name="videocodec_label" from="base_textarea">
                     <font>text_small</font>
-                    <area>780,440,100,20</area>
+                    <area>750,440,100,20</area>
                     <value>MPEG-2</value>
                 </textarea>
             </state>
             <state name="VC-1">
                 <textarea name="videocodec_label" from="base_textarea">
                     <font>text_small</font>
-                    <area>780,440,100,20</area>
+                    <area>750,440,100,20</area>
                     <value>VC-1</value>
                 </textarea>
             </state>
             <state name="H.264">
                 <textarea name="videocodec_label" from="base_textarea">
                     <font>text_small</font>
-                    <area>780,440,100,20</area>
+                    <area>750,440,100,20</area>
                     <value>H.264</value>
                 </textarea>
             </state>
             <state name="MPEG-4">
                 <textarea name="videocodec_label" from="base_textarea">
                     <font>text_small</font>
-                    <area>780,440,100,20</area>
+                    <area>750,440,100,20</area>
                     <value>MPEG-4</value>
                 </textarea>
             </state>
             <state name="RTjpeg">
                 <textarea name="videocodec_label" from="base_textarea">
                     <font>text_small</font>
-                    <area>780,440,100,20</area>
+                    <area>750,440,100,20</area>
                     <value>RTjpeg</value>
                 </textarea>
             </state>
             <state name="WMV3">
                 <textarea name="videocodec_label" from="base_textarea">
                     <font>text_small</font>
-                    <area>780,440,100,20</area>
+                    <area>750,440,100,20</area>
                     <value>WMV 3</value>
                 </textarea>
             </state>
             <state name="H.263">
                 <textarea name="videocodec_label" from="base_textarea">
                     <font>text_small</font>
-                    <area>780,440,100,20</area>
+                    <area>750,440,100,20</area>
                     <value>H.263</value>
                 </textarea>
             </state>
@@ -675,7 +675,7 @@
                 <textarea name="videodescrip_label" from="base_textarea">
                     <align>right,vcenter</align>
                     <font>text_small</font>
-                    <area>680,440,100,20</area>
+                    <area>640,440,100,20</area>
                     <value>SD:</value>
                 </textarea>
             </state>
@@ -688,7 +688,7 @@
                 <textarea name="videodescrip_label" from="base_textarea">
                     <align>right,vcenter</align>
                     <font>text_small</font>
-                    <area>680,440,100,20</area>
+                    <area>640,440,100,20</area>
                     <value>HD 720p:</value>
                 </textarea>
             </state>
@@ -701,7 +701,7 @@
                 <textarea name="videodescrip_label" from="base_textarea">
                     <align>right,vcenter</align>
                     <font>text_small</font>
-                    <area>680,440,100,20</area>
+                    <area>640,440,100,20</area>
                     <value>HD 1080i:</value>
                 </textarea>
             </state>
@@ -714,7 +714,7 @@
                 <textarea name="videodescrip_label" from="base_textarea">
                     <align>right,vcenter</align>
                     <font>text_small</font>
-                    <area>680,440,100,20</area>
+                    <area>640,440,100,20</area>
                     <value>HD 1080p:</value>
                 </textarea>
             </state>
@@ -796,15 +796,15 @@
 
         <!-- channel number and name -->
         <textarea name="channum">
-            <area>120,635,30,30</area>
-            <align>left,vcenter</align>
+            <area>100,635,40,30</area>
+            <align>right,vcenter</align>
             <multiline>no</multiline>
-            <cutdown>yes</cutdown>
+            <cutdown>no</cutdown>
             <font>text_small</font>
         </textarea>
         
         <textarea name="callsign">
-            <area>150,635,95,30</area>
+            <area>150,635,120,30</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>yes</cutdown>
