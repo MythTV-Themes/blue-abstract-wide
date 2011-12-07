@@ -42,13 +42,15 @@
             <area>46,80,350,312</area>
             <scrollstyle>top</scrollstyle>
             <wrapstyle>items</wrapstyle>
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
         </buttonlist>
 
         <!-- the selection of the available recordings in the group -->
         <buttonlist name="recordings" from="base_buttonlist_very_wide">
             <area>415,80,820,310</area>
             <wrapstyle>captive</wrapstyle>
-            
+            <triggerevent context="Global" action="MENU">RIGHT</triggerevent>
+
             <statetype name="buttonitem">
                 <state name="active">
                     <textarea name="titlesubtitle" from="base_textarea">

@@ -234,7 +234,9 @@
             <layout>vertical</layout>
             <spacing>10</spacing>
             <wrapstyle>items</wrapstyle>
-            <buttonarea>0,30,450,460</buttonarea>-->
+            <buttonarea>0,30,450,460</buttonarea>
+            <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
 
             <statetype name="buttonitem">
                 <!-- General settings for the menu entry -->

@@ -1805,6 +1805,9 @@
         <buttonlist name="list" from="base_buttonlist">
             <area>465,275,350,268</area>
             <drawfrombottom>yes</drawfrombottom>
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
+            <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
+
             <statetype name="buttonitem">
                 <state name="active">
                     <textarea name="buttontext">

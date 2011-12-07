@@ -107,6 +107,7 @@
             <layout>vertical</layout>
             <spacing>0</spacing>
             <buttonarea>0,0,230,370</buttonarea>
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <statetype name="buttonitem">
                 <state name="active">
                     <imagetype name="buttonbackground">
@@ -149,6 +150,7 @@
             <layout>horizontal</layout>
             <spacing>0</spacing>
             <buttonarea>0,0,986,20</buttonarea>
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <statetype name="buttonitem">
                 <area>0,0,180,20</area>
                 <state name="active">
@@ -360,6 +362,7 @@
             <layout>vertical</layout>
             <spacing>0</spacing>
             <buttonarea>0,0,230,370</buttonarea>
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <statetype name="buttonitem">
                 <state name="active">
                     <imagetype name="buttonbackground">
@@ -402,6 +405,7 @@
             <layout>horizontal</layout>
             <spacing>0</spacing>
             <buttonarea>0,0,986,20</buttonarea>
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <statetype name="buttonitem">
                 <area>0,0,180,20</area>
                 <state name="active">

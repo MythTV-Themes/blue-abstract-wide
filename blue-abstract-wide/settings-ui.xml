@@ -91,6 +91,8 @@
 
         <buttonlist name="themes" from="base_buttonlist">
             <area>120,92,350,367</area>
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
+            <triggerevent context="Global" action="MENU">RIGHT</triggerevent>
             <statetype name="buttonitem">
                 <state name="active">
                     <textarea name="buttontext" from="base_textarea">
