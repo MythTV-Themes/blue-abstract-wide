@@ -1021,7 +1021,7 @@
             <value>Runtime:</value>
         </textarea>
         <textarea name="level_label" from="director_label">
-            <area>785,655,320,30</area>
+            <area>755,655,320,30</area>
             <align>right,vcenter</align>
             <value>Parental Level:</value>
         </textarea>
@@ -1053,11 +1053,15 @@
             <position>1110,625</position>
         </textarea>
         <imagetype name="videolevel_background" from="base_parentallevel_background">
-            <position>1110,660</position>
+            <position>1080,660</position>
         </imagetype>
         <statetype name="videolevel" from="base_parentallevel">
-            <position>1110,660</position>
+            <position>1080,660</position>
         </statetype>
+        <textarea name="rating" from="base_textarea">
+             <area>1170,655,70,30</area>
+             <align>right,vcenter</align>
+        </textarea>
     </window>
 
 
@@ -1606,13 +1610,17 @@
             <position>445,460</position>
             <value>Genres:</value>
         </textarea>
-	<textarea name="season_label" from="director_label">
+        <textarea name="season_label" from="director_label">
             <position>445,490</position>
             <value>Season:</value>
         </textarea>
         <textarea name="episode_label" from="director_label">
             <position>585,490</position>
             <value>Episode:</value>
+        </textarea>
+        <textarea name="rating_label" from="director_label">
+             <position>925,490</position>
+             <value>Rated:</value>
         </textarea>
         <textarea name="year_label" from="director_label">
             <position>445,520</position>
@@ -1640,12 +1648,15 @@
         <textarea name="genres" from="director">
             <position>605,460</position>
         </textarea>
-	<textarea name="season" from="base_textarea">
+        <textarea name="season" from="base_textarea">
             <area>605,490,270,30</area>
             <font>text_small</font>
         </textarea>
         <textarea name="episode" from="season">
             <position>745,490</position>
+        </textarea>
+        <textarea name="rating" from="base_textarea">
+             <area>1085,490,70,30</area>
         </textarea>
         <textarea name="year" from="season">
             <position>605,520</position>
