@@ -1223,7 +1223,7 @@
 
 
     <!-- textedit widget with a width 375px -->
-    <textedit name="base_textedit_wide">
+    <textedit name="base_textedit_wide" from="base_textedit">
         <area>0,0,650,40</area>
         
         <statetype name="background">
@@ -1247,14 +1247,6 @@
             </state>
         </statetype>
         
-        <imagetype name="cursor">
-            <shape name="cursor_shape">
-                <area>0,-2,2,30</area>
-                <type>box</type>
-                <fill color="#FFFFFF" alpha="240" />
-            </shape>
-        </imagetype>
-        
         <textarea name="text">
             <area>8,0,634,40</area>
             <font>text</font>
@@ -1266,7 +1258,7 @@
     
     
     <!-- textedit widget with a width 200px -->
-    <textedit name="base_textedit_narrow">
+    <textedit name="base_textedit_narrow" from="base_textedit">
         <area>0,0,200,40</area>
         
         <statetype name="background">
@@ -1290,18 +1282,44 @@
             </state>
         </statetype>
         
-        <imagetype name="cursor">
-            <shape name="cursor_shape">
-                <area>0,4,2,32</area>
-                <type>box</type>
-                <fill color="#FFFFFF" alpha="255" />
-            </shape>
-        </imagetype>
-        
         <textarea name="text">
             <area>8,0,195,40</area>
             <font>text</font>
             <align>left,vcenter</align>
+        </textarea>
+    </textedit>
+
+
+
+
+    <!-- Multiline textedit widget with a width 375px -->
+    <textedit name="base_multiline_textedit" from="base_textedit">
+        <area>0,0,375,90</area>
+        
+		<statetype name="background">
+            <state name="active">
+                <imagetype name="background" from="base_image_active">
+                    <filename>images/widgets/widget_inactive.png</filename>
+                    <area>0,0,375,90</area>
+                </imagetype>
+            </state>
+            <state name="selected">
+                <imagetype name="background" from="base_image_selected">
+                    <filename>images/widgets/widget_active.png</filename>
+                    <area>0,0,375,90</area>
+                </imagetype>
+            </state>
+            <state name="inactive">
+                <imagetype name="background" from="base_image_inactive">
+                    <filename>images/widgets/widget_active.png</filename>
+                    <area>0,0,375,90</area>
+                </imagetype>
+            </state>
+        </statetype>
+        
+        <textarea name="text">
+		    <area>10,0,355,90</area>
+            <multiline>true</multiline>
         </textarea>
     </textedit>
 
