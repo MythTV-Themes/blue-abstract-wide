@@ -2526,59 +2526,66 @@
         </textarea>
 
         <shape name="schedule_button_background" from="base_background_shape">
-            <area>285,281,710,400</area>
+            <area>285,281,710,360</area>
         </shape>
 
-        <checkbox name="autocommflag" from="base_checkbox">
+        <checkbox name="metadatalookup" from="base_checkbox">
             <position>305,300</position>
         </checkbox>
-        <checkbox name="autotranscode" from="base_checkbox">
+        <checkbox name="autocommflag" from="base_checkbox">
             <position>305,340</position>
         </checkbox>
-        <buttonlist name="transcodeprofile" from="base_selector_very_wide">
+        <checkbox name="autotranscode" from="base_checkbox">
             <position>305,380</position>
+        </checkbox>
+        <buttonlist name="transcodeprofile" from="base_selector_very_wide">
+            <position>305,420</position>
         </buttonlist>
         <checkbox name="userjob1" from="base_checkbox">
-            <position>305,430</position>
-        </checkbox>
-        <checkbox name="userjob2" from="base_checkbox">
             <position>305,470</position>
         </checkbox>
-        <checkbox name="userjob3" from="base_checkbox">
+        <checkbox name="userjob2" from="base_checkbox">
             <position>305,510</position>
         </checkbox>
+        <checkbox name="userjob3" from="base_checkbox">
+            <position>645,470</position>
+        </checkbox>
         <checkbox name="userjob4" from="base_checkbox">
-            <position>305,550</position>
+            <position>645,510</position>
         </checkbox>
         
-        <textarea name="autocommflaglabel" from="base_textarea">
+        <textarea name="metadatalookuplabel" from="base_textarea">
             <area>350,300,450,30</area>
+            <value>Automatically Look Up Metadata</value>
+        </textarea>
+        <textarea name="autocommflaglabel" from="base_textarea">
+            <area>350,340,450,30</area>
             <value>Commercial Flag new recordings</value>
         </textarea>
         <textarea name="autotranscodelabel" from="base_textarea">
-            <area>350,340,300,30</area>
+            <area>350,380,300,30</area>
             <value>Transcode new recordings</value>
         </textarea>
         
         <textarea name="userjob1text" from="base_textarea">
-            <area>350,430,300,30</area>
-        </textarea>
-        <textarea name="userjob2text" from="base_textarea">
             <area>350,470,300,30</area>
         </textarea>
-        <textarea name="userjob3text" from="base_textarea">
+        <textarea name="userjob2text" from="base_textarea">
             <area>350,510,300,30</area>
         </textarea>
+        <textarea name="userjob3text" from="base_textarea">
+            <area>690,470,300,30</area>
+        </textarea>
         <textarea name="userjob4text" from="base_textarea">
-            <area>350,550,300,30</area>
+            <area>690,510,300,30</area>
         </textarea>
 
         <shape name="button_separator" from="base_separator_shape">
-            <area>305,600,670,1</area>
+            <area>305,560,670,1</area>
         </shape>
 
         <button name="back" from="base_button">
-            <position>565,620</position>
+            <position>565,580</position>
             <value>Back</value>
         </button>
     </window>
