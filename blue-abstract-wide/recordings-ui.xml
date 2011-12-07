@@ -41,15 +41,13 @@
         <buttonlist name="groups" from="base_buttonlist">
             <area>46,80,350,312</area>
             <wrapstyle>items</wrapstyle>
-            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
         </buttonlist>
 
         <!-- the selection of the available recordings in the group -->
         <buttonlist name="recordings" from="base_buttonlist_very_wide">
             <area>415,80,820,310</area>
             <wrapstyle>captive</wrapstyle>
-            <triggerevent context="Global" action="MENU">RIGHT</triggerevent>
-
+            
             <statetype name="buttonitem">
                 <state name="active">
                     <textarea name="titlesubtitle" from="base_textarea">
@@ -855,6 +853,7 @@
         <!-- the selection of available recording groups -->
         <buttonlist name="groups" from="base_buttonlist">
             <area>46,80,350,312</area>
+            <scrollstyle>top</scrollstyle>
             <wrapstyle>items</wrapstyle>
         </buttonlist>
 
@@ -1234,49 +1233,93 @@
     <!-- The Edit Recording Title / Subtitle window -->
     <window name="editmetadata">
 
-        <shape name="darken_background" from="base_darken_background" />
-        
-        <shape name="passwordchanger_background" from="base_background_shape_dark">
-            <area>350,227,610,280</area>
+        <!-- background, name of screen and the clock -->
+        <imagetype name="background" from="base_background" />
+
+        <shape name="heading_background" from="base_background_shape">
+            <area>-4,-4,370,36</area>
+        </shape>
+        <textarea name="text" from="base_textarea">
+            <area>0,0,366,30</area>
+            <align>allcenter</align>
+            <value>Edit Recording Metadata</value>
+        </textarea>
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="editmetadata_background" from="base_background_shape">
+            <area>350,100,610,550</area>
         </shape>
 
         <!-- the title of the window -->
-        <textarea name="title" from="base_textarea">
-            <area>370,248,570,30</area>
+		<imagetype name="message_background_overlay" from="base_popup_background">
+		    <area>365,115,580,90</area>
+        </imagetype>
+		<textarea name="messagearea" from="base_textarea">
+            <area>370,115,550,90</area>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
             <align>allcenter</align>
             <value>Edit Recording Metadata</value>
         </textarea>
 
-        <shape name="title_separator" from="base_separator_shape">
-            <area>370,297,570,1</area>
-        </shape>
-
         <textarea name="titlelabel" from="base_textarea">
-            <area>370,317,185,40</area>
+            <area>370,220,190,40</area>
             <align>right,vcenter</align>
             <value>Title:</value>
         </textarea>
-        
-        <textedit name="title" from="base_textedit">
-            <position>565,317</position>
+		<textedit name="title" from="base_textedit">
+            <position>570,220</position>
         </textedit>
 
-        <textarea name="subtitlelabel" from="base_textarea">
-            <area>370,367,185,40</area>
-            <align>right,vcenter</align>
+        <textarea name="subtitlelabel" from="titlelabel">
+            <position>370,270</position>
             <value>Subtitle:</value>
         </textarea>
-
         <textedit name="subtitle" from="base_textedit">
-            <position>565,367</position>
+            <position>570,270</position>
+        </textedit>
+
+        <textarea name="inetreflabel" from="titlelabel">
+            <position>370,320</position>
+            <value>Inetref:</value>
+        </textarea>
+        <textedit name="inetref" from="base_textedit">
+            <position>570,320</position>
+        </textedit>
+
+        <textarea name="seasonlabel" from="titlelabel">
+            <position>370,370</position>
+            <value>Season:</value>
+        </textarea>
+        <spinbox name="season" from="base_spinbox">
+            <position>570,370</position>
+        </spinbox>
+
+        <textarea name="episodelabel" from="titlelabel">
+            <position>370,420</position>
+            <value>Episode:</value>
+        </textarea>
+        <spinbox name="episode" from="base_spinbox">
+            <position>570,420</position>
+        </spinbox>
+
+        <textarea name="descriptionlabel" from="titlelabel">
+            <position>370,470</position>
+            <value>Description:</value>
+        </textarea>
+
+        <textedit name="description" from="base_multiline_textedit">
+            <position>570,470</position>
         </textedit>
 
         <shape name="button_separator" from="base_separator_shape">
-            <area>370,427,570,1</area>
+            <area>370,570,570,1</area>
         </shape>
 
         <button name="ok" from="base_button">
-            <position>580,447</position>
+            <position>580,590</position>
             <value>OK</value>
         </button>
     </window>
