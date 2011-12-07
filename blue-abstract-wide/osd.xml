@@ -819,14 +819,29 @@
 
         <!-- show the plot of the recording -->
         <textarea name="description">
-            <area>290,490,870,180</area>
+            <area>290,490,870,140</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>left,top</align>
             <font>text_small</font>
             <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
         </textarea>       
-        
+       
+        <progressbar name="elapsedpercent">
+            <area>290,635,800,20</area>
+            <layout>horizontal</layout>
+            <style>reveal</style>
+            <imagetype name="background">
+                <filename>images/widgets/progressbar/progressbar_inactive.png</filename>
+                <area>0,0,800,20</area>
+                <alpha>150</alpha>
+            </imagetype>
+            <imagetype name="progressimage">
+                <filename>images/widgets/progressbar/progressbar_active.png</filename>
+                <area>0,0,800,20</area>
+                <alpha>220</alpha>
+            </imagetype> 
+        </progressbar>
     </window>
     
     
