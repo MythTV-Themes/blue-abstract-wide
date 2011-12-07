@@ -1206,7 +1206,7 @@
         
         <imagetype name="cursor">
             <shape name="cursor_shape">
-                <area>0,4,2,32</area>
+                <area>0,-2,2,30</area>
                 <type>box</type>
                 <fill color="#FFFFFF" alpha="240" />
             </shape>
