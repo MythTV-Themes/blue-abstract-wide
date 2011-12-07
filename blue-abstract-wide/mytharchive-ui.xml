@@ -137,7 +137,6 @@
         <buttonlist name="category_selector" from="base_buttonlist">
             <area>45,91,350,312</area>
             <spacing>4</spacing>
-            <scrollstyle>top</scrollstyle>
             <wrapstyle>items</wrapstyle>
         </buttonlist>
 
@@ -378,7 +377,6 @@
         <buttonlist name="category_selector" from="base_buttonlist">
             <area>45,101,350,312</area>
             <spacing>4</spacing>
-            <scrollstyle>top</scrollstyle>
             <wrapstyle>items</wrapstyle>
         </buttonlist>
 

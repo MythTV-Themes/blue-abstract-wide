@@ -40,7 +40,6 @@
         <!-- the selection of available recording groups -->
         <buttonlist name="groups" from="base_buttonlist">
             <area>46,80,350,312</area>
-            <scrollstyle>top</scrollstyle>
             <wrapstyle>items</wrapstyle>
             <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
         </buttonlist>
@@ -856,7 +855,6 @@
         <!-- the selection of available recording groups -->
         <buttonlist name="groups" from="base_buttonlist">
             <area>46,80,350,312</area>
-            <scrollstyle>top</scrollstyle>
             <wrapstyle>items</wrapstyle>
         </buttonlist>
 

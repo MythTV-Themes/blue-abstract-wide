@@ -42,7 +42,6 @@
         <buttonlist name="sites" from="base_buttonlist">
             <area>45,160,350,227</area>
             <spacing>4</spacing>
-            <scrollstyle>top</scrollstyle>
             <wrapstyle>items</wrapstyle>
         </buttonlist>
 
