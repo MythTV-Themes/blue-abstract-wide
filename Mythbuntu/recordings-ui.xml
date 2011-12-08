@@ -58,6 +58,7 @@
             <buttonarea>32,5,434,328</buttonarea>
             <spacing>6</spacing>
             <wrapstyle>items</wrapstyle>
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <statetype name="buttonitem">
                 <state name="active">
                     <shape name="buttonbackground"> 
@@ -95,13 +96,14 @@
             <buttonarea>0,5,731,338</buttonarea>
             <spacing>6</spacing>
             <wrapstyle>items</wrapstyle>
+            <triggerevent context="Global" action="MENU">RIGHT</triggerevent>
             <statetype name="buttonitem">
                 <state name="active">
                     <shape name="buttonbackground">
                         <area>30,0,706,30</area>
                         <type>roundbox</type>
                         <fill color="#666666" alpha="50" />
-	                <line color="#FFFFFF" alpha="0" width="0" />
+                        <line color="#FFFFFF" alpha="0" width="0" />
                         <cornerradius>15</cornerradius>
                     </shape>
                     <textarea name="titlesubtitle" from="buttontext">
