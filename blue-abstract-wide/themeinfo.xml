@@ -29,7 +29,7 @@
     <!-- define the Major and Minor version numbers of your theme.-->
     <version>
         <major>1</major>
-        <minor>5</minor>
+        <minor>6</minor>
     </version>
 
     <!-- Defines an image in your theme directory to act as a preview and also some information about the theme -->
