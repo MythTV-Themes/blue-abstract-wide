@@ -89,7 +89,7 @@
     <window name="manager">
 
         <imagetype name="background" from="base_background"/>
-        
+
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -114,42 +114,36 @@
         </textarea>
 
         <textarea name="video_list_label" from="base_textarea">
-            <area>91,70,100,20</area>
+            <area>96,70,100,20</area>
             <font>text_very_small</font>
             <value>Filename</value>
         </textarea>
-        <textarea name="watched_list_label" from="base_textarea">
-            <area>390,70,80,20</area>
-            <font>text_very_small</font>
+        <textarea name="director_list_label" from="video_list_label">
+            <area>435,70,100,20</area>
+            <value>Director</value>
+        </textarea>
+	<textarea name="watched_list_label" from="video_list_label">
+            <area>680,70,80,20</area>
             <align>right,vcenter</align>
             <value>Watched</value>
         </textarea>
-        <textarea name="director_list_label" from="base_textarea">
-            <area>495,70,100,20</area>
-            <font>text_very_small</font>
-            <value>Director</value>
-        </textarea>
-        <textarea name="length_list_label" from="base_textarea">
+        <textarea name="length_list_label" from="video_list_label">
             <area>780,70,100,20</area>
-            <font>text_very_small</font>
             <align>right,vcenter</align>
             <value>Length</value>
         </textarea>
-        <textarea name="year_list_label" from="base_textarea">
+        <textarea name="year_list_label" from="video_list_label">
             <area>900,70,70,20</area>
-            <font>text_very_small</font>
             <align>allcenter</align>
             <value>Year</value>
         </textarea>
-        <textarea name="rating_list_label" from="base_textarea">
+        <textarea name="rating_list_label" from="video_list_label">
             <area>980,70,100,20</area>
-            <font>text_very_small</font>
             <align>right,vcenter</align>
             <value>Rating</value>
         </textarea>
-        <textarea name="level_list_label" from="base_textarea">
+        <textarea name="level_list_label" from="video_list_label">
             <area>1110,70,80,20</area>
-            <font>text_very_small</font>
             <value>Level</value>
             <align>allcenter</align>
         </textarea>
@@ -157,7 +151,6 @@
         <buttonlist name="videos" from="base_buttonlist_extra_wide">
             <area>45,95,1190,356</area>
             <statetype name="buttonitem">
-
                 <state name="active">
                     <statetype name="nodetype">
                         <position>10,0</position>
@@ -178,34 +171,33 @@
                     </statetype>
 
                     <textarea name="buttontext" from="base_textarea">
-                        <area>46,0,335,40</area>
+                        <area>50,0,330,40</area>
                         <align>left,vcenter</align>
+                        <font>text_small</font>
                         <cutdown>yes</cutdown>
                     </textarea>
 
+                    <textarea name="director" from="buttontext">
+                        <area>390,0,280,40</area>
+                    </textarea>
+		    
                     <!-- marks the video as watched -->
                     <statetype name="watchedstate">
                         <state name="yes">
                             <imagetype name="watched_buttonimage">
-                                <area>390,6,26,26</area>
+                                <area>680,6,26,26</area>
                                 <filename>images/shared/file_watched.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
                     </statetype>
-
-                    <textarea name="director" from="buttontext">
-                        <area>440,0,300,40</area>
-                        <cutdown>yes</cutdown>
-                    </textarea>
+		    
                     <textarea name="length" from="buttontext">
                         <area>700,0,140,40</area>
-                        <cutdown>yes</cutdown>
                         <align>right,vcenter</align>
                     </textarea>
                     <textarea name="year" from="buttontext">
                         <area>870,0,50,40</area>
-                        <cutdown>yes</cutdown>
                         <align>allcenter</align>
                     </textarea>
                     <!-- the rating of this movie, -->
@@ -229,125 +221,169 @@
                 </state>
 
                 <state name="inactive" from="active"/>
-
                 <state name="selectedactive" from="active">
                     <imagetype name="buttonbackground" from="base_image_selectedactive">
                         <filename>images/widgets/widget_active.png</filename>
                         <area>0,0,1190,40</area>
                     </imagetype>
-
-                    <statetype name="nodetype">
-                        <position>10,0</position>
-                        <state name="subfolder">
-                            <imagetype name="icon">
-                                <area>-2,0,30,40</area>
-                                <filename>images/shared/folder_open.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
-                        <state name="upfolder">
-                            <imagetype name="icon">
-                                <area>-2,1,30,40</area>
-                                <filename>images/shared/folder_up_open.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
-                    </statetype>
-
-                    <textarea name="buttontext">
-                        <font>text</font>
-                    </textarea>
-                    <textarea name="director">
-                        <font>text</font>
-                    </textarea>
-                    <textarea name="length">
-                        <font>text</font>
-                    </textarea>
-                    <textarea name="year">
-                        <font>text</font>
-                    </textarea>
-
-                    <imagetype name="userratingstate_background" from="base_rating_background">
-                        <position>950,10</position>
-                    </imagetype>
-                    <statetype name="userratingstate" from="base_rating">
-                        <position>950,10</position>
-                    </statetype>
-
-                    <imagetype name="videolevel_background" from="base_parentallevel_background">
-                        <position>1070,10</position>
-                    </imagetype>
-                    <statetype name="videolevel" from="base_parentallevel">
-                        <position>1070,10</position>
-                    </statetype>
                 </state>
             </statetype>
         </buttonlist>
 
-        <shape name="video_details_background" from="base_background_shape">
-            <area>25,490,1230,205</area>
+       <!-- this is the background for the information at the bottom -->
+        <shape name="video_description_background" from="base_background_shape">
+            <area>25,485,715,210</area>
         </shape>
 
-        <!-- labels and widgets on the right side -->
+        <shape name="cover_background" from="base_background_shape">
+            <area>43,503,119,175</area>
+        </shape>
+
+        <imagetype name="coverart">
+            <area>44,504,117,173</area>
+            <filename />
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
+        <!-- marks the video as watched -->
+        <statetype name="watchedstate">
+            <state name="yes">
+                <shape name="watched_background_shape">
+                    <area>78,676,50,4</area>
+                    <type>box</type>
+                    <fill color="#AAAAAA" alpha="255"/>
+                    <line color="#AAAAAA" alpha="255" width="1" />
+                </shape>
+            </state>
+        </statetype>
+
+        <textarea name="title" from="base_textarea">
+            <area>175,498,560,30</area>
+            <multiline>no</multiline>
+            <font>title</font>
+            <align>left</align>
+            <cutdown>yes</cutdown>
+        </textarea>
+
+        <textarea name="subtitle" from="base_textarea">
+            <area>175,530,560,30</area>
+            <multiline>no</multiline>
+            <font>text_small</font>
+            <align>left,vcenter</align>
+            <cutdown>yes</cutdown>
+        </textarea>
+
+        <!-- the rating of this movie, -->
+        <imagetype name="userratingstate_background" from="base_rating_background">
+            <position>635,503</position>
+        </imagetype>
+
+        <statetype name="userratingstate" from="base_rating">
+            <position>635,503</position>
+        </statetype>
+
+        <shape name="title_separator" from="base_separator_shape">
+            <area>175,565,550,1</area>
+        </shape>
+
         <textarea name="description" from="base_textarea">
-            <area>45,510,485,180</area>
-            <align>left,top</align>
+            <area>175,577,550,120</area>
+            <font>text_small</font>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
-            <font>text_small</font>
+            <align>left,top</align>
         </textarea>
-        
-        <shape name="description_separator" from="base_separator_shape">
-            <area>550,510,1,165</area>
-        </shape>        
-        
-        <textarea name="filename_label" from="base_textarea">
-            <area>570,505,200,30</area>
-            <value>Filename:</value>
+
+        <!-- this is the background for the information at the bottom -->
+        <shape name="video_details_background" from="base_background_shape">
+            <area>765,485,490,210</area>
+        </shape>
+
+        <textarea name="position" from="base_textarea">
+            <area>1120,500,120,20</area>
             <font>text_small</font>
             <align>right,vcenter</align>
         </textarea>
-        <textarea name="season_label" from="filename_label">
-            <position>570,540</position>
-            <value>Season:</value>
+        
+        <!-- show the name of the different labels -->
+        <textarea name="director_label" from="base_textarea">
+            <area>755,495,150,30</area>
+            <align>right,vcenter</align>
+            <font>text_small</font>
+            <value>Director:</value>
         </textarea>
-        <textarea name="episode_label" from="filename_label">
-            <position>740,540</position>
-            <value>Episode:</value>
+        <textarea name="genre_label" from="director_label">
+            <position>755,525</position>
+            <value>Genre:</value>
         </textarea>
-        <textarea name="browsable_label" from="filename_label">
-            <position>910,540</position>
+	 <textarea name="inetref_label" from="director_label">
+            <position>755,560</position>
+            <value>Inetref:</value>
+        </textarea>
+	 <textarea name="browsable_label" from="director_label">
+            <position>955,560</position>
             <value>Browsable:</value>
         </textarea>
-        <textarea name="coverfile_label" from="filename_label">
-            <position>570,575</position>
-            <value>Cover File:</value>
+        <textarea name="season_label" from="director_label">
+            <position>755,595</position>
+            <value>Season:</value>
         </textarea>
-        <textarea name="inetref_label" from="filename_label">
-            <position>570,610</position>
-            <value>Video Number:</value>
+        <textarea name="episode_label" from="director_label">
+            <position>955,595</position>
+            <value>Episode:</value>
         </textarea>
-        
-        <textarea name="filename" from="base_textarea">
-            <area>780,505,460,30</area>
-            <font>text_small</font>
+        <textarea name="year_label" from="director_label">
+            <position>755,625</position>
+            <value>Year:</value>
         </textarea>
-        <textarea name="season" from="filename">
-            <position>780,540</position>
+        <textarea name="length_label" from="director_label">
+            <position>955,625</position>
+            <value>Runtime:</value>
         </textarea>
-        <textarea name="episode" from="filename">
-            <position>950,540</position>
-        </textarea>
-        <textarea name="browseable" from="filename">
-            <position>1120,540</position>
-        </textarea>
-        <textarea name="coverfile" from="filename">
-            <position>780,575</position>
-        </textarea>
-        <textarea name="inetref" from="filename">
-            <position>780,610</position>
+        <textarea name="level_label" from="director_label">
+            <area>755,655,320,30</area>
+            <align>right,vcenter</align>
+            <value>Parental Level:</value>
         </textarea>
 
+        <!-- show the values to the different labels -->
+        <textarea name="director" from="base_textarea">
+            <area>910,495,180,30</area>
+            <cutdown>yes</cutdown>
+            <align>left,vcenter</align>
+            <font>text_small</font>
+        </textarea>
+        <textarea name="genres" from="director">
+            <area>910,525,300,30</area>
+        </textarea>
+        <textarea name="inetref" from="director">
+            <position>910,560</position>
+        </textarea>
+        <textarea name="browseable" from="director">
+            <position>1110,560</position>
+        </textarea>
+        <textarea name="season" from="director">
+            <position>910,595</position>
+        </textarea>	
+        <textarea name="episode" from="director">
+            <position>1110,595</position>
+        </textarea>
+        <textarea name="year" from="director">
+            <position>910,625</position>
+        </textarea>
+        <textarea name="length" from="director">
+            <position>1110,625</position>
+        </textarea>
+        <imagetype name="videolevel_background" from="base_parentallevel_background">
+            <position>1080,660</position>
+        </imagetype>
+        <statetype name="videolevel" from="base_parentallevel">
+            <position>1080,660</position>
+        </statetype>
+        <textarea name="rating" from="base_textarea">
+             <area>1170,655,70,30</area>
+             <align>right,vcenter</align>
+        </textarea>
     </window>
 
 
@@ -440,28 +476,32 @@
             <position>425,360</position>
             <value>Cast:</value>
         </textarea>
-        <textarea name="season_label" from="director_label">
+        <textarea name="genre_label" from="director_label">
             <position>425,390</position>
+            <value>Genre:</value>
+        </textarea>
+        <textarea name="season_label" from="director_label">
+            <position>425,420</position>
             <value>Season:</value>
         </textarea>
         <textarea name="episode_label" from="director_label">
-            <position>605,390</position>
+            <position>565,420</position>
             <value>Episode:</value>
         </textarea>
-        <textarea name="genre_label" from="director_label">
-            <position>815,390</position>
-            <value>Genre:</value>
+        <textarea name="rating_label" from="director_label">
+            <position>905,420</position>
+            <value>Rated:</value>
         </textarea>
         <textarea name="year_label" from="director_label">
-            <position>425,420</position>
+            <position>425,450</position>
             <value>Year:</value>
         </textarea>
         <textarea name="length_label" from="director_label">
-            <position>605,420</position>
+            <position>565,450</position>
             <value>Runtime:</value>
         </textarea>
         <textarea name="level_label" from="base_textarea">
-            <area>425,450,330,30</area>
+            <area>725,450,330,30</area>
             <align>right,vcenter</align>
             <font>text_small</font>
             <value>Parental Level:</value>
@@ -475,27 +515,30 @@
         <textarea name="cast" from="director">
             <position>585,360</position>
         </textarea>
+        <textarea name="genres" from="director">
+            <position>585,390</position>
+        </textarea>
         <textarea name="season" from="base_textarea">
-            <area>585,390,270,30</area>
+            <area>585,420,270,30</area>
             <font>text_small</font>
         </textarea>
         <textarea name="episode" from="season">
-            <position>765,390</position>
+            <position>725,420</position>
         </textarea>
-        <textarea name="genre" from="season">
-            <position>975,390</position>
+        <textarea name="rating" from="base_textarea">
+            <area>1065,420,70,30</area>
         </textarea>
         <textarea name="year" from="season">
-            <position>585,420</position>
+            <position>585,450</position>
         </textarea>
         <textarea name="length" from="season">
-            <position>765,420</position>
+            <position>725,450</position>
         </textarea>
         <imagetype name="videolevel_background" from="base_parentallevel_background">
-            <position>765,455</position>
+            <position>1065,455</position>
         </imagetype>
         <statetype name="videolevel" from="base_parentallevel">
-            <position>765,455</position>
+            <position>1065,455</position>
         </statetype>
 
         <!-- this is the background behind the horizontal video list -->
@@ -966,7 +1009,6 @@
             <area>40,530,580,30</area>
             <multiline>no</multiline>
             <font>text_small</font>
-            <align>left,vcenter</align>
             <cutdown>yes</cutdown>
         </textarea>
 
@@ -1101,47 +1143,46 @@
 
         <!-- this is the background behind the video directory list -->
         <shape name="video_tree_background" from="base_background_shape">
-            <area>70,70,1135,375</area>
+            <area>70,55,1130,405</area>
         </shape>
 
         <!-- shows the current path and where we are in the video tree -->
         <textarea name="breadcrumbs" from="base_textarea">
-            <area>90,90,920,30</area>
+            <area>90,70,920,30</area>
             <align>left,vcenter</align>
-            <font>text</font>
+            <font>text_small</font>
         </textarea>
 
         <!-- shows the selected video number -->
         <textarea name="position" from="base_textarea">
-            <area>950,90,230,30</area>
+            <area>950,70,230,30</area>
             <align>right,vcenter</align>
-            <font>text</font>
+            <font>text_small</font>
         </textarea>
 
         <shape name="breadcrumb_separator" from="base_separator_shape">
-            <area>90,135,1095,1</area>
+            <area>90,110,1095,1</area>
         </shape>
 
         <!-- shows the directory structure of the videos -->
         <buttontree name="videos">
-            <area>90,160,1110,146</area>
+            <area>90,132,1110,313</area>
             <numlists>3</numlists>
-            <spacing>6</spacing>
+            <spacing>4</spacing>
             <buttonlist name="listtemplate" from="base_buttonlist" />
         </buttontree>
 
-
         <!-- this is the background for the information at the bottom -->
-        <shape name="video_details_background" from="base_background_shape">
-            <area>25,465,1230,230</area>
+        <shape name="video_description_background" from="base_background_shape">
+            <area>25,485,715,210</area>
         </shape>
 
         <shape name="cover_background" from="base_background_shape">
-            <area>45,485,130,190</area>
+            <area>43,503,119,175</area>
         </shape>
 
         <imagetype name="coverart">
-            <area>46,487,128,186</area>
+            <area>44,504,117,173</area>
             <filename />
             <preserveaspect>true</preserveaspect>
         </imagetype>
@@ -1150,7 +1191,7 @@
         <statetype name="watchedstate">
             <state name="yes">
                 <shape name="watched_background_shape">
-                    <area>85,675,50,4</area>
+                    <area>78,676,50,4</area>
                     <type>box</type>
                     <fill color="#AAAAAA" alpha="255"/>
                     <line color="#AAAAAA" alpha="255" width="1" />
@@ -1159,7 +1200,7 @@
         </statetype>
 
         <textarea name="title" from="base_textarea">
-            <area>195,484,580,30</area>
+            <area>175,498,560,30</area>
             <multiline>no</multiline>
             <font>title</font>
             <align>left</align>
@@ -1167,7 +1208,7 @@
         </textarea>
 
         <textarea name="subtitle" from="base_textarea">
-            <area>195,520,580,30</area>
+            <area>175,530,560,30</area>
             <multiline>no</multiline>
             <font>text_small</font>
             <align>left,vcenter</align>
@@ -1176,90 +1217,100 @@
 
         <!-- the rating of this movie, -->
         <imagetype name="userratingstate_background" from="base_rating_background">
-            <position>645,491</position>
+            <position>635,503</position>
         </imagetype>
 
         <statetype name="userratingstate" from="base_rating">
-            <position>645,491</position>
+            <position>635,503</position>
         </statetype>
 
         <shape name="title_separator" from="base_separator_shape">
-            <area>195,560,550,1</area>
+            <area>175,565,550,1</area>
         </shape>
 
         <textarea name="description" from="base_textarea">
-            <area>195,577,550,120</area>
-            <font>text</font>
+            <area>175,577,550,120</area>
+            <font>text_small</font>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>left,top</align>
         </textarea>
 
-        <shape name="info_separator" from="base_separator_shape">
-            <area>770,485,1,190</area>
+        <!-- this is the background for the information at the bottom -->
+        <shape name="video_details_background" from="base_background_shape">
+            <area>765,485,490,210</area>
         </shape>
 
         <!-- show the name of the different labels -->
         <textarea name="director_label" from="base_textarea">
-            <area>790,485,150,30</area>
+            <area>755,495,150,30</area>
             <align>right,vcenter</align>
+            <font>text_small</font>
             <value>Director:</value>
         </textarea>
         <textarea name="cast_label" from="director_label">
-            <position>790,516</position>
+            <position>755,526</position>
             <value>Cast:</value>
         </textarea>
         <textarea name="season_label" from="director_label">
-            <position>790,547</position>
+            <position>755,595</position>
             <value>Season:</value>
         </textarea>
         <textarea name="episode_label" from="director_label">
-            <position>940,547</position>
+            <position>955,595</position>
             <value>Episode:</value>
         </textarea>
         <textarea name="year_label" from="director_label">
-            <position>790,578</position>
+            <position>755,625</position>
             <value>Year:</value>
         </textarea>
         <textarea name="length_label" from="director_label">
-            <position>790,609</position>
+            <position>955,625</position>
             <value>Runtime:</value>
         </textarea>
-        <textarea name="level_label" from="base_textarea">
-            <area>790,643,300,30</area>
+        <textarea name="level_label" from="director_label">
+            <area>755,655,320,30</area>
             <align>right,vcenter</align>
             <value>Parental Level:</value>
         </textarea>
 
         <!-- show the values to the different labels -->
-        <textarea name="director">
-            <area>950,485,290,30</area>
-            <font>text</font>
+        <textarea name="director" from="base_textarea">
+            <area>910,495,180,30</area>
             <cutdown>yes</cutdown>
-            <align>vcenter</align>
+            <align>left,vcenter</align>
+            <font>text_small</font>
         </textarea>
-        <textarea name="cast" from="director">
-            <position>950,516</position>
+        <textarea name="cast" from="base_textarea">
+            <area>910,530,300,70</area>
+            <align>left,top</align>
+            <font>text_small</font>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
         </textarea>
         <textarea name="season" from="director">
-            <position>950,547</position>
+            <position>910,595</position>
         </textarea>
         <textarea name="episode" from="director">
-            <position>1100,547</position>
+            <position>1110,595</position>
         </textarea>
         <textarea name="year" from="director">
-            <position>950,578</position>
+            <position>910,625</position>
         </textarea>
         <textarea name="length" from="director">
-            <position>950,609</position>
+            <position>1110,625</position>
         </textarea>
         <imagetype name="videolevel_background" from="base_parentallevel_background">
-            <position>1100,649</position>
+            <position>1080,660</position>
         </imagetype>
         <statetype name="videolevel" from="base_parentallevel">
-            <position>1100,649</position>
+            <position>1080,660</position>
         </statetype>
-    </window>
+        <textarea name="rating" from="base_textarea">
+            <area>1170,655,70,30</area>
+            <align>right,vcenter</align>
+        </textarea>
+	</window>
 
 
 
