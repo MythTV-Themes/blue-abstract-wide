@@ -2,6 +2,164 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
+    <!-- Shows the available downloaded icons in 
+        a lists where the user can select them -->
+    <window name="iconimport">
+
+        <!-- the background image -->
+        <imagetype name="background">
+            <area>0,0,1280,720</area>
+            <filename>images/background.png</filename>
+        </imagetype>
+       
+        <shape name="heading_background" from="base_background_shape">
+            <area>-4,-4,450,36</area>
+        </shape>
+        <textarea name="name" from="base_textarea">
+            <area>0,0,446,30</area>
+            <align>allcenter</align>
+        </textarea>
+        
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- this is the background around the file browser -->
+        <shape name="iconbrowser_background" from="base_background_shape">
+            <area>210,80,855,600</area>
+        </shape>
+
+        <!-- the search text and the input field -->
+        <textarea name="manualsearch_label" from="base_textarea">
+            <area>230,100,170,40</area>
+            <align>right,vcenter</align>
+            <cutdown>yes</cutdown>
+            <value>Search terms:</value>
+        </textarea>
+        <textedit name="manualsearch" from="base_textedit">
+            <position>410,100</position>
+        </textedit>
+
+        <button name="search" from="base_button">
+            <position>895,100</position>
+            <value>Search</value>
+        </button>
+        
+        <!-- the text with the search results -->
+        <textarea name="status_label" from="base_textarea">
+            <area>230,150,170,40</area>
+            <align>right,vcenter</align>
+            <value>Result:</value>
+        </textarea>
+        <textarea name="status" from="base_textarea">
+            <area>410,150,630,40</area>
+        </textarea>
+
+        <!-- separates the results from the icon list -->
+        <shape name="iconbrowser_separator" from="base_separator_shape">
+            <area>230,200,815,1</area>
+        </shape>
+
+        <!-- the list of the available icons -->
+        <buttonlist name="icons" from="base_buttonlist_wide">
+            <area>230,220,815,380</area>
+            <layout>grid</layout>
+            <spacing>18</spacing>
+            <wrapstyle>flowing</wrapstyle>
+            <buttonarea>0,0,815,380</buttonarea>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,116,170</area>
+
+                    <!-- this is a background and the name of the icon behind its image -->
+                    <shape name="icon_background_shape" from="base_background_shape">
+                        <area>2,2,114,168</area>
+                        <line color="#000000" alpha="0" width="1" />
+                    </shape>
+                    <textarea name="buttontext">
+                        <area>6,6,104,158</area>
+                        <font>text_small</font>
+                        <align>allcenter</align>
+                        <cutdown>yes</cutdown>
+                        <multiline>yes</multiline>
+                    </textarea>
+
+                    <!-- this is the icon image that will be shown if its
+                        available, otherwise only the border is visible -->
+                    <imagetype name="icon">
+                        <area>1,1,114,168</area>
+                        <preserveaspect>true</preserveaspect>
+                        <shape name="icon_border_shape">
+                            <area>0,0,116,170</area>
+                            <type>roundbox</type>
+                            <line color="#AAAAAA" alpha="255" width="1" />
+                            <cornerradius>1</cornerradius>
+                        </shape>
+                    </imagetype>
+
+                </state>
+
+                <state name="inactive" from="active" />
+                    
+                <state name="selectedactive" from="active">
+                    <area>-27,-39,170,248</area>
+
+                    <shape name="icon_background_shape" from="base_background_shape_dark">
+                        <area>2,2,168,246</area>
+                        <line color="#000000" alpha="0" width="1" />
+                    </shape>
+                    <textarea name="buttontext">
+                        <area>6,6,158,236</area>
+                        <font>text_small</font>
+                        <align>allcenter</align>
+                        <cutdown>yes</cutdown>
+                        <multiline>yes</multiline>
+                    </textarea>
+
+                    <imagetype name="icon">
+                        <area>1,1,168,246</area>
+                        <preserveaspect>true</preserveaspect>
+                        <shape name="icon_border_shape">
+                            <area>0,0,170,248</area>
+                            <type>roundbox</type>
+                            <line color="#AAAAAA" alpha="255" width="2" />
+                            <cornerradius>2</cornerradius>
+                        </shape>
+                    </imagetype>
+                </state>
+                
+                <state name="selectedinactive" from="active" />
+            </statetype>
+            
+            <!-- Show the arrow image that indicates that there are
+                more menu entries above the first visible menu -->
+            <statetype name="upscrollarrow">
+                <position>795,0</position>
+            </statetype>
+            <statetype name="downscrollarrow">
+                <position>795,342</position>
+            </statetype>
+
+        </buttonlist>
+
+        <!-- separates the result text from the buttons -->
+        <shape name="button_separator" from="base_separator_shape">
+            <area>230,600,815,1</area>
+        </shape>
+
+        <!-- buttons -->
+        <button name="skip" from="base_button">
+            <position>585,620</position>
+            <value>Cancel</value>
+        </button>
+        
+    </window>
+    
+    
+    
+    
+    
     <!-- Shows the available channels in a lists where
         the user can select them and download the logos, edit them,... -->
     <window name="channeloverview">
