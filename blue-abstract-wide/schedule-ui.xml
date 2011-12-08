@@ -627,43 +627,68 @@
 
         <!-- the selection of available recording groups -->
         <buttonlist name="groups" from="base_buttonlist">
-            <area>46,81,350,312</area>
+            <area>46,81,200,312</area>
+            <buttonarea>0,0,200,315</buttonarea>
             <spacing>4</spacing>
             <wrapstyle>items</wrapstyle>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_inactive.png</filename>
+                        <area>0,0,200,40</area>
+                    </imagetype>
+                </state>
+                <state name="inactive" from="active"/>
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,200,40</area>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,200,40</area>
+                    </imagetype>
+                </state>
+            </statetype>
         </buttonlist>
 
         <buttonlist name="schedules" from="base_buttonlist_very_wide">
-            <area>414,81,820,312</area>
-            <buttonarea>0,0,820,315</buttonarea>
+            <area>264,81,970,312</area>
+            <buttonarea>0,0,970,315</buttonarea>
             <spacing>4</spacing>
             <statetype name="buttonitem">
                 <state name="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_inactive.png</filename>
+                        <area>0,0,970,40</area>
+                    </imagetype>
                     <textarea name="shortstarttimedate" from="buttontext">
-                        <area>8,5,154,30</area>
+                        <area>8,5,204,30</area>
                     </textarea>
                     <textarea name="channel" from="shortstarttimedate">
-                        <area>170,5,140,30</area>
-                        <align>allcenter</align>
+                        <area>220,5,160,30</area>
                     </textarea>
                     <textarea name="titlesubtitle" from="shortstarttimedate">
-                        <area>340,5,420,30</area>
+                        <area>410,5,500,30</area>
                         <cutdown>yes</cutdown>
                     </textarea>
                     <textarea name="card" from="shortstarttimedate">
-                        <area>780,5,30,30</area>
+                        <area>930,5,30,30</area>
                     </textarea>
                 </state>
                 <state name="inactive" from="active"/>
                 <state name="selectedactive" from="active">
                     <imagetype name="buttonbackground" from="base_image_selectedactive">
                         <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,820,40</area>
+                        <area>0,0,970,40</area>
                     </imagetype>
                 </state>
                 <state name="selectedinactive" from="active">
                     <imagetype name="buttonbackground" from="base_image_selectedinactive">
                         <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,820,40</area>
+                        <area>0,0,970,40</area>
                     </imagetype>
                 </state>
             </statetype>
