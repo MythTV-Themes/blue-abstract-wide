@@ -62,6 +62,29 @@
                         </shape>
                     </imagetype>
                     
+                    <!-- Show an additional background image if required. This is
+                    primarily useful when the item is a folder and a folder background
+                    image shall be shown behind the small preview thumbnail images -->
+                    <statetype name="background">
+                        <position>0,0</position>
+                        <state name="folder">
+                            <imagetype name="icon">
+                                <area>2,2,160,120</area>
+                                <filename>images/shared/folder.png</filename>
+                                <preserveaspect>yes</preserveaspect>
+                            </imagetype>
+                        </state>
+                        <state name="image">
+                        </state>
+                        <state name="video">
+                            <imagetype name="icon">
+                                <area>2,2,160,120</area>
+                                <filename>images/shared/video.png</filename>
+                                <preserveaspect>yes</preserveaspect>
+                            </imagetype>
+                        </state>
+                    </statetype>
+
                     <!-- this shows the actual image -->
                     <imagetype name="buttonimage">
                         <area>2,2,160,120</area>
@@ -166,6 +189,29 @@
                         </shape>
                     </imagetype>
                     
+                    <!-- Show an additional background image if required. This is
+                    primarily useful when the item is a folder and a folder background
+                    image shall be shown behind the small preview thumbnail images -->
+                    <statetype name="background">
+                        <position>0,0</position>
+                        <state name="folder">
+                            <imagetype name="icon">
+                                <area>2,2,235,176</area>
+                                <filename>images/shared/folder_open.png</filename>
+                                <preserveaspect>yes</preserveaspect>
+                            </imagetype>
+                        </state>
+                        <state name="image">
+                        </state>
+                        <state name="video">
+                            <imagetype name="icon">
+                                <area>2,2,235,176</area>
+                                <filename>images/shared/video.png</filename>
+                                <preserveaspect>yes</preserveaspect>
+                            </imagetype>
+                        </state>
+                    </statetype>
+
                     <!-- this shows the actual image -->
                     <imagetype name="buttonimage">
                         <area>2,2,235,176</area>
