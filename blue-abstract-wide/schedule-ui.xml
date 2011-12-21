@@ -1816,23 +1816,22 @@
             <buttonarea>0,0,1190,315</buttonarea>
             <statetype name="buttonitem">
                 <state name="active">
-                    <textarea name="rectype" from="buttontext">
-                        <area>8,5,20,30</area>
-                        <align>allcenter</align>
+                    <textarea name="rectype" from="base_textarea">
+                        <area>8,5,200,30</area>
                     </textarea>
-                    <textarea name="title" from="buttontext">
-                        <area>60,5,590,30</area>
+                    <textarea name="title" from="base_textarea">
+                        <area>210,5,430,30</area>
                         <align>left,vcenter</align>
                     </textarea>
-                    <textarea name="callsign" from="buttontext">
+                    <textarea name="callsign" from="base_textarea">
                         <area>660,5,100,30</area>
                         <align>right,vcenter</align>
                     </textarea>
-                    <textarea name="lastrecorded" from="buttontext">
+                    <textarea name="lastrecorded" from="base_textarea">
                         <area>770,5,280,30</area>
                         <align>right,vcenter</align>
                     </textarea>
-                    <textarea name="finalpriority" from="buttontext">
+                    <textarea name="finalpriority" from="base_textarea">
                         <area>1120,5,40,30</area>
                         <align>right,vcenter</align>
                     </textarea>
@@ -2297,13 +2296,18 @@
             <area>345,572,300,30</area>
             <value>Recording Rule Active</value>
         </textarea>
+        <button name="filters" from="base_button_wide">
+            <position>655,567</position>
+            <value>Schedule filters</value>
+            <helptext></helptext>
+        </button>
 
         <shape name="button_separator" from="base_separator_shape">
-            <area>305,615,670,1</area>
+            <area>305,621,670,1</area>
         </shape>
 
         <button name="back" from="base_button">
-            <position>565,635</position>
+            <position>565,638</position>
             <value>Back</value>
         </button>
     </window>
@@ -2369,15 +2373,19 @@
         </textarea>
 
         <shape name="schedule_button_background" from="base_background_shape">
-            <area>285,281,710,414</area>
+            <area>445,281,390,424</area>
         </shape>
 
         <buttonlist name="filters" from="base_buttonlist">
-            <area>305,301,350,300</area>
+            <area>465,301,350,311</area>
         </buttonlist>
 
+        <shape name="button_separator" from="base_separator_shape">
+            <area>465,625,350,1</area>
+        </shape>
+
         <button name="back" from="base_button">
-            <position>565,635</position>
+            <position>565,645</position>
             <value>Back</value>
         </button>
     </window>
