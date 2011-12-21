@@ -25,7 +25,7 @@
         <!-- This is the internal buttonlist that is shown on the left -->
         <buttonlist name="category" from="base_buttonlist">
             <area>50,160,300,315</area>
-            <triggerevent context="Global" action="ESCAPE">UP</triggerevent>
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
         </buttonlist>
 
         <!-- This is the internal buttonlist that is
