@@ -2048,7 +2048,7 @@
         <shape name="darken_background" from="base_darken_background"/>
 
         <shape name="dialog_background" from="base_background_shape_dark">
-            <area>300,90,690,530</area>
+            <area>300,90,690,535</area>
         </shape>
 
         <!-- the title of the window -->
@@ -2067,20 +2067,19 @@
         </textedit>
 
         <buttonlist name="itemlist" from="base_buttonlist_wide">
-            <area>320,260,650,265</area>
-            <showarrow>no</showarrow>
+            <area>320,260,650,270</area>
         </buttonlist>
 
         <shape name="button_separator" from="base_separator_shape">
-            <area>320,540,650,1</area>
+            <area>320,545,650,1</area>
         </shape>
 
         <button name="ok" from="base_button">
-            <position>452,560</position>
+            <position>452,565</position>
             <value>OK</value>
         </button>
         <button name="cancel" from="base_button">
-            <position>669,560</position>
+            <position>669,565</position>
             <value>Cancel</value>
         </button>
     </window>
