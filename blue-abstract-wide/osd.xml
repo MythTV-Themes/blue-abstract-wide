@@ -542,7 +542,7 @@
             <state name="MP2">
                 <textarea name="audiocodec_label" from="base_textarea">
                     <font>text_small</font>
-                    <area>980,440,80,20</area>
+                    <area>1080,440,80,20</area>
                     <value>MP2</value>
                 </textarea>
             </state>
