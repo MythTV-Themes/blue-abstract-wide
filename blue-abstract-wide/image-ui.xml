@@ -43,6 +43,15 @@
             <cutdown>yes</cutdown>
         </textarea>
 
+        <progressbar name="thumbprogressbar" from="base_progressbar_flat">
+            <position>550,85</position>
+        </progressbar>
+
+        <textarea name="thumbprogresstext" from="base_textarea">
+            <area>440,85,100,20</area>
+            <align>right,vcenter</align>
+        </textarea>
+
         <!-- the list that shows the images in the screen -->
         <buttonlist name="images">
             <area>45,155,1170,535</area>
@@ -55,33 +64,34 @@
                 <state name="active">
                     <area>0,0,164,124</area>
                     
-                    <imagetype name="buttonimage_background">
-                        <shape name="buttonimage_background_shape" from="base_background_shape">
-                            <area>0,0,164,124</area>
-                            <line color="#000000" alpha="0" width="1" />
-                        </shape>
-                    </imagetype>
-                    
+                    <!-- This is the dark background behind each image -->
+                    <shape name="buttonimage_background_shape" from="base_background_shape">
+                        <area>0,0,164,124</area>
+                        <line color="#000000" alpha="0" width="1" />
+                    </shape>
+
                     <!-- Show an additional background image if required. This is
                     primarily useful when the item is a folder and a folder background
                     image shall be shown behind the small preview thumbnail images -->
-                    <statetype name="background">
+                    <statetype name="buttonbackground">
                         <position>0,0</position>
-                        <state name="folder">
+                        <state name="subfolder">
                             <imagetype name="icon">
                                 <area>2,2,160,120</area>
                                 <filename>images/shared/folder.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
+                        <state name="upfolder">
+                            <imagetype name="icon">
+                                <area>2,2,160,120</area>
+                                <filename>images/shared/folder_up.png</filename>
+                                <preserveaspect>yes</preserveaspect>
+                            </imagetype>
+                        </state>
                         <state name="image">
                         </state>
                         <state name="video">
-                            <imagetype name="icon">
-                                <area>2,2,160,120</area>
-                                <filename>images/shared/video.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
                         </state>
                     </statetype>
 
@@ -91,18 +101,17 @@
                         <preserveaspect>yes</preserveaspect>
                     </imagetype>
 
-                    <imagetype name="buttonimage_border">
-                        <shape name="buttonimage_border_shape" from="base_background_shape">
-                            <area>0,0,164,124</area>
-                            <fill color="#000000" alpha="0" />
-                        </shape>
-                    </imagetype>
-                    
+                    <!-- This is the border around the image. Its placed here
+                         draw over the edges of the image -->
+                    <shape name="buttonimage_border_shape" from="base_background_shape">
+                        <area>0,0,164,124</area>
+                        <fill color="#000000" alpha="0" />
+                    </shape>
+
                     <!-- shows that the image was marked/selected and
                         might be manipulated with other images -->
                     <statetype name="buttoncheck">
                         <position>2,2</position>
-                        <showempty>yes</showempty>
                         <state type="full">
                             <shape name="marked_background" from="base_background_shape">
                                 <area>0,0,33,33</area>
@@ -114,21 +123,9 @@
                         </state>
                     </statetype>
 
-                    <!-- shows the name of the currently active file.
-                        this is the same as the title in the top -->
-                    <!--<shape name="buttonimage_shape" from="base_background_shape">
-                        <area>1,1,162,26</area>
-                        <type>box</type>
-                        <line color="#000000" alpha="0" width="1" />
-                    </shape>
-                    <textarea name="buttontext">
-                        <area>0,4,164,20</area>
-                        <font>text_very_small</font>
-                        <align>allcenter</align>
-                        <cutdown>yes</cutdown>
-                    </textarea>-->
-
-                    <statetype name="nodestate">
+                    <!-- Shows an indication if a file or folder is hidden
+                         or not. It will be marked and darkened -->
+                    <statetype name="buttonstate">
                         <position>0,0</position>
                         <state name="hidden">
                             <shape name="hidden_background_shape" from="base_background_shape_dark">
@@ -140,9 +137,9 @@
                         </state>
                     </statetype>
 
-                    <!-- show a folder above the image if its a folder and not an image.
-                        the node is a folder and it is currently not selected -->
-                    <statetype name="nodetype">
+                    <!-- show additional information about the selected item.
+                         Shows a small folder or video icon -->
+                    <statetype name="buttontype">
                         <position>0,0</position>
                         <state name="subfolder">
                             <shape name="buttonimage_shape" from="base_background_shape">
@@ -168,69 +165,71 @@
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
+                        <state name="video">
+                            <shape name="buttonimage_shape" from="base_background_shape">
+                                <area>120,80,43,43</area>
+                                <line color="#000000" alpha="0" width="1" />
+                            </shape>
+                            <imagetype name="icon">
+                                <area>122,83,37,37</area>
+                                <filename>images/shared/file_video.png</filename>
+                                <preserveaspect>yes</preserveaspect>
+                            </imagetype>
+                        </state>
+                        <state name="image">
+                        </state>
                     </statetype>
 
                     <!-- show how many images / directories are in this directory -->
                     <textarea name="childcount" from="base_textarea">
-                        <area>37,95,60,30</area>
+                        <area>37,95,90,30</area>
                         <font>text_small</font>
                         <align>left,vcenter</align>
                     </textarea>
                 </state>
 
-
                 <state name="selectedactive">
                     <area>-38,-28,240,180</area>
 
-                    <imagetype name="buttonimage_background">
-                        <shape name="buttonimage_background_shape" from="base_background_shape_dark">
-                            <area>0,0,240,180</area>
-                            <line color="#000000" alpha="0" width="1" />
-                        </shape>
-                    </imagetype>
-                    
-                    <!-- Show an additional background image if required. This is
-                    primarily useful when the item is a folder and a folder background
-                    image shall be shown behind the small preview thumbnail images -->
-                    <statetype name="background">
+                    <shape name="buttonimage_background_shape" from="base_background_shape">
+                        <area>0,0,240,180</area>
+                        <line color="#000000" alpha="0" width="1" />
+                    </shape>
+
+                    <statetype name="buttonbackground">
                         <position>0,0</position>
-                        <state name="folder">
+                        <state name="subfolder">
                             <imagetype name="icon">
                                 <area>2,2,235,176</area>
-                                <filename>images/shared/folder_open.png</filename>
+                                <filename>images/shared/folder.png</filename>
+                                <preserveaspect>yes</preserveaspect>
+                            </imagetype>
+                        </state>
+                        <state name="upfolder">
+                            <imagetype name="icon">
+                                <area>2,2,235,176</area>
+                                <filename>images/shared/folder_up_open.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
                         <state name="image">
                         </state>
                         <state name="video">
-                            <imagetype name="icon">
-                                <area>2,2,235,176</area>
-                                <filename>images/shared/video.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
                         </state>
                     </statetype>
 
-                    <!-- this shows the actual image -->
                     <imagetype name="buttonimage">
                         <area>2,2,235,176</area>
                         <preserveaspect>yes</preserveaspect>
                     </imagetype>
 
-                    <imagetype name="buttonimage_border">
-                        <shape name="buttonimage_border_shape" from="base_background_shape">
-                            <area>0,0,240,180</area>
-                            <fill color="#000000" alpha="0" />
-                            <line color="#AAAAAA" alpha="150" width="2" />
-                        </shape>
-                    </imagetype>
-                    
-                    <!-- shows that the image was marked/selected and
-                        might be manipulated with other images -->
+                    <shape name="buttonimage_border_shape" from="base_background_shape">
+                        <area>0,0,240,180</area>
+                        <fill color="#000000" alpha="0" />
+                    </shape>
+
                     <statetype name="buttoncheck">
                         <position>2,2</position>
-                        <showempty>yes</showempty>
                         <state type="full">
                             <shape name="marked_background" from="base_background_shape">
                                 <area>0,0,33,33</area>
@@ -242,25 +241,11 @@
                         </state>
                     </statetype>
 
-                    <!-- shows the name of the currently active file.
-                        this is the same as the title in the top -->
-                    <!--<shape name="buttonimage_shape" from="base_background_shape">
-                        <area>1,1,238,26</area>
-                        <type>box</type>
-                        <line color="#000000" alpha="0" width="1" />
-                    </shape>
-                    <textarea name="buttontext">
-                        <area>0,4,240,20</area>
-                        <font>text_very_small</font>
-                        <align>allcenter</align>
-                        <cutdown>yes</cutdown>
-                    </textarea>-->
-
-                    <statetype name="nodestate">
+                    <statetype name="buttonstate">
                         <position>0,0</position>
                         <state name="hidden">
                             <shape name="hidden_background_shape" from="base_background_shape_dark">
-                                <area>1,1,237,178</area>
+                                <area>1,1,162,122</area>
                                 <line color="#000000" alpha="0" width="1" />
                             </shape>
                         </state>
@@ -268,24 +253,24 @@
                         </state>
                     </statetype>
 
-                    <!-- show a folder above the image if its a folder and not an image.
-                        the node is a folder and it is currently not selected -->
-                    <statetype name="nodetype">
+                    <statetype name="buttontype">
                         <position>0,0</position>
                         <state name="subfolder">
                             <shape name="buttonimage_shape" from="base_background_shape">
                                 <area>1,139,238,40</area>
+                                <type>box</type>
                                 <line color="#000000" alpha="0" width="1" />
                             </shape>
                             <imagetype name="icon">
                                 <area>9,144,32,32</area>
-                                <filename>images/shared/folder_open.png</filename>
+                                <filename>images/shared/folder.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
                         <state name="upfolder">
                             <shape name="buttonimage_shape" from="base_background_shape">
                                 <area>1,139,238,40</area>
+                                <type>box</type>
                                 <line color="#000000" alpha="0" width="1" />
                             </shape>
                             <imagetype name="icon">
@@ -294,11 +279,23 @@
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
+                        <state name="video">
+                            <shape name="buttonimage_shape" from="base_background_shape">
+                                <area>181,121,58,58</area>
+                                <line color="#000000" alpha="0" width="1" />
+                            </shape>
+                            <imagetype name="icon">
+                                <area>183,124,52,52</area>
+                                <filename>images/shared/video.png</filename>
+                                <preserveaspect>yes</preserveaspect>
+                            </imagetype>
+                        </state>
+                        <state name="image">
+                        </state>
                     </statetype>
 
-                    <!-- show how many images / directories are in this directory -->
                     <textarea name="childcount" from="base_textarea">
-                        <area>49,145,60,30</area>
+                        <area>49,145,90,30</area>
                         <font>text_small</font>
                         <align>left,vcenter</align>
                     </textarea>
