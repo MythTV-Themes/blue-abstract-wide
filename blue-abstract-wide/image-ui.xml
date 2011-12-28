@@ -226,6 +226,7 @@
                     <shape name="buttonimage_border_shape" from="base_background_shape">
                         <area>0,0,240,180</area>
                         <fill color="#000000" alpha="0" />
+                        <line color="#AAAAAA" alpha="150" width="2" />
                     </shape>
 
                     <statetype name="buttoncheck">
