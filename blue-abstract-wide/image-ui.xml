@@ -48,7 +48,7 @@
         </progressbar>
 
         <textarea name="thumbprogresstext" from="base_textarea">
-            <area>440,85,100,20</area>
+            <area>380,85,160,20</area>
             <align>right,vcenter</align>
         </textarea>
 
