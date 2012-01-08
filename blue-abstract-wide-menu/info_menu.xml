@@ -41,13 +41,4 @@
         <depends>mythweather</depends>
     </button>
 
-    <button>
-        <type>TV_STATUS</type>
-        <text>System Status</text>
-        <text lang="DE">Systemstatus</text>
-        <description>What your system is doing right now</description>
-        <description lang="DE">Informationen rund um MythTV</description>
-        <action>TV_STATUS</action>
-    </button>
-
 </mythmenu>
