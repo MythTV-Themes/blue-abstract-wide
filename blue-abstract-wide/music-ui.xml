@@ -871,10 +871,16 @@
         </shape>
 
         <textarea name="message" from="base_textarea">
-            <area>390,305,500,30</area>
+            <area>470,305,200,30</area>
             <font>text</font>
-            <align>allcenter</align>
+            <align>right,vcenter</align>
             <value>Volume</value>
+        </textarea>
+
+        <textarea name="volume" from="base_textarea">
+            <area>672,305,100,30</area>
+            <align>left,vcenter</align>
+            <template>: %VOLUMEPERCENT%</template>
         </textarea>
 
         <!-- separates the title and the progress bar -->
@@ -900,12 +906,6 @@
             <position>390,375</position>
         </progressbar>
 
-        <textarea name="volume" from="base_textarea">
-            <area>390,365,500,40</area>
-            <align>allcenter</align>
-            <template>%VOLUMEPERCENT%</template>
-        </textarea>
-        
     </window>
     
 
