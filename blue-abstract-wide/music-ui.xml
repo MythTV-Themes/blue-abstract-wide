@@ -2,6 +2,396 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
+
+    <!-- Shows the current playlist and more detailed information about
+         the current song. Also shows the coverart and the visualizer -->
+    <window name="playlistview" include="base_music.xml">
+
+        <imagetype name="background" from="base_background"/>
+
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Playlist View </value>
+            </textarea>
+        </textarea>
+
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="playlistview_background" from="base_background_shape">
+            <area>25,60,1230,360</area>
+        </shape>
+
+<!-- moving track state -->
+
+        <textarea name="notracks" from="base_textarea">
+            <area>25,60,1230,360</area>
+            <multiline>yes</multiline>
+            <align>allcenter</align>
+            <value>You haven't selected any tracks to play</value>
+        </textarea>
+
+        <!-- The active playlist with more details about the tracks -->
+        <buttonlist name="currentplaylist" from="base_buttonlist_extra_wide">
+            <area>45,80,1190,330</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <shape name="buttonimage_background"
+                           from="base_background_shape">
+                        <area>3,3,33,33</area>
+                    </shape>
+                    <imagetype name="buttonimage">
+                        <area>4,4,31,31</area>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
+
+                    <textarea name="tracknum" from="base_textarea">
+                        <area>90,0,50,35</area>
+                        <align>right,vcenter</align>
+                        <font>text_small</font>
+                        <cutdown>yes</cutdown>
+                        <template>%1 -</template>
+                    </textarea>
+                    <textarea name="title" from="tracknum">
+                        <area>150,0,340,20</area>
+                        <align>left,vcenter</align>
+                    </textarea>
+                    <textarea name="album" from="title">
+                        <area>150,20,340,20</area>
+                        <font>text_very_small</font>
+                    </textarea>
+                    <textarea name="artist" from="title">
+                        <area>490,5,230,30</area>
+                        <font>text_small</font>
+                    </textarea>
+                    <textarea name="genre" from="title">
+                        <area>730,5,200,30</area>
+                        <align>left,vcenter</align>
+                    </textarea>
+                    <textarea name="length" from="title">
+                        <area>900,5,120,30</area>
+                        <align>right,vcenter</align>
+                    </textarea>
+
+                    <imagetype name="ratingstate_background"
+                               from="base_rating_background">
+                        <position>1020,10</position>
+                    </imagetype>
+                    <statetype name="ratingstate" from="base_rating">
+                        <position>1020,10</position>
+                    </statetype>
+
+                    <statetype name="movestate" from="base_music_movestate">
+                        <position>1110,5</position>
+                    </statetype>
+                    <statetype name="playstate" from="base_music_playstate">
+                        <position>1150,5</position>
+                    </statetype>
+
+                </state>
+                <state name="inactive" from="active"/>
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,1190,40</area>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,1190,40</area>
+                    </imagetype>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <!-- Shows the playlist times, the repeat
+             and shuffle state and the player buttons -->
+        <textarea name="playlistposition" from="base_textarea">
+            <area>45,395,140,40</area>
+            <font>text_small</font>
+            <align>right,vcenter</align>
+        </textarea>
+
+        <textarea name="playlisttime" from="base_textarea">
+            <area>190,395,180,40</area>
+            <font>text_small</font>
+            <align>right,vcenter</align>
+        </textarea>
+
+        <statetype name="repeatstate" from="base_music_repeatstate">
+            <position>380,395</position>
+        </statetype>
+
+        <statetype name="shufflestate" from="base_music_shufflestate">
+            <position>430,395</position>
+        </statetype>
+
+        <group name="base_music_controls">
+            <position>500,395</position>
+        </group>
+
+        <!-- this is the background for the information at the bottom like
+             shows coverart, track details, ratings and the visualizer -->
+        <shape name="trackdetails_background" from="base_background_shape">
+            <area>25,430,1230,265</area>
+        </shape>
+
+        <!-- the coverart and the border around it -->
+        <shape name="coverart_shape" from="base_background_shape">
+            <area>45,450,225,225</area>
+        </shape>
+        <imagetype name="coverart">
+            <area>47,452,221,221</area>
+            <preserveaspect>yes</preserveaspect>
+        </imagetype>
+
+        <!-- the vertical separator -->
+        <shape name="coverart_separator" from="base_separator_shape">
+            <area>452,450,1,225</area>
+        </shape>
+
+        <textarea name="title" from="base_textarea">
+            <area>268,450,510,30</area>
+            <cutdown>yes</cutdown>
+        </textarea>
+        <textarea name="artist" from="base_textarea">
+            <area>268,500,510,30</area>
+            <font>text_small</font>
+        </textarea>
+        <textarea name="album" from="base_textarea">
+            <area>268,550,510,30</area>
+            <font>text_small</font>
+        </textarea>
+        <textarea name="nexttitle" from="base_textarea">
+            <area>268,600,510,30</area>
+            <font>text_small</font>
+        </textarea>
+
+        <progressbar name="progress" from="base_progressbar">
+            <position>268,650</position>
+        </progressbar>
+
+        <textarea name="time" from="base_textarea">
+            <area>568,600,140,30</area>
+            <font>text_small</font>
+        </textarea>
+
+        <imagetype name="ratingstate_background" from="base_rating_background">
+            <position>468,450</position>
+        </imagetype>
+        <statetype name="ratingstate" from="base_rating">
+            <position>468,450</position>
+        </statetype>
+
+        <textarea name="lastplayed" from="base_textarea">
+            <area>500,500,250,30</area>
+            <font>text_small</font>
+        </textarea>
+
+        <textarea name="playcount" from="base_textarea">
+            <area>500,550,220,30</area>
+            <font>text_small</font>
+            <template>Played %1 times</template>
+        </textarea>
+
+        <!-- the vertical separator -->
+        <shape name="visualizer_separator" from="base_separator_shape">
+            <area>832,450,1,225</area>
+        </shape>
+
+        <!-- the visualizer and the border around it -->
+        <shape name="visualizer_shape" from="base_background_shape">
+            <area>845,450,225,225</area>
+        </shape>
+        <textarea name="visualizername" from="base_textarea">
+            <area>847,452,221,221</area>
+            <align>allcenter</align>
+        </textarea>
+        <imagetype name="visualizer">
+            <area>847,452,221,221</area>
+            <preserveaspect>yes</preserveaspect>
+        </imagetype>
+
+    </window>
+
+
+
+
+
+
+    <!-- Shows the buttonlist tree at the top and the playlist information
+         at the bottom. The user can navigate and select / add music -->
+    <window name="playlisteditorview_tree" include="base_music.xml">
+
+        <imagetype name="background" from="base_background"/>
+
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Playlist Editor View </value>
+            </textarea>
+        </textarea>
+
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="playlisteditorview_background" from="base_background_shape">
+            <area>25,60,1230,360</area>
+        </shape>
+
+        <!-- shows path to current item -->
+        <textarea name="breadcrumbs" from="base_textarea">
+            <area>45,75,950,30</area>
+            <font>text_small</font>
+        </textarea>
+
+        <!-- shows current position -->
+        <textarea name="position" from="base_textarea">
+            <area>1000,75,190,30</area>
+            <align>right,vcenter</align>
+            <font>text_small</font>
+        </textarea>
+
+        <!-- shows the buttontree with the tracks, albums, ... -->
+        <buttontree name="playlist_tree">
+            <area>45,105,1190,300</area>
+            <numlists>3</numlists>
+            <buttonlist name="listtemplate">
+                <area>0,0,390,300</area>
+                <layout>vertical</layout>
+                <spacing>2</spacing>
+                <scrollstyle>free</scrollstyle>
+                <wrapstyle>selection</wrapstyle>
+                <buttonarea>0,0,100%,97%</buttonarea>
+
+                <!-- states that the buttonlist can have -->
+                <statetype name="buttonitem">
+
+                    <!-- active menu entry -->
+                    <state name="active">
+
+                        <imagetype name="buttonbackground" from="base_image_active">
+                            <filename>images/widgets/widget_inactive.png</filename>
+                            <area>0,0,390,36</area>
+                        </imagetype>
+
+                        <!-- the button's text -->
+                        <textarea name="buttontext">
+                            <area>8,3,340,30</area>
+                            <font>text_small</font>
+                            <cutdown>yes</cutdown>
+                            <align>left,vcenter</align>
+                        </textarea>
+
+                        <!-- settings when the button has also a checkbox -->
+                        <statetype name="buttoncheck">
+                            <position>353,3</position>
+                            <state type="off">
+                                <imagetype name="checkoff">
+                                    <filename>images/widgets/checkbox_off.png</filename>
+                                </imagetype>
+                            </state>
+                            <state type="half">
+                            <imagetype name="checkhalf">
+                                    <filename>images/widgets/checkbox_half.png</filename>
+                                </imagetype>
+                            </state>
+                            <state type="full">
+                                <imagetype name="checkfull">
+                                    <filename>images/widgets/checkbox_full.png</filename>
+                                </imagetype>
+                            </state>
+                        </statetype>
+
+                        <!-- indicates the button contains a submenu -->
+                        <imagetype name="buttonarrow" from="base_arrow_active">
+                            <position>361,4</position>
+                            <filename>images/shared/arrow_right.png</filename>
+                        </imagetype>
+                    </state>
+
+                    <!-- inactive menu entry -->
+                    <state name="inactive" from="active" />
+
+                    <!-- menu entry has been selected and is active -->
+                    <state name="selectedactive" from="active">
+                        <imagetype name="buttonbackground" from="base_image_selectedactive">
+                            <filename>images/widgets/widget_active.png</filename>
+                            <area>0,0,390,36</area>
+                        </imagetype>
+                        <imagetype name="buttonarrow" from="base_arrow_selectedactive">
+                            <position>361,4</position>
+                            <filename>images/shared/arrow_right.png</filename>
+                        </imagetype>
+                    </state>
+
+                    <!-- menu entry has been selected and is inactive -->
+                    <state name="selectedinactive" from="active">
+                        <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                            <filename>images/widgets/widget_active.png</filename>
+                            <area>0,0,390,36</area>
+                        </imagetype>
+                        <textarea name="buttontext">
+                            <font>text_inactive</font>
+                        </textarea>
+                        <imagetype name="buttonarrow" from="base_arrow_selectedinactive">
+                            <position>361,4</position>
+                            <filename>images/shared/arrow_right.png</filename>
+                        </imagetype>
+                    </state>
+                </statetype>
+
+                <!-- show arrows to indicates that there are
+                     more menu entries above the first visible menu -->
+                <statetype name="upscrollarrow">
+                    <position>335,97%</position>
+                    <state type="off">
+                        <imagetype name="upon" from="base_arrow_inactive">
+                            <filename>images/shared/arrow_up.png</filename>
+                        </imagetype>
+                    </state>
+                    <state type="full">
+                        <imagetype name="upoff" from="base_arrow_selectedactive">
+                            <filename>images/shared/arrow_up.png</filename>
+                        </imagetype>
+                    </state>
+                </statetype>
+
+                <!-- show arrows to indicates that there are
+                     more menu entries below the last visible menu -->
+                <statetype name="downscrollarrow">
+                    <position>360,97%</position>
+                    <state type="off">
+                        <imagetype name="dnon" from="base_arrow_inactive">
+                            <filename>images/shared/arrow_down.png</filename>
+                        </imagetype>
+                    </state>
+                    <state type="full">
+                        <imagetype name="dnoff" from="base_arrow_selectedactive">
+                            <filename>images/shared/arrow_down.png</filename>
+                        </imagetype>
+                    </state>
+                </statetype>
+            </buttonlist>
+        </buttontree>
+
+        <!-- shows the current playlist with some status information -->
+        <group name="playlist_group" from="base_music_playlist_group">
+            <position>0,410</position>
+        </group>
+
+
+    </window>
+
+
+
+
+
+
     <!-- shows the music in a three column list. Not required until the port
         to mythui is complete. -->
     <window name="musicplayer">
