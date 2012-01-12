@@ -34,77 +34,8 @@
         </textarea>
 
         <!-- The active playlist with more details about the tracks -->
-        <buttonlist name="currentplaylist" from="base_buttonlist_extra_wide">
-            <area>45,80,1190,330</area>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <shape name="buttonimage_background"
-                           from="base_background_shape">
-                        <area>3,3,33,33</area>
-                    </shape>
-                    <imagetype name="buttonimage">
-                        <area>4,4,31,31</area>
-                        <preserveaspect>true</preserveaspect>
-                    </imagetype>
-
-                    <textarea name="tracknum" from="base_textarea">
-                        <area>90,0,50,35</area>
-                        <align>right,vcenter</align>
-                        <font>text_small</font>
-                        <cutdown>yes</cutdown>
-                        <template>%1 -</template>
-                    </textarea>
-                    <textarea name="title" from="tracknum">
-                        <area>150,0,340,20</area>
-                        <align>left,vcenter</align>
-                    </textarea>
-                    <textarea name="album" from="title">
-                        <area>150,20,340,20</area>
-                        <font>text_very_small</font>
-                    </textarea>
-                    <textarea name="artist" from="title">
-                        <area>490,5,230,30</area>
-                        <font>text_small</font>
-                    </textarea>
-                    <textarea name="genre" from="title">
-                        <area>730,5,200,30</area>
-                        <align>left,vcenter</align>
-                    </textarea>
-                    <textarea name="length" from="title">
-                        <area>900,5,120,30</area>
-                        <align>right,vcenter</align>
-                    </textarea>
-
-                    <imagetype name="ratingstate_background"
-                               from="base_rating_background">
-                        <position>1020,10</position>
-                    </imagetype>
-                    <statetype name="ratingstate" from="base_rating">
-                        <position>1020,10</position>
-                    </statetype>
-
-                    <statetype name="movestate" from="base_music_movestate">
-                        <position>1110,5</position>
-                    </statetype>
-                    <statetype name="playstate" from="base_music_playstate">
-                        <position>1150,5</position>
-                    </statetype>
-
-                </state>
-                <state name="inactive" from="active"/>
-                <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,1190,40</area>
-                    </imagetype>
-                </state>
-                <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,1190,40</area>
-                    </imagetype>
-                </state>
-            </statetype>
+        <buttonlist name="currentplaylist" from="base_music_currentplaylist">
+            <area>45,80,1190,380</area>
         </buttonlist>
 
         <!-- Shows the playlist times, the repeat
@@ -170,7 +101,7 @@
             <font>text_small</font>
         </textarea>
 
-        <progressbar name="progress" from="base_progressbar">
+        <progressbar name="progress" from="base_progressbar_flat">
             <position>268,650</position>
         </progressbar>
 
@@ -240,28 +171,27 @@
         </textarea>
 
         <shape name="playlisteditorview_background" from="base_background_shape">
-            <area>25,60,1230,360</area>
+            <area>25,60,1230,345</area>
         </shape>
 
         <!-- shows path to current item -->
         <textarea name="breadcrumbs" from="base_textarea">
-            <area>45,75,950,30</area>
-            <font>text_small</font>
+            <area>46,75,950,30</area>
         </textarea>
 
         <!-- shows current position -->
         <textarea name="position" from="base_textarea">
-            <area>1000,75,190,30</area>
+            <area>1040,75,190,30</area>
             <align>right,vcenter</align>
-            <font>text_small</font>
         </textarea>
 
         <!-- shows the buttontree with the tracks, albums, ... -->
         <buttontree name="playlist_tree">
-            <area>45,105,1190,300</area>
+            <area>45,115,1190,275</area>
             <numlists>3</numlists>
+            <spacing>4</spacing>
             <buttonlist name="listtemplate">
-                <area>0,0,390,300</area>
+                <area>0,0,390,275</area>
                 <layout>vertical</layout>
                 <spacing>2</spacing>
                 <scrollstyle>free</scrollstyle>
@@ -381,9 +311,8 @@
 
         <!-- shows the current playlist with some status information -->
         <group name="playlist_group" from="base_music_playlist_group">
-            <position>0,410</position>
+            <position>0,430</position>
         </group>
-
 
     </window>
 
