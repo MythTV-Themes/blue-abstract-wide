@@ -21,13 +21,13 @@
         </textarea>
 
         <shape name="playlistview_background" from="base_background_shape">
-            <area>25,60,1230,360</area>
+            <area>25,60,1230,410</area>
         </shape>
 
 <!-- moving track state -->
 
         <textarea name="notracks" from="base_textarea">
-            <area>25,60,1230,360</area>
+            <area>25,60,1230,410</area>
             <multiline>yes</multiline>
             <align>allcenter</align>
             <value>You haven't selected any tracks to play</value>
@@ -35,114 +35,114 @@
 
         <!-- The active playlist with more details about the tracks -->
         <buttonlist name="currentplaylist" from="base_music_currentplaylist">
-            <area>45,80,1190,380</area>
+            <area>45,80,1190,355</area>
         </buttonlist>
 
         <!-- Shows the playlist times, the repeat
              and shuffle state and the player buttons -->
         <textarea name="playlistposition" from="base_textarea">
-            <area>45,395,140,40</area>
+            <area>45,430,140,30</area>
             <font>text_small</font>
-            <align>right,vcenter</align>
         </textarea>
 
         <textarea name="playlisttime" from="base_textarea">
-            <area>190,395,180,40</area>
+            <area>190,430,180,30</area>
             <font>text_small</font>
-            <align>right,vcenter</align>
         </textarea>
 
         <statetype name="repeatstate" from="base_music_repeatstate">
-            <position>380,395</position>
+            <position>380,430</position>
         </statetype>
 
         <statetype name="shufflestate" from="base_music_shufflestate">
-            <position>430,395</position>
+            <position>430,430</position>
         </statetype>
 
         <group name="base_music_controls">
-            <position>500,395</position>
+            <position>500,430</position>
         </group>
 
         <!-- this is the background for the information at the bottom like
              shows coverart, track details, ratings and the visualizer -->
         <shape name="trackdetails_background" from="base_background_shape">
-            <area>25,430,1230,265</area>
+            <area>25,490,1230,205</area>
         </shape>
 
         <!-- the coverart and the border around it -->
         <shape name="coverart_shape" from="base_background_shape">
-            <area>45,450,225,225</area>
+            <area>45,510,165,165</area>
         </shape>
         <imagetype name="coverart">
-            <area>47,452,221,221</area>
+            <area>47,512,161,161</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
 
         <!-- the vertical separator -->
         <shape name="coverart_separator" from="base_separator_shape">
-            <area>452,450,1,225</area>
+            <area>210,500,1,175</area>
         </shape>
 
         <textarea name="title" from="base_textarea">
-            <area>268,450,510,30</area>
+            <area>230,500,510,30</area>
             <cutdown>yes</cutdown>
         </textarea>
         <textarea name="artist" from="base_textarea">
-            <area>268,500,510,30</area>
+            <area>230,540,510,30</area>
             <font>text_small</font>
         </textarea>
         <textarea name="album" from="base_textarea">
-            <area>268,550,510,30</area>
+            <area>230,580,510,30</area>
             <font>text_small</font>
         </textarea>
         <textarea name="nexttitle" from="base_textarea">
-            <area>268,600,510,30</area>
+            <area>230,620,510,30</area>
             <font>text_small</font>
         </textarea>
 
         <progressbar name="progress" from="base_progressbar_flat">
-            <position>268,650</position>
+            <position>230,660</position>
         </progressbar>
 
         <textarea name="time" from="base_textarea">
-            <area>568,600,140,30</area>
+            <area>740,660,140,30</area>
             <font>text_small</font>
         </textarea>
 
         <imagetype name="ratingstate_background" from="base_rating_background">
-            <position>468,450</position>
+            <position>940,500</position>
         </imagetype>
         <statetype name="ratingstate" from="base_rating">
-            <position>468,450</position>
+            <position>940,500</position>
         </statetype>
 
         <textarea name="lastplayed" from="base_textarea">
-            <area>500,500,250,30</area>
+            <area>780,540,250,30</area>
             <font>text_small</font>
+            <align>right,vcenter</align>
         </textarea>
 
         <textarea name="playcount" from="base_textarea">
-            <area>500,550,220,30</area>
+            <area>780,580,250,30</area>
             <font>text_small</font>
+            <align>right,vcenter</align>
             <template>Played %1 times</template>
         </textarea>
 
         <!-- the vertical separator -->
         <shape name="visualizer_separator" from="base_separator_shape">
-            <area>832,450,1,225</area>
+            <area>1050,500,1,165</area>
         </shape>
 
         <!-- the visualizer and the border around it -->
         <shape name="visualizer_shape" from="base_background_shape">
-            <area>845,450,225,225</area>
+            <area>1070,500,165,165</area>
         </shape>
         <textarea name="visualizername" from="base_textarea">
-            <area>847,452,221,221</area>
+            <area>1072,502,161,161</area>
             <align>allcenter</align>
         </textarea>
         <imagetype name="visualizer">
-            <area>847,452,221,221</area>
+            <area>1072,502,161,161</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
 
