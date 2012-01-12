@@ -38,29 +38,37 @@
             <area>45,80,1190,355</area>
         </buttonlist>
 
+        <shape name="musiccontrols_background" from="base_background_shape">
+            <area>515,-4,260,42</area>
+        </shape>
+        <group name="musiccontrols" from="base_music_controls">
+            <position>525,2</position>
+        </group>
+
         <!-- Shows the playlist times, the repeat
              and shuffle state and the player buttons -->
         <textarea name="playlistposition" from="base_textarea">
-            <area>45,430,140,30</area>
+            <area>45,430,160,30</area>
             <font>text_small</font>
+            <align>allcenter</align>
         </textarea>
 
+        <progressbar name="playlistprogress" from="base_progressbar_flat">
+            <position>250,435</position>
+        </progressbar>
+
         <textarea name="playlisttime" from="base_textarea">
-            <area>190,430,180,30</area>
+            <area>765,430,200,30</area>
             <font>text_small</font>
         </textarea>
 
         <statetype name="repeatstate" from="base_music_repeatstate">
-            <position>380,430</position>
+            <position>1072,430</position>
         </statetype>
 
         <statetype name="shufflestate" from="base_music_shufflestate">
-            <position>430,430</position>
+            <position>1112,430</position>
         </statetype>
-
-        <group name="base_music_controls">
-            <position>500,430</position>
-        </group>
 
         <!-- this is the background for the information at the bottom like
              shows coverart, track details, ratings and the visualizer -->
@@ -79,50 +87,52 @@
 
         <!-- the vertical separator -->
         <shape name="coverart_separator" from="base_separator_shape">
-            <area>210,500,1,175</area>
+            <area>230,510,1,165</area>
         </shape>
 
         <textarea name="title" from="base_textarea">
-            <area>230,500,510,30</area>
+            <area>250,510,450,30</area>
             <cutdown>yes</cutdown>
         </textarea>
         <textarea name="artist" from="base_textarea">
-            <area>230,540,510,30</area>
+            <area>250,547,450,30</area>
             <font>text_small</font>
         </textarea>
         <textarea name="album" from="base_textarea">
-            <area>230,580,510,30</area>
+            <area>250,579,450,30</area>
             <font>text_small</font>
         </textarea>
         <textarea name="nexttitle" from="base_textarea">
-            <area>230,620,510,30</area>
-            <font>text_small</font>
+            <area>250,612,780,30</area>
+            <font>text_small_grey</font>
+            <template>Next: %NEXTTITLE% by %NEXTARTIST%</template>
         </textarea>
 
         <progressbar name="progress" from="base_progressbar_flat">
-            <position>230,660</position>
+            <position>250,652</position>
         </progressbar>
 
         <textarea name="time" from="base_textarea">
-            <area>740,660,140,30</area>
+            <area>765,650,140,20</area>
             <font>text_small</font>
         </textarea>
 
         <imagetype name="ratingstate_background" from="base_rating_background">
-            <position>940,500</position>
+            <position>941,512</position>
         </imagetype>
         <statetype name="ratingstate" from="base_rating">
-            <position>940,500</position>
+            <position>941,512</position>
         </statetype>
 
         <textarea name="lastplayed" from="base_textarea">
-            <area>780,540,250,30</area>
+            <area>728,547,300,30</area>
             <font>text_small</font>
             <align>right,vcenter</align>
+            <template>Last played: %1</template>
         </textarea>
 
         <textarea name="playcount" from="base_textarea">
-            <area>780,580,250,30</area>
+            <area>778,579,250,30</area>
             <font>text_small</font>
             <align>right,vcenter</align>
             <template>Played %1 times</template>
@@ -130,15 +140,15 @@
 
         <!-- the vertical separator -->
         <shape name="visualizer_separator" from="base_separator_shape">
-            <area>1050,500,1,165</area>
+            <area>1050,510,1,165</area>
         </shape>
 
         <!-- the visualizer and the border around it -->
         <shape name="visualizer_shape" from="base_background_shape">
-            <area>1070,500,165,165</area>
+            <area>1070,510,165,165</area>
         </shape>
         <textarea name="visualizername" from="base_textarea">
-            <area>1072,502,161,161</area>
+            <area>1072,512,161,161</area>
             <align>allcenter</align>
         </textarea>
         <imagetype name="visualizer">
@@ -162,7 +172,7 @@
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
-                <value>Playlist Editor View </value>
+                <value>Playlist Tree View </value>
             </textarea>
         </textarea>
 
@@ -176,18 +186,18 @@
 
         <!-- shows path to current item -->
         <textarea name="breadcrumbs" from="base_textarea">
-            <area>46,75,950,30</area>
+            <area>48,75,950,30</area>
         </textarea>
 
         <!-- shows current position -->
         <textarea name="position" from="base_textarea">
-            <area>1040,75,190,30</area>
+            <area>1045,75,190,30</area>
             <align>right,vcenter</align>
         </textarea>
 
         <!-- shows the buttontree with the tracks, albums, ... -->
         <buttontree name="playlist_tree">
-            <area>45,115,1190,275</area>
+            <area>47,115,1190,275</area>
             <numlists>3</numlists>
             <spacing>4</spacing>
             <buttonlist name="listtemplate">
@@ -313,7 +323,287 @@
         <group name="playlist_group" from="base_music_playlist_group">
             <position>0,430</position>
         </group>
+    </window>
 
+
+
+
+
+
+    <window name="playlisteditorview_gallery" include="base_music.xml">
+
+        <imagetype name="background" from="base_background"/>
+
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Playlist Gallery View </value>
+            </textarea>
+        </textarea>
+
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="playlisteditorview_background" from="base_background_shape">
+            <area>25,60,1230,345</area>
+        </shape>
+
+        <!-- shows path to current item -->
+        <textarea name="breadcrumbs" from="base_textarea">
+            <area>48,75,950,30</area>
+        </textarea>
+
+        <!-- shows current position -->
+        <textarea name="position" from="base_textarea">
+            <area>1045,75,190,30</area>
+            <align>right,vcenter</align>
+        </textarea>
+
+        <buttontree name="playlist_tree">
+            <area>47,115,1190,272</area>
+            <numlists>1</numlists>
+            <spacing>4</spacing>
+            <buttonlist name="listtemplate">
+                <buttonarea>0,0,1190,272</buttonarea>
+                <layout>grid</layout>
+                <spacing>9</spacing>
+                <statetype name="buttonitem">
+
+                    <state name="active">
+                        <area>0,0,124,124</area>
+
+                        <!-- This is the dark background behind each image -->
+                        <shape name="buttonimage_background_shape" from="base_background_shape">
+                            <area>0,0,124,124</area>
+                            <line color="#000000" alpha="0" width="1" />
+                        </shape>
+
+                        <!-- this shows the actual image -->
+                        <imagetype name="buttonimage">
+                            <area>2,2,120,120</area>
+                            <preserveaspect>yes</preserveaspect>
+                        </imagetype>
+
+                        <!-- This is the border around the image. Its placed here
+                             draw over the edges of the image -->
+                        <shape name="buttonimage_border_shape" from="base_background_shape">
+                            <area>0,0,124,124</area>
+                            <fill color="#000000" alpha="0" />
+                        </shape>
+
+                        <!-- shows that the image was marked/selected and
+                            might be manipulated with other images -->
+                        <statetype name="buttoncheck">
+                            <position>2,2</position>
+                            <state type="full">
+                                <shape name="marked_background" from="base_background_shape">
+                                    <area>0,0,33,33</area>
+                                    <line color="#000000" alpha="0" width="1" />
+                                </shape>
+                                <imagetype name="marked">
+                                    <filename>images/shared/file_marked.png</filename>
+                                </imagetype>
+                            </state>
+                        </statetype>
+
+                        <shape name="buttontext_shape" from="base_background_shape">
+                            <area>1,83,122,40</area>
+                            <type>box</type>
+                            <line color="#000000" alpha="0" width="1" />
+                        </shape>
+                        <textarea name="buttontext" from="base_textarea">
+                            <area>6,83,112,40</area>
+                            <font>text_very_small</font>
+                            <multiline>yes</multiline>
+                            <align>allcenter</align>
+                        </textarea>
+
+                    </state>
+
+                    <!-- inactive menu entry -->
+                    <state name="inactive" from="active" />
+
+                    <!-- menu entry has been selected and is active -->
+                    <state name="selectedactive">
+                        <area>-38,-28,180,180</area>
+
+                        <shape name="buttonimage_background_shape" from="base_background_shape">
+                            <area>0,0,180,180</area>
+                            <line color="#000000" alpha="0" width="1" />
+                        </shape>
+
+                        <imagetype name="buttonimage">
+                            <area>2,2,176,176</area>
+                            <preserveaspect>yes</preserveaspect>
+                        </imagetype>
+
+                        <shape name="buttonimage_border_shape" from="base_background_shape">
+                            <area>0,0,180,180</area>
+                            <fill color="#000000" alpha="0" />
+                            <line color="#AAAAAA" alpha="150" width="2" />
+                        </shape>
+
+                        <statetype name="buttoncheck">
+                            <position>2,2</position>
+                            <state type="full">
+                                <shape name="marked_background" from="base_background_shape">
+                                    <area>0,0,33,33</area>
+                                    <line color="#000000" alpha="0" width="1" />
+                                </shape>
+                                <imagetype name="marked">
+                                    <filename>images/shared/file_marked.png</filename>
+                                </imagetype>
+                            </state>
+                        </statetype>
+
+                        <shape name="buttontext_shape" from="base_background_shape">
+                            <area>1,139,178,40</area>
+                            <type>box</type>
+                            <line color="#000000" alpha="0" width="1" />
+                        </shape>
+                        <textarea name="buttontext" from="base_textarea">
+                            <area>6,139,168,40</area>
+                            <font>text_very_small</font>
+                            <multiline>yes</multiline>
+                            <align>allcenter</align>
+                        </textarea>
+
+                    </state>
+                </statetype>
+
+                <!-- Show the arrow image that indicates that there are
+                    more menu entries above the first visible menu -->
+                <statetype name="upscrollarrow">
+                    <position>1135,97%</position>
+                    <state type="off">
+                        <imagetype name="upon" from="base_arrow_inactive">
+                            <filename>images/shared/arrow_up.png</filename>
+                        </imagetype>
+                    </state>
+                    <state type="full">
+                        <imagetype name="upoff" from="base_arrow_selectedactive">
+                            <filename>images/shared/arrow_up.png</filename>
+                        </imagetype>
+                    </state>
+                </statetype>
+
+                <!-- Show the arrow image that indicates that there are
+                    more menu entries below the last visible menu -->
+                <statetype name="downscrollarrow">
+                    <position>1160,97%</position>
+                    <state type="off">
+                        <imagetype name="dnon" from="base_arrow_inactive">
+                            <filename>images/shared/arrow_down.png</filename>
+                        </imagetype>
+                    </state>
+                    <state type="full">
+                        <imagetype name="dnoff" from="base_arrow_selectedactive">
+                            <filename>images/shared/arrow_down.png</filename>
+                        </imagetype>
+                    </state>
+                </statetype>
+
+            </buttonlist>
+        </buttontree>
+
+        <!-- shows the current playlist with some status information -->
+        <group name="playlist_group" from="base_music_playlist_group">
+            <position>0,430</position>
+        </group>
+    </window>
+
+
+
+
+
+
+    <window name="searchview" include="base_music.xml">
+
+        <imagetype name="background" from="base_background"/>
+
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Search View </value>
+            </textarea>
+        </textarea>
+
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="searchview_background" from="base_background_shape">
+            <area>25,60,1230,345</area>
+        </shape>
+
+        <textedit name="criteria_edit" from="base_textedit">
+            <position>415,81</position>
+        </textedit>
+
+        <textarea name="matcheslable" from="base_textarea">
+            <area>800,81,150,40</area>
+            <align>right,vcenter</align>
+            <value>Matches:</value>
+        </textarea>
+
+        <textarea name="matches_text" from="base_textarea">
+            <area>960,81,150,40</area>
+        </textarea>
+
+        <!-- The list of filters to narrow the search results -->
+        <buttonlist name="field_list" from="base_buttonlist">
+            <area>47,125,350,264</area>
+        </buttonlist>
+
+        <buttonlist name="tracks_list" from="base_buttonlist_very_wide">
+            <area>415,125,1190,264</area>
+            <statetype name="buttonitem">
+                <state name="active">
+
+                    <!-- the background and the coverart -->
+                    <shape name="buttonimage_background"
+                           from="base_background_shape">
+                        <area>3,3,34,34</area>
+                    </shape>
+                    <imagetype name="buttonimage">
+                        <area>4,4,32,32</area>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
+
+                    <textarea name="title" from="base_textarea">
+                        <area>50,5,700,30</area>
+                        <font>text_small</font>
+                        <template>%TITLE% by %ARTIST% on %ALBUM%</template>
+                    </textarea>
+
+                    <statetype name="selectedstate" from="base_music_playliststate">
+                        <position>785,5</position>
+                    </statetype>
+
+                </state>
+                <state name="inactive" from="active"/>
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground"
+                               from="base_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,820,40</area>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground"
+                               from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,820,40</area>
+                    </imagetype>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <!-- shows the current playlist with some status information -->
+        <group name="playlist_group" from="base_music_playlist_group">
+            <position>0,430</position>
+        </group>
     </window>
 
 

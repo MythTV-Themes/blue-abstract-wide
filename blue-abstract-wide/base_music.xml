@@ -11,17 +11,20 @@
             <state name="active">
                 <imagetype name="background" from="base_image_active">
                     <filename>images/shared/music/skip-backward.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
             <state name="selected" from="active">
                 <imagetype name="background" from="base_image_selected">
                     <filename>images/shared/music/skip-backward.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed" from="active">
                 <imagetype name="background" from="base_image_pushed">
                     <filename>images/shared/music/skip-backward.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
         </statetype>
@@ -35,17 +38,20 @@
             <state name="active">
                 <imagetype name="background" from="base_image_active">
                     <filename>images/shared/music/seek-backward.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
             <state name="selected" from="active">
                 <imagetype name="background" from="base_image_selected">
                     <filename>images/shared/music/seek-backward.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed" from="active">
                 <imagetype name="background" from="base_image_pushed">
                     <filename>images/shared/music/seek-backward.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
         </statetype>
@@ -59,17 +65,20 @@
             <state name="active">
                 <imagetype name="background" from="base_image_active">
                     <filename>images/shared/music/pause.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
             <state name="selected" from="active">
                 <imagetype name="background" from="base_image_selected">
                     <filename>images/shared/music/pause.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed" from="active">
                 <imagetype name="background" from="base_image_pushed">
                     <filename>images/shared/music/pause.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
         </statetype>
@@ -83,17 +92,20 @@
             <state name="active">
                 <imagetype name="background" from="base_image_active">
                     <filename>images/shared/music/play.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
             <state name="selected" from="active">
                 <imagetype name="background" from="base_image_selected">
                     <filename>images/shared/music/play.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed" from="active">
                 <imagetype name="background" from="base_image_pushed">
                     <filename>images/shared/music/play.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
         </statetype>
@@ -107,17 +119,20 @@
             <state name="active">
                 <imagetype name="background" from="base_image_active">
                     <filename>images/shared/music/stop.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
             <state name="selected" from="active">
                 <imagetype name="background" from="base_image_selected">
                     <filename>images/shared/music/stop.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed" from="active">
                 <imagetype name="background" from="base_image_pushed">
                     <filename>images/shared/music/stop.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
         </statetype>
@@ -131,17 +146,20 @@
             <state name="active">
                 <imagetype name="background" from="base_image_active">
                     <filename>images/shared/music/seek-forward.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
             <state name="selected" from="active">
                 <imagetype name="background" from="base_image_selected">
                     <filename>images/shared/music/seek-forward.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed" from="active">
                 <imagetype name="background" from="base_image_pushed">
                     <filename>images/shared/music/seek-forward.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
         </statetype>
@@ -155,17 +173,20 @@
             <state name="active">
                 <imagetype name="background" from="base_image_active">
                     <filename>images/shared/music/skip-forward.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
             <state name="selected" from="active">
                 <imagetype name="background" from="base_image_selected">
                     <filename>images/shared/music/skip-forward.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed" from="active">
                 <imagetype name="background" from="base_image_pushed">
                     <filename>images/shared/music/skip-forward.png</filename>
+                    <area>2,2,26,26</area>
                 </imagetype>
             </state>
         </statetype>
@@ -179,18 +200,40 @@
         <!-- workaround because the off state is not active as a default -->
         <imagetype name="movestate_image">
             <filename>images/shared/music/arrow_updown.png</filename>
+            <area>2,2,26,26</area>
             <alpha>50</alpha>
         </imagetype>
 
         <state name="off">
             <imagetype name="movestate_image">
                 <filename>images/shared/music/arrow_updown.png</filename>
+                <area>2,2,26,26</area>
                 <alpha>50</alpha>
             </imagetype>
         </state>
         <state name="on">
             <imagetype name="movestate_image">
                 <filename>images/shared/music/arrow_updown.png</filename>
+                <area>2,2,26,26</area>
+            </imagetype>
+        </state>
+    </statetype>
+
+
+    <!-- Shows if the track is in a playlist -->
+    <statetype name="base_music_playliststate">
+        <area>0,0,30,30</area>
+        <state name="off">
+            <imagetype name="playliststate_image">
+                <filename>images/shared/music/playlist.png</filename>
+                <area>2,2,26,26</area>
+                <alpha>50</alpha>
+            </imagetype>
+        </state>
+        <state name="on">
+            <imagetype name="playliststate_image">
+                <filename>images/shared/music/playlist.png</filename>
+                <area>2,2,26,26</area>
             </imagetype>
         </state>
     </statetype>
@@ -202,22 +245,26 @@
         <state name="default">
             <imagetype name="playstateimage">
                 <filename>images/shared/music/play.png</filename>
+                <area>2,2,26,26</area>
                 <alpha>50</alpha>
             </imagetype>
         </state>
         <state name="playing">
             <imagetype name="playstateimage">
                 <filename>images/shared/music/play.png</filename>
+                <area>2,2,26,26</area>
             </imagetype>
         </state>
         <state name="paused">
             <imagetype name="playstateimage">
                 <filename>images/shared/music/pause.png</filename>
+                <area>2,2,26,26</area>
             </imagetype>
         </state>
         <state name="stopped">
             <imagetype name="playstateimage">
                 <filename>images/shared/music/stop.png</filename>
+                <area>2,2,26,26</area>
             </imagetype>
         </state>
     </statetype>
@@ -289,27 +336,27 @@
 
     <!-- Shows the play, stop, pause, ... buttons -->
     <group name="base_music_controls">
-        <area>0,0,280,30</area>
+        <area>0,0,240,30</area>
         <button name="prev" from="base_music_prevbutton">
             <position>0,0</position>
         </button>
         <button name="rew" from="base_music_rewbutton">
-            <position>40,0</position>
+            <position>35,0</position>
         </button>
         <button name="pause" from="base_music_pausebutton">
-            <position>80,0</position>
+            <position>70,0</position>
         </button>
         <button name="play" from="base_music_playbutton">
-            <position>120,0</position>
+            <position>105,0</position>
         </button>
         <button name="stop" from="base_music_stopbutton">
-            <position>160,0</position>
+            <position>140,0</position>
         </button>
         <button name="ff" from="base_music_ffbutton">
-            <position>200,0</position>
+            <position>175,0</position>
         </button>
         <button name="next" from="base_music_nextbutton">
-            <position>240,0</position>
+            <position>210,0</position>
         </button>
     </group>
 
@@ -317,7 +364,7 @@
 
     <!-- The active playlist with more details about the tracks -->
     <buttonlist name="base_music_currentplaylist" from="base_buttonlist_extra_wide">
-        <area>45,80,1190,330</area>
+        <area>45,80,1190,331</area>
 
         <statetype name="buttonitem">
             <state name="active">
@@ -325,10 +372,10 @@
                 <!-- the background and the coverart -->
                 <shape name="buttonimage_background"
                        from="base_background_shape">
-                    <area>3,3,33,33</area>
+                    <area>3,3,34,34</area>
                 </shape>
                 <imagetype name="buttonimage">
-                    <area>4,4,31,31</area>
+                    <area>4,4,32,32</area>
                     <preserveaspect>true</preserveaspect>
                 </imagetype>
 
@@ -341,24 +388,24 @@
                     <template>%1 -</template>
                 </textarea>
                 <textarea name="title" from="base_textarea">
-                    <area>110,0,380,20</area>
+                    <area>110,2,390,20</area>
                     <align>left,vcenter</align>
                     <font>text_small</font>
                     <cutdown>yes</cutdown>
                 </textarea>
-                <textarea name="album" from="title">
-                    <area>150,20,380,20</area>
+                <textarea name="artist" from="title">
+                    <area>110,20,390,20</area>
                     <font>text_very_small</font>
                 </textarea>
-                <textarea name="artist" from="title">
-                    <area>530,5,230,30</area>
+                <textarea name="album" from="title">
+                    <area>510,5,210,30</area>
                 </textarea>
                 <textarea name="genre" from="title">
-                    <area>770,5,160,30</area>
+                    <area>730,5,160,30</area>
                     <align>right,vcenter</align>
                 </textarea>
                 <textarea name="length" from="title">
-                    <area>900,5,110,30</area>
+                    <area>860,5,130,30</area>
                     <align>right,vcenter</align>
                 </textarea>
 
@@ -372,10 +419,10 @@
                 </statetype>
 
                 <statetype name="movestate" from="base_music_movestate">
-                    <position>1110,5</position>
+                    <area>1110,5,30,30</area>
                 </statetype>
                 <statetype name="playstate" from="base_music_playstate">
-                    <position>1150,5</position>
+                    <area>1150,5,30,30</area>
                 </statetype>
 
             </state>
@@ -451,7 +498,7 @@
 
         <shape name="base_music_playlist_group_background"
                from="base_background_shape">
-            <area>25,0,1230,265</area>
+            <area>25,0,1230,270</area>
         </shape>
 
         <!-- the playlist -->
@@ -464,10 +511,10 @@
                     <!-- the background and the coverart -->
                     <shape name="buttonimage_background"
                            from="base_background_shape">
-                        <area>3,3,33,33</area>
+                        <area>3,3,34,34</area>
                     </shape>
                     <imagetype name="buttonimage">
-                        <area>4,4,31,31</area>
+                        <area>4,4,32,32</area>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
 
@@ -486,10 +533,10 @@
                     </textarea>
 
                     <statetype name="movestate" from="base_music_movestate">
-                        <position>1110,5</position>
+                        <area>1110,5,30,30</area>
                     </statetype>
                     <statetype name="playstate" from="base_music_playstate">
-                        <position>1150,5</position>
+                        <area>1150,5,30,30</area>
                     </statetype>
 
                 </state>
@@ -503,7 +550,7 @@
                 </state>
                 <state name="selectedinactive" from="active">
                     <imagetype name="buttonbackground"
-                               from="base_image_selectedactive">
+                               from="base_image_selectedinactive">
                         <filename>images/widgets/widget_active.png</filename>
                         <area>0,0,1190,40</area>
                     </imagetype>
