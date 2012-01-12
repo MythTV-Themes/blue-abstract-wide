@@ -652,6 +652,34 @@
                     </imagetype>
                 </state>
             </statetype>
+
+            <statetype name="upscrollarrow">
+                <position>145,97%</position>
+                <state type="off">
+                    <imagetype name="upon" from="base_arrow_inactive">
+                        <filename>images/shared/arrow_up.png</filename>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="upoff" from="base_arrow_selectedactive">
+                        <filename>images/shared/arrow_up.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+
+            <statetype name="downscrollarrow">
+                <position>170,97%</position>
+                <state type="off">
+                    <imagetype name="dnon" from="base_arrow_inactive">
+                        <filename>images/shared/arrow_down.png</filename>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="dnoff" from="base_arrow_selectedactive">
+                        <filename>images/shared/arrow_down.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
         </buttonlist>
 
         <buttonlist name="schedules" from="base_buttonlist_very_wide">
@@ -689,6 +717,34 @@
                     <imagetype name="buttonbackground" from="base_image_selectedinactive">
                         <filename>images/widgets/widget_active.png</filename>
                         <area>0,0,970,40</area>
+                    </imagetype>
+                </state>
+            </statetype>
+
+            <statetype name="upscrollarrow">
+                <position>915,97%</position>
+                <state type="off">
+                    <imagetype name="upon" from="base_arrow_inactive">
+                        <filename>images/shared/arrow_up.png</filename>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="upoff" from="base_arrow_selectedactive">
+                        <filename>images/shared/arrow_up.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+
+            <statetype name="downscrollarrow">
+                <position>940,97%</position>
+                <state type="off">
+                    <imagetype name="dnon" from="base_arrow_inactive">
+                        <filename>images/shared/arrow_down.png</filename>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="dnoff" from="base_arrow_selectedactive">
+                        <filename>images/shared/arrow_down.png</filename>
                     </imagetype>
                 </state>
             </statetype>
