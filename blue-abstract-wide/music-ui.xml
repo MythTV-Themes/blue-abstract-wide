@@ -1221,140 +1221,139 @@
         </textarea>
 
         <shape name="music_import_background" from="base_background_shape">
-            <area>240,70,800,615</area>
+            <area>140,90,1000,560</area>
         </shape>
 
         <textarea name="location_label" from="base_textarea">
-            <area>260,90,210,40</area>
+            <area>160,110,210,40</area>
             <align>right,vcenter</align>
             <value>Location:</value>
         </textarea>
         <textedit name="location" from="base_textedit">
-            <position>480,90</position>
-            <cutdown>yes</cutdown>
-            <multiline>no</multiline>
-            <align>left,vcenter</align>
+            <position>380,110</position>
         </textedit>
         <button name="directoryfinder" from="base_searchbutton">
-            <position>862,94</position>
+            <position>762,115</position>
         </button>
         <button name="scan" from="base_button">
-            <position>480,134</position>
+            <position>810,110</position>
             <value>Search</value>
         </button>
         <button name="coverart" from="base_button">
-            <position>650,134</position>
+            <position>970,110</position>
             <value>Cover Art</value>
         </button>
 
         <shape name="location_separator" from="base_separator_shape">
-            <area>260,190,760,1</area>
+            <area>160,170,960,1</area>
         </shape>
 
         <!-- Labels -->
         <textarea name="filename_label" from="location_label">
-            <position>260,198</position>
+            <position>160,180</position>
             <value>Filename:</value>
         </textarea>
         <textarea name="compilation_label" from="location_label">
-            <position>260,242</position>
+            <position>160,240</position>
             <value>Compilation:</value>
         </textarea>
         <textarea name="compilation_artist_label" from="location_label">
-            <position>260,286</position>
+            <position>160,280</position>
             <value>Comp. Artist:</value>
         </textarea>
         <textarea name="artist_label" from="location_label">
-            <position>260,330</position>
+            <position>160,320</position>
             <value>Artist:</value>
         </textarea>
         <textarea name="album_label" from="location_label">
-            <position>260,376</position>
+            <position>160,360</position>
             <value>Album:</value>
         </textarea>
         <textarea name="title_text" from="location_label">
-            <position>260,418</position>
+            <position>160,400</position>
             <value>Title:</value>
         </textarea>
         <textarea name="genre_label" from="location_label">
-            <position>260,462</position>
+            <position>160,440</position>
             <value>Genre:</value>
         </textarea>
         <textarea name="year_label" from="location_label">
-            <position>260,506</position>
+            <position>160,480</position>
             <value>Year:</value>
         </textarea>
         <textarea name="track_label" from="location_label">
-            <position>460,506</position>
+            <position>360,480</position>
             <value>Track No.:</value>
         </textarea>
 
         <!-- data fields -->
         <textarea name="filename" from="base_textarea">
-            <area>480,198,515,40</area>
+            <area>380,190,740,80</area>
+            <multiline>yes</multiline>
+            <align>left,top</align>
         </textarea>
         <checkbox name="compilation" from="base_checkbox">
-            <position>480,247</position>
+            <position>380,245</position>
         </checkbox>
         <textarea name="compartist" from="base_textarea">
-            <area>480,286,515,40</area>
+            <area>380,280,515,40</area>
         </textarea>
         <textarea name="artist" from="base_textarea">
-            <area>480,330,515,40</area>
+            <area>380,320,515,40</area>
         </textarea>
         <textarea name="album" from="base_textarea">
-            <area>480,374,515,40</area>
+            <area>380,360,515,40</area>
         </textarea>
         <textarea name="title" from="base_textarea">
-            <area>480,418,515,40</area>
+            <area>380,400,515,40</area>
         </textarea>
         <textarea name="genre" from="base_textarea">
-            <area>480,462,515,40</area>
+            <area>380,440,515,40</area>
         </textarea>
         <textarea name="year" from="base_textarea">
-            <area>480,506,165,40</area>
+            <area>380,480,165,40</area>
         </textarea>
         <textarea name="track" from="base_textarea">
-            <area>680,506,165,40</area>
+            <area>580,480,165,40</area>
         </textarea>
 
         <shape name="status_separator" from="base_separator_shape">
-            <area>260,560,760,1</area>
+            <area>160,530,960,1</area>
         </shape>
 
         <textarea name="position" from="base_textarea">
-            <area>490,580,300,40</area>
+            <area>490,550,300,40</area>
             <align>allcenter</align>
         </textarea>
         <textarea name="status" from="base_textarea">
-            <area>490,624,300,40</area>
+            <area>490,590,300,40</area>
             <align>allcenter</align>
             <value>Already in database</value>
         </textarea>
 
         <!-- Push buttons -->
-        <button name="play" from="base_button">
-            <position>260,580</position>
+        <button name="play" from="base_button_wide">
+            <position>160,550</position>
             <value>Play</value>
         </button>
-        <button name="add" from="base_button">
-            <position>260,624</position>
+        <button name="add" from="base_button_wide">
+            <position>160,590</position>
             <value>Add</value>
         </button>
 
         <button name="prev" from="base_button_prev">
-            <position>520,585</position>
+            <position>520,555</position>
         </button>
         <button name="next" from="base_button_next">
-            <position>730,585</position>
+            <position>730,555</position>
         </button>
 
-        <button name="nextnew" from="base_button">
-            <position>870,580</position>
+        <button name="nextnew" from="base_button_wide">
+            <position>820,550</position>
             <value>Next New</value>
         </button>
-        <button name="addallnew" from="base_button">
-            <position>870,624</position>
+        <button name="addallnew" from="base_button_wide">
+            <position>820,590</position>
             <value>Add All New</value>
         </button>
 
