@@ -1,8 +1,31 @@
 ===========================================================
+13.01.2012 - Version 1.7
+===========================================================
+(Changelog taken from the internal bugtracker)
+
+Bug #185: Severeal issues in the import music screen
+Bug #188: Wrong arrow position in scheduled recordings screen
+Feature #168: Show the image details in the mythimage slideshow screen
+Feature #186: Add the new mythmusic screens from the default-wide theme
+
+
+
+===========================================================
 23.12.2011 - Version 1.6
 ===========================================================
 (Changelog taken from the internal bugtracker)
 
+Bug #84: Sort by title crashes theme
+Bug #85: Wrong text label for user jobs
+Bug #88: OSD is truncating channel numbers
+Bug #129: Truncated date and channel text
+Bug #130: Date too short in old recordings screen
+Bug #131: Misaligned cursor in textedit
+Bug #135: Fix for missing genres in video detail window
+Bug #136: Add classification rating to video gallery
+Bug #137: Fix various text overflows on OSD
+Bug #167: Text overlapping in OSD program_info screen
+Bug #170: Wrong keys assigned to certain triggerevents
 Feature #77: Add editing description in Watch Recordings
 Feature #79: Add hardware profiler screen to the setup wizard screens
 Feature #89: Add a new playback debugging OSD window
