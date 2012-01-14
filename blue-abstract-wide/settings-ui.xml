@@ -71,7 +71,7 @@
         that the user can download and install -->
     <window name="themechooser">
 
-        <imagetype name="background" from="base_background"/>>
+        <imagetype name="background" from="base_background"/>
         
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
@@ -223,10 +223,6 @@
 
             <state name="fullscreen">
                 <area>0,0,1280,720</area>
-                
-                <imagetype name="background" from="base_background_shape">
-                    <area>0,0,1280,720</area>
-                </imagetype>
 
                 <!-- the actual large preview image -->
                 <imagetype name="fullscreenpreview">
