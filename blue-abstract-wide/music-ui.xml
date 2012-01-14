@@ -276,7 +276,7 @@
                             <area>0,0,390,36</area>
                         </imagetype>
                         <textarea name="buttontext">
-                            <font>text_inactive</font>
+                            <font>text_small_inactive</font>
                         </textarea>
                         <imagetype name="buttonarrow" from="base_arrow_selectedinactive">
                             <position>361,4</position>
