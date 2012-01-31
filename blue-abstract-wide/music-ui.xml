@@ -24,7 +24,7 @@
             <area>25,60,1230,410</area>
         </shape>
 
-<!-- moving track state -->
+        <!-- moving track state -->
 
         <textarea name="notracks" from="base_textarea">
             <area>25,60,1230,410</area>
@@ -966,36 +966,36 @@
         </textarea>
 
         <imagetype name="playicon" from="base_icon_inactive">
-            <position>1140,535</position>
+            <area>1136,535,36,36</area>
             <filename>images/shared/music/play.png</filename>
         </imagetype>
         
         <imagetype name="pauseicon" from="base_icon_inactive">
-            <position>1175,535</position>
+            <area>1171,535,36,36</area>
             <filename>images/shared/music/pause.png</filename>
         </imagetype>
 
         <imagetype name="stopicon" from="base_icon_inactive">
-            <position>1210,535</position>
+            <area>1206,535,36,36</area>
             <filename>images/shared/music/stop.png</filename>
         </imagetype>
         
         <statetype name="playbackstate">
             <state name="playing">
                 <imagetype name="playicon" from="base_icon_selected">
-            		<position>1140,535</position>
+                    <area>1136,535,36,36</area>
                     <filename>images/shared/music/play.png</filename>
                 </imagetype>
             </state>
             <state name="paused">
                 <imagetype name="pauseicon" from="base_icon_selected">
-            		<position>1175,535</position>
+                    <area>1171,535,36,36</area>
                     <filename>images/shared/music/pause.png</filename>
                 </imagetype>
             </state>
             <state name="stopped">
                 <imagetype name="stopicon" from="base_icon_selected">
-            		<position>1210,535</position>
+                    <area>1206,535,36,36</area>
                     <filename>images/shared/music/stop.png</filename>
                 </imagetype>
             </state>
@@ -1074,15 +1074,17 @@
         </shape>
 
         <statetype name="mutestate">
-            <position>390,305</position>
+            <position>390,303</position>
             <state name="off">
                 <imagetype name="statusimage">
                     <filename>images/shared/music/volume-on.png</filename>
+                    <area>0,0,36,36</area>
                 </imagetype>
             </state>
             <state name="on">
                 <imagetype name="statusimage">
                     <filename>images/shared/music/volume-off.png</filename>
+                    <area>0,0,36,36</area>
                 </imagetype>
             </state>
         </statetype>
