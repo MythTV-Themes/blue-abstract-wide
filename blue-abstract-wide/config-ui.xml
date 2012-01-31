@@ -530,11 +530,11 @@
         </textarea>
 
         <shape name="grabbersettings_background" from="base_background_shape">
-            <area>180,165,920,435</area>
+            <area>180,165,920,405</area>
         </shape>
         
         <textarea name="moviegrabber_text" from="base_textarea">
-            <area>200,190,485,30</area>
+            <area>200,190,490,30</area>
             <align>right,vcenter</align>
             <value>Movie Metadata Source:</value>
         </textarea>
@@ -571,21 +571,22 @@
         </checkbox>
   
         <shape name="helptext_background" from="base_background_shape">
-            <area>200,390,880,130</area>
+            <area>200,390,880,100</area>
         </shape>
         <textarea name="helptext" from="base_textarea">
-            <area>220,390,840,130</area>
+            <area>220,390,840,100</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
+            <font>text_small</font>
             <align>allcenter</align>
         </textarea>
         
         <button name="ok" from="base_button">
-            <position>470,540</position>
+            <position>470,510</position>
             <value>Ok</value>
         </button>
         <button name="cancel" from="base_button">
-            <position>660,540</position>
+            <position>660,510</position>
             <value>Cancel</value>
         </button>
 
