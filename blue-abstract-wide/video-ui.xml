@@ -2018,69 +2018,67 @@
         </textarea>
 
         <shape name="playersettings_background" from="base_background_shape">
-            <area>165,100,950,570</area>
+            <area>165,120,950,510</area>
         </shape>
 
         <textarea name="default_text" from="base_textarea">
-            <area>300,120,240,40</area>
+            <area>300,140,240,40</area>
             <align>vcenter,right</align>
             <value>Default Player:</value>
         </textarea>
         <textarea name="dvd_text" from="base_textarea">
-            <area>300,165,240,40</area>
+            <area>300,190,240,40</area>
             <align>vcenter,right</align>
             <value>DVD Player:</value>
         </textarea>
         <textarea name="dvddrive_text" from="base_textarea">
-            <area>300,210,240,40</area>
+            <area>300,240,240,40</area>
             <align>vcenter,right</align>
             <value>DVD Drive:</value>
         </textarea>
         <textarea name="altcheck_text" from="base_textarea">
-            <area>200,255,340,40</area>
+            <area>200,290,340,40</area>
             <align>vcenter,right</align>
             <value>Enable Alternate Player:</value>
         </textarea>
         <textarea name="bluraymount_text" from="base_textarea">
-            <area>300,300,240,40</area>
+            <area>300,340,240,40</area>
             <align>vcenter,right</align>
             <value>BD Mount:</value>
         </textarea>
         <textarea name="blurayregion_text" from="base_textarea">
-            <area>300,345,240,40</area>
+            <area>300,390,240,40</area>
             <align>vcenter,right</align>
             <value>BD Region:</value>
         </textarea>
 
         <textedit name="defaultplayer" from="base_textedit">
-            <position>550,120</position>
+            <position>550,140</position>
         </textedit>
         <textedit name="dvdplayer" from="base_textedit">
-            <position>550,165</position>
+            <position>550,190</position>
         </textedit>
         <textedit name="dvddrive" from="base_textedit">
-            <position>550,210</position>
+            <position>550,240</position>
         </textedit>
-
         <checkbox name="altcheck" from="base_checkbox">
-            <position>550,260</position>
+            <position>550,295</position>
         </checkbox>
         <textedit name="altplayer" from="base_textedit">
-            <position>590,255</position>
+            <position>590,290</position>
         </textedit>
-        
         <textedit name="bluraymount" from="base_textedit">
-            <position>550,300</position>
+            <position>550,340</position>
         </textedit>
-        <buttonlist name="blurayregionlist" from="base_buttonlist">
-            <area>550,345,350,135</area>
+        <buttonlist name="blurayregionlist" from="base_selector_wide">
+            <area>550,390,350,135</area>
         </buttonlist>
 
         <shape name="helptext_background" from="base_background_shape">
-            <area>185,500,910,90</area>
+            <area>185,450,910,100</area>
         </shape>
         <textarea name="helptext" from="base_textarea">
-            <area>205,500,870,90</area>
+            <area>205,450,870,100</area>
             <cutdown>yes</cutdown>
             <align>allcenter</align>
             <multiline>yes</multiline>
@@ -2088,11 +2086,11 @@
         </textarea>
 
         <button name="ok" from="base_button">
-            <position>415,610</position>
+            <position>415,570</position>
             <value>OK</value>
         </button>
         <button name="cancel" from="base_button">
-            <position>715,610</position>
+            <position>715,570</position>
             <value>Cancel</value>
         </button>
     </window>
