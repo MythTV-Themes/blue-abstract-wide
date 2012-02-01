@@ -66,7 +66,7 @@
                     
                     <!-- This is the dark background behind each image -->
                     <shape name="buttonimage_background_shape" from="base_background_shape">
-                        <area>0,0,164,124</area>
+                        <area>0,0,162,124</area>
                         <line color="#000000" alpha="0" width="1" />
                     </shape>
 
@@ -97,16 +97,9 @@
 
                     <!-- this shows the actual image -->
                     <imagetype name="buttonimage">
-                        <area>2,2,160,120</area>
+                        <area>1,2,160,120</area>
                         <preserveaspect>yes</preserveaspect>
                     </imagetype>
-
-                    <!-- This is the border around the image. Its placed here
-                         draw over the edges of the image -->
-                    <shape name="buttonimage_border_shape" from="base_background_shape">
-                        <area>0,0,164,124</area>
-                        <fill color="#000000" alpha="0" />
-                    </shape>
 
                     <!-- shows that the image was marked/selected and
                         might be manipulated with other images -->
@@ -129,7 +122,7 @@
                         <position>0,0</position>
                         <state name="hidden">
                             <shape name="hidden_background_shape" from="base_background_shape_dark">
-                                <area>1,1,162,122</area>
+                                <area>1,1,160,122</area>
                                 <line color="#000000" alpha="0" width="1" />
                             </shape>
                         </state>
@@ -143,7 +136,7 @@
                         <position>0,0</position>
                         <state name="subfolder">
                             <shape name="buttonimage_shape" from="base_background_shape">
-                                <area>1,93,162,30</area>
+                                <area>1,93,160,30</area>
                                 <type>box</type>
                                 <line color="#000000" alpha="0" width="1" />
                             </shape>
@@ -155,7 +148,7 @@
                         </state>
                         <state name="upfolder">
                             <shape name="buttonimage_shape" from="base_background_shape">
-                                <area>1,93,162,30</area>
+                                <area>1,93,160,30</area>
                                 <type>box</type>
                                 <line color="#000000" alpha="0" width="1" />
                             </shape>
@@ -167,11 +160,11 @@
                         </state>
                         <state name="video">
                             <shape name="buttonimage_shape" from="base_background_shape">
-                                <area>120,80,43,43</area>
+                                <area>118,80,43,43</area>
                                 <line color="#000000" alpha="0" width="1" />
                             </shape>
                             <imagetype name="icon">
-                                <area>122,83,37,37</area>
+                                <area>120,83,37,37</area>
                                 <filename>images/shared/file_video.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
@@ -186,13 +179,21 @@
                         <font>text_small</font>
                         <align>left,vcenter</align>
                     </textarea>
+                    
+                    <!-- This is the border around the image. Its placed here
+                         draw over the edges of the image -->
+                    <shape name="buttonimage_border_shape" from="base_background_shape">
+                        <area>0,0,162,124</area>
+                        <fill color="#000000" alpha="0" />
+                        <line color="#FFFFFF" alpha="80" width="1" />
+                    </shape>
                 </state>
 
                 <state name="selectedactive">
                     <area>-38,-28,240,180</area>
 
                     <shape name="buttonimage_background_shape" from="base_background_shape">
-                        <area>0,0,240,180</area>
+                        <area>0,0,236,180</area>
                         <line color="#000000" alpha="0" width="1" />
                     </shape>
 
@@ -219,15 +220,9 @@
                     </statetype>
 
                     <imagetype name="buttonimage">
-                        <area>2,2,235,176</area>
+                        <area>1,2,235,176</area>
                         <preserveaspect>yes</preserveaspect>
                     </imagetype>
-
-                    <shape name="buttonimage_border_shape" from="base_background_shape">
-                        <area>0,0,240,180</area>
-                        <fill color="#000000" alpha="0" />
-                        <line color="#AAAAAA" alpha="150" width="2" />
-                    </shape>
 
                     <statetype name="buttoncheck">
                         <position>2,2</position>
@@ -258,7 +253,7 @@
                         <position>0,0</position>
                         <state name="subfolder">
                             <shape name="buttonimage_shape" from="base_background_shape">
-                                <area>1,139,238,40</area>
+                                <area>1,139,234,40</area>
                                 <type>box</type>
                                 <line color="#000000" alpha="0" width="1" />
                             </shape>
@@ -270,7 +265,7 @@
                         </state>
                         <state name="upfolder">
                             <shape name="buttonimage_shape" from="base_background_shape">
-                                <area>1,139,238,40</area>
+                                <area>1,139,234,40</area>
                                 <type>box</type>
                                 <line color="#000000" alpha="0" width="1" />
                             </shape>
@@ -282,11 +277,11 @@
                         </state>
                         <state name="video">
                             <shape name="buttonimage_shape" from="base_background_shape">
-                                <area>181,121,58,58</area>
+                                <area>177,121,58,58</area>
                                 <line color="#000000" alpha="0" width="1" />
                             </shape>
                             <imagetype name="icon">
-                                <area>183,124,52,52</area>
+                                <area>179,124,52,52</area>
                                 <filename>images/shared/file_video.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
@@ -300,6 +295,12 @@
                         <font>text_small</font>
                         <align>left,vcenter</align>
                     </textarea>
+
+                    <shape name="buttonimage_border_shape" from="base_background_shape">
+                        <area>0,0,236,180</area>
+                        <fill color="#000000" alpha="0" />
+                        <line color="#FFFFFF" alpha="255" width="2" />
+                    </shape>
 
                 </state>
             </statetype>
