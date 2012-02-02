@@ -1441,124 +1441,176 @@
 
         <!-- this is the background around the covers  -->
         <shape name="coverart_background" from="base_background_shape">
-            <area>100,130,450,450</area>
+            <area>70,125,480,480</area>
         </shape>
 
         <shape name="coverart_shape" from="base_background_shape">
-            <area>120,150,410,410</area>
+            <area>90,145,440,440</area>
         </shape>
         <imagetype name="coverart">
-            <area>123,153,404,404</area>
+            <area>93,148,434,434</area>
             <filename />
             <preserveaspect>true</preserveaspect>
         </imagetype>
 
         <!-- this is the background around the video details -->
         <shape name="trackdetails_background" from="base_background_shape">
-            <area>570,130,610,450</area>
-        </shape>
-
-        <!-- separates the title, album and artist information from the rest -->
-        <shape name="title_separator" from="base_separator_shape">
-            <area>590,255,570,1</area>
-        </shape>
-
-        <!-- separates the filename from the rest -->
-        <shape name="filename_separator" from="base_separator_shape">
-            <area>590,480,570,1</area>
+            <area>570,125,640,480</area>
         </shape>
 
         <textarea name="title_label" from="base_textarea">
-            <area>590,145,160,30</area>
-            <value>Title:</value>
+            <area>590,140,190,30</area>
+            <font>text_small</font>
             <align>right,vcenter</align>
+            <value>Title:</value>
         </textarea>
+        <textarea name="title" from="base_textarea">
+            <area>790,140,450,30</area>
+            <font>text_small</font>
+        </textarea>
+        
+        <textarea name="formattitle_label" from="title_label">
+            <position>590,165</position>
+            <font>text_small_grey</font>
+            <value>Title (formatted):</value>
+        </textarea>
+        <textarea name="formattitle" from="title">
+            <position>790,165</position>
+            <font>text_small_grey</font>
+        </textarea>
+        
         <textarea name="artist_label" from="title_label">
-            <position>590,180</position>
+            <position>590,190</position>
             <value>Artist:</value>
         </textarea>
-        <textarea name="album_label" from="title_label">
+        <textarea name="artist" from="title">
+            <position>790,190</position>
+        </textarea>
+        
+        <textarea name="formatartist_label" from="title_label">
             <position>590,215</position>
+            <font>text_small_grey</font>
+            <value>Artist (formatted):</value>
+        </textarea>
+        <textarea name="formatartist" from="title">
+            <position>790,215</position>
+            <font>text_small_grey</font>
+        </textarea>
+
+        <textarea name="comilationartist_label" from="title_label">
+            <position>590,240</position>
+            <value>Compilation Artist:</value>
+        </textarea>
+        <textarea name="comilationartist" from="title">
+            <position>790,240</position>
+        </textarea>
+                
+        <textarea name="album_label" from="title_label">
+            <position>590,270</position>
             <value>Album:</value>
         </textarea>
+        <textarea name="album" from="title">
+            <position>790,270</position>
+        </textarea>
+        
+        <!-- separates the title, album and artist information from the rest -->
+        <shape name="title_separator" from="base_separator_shape">
+            <area>590,310,600,1</area>
+        </shape>
+
         <textarea name="genre_label" from="title_label">
-            <position>590,265</position>
+            <position>590,320</position>
             <value>Genre:</value>
         </textarea>
+        <textarea name="genre" from="title">
+            <position>790,320</position>
+        </textarea>
+        
         <textarea name="tracknum_label" from="title_label">
-            <position>590,300</position>
+            <position>590,350</position>
             <value>Track No.:</value>
         </textarea>
+        <textarea name="tracknum" from="title">
+            <position>790,350</position>
+        </textarea>
+        
+        <textarea name="trackcount_label" from="title_label">
+            <position>890,350</position>
+            <value>Track Count:</value>
+        </textarea>
+        <textarea name="trackcount" from="title">
+            <position>1060,350</position>
+        </textarea>
+
         <textarea name="length_label" from="title_label">
-            <position>840,300</position>
+            <position>590,380</position>
             <value>Length:</value>
         </textarea>
+        <textarea name="length" from="title">
+            <position>790,380</position>
+        </textarea>
+        
         <textarea name="year_label" from="title_label">
-            <position>590,335</position>
+            <position>890,380</position>
             <value>Year:</value>
         </textarea>
+        <textarea name="year" from="title">
+            <position>1090,380</position>
+        </textarea>
+        
         <textarea name="playcount_label" from="title_label">
-            <position>590,370</position>
+            <position>590,410</position>
             <value>Played:</value>
         </textarea>
+        <textarea name="playcount" from="title">
+            <position>790,410</position>
+            <template>%playcount% times</template>
+        </textarea>
+        
         <textarea name="lastplayed_label" from="title_label">
-            <position>590,405</position>
+            <position>890,410</position>
             <value>Last Played:</value>
         </textarea>
+        <textarea name="lastplayed" from="title">
+            <position>1090,410</position>
+            <value>Last Value</value>
+        </textarea>
+               
         <textarea name="rating_label" from="title_label">
             <position>590,440</position>
             <value>Rating:</value>
         </textarea>
-        <textarea name="filename_label" from="title_label">
-            <position>590,490</position>
-            <value>Filename:</value>
-        </textarea>
-
-        <textarea name="title" from="base_textarea">
-            <area>760,145,450,30</area>
-            <cutdown>yes</cutdown>
-        </textarea>
-        <textarea name="artist" from="title">
-            <position>760,180</position>
-        </textarea>
-        <textarea name="album" from="title">
-            <position>760,215</position>
-        </textarea>
-        <textarea name="genre" from="title">
-            <position>760,265</position>
-        </textarea>
-        <textarea name="tracknum" from="title">
-            <position>760,300</position>
-        </textarea>
-        <textarea name="length" from="title">
-            <position>1030,300</position>
-        </textarea>
-        <textarea name="year" from="title">
-            <position>760,335</position>
-        </textarea>
-        <textarea name="playcount" from="title">
-            <position>760,370</position>
-            <template>%playcount% times</template>
-        </textarea>
-        <textarea name="lastplayed" from="title">
-            <position>760,405</position>
-            <value>Last Value</value>
-        </textarea>
-
-        <imagetype name="userratingstate_background" from="base_rating_background">
-            <position>760,447</position>
+         <imagetype name="userratingstate_background" from="base_rating_background">
+            <position>790,447</position>
         </imagetype>
         <statetype name="rating_state" from="base_rating">
-            <position>760,447</position>
+            <position>790,447</position>
         </statetype>
+        
+        <textarea name="dateadded_label" from="title_label">
+            <position>590,470</position>
+            <value>Date added:</value>
+        </textarea>
+        <textarea name="dateadded" from="title">
+            <position>790,470</position>
+        </textarea>
 
-        <textarea name="filename" from="base_textarea">
-            <area>760,495,400,90</area>
+        <!-- separates the filename from the rest -->
+        <shape name="filename_separator" from="base_separator_shape">
+            <area>590,510,600,1</area>
+        </shape>
+        
+        <textarea name="filename_label" from="title_label">
+            <position>590,520</position>
+            <value>Filename:</value>
+        </textarea>
+        <textarea name="filename" from="title_label">
+            <area>790,525,410,80</area>
             <align>left,top</align>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
         </textarea>
-
+        
     </window>
 
 </mythuitheme>
