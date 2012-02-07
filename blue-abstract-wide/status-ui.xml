@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <window name="status">
+
+        <imagetype name="background" from="base_background"/>
+        
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>System Status</value>
+            </textarea>
+        </textarea>
+
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- This is the background in which the status is displayed -->
+        <shape name="status_background" from="base_background_shape">
+            <area>30,140,1220,480</area>
+        </shape>
+
+        <!-- This is the internal buttonlist that is shown on the left -->
+        <buttonlist name="category" from="base_buttonlist">
+            <area>50,160,300,315</area>
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
+        </buttonlist>
+
+        <!-- This is the internal buttonlist that is
+        shown within the roundbox that is defined above -->
+        <buttonlist name="log" from="base_buttonlist_very_wide">
+            <area>410,160,790,315</area>
+            <wrapstyle>selection</wrapstyle>
+            <statetype name="buttonitem">
+                <area>0,0,790,40</area>
+                <!-- general settings for the menu entry -->
+                <state name="active">
+                    <textarea name="buttontext">
+                        <area>8,5,95%,30</area>
+                        <font>text</font>
+                        <font state="disabled">text_inactive</font>
+                        <font state="error">text_error</font>
+                        <font state="warning">text_warning</font>
+                        <font state="normal">text</font>
+                        <font state="running">text</font>
+                        <cutdown>yes</cutdown>
+                        <align>left,vcenter</align>
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <!-- shows some information text about the current selection -->
+        <shape name="helptext_background" from="base_background_shape">
+            <area>50,490,1180,110</area>
+        </shape>
+        <textarea name="helptext" from="base_textarea">
+            <area>67,490,1140,110</area>
+            <value>This screen displays the status of various system components</value>
+            <multiline>yes</multiline>
+            <font>text_small</font>
+            <align>left,vcenter</align>
+        </textarea>
+        
+    </window>
+
+</mythuitheme>

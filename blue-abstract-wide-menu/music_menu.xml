@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mythmenu name="MENU_MUSIC">
+
+    <button>
+        <type>MUSIC_PLAY</type>
+        <text>Play Music</text>
+        <text lang="DE">Lokale Musik</text>
+        <description>Listen to music from your local collection</description>
+        <description lang="DE">Abspielen von Musik aus deiner Sammlung</description>
+<!--        <action>MUSIC_PLAY</action>-->
+        <action>JUMP Play music</action>
+        <depends>mythmusic</depends>
+    </button>
+
+    <button>
+        <type>STREAM_PLAY</type>
+        <text>Play Streams</text>
+        <text lang="DE">Musik aus dem Internet</text>
+        <description>Listen to music from the internet</description>
+        <description lang="DE">Abspielen von Musik aus dem Internet</description>
+<!--        <action>STREAM_PLAY</action>-->
+        <action>JUMP Play streams</action>
+        <depends>mythmusic</depends>
+    </button>
+
+    <button>
+        <type>MUSIC_PLAYLIST</type>
+        <text>Select Music</text>
+        <text lang="DE">Musik auswählen</text>
+        <description>Create and manage your music playlists</description>
+        <description lang="DE">Erstelle und verwalte deine Musik-Playlisten</description>
+<!--        <action>MUSIC_CREATE_PLAYLIST</action>-->
+        <action>JUMP Select music playlists</action>
+        <depends>mythmusic</depends>
+    </button>
+
+    <button>
+        <type>MUSIC_SCAN</type>
+        <text>Scan for New Music</text>
+        <text lang="DE">Suche neue Musik</text>
+        <description>Update your collection by looking for new music</description>
+        <description lang="DE">Aktualisiere Deine Musiksammlung</description>
+<!--        <action>SETTINGS_SCAN</action>-->
+        <action>JUMP Scan music</action>
+        <depends>mythmusic</depends>
+    </button>
+
+</mythmenu>

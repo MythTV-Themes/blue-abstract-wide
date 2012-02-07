@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <!-- shows the news with its short description -->
+    <window name="news">
+
+        <imagetype name="background" from="base_background"/>
+
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>News</value>
+            </textarea>
+        </textarea>
+
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="siteslist_background" from="base_background_shape">
+            <area>110,90,1060,390</area>
+        </shape>
+
+        <buttonlist name="siteslist" from="base_buttonlist">
+            <area>130,110,350,356</area>
+            <showarrow>yes</showarrow>
+        </buttonlist>
+
+        <buttonlist name="articleslist" from="base_buttonlist_wide">
+            <area>500,110,650,356</area>
+        </buttonlist>
+
+        <textarea name="nosites" from="base_textarea">
+            <area>210,110,860,350</area>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+        </textarea>
+
+        <!-- this is the background for the information at the bottom -->
+        <shape name="news_details_background" from="base_background_shape">
+            <area>110,505,1060,174</area>
+        </shape>
+
+        <!-- the shape around the thumbnail -->
+        <shape name="thumbnail_shape" from="base_background_shape">
+            <area>132,527,174,130</area>
+        </shape>
+        <imagetype name="thumbnail">
+            <area>134,528,170,129</area>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
+        <!-- the vertical separator -->
+        <shape name="news_description_separator" from="base_separator_shape">
+            <area>325,520,1,140</area>
+        </shape>
+
+        <!-- shows the title and the plot of the selected video -->
+        <textarea name="title" from="base_textarea">
+            <area>343,513,650,40</area>
+            <multiline>no</multiline>
+            <align>left,vcenter</align>
+            <cutdown>yes</cutdown>
+            <font>title</font>
+        </textarea>
+
+        <!-- show the channel and the recorded time of the recording -->
+        <textarea name="updated" from="base_textarea">
+            <area>343,555,300,20</area>
+            <font>text_small</font>
+        </textarea>
+
+        <!-- separates the time and channel and the status icons from the plot -->
+        <shape name="news_details_separator" from="base_separator_shape">
+            <area>325,587,825,1</area>
+        </shape>
+
+        <!-- show the plot of the recording -->
+        <textarea name="description" from="base_textarea">
+            <area>343,602,805,80</area>
+            <multiline>yes</multiline>
+            <font>text_small</font>
+            <cutdown>yes</cutdown>
+            <align>left,top</align>
+        </textarea>
+
+        <!-- status icons -->
+        <imagetype name="download_background">
+            <filename>images/shared/news/need-download.png</filename>
+            <position>1025,521</position>
+            <alpha>60</alpha>
+        </imagetype>
+        <imagetype name="download" from="base_image_active">
+            <filename>images/shared/news/need-download.png</filename>
+            <position>1025,521</position>
+        </imagetype>
+
+        <imagetype name="enclosures_background">
+            <filename>images/shared/news/enclosures.png</filename>
+            <position>1070,520</position>
+            <alpha>60</alpha>
+        </imagetype>
+        <imagetype name="enclosures" from="base_image_active">
+            <filename>images/shared/news/enclosures.png</filename>
+            <position>1070,520</position>
+        </imagetype>
+
+        <imagetype name="ispodcast_background">
+            <filename>images/shared/news/podcast.png</filename>
+            <position>1115,520</position>
+            <alpha>60</alpha>
+        </imagetype>
+        <imagetype name="ispodcast" from="base_image_active">
+            <filename>images/shared/news/podcast.png</filename>
+            <position>1115,520</position>
+        </imagetype>
+
+    </window>
+
+
+
+
+
+
+    <!-- allows the user to add a new news site -->
+    <window name="editor">
+
+        <imagetype name="background" from="base_background"/>
+        
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Edit News</value>
+            </textarea>
+        </textarea>
+
+        <textarea name="clock" from="base_clock">
+            <position>1060,0</position>
+        </textarea>
+
+        <shape name="editor_background" from="base_background_shape">
+            <area>200,185,880,375</area>
+        </shape>
+
+        <imagetype name="message_background_overlay" from="base_popup_background">
+            <area>220,205,840,70</area>
+        </imagetype>
+        <textarea name="title" from="base_textarea">
+            <area>220,205,840,70</area>
+            <font>title</font>
+            <align>allcenter</align>
+        </textarea>
+
+        <textarea name="namelabel" from="base_textarea">
+            <area>220,295,180,40</area>
+            <align>right,vcenter</align>
+        </textarea>
+        <textedit name="name" from="base_textedit_wide">
+            <position>410,295</position>
+        </textedit>
+
+        <textarea name="urllabel" from="base_textarea">
+            <area>220,340,180,40</area>
+            <align>right,vcenter</align>
+        </textarea>
+        <textedit name="url" from="base_textedit_wide">
+            <position>410,340</position>
+        </textedit>
+
+        <textarea name="iconlabel" from="base_textarea">
+            <area>220,385,180,40</area>
+            <align>right,vcenter</align>
+        </textarea>
+        <textedit name="icon" from="base_textedit_wide">
+            <position>410,385</position>
+        </textedit>
+
+        <textarea name="podcastlabel" from="base_textarea">
+            <area>220,430,180,40</area>
+            <align>right,vcenter</align>
+        </textarea>
+        <checkbox name="podcast_check" from="base_checkbox">
+            <position>410,435</position>
+        </checkbox>
+
+        <shape name="button_separator" from="base_separator_shape">
+            <area>220,480,840,1</area>
+        </shape>
+
+        <button name="ok" from="base_button">
+            <position>470,500</position>
+            <value>Ok</value>
+        </button>
+        <button name="cancel" from="base_button">
+            <position>660,500</position>
+            <value>Cancel</value>
+        </button>
+
+    </window>
+
+
+
+
+
+
+    <!-- this is the configuration window for mythnews -->
+    <window name="config">
+
+        <imagetype name="background" from="base_background"/>
+        
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>News Config</value>
+            </textarea>
+        </textarea>
+
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="newsconfig_background" from="base_background_shape">
+            <area>120,80,1050,580</area>
+        </shape>
+
+        <textarea name="category_label" from="base_textarea">
+            <area>140,95,350,20</area>
+            <value>Available Categories</value>
+            <font>text_very_small</font>
+            <align>left,vcenter</align>
+        </textarea>
+
+        <buttonlist name="category" from="base_buttonlist">
+            <area>140,120,350,533</area>
+        </buttonlist>
+
+        <textarea name="sites_label" from="base_textarea">
+            <area>500,95,350,20</area>
+            <value>Available Sites</value>
+            <font>text_very_small</font>
+            <align>left,vcenter</align>
+        </textarea>
+
+        <buttonlist name="sites" from="base_buttonlist_wide">
+            <area>500,120,650,533</area>
+            <showarrow>no</showarrow>
+        </buttonlist>
+
+        <!--<textarea name="context_switch" from="base_textarea">
+            <area>130,620,350,50</area>
+            <align>left,top</align>
+            <multiline>yes</multiline>
+        </textarea>
+
+        <textarea name="help" from="base_textarea">
+            <area>500,620,650,50</area>
+            <align>left,top</align>
+            <multiline>yes</multiline>
+        </textarea>-->
+
+    </window>
+
+</mythuitheme>

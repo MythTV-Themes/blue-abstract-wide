@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+    <window name="mainmenu">
+
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!--<statetype name="watermarks">
+            <position>667,145</position>-->
+
+            <!-- the main screen -->
+            <!--<state name="MENU_MEDIA_LIBRARY">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/theater.png</filename>
+                </imagetype>
+            </state>
+            <state name="MENU_MANAGE_RECORDINGS">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/flatscreen_tv.png</filename>
+                </imagetype>
+            </state>
+            <state name="MENU_INFO_CENTER">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/information.png</filename>
+                </imagetype>
+            </state>
+            <state name="MENU_OPTICAL_DISKS">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/dvd.png</filename>
+                </imagetype>
+            </state>
+            <state name="TV_WATCH_TV">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/watch_tv.png</filename>
+                </imagetype>
+            </state>
+            <state name="MENU_UTILITIES_SETUP">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/settings.png</filename>
+                </imagetype>
+            </state>-->
+
+            <!-- media library -->
+            <!--<state name="TV_WATCH_RECORDINGS">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/cinema_gray.png</filename>
+                </imagetype>
+            </state>
+            <state name="VIDEO_BROWSER">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/cinema_seats_2_gray.png</filename>
+                </imagetype>
+            </state>
+            <state name="MUSIC_PLAY">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/violin_with_woman.png</filename>
+                </imagetype>
+            </state>
+            <state name="FM">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/radio.png</filename>
+                </imagetype>
+            </state>
+            <state name="NET_VIDEO_SEARCH">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/film_roles_on_table_2.png</filename>
+                </imagetype>
+            </state>
+            <state name="NET_VIDEO_TREE">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/film_roles_on_table.png</filename>
+                </imagetype>
+            </state>
+            <state name="STREAM">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/loudspeaker_with_girl.png</filename>
+                </imagetype>
+            </state>
+            <state name="IMAGES">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/camera_gray.png</filename>
+                </imagetype>
+            </state>
+            <state name="GAME">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/boardgames_gray.png</filename>
+                </imagetype>
+            </state>-->
+
+            <!-- the info screen -->
+            <!--<state name="NEWS">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/newspaper_with_glasses.png</filename>
+                </imagetype>
+            </state>
+            <state name="MYTHTWITTER_TIMELINE">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/twitter.png</filename>
+                </imagetype>
+            </state>
+            <state name="WEATHER">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/lightning_2.png</filename>
+                </imagetype>
+            </state>
+            <state name="RECIPE">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/bacardi.png</filename>
+                </imagetype>
+            </state>
+            <state name="WEBPAGE">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/wave.png</filename>
+                </imagetype>
+            </state>
+            <state name="TV_STATUS">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/chip_with_heatsink.png</filename>
+                </imagetype>
+            </state>
+            <state name="ZONEMINDER">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/surveillance.png</filename>
+                </imagetype>
+            </state>-->
+
+            <!-- the manage recordings screen -->
+            <!--<state name="TV_SCHEDULE_RECORDINGS">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/tv_schedule.png</filename>
+                </imagetype>
+            </state>
+            <state name="TV_RECORDING_RULES">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/tv_rules.png</filename>
+                </imagetype>
+            </state>
+            <state name="TV_UPCOMING_RECORDINGS">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/tv_upcoming.png</filename>
+                </imagetype>
+            </state>
+            <state name="TV_DELETE">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/tv_delete.png</filename>
+                </imagetype>
+            </state>
+            <state name="TV_PREVIOUS">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/tv_previous.png</filename>
+                </imagetype>
+            </state>
+            <state name="TV_RECPRIORITIES">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/tv_priorities.png</filename>
+                </imagetype>
+            </state>-->
+
+            <!-- optical menu -->
+            <!--<state name="DVD_PLAY">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/dvd.png</filename>
+                </imagetype>
+            </state>
+            <state name="VCD_PLAY">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/vhs_tape.png</filename>
+                </imagetype>
+            </state>
+            <state name="DVD_RIP">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/dvd_case.png</filename>
+                </imagetype>
+            </state>
+            <state name="ARCHIVE">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/archives.png</filename>
+                </imagetype>
+            </state>
+            <state name="MUSIC_RIP">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/music_cds.png</filename>
+                </imagetype>
+            </state>
+            <state name="EJECT">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermark/dvd_drive.png</filename>
+                </imagetype>
+            </state>-->
+
+        <!--</statetype>-->
+
+
+        <!-- The structure of the menu. This is a vertical list -->
+        <buttonlist name="menu">
+            <area>160,105,450,520</area>
+            <layout>vertical</layout>
+            <spacing>10</spacing>
+            <wrapstyle>items</wrapstyle>
+            <buttonarea>0,30,450,460</buttonarea>
+            <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
+
+            <statetype name="buttonitem">
+                <!-- General settings for the menu entry -->
+                <state name="active">
+                    <area>0,0,450,56</area>
+                    <imagetype name="background">
+                        <filename />
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <area>8,0,420,40</area>
+                        <font>menu</font>
+                        <align>left,vcenter</align>
+                        <cutdown>yes</cutdown>
+                    </textarea>
+                </state>
+                <!-- Menu entry has been selected and is active -->
+                <state name="selectedactive" from="active">
+                    <imagetype name="background">
+                        <filename>images/widgets/menu_active_fade.png</filename>
+                        <alphapulse min="120" max="255" change="2"/>
+                        <alpha>200</alpha>
+                    </imagetype>
+                    <textarea name="description">
+                        <area>8,35,420,20</area>
+                        <font>menu_description</font>
+                        <align>left,vcenter</align>
+                        <cutdown>yes</cutdown>
+                    </textarea>
+                </state>
+            </statetype>
+
+            <!-- Show the arrow image that indicates that there are
+            more menu entries above the first visible menu -->
+            <statetype name="upscrollarrow">
+                <position>20,0</position>
+                <showempty>yes</showempty>
+                <state type="full">
+                    <imagetype name="upoff">
+                        <filename>images/shared/arrow_up.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+
+            <!-- Show the arrow image that indicates that there are
+            more menu entries below the last visible menu -->
+            <statetype name="downscrollarrow">
+                <position>20,495</position>
+                <showempty>yes</showempty>
+                <state type="full">
+                    <imagetype name="dnoff">
+                        <filename>images/shared/arrow_down.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+        </buttonlist>
+
+    </window>
+</mythuitheme>

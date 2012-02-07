@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <window name="moviesui">
+
+        <imagetype name="background" from="base_background"/>
+        
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Movie Times</value>
+            </textarea>
+        </textarea>
+
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="siteslist_background" from="base_background_shape">
+            <area>110,70,1060,390</area>
+        </shape>
+
+        <!-- background for movies list -->
+        <shape name="siteslist_background" from="base_background_shape">
+            <area>75,70,1120,315</area>
+        </shape>
+
+        <!-- movies list -->
+        <buttontree name="movietreelist">
+            <area>90,80,1110,290</area>
+            <numlists>3</numlists>
+            <spacing>6</spacing>
+            <buttonlist name="listtemplate" from="base_buttonlist" />
+        </buttontree>
+
+        <!-- background for movies details -->
+        <shape name="details_background" from="base_background_shape">
+            <area>75,400,1120,290</area>
+        </shape>
+        
+        <!-- field with cinema name -->
+        <textarea name="theatername" from="base_textarea">
+            <area>90,395,1090,80</area>
+            <font>title</font>
+            <multiline>yes</multiline>
+            <value>Theater name</value>
+        </textarea>
+
+        <shape name="location_separator" from="base_separator_shape">
+            <area>90,470,1090,2</area>
+        </shape>
+
+        <textarea name="movietitle" from="base_textarea">
+            <area>90,455,1090,80</area>
+            <font>title</font>
+            <multiline>yes</multiline>
+        </textarea>
+
+        <textarea name="rating" from="base_textarea">
+            <area>90,560,150,35</area>
+            <font>text_inactive</font>
+            <align>left,vcenter</align>
+            <value>Rating:</value>
+        </textarea>
+
+        <textarea name="ratingvalue" from="base_textarea">
+            <area>270,560,150,35</area>
+            <align>left,vcenter</align>
+        </textarea>
+
+        <textarea name="runningtime" from="rating">
+            <area>90,530,300,35</area>
+            <value>Running Time:</value>
+        </textarea>
+
+        <textarea name="runningtimevalue" from="base_textarea">
+            <area>270,530,300,35</area>
+        </textarea>
+
+        <textarea name="showtimes" from="rating">
+            <area>520,530,250,35</area>
+            <value>Show Times:</value>
+        </textarea>
+
+        <textarea name="showtimesvalue" from="base_textarea">
+            <area>690,538,500,130</area>
+            <align>left,top</align>
+            <multiline>yes</multiline>
+        </textarea>
+
+    </window>
+
+</mythuitheme>

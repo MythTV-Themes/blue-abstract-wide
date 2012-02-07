@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <!-- Shows the list of available games that 
+        the metadata grabber has returned -->
+    <window name="gamesel">
+        
+        <shape name="darken_background" from="base_darken_background"/>
+        
+        <shape name="game_selection_background" from="base_background_shape">
+            <area>295,165,690,392</area>
+            <fill color="#000000" alpha="255" />
+        </shape>
+
+        <buttonlist name="results" from="base_buttonlist_wide">
+            <area>315,185,650,356</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,5,350,30</area>
+                        <cutdown>yes</cutdown>
+                    </textarea>
+                    <textarea name="year" from="base_textarea">
+                        <area>380,5,260,30</area>
+                        <align>right,vcenter</align>
+                        <template>Released %1</template>
+                    </textarea>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+        </buttonlist>
+
+    </window>
+
+
+
+
+
+
+    <!-- Shows the list of available games -->
+    <window name="gameui">
+
+        <imagetype name="fanart" from="base_background"/>
+
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Games</value>
+            </textarea>
+        </textarea>
+
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- the shape where the imagelist is displayed -->
+        <shape name="gameui_background" from="base_background_shape">
+            <area>80,100,1110,302</area>
+        </shape>
+
+        <!-- the list of the games -->
+        <buttontree name="gametreelist">
+            <area>100,121,1080,149</area>
+            <numlists>3</numlists>
+            <buttonlist name="listtemplate" from="base_buttonlist" />
+        </buttontree>
+
+        <!-- this is the background for the information at the bottom -->
+        <shape name="game_details_background" from="base_background_shape">
+            <area>80,430,1110,230</area>
+        </shape>
+
+        <shape name="cover_background" from="base_background_shape">
+            <area>100,450,250,190</area>
+        </shape>
+
+        <imagetype name="coverart">
+            <area>101,452,246,186</area>
+            <filename />
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <!--<imagetype name="screenshot">
+            <area>101,452,246,186</area>
+            <filename />
+            <preserveaspect>true</preserveaspect>
+        </imagetype>-->
+
+        <shape name="screenshot_separator" from="base_separator_shape">
+            <area>370,450,1,190</area>
+        </shape>
+        
+        <textarea name="title" from="base_textarea">
+            <area>390,450,825,30</area>
+            <font>title</font>
+            <cutdown>yes</cutdown>
+        </textarea>
+
+        <!-- information about the selected game -->
+        <textarea name="year_label" from="base_textarea">
+            <area>390,490,60,20</area>
+            <align>right,vcenter</align>
+            <font>text_small</font>
+            <value>Year:</value>
+        </textarea>
+        <textarea name="year" from="base_textarea">
+            <area>455,490,60,20</area>
+            <font>text_small</font>
+        </textarea>        
+
+        <textarea name="system_label" from="year_label">
+            <area>520,490,100,20</area>
+            <value>System:</value>
+        </textarea>
+         <textarea name="system" from="year">
+            <area>625,490,150,20</area>
+        </textarea>
+        
+        <textarea name="genre_label" from="year_label">
+            <area>780,490,80,20</area>
+            <value>Genre:</value>
+        </textarea>
+        <textarea name="genre" from="year">
+            <area>865,490,150,20</area>
+        </textarea>
+        
+        <textarea name="favorite_label" from="year_label">
+            <area>1020,490,100,20</area>
+            <value>Favorite:</value>
+        </textarea>
+        <statetype name="favorite">
+            <state name="no">
+                <textarea name="favorite" from="base_textarea">
+                    <area>1125,490,50,20</area>
+                    <font>text_small</font>
+                    <value>No</value>
+                </textarea>
+            </state>
+            <state name="yes" from="no">
+                <textarea name="favorite" from="base_textarea">
+                    <area>1125,490,50,20</area>
+                    <font>text_small</font>
+                    <value>Yes</value>
+                </textarea>
+            </state>
+        </statetype>
+        
+        <shape name="information_separator" from="base_separator_shape">
+            <area>370,523,800,1</area>
+        </shape>
+
+        <textarea name="description" from="base_textarea">
+            <area>390,538,760,120</area>
+            <font>text_small</font>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <align>left,top</align>
+        </textarea>
+    </window>
+
+
+
+
+
+
+    <!-- Shows details about the selected game -->
+    <window name="gamedetailspopup">
+
+        <imagetype name="fanart" from="base_background"/>
+
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Game Information</value>
+            </textarea>
+        </textarea>
+
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- this is the background around the covers  -->
+        <shape name="coverart_background" from="base_background_shape">
+            <area>100,120,305,510</area>
+        </shape>
+        <shape name="coverart_shape" from="base_background_shape">
+            <area>120,140,268,470</area>
+        </shape>
+
+        <imagetype name="coverart">
+            <area>123,143,262,410</area>
+            <filename />
+            <preserveaspect>true</preserveaspect>
+            <reflection axis="vertical" scale="65" length="35" />
+        </imagetype>
+
+        <!-- this is the background around the video details -->
+        <shape name="game_details_background" from="base_background_shape">
+            <area>425,120,755,510</area>
+        </shape>
+
+        <textarea name="title" from="base_textarea">
+            <area>445,135,600,30</area>
+            <font>title</font>
+            <cutdown>yes</cutdown>
+        </textarea>
+
+        <shape name="title_separator" from="base_separator_shape">
+            <area>445,180,715,1</area>
+        </shape>
+
+        <textarea name="description" from="base_textarea">
+            <area>445,195,715,180</area>
+            <font>text_small</font>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <align>left,top</align>
+        </textarea>
+
+        <shape name="description_separator" from="base_separator_shape">
+            <area>445,355,715,1</area>
+        </shape>
+
+        <!-- show the name of the different labels -->
+        <textarea name="gametype_label" from="base_textarea">
+            <area>445,365,150,30</area>
+            <align>right,vcenter</align>
+            <font>text_small</font>
+            <value>Gametype:</value>
+        </textarea>
+        <textarea name="publisher_label" from="gametype_label">
+            <position>445,395</position>
+            <value>Publisher:</value>
+        </textarea>
+        <textarea name="allsystems_label" from="gametype_label">
+            <position>445,425</position>
+            <value>System(s):</value>
+        </textarea>        
+        <textarea name="genre_label" from="gametype_label">
+            <position>750,365</position>
+            <value>Genre:</value>
+        </textarea>
+        <textarea name="year_label" from="gametype_label">
+            <position>750,395</position>
+            <value>Year:</value>
+        </textarea>
+        <textarea name="country_label" from="gametype_label">
+            <position>750,425</position>
+            <value>Country:</value>
+        </textarea>
+        <textarea name="romname_label" from="gametype_label">
+            <position>445,485</position>
+            <value>Filename:</value>
+        </textarea>
+        <textarea name="rompath_label" from="gametype_label">
+            <position>445,515</position>
+            <value>ROM Path:</value>
+        </textarea>
+        
+        <!-- show the values to the different labels -->
+        <textarea name="gametype" from="base_textarea">
+            <area>605,365,210,30</area>
+            <font>text_small</font>
+            <cutdown>yes</cutdown>
+            <value>Gametype:</value>
+        </textarea>
+        <textarea name="publisher" from="gametype">
+            <position>605,395</position>
+        </textarea>
+        <textarea name="allsystems" from="gametype">
+            <position>605,425</position>
+        </textarea>
+        <textarea name="genre" from="gametype">
+            <position>910,365</position>
+        </textarea>
+        <textarea name="year" from="gametype">
+            <position>910,395</position>
+        </textarea>
+        <textarea name="country" from="gametype">
+            <position>910,425</position>
+        </textarea>
+        <textarea name="romname" from="base_textarea">
+            <area>605,485,555,30</area>
+            <font>text_small</font>
+        </textarea>
+        <textarea name="rompath" from="base_textarea">
+            <area>605,515,555,30</area>
+            <font>text_small</font>
+        </textarea>
+                
+        <shape name="details_separator" from="base_separator_shape">
+            <area>445,554,715,1</area>
+        </shape>
+
+        <button name="play_button" from="base_button">
+            <value>Play</value>
+            <position>445,572</position>
+        </button>
+        <button name="done_button" from="base_button">
+            <value>Back</value>
+            <position>617,572</position>
+        </button>
+
+    </window>
+
+
+
+
+
+
+    <!-- Allows the user to edit the metadata of the selected game -->
+    <window name="edit_metadata">
+
+        <imagetype name="fanart" from="base_background"/>
+
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Edit Metadata</value>
+            </textarea>
+        </textarea>
+
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="editmetadata_shape" from="base_background_shape">
+            <area>230,80,820,560</area>
+        </shape>
+
+        <!-- Labels -->
+        <textarea name="gamename_label" from="base_textarea">
+            <area>250,100,250,40</area>
+            <value>Game Name:</value>
+            <align>right,vcenter</align>
+        </textarea>
+        <textarea name="genre_label" from="gamename_label">
+            <position>250,145</position>
+            <value>Genre:</value>
+        </textarea>
+        <textarea name="year_label" from="gamename_label">
+            <position>250,190</position>
+            <value>Year:</value>
+        </textarea>
+        <textarea name="country_label" from="gamename_label">
+            <position>250,235</position>
+            <value>Country:</value>
+        </textarea>
+        <textarea name="publisher_label" from="gamename_label">
+            <position>250,280</position>
+            <value>Publisher:</value>
+        </textarea>
+        <textarea name="plot_label" from="gamename_label">
+            <position>250,325</position>
+            <value>Plot:</value>
+        </textarea>
+        <textarea name="fav_label" from="gamename_label">
+            <position>250,370</position>
+            <value>Favorite:</value>
+        </textarea>
+        <textarea name="screenshot_label" from="gamename_label">
+            <position>250,415</position>
+            <value>Screenshot:</value>
+        </textarea>
+        <textarea name="fanart_label" from="gamename_label">
+            <position>250,460</position>
+            <value>Fanart:</value>
+        </textarea>
+        <textarea name="coverart_label" from="gamename_label">
+            <position>250,505</position>
+            <value>Boxart:</value>
+        </textarea>
+
+        <!-- Widgets -->
+        <textedit name="title_edit" from="base_textedit">
+            <position>510,100</position>
+        </textedit>
+        <textedit name="genre_edit" from="base_textedit">
+            <position>510,145</position>
+        </textedit>
+        <textedit name="year_edit" from="base_textedit">
+            <position>510,190</position>
+        </textedit>
+        <textedit name="country_edit" from="base_textedit">
+            <position>510,235</position>
+        </textedit>
+        <textedit name="publisher_edit" from="base_textedit">
+            <position>510,280</position>
+        </textedit>
+        <textedit name="description_edit" from="base_textedit">
+            <position>510,325</position>
+        </textedit>
+        <checkbox name="favorite_check" from="base_checkbox">
+            <position>510,375</position>
+        </checkbox>
+        
+        <button name="screenshot_button" from="base_searchbutton">
+            <position>510,420</position>
+        </button>
+        <textarea name="screenshot_text" from="base_textarea">
+            <area>550,415,490,40</area>
+            <value>Click here to search existing screenshots...</value>
+            <cutdown>yes</cutdown>
+        </textarea>
+
+        <button name="fanart_button" from="base_searchbutton">
+            <position>510,465</position>
+        </button>
+        <textarea name="fanart_text" from="base_textarea">
+            <area>550,455,490,40</area>
+            <value>Click here to search existing fanart...</value>
+            <cutdown>yes</cutdown>
+        </textarea>
+
+        <button name="coverart_button" from="base_searchbutton">
+            <position>510,510</position>
+        </button>
+        <textarea name="coverart_text" from="base_textarea">
+            <area>550,505,490,40</area>
+            <value>Click here to search existing coverart...</value>
+            <cutdown>yes</cutdown>
+        </textarea>
+
+        <shape name="button_separator" from="base_separator_shape">
+            <area>250,560,780,1</area>
+        </shape>
+
+        <button name="done_button" from="base_button">
+            <position>565,580</position>
+            <value>Done</value>
+        </button>
+    </window>
+
+</mythuitheme>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <!-- waits for a keypress fom the user -->
+    <window name="keygrabpopup">
+
+        <shape name="darken_background" from="base_darken_background"/>
+
+        <shape name="keygrabpopup_background" from="base_background_shape_dark">
+            <area>390,270,500,180</area>
+        </shape>
+
+        <textarea name="message" from="base_textarea">
+            <area>410,270,460,100</area>
+            <multiline>yes</multiline>
+            <align>left,vcenter</align>
+        </textarea>
+
+        <shape name="message_separator" from="base_separator_shape">
+            <area>410,370,460,1</area>
+        </shape>
+
+        <button name="cancel" from="base_button">
+            <position>475,390</position>
+            <value>Cancel</value>
+        </button>
+
+        <button name="ok" from="base_button">
+            <position>655,390</position>
+            <value>Ok</value>
+        </button>
+    </window>
+
+
+
+
+
+
+    <!-- allows the user to change the keyboard associations -->
+    <window name="controls">
+
+        <!-- the background image -->
+        <imagetype name="background" from="base_background"/>
+        
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Key Shortcuts</value>
+            </textarea>
+        </textarea>
+
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- this is the background around the covers  -->
+        <shape name="controls_background" from="base_background_shape">
+            <area>260,80,750,590</area>
+        </shape>
+        
+        <!-- the left configuration list with the text -->
+        <textarea name="leftdesc" from="base_textarea">
+            <area>280,90,350,20</area>
+            <value>Contexts</value>
+            <font>text_very_small</font>
+            <align>left,vcenter</align>
+        </textarea>
+
+        <buttonlist name="leftlist" from="base_buttonlist">
+            <area>280,110,350,400</area>
+            <showarrow>no</showarrow>
+        </buttonlist>
+
+        <!-- the right configuration list with the text -->
+        <textarea name="rightdesc" from="base_textarea">
+            <area>640,90,350,20</area>
+            <value>Actions</value>
+            <font>text_very_small</font>
+            <align>left,vcenter</align>
+        </textarea>
+
+        <buttonlist name="rightlist" from="base_buttonlist">
+            <area>640,110,350,400</area>
+        </buttonlist>
+
+        <shape name="description_background" from="base_background_shape">
+            <area>280,520,710,70</area>
+        </shape>
+        <textarea name="description" from="base_textarea">
+            <area>300,520,670,70</area>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <align>allcenter</align>
+            <value>This screen displays the status of various system components</value>
+        </textarea>
+
+        <!-- these four buttons show the assigned key on it.
+            If there is none assigned, its empty. -->
+        <button name="action_0" from="base_button">
+            <position>280,610</position>
+        </button>
+
+        <button name="action_1" from="base_button">
+            <position>465,610</position>
+        </button>
+
+        <button name="action_2" from="base_button">
+            <position>655,610</position>
+        </button>
+
+        <button name="action_3" from="base_button">
+            <position>840,610</position>
+        </button>
+
+    </window>
+
+
+</mythuitheme>

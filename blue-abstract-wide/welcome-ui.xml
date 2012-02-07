@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <window name="welcome_screen">
+        
+        <imagetype name="background" from="base_background"/>
+        
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Welcome</value>
+            </textarea>
+        </textarea>
+        
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>	
+        </textarea>
+        
+        <!-- this is the background shape -->
+        <shape name="welcome_background" from="base_background_shape">
+            <area>250,70,780,590</area>
+        </shape>
+
+        <!-- Show the time and date. This is not required 
+            but mythwelcome needs it to load properly -->
+        <textarea name="time_text" from="base_textarea">
+            <area>0,0,0,0</area>
+            <value></value>
+        </textarea>
+        <textarea name="date_text" from="base_textarea">
+            <area>0,0,0,0</area>
+            <multiline>yes</multiline>
+        </textarea>
+
+        <!-- current myth status -->
+        <textarea name="status_text" from="base_textarea">
+            <area>270,90,740,40</area>
+            <multiline>yes</multiline>
+            <font>title</font>
+            <align>allcenter</align>
+            <value>MythTV is idle and will shutdown shortly.</value>
+        </textarea>
+
+        <!-- current recordings status -->
+        <shape name="recording_separator" from="base_separator_shape">
+            <area>270,150,740,1</area>
+        </shape>
+        <textarea name="recording_label" from="base_textarea">
+            <area>270,165,740,30</area>
+            <align>allcenter</align>
+            <value>Current Recording(s)</value>
+        </textarea>
+        <textarea name="recording_text" from="base_textarea">
+            <area>270,200,740,120</area>
+            <align>allcenter</align>
+            <value>Retrieving Recording Status ...</value>
+        </textarea>
+
+        <!-- next scheduled recording status -->
+        <shape name="schedule_separator" from="base_separator_shape">
+            <area>270,330,740,1</area>
+        </shape>
+        <textarea name="scheduled_label" from="base_textarea">
+            <area>270,345,740,30</area>
+            <align>allcenter</align>
+            <value>Next Scheduled Recording(s)</value>
+        </textarea>
+        <textarea name="scheduled_text" from="base_textarea">
+            <area>270,380,740,120</area>
+            <align>allcenter</align>
+            <value>Retrieving Scheduled Recordings ...</value>
+        </textarea>
+
+        <!-- scheduled recordings conflict warning -->
+        <shape name="conflicts_separator" from="base_separator_shape">
+            <area>270,510,740,1</area>
+        </shape>
+        <textarea name="conflicts_text" from="base_textarea">
+            <area>250,530,740,30</area>
+            <font>text_warning</font>
+            <align>allcenter</align>
+            <value>WARNING: There are conflicting scheduled recordings!</value>
+        </textarea>
+
+        <!-- start frontend button -->
+        <shape name="button_separator" from="base_separator_shape">
+            <area>270,580,740,1</area>
+        </shape>
+        
+        <button name="startfrontend_button" from="base_button_wide">
+            <position>490,600</position>
+        </button>
+
+    </window>
+
+</mythuitheme>

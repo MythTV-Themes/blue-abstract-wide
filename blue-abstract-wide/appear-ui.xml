@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <!-- The screen where the user can adjust the monitor. -->
+    <window name="appearance">
+
+        <imagetype name="background" from="base_background"/>
+
+        <!-- The name of the screen needs to be defined 
+             again because it is in the center of the screen -->
+        <shape name="heading_background" from="base_background_shape">
+            <area>470,-4,350,36</area>
+        </shape>
+        <textarea name="text" from="base_textarea">
+            <area>475,0,340,30</area>
+            <align>allcenter</align>
+            <value>Appearance Wizard</value>
+        </textarea>
+
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- this is the background for the information at the bottom -->
+        <shape name="appearance_background" from="base_background_shape">
+            <area>350,240,580,240</area>
+        </shape>
+
+        <imagetype name="topleft">
+            <position>0,0</position>
+            <filename />
+            <shape name="topleft_shape" from="base_background_shape_dark">
+                <area>0,0,40,40</area>
+            </shape>
+        </imagetype>
+        <imagetype name="bottomright">
+            <position>1240,640</position>
+            <filename />
+            <shape name="bottomright_shape" from="base_background_shape_dark">
+                <area>1240,640,40,40</area>
+            </shape>
+        </imagetype>
+
+        <textarea name="part1" from="base_textarea">
+            <area>370,240,540,100</area>
+            <value>Move the selected arrow to the corner of the TV screen. Press SELECT to edit the other arrow. Press MENU for options and ESC to quit.</value>
+            <multiline>yes</multiline>
+            <align>allcenter</align>
+        </textarea>
+
+        <shape name="title_separator" from="base_separator_shape">
+            <area>370,340,540,1</area>
+        </shape>
+
+        <textarea name="size" from="base_textarea">
+            <area>370,350,540,40</area>
+            <align>allcenter</align>
+        </textarea>
+
+        <textarea name="offsets" from="base_textarea">
+            <area>370,390,540,40</area>
+            <align>allcenter</align>
+        </textarea>
+
+        <textarea name="changeamount" from="base_textarea">
+            <area>370,430,540,40</area>
+            <align>allcenter</align>
+        </textarea>
+
+    </window>
+</mythuitheme>

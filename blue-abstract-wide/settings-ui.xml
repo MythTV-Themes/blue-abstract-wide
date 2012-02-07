@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+    
+    <window name="rawsettingseditor">
+
+        <imagetype name="background" from="base_background"/>
+
+        <textarea name="custom_heading" from="base_heading">
+            <position>0,0</position>
+            <shape name="heading_background" from="base_background_shape">
+                <area>-4,-4,344,36</area>
+            </shape>
+            <textarea name="text">
+                <area>0,0,340,30</area>
+                <value>System Event Command Editor</value>
+            </textarea>
+        </textarea>
+
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <shape name="settings_background" from="base_background_shape">
+            <area>300,100,690,545</area>
+        </shape>
+
+        <buttonlist name="settings" from="base_buttonlist_wide">
+            <area>320,120,400,358</area>
+        </buttonlist>
+
+        <shape name="settings_separator" from="base_separator_shape">
+            <area>320,493,650,1</area>
+        </shape>
+
+        <!-- put this outside of the screen, because it shows 
+            the same as the text in the buttonlist -->
+        <textarea name="label-text" from="base_textarea">
+            <area>320,-50,650,40</area>
+        </textarea>
+        
+        <textarea name="settings_label" from="base_textarea">
+            <area>320,510,270,40</area>
+            <align>right,vcenter</align>
+            <value>Event command:</value>
+        </textarea>
+        <textedit name="settingvalue" from="base_textedit">
+            <position>595,510</position>
+        </textedit>
+
+        <shape name="button_separator" from="base_separator_shape">
+            <area>320,565,650,1</area>
+        </shape>
+
+        <button name="cancel" from="base_button">
+            <position>320,585</position>
+            <value>Cancel</value>
+        </button>
+        <button name="save" from="base_button">
+            <position>820,585</position>
+            <value>Save</value>
+        </button>
+
+    </window>
+
+
+
+
+
+    <!-- Presents a list of available themes 
+        that the user can download and install -->
+    <window name="themechooser">
+
+        <imagetype name="background" from="base_background"/>
+        
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Theme Chooser</value>
+            </textarea>
+        </textarea>
+
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>
+
+        <!-- this is the background for the themelist and the large preview at the top -->
+        <shape name="themechooser_background" from="base_background_shape">
+            <area>100,70,1080,405</area>
+        </shape>
+
+        <buttonlist name="themes" from="base_buttonlist">
+            <area>120,92,350,367</area>
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
+            <triggerevent context="Global" action="MENU">RIGHT</triggerevent>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,5,450,30</area>
+                        <align>left,vcenter</align>
+                        <cutdown>yes</cutdown>
+                    </textarea> 
+
+                    <!-- State to show whether a theme is locally 
+                        installed or remotely downloadable -->
+                    <!--<statetype name="themelocation">
+                        <state name="local">
+                            <imagetype name="location">
+                                <area>310,5,31,31</area>
+                                <filename>images/shared/recordings/watched.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="remote">
+                            <imagetype name="location">
+                                <area>310,5,31,31</area>
+                                <filename>images/shared/recordings/watched.png</filename>
+                                <alpha>50</alpha>
+                            </imagetype>
+                        </state>
+                    </statetype>-->
+
+                    <!-- State to indicate whether an installed 
+                        downloadable theme is up to date or not -->
+                    <!--<statetype name="themestatus">
+                        <state name="uptodate">
+                            <imagetype name="status">
+                                <area>275,5,31,31</area>
+                                <filename>images/shared/recordings/watched.png</filename>
+                                <alpha>50</alpha>
+                            </imagetype>
+                        </state>
+                        <state name="updateavailable">
+                            <imagetype name="status">
+                                <area>275,5,31,31</area>
+                                <filename>images/shared/recordings/watched.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>-->
+                </state>
+            
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,350,40</area>
+                    </imagetype>
+                </state>
+
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,350,40</area>
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <font>text_inactive</font>
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>
+        
+        <!-- shows a preview image of the theme on the right side -->
+        <shape name="preview_shape" from="base_background_shape">
+            <area>511,90,647,365</area>
+        </shape>
+        <imagetype name="preview">
+            <area>512,92,645,361</area>
+            <filename />
+            <preserveaspect>true</preserveaspect>
+        </imagetype>      
+        
+        <!-- this is the background for the descriptions and the small preview at the bottom -->
+        <shape name="theme_details_background" from="base_background_shape">
+            <area>100,500,1080,180</area>
+        </shape>
+
+        <!-- shows the name, resolution and aspect ratio of the selected theme -->
+        <textarea name="name" from="base_textarea">
+            <area>120,515,500,30</area>
+            <cutdown>yes</cutdown>
+            <font>title</font>
+        </textarea>
+
+        <textarea name="resolution" from="base_textarea">
+            <area>120,552,170,20</area>
+            <font>text_small</font>
+        </textarea> 
+    
+        <textarea name="aspect" from="base_textarea">
+            <area>300,552,100,20</area>
+            <font>text_small</font>
+        </textarea> 
+        
+        <shape name="downloadprogress_separator" from="base_background_shape">
+            <area>640,520,1,65</area>
+        </shape>
+
+        <textarea name="downloadprogress_label" from="base_textarea">
+            <area>660,517,500,20</area>
+            <align>allcenter</align>
+            <font>text_small</font>
+            <value>Download progress:</value>
+        </textarea>
+
+        <progressbar name="downloadprogressbar" from="base_progressbar_flat">
+            <position>660,548</position>
+        </progressbar>
+
+        <!-- separates the time and channel and the status icons from the plot -->
+        <shape name="theme_description_separator" from="base_separator_shape">
+            <area>120,585,1040,1</area>
+        </shape>
+
+        <textarea name="description" from="base_textarea">
+            <area>120,600,1040,80</area>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <align>left,top</align>
+            <font>text_small</font>
+        </textarea>
+
+        <!-- shows a large preview image of the theme -->
+        <statetype name="fullpreviewstate">
+            <area>0,0,1280,720</area>
+
+            <state name="fullscreen">
+                <area>0,0,1280,720</area>
+
+                <!-- the actual large preview image -->
+                <imagetype name="fullscreenpreview">
+                    <area>0,0,1280,720</area>
+                    <filename />
+                </imagetype>
+
+                <shape name="fullscreenname_background" from="base_background_shape">
+                    <area>440,-4,400,44</area>
+                </shape>
+                <textarea name="fullscreenname" from="base_textarea">
+                    <area>460,3,360,30</area>
+                    <align>allcenter</align>
+                </textarea>
+            </state>
+        </statetype>
+        
+    </window>
+        
+</mythuitheme>

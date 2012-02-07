@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mythmenu name="TV_MENU_SCHEDULE">
+
+    <button>
+        <type>TV_PROGRAM_GUIDE</type>
+        <text>Program Guide</text>
+        <description>Choose programs from a grid-style list</description>
+        <action>TV_SCHEDULE</action>
+    </button>
+
+    <button>
+        <type>TV_PROGFIND</type>
+        <text>Program Finder</text>
+        <text lang="DE">Alphabetische Suche</text>
+        <description>Choose programs from an alphabetical index</description>
+        <description lang="DE">Alle Sendungen in alphabetischer Reihenfolge</description>
+        <action>TV_PROGFIND</action>
+    </button>
+
+    <button>
+        <type>TV_SEARCH_WORDS</type>
+        <text>Search Words</text>
+        <text lang="DE">Volltextsuche</text>
+        <description>Find programs matching search words</description>
+        <description lang="DE">Eine Sendung über Schlagwörter finden</description>
+        <action>MENU tv_search.xml</action>
+    </button>
+
+    <button>
+        <type>TV_SEARCH_LISTS</type>
+        <text>Search Lists</text>
+        <text lang="DE">Listensuche</text>
+        <description>Pick a program to record from a set of lists</description>
+        <description lang="DE">Eine Sendung in versch. Listen finden</description>
+        <action>MENU tv_lists.xml</action>
+    </button>
+
+   <button>
+        <type>TV_MENU_ADVANCED</type>
+        <text>Advanced Options</text>
+        <text lang="DE">Erweiterte Optionen</text>
+        <description>Manual scheduling or set recording rules</description>
+        <description lang="DE">Manuelle Planung und Aufnahmeregeln erstellen</description>
+        <action>MENU tv_menu_advanced.xml</action>
+    </button>
+
+</mythmenu>
