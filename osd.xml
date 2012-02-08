@@ -486,77 +486,77 @@
             <state name="PCM_DVD">
                 <textarea name="audiocodec_label" from="base_textarea">
                     <font>text_small</font>
-                    <area>1080,440,80,20</area>
+                    <area>980,440,80,20</area>
                     <value>PCM</value>
                 </textarea>
             </state>
             <state name="PCM_BLURAY">
                 <textarea name="audiocodec_label" from="base_textarea">
                     <font>text_small</font>
-                    <area>1080,440,80,20</area>
+                    <area>980,440,80,20</area>
                     <value>PCM BD</value>
                 </textarea>
             </state>
             <state name="AC3">
                 <textarea name="audiocodec_label" from="base_textarea">
                     <font>text_small</font>
-                    <area>1080,440,80,20</area>
+                    <area>980,440,80,20</area>
                     <value>AC3</value>
                 </textarea>
             </state>
             <state name="E-AC3">
                 <textarea name="audiocodec_label" from="base_textarea">
                     <font>text_small</font>
-                    <area>1080,440,80,20</area>
+                    <area>980,440,80,20</area>
                     <value>E-AC3</value>
                 </textarea>
             </state>
             <state name="TRUEHD">
                 <textarea name="audiocodec_label" from="base_textarea">
                     <font>text_small</font>
-                    <area>1080,440,80,20</area>
+                    <area>980,440,80,20</area>
                     <value>True HD</value>
                 </textarea>
             </state>
             <state name="WMAPRO">
                 <textarea name="audiocodec_label" from="base_textarea">
                     <font>text_small</font>
-                    <area>1080,440,80,20</area>
+                    <area>980,440,80,20</area>
                     <value>WMA Pro</value>
                 </textarea>
             </state>
             <state name="DTS">
                 <textarea name="audiocodec_label" from="base_textarea">
                     <font>text_small</font>
-                    <area>1080,440,80,20</area>
+                    <area>980,440,80,20</area>
                     <value>DTS</value>
                 </textarea>
             </state>
             <state name="AAC">
                 <textarea name="audiocodec_label" from="base_textarea">
                     <font>text_small</font>
-                    <area>1080,440,80,20</area>
+                    <area>980,440,80,20</area>
                     <value>AAC</value>
                 </textarea>
             </state>
             <state name="MP2">
                 <textarea name="audiocodec_label" from="base_textarea">
                     <font>text_small</font>
-                    <area>1080,440,80,20</area>
+                    <area>980,440,80,20</area>
                     <value>MP2</value>
                 </textarea>
             </state>
             <state name="MP3">
                 <textarea name="audiocodec_label" from="base_textarea">
                     <font>text_small</font>
-                    <area>1080,440,80,20</area>
+                    <area>980,440,80,20</area>
                     <value>MP3</value>
                 </textarea>
             </state>
             <state name="VORBIS">
                 <textarea name="audiocodec_label" from="base_textarea">
                     <font>text_small</font>
-                    <area>1080,440,80,20</area>
+                    <area>980,440,80,20</area>
                     <value>Vorbis</value>
                 </textarea>
             </state>
