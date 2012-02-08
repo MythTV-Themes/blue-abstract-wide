@@ -1,7 +1,3 @@
-This module provides a number of themes for MythTV that are not distributed in
-the main download.
+This theme provides a clean and modern look for MythTV.
 
-To install:
-
-$ ./configure
-$ sudo make install
+To install copy the entire blue-abstract-wide folder to the theme directory in your home directory or where MythTV was installed. Example: /home/<user>/.mythtv/themes or /usr/share/mythtv/themes.
