@@ -705,29 +705,29 @@
         </textarea>
 
         <textarea name="ac3_text" from="base_textarea">
-            <area>300,190,445,30</area>
+            <area>300,190,485,30</area>
             <align>right,vcenter</align>
-            <value>My speaker supports Dolby Digital</value>
+            <value>My audio subsystem supports Dolby Digital</value>
         </textarea>
 
         <textarea name="dts_text" from="ac3_text">
             <position>300,240</position>
-            <value>My speaker supports DTS</value>
+            <value>My audio subsystem supports DTS</value>
         </textarea>
 
         <textarea name="eac3_text" from="ac3_text">
             <position>300,290</position>
-            <value>My speaker supports E-AC-3</value>
+            <value>My audio subsystem supports E-AC-3</value>
         </textarea>
         
         <textarea name="truehd_text" from="ac3_text">
             <position>300,340</position>
-            <value>My speaker supports TrueHD</value>
+            <value>My audio subsystem supports TrueHD</value>
         </textarea>
 
         <textarea name="dtshd_text" from="ac3_text">
             <position>300,390</position>
-            <value>My speaker supports DTS-HD</value>
+            <value>My audio subsystem supports DTS-HD</value>
         </textarea>
 
         <buttonlist name="audiodevices" from="base_selector_wide">
@@ -739,23 +739,23 @@
         </buttonlist>
 
         <checkbox name="ac3check" from="base_checkbox">
-            <position>760,190</position>
+            <position>800,190</position>
         </checkbox>
 
         <checkbox name="dtscheck" from="base_checkbox">
-            <position>760,240</position>
+            <position>800,240</position>
         </checkbox>
 
         <checkbox name="eac3check" from="base_checkbox">
-            <position>760,290</position>
+            <position>800,290</position>
         </checkbox>
         
         <checkbox name="truehdcheck" from="base_checkbox">
-            <position>760,340</position>
+            <position>800,340</position>
         </checkbox>
 
         <checkbox name="dtshdcheck" from="base_checkbox">
-            <position>760,390</position>
+            <position>800,390</position>
         </checkbox>
 
         <button name="testspeakers" from="base_button_wide">
