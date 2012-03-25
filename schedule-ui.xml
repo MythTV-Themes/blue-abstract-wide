@@ -202,7 +202,7 @@
 
         <!-- this is the list with the tv program -->
         <guidegrid name="guidegrid">
-            <area>286,95,960,350</area>
+            <area>286,105,960,350</area>
             <layout>horizontal</layout>
             <channels>5</channels>
             <timeslots>5</timeslots>
