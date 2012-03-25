@@ -2430,6 +2430,43 @@
     </window>
 
 
+    <!-- Template screen type for screens using a date and time buttonlist.
+         Allows the user to select how (timewise) the schedule will be recorded. -->
+    <window name="MythTimeInputDialog">
+
+        <shape name="darken_background" from="base_darken_background"/>
+
+        <!-- the title of the window -->
+        <imagetype name="title_background" from="base_popup_background">
+            <area>395,120,490,70</area>
+        </imagetype>
+        <textarea name="title_text" from="base_textarea">
+            <area>415,265,450,30</area>
+            <value>Select Time</value>
+            <align>allcenter</align>
+        </textarea>
+        <shape name="title_separator" from="base_separator_shape">
+           <area>395,315,490,1</area>
+        </shape>
+
+        <buttonlist name="date_list" from="base_selector">
+            <position>390,335</position>
+        </buttonlist>
+        <buttonlist name="time_list" from="base_selector">
+            <position>650,335</position>
+        </buttonlist>
+
+        <shape name="selector_separator" from="base_separator_shape">
+            <area>395,315,295,1</area>
+        </shape>
+
+        <button name="ok_button" from="base_button">
+            <position>565,405</position>
+            <value>OK</value>
+        </button>
+    </window>
+
+
 
     <!-- Screen that shows the please wait and a progressbar -->
     <window name="videowindow">
