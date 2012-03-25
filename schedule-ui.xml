@@ -1449,56 +1449,6 @@
 
 
 
-    <!-- Template screen type for screens using a date and time buttonlist.
-         Allows the user to select how (timewise) the schedule will be recorded. -->
-    <!-- NOT TESTED -->
-    <window name="timepopup">
-
-        <shape name="darken_background" from="base_darken_background"/>
-
-        <shape name="iconhelp_background">
-            <area>375,245,530,220</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="255" />
-            <line color="#CCCCCC" alpha="255" width="1" />
-            <cornerradius>2</cornerradius>
-        </shape>
-
-        <!-- the title of the window -->
-        <textarea name="title_text" from="base_textarea">
-            <area>395,265,490,30</area>
-            <value>Select Time</value>
-            <align>allcenter</align>
-            <font>text</font>
-        </textarea>
-
-        <shape name="title_separator" from="base_separator_shape">
-            <area>395,315,490,1</area>
-        </shape>
-
-        <buttonlist name="date_list" from="base_selector">
-            <position>390,335</position>
-        </buttonlist>
-
-        <buttonlist name="time_list" from="base_selector">
-            <position>650,335</position>
-        </buttonlist>
-
-        <shape name="title_separator" from="base_separator_shape">
-            <area>395,315,295,1</area>
-        </shape>
-
-        <button name="ok_button" from="base_button">
-            <position>565,405</position>
-            <value>OK</value>
-        </button>
-    </window>
-
-
-
-
-
-
     <!-- The Power Search popup.
         Allows the user to enter a search term. -->
     <window name="powersearchpopup">
