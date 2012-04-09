@@ -1396,6 +1396,20 @@
         Allows the user to enter a search term. -->
     <window name="phrasepopup">
 
+        <animation trigger="AboutToShow">
+            <section>
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
+
+        <animation trigger="AboutToHide">
+            <section>
+                <alpha start="255" end="0" easingcurve="InQuart"/>
+                <zoom start="100" end="0" easingcurve="InQuart"/>
+            </section>
+        </animation>
+        
         <shape name="darken_background" from="base_darken_background"/>
 
         <shape name="iconhelp_background" from="base_background_shape_dark">
@@ -1453,6 +1467,20 @@
         Allows the user to enter a search term. -->
     <window name="powersearchpopup">
 
+        <animation trigger="AboutToShow">
+            <section>
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
+
+        <animation trigger="AboutToHide">
+            <section>
+                <alpha start="255" end="0" easingcurve="InQuart"/>
+                <zoom start="100" end="0" easingcurve="InQuart"/>
+            </section>
+        </animation>
+        
         <shape name="darken_background" from="base_darken_background"/>
 
         <shape name="iconhelp_background" from="base_background_shape_dark">
@@ -1507,6 +1535,22 @@
         Allows the user to enter a more specific search term. -->
     <window name="editpowersearchpopup">
 
+        <animation trigger="AboutToShow">
+            <section>
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
+
+        <!-- Disappears when virtual keyboard is used
+        <animation trigger="AboutToHide">
+            <section>
+                <alpha start="255" end="0" easingcurve="InQuart"/>
+                <zoom start="100" end="0" easingcurve="InQuart"/>
+            </section>
+        </animation>
+        -->
+        
         <shape name="darken_background" from="base_darken_background"/>
 
         <shape name="iconhelp_background" from="base_background_shape_dark">

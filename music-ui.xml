@@ -947,6 +947,20 @@
         song is played. it shows some information about the song. -->
     <window name="miniplayer">
 
+        <animation trigger="AboutToShow">
+            <section>
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
+
+        <animation trigger="AboutToHide">
+            <section>
+                <alpha start="255" end="0" easingcurve="InQuart"/>
+                <zoom start="100" end="0" easingcurve="InQuart"/>
+            </section>
+        </animation>
+
         <shape name="track_info_background" from="base_background_shape_dark">
             <area>555,520,700,180</area>
         </shape>
@@ -1051,6 +1065,20 @@
     <!-- this is the popup screen that shows the volume progressbar. -->
     <window name="volume_popup">
 
+        <animation trigger="AboutToShow">
+            <section>
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
+
+        <animation trigger="AboutToHide">
+            <section>
+                <alpha start="255" end="0" easingcurve="InQuart"/>
+                <zoom start="100" end="0" easingcurve="InQuart"/>
+            </section>
+        </animation>
+        
         <shape name="volume_background" from="base_background_shape_dark">
             <area>370,285,540,130</area>
         </shape>

@@ -1799,6 +1799,20 @@
     <!-- Popup dialog box that has various usages in many screens -->
     <window name="MythPopupBox">
 
+        <animation trigger="AboutToShow">
+            <section>
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
+
+        <animation trigger="AboutToHide">
+            <section>
+                <alpha start="255" end="0" easingcurve="InQuart"/>
+                <zoom start="100" end="0" easingcurve="InQuart"/>
+            </section>
+        </animation>
+        
         <!-- darkens the entire background so 
              that the popup is better readable -->
         <shape name="darken_background" from="base_darken_background" />
@@ -1855,6 +1869,20 @@
     <!-- Fullscreen Dialogue Box -->
     <window name="MythDialogBox">
 
+        <animation trigger="AboutToShow">
+            <section>
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
+
+        <animation trigger="AboutToHide">
+            <section>
+                <alpha start="255" end="0" easingcurve="InQuart"/>
+                <zoom start="100" end="0" easingcurve="InQuart"/>
+            </section>
+        </animation>
+        
         <!-- darkens the entire background so 
              that the popup is better readable -->
         <shape name="darken_background" from="base_darken_background" />
@@ -1911,6 +1939,20 @@
     <!-- Shows a rotating icon when mythtv is busy doing stuff -->
     <window name="MythBusyDialog">
 
+        <!--<animation trigger="AboutToShow">
+            <section>
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>-->
+
+        <animation trigger="AboutToHide">
+            <section>
+                <alpha start="255" end="0" easingcurve="InQuart"/>
+                <zoom start="100" end="0" easingcurve="InQuart"/>
+            </section>
+        </animation>
+        
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
@@ -1938,6 +1980,20 @@
     <!-- Shows a progressbar when mythtv is busy doing stuff -->
     <window name="MythProgressDialog">
 
+        <!--<animation trigger="AboutToShow">
+            <section>
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>-->
+
+        <animation trigger="AboutToHide">
+            <section>
+                <alpha start="255" end="0" easingcurve="InQuart"/>
+                <zoom start="100" end="0" easingcurve="InQuart"/>
+            </section>
+        </animation>
+        
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
@@ -1973,6 +2029,20 @@
         in many screens for different things -->
     <window name="MythConfirmationDialog">
 
+        <animation trigger="AboutToShow">
+            <section>
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
+
+        <animation trigger="AboutToHide">
+            <section>
+                <alpha start="255" end="0" easingcurve="InQuart"/>
+                <zoom start="100" end="0" easingcurve="InQuart"/>
+            </section>
+        </animation>
+        
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
@@ -2007,6 +2077,22 @@
     <!-- Shows a dialog box that is used for text input -->
     <window name="MythTextInputDialog">
 
+        <animation trigger="AboutToShow">
+            <section>
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
+
+        <!-- Disappears when virtual keyboard is used
+        <animation trigger="AboutToHide">
+            <section>
+                <alpha start="255" end="0" easingcurve="InQuart"/>
+                <zoom start="100" end="0" easingcurve="InQuart"/>
+            </section>
+        </animation>
+        -->
+        
         <shape name="darken_background" from="base_darken_background"/>
 
         <shape name="dialog_background" from="base_background_shape_dark">
@@ -2045,6 +2131,22 @@
          string and show the results of the search -->
     <window name="MythSearchDialog">
 
+        <animation trigger="AboutToShow">
+            <section>
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
+
+        <!-- Disappears when virtual keyboard is used
+        <animation trigger="AboutToHide">
+            <section>
+                <alpha start="255" end="0" easingcurve="InQuart"/>
+                <zoom start="100" end="0" easingcurve="InQuart"/>
+            </section>
+        </animation>
+        -->
+        
         <shape name="darken_background" from="base_darken_background"/>
 
         <shape name="dialog_background" from="base_background_shape_dark">
@@ -2092,6 +2194,20 @@
          The dialog is like a full screen with a header and clock -->
     <window name="MythFileBrowser">
 
+        <animation trigger="AboutToShow">
+            <section>
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
+
+        <animation trigger="AboutToHide">
+            <section>
+                <alpha start="255" end="0" easingcurve="InQuart"/>
+                <zoom start="100" end="0" easingcurve="InQuart"/>
+            </section>
+        </animation>
+        
         <imagetype name="background">
             <area>0,0,1280,720</area>
             <filename>images/background.png</filename>
@@ -2434,6 +2550,22 @@
          Allows the user to select how (timewise) the schedule will be recorded. -->
     <window name="MythTimeInputDialog">
 
+        <animation trigger="AboutToShow">
+            <section>
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
+
+        <!-- Disappears when virtual keyboard is used
+        <animation trigger="AboutToHide">
+            <section>
+                <alpha start="255" end="0" easingcurve="InQuart"/>
+                <zoom start="100" end="0" easingcurve="InQuart"/>
+            </section>
+        </animation>
+        -->
+        
         <shape name="darken_background" from="base_darken_background"/>
 
         <!-- the title of the window -->
@@ -2502,6 +2634,20 @@
         choices that the imdb or the other movie databases offers -->
     <window name="MythMetadataResults">
 
+        <animation trigger="AboutToShow">
+            <section>
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
+
+        <animation trigger="AboutToHide">
+            <section>
+                <alpha start="255" end="0" easingcurve="InQuart"/>
+                <zoom start="100" end="0" easingcurve="InQuart"/>
+            </section>
+        </animation>
+        
         <shape name="darken_background" from="base_darken_background"/>
 
         <shape name="metadata_selection_background" from="base_background_shape_dark">
@@ -2563,6 +2709,20 @@
     <!-- Popup search dialog used to search button lists -->
     <window name="MythSearchListDialog">
        
+        <animation trigger="AboutToShow">
+            <section>
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
+
+        <animation trigger="AboutToHide">
+            <section>
+                <alpha start="255" end="0" easingcurve="InQuart"/>
+                <zoom start="100" end="0" easingcurve="InQuart"/>
+            </section>
+        </animation>
+        
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
