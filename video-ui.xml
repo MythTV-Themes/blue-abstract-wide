@@ -122,7 +122,7 @@
             <area>435,70,100,20</area>
             <value>Director</value>
         </textarea>
-	<textarea name="watched_list_label" from="video_list_label">
+        <textarea name="watched_list_label" from="video_list_label">
             <area>680,70,80,20</area>
             <align>right,vcenter</align>
             <value>Watched</value>
@@ -180,7 +180,7 @@
                     <textarea name="director" from="buttontext">
                         <area>390,0,280,40</area>
                     </textarea>
-		    
+
                     <!-- marks the video as watched -->
                     <statetype name="watchedstate">
                         <state name="yes">
@@ -191,7 +191,7 @@
                             </imagetype>
                         </state>
                     </statetype>
-		    
+
                     <textarea name="length" from="buttontext">
                         <area>700,0,140,40</area>
                         <align>right,vcenter</align>
@@ -316,11 +316,11 @@
             <position>755,525</position>
             <value>Genre:</value>
         </textarea>
-	 <textarea name="inetref_label" from="director_label">
+        <textarea name="inetref_label" from="director_label">
             <position>755,560</position>
             <value>Inetref:</value>
         </textarea>
-	 <textarea name="browsable_label" from="director_label">
+        <textarea name="browsable_label" from="director_label">
             <position>955,560</position>
             <value>Browsable:</value>
         </textarea>
