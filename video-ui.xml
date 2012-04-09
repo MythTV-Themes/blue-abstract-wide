@@ -312,31 +312,31 @@
             <font>text_small</font>
             <value>Director:</value>
         </textarea>
-        <textarea name="genre_label" from="director_label">
+        <textarea name="genre_label" from="director_label" depends="genres">
             <position>755,525</position>
             <value>Genre:</value>
         </textarea>
-        <textarea name="inetref_label" from="director_label">
+        <textarea name="inetref_label" from="director_label" depends="inetref">
             <position>755,560</position>
             <value>Inetref:</value>
         </textarea>
-        <textarea name="browsable_label" from="director_label">
+        <textarea name="browsable_label" from="director_label" depends="browseable">
             <position>955,560</position>
             <value>Browsable:</value>
         </textarea>
-        <textarea name="season_label" from="director_label">
+        <textarea name="season_label" from="director_label" depends="season">
             <position>755,595</position>
             <value>Season:</value>
         </textarea>
-        <textarea name="episode_label" from="director_label">
+        <textarea name="episode_label" from="director_label" depends="episode">
             <position>955,595</position>
             <value>Episode:</value>
         </textarea>
-        <textarea name="year_label" from="director_label">
+        <textarea name="year_label" from="director_label" depends="year">
             <position>755,625</position>
             <value>Year:</value>
         </textarea>
-        <textarea name="length_label" from="director_label">
+        <textarea name="length_label" from="director_label" depends="length">
             <position>955,625</position>
             <value>Runtime:</value>
         </textarea>
@@ -472,31 +472,31 @@
             <font>text_small</font>
             <value>Director:</value>
         </textarea>
-        <textarea name="cast_label" from="director_label">
+        <textarea name="cast_label" from="director_label" depends="cast">
             <position>425,360</position>
             <value>Cast:</value>
         </textarea>
-        <textarea name="genre_label" from="director_label">
+        <textarea name="genre_label" from="director_label" depends="genres">
             <position>425,390</position>
             <value>Genre:</value>
         </textarea>
-        <textarea name="season_label" from="director_label">
+        <textarea name="season_label" from="director_label" depends="season">
             <position>425,420</position>
             <value>Season:</value>
         </textarea>
-        <textarea name="episode_label" from="director_label">
+        <textarea name="episode_label" from="director_label" depends="episode">
             <position>565,420</position>
             <value>Episode:</value>
         </textarea>
-        <textarea name="rating_label" from="director_label">
+        <textarea name="rating_label" from="director_label" depends="rating">
             <position>905,420</position>
             <value>Rated:</value>
         </textarea>
-        <textarea name="year_label" from="director_label">
+        <textarea name="year_label" from="director_label" depends="year">
             <position>425,450</position>
             <value>Year:</value>
         </textarea>
-        <textarea name="length_label" from="director_label">
+        <textarea name="length_label" from="director_label" depends="length">
             <position>565,450</position>
             <value>Runtime:</value>
         </textarea>
@@ -1036,29 +1036,29 @@
         </textarea>
         
         <!-- show the name of the different labels -->
-        <textarea name="director_label" from="base_textarea">
+        <textarea name="director_label" from="base_textarea" depends="director">
             <area>755,495,150,30</area>
             <align>right,vcenter</align>
             <font>text_small</font>
             <value>Director:</value>
         </textarea>
-        <textarea name="cast_label" from="director_label">
+        <textarea name="cast_label" from="director_label" depends="cast">
             <position>755,526</position>
             <value>Cast:</value>
         </textarea>
-        <textarea name="season_label" from="director_label">
+        <textarea name="season_label" from="director_label" depends="season">
             <position>755,595</position>
             <value>Season:</value>
         </textarea>
-        <textarea name="episode_label" from="director_label">
+        <textarea name="episode_label" from="director_label" depends="episode">
             <position>955,595</position>
             <value>Episode:</value>
         </textarea>
-        <textarea name="year_label" from="director_label">
+        <textarea name="year_label" from="director_label" depends="year">
             <position>755,625</position>
             <value>Year:</value>
         </textarea>
-        <textarea name="length_label" from="director_label">
+        <textarea name="length_label" from="director_label" depends="length">
             <position>955,625</position>
             <value>Runtime:</value>
         </textarea>
@@ -1248,23 +1248,23 @@
             <font>text_small</font>
             <value>Director:</value>
         </textarea>
-        <textarea name="cast_label" from="director_label">
+        <textarea name="cast_label" from="director_label" depends="cast">
             <position>755,526</position>
             <value>Cast:</value>
         </textarea>
-        <textarea name="season_label" from="director_label">
+        <textarea name="season_label" from="director_label" depends="season">
             <position>755,595</position>
             <value>Season:</value>
         </textarea>
-        <textarea name="episode_label" from="director_label">
+        <textarea name="episode_label" from="director_label" depends="episode">
             <position>955,595</position>
             <value>Episode:</value>
         </textarea>
-        <textarea name="year_label" from="director_label">
+        <textarea name="year_label" from="director_label" depends="year">
             <position>755,625</position>
             <value>Year:</value>
         </textarea>
-        <textarea name="length_label" from="director_label">
+        <textarea name="length_label" from="director_label" depends="length">
             <position>955,625</position>
             <value>Runtime:</value>
         </textarea>
@@ -1653,35 +1653,35 @@
             <font>text_small</font>
             <value>Director:</value>
         </textarea>
-        <textarea name="cast_label" from="director_label">
+        <textarea name="cast_label" from="director_label" depends="cast">
             <position>445,430</position>
             <value>Cast:</value>
         </textarea>
-        <textarea name="genre_label" from="director_label">
+        <textarea name="genre_label" from="director_label" depends="genres">
             <position>445,460</position>
             <value>Genres:</value>
         </textarea>
-        <textarea name="season_label" from="director_label">
+        <textarea name="season_label" from="director_label" depends="season">
             <position>445,490</position>
             <value>Season:</value>
         </textarea>
-        <textarea name="episode_label" from="director_label">
+        <textarea name="episode_label" from="director_label" depends="episode">
             <position>585,490</position>
             <value>Episode:</value>
         </textarea>
-        <textarea name="rating_label" from="director_label">
+        <textarea name="rating_label" from="director_label" depends="rating">
              <position>925,490</position>
              <value>Rated:</value>
         </textarea>
-        <textarea name="year_label" from="director_label">
+        <textarea name="year_label" from="director_label" depends="year">
             <position>445,520</position>
             <value>Year:</value>
         </textarea>
-        <textarea name="length_label" from="director_label">
+        <textarea name="length_label" from="director_label" depends="length">
             <position>585,520</position>
             <value>Runtime:</value>
         </textarea>
-        <textarea name="level_label" from="base_textarea">
+        <textarea name="level_label" from="base_textarea" depends="videolevel">
             <area>745,520,330,30</area>
             <align>right,vcenter</align>
             <font>text_small</font>
