@@ -155,7 +155,7 @@
             <align>right,vcenter</align>
             <value>Action on exit:</value>
         </textarea>
-        <buttonlist name="exitaction" from="base_selector">
+        <buttonlist name="exitaction" from="base_selector_wide">
             <position>650,250</position>
         </buttonlist>
 
@@ -207,11 +207,13 @@
 
         <imagetype name="background" from="base_background"/>
 
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Rating Settings</value>
-            </textarea>
+        <shape name="heading_background" from="base_background_shape">
+            <area>-4,-4,340,36</area>
+        </shape>
+        <textarea name="text" from="base_textarea">
+            <area>0,0,336,30</area>
+            <align>allcenter</align>
+            <value>Rating Settings</value>
         </textarea>
 
         <textarea name="clock" from="base_clock">
@@ -224,39 +226,39 @@
         </shape>
 
         <textarea name="ratingweight_label" from="base_textarea">
-            <area>240,200,400,40</area>
+            <area>240,200,500,40</area>
             <align>right,vcenter</align>
             <value>Rating Weight:</value>
         </textarea>
         <spinbox name="ratingweight" from="base_spinbox">
-            <position>650,200</position>
+            <position>750,200</position>
         </spinbox>
 
         <textarea name="playcountweight_label" from="base_textarea">
-            <area>240,250,400,40</area>
+            <area>240,250,500,40</area>
             <align>right,vcenter</align>
             <value>Play Count Weight:</value>
         </textarea>
         <spinbox name="playcountweight" from="base_spinbox">
-            <position>650,250</position>
+            <position>750,250</position>
         </spinbox>
 
         <textarea name="lastplayweight_label" from="base_textarea">
-            <area>240,300,400,40</area>
+            <area>240,300,500,40</area>
             <align>right,vcenter</align>
             <value>Last Play Weight:</value>
         </textarea>
         <spinbox name="lastplayweight" from="base_spinbox">
-            <position>650,300</position>
+            <position>750,300</position>
         </spinbox>
 
         <textarea name="randomweight_label" from="base_textarea">
-            <area>240,350,400,40</area>
+            <area>240,350,500,40</area>
             <align>right,vcenter</align>
             <value>Random Weight:</value>
         </textarea>
         <spinbox name="randomweight" from="base_spinbox">
-            <position>650,350</position>
+            <position>750,350</position>
         </spinbox>
 
         <shape name="helptext_background" from="base_background_shape">
@@ -500,11 +502,13 @@
 
         <imagetype name="background" from="base_background"/>
 
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Visualiser Settings</value>
-            </textarea>
+        <shape name="heading_background" from="base_background_shape">
+            <area>-4,-4,340,36</area>
+        </shape>
+        <textarea name="text" from="base_textarea">
+            <area>0,0,336,30</area>
+            <align>allcenter</align>
+            <value>Visualiser Settings</value>
         </textarea>
 
         <textarea name="clock" from="base_clock">
@@ -517,39 +521,39 @@
         </shape>
 
         <textarea name="cycleonsongchange_label" from="base_textarea">
-            <area>140,200,500,40</area>
+            <area>240,200,600,40</area>
             <align>right,vcenter</align>
             <value>Change Visualizer on each song:</value>
         </textarea>
         <checkbox name="cycleonsongchange" from="base_checkbox">
-            <position>650,205</position>
+            <position>850,205</position>
         </checkbox>
 
         <textarea name="randomizeorder_label" from="base_textarea">
-            <area>140,250,500,40</area>
+            <area>240,250,600,40</area>
             <align>right,vcenter</align>
             <value>Randomize Visualizer order:</value>
         </textarea>
         <checkbox name="randomizeorder" from="base_checkbox">
-            <position>650,255</position>
+            <position>850,255</position>
         </checkbox>
 
         <textarea name="scalewidth_label" from="base_textarea">
-            <area>240,300,400,40</area>
+            <area>240,300,600,40</area>
             <align>right,vcenter</align>
             <value>Width for Visual Scaling:</value>
         </textarea>
         <spinbox name="scalewidth" from="base_spinbox">
-            <position>650,305</position>
+            <position>850,305</position>
         </spinbox>
 
         <textarea name="scaleheight_label" from="base_textarea">
-            <area>240,350,400,40</area>
+            <area>240,350,600,40</area>
             <align>right,vcenter</align>
             <value>Height for Visual Scaling:</value>
         </textarea>
         <spinbox name="scaleheight" from="base_spinbox">
-            <position>650,355</position>
+            <position>850,355</position>
         </spinbox>
 
         <shape name="helptext_background" from="base_background_shape">
