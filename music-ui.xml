@@ -948,16 +948,16 @@
     <window name="miniplayer">
 
         <animation trigger="AboutToShow">
-            <section>
+            <section centre="bottomright" duration="250">
                 <alpha start="0" end="255" easingcurve="OutQuart"/>
-                <zoom start="0" end="100" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutBack"/>
             </section>
         </animation>
 
         <animation trigger="AboutToHide">
-            <section>
+            <section centre="bottomright" duration="250">
                 <alpha start="255" end="0" easingcurve="InQuart"/>
-                <zoom start="100" end="0" easingcurve="InQuart"/>
+                <zoom start="100" end="0" easingcurve="InBack"/>
             </section>
         </animation>
 
@@ -1066,43 +1066,43 @@
     <window name="volume_popup">
 
         <animation trigger="AboutToShow">
-            <section>
+            <section centre="top" duration="250">
                 <alpha start="0" end="255" easingcurve="OutQuart"/>
-                <zoom start="0" end="100" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutBack"/>
             </section>
         </animation>
 
         <animation trigger="AboutToHide">
-            <section>
+            <section centre="top" duration="250">
                 <alpha start="255" end="0" easingcurve="InQuart"/>
-                <zoom start="100" end="0" easingcurve="InQuart"/>
+                <zoom start="100" end="0" easingcurve="InBack"/>
             </section>
         </animation>
         
         <shape name="volume_background" from="base_background_shape_dark">
-            <area>370,285,540,130</area>
+            <area>370,5,540,130</area>
         </shape>
 
         <textarea name="message" from="base_textarea">
-            <area>470,305,200,30</area>
+            <area>470,25,200,30</area>
             <font>text</font>
             <align>right,vcenter</align>
             <value>Volume</value>
         </textarea>
 
         <textarea name="volume" from="base_textarea">
-            <area>672,305,100,30</area>
+            <area>672,25,100,30</area>
             <align>left,vcenter</align>
             <template>: %VOLUMEPERCENT%</template>
         </textarea>
 
         <!-- separates the title and the progress bar -->
         <shape name="title_separator" from="base_separator_shape">
-            <area>390,355,500,1</area>
+            <area>390,75,500,1</area>
         </shape>
 
         <statetype name="mutestate">
-            <position>390,303</position>
+            <position>390,33</position>
             <state name="off">
                 <imagetype name="statusimage">
                     <filename>images/shared/music/volume-on.png</filename>
@@ -1118,7 +1118,7 @@
         </statetype>
         
         <progressbar name="volumeprogress" from="base_progressbar_flat">
-            <position>390,375</position>
+            <position>390,95</position>
         </progressbar>
 
     </window>
