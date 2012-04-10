@@ -2003,7 +2003,6 @@
             </section>
         </animation>
         
-        
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
@@ -2055,7 +2054,6 @@
             </section>
         </animation>
         
-        
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
@@ -2098,7 +2096,6 @@
             </section>
         </animation>
 
-        <!-- Disappears when virtual keyboard is used
         <animation trigger="AboutToHide">
             <section centre="left" duration="250">
                 <alpha start="255" end="0" easingcurve="Linear"/>
@@ -2106,7 +2103,6 @@
                 <position start="0,0" end="-150,0"/>
             </section>
         </animation>
-        --> 
         
         <shape name="darken_background" from="base_darken_background"/>
 
@@ -2154,7 +2150,6 @@
             </section>
         </animation>
 
-        <!-- Disappears when virtual keyboard is used
         <animation trigger="AboutToHide">
             <section centre="left" duration="250">
                 <alpha start="255" end="0" easingcurve="Linear"/>
@@ -2162,7 +2157,6 @@
                 <position start="0,0" end="-150,0"/>
             </section>
         </animation>
-        -->        
         
         <shape name="darken_background" from="base_darken_background"/>
 
@@ -2226,7 +2220,6 @@
                 <position start="0,0" end="-150,0"/>
             </section>
         </animation>
-        
         
         <imagetype name="background">
             <area>0,0,1280,720</area>
@@ -2578,7 +2571,6 @@
             </section>
         </animation>
 
-        <!-- Disappears when virtual keyboard is used
         <animation trigger="AboutToHide">
             <section centre="left" duration="250">
                 <alpha start="255" end="0" easingcurve="Linear"/>
@@ -2586,7 +2578,6 @@
                 <position start="0,0" end="-150,0"/>
             </section>
         </animation>
-        --> 
         
         <shape name="darken_background" from="base_darken_background"/>
 
@@ -2672,7 +2663,6 @@
             </section>
         </animation>
         
-        
         <shape name="darken_background" from="base_darken_background"/>
 
         <shape name="metadata_selection_background" from="base_background_shape_dark">
@@ -2749,7 +2739,6 @@
                 <position start="0,0" end="-150,0"/>
             </section>
         </animation>
-        
         
         <shape name="darken_background" from="base_darken_background" />
 
