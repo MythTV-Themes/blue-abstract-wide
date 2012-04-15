@@ -73,20 +73,20 @@
     <window name="standbymode">
 
         <!-- the background behind the images (black) -->
-        <shape name="background_shape" from="base_background_shape">
+        <shape name="background_shape" from="base_background_shape_dark">
             <area>-2,-2,1284,724</area>
-            <fill color="#000000" alpha="255" />
-            <line color="#000000" alpha="255" />
         </shape>
 
         <!-- The heading (name) of the screen -->
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Frontend in standby mode</value>
-            </textarea>
+        <shape name="heading_background" from="base_background_shape">
+            <area>-4,-4,320,36</area>
+        </shape>
+        <textarea name="text" from="base_textarea">
+            <area>0,0,316,30</area>
+            <align>allcenter</align>
+            <value>Frontend in standby mode</value>
         </textarea>
-
+        
         <!-- The clock that is shown at the top right of each screen -->
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>

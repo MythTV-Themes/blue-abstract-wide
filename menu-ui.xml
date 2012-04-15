@@ -1,233 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
-    <window name="mainmenu">
+    <window name="mainmenu">  
 
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <!--<statetype name="watermarks">
-            <position>667,145</position>-->
-
+        <statetype name="watermarks">
+            <position>0,0</position>
+        
             <!-- the main screen -->
-            <!--<state name="MENU_MEDIA_LIBRARY">
+            <state name="MENU_TV">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/theater.png</filename>
+                    <filename>images/watermarks/livetv.jpg</filename>
+                    <area>0,0,1280,720</area>
                 </imagetype>
             </state>
-            <state name="MENU_MANAGE_RECORDINGS">
+            <state name="MENU_VIDEOS">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/flatscreen_tv.png</filename>
+                    <filename>images/watermarks/videos.jpg</filename>
+                    <area>0,0,1280,720</area>
                 </imagetype>
             </state>
-            <state name="MENU_INFO_CENTER">
+            <state name="MENU_MUSIC">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/information.png</filename>
+                    <filename>images/watermarks/music.jpg</filename>
+                    <area>0,0,1280,720</area>
                 </imagetype>
             </state>
-            <state name="MENU_OPTICAL_DISKS">
+            <state name="MENU_IMAGES">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/dvd.png</filename>
+                    <filename>images/watermarks/pictures.jpg</filename>
+                    <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <state name="MENU_GAMES">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermarks/games.jpg</filename>
+                    <area>0,0,1280,720</area>
+                </imagetype>
+            </state>
+            <state name="MENU_INFO">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermarks/scripts.jpg</filename>
+                    <area>0,0,1280,720</area>
+                </imagetype>
+            </state>
+            <state name="MENU_EXTRAS">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermarks/custom.jpg</filename>
+                    <area>0,0,1280,720</area>
+                </imagetype>
+            </state>
+            
+            <!-- the TV screen -->
             <state name="TV_WATCH_TV">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/watch_tv.png</filename>
+                    <filename>images/watermarks/livetv.jpg</filename>
+                    <area>0,0,1280,720</area>
                 </imagetype>
             </state>
-            <state name="MENU_UTILITIES_SETUP">
+            <state name="TV_PROGRAM_GUIDE">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/settings.png</filename>
-                </imagetype>
-            </state>-->
-
-            <!-- media library -->
-            <!--<state name="TV_WATCH_RECORDINGS">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/cinema_gray.png</filename>
+                    <filename>images/watermarks/tvguide.jpg</filename>
+                    <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <state name="TV_MENU_ORGANIZE">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermarks/scripts.jpg</filename>
+                    <area>0,0,1280,720</area>
+                </imagetype>
+            </state>
+            <state name="TV_WATCH_RECORDINGS">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermarks/tvshow.jpg</filename>
+                    <area>0,0,1280,720</area>
+                </imagetype>
+            </state>
+            
+            <!-- the VIDEOS screen -->
             <state name="VIDEO_BROWSER">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/cinema_seats_2_gray.png</filename>
+                    <filename>images/watermarks/videos.jpg</filename>
+                    <area>0,0,1280,720</area>
                 </imagetype>
             </state>
-            <state name="MUSIC_PLAY">
+            <state name="TV_WATCH_RECORDINGS">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/violin_with_woman.png</filename>
+                    <filename>images/watermarks/tvshow.jpg</filename>
+                    <area>0,0,1280,720</area>
                 </imagetype>
             </state>
-            <state name="FM">
+            <state name="DISC_PLAY">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/radio.png</filename>
+                    <filename>images/watermarks/playdisc.jpg</filename>
+                    <area>0,0,1280,720</area>
                 </imagetype>
             </state>
-            <state name="NET_VIDEO_SEARCH">
+            <!--<state name="NET_VIDEO_SEARCH">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/film_roles_on_table_2.png</filename>
+                    <filename>images/watermarks/favourite.jpg</filename>
+                    <area>0,0,1280,720</area>
                 </imagetype>
             </state>
             <state name="NET_VIDEO_TREE">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/film_roles_on_table.png</filename>
-                </imagetype>
-            </state>
-            <state name="STREAM">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/loudspeaker_with_girl.png</filename>
-                </imagetype>
-            </state>
-            <state name="IMAGES">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/camera_gray.png</filename>
-                </imagetype>
-            </state>
-            <state name="GAME">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/boardgames_gray.png</filename>
+                    <filename>images/watermarks/favourite.jpg</filename>
+                    <area>0,0,1280,720</area>
                 </imagetype>
             </state>-->
-
-            <!-- the info screen -->
-            <!--<state name="NEWS">
+            
+            <!-- the MUSIC screen -->
+            <state name="MUSIC_PLAY">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/newspaper_with_glasses.png</filename>
+                    <filename>images/watermarks/music.jpg</filename>
+                    <area>0,0,1280,720</area>
                 </imagetype>
             </state>
-            <state name="MYTHTWITTER_TIMELINE">
+            <state name="STREAM_PLAY">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/twitter.png</filename>
+                    <filename>images/watermarks/scripts.jpg</filename>
+                    <area>0,0,1280,720</area>
+                </imagetype>
+            </state>
+            <state name="MUSIC_PLAYLIST">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermarks/defaultfanart.jpg</filename>
+                    <area>0,0,1280,720</area>
+                </imagetype>
+            </state>
+            <state name="MUSIC_SCAN">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermarks/custom.jpg</filename>
+                    <area>0,0,1280,720</area>
+                </imagetype>
+            </state>
+            
+            <!-- the INFO screen -->
+            <state name="WEBPAGE">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermarks/scripts.jpg</filename>
+                    <area>0,0,1280,720</area>
+                </imagetype>
+            </state>
+            <state name="NEWS">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermarks/scripts.jpg</filename>
+                    <area>0,0,1280,720</area>
                 </imagetype>
             </state>
             <state name="WEATHER">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/lightning_2.png</filename>
+                    <filename>images/watermarks/weatherplus.jpg</filename>
+                    <area>0,0,1280,720</area>
                 </imagetype>
             </state>
-            <state name="RECIPE">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/bacardi.png</filename>
-                </imagetype>
-            </state>
-            <state name="WEBPAGE">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/wave.png</filename>
-                </imagetype>
-            </state>
-            <state name="TV_STATUS">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/chip_with_heatsink.png</filename>
-                </imagetype>
-            </state>
-            <state name="ZONEMINDER">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/surveillance.png</filename>
-                </imagetype>
-            </state>-->
-
-            <!-- the manage recordings screen -->
-            <!--<state name="TV_SCHEDULE_RECORDINGS">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/tv_schedule.png</filename>
-                </imagetype>
-            </state>
-            <state name="TV_RECORDING_RULES">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/tv_rules.png</filename>
-                </imagetype>
-            </state>
-            <state name="TV_UPCOMING_RECORDINGS">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/tv_upcoming.png</filename>
-                </imagetype>
-            </state>
-            <state name="TV_DELETE">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/tv_delete.png</filename>
-                </imagetype>
-            </state>
-            <state name="TV_PREVIOUS">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/tv_previous.png</filename>
-                </imagetype>
-            </state>
-            <state name="TV_RECPRIORITIES">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/tv_priorities.png</filename>
-                </imagetype>
-            </state>-->
-
-            <!-- optical menu -->
-            <!--<state name="DVD_PLAY">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/dvd.png</filename>
-                </imagetype>
-            </state>
-            <state name="VCD_PLAY">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/vhs_tape.png</filename>
-                </imagetype>
-            </state>
+            
+            <!-- the EXTRAS screen -->
             <state name="DVD_RIP">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/dvd_case.png</filename>
-                </imagetype>
-            </state>
-            <state name="ARCHIVE">
-                <imagetype name="watermark">
-                    <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/archives.png</filename>
+                    <filename>images/watermarks/custom.jpg</filename>
+                    <area>0,0,1280,720</area>
                 </imagetype>
             </state>
             <state name="MUSIC_RIP">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/music_cds.png</filename>
+                    <filename>images/watermarks/custom.jpg</filename>
+                    <area>0,0,1280,720</area>
                 </imagetype>
             </state>
-            <state name="EJECT">
+            <state name="ARCHIVE">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
-                    <filename>images/watermark/dvd_drive.png</filename>
+                    <filename>images/watermarks/custom.jpg</filename>
+                    <area>0,0,1280,720</area>
                 </imagetype>
-            </state>-->
+            </state>
+            <state name="TV_STATUS">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermarks/custom.jpg</filename>
+                    <area>0,0,1280,720</area>
+                </imagetype>
+            </state>
+            <state name="MENU_UTILITIES_SETUP">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermarks/custom.jpg</filename>
+                    <area>0,0,1280,720</area>
+                </imagetype>
+            </state>
+        </statetype>
 
-        <!--</statetype>-->
-
-
+        <!-- The clock that is shown at the top right of each screen -->
+        <textarea name="clock" from="base_clock">
+            <position>1040,0</position>
+        </textarea>   
+        
         <!-- The structure of the menu. This is a vertical list -->
         <buttonlist name="menu">
             <area>160,105,450,520</area>

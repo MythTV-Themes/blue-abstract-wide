@@ -777,7 +777,7 @@
 
         <!-- this is the background around the covers  -->
         <shape name="videolist_background" from="base_background_shape">
-            <area>25,60,1230,400</area>
+            <area>25,55,1230,410</area>
         </shape>
 
         <textarea name="novideos" from="base_textarea">
@@ -789,52 +789,45 @@
 
         <!-- the list of the available videos -->
         <buttonlist name="videos">
-            <area>44,80,1210,380</area>
+            <area>40,68,1210,400</area>
             <layout>grid</layout>
-            <spacing>18</spacing>
+            <spacing>2</spacing>
             <wrapstyle>flowing</wrapstyle>
-            <buttonarea>0,0,1210,380</buttonarea>
+            <buttonarea>0,0,1210,400</buttonarea>
+
             <statetype name="buttonitem">
                 <state name="active">
-                    <area>0,0,116,170</area>
 
-                    <!-- marks the video as watched -->
-                    <statetype name="watchedstate">
-                        <state name="yes">
-                            <shape name="watched_background_shape">
-                                <area>33,169,50,4</area>
-                                <type>box</type>
-                                <fill color="#DDDDDD" alpha="255"/>
-                                <line color="#DDDDDD" alpha="255" width="1" />
-                            </shape>
-                        </state>
-                    </statetype>
-
-                    <!-- this is a background and the name of the video behind the cover -->
-                    <shape name="buttonimage_background_shape" from="base_background_shape">
-                        <area>2,2,114,168</area>
-                        <line color="#000000" alpha="0" width="1" />
-                    </shape>
-                    <textarea name="buttontext">
-                        <area>6,6,104,158</area>
-                        <font>text_small</font>
-                        <align>allcenter</align>
-                        <cutdown>yes</cutdown>
-                        <multiline>yes</multiline>
-                    </textarea>
+                    <!-- this is the background cover image -->
+                    <imagetype name="backgroundimage">
+                        <area>-4,-4,132,193</area>
+						<filename>images/shared/video/movie_nfborder.png</filename>
+                    </imagetype>
 
                     <!-- this is the cover image that will be shown if its
                         available, otherwise only the border is visible -->
                     <imagetype name="buttonimage">
-                        <area>1,1,114,168</area>
+                        <area>0,0,124,185</area>
+						<mask>images/shared/video/movie_nfmask.png</mask>
                         <preserveaspect>true</preserveaspect>
-                        <shape name="buttonimage_border_shape">
-                            <area>0,0,116,170</area>
-                            <type>roundbox</type>
-                            <line color="#AAAAAA" alpha="255" width="1" />
-                            <cornerradius>1</cornerradius>
-                        </shape>
                     </imagetype>
+
+                    <!-- marks the video as watched -->
+                    <statetype name="watchedstate">
+		                <position>73,1</position>
+                        <state name="yes">
+							<imagetype name="watchedimage">
+		                        <area>0,0,50,50</area>
+								<filename>images/shared/video/watched.png</filename>
+							</imagetype>
+                        </state>
+						<state name="no">
+							<imagetype name="unwatchedimage">
+		                        <area>0,0,50,50</area>
+								<filename>images/shared/video/unwatched.png</filename>
+							</imagetype>
+						</state>
+                    </statetype>
 
                     <!-- the node is a folder and it is currently not selected -->
                     <statetype name="nodetype">
@@ -842,12 +835,12 @@
                         <!-- the node is a subfolder -->
                         <state name="subfolder">
                             <shape name="icon_background_shape" from="base_background_shape">
-                                <area>2,138,114,32</area>
+                                <area>0,153,124,32</area>
                                 <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
+                                <cornerradius>2</cornerradius>
                             </shape>
                             <imagetype name="icon">
-                                <area>8,142,24,24</area>
+                                <area>7,158,24,24</area>
                                 <filename>images/shared/folder.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
@@ -855,12 +848,12 @@
                         <!-- the node is the one that goes one directry up -->
                         <state name="upfolder">
                             <shape name="icon_background_shape" from="base_background_shape">
-                                <area>2,138,114,32</area>
+                                <area>0,153,124,32</area>
                                 <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
+                                <cornerradius>2</cornerradius>
                             </shape>
                             <imagetype name="icon">
-                                <area>8,142,24,24</area>
+                                <area>9,158,24,24</area>
                                 <filename>images/shared/folder_up.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
@@ -868,52 +861,45 @@
                     </statetype>
                     <!-- show how many videos / directories are in this directory -->
                     <textarea name="childcount" from="base_textarea">
-                        <area>38,146,60,20</area>
+                        <area>39,161,60,20</area>
                         <font>text_small</font>
                         <align>left,vcenter</align>
                     </textarea>
                 </state>
 
                 <state name="selectedactive">
-                    <area>-27,-39,170,248</area>
+                    <area>-20,-35,166,248</area>
+                    
+                    <!-- this is the background cover image -->
+                    <imagetype name="backgroundimage">
+                        <area>-10,-10,185,267</area>
+						<filename>images/shared/video/movie_fborder.png</filename>
+                    </imagetype>
+
+					<!-- this is the cover image that will be shown if its
+                        available, otherwise only the border is visible -->
+                    <imagetype name="buttonimage">
+                        <area>0,0,166,248</area>
+						<mask>images/shared/video/movie_fmask.png</mask>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
 
                     <!-- marks the video as watched -->
                     <statetype name="watchedstate">
+		                <position>115,0</position>
                         <state name="yes">
-                            <shape name="watched_background_shape">
-                                <area>50,247,70,4</area>
-                                <type>box</type>
-                                <fill color="#DDDDDD" alpha="255"/>
-                                <line color="#DDDDDD" alpha="255" width="1" />
-                            </shape>
+							<imagetype name="watchedimage">
+		                        <area>0,0,50,50</area>
+								<filename>images/shared/video/watched.png</filename>
+							</imagetype>
                         </state>
+						<state name="no">
+							<imagetype name="unwatchedimage">
+		                        <area>0,0,50,50</area>
+								<filename>images/shared/video/unwatched.png</filename>
+							</imagetype>
+						</state>
                     </statetype>
-
-                    <!-- this is a background and the name of the video behind the cover -->
-                    <shape name="buttonimage_background_shape" from="base_background_shape">
-                        <area>2,2,168,246</area>
-                        <line color="#000000" alpha="0" width="1" />
-                    </shape>
-                    <textarea name="buttontext">
-                        <area>6,6,158,236</area>
-                        <font>text_small</font>
-                        <align>allcenter</align>
-                        <cutdown>yes</cutdown>
-                        <multiline>yes</multiline>
-                    </textarea>
-
-                    <!-- this is the cover image that will be shown if its
-                        available, otherwise only the borders are visible -->
-                    <imagetype name="buttonimage">
-                        <area>1,1,168,246</area>
-                        <preserveaspect>true</preserveaspect>
-                        <shape name="buttonimage_border_shape">
-                            <area>0,0,170,248</area>
-                            <type>roundbox</type>
-                            <line color="#AAAAAA" alpha="255" width="2" />
-                            <cornerradius>2</cornerradius>
-                        </shape>
-                    </imagetype>
 
                     <!-- the node is a folder and it is currently selected -->
                     <statetype name="nodetype">
@@ -921,12 +907,12 @@
                         <!-- the node is a subfolder -->
                         <state name="subfolder">
                             <shape name="icon_background_shape" from="base_background_shape">
-                                <area>3,212,166,36</area>
+                                <area>0,212,166,36</area>
                                 <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
+                                <cornerradius>2</cornerradius>
                             </shape>
                             <imagetype name="icon">
-                                <area>9,216,30,30</area>
+                                <area>7,214,30,30</area>
                                 <filename>images/shared/folder_open.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
@@ -934,12 +920,12 @@
                         <!-- the node is the one that goes one directry up -->
                         <state name="upfolder">
                             <shape name="icon_background_shape" from="base_background_shape">
-                                <area>3,212,166,36</area>
+                                <area>0,212,166,36</area>
                                 <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
+                                <cornerradius>2</cornerradius>
                             </shape>
                             <imagetype name="icon">
-                                <area>9,216,30,30</area>
+                                <area>7,214,30,30</area>
                                 <filename>images/shared/folder_up_open.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
@@ -948,7 +934,7 @@
 
                     <!-- show how many videos / directories are in this directory -->
                     <textarea name="childcount" from="base_textarea">
-                        <area>45,221,66,20</area>
+                        <area>45,220,66,20</area>
                         <font>text_small</font>
                         <align>left,vcenter</align>
                     </textarea>
@@ -956,7 +942,7 @@
             </statetype>
 
             <statetype name="upscrollarrow">
-                <position>1145,383</position>
+                <position>1145,396</position>
                 <state type="off">
                     <imagetype name="upon" from="base_arrow_inactive">
                         <filename>images/shared/arrow_up.png</filename>
@@ -970,7 +956,7 @@
             </statetype>
 
             <statetype name="downscrollarrow">
-                <position>1170,383</position>
+                <position>1170,396</position>
                 <state type="off">
                     <imagetype name="dnon" from="base_arrow_inactive">
                         <filename>images/shared/arrow_down.png</filename>
