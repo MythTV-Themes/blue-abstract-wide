@@ -5,7 +5,7 @@
     <!-- background image within the theme -->
     <window name="backgroundwindow">
         <imagetype name="background">
-            <filename>images/background2.png</filename>
+            <filename>images/background.png</filename>
         </imagetype>
     </window>
 
@@ -123,7 +123,7 @@
     <!-- background image behind every screen -->
     <imagetype name="base_background">
         <area>0,0,1280,720</area>
-        <filename>images/background2.png</filename>
+        <filename>images/background.png</filename>
     </imagetype>
 
     
