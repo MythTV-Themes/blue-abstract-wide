@@ -2,11 +2,10 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
     <window name="mainmenu">  
-
+<!--
         <statetype name="watermarks">
             <position>0,0</position>
         
-            <!-- the main screen -->
             <state name="MENU_TV">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -57,7 +56,6 @@
                 </imagetype>
             </state>
             
-            <!-- the TV screen -->
             <state name="TV_WATCH_TV">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -87,7 +85,6 @@
                 </imagetype>
             </state>
             
-            <!-- the VIDEOS screen -->
             <state name="VIDEO_BROWSER">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -109,7 +106,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
-            <!--<state name="NET_VIDEO_SEARCH">
+            <state name="NET_VIDEO_SEARCH">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
                     <filename>images/watermarks/favourite.jpg</filename>
@@ -122,9 +119,8 @@
                     <filename>images/watermarks/favourite.jpg</filename>
                     <area>0,0,1280,720</area>
                 </imagetype>
-            </state>-->
+            </state>
             
-            <!-- the MUSIC screen -->
             <state name="MUSIC_PLAY">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -154,7 +150,6 @@
                 </imagetype>
             </state>
             
-            <!-- the INFO screen -->
             <state name="WEBPAGE">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -177,7 +172,6 @@
                 </imagetype>
             </state>
             
-            <!-- the EXTRAS screen -->
             <state name="DVD_RIP">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -214,7 +208,7 @@
                 </imagetype>
             </state>
         </statetype>
-
+-->
         <!-- The clock that is shown at the top right of each screen -->
         <textarea name="clock" from="base_clock">
             <position>1040,0</position>
