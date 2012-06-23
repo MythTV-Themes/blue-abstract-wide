@@ -60,10 +60,6 @@
             </textarea>
         </textarea>
 
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
         <!-- the shape where the imagelist is displayed -->
         <shape name="gameui_background" from="base_background_shape">
             <area>80,100,1110,302</area>
@@ -183,10 +179,6 @@
             <textarea name="text">
                 <value>Game Information</value>
             </textarea>
-        </textarea>
-
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
         </textarea>
 
         <!-- this is the background around the covers  -->
@@ -328,10 +320,6 @@
             <textarea name="text">
                 <value>Edit Metadata</value>
             </textarea>
-        </textarea>
-
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
         </textarea>
 
         <shape name="editmetadata_shape" from="base_background_shape">

@@ -21,11 +21,6 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
         <!-- destination selector -->
         <shape name="topbackground" from="base_background_shape">
             <area>290,63,690,338</area>
@@ -164,11 +159,6 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
         <!-- destination selector -->
         <shape name="topbackground" from="base_background_shape">
             <area>290,70,690,610</area>
@@ -304,12 +294,6 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-
         <!-- this is the background for the information at the bottom -->
         <shape name="topbackground" from="base_background_shape">
             <area>110,115,1060,190</area>
@@ -338,7 +322,6 @@
         </textarea>
         <textarea name="progdatetime" from="base_textarea">
             <area>390,169,740,20</area>
-            <font>text_small</font>
         </textarea>
 
         <shape name="details_separator" from="base_separator_shape">
@@ -452,7 +435,7 @@
             <area>960,505,200,40</area>
         </textarea>
 
-    <shape name="button_separator" from="base_separator_shape">
+        <shape name="button_separator" from="base_separator_shape">
             <area>390,555,760,1</area>
         </shape>
 
@@ -468,6 +451,6 @@
             <position>1000,575</position>
         </button>
 
-</window>
+    </window>
 
 </mythuitheme>

@@ -21,11 +21,6 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
         <!-- destination selector -->
         <shape name="topbackground" from="base_background_shape">
             <area>280,150,705,460</area>
@@ -122,11 +117,6 @@
             <textarea name="text">
                 <value>Select Recordings</value>
             </textarea>
-        </textarea>
-
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
         </textarea>
 
         <!-- destination selector -->
@@ -250,11 +240,6 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
         <shape name="topbackground" from="base_background_shape">
             <area>290,75,690,600</area>
         </shape>
@@ -356,11 +341,6 @@
             <textarea name="text">
                 <value>Select Videos</value>
             </textarea>
-        </textarea>
-
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
         </textarea>
 
         <!-- destination selector -->
@@ -471,11 +451,6 @@
             <textarea name="text">
                 <value>Log Viewer</value>
             </textarea>
-        </textarea>
-
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
         </textarea>
 
         <shape name="topbackground" from="base_background_shape">

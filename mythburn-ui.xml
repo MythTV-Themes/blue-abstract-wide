@@ -21,11 +21,6 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
         <!-- the theme selection with the preview image and the help text -->
         <shape name="topbackground" from="base_background_shape">
             <area>165,90,950,200</area>
@@ -150,11 +145,6 @@
             <textarea name="text">
                 <value>Archive Items</value>
             </textarea>
-        </textarea>
-
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
         </textarea>
 
         <shape name="topbackground" from="base_background_shape">
@@ -403,11 +393,6 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
         <shape name="topbackground" from="base_background_shape">
             <area>25,70,1230,515</area>
         </shape>
@@ -481,10 +466,6 @@
             <textarea name="text">
                 <value>Thumb Image Selector</value>
             </textarea>
-        </textarea>
-
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
         </textarea>
 
         <shape name="topbackground" from="base_background_shape">
