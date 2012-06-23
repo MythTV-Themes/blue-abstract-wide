@@ -14,10 +14,6 @@
             </textarea>
         </textarea>
 
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
         <shape name="gallery_background" from="base_background_shape">
             <area>25,60,1230,633</area>
         </shape>
@@ -25,9 +21,7 @@
         <!-- shows the name of the folder or image -->
         <textarea name="title" from="base_textarea">
             <area>45,80,900,30</area>
-            <cutdown>yes</cutdown>
             <font>title</font>
-            <align>left,vcenter</align>
         </textarea>
 
         <!-- optional - shows current position in grid eg '1 of 123' -->
@@ -39,7 +33,7 @@
         <!-- shows path to current image -->
         <textarea name="breadcrumbs" from="base_textarea">
             <area>45,120,1000,20</area>
-            <font>text_very_small</font>
+            <font>text_small</font>
             <cutdown>yes</cutdown>
         </textarea>
 
@@ -100,7 +94,7 @@
                     </shape>
                     <textarea name="buttontext">
                         <area>0,4,164,20</area>
-                        <font>text_very_small</font>
+                        <font>text_small</font>
                         <align>allcenter</align>
                         <cutdown>yes</cutdown>
                     </textarea>-->
@@ -193,7 +187,7 @@
                     </shape>
                     <textarea name="buttontext">
                         <area>0,4,240,20</area>
-                        <font>text_very_small</font>
+                        <font>text_small</font>
                         <align>allcenter</align>
                         <cutdown>yes</cutdown>
                     </textarea>-->
@@ -291,13 +285,8 @@
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
-            <value>Filter/sort images</value>
+                <value>Filter/sort images</value>
             </textarea>
-        </textarea>
-
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
         </textarea>
 
         <!-- the shape where the imagelist is displayed -->
@@ -344,7 +333,6 @@
         <textarea name="numimages_text" from="base_textarea">
             <area>300,370,680,60</area>
             <align>allcenter</align>
-            <font>text_small</font>
         </textarea>
 
         <button name="save_button" from="base_button_wide">
