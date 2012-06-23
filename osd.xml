@@ -367,7 +367,7 @@
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>yes</cutdown>
-            <font>text_small</font>
+            <font>text</font>
             <template>%STARTTIME%-%ENDTIME% : %LENMINS%</template>
         </textarea>
 
@@ -397,7 +397,7 @@
             <align>right,vcenter</align>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
-            <font>text_small</font>
+            <font>text</font>
         </textarea>
         
         <textarea name="callsign">
@@ -405,7 +405,7 @@
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>yes</cutdown>
-            <font>text_small</font>
+            <font>text</font>
         </textarea>
 
         <shape name="description_separator">
@@ -420,7 +420,7 @@
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>left,top</align>
-            <font>text_small</font>
+            <font>text</font>
             <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
         
@@ -437,7 +437,7 @@
                 <textarea name="livetv_label" from="base_textarea">
                     <align>right,vcenter</align>
                     <area>1055,400,100,20</area>
-                    <font>text_small</font>
+                    <font>text</font>
                     <value>Live TV</value>
                 </textarea>
             </state>
@@ -445,7 +445,7 @@
                 <textarea name="livetv_label" from="base_textarea">
                     <align>right,vcenter</align>
                     <area>1055,400,100,20</area>
-                    <font>text_small</font>
+                    <font>text</font>
                     <value>Recorded</value>
                 </textarea>
             </state>
@@ -453,7 +453,7 @@
                 <textarea name="livetv_label" from="base_textarea">
                     <align>right,vcenter</align>
                     <area>1055,400,100,20</area>
-                    <font>text_small</font>
+                    <font>text</font>
                     <value>Video</value>
                 </textarea>
             </state>
@@ -466,7 +466,7 @@
                 <textarea name="livetv_label" from="base_textarea">
                     <align>right,vcenter</align>
                     <area>1055,400,100,20</area>
-                    <font>text_small</font>
+                    <font>text</font>
                     <value>DVD</value>
                 </textarea>
             </state>
@@ -479,7 +479,7 @@
                 <textarea name="image" from="base_textarea">
                     <align>right,vcenter</align>
                     <area>1055,440,100,20</area>
-                    <font>text_small</font>
+                    <font>text</font>
                     <value>Bluray</value>
                 </textarea>
             </state>
@@ -492,7 +492,7 @@
                 <textarea name="image" from="base_textarea">
                     <align>right,vcenter</align>
                     <area>1060,440,100,20</area>
-                    <font>text_small</font>
+                    <font>text</font>
                     <value>Recording</value>
                 </textarea>
             </state>
@@ -764,7 +764,7 @@
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>yes</cutdown>
-            <font>text_small</font>
+            <font>text</font>
             <template>%STARTTIME%-%ENDTIME% : %LENMINS%</template>
         </textarea>
 
@@ -794,7 +794,7 @@
             <align>right,vcenter</align>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
-            <font>text_small</font>
+            <font>text</font>
         </textarea>
         
         <textarea name="callsign">
@@ -802,7 +802,7 @@
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>yes</cutdown>
-            <font>text_small</font>
+            <font>text</font>
         </textarea>
 
         <shape name="description_separator">
@@ -817,7 +817,7 @@
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>left,top</align>
-            <font>text_small</font>
+            <font>text</font>
             <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
         </textarea>       
        
