@@ -78,13 +78,8 @@
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
-        <value>ZoneMinder Console</value>
+                <value>ZoneMinder Console</value>
             </textarea>
-        </textarea>
-        
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1065,0</position>	
         </textarea>
 
         <!-- This is the background in which the infos are displayed -->
@@ -255,17 +250,12 @@
             <filename>images/background.png</filename>
         </imagetype>
 
-    <textarea name="heading" from="base_heading">
+        <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
-        <value>ZoneMinder Events</value>
+                <value>ZoneMinder Events</value>
             </textarea>
-    </textarea>
-        
-    <!-- The clock that is shown at the top right of each screen -->
-    <textarea name="clock" from="base_clock">
-            <position>1065,0</position>	
-    </textarea>
+        </textarea>
 
         <!-- This is the background in which the listboxes are displayed -->
         <shape name="topbackground" from="base_background_shape">
@@ -278,7 +268,7 @@
         </shape>
 
     
-    <!-- This is the background in which the buttons are displayed -->
+        <!-- This is the background in which the buttons are displayed -->
         <shape name="bottombackground" from="base_background_shape">
             <area>20,620,1240,80</area>
         </shape>
@@ -587,17 +577,12 @@
             <filename>images/background.png</filename>
         </imagetype>
 
-    <textarea name="heading" from="base_heading">
+        <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
-        <value>ZoneMinder Event Player</value>
+                <value>ZoneMinder Event Player</value>
             </textarea>
-    </textarea>
-        
-    <!-- The clock that is shown at the top right of each screen -->
-    <textarea name="clock" from="base_clock">
-            <position>1065,0</position>	
-    </textarea>
+        </textarea>
 
         <!-- This is the background in which the listboxes are displayed -->
         <shape name="topbackground" from="base_background_shape">
@@ -720,13 +705,8 @@
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
-        <value>ZoneMinder Live</value>
+                <value>ZoneMinder Live</value>
             </textarea>
-        </textarea>
-        
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1065,0</position>	
         </textarea>
 
         <!-- This is the background in which the zmevents are displayed -->
@@ -734,7 +714,7 @@
             <area>20,95,1240,600</area>
         </shape>
 
-    <!--+++++++++++++++++++ one monitor view +++++++++++++++++++++++++-->
+        <!--+++++++++++++++++++ one monitor view +++++++++++++++++++++++++-->
         <textarea name="name1-1">
             <area>320,120,320,70</area>
             <font>monitor</font>
