@@ -7,21 +7,13 @@
 
         <imagetype name="background" from="base_background"/>
 
-        <!-- The name of the screen needs to be defined 
-             again because it is in the center of the screen -->
-        <shape name="heading_background" from="base_background_shape">
-            <area>470,-4,350,36</area>
-        </shape>
-        <textarea name="text" from="base_textarea">
-            <area>475,0,340,30</area>
-            <align>allcenter</align>
-            <value>Appearance Wizard</value>
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Appearance Wizard</value>
+            </textarea>
         </textarea>
-
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
+        
         <!-- this is the background for the information at the bottom -->
         <shape name="appearance_background" from="base_background_shape">
             <area>350,240,580,240</area>
