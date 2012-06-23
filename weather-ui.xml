@@ -15,10 +15,6 @@
             </textarea>
         </textarea>
 
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
         <!-- the shape where the weather information is displayed -->
         <shape name="weather_background" from="base_background_shape">
             <area>70,70,1140,600</area>
@@ -38,7 +34,7 @@
         <textarea name="pause_text" from="base_textarea">
             <area>580,50,120,20</area>
             <align>allcenter</align>
-            <font>text_very_small</font>
+            <font>text_small</font>
         </textarea>
 
         <shape name="title_separator" from="base_separator_shape">
@@ -139,7 +135,7 @@
         <!-- the labels on the bottom -->
         <textarea name="observation_time" from="base_textarea">
             <area>90,590,500,20</area>
-            <font>text_very_small</font>
+            <font>text_small</font>
         </textarea>
         <textarea name="copyright" from="base_textarea">
             <area>90,630,800,30</area>
@@ -556,18 +552,11 @@
 
         <imagetype name="background" from="base_background"/>
         
-        <shape name="heading_background" from="base_background_shape">
-            <area>-4,-4,300,36</area>
-        </shape>
-        <textarea name="text" from="base_textarea">
-            <area>0,0,296,30</area>
-            <font>text</font>
-            <align>allcenter</align>
-            <value>Global Settings</value>
-        </textarea>
-        
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Global Settings</value>
+            </textarea>
         </textarea>
 
         <shape name="weather_settings_background" from="base_background_shape">
@@ -630,17 +619,13 @@
             </textarea>
         </textarea>
 
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
         <shape name="weather_settings_background" from="base_background_shape">
             <area>260,120,760,510</area>
         </shape>
 
         <textarea name="inactivehdr" from="base_textarea">
             <area>285,135,350,20</area>
-            <font>text_very_small</font>
+            <font>text_small</font>
             <align>left,vcenter</align>
         </textarea>
 
@@ -650,7 +635,7 @@
 
         <textarea name="activehdr" from="inactivehdr">
             <area>655,135,350,20</area>
-            <font>text_very_small</font>
+            <font>text_small</font>
             <align>left,vcenter</align>
         </textarea>
 
@@ -691,10 +676,6 @@
             <textarea name="text">
                 <value>Source Setup</value>
             </textarea>
-        </textarea>
-
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
         </textarea>
 
         <shape name="weather_settings_background" from="base_background_shape">
@@ -758,10 +739,6 @@
             </textarea>
         </textarea>
 
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
         <shape name="weather_settings_background" from="base_background_shape">
             <area>210,120,860,500</area>
         </shape>
@@ -805,13 +782,11 @@
 
         <textarea name="numresults" from="base_textarea">
             <area>230,585,400,20</area>
-            <font>text_small</font>
         </textarea>
 
         <textarea name="source" from="base_textarea">
             <area>650,585,400,20</area>
             <cutdown>yes</cutdown>
-            <font>text_small</font>
             <align>right,vcenter</align>
         </textarea>
     </window>
