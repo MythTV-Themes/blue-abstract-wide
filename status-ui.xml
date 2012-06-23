@@ -2,6 +2,7 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
+    <!-- DONE -->
     <window name="status">
 
         <imagetype name="background" from="base_background"/>
@@ -13,63 +14,68 @@
             </textarea>
         </textarea>
 
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
         <!-- This is the background in which the status is displayed -->
         <shape name="status_background" from="base_background_shape">
-            <area>30,140,1220,480</area>
+            <area>125,210,1040,390</area>
         </shape>
 
         <!-- This is the internal buttonlist that is shown on the left -->
         <buttonlist name="category" from="base_buttonlist">
-            <area>50,160,300,315</area>
+            <area>140,225,350,355</area>
             <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
         </buttonlist>
 
         <!-- This is the internal buttonlist that is
         shown within the roundbox that is defined above -->
-        <buttonlist name="log" from="base_buttonlist_very_wide">
-            <area>410,160,790,315</area>
-            <wrapstyle>selection</wrapstyle>
+        <buttonlist name="log" from="base_buttonlist">
+            <area>500,225,650,355</area>
             <statetype name="buttonitem">
-                <area>0,0,790,40</area>
-                <!-- general settings for the menu entry -->
                 <state name="active">
-                    <textarea name="buttontext">
-                        <area>8,5,95%,30</area>
-                        <font>text</font>
+                    <imagetype name="buttonbackground" from="base_image_active">
+                        <filename>images/widgets/widget_inactive.png</filename>
+                        <area>0,0,650,36</area>
+                    </imagetype>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,100%-16,36</area>
                         <font state="disabled">text_inactive</font>
                         <font state="error">text_error</font>
                         <font state="warning">text_warning</font>
                         <font state="normal">text</font>
                         <font state="running">text</font>
-                        <cutdown>yes</cutdown>
-                        <align>left,vcenter</align>
                     </textarea>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,650,36</area>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,650,36</area>
+                    </imagetype>
                 </state>
             </statetype>
         </buttonlist>
-
+        
         <!-- shows some information text about the current selection -->
-        <shape name="helptext_background" from="base_background_shape">
-            <area>50,490,1180,110</area>
+        <shape name="helptext_background_bottom" from="base_background_shape">
+            <area>-5,615,1290,90</area>
         </shape>
         <textarea name="helptext" from="base_textarea">
-            <area>67,490,1140,110</area>
-            <value>This screen displays the status of various system components</value>
+            <area>120,615,1040,90</area>
+            <scroll direction="vertical"/>
+            <align>allcenter</align>
             <multiline>yes</multiline>
-            <font>text_small</font>
-            <align>left,vcenter</align>
         </textarea>
-        
     </window>
 
 
 
 
-
+    <!-- DONE -->
     <window name="standbymode">
 
         <!-- the background behind the images (black) -->
@@ -77,30 +83,22 @@
             <area>-2,-2,1284,724</area>
         </shape>
 
-        <!-- The heading (name) of the screen -->
-        <shape name="heading_background" from="base_background_shape">
-            <area>-4,-4,320,36</area>
-        </shape>
-        <textarea name="text" from="base_textarea">
-            <area>0,0,316,30</area>
-            <align>allcenter</align>
-            <value>Frontend in standby mode</value>
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Frontend in standby mode</value>
+            </textarea>
         </textarea>
         
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
         <statetype name="backendstatus">
-            <area>400,-4,480,30</area>
-            <shape name="background" from="base_background_shape">
-                <area>0,0,480,40</area>
-            </shape>
+            <area>730,0,480,30</area>
+            <imagetype name="header_background">
+                <area>0,-1,560,50</area>
+                <filename>images/media/header_right.png</filename>
+            </imagetype>
             <state name="idle">
-                <textarea name="status">
-                    <area>0,0,480,40</area>
-                    <align>allcenter</align>
+                <textarea name="status" from="base_textarea">
+                    <area>70,0,480,30</area>
                     <value>Backend is idle</value>
                 </textarea>
             </state>
