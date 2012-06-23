@@ -209,11 +209,7 @@
             </state>
         </statetype>
 -->
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>   
-        
+
         <!-- The structure of the menu. This is a vertical list -->
         <buttonlist name="menu">
             <area>160,105,450,520</area>
