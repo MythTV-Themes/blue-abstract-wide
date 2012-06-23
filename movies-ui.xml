@@ -13,10 +13,6 @@
             </textarea>
         </textarea>
 
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
         <shape name="siteslist_background" from="base_background_shape">
             <area>110,70,1060,390</area>
         </shape>
