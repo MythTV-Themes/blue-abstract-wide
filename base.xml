@@ -836,19 +836,22 @@
              unfilled checkbox. Half is a half-checked box. 
              Full is a fully checked checkbox -->
         <statetype name="checkstate">
-            <area>3,3,30,30</area>
+            <area>0,0,36,36</area>
             <state type="off">
-                <imagetype name="background">
+                <imagetype name="checkstate_image" from="base_image_selected">
+                    <area>5,5,26,26</area>
                     <filename>images/widgets/checkbox_off.png</filename>
                 </imagetype>
             </state>
             <state type="half">
-                <imagetype name="background">
+                <imagetype name="checkstate_image" from="base_image_selected">
+                    <area>5,5,26,26</area>
                     <filename>images/widgets/checkbox_half.png</filename>
                 </imagetype>
             </state>
             <state type="full">
-                <imagetype name="mark">
+                <imagetype name="checkstate_image" from="base_image_selected">
+                    <area>5,5,26,26</area>
                     <filename>images/widgets/checkbox_full.png</filename>
                 </imagetype>
             </state>
