@@ -506,7 +506,7 @@
                                 <imagetype name="nodetype_track_image">
                                     <area>0,0,185,185</area>
                                     <filename>images/shared/music/default_songs.png</filename>
-                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <mask>images/shared/music/album_item_fmask.png</mask>
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
@@ -514,7 +514,7 @@
                                 <imagetype name="nodetype_album_image">
                                     <area>0,0,185,185</area>
                                     <filename>images/shared/music/default_album.png</filename>
-                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <mask>images/shared/music/album_item_fmask.png</mask>
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
@@ -522,7 +522,7 @@
                                 <imagetype name="nodetype_artist_image">
                                     <area>0,0,185,185</area>
                                     <filename>images/shared/music/default_artist.png</filename>
-                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <mask>images/shared/music/album_item_fmask.png</mask>
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
@@ -530,7 +530,7 @@
                                 <imagetype name="nodetype_alltracks_image">
                                     <area>0,0,185,185</area>
                                     <filename>images/shared/music/default_songs.png</filename>
-                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <mask>images/shared/music/album_item_fmask.png</mask>
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
@@ -538,7 +538,7 @@
                                 <imagetype name="nodetype_genres_image">
                                     <area>0,0,185,185</area>
                                     <filename>images/shared/music/default_genre.png</filename>
-                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <mask>images/shared/music/album_item_fmask.png</mask>
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
@@ -546,7 +546,7 @@
                                 <imagetype name="nodetype_albums_image">
                                     <area>0,0,185,185</area>
                                     <filename>images/shared/music/default_album.png</filename>
-                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <mask>images/shared/music/album_item_fmask.png</mask>
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
@@ -554,7 +554,7 @@
                                 <imagetype name="nodetype_artist_image">
                                     <area>0,0,185,185</area>
                                     <filename>images/shared/music/default_artist.png</filename>
-                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <mask>images/shared/music/album_item_fmask.png</mask>
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
@@ -563,7 +563,7 @@
                                 <imagetype name="nodetype_compartists_image">
                                     <area>0,0,185,185</area>
                                     <filename>images/shared/music/default_compartists.png</filename>
-                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <mask>images/shared/music/album_item_fmask.png</mask>
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
@@ -572,7 +572,7 @@
                                 <imagetype name="nodetype_ratings_image">
                                     <area>0,0,185,185</area>
                                     <filename>images/shared/music/default_ratings.png</filename>
-                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <mask>images/shared/music/album_item_fmask.png</mask>
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
@@ -580,7 +580,7 @@
                                 <imagetype name="nodetype_years_image">
                                     <area>0,0,185,185</area>
                                     <filename>images/shared/music/default_years.png</filename>
-                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <mask>images/shared/music/album_item_fmask.png</mask>
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
@@ -588,7 +588,7 @@
                                 <imagetype name="nodetype_compilations_image">
                                     <area>0,0,185,185</area>
                                     <filename>images/shared/music/default_compilations.png</filename>
-                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <mask>images/shared/music/album_item_fmask.png</mask>
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
@@ -596,7 +596,7 @@
                                 <imagetype name="nodetype_directory_image">
                                     <area>0,0,185,185</area>
                                     <filename>images/shared/music/default_directory.png</filename>
-                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <mask>images/shared/music/album_item_fmask.png</mask>
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
@@ -604,7 +604,7 @@
                                 <imagetype name="nodetype_playlists_image">
                                     <area>0,0,185,185</area>
                                     <filename>images/shared/music/default_playlists.png</filename>
-                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <mask>images/shared/music/album_item_fmask.png</mask>
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
@@ -613,7 +613,7 @@
                                 <imagetype name="nodetype_smartplaylists_image">
                                     <area>0,0,185,185</area>
                                     <filename>images/shared/music/default_smartplaylists.png</filename>
-                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <mask>images/shared/music/album_item_fmask.png</mask>
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
