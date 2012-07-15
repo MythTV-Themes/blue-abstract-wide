@@ -2028,6 +2028,99 @@
     
     
     <!-- DONE -->
+    <!-- Shows some information for the selected smartplaylist -->
+    <window name="smartplresultviewer">
+        
+        <imagetype name="background" from="base_background"/>
+
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Smart Playlist Result Viewer</value>
+            </textarea>
+        </textarea>
+
+        <shape name="smartplresultviewer_background" from="base_background_shape">
+            <area>20,50,1240,650</area>
+        </shape>
+        
+        <textarea name="position" from="base_textarea">
+            <area>1040,60,200,20</area>
+            <align>right,vcenter</align>
+        </textarea>
+        
+        <buttonlist name="tracklist" from="base_buttonlist">
+            <area>35,85,1210,603</area>
+            <buttonarea>0,0,100%,100%</buttonarea>
+            <spacing>1</spacing>
+            <statetype name="buttonitem">
+                <state name="active">
+                
+                    <imagetype name="buttonbackground" from="base_image_active">
+                        <filename>images/widgets/widget_inactive.png</filename>
+                        <area>0,0,1210,36</area>
+                    </imagetype>
+                    <textarea name="title" from="base_textarea">
+                        <area>8,3,330,30</area>
+                        <scroll direction="horizontal" />
+                        <template>%TITLE%</template>
+                    </textarea>
+                    <textarea name="album" from="base_textarea">
+                        <area>355,3,270,30</area>
+                        <align>right,vcenter</align>
+                        <scroll direction="horizontal" />
+                        <template>%ALBUM%</template>
+                    </textarea>
+                    <textarea name="artist" from="base_textarea">
+                        <area>640,3,260,30</area>
+                        <align>right,vcenter</align>
+                        <scroll direction="horizontal" />
+                        <template>%ARTIST%</template>
+                    </textarea>
+                    <textarea name="genre" from="base_textarea">
+                        <area>920,3,180,30</area>
+                        <align>right,vcenter</align>
+                        <scroll direction="horizontal" />
+                        <template>%GENRE%</template>
+                    </textarea>
+                        
+                    <textarea name="length" from="base_textarea">
+                        <area>1110,3,90,30</area>
+                        <align>right,vcenter</align>
+                    </textarea>
+                </state>
+                <state name="inactive" from="active"/>
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,1210,36</area>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,1210,36</area>
+                    </imagetype>
+                </state>
+            </statetype>
+            
+            <statetype name="upscrollarrow">
+                <position>100%-30,100%-10</position>
+            </statetype>
+
+            <statetype name="downscrollarrow">
+                <position>100%-55,100%-10</position>
+            </statetype>
+        </buttonlist>
+
+    </window>
+
+    
+    
+    
+    
+    
+    <!-- DONE -->
     <!-- TODO - add icons instead of text for the 6 buttons -->
     <!-- popup to edit the smartplaylist order by clause-->
     <window name="orderbydialog">
