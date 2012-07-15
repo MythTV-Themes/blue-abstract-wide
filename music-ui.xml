@@ -1085,10 +1085,6 @@
             <preserveaspect>true</preserveaspect>
             <alpha>180</alpha>
         </imagetype>
-        <imagetype name="artisticon_border">
-            <area>930,160,133,133</area>
-            <filename>images/shared/music/album_nfborder.png</filename>
-        </imagetype>
         <textarea name="artisttext" from="base_textarea">
             <area>940,255,110,30</area>
             <align>allcenter</align>
@@ -1098,6 +1094,10 @@
             <area>930,160,133,133</area>
             <mask>images/shared/music/album_item_nfmask.png</mask>
         </imagetype>
+        <imagetype name="artisticon_border">
+            <area>930,160,133,133</area>
+            <filename>images/shared/music/album_nfborder.png</filename>
+        </imagetype>
         
         <imagetype name="albumiconn_background_image">
             <area>930,305,133,133</area>
@@ -1105,10 +1105,6 @@
             <filename>images/shared/music/default_album.png</filename>
             <preserveaspect>true</preserveaspect>
             <alpha>180</alpha>
-        </imagetype>
-        <imagetype name="albumicon_border">
-            <area>930,305,133,133</area>
-            <filename>images/shared/music/album_nfborder.png</filename>
         </imagetype>
         <textarea name="albumtext" from="base_textarea">
             <area>940,400,110,30</area>
@@ -1119,6 +1115,10 @@
             <area>930,305,133,133</area>
             <mask>images/shared/music/album_item_nfmask.png</mask>
         </imagetype>
+        <imagetype name="albumicon_border">
+            <area>930,305,133,133</area>
+            <filename>images/shared/music/album_nfborder.png</filename>
+        </imagetype>
         
         <imagetype name="genreicon_background_image">
             <area>930,445,133,133</area>
@@ -1126,10 +1126,6 @@
             <filename>images/shared/music/default_genre.png</filename>
             <preserveaspect>true</preserveaspect>
             <alpha>180</alpha>
-        </imagetype>
-        <imagetype name="genreicon_border">
-            <area>930,445,133,133</area>
-            <filename>images/shared/music/album_nfborder.png</filename>
         </imagetype>
         <textarea name="genretext" from="base_textarea">
             <area>940,540,110,30</area>
@@ -1139,6 +1135,10 @@
         <imagetype name="genreicon">
             <area>930,445,133,133</area>
             <mask>images/shared/music/album_item_nfmask.png</mask>
+        </imagetype>
+        <imagetype name="genreicon_border">
+            <area>930,445,133,133</area>
+            <filename>images/shared/music/album_nfborder.png</filename>
         </imagetype>
     </window>
     
