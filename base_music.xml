@@ -11,7 +11,7 @@
             <state name="active">
                 <imagetype name="image" from="base_image_active">
                     <filename>images/widgets/add.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="selected" from="active">
@@ -21,14 +21,14 @@
                 </imagetype>
                 <imagetype name="image" from="base_image_selected">
                     <filename>images/widgets/add.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed" from="active">
                 <imagetype name="image" from="base_image_pushed">
                     <filename>images/widgets/add.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
         </statetype>
@@ -43,7 +43,7 @@
             <state name="active">
                 <imagetype name="image" from="base_image_active">
                     <filename>images/widgets/delete.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="selected" from="active">
@@ -53,14 +53,14 @@
                 </imagetype>
                 <imagetype name="image" from="base_image_selected">
                     <filename>images/widgets/delete.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed" from="active">
                 <imagetype name="image" from="base_image_pushed">
                     <filename>images/widgets/delete.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
         </statetype>
@@ -69,14 +69,14 @@
     
     
     <!-- DONE -->
-    <!-- a search button widget -->
+    <!-- a button widget to increase the music rating -->
     <button name="base_rating_inc_button" from="base_searchbutton">
         <area>0,0,36,36</area>
         <statetype name="buttonstate">
             <state name="active">
                 <imagetype name="image" from="base_image_active">
                     <filename>images/widgets/rating_increase.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="selected" from="active">
@@ -86,14 +86,14 @@
                 </imagetype>
                 <imagetype name="image" from="base_image_selected">
                     <filename>images/widgets/rating_increase.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed" from="active">
                 <imagetype name="image" from="base_image_pushed">
                     <filename>images/widgets/rating_increase.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
         </statetype>
@@ -102,14 +102,14 @@
     
  
     <!-- DONE -->
-    <!-- a search button widget -->
+    <!-- a button widget to decrease the music rating -->
     <button name="base_rating_dec_button" from="base_searchbutton">
         <area>0,0,36,36</area>
         <statetype name="buttonstate">
             <state name="active">
                 <imagetype name="image" from="base_image_active">
                     <filename>images/widgets/rating_decrease.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="selected" from="active">
@@ -119,14 +119,14 @@
                 </imagetype>
                 <imagetype name="image" from="base_image_selected">
                     <filename>images/widgets/rating_decrease.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed" from="active">
                 <imagetype name="image" from="base_image_pushed">
                     <filename>images/widgets/rating_decrease.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
         </statetype>
@@ -142,7 +142,7 @@
             <state name="active">
                 <imagetype name="image" from="base_image_active">
                     <filename>images/widgets/sort_ascending.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="selected" from="active">
@@ -152,14 +152,14 @@
                 </imagetype>
                 <imagetype name="image" from="base_image_selected">
                     <filename>images/widgets/sort_ascending.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed" from="active">
                 <imagetype name="image" from="base_image_pushed">
                     <filename>images/widgets/sort_ascending.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
         </statetype>
@@ -175,7 +175,7 @@
             <state name="active">
                 <imagetype name="image" from="base_image_active">
                     <filename>images/widgets/sort_descending.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="selected" from="active">
@@ -185,14 +185,14 @@
                 </imagetype>
                 <imagetype name="image" from="base_image_selected">
                     <filename>images/widgets/sort_descending.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed" from="active">
                 <imagetype name="image" from="base_image_pushed">
                     <filename>images/widgets/sort_descending.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
         </statetype>
@@ -208,7 +208,7 @@
             <state name="active">
                 <imagetype name="image" from="base_image_active">
                     <filename>images/widgets/arrow_up.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="selected" from="active">
@@ -218,14 +218,14 @@
                 </imagetype>
                 <imagetype name="image" from="base_image_selected">
                     <filename>images/widgets/arrow_up.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed" from="active">
                 <imagetype name="image" from="base_image_pushed">
                     <filename>images/widgets/arrow_up.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
         </statetype>
@@ -241,7 +241,7 @@
             <state name="active">
                 <imagetype name="image" from="base_image_active">
                     <filename>images/widgets/arrow_down.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="selected" from="active">
@@ -251,14 +251,14 @@
                 </imagetype>
                 <imagetype name="image" from="base_image_selected">
                     <filename>images/widgets/arrow_down.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active"/>
             <state name="pushed" from="active">
                 <imagetype name="image" from="base_image_pushed">
                     <filename>images/widgets/arrow_down.png</filename>
-                    <area>5,5,26,26</area>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
         </statetype>
