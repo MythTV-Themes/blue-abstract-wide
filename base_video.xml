@@ -300,11 +300,6 @@
                         <preserveaspect>true</preserveaspect>
                         <alpha>180</alpha>
                     </imagetype>
-                    
-                    <imagetype name="background_image_border">
-                        <area>0,0,133,192</area>
-                        <filename>images/shared/video/movie_nfborder.png</filename>
-                    </imagetype>
 
                     <textarea name="buttontext" from="base_textarea">
                         <area>15,15,100,20</area>
@@ -365,6 +360,12 @@
                             </imagetype>
                         </state>
                     </statetype>
+                    
+                    <imagetype name="background_image_border">
+                        <area>0,0,133,192</area>
+                        <filename>images/shared/video/movie_nfborder.png</filename>
+                    </imagetype>
+                    
                     <!-- show how many videos / directories are in this directory -->
                     <textarea name="childcount" from="base_textarea">
                         <area>42,163,60,20</area>
@@ -386,11 +387,6 @@
                         <alpha>220</alpha>
                     </imagetype>
 
-                    <imagetype name="background_image_border">
-                        <area>0,0,185,267</area>
-                        <filename>images/shared/video/movie_fborder.png</filename>
-                    </imagetype>
-
                     <textarea name="buttontext" from="base_textarea">
                         <area>20,20,150,20</area>
                     </textarea>
@@ -405,7 +401,7 @@
 
                     <!-- marks the video as watched -->
                     <statetype name="watchedstate">
-                        <position>111,8</position>
+                        <position>111,9</position>
                         <state name="yes">
                             <imagetype name="watchedimage">
                                 <area>0,0,65,65</area>
@@ -451,6 +447,11 @@
                         </state>
                     </statetype>
 
+                    <imagetype name="background_image_border">
+                        <area>0,0,185,267</area>
+                        <filename>images/shared/video/movie_fborder.png</filename>
+                    </imagetype>
+                    
                     <!-- show how many videos / directories are in this directory -->
                     <textarea name="childcount" from="base_textarea">
                         <area>52,230,66,20</area>
