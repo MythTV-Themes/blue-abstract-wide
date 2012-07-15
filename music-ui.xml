@@ -1882,6 +1882,147 @@
         </textarea>
     </window>
 
+        
+    
+    
+    
+    <!-- DONE -->
+    <!-- Popup to edit a smartplaylist criteria row -->
+    <window name="criteriaroweditor">
+
+        <animation trigger="AboutToShow">
+            <section centre="left" duration="250">
+                <alpha start="0" end="255" easingcurve="Linear"/>
+                <zoom start="50" end="100" easingcurve="OutQuart"/>
+                <position start="-150,0" end="0,0"/>
+            </section>
+        </animation>
+
+        <animation trigger="AboutToHide">
+            <section centre="left" duration="250">
+                <alpha start="255" end="0" easingcurve="Linear"/>
+                <zoom start="100" end="50" easingcurve="InQuart"/>
+                <position start="0,0" end="-150,0"/>
+            </section>
+        </animation>
+        
+        <!-- darkens the entire background so 
+             that the popup is better readable -->
+        <shape name="darken_background" from="base_darken_background" />
+
+        <!-- the background image of the popup dialog box -->
+        <shape name="dialog_background" from="base_background_shape_dark">
+            <area>450,110,400,495</area>
+        </shape>
+        
+        <textarea name="title" from="base_textarea">
+            <area>465,125,370,50</area>
+            <value>Search Term</value>
+            <align>allcenter</align>
+            <value>Edit Criteria</value>
+        </textarea>
+        <shape name="title_separator" from="base_background_shape">
+            <area>451,190,398,1</area>
+        </shape>
+
+        <buttonlist name="fieldselector" from="base_selector_wide">
+            <position>465,205</position>
+        </buttonlist>
+        <shape name="fieldselector_separator" from="base_background_shape">
+            <area>451,255,398,1</area>
+        </shape>
+
+        <buttonlist name="operatorselector" from="base_selector_wide">
+            <position>465,270</position>
+        </buttonlist>
+        
+        <textedit name="value1edit" from="base_textedit">
+            <area>465,320,320,36</area>
+            <statetype name="background">
+                <state name="active">
+                    <imagetype name="background" from="base_image_active">
+                        <filename>images/widgets/widget_inactive.png</filename>
+                        <area>0,0,320,36</area>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <imagetype name="background" from="base_image_selected">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,320,36</area>
+                    </imagetype>
+                </state>
+                <state name="inactive">
+                    <imagetype name="background" from="base_image_inactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,320,36</area>
+                    </imagetype>
+                </state>
+            </statetype>
+        </textedit>
+
+        <buttonlist name="value1selector" from="base_selector">
+            <position>465,320</position>
+        </buttonlist>
+
+        <spinbox name="value1spinbox" from="base_spinbox">
+            <position>465,320</position>
+        </spinbox>
+
+        <button name="value1button" from="base_searchbutton">
+            <position>800,320</position>
+        </button>
+
+        <textedit name="value2edit" from="base_textedit">
+            <area>465,370,320,36</area>
+            <statetype name="background">
+                <state name="active">
+                    <imagetype name="background" from="base_image_active">
+                        <filename>images/widgets/widget_inactive.png</filename>
+                        <area>0,0,320,36</area>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <imagetype name="background" from="base_image_selected">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,320,36</area>
+                    </imagetype>
+                </state>
+                <state name="inactive">
+                    <imagetype name="background" from="base_image_inactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,320,36</area>
+                    </imagetype>
+                </state>
+            </statetype>
+        </textedit>
+
+        <buttonlist name="value2selector" from="base_selector">
+            <position>465,370</position>
+        </buttonlist>
+
+        <spinbox name="value2spinbox" from="base_spinbox">
+            <position>465,370</position>
+        </spinbox>
+
+        <button name="value2button" from="base_searchbutton">
+            <position>800,370</position>
+        </button>
+
+        <shape name="button_separator" from="base_background_shape">
+            <area>451,535,398,1</area>
+        </shape>
+
+        <button name="savebutton" from="base_button">
+            <position>495,550</position>
+            <value>Save</value>
+        </button>
+        <button name="cancelbutton" from="base_button">
+            <position>660,550</position>
+            <value>Cancel</value>
+        </button>
+
+    </window>
+
     
     
     
