@@ -311,11 +311,6 @@
                             <!--<alpha>180</alpha>-->
                         </imagetype>
                         
-                        <imagetype name="background_image_border">
-                            <area>0,0,133,133</area>
-                            <filename>images/shared/music/album_nfborder.png</filename>
-                        </imagetype>
-
                         <!-- this is the actual cover image that will be shown if its
                             available, otherwise only the background image is visible -->
                         <imagetype name="buttonimage">
@@ -357,6 +352,11 @@
                                 </imagetype>
                             </state>
                         </statetype>-->
+                        
+                        <imagetype name="background_image_border">
+                            <area>0,0,133,133</area>
+                            <filename>images/shared/music/album_nfborder.png</filename>
+                        </imagetype>
                     </state>
 
                     <state name="inactive" from="active"/>
@@ -369,11 +369,6 @@
                             <mask>images/shared/music/album_item_fmask.png</mask>
                             <filename>images/shared/music/default_album.png</filename>
                             <preserveaspect>true</preserveaspect>
-                        </imagetype>
-
-                        <imagetype name="background_image_border">
-                            <area>0,0,185,185</area>
-                            <filename>images/shared/music/album_fborder.png</filename>
                         </imagetype>
                         
                         <!-- this is the actual cover image that will be shown if its
@@ -413,6 +408,11 @@
                                 </imagetype>
                             </state>
                         </statetype>-->
+
+                        <imagetype name="background_image_border">
+                            <area>0,0,185,185</area>
+                            <filename>images/shared/music/album_fborder.png</filename>
+                        </imagetype>
                     </state>
 
                     <state name="selectedinactive" from="active"/>
