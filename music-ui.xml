@@ -319,6 +319,126 @@
                             <preserveaspect>true</preserveaspect>
                         </imagetype>
 
+                        <!-- This specifies the background image of the item. It can be 
+                             set according to the type, like artist, genre, year, album,... -->
+                        <statetype name="nodetype">
+                            <state name="track">
+                                <imagetype name="nodetype_track_image">
+                                    <area>0,0,133,133</area>
+                                    <filename>images/shared/music/default_songs.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="album">
+                                <imagetype name="nodetype_album_image">
+                                    <area>0,0,133,133</area>
+                                    <filename>images/shared/music/default_album.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="artist">
+                                <imagetype name="nodetype_artist_image">
+                                    <area>0,0,133,133</area>
+                                    <filename>images/shared/music/default_artist.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="alltracks">
+                                <imagetype name="nodetype_alltracks_image">
+                                    <area>0,0,133,133</area>
+                                    <filename>images/shared/music/default_songs.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="genres">
+                                <imagetype name="nodetype_genres_image">
+                                    <area>0,0,133,133</area>
+                                    <filename>images/shared/music/default_genre.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="albums">
+                                <imagetype name="nodetype_albums_image">
+                                    <area>0,0,133,133</area>
+                                    <filename>images/shared/music/default_album.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="artists">
+                                <imagetype name="nodetype_artist_image">
+                                    <area>0,0,133,133</area>
+                                    <filename>images/shared/music/default_artist.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <!-- TODO update image -->
+                            <state name="compartists">
+                                <imagetype name="nodetype_compartists_image">
+                                    <area>0,0,133,133</area>
+                                    <filename>images/shared/music/default_compartists.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <!-- TODO update image -->
+                            <state name="ratings">
+                                <imagetype name="nodetype_ratings_image">
+                                    <area>0,0,133,133</area>
+                                    <filename>images/shared/music/default_ratings.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="years">
+                                <imagetype name="nodetype_years_image">
+                                    <area>0,0,133,133</area>
+                                    <filename>images/shared/music/default_years.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="compilations">
+                                <imagetype name="nodetype_compilations_image">
+                                    <area>0,0,133,133</area>
+                                    <filename>images/shared/music/default_compilations.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="directory">
+                                <imagetype name="nodetype_directory_image">
+                                    <area>0,0,133,133</area>
+                                    <filename>images/shared/music/default_directory.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="playlists">
+                                <imagetype name="nodetype_playlists_image">
+                                    <area>0,0,133,133</area>
+                                    <filename>images/shared/music/default_playlists.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <!-- TODO update image -->
+                            <state name="smartplaylists">
+                                <imagetype name="nodetype_smartplaylists_image">
+                                    <area>0,0,133,133</area>
+                                    <filename>images/shared/music/default_smartplaylists.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                        </statetype>
+                            
                         <!-- This is the dark background behind the album name -->
                         <shape name="buttontext_background" from="base_background_shape">
                             <area>3,81,127,49</area>
@@ -378,6 +498,126 @@
                             <mask>images/shared/music/album_item_fmask.png</mask>
                             <preserveaspect>true</preserveaspect>
                         </imagetype>
+
+                        <!-- This specifies the background image of the item. It can be 
+                             set according to the type, like artist, genre, year, album,... -->
+                        <statetype name="nodetype">
+                            <state name="track">
+                                <imagetype name="nodetype_track_image">
+                                    <area>0,0,185,185</area>
+                                    <filename>images/shared/music/default_songs.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="album">
+                                <imagetype name="nodetype_album_image">
+                                    <area>0,0,185,185</area>
+                                    <filename>images/shared/music/default_album.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="artist">
+                                <imagetype name="nodetype_artist_image">
+                                    <area>0,0,185,185</area>
+                                    <filename>images/shared/music/default_artist.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="alltracks">
+                                <imagetype name="nodetype_alltracks_image">
+                                    <area>0,0,185,185</area>
+                                    <filename>images/shared/music/default_songs.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="genres">
+                                <imagetype name="nodetype_genres_image">
+                                    <area>0,0,185,185</area>
+                                    <filename>images/shared/music/default_genre.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="albums">
+                                <imagetype name="nodetype_albums_image">
+                                    <area>0,0,185,185</area>
+                                    <filename>images/shared/music/default_album.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="artists">
+                                <imagetype name="nodetype_artist_image">
+                                    <area>0,0,185,185</area>
+                                    <filename>images/shared/music/default_artist.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <!-- TODO update image -->
+                            <state name="compartists">
+                                <imagetype name="nodetype_compartists_image">
+                                    <area>0,0,185,185</area>
+                                    <filename>images/shared/music/default_compartists.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <!-- TODO update image -->
+                            <state name="ratings">
+                                <imagetype name="nodetype_ratings_image">
+                                    <area>0,0,185,185</area>
+                                    <filename>images/shared/music/default_ratings.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="years">
+                                <imagetype name="nodetype_years_image">
+                                    <area>0,0,185,185</area>
+                                    <filename>images/shared/music/default_years.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="compilations">
+                                <imagetype name="nodetype_compilations_image">
+                                    <area>0,0,185,185</area>
+                                    <filename>images/shared/music/default_compilations.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="directory">
+                                <imagetype name="nodetype_directory_image">
+                                    <area>0,0,185,185</area>
+                                    <filename>images/shared/music/default_directory.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <state name="playlists">
+                                <imagetype name="nodetype_playlists_image">
+                                    <area>0,0,185,185</area>
+                                    <filename>images/shared/music/default_playlists.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                            <!-- TODO update image -->
+                            <state name="smartplaylists">
+                                <imagetype name="nodetype_smartplaylists_image">
+                                    <area>0,0,185,185</area>
+                                    <filename>images/shared/music/default_smartplaylists.png</filename>
+                                    <mask>images/shared/music/album_item_nfmask.png</mask>
+                                    <preserveaspect>true</preserveaspect>
+                                </imagetype>
+                            </state>
+                        </statetype>
 
                         <shape name="buttontext_background" from="base_background_shape_dark">
                             <area>7,118,171,60</area>
