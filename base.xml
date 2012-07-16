@@ -2041,7 +2041,7 @@
                         <scroll direction="horizontal"/>
                     </textarea>
                     <textarea name="year" from="base_textarea">
-                        <area>365,0,180,36</area>
+                        <area>365,0,170,36</area>
                         <align>right,vcenter</align>
                         <template>Released %1</template>
                         <scroll direction="horizontal"/>
