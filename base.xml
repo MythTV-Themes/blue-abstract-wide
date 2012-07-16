@@ -2071,8 +2071,75 @@
 
     <!-- Shows the screen where the user can select the different
          artwork choices that the search has returned -->
-    <!--<window name="MythArtworkResults">-->
+    <!--<window name="MythArtworkResults">
+        
+        <animation trigger="AboutToShow">
+            <section centre="left" duration="250">
+                <alpha start="0" end="255" easingcurve="Linear"/>
+                <zoom start="50" end="100" easingcurve="OutQuart"/>
+                <position start="-150,0" end="0,0"/>
+            </section>
+        </animation>
 
+        <animation trigger="AboutToHide">
+            <section centre="left" duration="250">
+                <alpha start="255" end="0" easingcurve="Linear"/>
+                <zoom start="100" end="50" easingcurve="InQuart"/>
+                <position start="0,0" end="-150,0"/>
+            </section>
+        </animation>
+
+        <shape name="darken_background" from="base_darken_background" />
+
+        <shape name="dialog_background" from="base_background_shape_dark">
+            <area>350,130,580,388</area>
+        </shape>
+
+        <textarea name="title" from="base_textarea">
+            <area>365,140,550,60</area>
+            <value>Artwork Search Results</value>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+            <scroll direction="vertical"/>
+        </textarea>
+        <shape name="title_separator" from="base_background_shape">
+            <area>351,210,578,1</area>
+        </shape>
+
+        <buttonlist name="results" from="base_buttonlist">
+            <area>365,225,550,275</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <imagetype name="buttonbackground" from="base_image_active">
+                        <filename>images/widgets/widget_inactive.png</filename>
+                        <area>0,0,550,36</area>
+                    </imagetype>
+                    <imagetype name="buttonimage">
+                        <area>8,0,350,36</area>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
+                    <textarea name="resolution" from="base_textarea">
+                        <area>365,0,170,36</area>
+                        <align>right,vcenter</align>
+                        <scroll direction="horizontal"/>
+                    </textarea>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,550,36</area>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,550,36</area>
+                    </imagetype>
+                </state>
+            </statetype>
+        </buttonlist>
+    </window>-->
 
 
 
