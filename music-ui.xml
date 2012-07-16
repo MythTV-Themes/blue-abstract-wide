@@ -1887,6 +1887,181 @@
     
     
     <!-- DONE -->
+    <!-- this is the main smartplaylist editor screen -->
+     <window name="smartplaylisteditor">
+
+        <imagetype name="background" from="base_background"/>
+
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Smart Playlist Editor</value>
+            </textarea>
+        </textarea>
+
+        <shape name="smartplaylist_background" from="base_background_shape">
+            <area>300,145,680,460</area>
+        </shape>
+        
+        <textarea name="categorylbl"  from="base_textarea">
+            <area>315,160,220,36</area>
+            <align>right,vcenter</align>
+            <value>Category:</value>
+        </textarea>
+        <buttonlist name="categoryselector" from="base_selector_wide">
+            <position>545,160</position>
+        </buttonlist>
+
+        <button name="categorybutton" from="base_searchbutton">
+            <position>928,160</position>
+        </button>
+
+        <textarea name="titlelbl"  from="categorylbl">
+            <position>315,200</position>
+            <value>Title:</value>
+        </textarea>
+        <textedit name="titleedit" from="base_textedit">
+            <position>545,200</position>
+        </textedit>
+
+        <shape name="title_separator" from="base_background_shape">
+            <area>301,250,678,1</area>
+        </shape>
+        
+        <textarea name="matchlbl"  from="categorylbl">
+            <position>315,265</position>
+            <value>Match</value>
+        </textarea>
+        
+        <buttonlist name="matchselector" from="base_selector">
+            <area>545,265,100,36</area>
+            <layout>horizontal</layout>
+            <buttonarea>0,0,100%,100%</buttonarea>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <imagetype name="buttonbackground" from="base_image_active">
+                        <filename>images/widgets/widget_inactive.png</filename>
+                        <area>0,0,100,36</area>
+                    </imagetype>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,100%-16,36</area>
+                        <scroll direction="horizontal" />
+                    </textarea>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,100,36</area>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active"/>
+            </statetype>
+        </buttonlist>
+        
+        <textarea name="match2lbl" from="base_textarea">
+            <area>680,265,280,36</area>
+            <value>Of The Following Conditions</value>
+        </textarea>
+
+        <buttonlist name="criterialist" from="base_buttonlist_wide">
+            <area>315,305,650,120</area>
+            <buttonarea>0,0,100%,100%</buttonarea>
+            <spacing>1</spacing>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <imagetype name="buttonbackground" from="base_image_active">
+                        <filename>images/widgets/widget_inactive.png</filename>
+                        <area>0,0,650,36</area>
+                    </imagetype>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,100%-16,36</area>
+                    </textarea>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedactive"> 
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,650,36</area>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,650,36</area>
+                    </imagetype>
+                </state>
+            </statetype>
+            
+            <statetype name="upscrollarrow">
+                <position>100%-30,100%-10</position>
+            </statetype>
+
+            <statetype name="downscrollarrow">
+                <position>100%-55,100%-10</position>
+            </statetype>
+        </buttonlist>
+
+        <shape name="criteria_separator" from="base_background_shape">
+            <area>301,435,678,1</area>
+        </shape>
+        
+        <textarea name="orderbylbl"  from="categorylbl">
+            <position>315,450</position>
+            <value>Order By:</value>
+        </textarea>
+        <buttonlist name="orderbyselector" from="base_selector_wide">
+            <position>545,450</position>
+        </buttonlist>
+        <button name="orderbybutton" from="base_searchbutton">
+            <area>928,450,32,32</area>
+        </button>
+
+        <textarea name="matcheslbl"  from="categorylbl">
+            <position>315,490</position>
+            <value>Matches:</value>
+        </textarea>
+        <textarea name="matchestext"  from="base_textarea">
+            <area>545,490,150,36</area>
+        </textarea>
+
+        <textarea name="limitlbl"  from="categorylbl">
+            <area>595,490,100,36</area>
+            <value>Limit:</value>
+        </textarea>
+        <spinbox name="limitspin" from="base_spinbox">
+            <position>705,490</position>
+            <!--<template type="zero">No Limit</template> -->
+        </spinbox>
+
+        <shape name="button_separator" from="base_background_shape">
+            <area>301,540,678,1</area>
+        </shape>
+        
+        <!-- Push buttons -->
+        <button name="cancelbutton" from="base_button">
+            <position>315,555</position>
+            <value>Cancel</value>
+        </button>
+
+        <button name="showresultsbutton" from="base_button_wide">
+            <position>490,555</position>
+            <value>Show Results</value>
+        </button>
+
+        <button name="savebutton" from="base_button">
+            <position>815,555</position>
+            <value>Save</value>
+        </button>
+
+    </window>
+
+    
+    
+    
+    
+    
+    <!-- DONE -->
     <!-- Popup to edit a smartplaylist criteria row -->
     <window name="criteriaroweditor">
 
