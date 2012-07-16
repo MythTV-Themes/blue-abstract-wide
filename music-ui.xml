@@ -73,14 +73,14 @@
             <filename>images/shared/music/default_album.png</filename>
             <preserveaspect>true</preserveaspect>
         </imagetype>
-        <imagetype name="coverart_border">
-            <area>36,561,133,133</area>
-            <filename>images/shared/music/album_nfborder.png</filename>
-        </imagetype>
         <imagetype name="coverart">
             <area>36,561,133,133</area>
             <mask>images/shared/music/album_item_nfmask.png</mask>
             <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="coverart_border">
+            <area>36,561,133,133</area>
+            <filename>images/shared/music/album_nfborder.png</filename>
         </imagetype>
 
         <!-- the vertical separator -->
@@ -143,16 +143,16 @@
             <filename>images/shared/music/default_visualization.png</filename>
             <preserveaspect>true</preserveaspect>
         </imagetype>
-        <imagetype name="visualizer_border">
-            <area>1110,561,133,133</area>
-            <filename>images/shared/music/album_nfborder.png</filename>
-        </imagetype>
         <imagetype name="visualizer">
             <area>1110,561,133,133</area>
             <mask>images/shared/music/album_item_nfmask.png</mask>
             <preserveaspect>true</preserveaspect>
         </imagetype>
-
+        <imagetype name="visualizer_border">
+            <area>1110,561,133,133</area>
+            <filename>images/shared/music/album_nfborder.png</filename>
+        </imagetype>
+        
         <!-- This button is not visible and only included to take away 
             the focus from the playlist. If this button has focus 
             then the fast forward and backward action can be used -->
