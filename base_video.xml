@@ -7,10 +7,6 @@
     <!-- Shows a large version of the video cover with the rating below it -->
     <group name="base_video_large_cover_group">
 
-        <shape name="coverart_background" from="base_background_shape">
-            <area>0,0,280,395</area>
-        </shape>
-        
         <imagetype name="coverart_background_image">
             <area>20,20,245,355</area>
             <mask>images/shared/video/movie_cover_mask.png</mask>
@@ -38,10 +34,6 @@
     <!-- Shows all information about the selected video without a border
          This is usually used in the itemdetailpopup window -->
     <group name="base_video_detailed_description_group">
-        
-         <shape name="video_detailed_description_background" from="base_background_shape">
-            <area>0,0,720,395</area>
-        </shape>
         
         <textarea name="title" from="base_textarea">
             <area>15,15,350,30</area>
