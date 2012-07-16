@@ -162,15 +162,15 @@
          of the images that are used in button widgets -->
     <imagetype name="base_image_active">
         <filename />
-        <alpha>150</alpha>
+        <alpha>160</alpha>
     </imagetype>
     <imagetype name="base_image_selectedactive">
         <filename />
-        <alpha>220</alpha>
+        <alpha>240</alpha>
     </imagetype>
     <imagetype name="base_image_selectedinactive">
         <filename />
-        <alpha>120</alpha>
+        <alpha>110</alpha>
     </imagetype>
 
     <!-- the arrow is not selected and inactive -->
