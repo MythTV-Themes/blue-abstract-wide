@@ -1179,14 +1179,14 @@
             <filename>images/shared/music/default_album.png</filename>
             <preserveaspect>true</preserveaspect>
         </imagetype>
-        <imagetype name="coverart_border">
-            <area>590,550,133,133</area>
-            <filename>images/shared/music/album_nfborder.png</filename>
-        </imagetype>
         <imagetype name="coverart">
             <area>590,550,133,133</area>
             <mask>images/shared/music/album_item_nfmask.png</mask>
             <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="coverart_border">
+            <area>590,550,133,133</area>
+            <filename>images/shared/music/album_nfborder.png</filename>
         </imagetype>
         
         <textarea name="title" from="base_textarea">
