@@ -707,24 +707,24 @@
             <value>Plot:</value>
         </textarea>
         <textedit name="description_edit">
-            <area>885,140,375,120</area>
+            <area>885,140,365,120</area>
             <statetype name="background">
                 <state name="active">
                     <imagetype name="background" from="base_image_active">
                         <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,375,160</area>
+                        <area>0,0,365,150</area>
                     </imagetype>
                 </state>
                 <state name="selected">
                     <imagetype name="background" from="base_image_selected">
                         <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,375,160</area>
+                        <area>0,0,365,150</area>
                     </imagetype>
                 </state>
                 <state name="inactive">
                     <imagetype name="background" from="base_image_inactive">
                         <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,375,160</area>
+                        <area>0,0,365,150</area>
                     </imagetype>
                 </state>
             </statetype>
@@ -736,7 +736,7 @@
                 </shape>
             </imagetype>
             <textarea name="text" from="base_textarea">
-                <area>8,8,100%-8,144</area>
+                <area>8,10,100%-8,144</area>
                 <align>top,left</align>
                 <multiline>true</multiline>
             </textarea>
