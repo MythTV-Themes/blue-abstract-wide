@@ -519,37 +519,37 @@
                         <state name="commflagged">
                             <imagetype name="statusimage">
                                 <filename>images/shared/recordings/commflagged.png</filename>
-                                <area>6,2,32,32</area>
+                                <area>6,1,33,33</area>
                             </imagetype>
                         </state>
                         <state name="cutlist">
                             <imagetype name="statusimage">
                                 <filename>images/shared/recordings/cutlist.png</filename>
-                                <area>6,2,32,32</area>
+                                <area>6,1,33,33</area>
                             </imagetype>
                         </state>
                         <state name="autoexpire">
                             <imagetype name="statusimage">
                                 <filename>images/shared/recordings/autoexpire.png</filename>
-                                <area>6,2,32,32</area>
+                                <area>6,1,33,33</area>
                             </imagetype>
                         </state>
                         <state name="processing">
                             <imagetype name="statusimage">
                                 <filename>images/shared/recordings/processing.png</filename>
-                                <area>6,2,32,32</area>
+                                <area>6,1,33,33</area>
                             </imagetype>
                         </state>
                         <state name="bookmark">
                             <imagetype name="statusimage">
                                 <filename>images/shared/recordings/bookmark.png</filename>
-                                <area>6,2,32,32</area>
+                                <area>6,1,33,33</area>
                             </imagetype>
                         </state>
                         <state name="playlist">
                             <imagetype name="statusimage">
                                 <filename>images/shared/recordings/playlist.png</filename>
-                                <area>6,2,32,32</area>
+                                <area>6,1,33,33</area>
                             </imagetype>
                         </state>
                         <state name="mono">
@@ -642,7 +642,7 @@
                         <state name="watched">
                             <imagetype name="statusimage">
                                 <filename>images/shared/recordings/watched.png</filename>
-                                <area>6,2,32,32</area>
+                                <area>6,1,33,33</area>
                             </imagetype>
                         </state>
                     </statetype>
