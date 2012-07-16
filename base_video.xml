@@ -14,14 +14,14 @@
             <preserveaspect>true</preserveaspect>
             <alpha>180</alpha>
         </imagetype>
-        <imagetype name="coverart_border">
-            <area>20,20,245,355</area>
-            <filename>images/shared/video/movie_cover_nfborder.png</filename>
-            <preserveaspect>true</preserveaspect>
-        </imagetype>
         <imagetype name="coverart">
             <area>20,20,245,355</area>
             <mask>images/shared/video/movie_cover_mask.png</mask>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="coverart_border">
+            <area>20,20,245,355</area>
+            <filename>images/shared/video/movie_cover_nfborder.png</filename>
             <preserveaspect>true</preserveaspect>
         </imagetype>
     </group>
