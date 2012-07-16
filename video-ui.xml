@@ -248,34 +248,37 @@
             </textarea>
         </textarea>
         
+        <shape name="coverart_background" from="base_background_shape">
+            <area>110,85,275,385</area>
+        </shape>
         <group name="video_large_cover_group" from="base_video_large_cover_group">
-            <position>100,70</position>
+            <position>105,80</position>
         </group>
 
         <!-- this is the background behind the video directory list -->
         <shape name="video_tree_background" from="base_background_shape">
-            <area>400,70,760,395</area>
+            <area>400,85,745,385</area>
         </shape>
 
         <!-- shows the current path and where we are in the video tree -->
         <textarea name="breadcrumbs" from="base_textarea">
-            <area>420,85,540,30</area>
+            <area>420,95,530,36</area>
             <cutdown>left</cutdown>
         </textarea>
 
         <!-- shows the selected video number -->
         <textarea name="position" from="base_textarea">
-            <area>970,85,170,30</area>
+            <area>960,95,165,36</area>
             <align>right,vcenter</align>
         </textarea>
 
         <!-- shows the directory structure of the videos -->
         <buttontree name="videos">
-            <area>420,125,730,320</area>
+            <area>418,135,715,316</area>
             <numlists>2</numlists>
             <spacing>5</spacing>
             <buttonlist name="listtemplate" from="base_buttonlist">
-                <buttonarea>0,0,730,320</buttonarea>
+                <buttonarea>0,0,715,316</buttonarea>
             </buttonlist>
         </buttontree>
 
