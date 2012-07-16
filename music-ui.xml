@@ -2028,6 +2028,130 @@
     
     
     <!-- DONE -->
+    <!-- popup to edit the date in a smartplaylist criteria dates -->
+    <window name="dateeditordialog">
+
+        <animation trigger="AboutToShow">
+            <section centre="left" duration="250">
+                <alpha start="0" end="255" easingcurve="Linear"/>
+                <zoom start="50" end="100" easingcurve="OutQuart"/>
+                <position start="-150,0" end="0,0"/>
+            </section>
+        </animation>
+
+        <animation trigger="AboutToHide">
+            <section centre="left" duration="250">
+                <alpha start="255" end="0" easingcurve="Linear"/>
+                <zoom start="100" end="50" easingcurve="InQuart"/>
+                <position start="0,0" end="-150,0"/>
+            </section>
+        </animation>
+        
+        <!-- darkens the entire background so 
+             that the popup is better readable -->
+        <shape name="darken_background" from="base_darken_background" />
+
+        <!-- the background image of the popup dialog box -->
+        <shape name="dialog_background" from="base_background_shape_dark">
+            <area>450,120,400,475</area>
+        </shape>
+        
+        <textarea name="title" from="base_textarea">
+            <area>465,135,370,50</area>
+            <value>Search Term</value>
+            <align>allcenter</align>
+            <value>Edit Date</value>
+        </textarea>
+        <shape name="title_separator" from="base_background_shape">
+            <area>451,200,398,1</area>
+        </shape>
+
+        <textarea name="fixeddatelbl"  from="base_textarea">
+            <area>510,215,270,36</area>
+            <value>Fixed Date</value>
+        </textarea>
+        <checkbox name="fixeddatecheck" from="base_checkbox">
+            <position>465,215</position>
+        </checkbox>
+
+        <textarea name="daylbl"  from="fixeddatelbl">
+            <position>465,255</position>
+            <value>Day</value>
+        </textarea>
+        <spinbox name="dayspinbox" from="base_spinbox">
+            <position>465,295</position>
+        </spinbox>
+
+        <textarea name="monthlbl"  from="fixeddatelbl">
+            <position>605,255</position>
+            <value>Month</value>
+        </textarea>
+        <spinbox name="monthspinbox" from="base_spinbox">
+            <position>605,295</position>
+        </spinbox>
+
+        <textarea name="yearlbl"  from="fixeddatelbl">
+            <position>745,255</position>
+            <value>Year</value>
+        </textarea>
+        <spinbox name="yearspinbox" from="base_spinbox">
+            <position>745,295</position>
+        </spinbox>
+
+        <shape name="fixeddate_separator" from="base_background_shape">
+            <area>451,345,398,1</area>
+        </shape>
+        
+        <textarea name="nowlbl"  from="fixeddatelbl">
+            <position>510,360</position>
+            <value>Use Current Date</value>
+        </textarea>
+        <checkbox name="nowcheck" from="base_checkbox">
+            <position>465,360</position>
+        </checkbox>
+
+        <textarea name="adddayslbl"  from="fixeddatelbl">
+            <area>465,410,100,36</area>
+            <align>right,vcenter</align>
+            <value>+/- Days</value>
+        </textarea>
+        <spinbox name="adddaysspinbox" from="base_spinbox">
+            <position>575,410</position>
+        </spinbox>
+
+        <shape name="nowdate_separator" from="base_background_shape">
+            <area>451,460,398,1</area>
+        </shape>
+
+        <textarea name="statustext">
+            <area>465,475,370,36</area>
+            <font>text</font>
+            <font state="valid">text</font>
+            <font state="error">text_red</font>
+            <align>allcenter</align>
+        </textarea>
+
+        <!-- Push buttons -->
+        <shape name="button_separator" from="base_background_shape">
+            <area>451,525,398,1</area>
+        </shape>
+
+        <button name="okbutton" from="base_button">
+            <position>495,540</position>
+            <value>Ok</value>
+        </button>
+        <button name="cancelbutton" from="base_button">
+            <position>660,540</position>
+            <value>Cancel</value>
+        </button>
+    </window>
+
+    
+    
+    
+    
+    
+    <!-- DONE -->
     <!-- Shows some information for the selected smartplaylist -->
     <window name="smartplresultviewer">
         
