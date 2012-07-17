@@ -91,7 +91,7 @@
         </textarea>
         
         <shape name="video_gallery_background_bottom" from="base_background_shape">
-            <area>-5,670,1290,38</area>
+            <area>-15,670,1310,38</area>
         </shape>
 
         <textarea name="novideos" from="base_textarea">
@@ -503,7 +503,7 @@
 
         <!-- shows the amount of filtered videos -->
         <shape name="numvideos_background" from="base_background_shape">
-            <area>-5,615,1290,90</area>
+            <area>-15,615,1310,90</area>
         </shape>
         <textarea name="numvideos_text" from="base_textarea">
             <area>120,615,1040,90</area>
