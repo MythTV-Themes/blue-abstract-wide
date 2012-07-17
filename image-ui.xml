@@ -189,7 +189,7 @@
         
         
         <shape name="gallery_info_background" from="base_background_shape">
-            <area>-5,636,1290,70</area>
+            <area>-15,636,1310,70</area>
         </shape>
 
 
