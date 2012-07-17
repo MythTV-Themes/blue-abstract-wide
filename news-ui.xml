@@ -191,11 +191,11 @@
         </shape>
 
         <button name="ok" from="base_button">
-            <position>560,465</position>
+            <position>485,465</position>
             <value>Ok</value>
         </button>
         <button name="cancel" from="base_button">
-            <position>560,465</position>
+            <position>650,465</position>
             <value>Cancel</value>
         </button>
     </window>
