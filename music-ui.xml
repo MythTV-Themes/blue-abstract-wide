@@ -180,27 +180,27 @@
         </textarea>
 
         <shape name="playlisteditorview_background" from="base_background_shape">
-            <area>20,50,1240,355</area>
+            <area>20,50,1240,362</area>
         </shape>
 
         <!-- shows path to current item and its position -->
         <textarea name="breadcrumbs" from="base_textarea">
-            <area>35,65,950,30</area>
+            <area>35,60,950,30</area>
             <cutdown>left</cutdown>
         </textarea>
         <textarea name="position" from="base_textarea">
-            <area>1045,65,190,30</area>
+            <area>1050,60,190,30</area>
             <align>right,vcenter</align>
         </textarea>
 
         <!-- shows the buttontree with the tracks, albums, ... -->
         <buttontree name="playlist_tree">
-            <area>35,105,1210,277</area>
+            <area>35,95,1210,300</area>
             <numlists>3</numlists>
             <spacing>10</spacing>
             <buttonlist name="listtemplate" from="base_buttonlist">
                 <area>0,0,395,277</area>
-                
+                <spacing>1</spacing>
                 <statetype name="buttonitem">
                     <state name="active">
                         <imagetype name="buttonbackground" from="base_image_active">
@@ -223,22 +223,22 @@
                     </state>
                 </statetype>
                 <statetype name="upscrollarrow">
-                    <position>100%-65,100%-5</position>
+                    <position>100%-60,100%-5</position>
                 </statetype>
                 <statetype name="downscrollarrow">
-                    <position>100%-40,100%-5</position>
+                    <position>100%-35,100%-5</position>
                 </statetype>
             </buttonlist>
         </buttontree>
 
         <!-- shows the current playlist -->
         <shape name="currentplaylist_tree_background" from="base_background_shape">
-            <area>20,425,1240,230</area>
+            <area>20,430,1240,222</area>
         </shape>
         <group name="current_playlist_group" from="base_current_playlist_group">
-            <position>35,443</position>
+            <position>35,445</position>
             <buttonlist name="currentplaylist">
-                <area>0,0,1210,200</area>
+                <area>0,0,1210,195</area>
             </buttonlist>
         </group>
 
