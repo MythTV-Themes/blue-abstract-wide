@@ -2239,7 +2239,7 @@
     <!-- Shows the help description in the setting windows -->
     <group name="base_helptext_group">
         <shape name="helptext_background_bottom" from="base_background_shape">
-            <area>-5,0,1290,90</area>
+            <area>-15,0,1310,90</area>
         </shape>
         <textarea name="helptext" from="base_textarea">
             <area>120,0,1040,90</area>
