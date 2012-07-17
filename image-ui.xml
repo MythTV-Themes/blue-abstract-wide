@@ -42,15 +42,15 @@
                         <mask>images/shared/gallery/gallery_item_nfmask.png</mask>
                         <filename>images/shared/gallery/default_gallery.png</filename>
                         <preserveaspect>true</preserveaspect>
-                    </imagetype>                    
-                    <imagetype name="background_image_border">
-                        <area>0,0,133,133</area>
-                        <filename>images/shared/gallery/gallery_nfborder.png</filename>
                     </imagetype>
                     <imagetype name="buttonimage">
                         <area>0,0,133,99</area>
                         <mask>images/shared/gallery/gallery_image_nfmask.png</mask>
                         <preserveaspect>true</preserveaspect>
+                    </imagetype>
+                    <imagetype name="background_image_border">
+                        <area>0,0,133,133</area>
+                        <filename>images/shared/gallery/gallery_nfborder.png</filename>
                     </imagetype>
 
                     <!--<imagetype name="thumbimage1">
@@ -107,15 +107,15 @@
                         <filename>images/shared/gallery/default_gallery.png</filename>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
-                    <imagetype name="background_image_border">
-                        <area>0,0,185,185</area>
-                        <filename>images/shared/gallery/gallery_fborder.png</filename>
-                    </imagetype>
                     <imagetype name="buttonimage">
                         <area>0,0,185,139</area>
                         <mask>images/shared/gallery/gallery_image_fmask.png</mask>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>        
+                    <imagetype name="background_image_border">
+                        <area>0,0,185,185</area>
+                        <filename>images/shared/gallery/gallery_fborder.png</filename>
+                    </imagetype>
 
                     <!--<imagetype name="thumbimage1">
                         <area>10,10,44,33</area>
