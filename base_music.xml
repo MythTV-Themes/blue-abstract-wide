@@ -468,11 +468,11 @@
                     </imagetype>
 
                     <imagetype name="buttonimage">
-                        <area>7,4,28,28</area>                        
+                        <area>5,4,28,28</area>                        
                         <filename />
                     </imagetype>
                     <shape name="buttonimage_background" from="base_background_shape">
-                        <area>6,3,30,30</area>
+                        <area>4,3,30,30</area>
                         <fill color="#000000" alpha="0" />
                         <cornerradius>0</cornerradius>
                     </shape>

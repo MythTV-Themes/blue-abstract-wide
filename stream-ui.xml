@@ -39,11 +39,11 @@
                     </imagetype>
 
                     <imagetype name="buttonimage">
-                        <area>7,6,42,42</area>                        
+                        <area>6,6,42,42</area>                        
                         <filename />
                     </imagetype>
                     <shape name="buttonimage_background" from="base_background_shape">
-                        <area>6,5,44,44</area>
+                        <area>5,5,44,44</area>
                         <fill color="#000000" alpha="0" />
                         <cornerradius>0</cornerradius>
                     </shape>
@@ -104,11 +104,11 @@
                     </imagetype>
 
                     <imagetype name="buttonimage">
-                        <area>7,4,28,28</area>                        
+                        <area>5,4,28,28</area>                        
                         <filename />
                     </imagetype>
                     <shape name="buttonimage_background" from="base_background_shape">
-                        <area>6,3,30,30</area>
+                        <area>4,3,30,30</area>
                         <fill color="#000000" alpha="0" />
                         <cornerradius>0</cornerradius>
                     </shape>
@@ -156,71 +156,6 @@
             </statetype>
         </buttonlist>
 
-        
-        
-        <buttonlist name="playedstrackslist" from="base_buttonlist">
-            <area>25,300,1225,150</area>
-            <buttonarea>0,0,100%,100%</buttonarea>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <area>0,0,100%,46</area>
-
-                    <imagetype name="buttonimage">
-                        <area>5,5,36,36</area>
-                        <filename>mm_icecast.png</filename>
-                    </imagetype>
-
-                    <textarea name="tracknum" from="buttontext">
-                        <area>50,0,50,46</area>
-                        <align>right,vcenter</align>
-                        <template>%1 -</template>
-                    </textarea>
-
-                    <textarea name="title" from="buttontext">
-                        <area>110,0,450,46</area>
-                        <align>left,vcenter</align>
-                        <font>basesmall</font>
-                    </textarea>
-
-                    <textarea name="artist" from="buttontext">
-                        <area>570,0,480,46</area>
-                        <font>basesmall</font>
-                        <align>left,vcenter</align>
-                    </textarea>
-
-                    <textarea name="length" from="artist">
-                        <area>1060,0,120,46</area>
-                        <align>right,vcenter</align>
-                        <font>basesmall</font>
-                    </textarea>
-
-                </state>
-                <state name="selectedactive" from="active">
-                    <imagetype name="buttonimage">
-                        <area>5,5,36,36</area>
-                        <filename>mm_icecast.png</filename>
-                    </imagetype>
-                    <shape name="selectbar">
-                        <area>0,0,100%,46</area>
-                    </shape>
-                </state>
-                <state name="selectedinactive" from="active">
-                    <shape name="selectbar">
-                        <area>0,0,100%,46</area>
-                    </shape>
-                </state>
-            </statetype>
-            <statetype name="upscrollarrow">
-                <position>1140,135</position>
-            </statetype>
-            <statetype name="downscrollarrow">
-                <position>1180,135</position>
-            </statetype>
-        </buttonlist>
-
-
-
-        
         <!-- this is the background for the information at the bottom like
             shows coverart, track details, ratings and the visualizer -->
         <shape name="trackdetails_background" from="base_background_shape">
@@ -485,12 +420,12 @@
                     </imagetype>
                     
                     <imagetype name="buttonimage">
-                        <area>7,4,28,28</area>                        
+                        <area>5,4,28,28</area>                        
                         <filename />
                     </imagetype>
                     
                     <shape name="buttonimage_background" from="base_background_shape">
-                        <area>6,3,30,30</area>
+                        <area>4,3,30,30</area>
                         <fill color="#000000" alpha="0" />
                         <cornerradius>0</cornerradius>
                     </shape>
