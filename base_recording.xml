@@ -17,6 +17,7 @@
             <filename>images/shared/recordings/recording_preview.png</filename>
             <mask>images/shared/recordings/recording_preview_mask.png</mask>
             <preserveaspect>true</preserveaspect>
+            <alpha>220</alpha>
         </imagetype>
         <imagetype name="preview">
             <area>12,13,384,220</area>
