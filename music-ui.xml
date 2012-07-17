@@ -42,7 +42,7 @@
         <!-- The currently playing track, time, song count 
              and other status information about the playlist -->
         <shape name="current_playlistinfo_background" from="base_background_shape">
-            <area>-5,500,1290,40</area>
+            <area>-15,500,1310,40</area>
         </shape>
         <textarea name="playlisttime" from="base_textarea">
             <area>815,505,180,30</area>
@@ -245,7 +245,7 @@
         <!-- The currently playing track, time, song count 
              and other status information about the playlist -->
         <shape name="current_playlistinfo_background" from="base_background_shape">
-            <area>-5,670,1290,38</area>
+            <area>-15,670,1310,38</area>
         </shape>
         <group name="current_playlistinfo_group" from="base_current_playlistinfo_group">
             <position>20,675</position>
@@ -671,7 +671,7 @@
         <!-- The currently playing track, time, song count 
              and other status information about the playlist -->
         <shape name="current_playlistinfo_background" from="base_background_shape">
-            <area>-5,670,1290,38</area>
+            <area>-15,670,1310,38</area>
         </shape>
         <group name="current_playlistinfo_group" from="base_current_playlistinfo_group">
             <position>20,675</position>
@@ -770,7 +770,7 @@
         <!-- The currently playing track, time, song count 
              and other status information about the playlist -->
         <shape name="current_playlistinfo_background" from="base_background_shape">
-            <area>-5,670,1290,38</area>
+            <area>-15,670,1310,38</area>
         </shape>
         <group name="current_playlistinfo_group" from="base_current_playlistinfo_group">
             <position>20,675</position>
