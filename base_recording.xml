@@ -12,14 +12,20 @@
             <area>0,0,1240,245</area>
         </shape>
 
-        <imagetype name="preview_image_border">
+        <imagetype name="preview_background_image">
             <area>12,13,384,220</area>
-            <filename>images/shared/recordings/recording_preview_nfborder.png</filename>
+            <filename>images/shared/recordings/recording_preview.png</filename>
+            <mask>images/shared/recordings/recording_preview_mask.png</mask>
+            <preserveaspect>true</preserveaspect>
         </imagetype>
         <imagetype name="preview">
             <area>12,13,384,220</area>
             <mask>images/shared/recordings/recording_preview_mask.png</mask>
             <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="preview_image_border">
+            <area>12,13,384,220</area>
+            <filename>images/shared/recordings/recording_preview_nfborder.png</filename>
         </imagetype>
         
         <!-- the vertical separator -->
