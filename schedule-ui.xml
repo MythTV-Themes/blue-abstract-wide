@@ -335,7 +335,7 @@
 
         <!-- information about the sorting order -->
         <shape name="status_background" from="base_background_shape">
-            <area>-5,490,1290,38</area>
+            <area>-15,490,1310,38</area>
         </shape>
         <!--<textarea name="keyinstr" from="base_textarea">
             <area>40,495,400,30</area>
@@ -1039,7 +1039,7 @@
         </buttonlist>
 
         <shape name="recrules_details_background" from="base_background_shape">
-            <area>-5,495,1290,38</area>
+            <area>-15,495,1310,38</area>
         </shape>
         
         <textarea name="recordinggrouplabel" from="base_textarea">
