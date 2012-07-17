@@ -311,7 +311,7 @@
 
         <!-- this is the background around the covers  -->
         <shape name="videofilter_background" from="base_background_shape">
-            <area>280,345,705,255</area>
+            <area>280,345,705,252</area>
         </shape>
 
         <textarea name="extension_text" from="base_textarea">
@@ -363,7 +363,7 @@
         </button>
         
         <group name="base_helptext_group" from="base_helptext_group">
-            <position>0,615</position>
+            <position>0,612</position>
         </group>
     </window>
 
@@ -880,7 +880,7 @@
         </textarea>
 
         <shape name="playersettings_background" from="base_background_shape">
-            <area>305,265,655,335</area>
+            <area>305,265,655,332</area>
         </shape>
 
         <textarea name="default_text" from="base_textarea">
@@ -977,7 +977,7 @@
         </button>
         
         <group name="base_helptext_group" from="base_helptext_group">
-            <position>0,615</position>
+            <position>0,612</position>
         </group>
     </window>
 
@@ -1001,7 +1001,7 @@
         </textarea>
 
         <shape name="metadatasettings_background" from="base_background_shape">
-            <area>350,305,580,295</area>
+            <area>350,305,580,292</area>
         </shape>
 
         <textarea name="autometacheck_text" from="base_textarea">
@@ -1056,7 +1056,7 @@
         </button>
         
         <group name="base_helptext_group" from="base_helptext_group">
-            <position>0,615</position>
+            <position>0,612</position>
         </group>
     </window>
 
