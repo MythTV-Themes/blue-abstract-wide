@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+
+<mythuitheme>
+
+    <!--<window name="streamview"  include="base_music.xml">-->
+
+    
+    
+    
+    
+    
+    <!-- DONE -->
+    <!-- Shows the available stream information that can be edited -->
+    <window name="editstreammetadata">
+
+        <imagetype name="background" from="base_background"/>
+
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Add/Edit Music Stream</value>
+            </textarea>
+        </textarea>
+
+        <shape name="editstreammetadata_background" from="base_background_shape">
+            <area>310,195,635,331</area>
+        </shape>
+
+        <textarea name="stationlabel" from="base_textarea">
+            <area>325,210,175,36</area>
+            <align>right,vcenter</align>
+            <value>Station:</value>
+        </textarea>
+        <textedit name="stationedit" from="base_textedit">
+            <position>510,210</position>
+        </textedit>
+        <button name="searchbutton" from="base_searchbutton">
+            <position>895,210</position>
+        </button>
+        
+        <textarea name="channellabel" from="stationlabel">
+            <position>325,250</position>
+            <value>Channel:</value>
+        </textarea>
+        <textedit name="channeledit" from="stationedit">
+            <position>510,250</position>
+        </textedit>
+
+        <textarea name="urllabel" from="stationlabel">
+            <position>325,290</position>
+            <value>URL:</value>
+        </textarea>
+        <textedit name="urledit" from="stationedit">
+            <position>510,290</position>
+        </textedit>
+
+        <textarea name="logourllabel" from="stationlabel">
+            <position>325,330</position>
+            <value>Logo URL:</value>
+        </textarea>
+        <textedit name="logourledit" from="urledit">
+            <position>510,330</position>
+        </textedit>
+
+        <textarea name="genrelabel" from="stationlabel">
+            <position>325,370</position>
+            <value>Genres:</value>
+        </textarea>
+        <textedit name="genreedit" from="urledit">
+            <position>510,370</position>
+        </textedit>
+
+        <textarea name="formatlabel" from="stationlabel">
+            <position>325,410</position>
+            <value>Metadata Format:</value>
+        </textarea>
+        <textedit name="formatedit" from="stationedit">
+            <position>510,410</position>
+        </textedit>
+
+        <shape name="button_separator" from="base_background_shape">
+            <area>311,460,638,1</area>
+        </shape>
+        
+        <button name="savebutton" from="base_button">
+            <position>475,475</position>
+            <value>Save</value>
+        </button>
+        <button name="cancelbutton" from="base_button">
+            <position>640,475</position>
+            <value>Cancel</value>
+        </button>
+        
+    </window>
+
+    
+    
+    
+    
+    
+    <!-- DONE -->
+    <!-- TODO add a better icecase placeholder -->
+    <!-- TODO check whats with the selectedstate -->
+    <!-- Shows all available streams that can be selected -->
+    <window name="searchstream">
+
+        <imagetype name="background" from="base_background"/>
+
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Search for Music Stream</value>
+            </textarea>
+        </textarea>
+
+        <shape name="searchstream_background" from="base_background_shape">
+            <area>150,80,970,590</area>
+        </shape>
+
+        <textarea name="stationlabel" from="base_textarea">
+            <area>165,95,175,36</area>
+            <align>right,vcenter</align>
+            <value>Station:</value>
+        </textarea>
+        <buttonlist name="stationlist" from="base_selector_wide">
+            <position>350,95</position>
+        </buttonlist>
+
+        <textarea name="genrelabel" from="stationlabel">
+            <position>165,135</position>
+            <value>Genre:</value>
+        </textarea>
+        <buttonlist name="genrelist" from="base_selector_wide">
+            <position>350,135</position>
+        </buttonlist>
+
+        <textarea name="channellabel" from="stationlabel">
+            <position>165,175</position>
+            <value>Channel:</value>
+        </textarea>
+        <textedit name="channeledit" from="base_textedit">
+            <position>350,175</position>
+        </textedit>
+
+        <textarea name="matcheslable" from="base_textarea">
+            <area>750,175,235,36</area>
+            <value>Matches:</value>
+            <align>right,vcenter</align>
+        </textarea>
+        <textarea name="matchestext" from="stationlabel">
+            <position>1000,175</position>
+            <align>left,vcenter</align>
+        </textarea>
+
+        <shape name="result_separator" from="base_background_shape">
+            <area>151,225,968,1</area>
+        </shape>
+        
+        <buttonlist name="streamlist" from="base_buttonlist">
+            <area>165,240,940,418</area>
+            <buttonarea>0,0,100%,100%</buttonarea>
+            <spacing>1</spacing>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <imagetype name="buttonbackground" from="base_image_active">
+                        <filename>images/widgets/widget_inactive.png</filename>
+                        <area>0,0,940,36</area>
+                    </imagetype>
+                    
+                    <imagetype name="buttonimage">
+                        <area>7,4,28,28</area>                        
+                        <filename />
+                    </imagetype>
+                    
+                    <shape name="buttonimage_background" from="base_background_shape">
+                        <area>6,3,30,30</area>
+                        <fill color="#000000" alpha="0" />
+                        <cornerradius>0</cornerradius>
+                    </shape>
+
+                    <!--<statetype name="selectedstate">
+                        <position>900,0</position>  
+                        <state name="off" />
+                        <state name="on">
+                            <imagetype name="statusimage">
+                                <area>3,3,30,30</area>
+                                <filename>playlist_yes.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>-->
+
+                    <textarea name="station" from="base_textarea">
+                        <area>50,0,400,36</area>
+                        <scroll direction="horizontal" />
+                        <template>%STATION% - %Channel%</template>
+                    </textarea>
+
+                    <textarea name="genre" from="base_textarea">
+                        <area>460,0,465,36</area>
+                        <scroll direction="horizontal" />
+                    </textarea>
+                </state>
+                <state name="inactive" from="active"/>
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,940,36</area>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,940,36</area>
+                    </imagetype>
+                </state>
+            </statetype>
+            
+            <statetype name="upscrollarrow">
+                <position>100%-30,100%-10</position>
+            </statetype>
+
+            <statetype name="downscrollarrow">
+                <position>100%-55,100%-10</position>
+            </statetype>
+        </buttonlist>
+    </window>
+
+</mythuitheme>
