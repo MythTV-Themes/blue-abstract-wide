@@ -16,7 +16,7 @@
         </textarea>
 
         <shape name="generalsettings_background" from="base_background_shape">
-            <area>195,85,890,515</area>
+            <area>195,85,890,512</area>
         </shape>
 
         <textarea name="musiclocation_label" from="base_textarea">
@@ -57,7 +57,7 @@
         </checkbox>
 
         <shape name="settings_separator" from="base_background_shape">
-            <area>241,280,798,1</area>
+            <area>196,280,888,1</area>
         </shape>
 
         <textarea name="nonid3filenameformat_label" from="musiclocation_label">
@@ -118,7 +118,7 @@
         </button>
         
         <group name="base_helptext_group" from="base_helptext_group">
-            <position>0,615</position>
+            <position>0,613</position>
         </group>
     </window>
 
@@ -139,7 +139,7 @@
         </textarea>
 
         <shape name="playersettings_background" from="base_background_shape">
-            <area>285,345,710,255</area>
+            <area>285,345,710,252</area>
         </shape>
 
         <textarea name="resumemode_label" from="base_textarea">
@@ -189,7 +189,7 @@
         </button>
         
         <group name="base_helptext_group" from="base_helptext_group">
-            <position>0,615</position>
+            <position>0,613</position>
         </group>
     </window>
 
@@ -210,7 +210,7 @@
         </textarea>
 
         <shape name="ratingsettings_background" from="base_background_shape">
-            <area>350,345,580,255</area>
+            <area>350,345,580,252</area>
         </shape>
 
         <textarea name="ratingweight_label" from="base_textarea">
@@ -260,7 +260,7 @@
         </button>
         
         <group name="base_helptext_group" from="base_helptext_group">
-            <position>0,615</position>
+            <position>0,613</position>
         </group>
     </window>
 
@@ -281,7 +281,7 @@
         </textarea>
 
         <shape name="importsettings_background" from="base_background_shape">
-            <area>240,160,800,440</area>
+            <area>240,160,800,437</area>
         </shape>
         
         <textarea name="paranoialevel_label" from="base_textarea">
@@ -368,7 +368,7 @@
         </button>
         
         <group name="base_helptext_group" from="base_helptext_group">
-            <position>0,615</position>
+            <position>0,613</position>
         </group>
     </window>
 
@@ -389,7 +389,7 @@
         </textarea>
         
         <shape name="visualizationsettings_background" from="base_background_shape">
-            <area>350,345,580,255</area>
+            <area>350,345,580,252</area>
         </shape>
 
         <textarea name="cycleonsongchange_label" from="base_textarea">
@@ -439,7 +439,7 @@
         </button>
         
         <group name="base_helptext_group" from="base_helptext_group">
-            <position>0,615</position>
+            <position>0,613</position>
         </group>
     </window>
 
