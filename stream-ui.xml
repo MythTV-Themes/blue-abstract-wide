@@ -3,8 +3,324 @@
 
 <mythuitheme>
 
-    <!--<window name="streamview"  include="base_music.xml">-->
+    <!-- DONE -->
+    <!-- TODO Fix the visualizer border stuff, mask isnt working for the video widget -->
+    <!-- Shows the current internet streams and more detailed information about
+        the current song. Also shows the coverart and the visualizer -->
+    <window name="streamview"  include="base_music.xml">
 
+        <imagetype name="background" from="base_background"/>
+
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Internet Stream View</value>
+            </textarea>
+        </textarea>
+
+        <textarea name="nostreams" from="base_textarea">
+            <area>20,505,1240,30</area>
+            <align>allcenter</align>
+            <value>Press MENU to add some radio streams to play.</value>
+        </textarea>
+
+        <shape name="streamlist_background" from="base_background_shape">
+            <area>20,50,330,480</area>
+        </shape>
+        <buttonlist name="streamlist" from="base_buttonlist">
+            <area>35,68,300,450</area>
+            <spacing>1</spacing>
+            <statetype name="buttonitem">
+                <state name="active">
+                
+                    <imagetype name="buttonbackground" from="base_image_active">
+                        <filename>images/widgets/widget_inactive.png</filename>
+                        <area>0,0,300,54</area>
+                    </imagetype>
+
+                    <imagetype name="buttonimage">
+                        <area>7,6,42,42</area>                        
+                        <filename />
+                    </imagetype>
+                    <shape name="buttonimage_background" from="base_background_shape">
+                        <area>6,5,44,44</area>
+                        <fill color="#000000" alpha="0" />
+                        <cornerradius>0</cornerradius>
+                    </shape>
+
+                    <textarea name="station" from="base_textarea">
+                        <area>65,3,190,30</area>
+                        <scroll direction="horizontal" />
+                    </textarea>
+                    <textarea name="channel" from="base_textarea">
+                        <area>65,28,190,20</area>
+                        <font>text_small</font>
+                        <scroll direction="horizontal" />
+                    </textarea>
+                    <!--<textarea name="genre" from="base_textarea">
+                        <area>780,3,365,30</area>
+                        <scroll direction="horizontal" />
+                    </textarea>-->
+                    <statetype name="playstate" from="base_music_playstate">
+                        <area>270,3,30,30</area>
+                    </statetype>
+                </state>
+                <state name="inactive" from="active"/>
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,300,54</area>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,300,54</area>
+                    </imagetype>
+                </state>
+            </statetype>
+            
+            <statetype name="upscrollarrow">
+                <position>100%-75,100%-10</position>
+            </statetype>
+            <statetype name="downscrollarrow">
+                <position>100%-100,100%-10</position>
+            </statetype>
+        </buttonlist>
+        
+        <shape name="playedtrackslist_background" from="base_background_shape">
+            <area>365,50,895,480</area>
+        </shape>
+        
+        <buttonlist name="playedtrackslist" from="base_buttonlist">
+            <area>380,65,865,453</area>
+            <spacing>1</spacing>
+            <statetype name="buttonitem">
+                <state name="active">
+                
+                    <imagetype name="buttonbackground" from="base_image_active">
+                        <filename>images/widgets/widget_inactive.png</filename>
+                        <area>0,0,865,36</area>
+                    </imagetype>
+
+                    <imagetype name="buttonimage">
+                        <area>7,4,28,28</area>                        
+                        <filename />
+                    </imagetype>
+                    <shape name="buttonimage_background" from="base_background_shape">
+                        <area>6,3,30,30</area>
+                        <fill color="#000000" alpha="0" />
+                        <cornerradius>0</cornerradius>
+                    </shape>
+
+                    <textarea name="tracknum" from="base_textarea">
+                        <area>45,3,50,30</area>
+                        <align>right,vcenter</align>
+                        <template>%1 -</template>
+                    </textarea>
+                    <textarea name="title" from="base_textarea">
+                        <area>105,3,300,30</area>
+                        <scroll direction="horizontal" />
+                    </textarea>
+                    <textarea name="artist" from="base_textarea">
+                        <area>420,3,320,30</area>
+                        <scroll direction="horizontal" />
+                    </textarea>
+                    <textarea name="length" from="base_textarea">
+                        <area>760,3,95,30</area>
+                        <align>right,vcenter</align>
+                        <scroll direction="horizontal" />
+                    </textarea>
+                </state>
+                <state name="inactive" from="active"/>
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,865,36</area>
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
+                        <filename>images/widgets/widget_active.png</filename>
+                        <area>0,0,865,36</area>
+                    </imagetype>
+                </state>
+            </statetype>
+            
+            <statetype name="upscrollarrow">
+                <position>100%-30,100%-10</position>
+            </statetype>
+
+            <statetype name="downscrollarrow">
+                <position>100%-55,100%-10</position>
+            </statetype>
+        </buttonlist>
+
+        
+        
+        <buttonlist name="playedstrackslist" from="base_buttonlist">
+            <area>25,300,1225,150</area>
+            <buttonarea>0,0,100%,100%</buttonarea>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,100%,46</area>
+
+                    <imagetype name="buttonimage">
+                        <area>5,5,36,36</area>
+                        <filename>mm_icecast.png</filename>
+                    </imagetype>
+
+                    <textarea name="tracknum" from="buttontext">
+                        <area>50,0,50,46</area>
+                        <align>right,vcenter</align>
+                        <template>%1 -</template>
+                    </textarea>
+
+                    <textarea name="title" from="buttontext">
+                        <area>110,0,450,46</area>
+                        <align>left,vcenter</align>
+                        <font>basesmall</font>
+                    </textarea>
+
+                    <textarea name="artist" from="buttontext">
+                        <area>570,0,480,46</area>
+                        <font>basesmall</font>
+                        <align>left,vcenter</align>
+                    </textarea>
+
+                    <textarea name="length" from="artist">
+                        <area>1060,0,120,46</area>
+                        <align>right,vcenter</align>
+                        <font>basesmall</font>
+                    </textarea>
+
+                </state>
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonimage">
+                        <area>5,5,36,36</area>
+                        <filename>mm_icecast.png</filename>
+                    </imagetype>
+                    <shape name="selectbar">
+                        <area>0,0,100%,46</area>
+                    </shape>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <shape name="selectbar">
+                        <area>0,0,100%,46</area>
+                    </shape>
+                </state>
+            </statetype>
+            <statetype name="upscrollarrow">
+                <position>1140,135</position>
+            </statetype>
+            <statetype name="downscrollarrow">
+                <position>1180,135</position>
+            </statetype>
+        </buttonlist>
+
+
+
+        
+        <!-- this is the background for the information at the bottom like
+            shows coverart, track details, ratings and the visualizer -->
+        <shape name="trackdetails_background" from="base_background_shape">
+            <area>20,545,1240,165</area>
+        </shape>
+
+        <!-- this is the actual cover image that will be shown if its
+            available, otherwise only the background image is visible -->
+        <imagetype name="coverart_background_image">
+            <area>36,561,133,133</area>
+            <mask>images/shared/music/album_item_nfmask.png</mask>
+            <filename>images/shared/music/default_album.png</filename>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="coverart">
+            <area>36,561,133,133</area>
+            <mask>images/shared/music/album_item_nfmask.png</mask>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="coverart_border">
+            <area>36,561,133,133</area>
+            <filename>images/shared/music/album_nfborder.png</filename>
+        </imagetype>
+
+        <!-- the vertical separator -->
+        <shape name="cover_separator" from="base_background_shape">
+            <area>185,546,1,163</area>
+        </shape>
+        
+        <imagetype name="ratingstate_background" from="base_rating_background">
+            <position>980,565</position>
+        </imagetype>
+        <statetype name="ratingstate" from="base_rating">
+            <position>980,565</position>
+        </statetype>
+        
+        <textarea name="title" from="base_textarea">
+            <area>200,560,770,30</area>
+            <font>title</font>
+            <scroll direction="horizontal" />
+        </textarea>
+        <textarea name="artist" from="base_textarea">
+            <area>200,595,870,30</area>
+            <scroll direction="horizontal" />
+        </textarea>
+        <textarea name="channel" from="base_textarea">
+            <area>200,630,600,30</area>
+            <font>text_grey</font>
+            <scroll direction="horizontal" />
+            <template>%STATION% - %CHANNEL%</template>
+        </textarea>
+
+        <progressbar name="bufferprogress" from="base_progressbar">
+            <position>200,670</position>
+        </progressbar>
+        <textarea name="bufferstatus" from="base_textarea">
+            <area>715,665,140,30</area>
+        </textarea>
+        
+        <textarea name="lastplayed" from="base_textarea">
+            <area>820,630,250,30</area>
+            <align>right,vcenter</align>
+            <template>Last played: %1</template>
+        </textarea>
+        <textarea name="playcount" from="base_textarea">
+            <area>860,665,210,30</area>
+            <align>right,vcenter</align>
+            <template>Played %1 times</template>
+        </textarea>
+
+        <!-- the vertical separator -->
+        <shape name="visualizer_separator" from="base_background_shape">
+            <area>1092,546,1,163</area>
+        </shape>
+
+        <!-- the visualizer and the border around it -->
+        <imagetype name="visualizer_background_image">
+            <area>1110,561,133,133</area>
+            <mask>images/shared/music/album_item_nfmask.png</mask>
+            <filename>images/shared/music/default_visualization.png</filename>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <video name="visualizer">
+            <area>1110,561,133,133</area>
+        </video>
+        <imagetype name="visualizer_border">
+            <area>1110,561,133,133</area>
+            <filename>images/shared/music/album_nfborder.png</filename>
+        </imagetype>
+
+
+        <!-- This button is not visible and only included to take away 
+            the focus from the playlist. If this button has focus 
+            then the fast forward and backward action can be used -->
+        <button name="musiccontrols" from="base_button">
+            <position>580,725</position>
+        </button>
+    
+    </window>
+    
     
     
     
