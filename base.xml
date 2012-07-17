@@ -263,20 +263,23 @@
                 
                 <!-- settings when the button has also a checkbox -->
                 <statetype name="buttoncheck">
-                    <position>100%-37,3</position>
+                    <position>100%-37,0</position>
                     <state type="off">
                         <imagetype name="checkoff">
                             <filename>images/widgets/checkbox_off.png</filename>
+                            <area>5,5,26,26</area>
                         </imagetype>
                     </state>
                     <state type="half">
                     <imagetype name="checkhalf">
                             <filename>images/widgets/checkbox_half.png</filename>
+                            <area>5,5,26,26</area>
                         </imagetype>
                     </state>
                     <state type="full">
                         <imagetype name="checkfull">
                             <filename>images/widgets/checkbox_full.png</filename>
+                            <area>5,5,26,26</area>
                         </imagetype>
                     </state>
                 </statetype>
