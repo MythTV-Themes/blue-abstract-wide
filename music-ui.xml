@@ -944,7 +944,6 @@
 
     
     <!-- DONE -->
-    <!-- TODO - increase and decrease arrows -->
     <!-- The user can edit the available music metadata 
          tags and select album, genre and artist images -->
     <window name="editmetadata">
@@ -2610,7 +2609,6 @@
     
     
     <!-- DONE -->
-    <!-- TODO - add icons instead of text for the 6 buttons -->
     <!-- popup to edit the smartplaylist order by clause-->
     <window name="orderbydialog">
 
@@ -2701,27 +2699,21 @@
 
         <button name="addbutton" from="base_add_button">
             <position>495,485</position>
-<!--             <value>Add</value> -->
         </button>
         <button name="deletebutton" from="base_delete_button">
             <position>545,485</position>
-<!--             <value>Delete</value> -->
         </button>
         <button name="moveupbutton" from="base_move_up_button">
             <position>610,485</position>
-<!--             <value>Move Up</value> -->
         </button>
         <button name="movedownbutton" from="base_move_down_button">
             <position>660,485</position>
-<!--             <value>Move Down</value> -->
         </button>
         <button name="ascendingbutton" from="base_sort_asc_button">
             <position>725,485</position>
-<!--             <value>Ascending</value> -->
         </button>
         <button name="descendingbutton" from="base_sort_desc_button">
             <position>775,485</position>
-<!--             <value>Descending</value> -->
         </button>
 
          <shape name="button_separator" from="base_background_shape">

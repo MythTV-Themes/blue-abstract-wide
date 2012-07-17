@@ -3,7 +3,6 @@
 <mythuitheme>
 
     <!-- DONE -->
-    <!-- TODO - placeholder if no preview available -->
     <!-- shows a list of available recording groups and its recordings
         together with some detail information about the recording -->
     <window name="watchrecordings" include="base_recording.xml">
@@ -185,7 +184,6 @@
     
 
     <!-- DONE -->
-    <!-- TODO - placeholder if no preview available -->
     <!-- shows a list of available recording groups and its recordings
         together with some detail information about the recording -->
     <window name="deleterecordings" include="base_recording.xml">
@@ -717,10 +715,10 @@
         </shape>
 
         <!-- the title of the window -->
-		<imagetype name="message_background_overlay" from="base_popup_background">
-		    <area>365,115,580,90</area>
+        <imagetype name="message_background_overlay" from="base_popup_background">
+            <area>365,115,580,90</area>
         </imagetype>
-		<textarea name="messagearea" from="base_textarea">
+        <textarea name="messagearea" from="base_textarea">
             <area>370,115,550,90</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
