@@ -467,21 +467,31 @@
                         <area>0,0,1210,36</area>
                     </imagetype>
 
+                    <imagetype name="buttonimage">
+                        <area>7,4,28,28</area>                        
+                        <filename />
+                    </imagetype>
+                    <shape name="buttonimage_background" from="base_background_shape">
+                        <area>6,3,30,30</area>
+                        <fill color="#000000" alpha="0" />
+                        <cornerradius>0</cornerradius>
+                    </shape>
+                    
                     <textarea name="title" from="base_textarea">
                         <!--<area>8,3,742,30</area>-->
-                        <area>8,3,320,30</area>
+                        <area>50,3,290,30</area>
                         <scroll direction="horizontal" />
                         <template>%TITLE%</template>
                         <!--<template>%TITLE% by %ARTIST% on %ALBUM%</template>-->
                     </textarea>
                     <textarea name="album" from="base_textarea">
-                        <area>335,3,250,30</area>
+                        <area>350,3,240,30</area>
                         <align>right,vcenter</align>
                         <scroll direction="horizontal" />
                         <template>%ALBUM%</template>
                     </textarea>
                     <textarea name="artist" from="base_textarea">
-                        <area>590,3,240,30</area>
+                        <area>600,3,230,30</area>
                         <align>right,vcenter</align>
                         <scroll direction="horizontal" />
                         <template>%ARTIST%</template>
