@@ -25,7 +25,7 @@
         </textarea>
         
         <shape name="settings_background" from="base_background_shape">
-            <area>340,250,610,350</area>
+            <area>340,250,610,347</area>
         </shape>
 
         <!-- list with the search phrases -->
@@ -79,10 +79,10 @@
         </button>
         
         <shape name="helptext_background_bottom" from="base_background_shape">
-            <area>-5,615,1290,90</area>
+            <area>-15,612,1310,90</area>
         </shape>
         <textarea name="label-text" from="base_textarea">
-            <area>120,615,1040,90</area>
+            <area>120,612,1040,90</area>
             <value>Search Term</value>
             <scroll direction="vertical"/>
             <align>allcenter</align>
@@ -229,7 +229,7 @@
             <area>91,557,1103,1</area>
         </shape>
         <textarea name="description" from="base_textarea">
-            <area>105,567,1050,63</area>
+            <area>105,568,1050,63</area>
             <multiline>yes</multiline>
             <scroll direction="vertical" />
             <align>left,bottom</align>

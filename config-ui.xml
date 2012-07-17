@@ -510,7 +510,7 @@
         </textarea>
 
         <shape name="grabbersettings_background" from="base_background_shape">
-            <area>185,345,900,255</area>
+            <area>185,345,900,252</area>
         </shape>
         
         <textarea name="moviegrabber_text" from="base_textarea">
@@ -558,7 +558,7 @@
         </button>
         
         <group name="base_helptext_group" from="base_helptext_group">
-            <position>0,615</position>
+            <position>0,612</position>
         </group>
     </window>
 
@@ -581,7 +581,7 @@
         </textarea>
 
         <shape name="generalwizard_background" from="base_background_shape">
-            <area>285,400,710,200</area>
+            <area>285,400,710,197</area>
         </shape>
  
         <textarea name="profiletext_label" from="base_textarea">
@@ -625,7 +625,7 @@
         </button>
         
         <group name="base_helptext_group" from="base_helptext_group">
-            <position>0,615</position>
+            <position>0,612</position>
         </group>
     </window>
 
@@ -647,7 +647,7 @@
         </textarea>
 
         <shape name="audiowizard_background" from="base_background_shape">
-            <area>285,135,705,465</area>
+            <area>285,135,705,462</area>
         </shape>
 
         <textarea name="auddev_text" from="base_textarea">
@@ -732,7 +732,7 @@
         </button>
         
         <group name="base_helptext_group" from="base_helptext_group">
-            <position>0,615</position>
+            <position>0,612</position>
         </group>
     </window>
 
@@ -755,7 +755,7 @@
         </textarea>
 
         <shape name="videowizard_background" from="base_background_shape">
-            <area>285,385,705,215</area>
+            <area>285,385,705,212</area>
         </shape>
 
         <textarea name="prof_text" from="base_textarea">
@@ -790,7 +790,7 @@
         </button>
         
         <group name="base_helptext_group" from="base_helptext_group">
-            <position>0,615</position>
+            <position>0,612</position>
         </group>
     </window>
 

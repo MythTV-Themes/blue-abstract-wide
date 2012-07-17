@@ -305,7 +305,7 @@
         </button>
         
         <shape name="helptext_background_bottom" from="base_background_shape">
-            <area>-5,612,1290,90</area>
+            <area>-15,612,1310,90</area>
         </shape>
         <textarea name="description" from="base_textarea">
             <area>120,612,1040,90</area>

@@ -66,7 +66,7 @@
         </textarea>
 
         <shape name="controls_background" from="base_background_shape">
-            <area>265,85,740,515</area>
+            <area>265,85,740,512</area>
         </shape>
         
         <textarea name="leftdesc" from="base_textarea">
@@ -108,10 +108,10 @@
         </button>
 
         <shape name="description_background_bottom" from="base_background_shape">
-            <area>-5,615,1290,90</area>
+            <area>-15,612,1310,90</area>
         </shape>
         <textarea name="description" from="base_textarea">
-            <area>120,615,1040,90</area>
+            <area>120,612,1040,90</area>
             <scroll direction="vertical"/>
             <align>allcenter</align>
             <multiline>yes</multiline>
