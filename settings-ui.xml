@@ -33,26 +33,19 @@
             <area>355,265,580,198</area>
             <statetype name="buttonitem">
                 <state name="active">
-                    <imagetype name="buttonbackground" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,580,36</area>
-                    </imagetype>
+                    <area>0,0,580,36</area>
                     <textarea name="buttontext" from="base_textarea">
                         <area>8,0,100%-16,36</area>
                     </textarea>
                 </state>
                 <state name="inactive" from="active"/>
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,580,36</area>
-                    </imagetype>
+                    <area>0,0,580,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                 </state>
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,580,36</area>
-                    </imagetype>
+                    <area>0,0,580,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
             </statetype>
         </buttonlist>
@@ -114,16 +107,13 @@
             <area>90,110,1105,350</area>
         </shape>
 
-        <buttonlist name="themes" from="base_buttonlist_wide">
+        <buttonlist name="themes" from="base_buttonlist">
             <area>105,125,480,317</area>
             <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <triggerevent context="Global" action="MENU">RIGHT</triggerevent>
             <statetype name="buttonitem">
                 <state name="active">
-                    <imagetype name="buttonbackground" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,480,36</area>
-                    </imagetype>
+                    <area>0,0,480,36</area>
                     <textarea name="buttontext" from="base_textarea">
                         <area>8,0,390,36</area>
                         <align>left,vcenter</align>
@@ -173,16 +163,12 @@
                 </state>
                 <state name="inactive" from="active"/>
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,480,36</area>
-                    </imagetype>
+                    <area>0,0,480,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                 </state>
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,480,36</area>
-                    </imagetype>
+                    <area>0,0,480,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
             </statetype>
         </buttonlist>

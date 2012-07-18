@@ -31,10 +31,7 @@
             <area>500,225,650,355</area>
             <statetype name="buttonitem">
                 <state name="active">
-                    <imagetype name="buttonbackground" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,650,36</area>
-                    </imagetype>
+                    <area>0,0,650,36</area>
                     <textarea name="buttontext" from="base_textarea">
                         <area>8,0,100%-16,36</area>
                         <font state="disabled">text_inactive</font>
@@ -46,16 +43,12 @@
                 </state>
                 <state name="inactive" from="active" />
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,650,36</area>
-                    </imagetype>
+                    <area>0,0,650,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                 </state>
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,650,36</area>
-                    </imagetype>
+                    <area>0,0,650,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
             </statetype>
         </buttonlist>
