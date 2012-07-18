@@ -225,6 +225,20 @@
         </buttonlist>
         <buttonlist name="sites" from="base_buttonlist">
             <area>570,125,480,512</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,480,36</area>
+                </state>
+                <state name="inactive">
+                    <area>0,0,480,36</area>
+                </state>
+                <state name="selectedactive">
+                    <area>0,0,480,36</area>
+                </state>
+                <state name="selectedinactive">
+                    <area>0,0,480,36</area>
+                </state>
+            </statetype>
         </buttonlist>
     </window>
 
