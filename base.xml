@@ -216,6 +216,36 @@
     </imagetype>
     
         
+    
+    <!-- the definitions of the buttons and buttonlists in case the 
+         background images shall be discarded and shapes will be used. -->
+    <shape name="base_button_shape_active">
+        <area>0,0,100%,100%</area>
+        <type>roundbox</type>
+        <fill color="#535353" alpha="140" />
+        <line color="#535353" alpha="110" width="1" />
+        <cornerradius>8</cornerradius>
+    </shape>
+
+    <shape name="base_button_shape_selectedactive" from="base_button_shape_active">
+        <fill color="#3697ef" alpha="240" />
+        <line color="#3697ef" alpha="210" width="1" />
+    </shape>
+    
+    <shape name="base_button_shape_selectedinactive" from="base_button_shape_active">
+        <fill color="#1d68e0" alpha="110" />
+        <line color="#1d68e0" alpha="80" width="1" />
+    </shape>
+
+    <!-- these are the same as above but only to keep these names the 
+         same as the states in which they are used. These are pretty 
+         much only for buttons, checkboxes and similar widgets -->
+    <shape name="base_button_shape_inactive" from="base_button_shape_selectedinactive" />
+    <shape name="base_button_shape_selected" from="base_button_shape_selectedactive" />
+    <shape name="base_button_shape_pushed" from="base_button_shape_selectedinactive" />
+    
+    
+    
     <!-- ===================================================== -->
     <!-- Below are the definitions of base widgets, their derivatives 
          and other widgets that are used troughout the theme -->
