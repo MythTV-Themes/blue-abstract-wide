@@ -350,52 +350,50 @@
         </textarea>
 
         <shape name="searchstream_background" from="base_background_shape">
-            <area>150,80,970,590</area>
+            <area>150,90,970,570</area>
         </shape>
 
         <textarea name="stationlabel" from="base_textarea">
-            <area>165,95,175,36</area>
+            <area>165,105,175,36</area>
             <align>right,vcenter</align>
             <value>Station:</value>
         </textarea>
         <buttonlist name="stationlist" from="base_selector_wide">
-            <position>350,95</position>
+            <position>350,105</position>
         </buttonlist>
 
         <textarea name="genrelabel" from="stationlabel">
-            <position>165,135</position>
+            <position>165,145</position>
             <value>Genre:</value>
         </textarea>
         <buttonlist name="genrelist" from="base_selector_wide">
-            <position>350,135</position>
+            <position>350,145</position>
         </buttonlist>
 
         <textarea name="channellabel" from="stationlabel">
-            <position>165,175</position>
+            <position>165,185</position>
             <value>Channel:</value>
         </textarea>
         <textedit name="channeledit" from="base_textedit">
-            <position>350,175</position>
+            <position>350,185</position>
         </textedit>
 
         <textarea name="matcheslable" from="base_textarea">
-            <area>750,175,235,36</area>
+            <area>750,185,235,36</area>
             <value>Matches:</value>
             <align>right,vcenter</align>
         </textarea>
         <textarea name="matchestext" from="stationlabel">
-            <position>1000,175</position>
+            <position>1000,185</position>
             <align>left,vcenter</align>
         </textarea>
 
         <shape name="result_separator" from="base_background_shape">
-            <area>151,225,968,1</area>
+            <area>151,235,968,1</area>
         </shape>
         
         <buttonlist name="streamlist" from="base_buttonlist">
-            <area>165,240,940,418</area>
-            <buttonarea>0,0,100%,100%</buttonarea>
-            <spacing>1</spacing>
+            <area>165,250,940,398</area>
             <statetype name="buttonitem">
                 <state name="active">
                     <area>0,0,940,36</area>
