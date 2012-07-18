@@ -140,19 +140,10 @@
         <fill color="#000000" alpha="210" />
     </shape>
 
-
-    <!-- Horizontal line that acts as a visula separator on many screens -->
-    <shape name="base_separator_shape">
-        <area>0,0,100,1</area>
-        <type>box</type>
-        <line color="#AAAAAA" alpha="170" width="1" />
-    </shape>
-
-
     <!-- darkens the entire background so that popups are better readable -->
     <shape name="base_darken_background">
         <!--<area>0,0,1280,720</area>-->
-		<area>-100,-100,1480,920</area>
+        <area>-100,-100,1480,920</area>
         <type>box</type>
         <fill color="#000000" alpha="110" />
     </shape>
@@ -1605,7 +1596,7 @@
         </button>
 
         <!-- separates the result text from the buttons -->
-        <shape name="filename_separator" from="base_separator_shape">
+        <shape name="filename_separator" from="base_background_shape">
             <area>100,200,1080,1</area>
         </shape>
 
@@ -1856,7 +1847,7 @@
         </textarea>
 
         <!-- separates the result text from the buttons -->
-        <shape name="button_separator" from="base_separator_shape">
+        <shape name="button_separator" from="base_background_shape">
             <area>100,600,1080,1</area>
         </shape>
 
@@ -1918,7 +1909,7 @@
             <position>585,340</position>
         </buttonlist>
 
-        <shape name="button_separator" from="base_separator_shape">
+        <shape name="button_separator" from="base_background_shape">
             <area>341,390,588,1</area>
         </shape>
 
