@@ -31,14 +31,15 @@
             <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <statetype name="buttonitem">
                 <state name="active">
-                    <imagetype name="buttonbackground">
-                        <area>2,7,56,56</area>
-                        <filename>images/shared/schedule/channel_fborder.png</filename>
-                    </imagetype>
                     <imagetype name="channelicon">
-                        <area>4,9,51,51</area>
+                        <area>5,9,51,51</area>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
+                    <shape name="channelicon_background" from="base_background_shape">
+                        <area>4,8,53,53</area>
+                        <fill color="#000000" alpha="0" />
+                        <cornerradius>0</cornerradius>
+                    </shape>
                     <textarea name="buttontext" from="base_textarea">
                         <area>70,0,155,70</area>
                         <font state="favourite">text_yellow</font>
@@ -60,7 +61,7 @@
         
         <!-- this is the horizontal list of the time slots -->
         <buttonlist name="timelist">
-            <area>255,5,980,30</area>
+            <area>255,2,980,30</area>
             <layout>horizontal</layout>
             <spacing>0</spacing>
             <buttonarea>20,0,945,30</buttonarea>
