@@ -2,6 +2,9 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
+
+    <!-- DONE -->
+    <!-- TODO channel icon background -->
     <!-- Shows the available downloaded icons in 
         a lists where the user can select them -->
     <window name="iconimport">
@@ -21,12 +24,12 @@
         
         <!-- this is the background around the file browser -->
         <shape name="iconbrowser_background" from="base_background_shape">
-            <area>210,80,855,600</area>
+            <area>210,85,840,542</area>
         </shape>
-
+               
         <!-- the search text and the input field -->
         <textarea name="manualsearch_label" from="base_textarea">
-            <area>230,100,170,40</area>
+            <area>230,100,170,36</area>
             <align>right,vcenter</align>
             <cutdown>yes</cutdown>
             <value>Search terms:</value>
@@ -36,119 +39,117 @@
         </textedit>
 
         <button name="search" from="base_button">
-            <position>895,100</position>
+            <position>885,100</position>
             <value>Search</value>
         </button>
         
         <!-- the text with the search results -->
         <textarea name="status_label" from="base_textarea">
-            <area>230,150,170,40</area>
+            <area>230,140,170,36</area>
             <align>right,vcenter</align>
             <value>Result:</value>
         </textarea>
         <textarea name="status" from="base_textarea">
-            <area>410,150,630,40</area>
+            <area>410,140,630,36</area>
+        </textarea>
+        
+        <!-- separates the results from the icon list -->
+        <shape name="iconbrowser_separator" from="base_background_shape">
+            <area>211,185,838,1</area>
+        </shape>
+        
+        <textarea name="name" from="base_textarea">
+            <area>365,195,550,36</area>
+            <align>allcenter</align>
         </textarea>
 
-        <!-- separates the results from the icon list -->
-        <shape name="iconbrowser_separator" from="base_separator_shape">
-            <area>230,200,815,1</area>
-        </shape>
-
         <!-- the list of the available icons -->
-        <buttonlist name="icons" from="base_buttonlist">
-            <area>230,220,815,380</area>
+        <buttonlist name="icons">
+            <area>225,240,815,310</area>
             <layout>grid</layout>
-            <spacing>18</spacing>
-            <wrapstyle>flowing</wrapstyle>
-            <buttonarea>0,0,815,380</buttonarea>
+            <spacing>3</spacing>
+            <buttonarea>0,0,100%,100%</buttonarea>
             <statetype name="buttonitem">
                 <state name="active">
-                    <area>0,0,116,170</area>
 
-                    <!-- this is a background and the name of the icon behind its image -->
-                    <shape name="icon_background_shape" from="base_background_shape">
-                        <area>2,2,114,168</area>
-                        <line color="#000000" alpha="0" width="1" />
-                    </shape>
-                    <textarea name="buttontext">
-                        <area>6,6,104,158</area>
-                        <font>text_small</font>
-                        <align>allcenter</align>
-                        <cutdown>yes</cutdown>
-                        <multiline>yes</multiline>
-                    </textarea>
-
-                    <!-- this is the icon image that will be shown if its
-                        available, otherwise only the border is visible -->
-                    <imagetype name="icon">
-                        <area>1,1,114,168</area>
+                    <imagetype name="background_image">
+                        <area>0,0,133,100</area>
+                        <mask>images/shared/config/channel_item_nfmask.png</mask>
+                        <filename>images/shared/config/default_channel.png</filename>
                         <preserveaspect>true</preserveaspect>
-                        <shape name="icon_border_shape">
-                            <area>0,0,116,170</area>
-                            <type>roundbox</type>
-                            <line color="#AAAAAA" alpha="255" width="1" />
-                            <cornerradius>1</cornerradius>
-                        </shape>
                     </imagetype>
 
-                </state>
+                    <!-- The actual album name that is shown when no icon is available -->
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,117,100</area>
+                        <font>text_small</font>
+                        <multiline>yes</multiline>
+                        <scroll direction="vertical" />
+                        <align>allcenter</align>
+                    </textarea>
 
-                <state name="inactive" from="active" />
+                    <!-- this is the actual cover image that will be shown if its
+                        available, otherwise only the background image is visible -->
+                    <imagetype name="icon">
+                        <area>0,0,133,100</area>
+                        <mask>images/shared/config/channel_item_nfmask.png</mask>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>                      
                     
-                <state name="selectedactive" from="active">
-                    <area>-27,-39,170,248</area>
-
-                    <shape name="icon_background_shape" from="base_background_shape_dark">
-                        <area>2,2,168,246</area>
-                        <line color="#000000" alpha="0" width="1" />
-                    </shape>
-                    <textarea name="buttontext">
-                        <area>6,6,158,236</area>
-                        <font>text_small</font>
-                        <align>allcenter</align>
-                        <cutdown>yes</cutdown>
-                        <multiline>yes</multiline>
-                    </textarea>
-
-                    <imagetype name="icon">
-                        <area>1,1,168,246</area>
-                        <preserveaspect>true</preserveaspect>
-                        <shape name="icon_border_shape">
-                            <area>0,0,170,248</area>
-                            <type>roundbox</type>
-                            <line color="#AAAAAA" alpha="255" width="2" />
-                            <cornerradius>2</cornerradius>
-                        </shape>
+                    <imagetype name="background_image_border">
+                        <area>0,0,133,100</area>
+                        <filename>images/shared/config/channel_nfborder.png</filename>
                     </imagetype>
                 </state>
-                
-                <state name="selectedinactive" from="active" />
-            </statetype>
-            
-            <!-- Show the arrow image that indicates that there are
-                more menu entries above the first visible menu -->
-            <statetype name="upscrollarrow">
-                <position>795,0</position>
-            </statetype>
-            <statetype name="downscrollarrow">
-                <position>795,342</position>
-            </statetype>
 
+                <state name="inactive" from="active"/>
+
+                <state name="selectedactive">
+                    <area>-26,-19,185,138</area>
+                    
+                    <imagetype name="background_image">
+                        <area>0,0,185,138</area>
+                        <mask>images/shared/config/channel_item_fmask.png</mask>
+                        <filename>images/shared/config/default_channel.png</filename>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
+
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,169,138</area>
+                        <multiline>yes</multiline>
+                        <scroll direction="vertical" />
+                        <align>allcenter</align>
+                    </textarea>
+
+                    <!-- this is the actual cover image that will be shown if its
+                        available, otherwise only the background image is visible -->
+                    <imagetype name="icon">
+                        <area>0,0,185,138</area>
+                        <mask>images/shared/config/channel_item_fmask.png</mask>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
+                    
+                    <imagetype name="background_image_border">
+                        <area>1,1,183,136</area>
+                        <filename>images/shared/config/channel_fborder.png</filename>
+                    </imagetype>
+                </state>
+
+                <state name="selectedinactive" from="active"/>
+            </statetype>
         </buttonlist>
-
-        <!-- separates the result text from the buttons -->
-        <shape name="button_separator" from="base_separator_shape">
-            <area>230,600,815,1</area>
+                
+        <shape name="button_separator" from="base_background_shape">
+            <area>211,560,838,1</area>
         </shape>
 
-        <!-- buttons -->
         <button name="skip" from="base_button">
-            <position>585,620</position>
+            <position>565,575</position>
             <value>Cancel</value>
         </button>
-        
     </window>
+
+
     
     
     
@@ -180,26 +181,26 @@
                     <area>0,0,450,52</area>
                     
                     <imagetype name="icon">
-                        <area>6,6,40,40</area>                        
+                        <area>6,6,53,40</area>                        
                         <filename />
                     </imagetype>
                     <shape name="channelicon_background" from="base_background_shape">
-                        <area>5,5,42,42</area>
+                        <area>5,5,55,42</area>
                         <fill color="#000000" alpha="0" />
                         <cornerradius>0</cornerradius>
                     </shape>
 
                     <textarea name="channum" from="base_textarea">
-                        <area>55,2,70,30</area>
+                        <area>70,2,70,30</area>
                         <align>right,vcenter</align>
                         <template>%1 -</template>
                     </textarea>
                     <textarea name="name" from="base_textarea">
-                        <area>135,2,200,30</area>
+                        <area>150,2,185,30</area>
                         <scroll direction="horizontal" />
                     </textarea>
                     <textarea name="sourcename" from="base_textarea">
-                        <area>135,27,200,20</area>
+                        <area>150,27,185,20</area>
                         <font>text_small</font>
                         <scroll direction="horizontal" />
                     </textarea>
@@ -232,7 +233,7 @@
             <align>right,vcenter</align>
         </textarea>
         <textarea name="nochannum_label" from="base_textarea">
-            <area>610,570,520,36</area>
+            <area>610,570,360,36</area>
             <value>Hide Channels without channel number.</value>
         </textarea>
 
@@ -242,14 +243,14 @@
         <buttonlist name="source" from="base_selector">
             <position>330,570</position>
         </buttonlist>
-        <button name="delete" from="base_button">
-            <position>980,530</position>
-            <value>Delete</value>
-        </button>
         <checkbox name="nochannum" from="base_checkbox">
             <position>570,570</position>
         </checkbox>
-
+        <button name="delete" from="base_button">
+            <position>980,570</position>
+            <value>Delete</value>
+        </button>
+        
         <shape name="button_separator" from="base_background_shape">
             <area>136,620,1008,1</area>
         </shape>
