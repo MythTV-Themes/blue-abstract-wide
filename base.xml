@@ -396,16 +396,18 @@
                     <scroll direction="horizontal" />
                 </textarea>
             </state>
-            <state name="inactive" from="active"/>
-            <state name="selectedactive">
+            <state name="inactive" from="active">
+                <area>0,0,200,36</area>
+                <shape name="background" from="base_button_shape_inactive" />
+            </state>
+            <state name="selectedactive" from="active">
                 <area>0,0,200,36</area>
                 <shape name="background" from="base_button_shape_selectedactive" />
-                <textarea name="buttontext" from="base_textarea">
-                    <area>8,0,100%-16,36</area>
-                    <scroll direction="horizontal" />
-                </textarea>
             </state>
-            <state name="selectedinactive" from="active"/>
+            <state name="selectedinactive" from="active">
+                <area>0,0,200,36</area>
+                <shape name="background" from="base_button_shape_selectedinactive" />
+            </state>
         </statetype>
         
         <statetype name="downscrollarrow">
@@ -841,6 +843,8 @@
                 </textarea>
             </state>
             
+            <state name="inactive" from="active" />
+                
             <!-- available and highlighted -->
             <state name="selectedactive" from="active">
                 <area>0,0,70,36</area>
@@ -848,11 +852,7 @@
             </state>
             
             <!-- unavailable and unhighlighted -->
-            <state name="selectedinactive">
-                <area>0,0,70,36</area>
-                <shape name="background" from="base_button_shape_selectedinactive" />
-            </state>
-
+            <state name="selectedinactive" from="active" />
         </statetype>
 
         <statetype name="downscrollarrow">
@@ -895,6 +895,9 @@
             <state name="active">
                 <area>0,0,350,36</area>
             </state>
+            <state name="inactive">
+                <area>0,0,650,36</area>
+            </state>
             <state name="selectedactive">
                 <area>0,0,350,36</area>
             </state>
@@ -913,6 +916,9 @@
         <area>0,0,650,36</area>
         <statetype name="buttonitem">
             <state name="active">
+                <area>0,0,650,36</area>
+            </state>
+            <state name="inactive">
                 <area>0,0,650,36</area>
             </state>
             <state name="selectedactive">
