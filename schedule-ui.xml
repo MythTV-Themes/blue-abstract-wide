@@ -600,7 +600,7 @@
 
 
 
-
+    <!-- DONE -->
     <!-- The Custom Priority screen.
         Allows the user to create a custom priority rule -->
     <window name="custompriority">
@@ -616,74 +616,89 @@
         
         <!-- this is the background for the information at the bottom -->
         <shape name="channel_background" from="base_background_shape">
-            <area>200,170,880,406</area>
+            <area>200,195,880,352</area>
         </shape>
 
         <textarea name="ruleslabel" from="base_textarea">
-            <area>280,190,250,40</area>
+            <area>215,210,315,36</area>
             <font>text</font>
             <align>right,vcenter</align>
             <value>Existing Rules:</value>
         </textarea>
         <buttonlist name="rules" from="base_selector_wide">
-            <position>540,190</position>
+            <position>540,210</position>
         </buttonlist>
 
         <textarea name="titlelabel" from="ruleslabel">
-            <position>280,234</position>
+            <position>215,250</position>
             <value>Rule Name:</value>
         </textarea>
         <textedit name="title" from="base_textedit">
-            <position>540,234</position>
+            <position>540,250</position>
         </textedit>
 
         <textarea name="prioritylabel" from="ruleslabel">
-            <position>280,278</position>
+            <position>215,290</position>
             <value>Priority Change:</value>
         </textarea>
         <spinbox name="priority" from="base_spinbox">
-            <position>540,278</position>
+            <position>540,290</position>
         </spinbox>
 
-        <shape name="rule_separator" from="base_separator_shape">
-            <area>220,338,840,1</area>
+        <shape name="rule_separator" from="base_background_shape">
+            <area>201,340,878,1</area>
         </shape>
 
         <textarea name="clauseslabel" from="ruleslabel">
-            <area>340,348,600,40</area>
+            <area>215,350,880,36</area>
             <value>Select a clause from the list.</value>
             <align>allcenter</align>
         </textarea>
 
-        <buttonlist name="clauses" from="base_selector_very_wide">
-            <position>220,392</position>
+        <buttonlist name="clauses" from="base_selector">
+            <position>215,390</position>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,830,36</area>
+                </state>
+                <state name="inactive">
+                    <area>0,0,830,36</area>
+                </state>
+                <state name="selectedactive">
+                    <area>0,0,830,36</area>
+                </state>
+                <state name="selectedinactive">
+                    <area>0,0,830,36</area>
+                </state>
+            </statetype>
         </buttonlist>
-        <button name="add" from="base_button">
-            <position>910,392</position>
+        
+        <button name="add" from="base_button_wide">
+            <position>215,430</position>
             <value>Add Clause</value>
         </button>
         <textedit name="description" from="base_textedit">
-            <position>495,436</position>
+            <position>525,430</position>
         </textedit>
 
-        <shape name="button_separator" from="base_separator_shape">
-            <area>220,496,840,1</area>
+        <shape name="button_separator" from="base_background_shape">
+            <area>201,480,878,1</area>
         </shape>
 
         <button name="cancel" from="base_button">
-            <position>310,516</position>
+            <position>310,495</position>
             <value>Cancel</value>
         </button>
         <button name="delete" from="base_button">
-            <position>480,516</position>
+            <position>480,495</position>
             <value>Delete</value>
         </button>
         <button name="test" from="base_button">
-            <position>650,516</position>
+            <position>650,495</position>
             <value>Test</value>
         </button>
         <button name="install" from="base_button">
-            <position>820,516</position>
+            <position>820,495</position>
             <value>Install</value>
         </button>
     </window>
