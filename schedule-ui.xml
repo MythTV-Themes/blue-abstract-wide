@@ -350,6 +350,8 @@
 
 
 
+    <!-- DONE -->
+    <!-- TODO channel icon background -->
     <!-- The Channel Priority screen.
         Allows the user to set recording priorities for the available channels -->
     <window name="channelrecpriority">
@@ -365,18 +367,18 @@
         
         <!-- this is the background for the information at the bottom -->
         <shape name="channel_background" from="base_background_shape">
-            <area>210,95,860,575</area>
+            <area>215,95,850,562</area>
         </shape>
 
-        <textarea name="helptext" from="base_textarea">
+        <!--<textarea name="helptext" from="base_textarea">
             <area>45,68,1190,30</area>
             <align>allcenter</align>
             <font>text_small</font>
             <value>(1) Channel (2) Priority</value>
-        </textarea>
+        </textarea>-->
 
         <textarea name="norecordings_info">
-            <area>230,140,800,517</area>
+            <area>230,110,800,532</area>
             <font>text</font>
             <value>You Haven't Scheduled Any Programs To Be Recorded\n
                 To schedule a recording, exit this screen and
@@ -385,9 +387,8 @@
             <align>allcenter</align>
         </textarea>
 
-        <textarea name="channel_status_label">
+        <textarea name="channel_status_label" from="base_textarea">
             <area>280,105,100,20</area>
-            <align>left,vcenter</align>
             <font>text_small</font>
             <value>Status</value>
         </textarea>
@@ -408,42 +409,40 @@
             <value>Source</value>
         </textarea>
         <textarea name="priority_channum_label" from="channel_status_label">
-            <area>990,105,100,20</area>
+            <area>985,105,100,20</area>
             <value>Priority</value>
         </textarea>
 
         <buttonlist name="channels" from="base_buttonlist">
-            <area>230,130,820,532</area>
+            <area>230,130,820,510</area>
             <statetype name="buttonitem">
                 <state name="active">
                     <area>0,0,820,36</area>
-                    <shape name="channelicon_background">
-                        <area>3,3,33,33</area>
-                        <type>roundbox</type>
-                        <fill color="#000000" alpha="120" />
-                        <line color="#BBBBBB" alpha="150" width="1" />
-                        <cornerradius>2</cornerradius>
-                    </shape>
                     <imagetype name="icon">
-                        <area>4,4,31,31</area>
+                        <area>5,4,38,28</area>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
+                    <shape name="channelicon_background" from="base_background_shape">
+                        <area>4,3,40,30</area>
+                        <fill color="#000000" alpha="0" />
+                        <cornerradius>0</cornerradius>
+                    </shape>
                     <statetype name="status">
                         <position>45,0</position>
                     </statetype>
-                    <textarea name="channum" from="buttontext">
-                        <area>60,5,150,30</area>
+                    <textarea name="channum" from="base_textarea">
+                        <area>60,0,150,36</area>
                         <align>allcenter</align>
                     </textarea>
-                    <textarea name="callsign" from="buttontext">
-                        <area>190,5,250,30</area>
+                    <textarea name="callsign" from="base_textarea">
+                        <area>190,0,250,36</area>
                         <align>left,vcenter</align>
                     </textarea>
                     <textarea name="name" from="callsign">
-                        <area>390,5,300,30</area>
+                        <area>390,0,300,36</area>
                     </textarea>
                     <textarea name="sourcename" from="callsign">
-                        <area>640,5,200,30</area>
+                        <area>640,0,200,36</area>
                     </textarea>
                     <textarea name="priority" from="channum">
                         <area>770,5,30,30</area>
