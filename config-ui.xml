@@ -56,7 +56,7 @@
         </shape>
 
         <!-- the list of the available icons -->
-        <buttonlist name="icons" from="base_buttonlist_wide">
+        <buttonlist name="icons" from="base_buttonlist">
             <area>230,220,815,380</area>
             <layout>grid</layout>
             <spacing>18</spacing>
@@ -153,7 +153,8 @@
     
     
     
-    
+    <!-- DONE -->
+    <!-- TODO channel icon background -->
     <!-- Shows the available channels in a lists where
         the user can select them and download the logos, edit them,... -->
     <window name="channeloverview">
@@ -169,120 +170,102 @@
         </textarea>
 
         <shape name="channel_background" from="base_background_shape">
-            <area>395,60,490,420</area>
+            <area>400,70,480,420</area>
         </shape>
 
-        <buttonlist name="channels" from="base_buttonlist_wide">
-            <area>415,80,450,388</area>
-            <buttonarea>0,0,450,380</buttonarea>
-            <spacing>4</spacing>
+        <buttonlist name="channels" from="base_buttonlist">
+            <area>415,85,450,388</area>
             <statetype name="buttonitem">
-
                 <state name="active">
-                    <imagetype name="buttonbackground" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,450,60</area>
+                    <area>0,0,450,52</area>
+                    
+                    <imagetype name="icon">
+                        <area>6,6,40,40</area>                        
+                        <filename />
                     </imagetype>
                     <shape name="channelicon_background" from="base_background_shape">
-                        <area>3,4,87,52</area>
+                        <area>5,5,42,42</area>
+                        <fill color="#000000" alpha="0" />
+                        <cornerradius>0</cornerradius>
                     </shape>
-                    <imagetype name="icon">
-                        <area>4,5,85,50</area>
-                        <preserveaspect>true</preserveaspect>
-                    </imagetype>
+
                     <textarea name="channum" from="base_textarea">
-                        <area>100,5,50,30</area>
+                        <area>55,2,70,30</area>
                         <align>right,vcenter</align>
-                        <cutdown>yes</cutdown>
+                        <template>%1 -</template>
                     </textarea>
                     <textarea name="name" from="base_textarea">
-                        <area>170,5,260,30</area>
-                        <cutdown>yes</cutdown>
+                        <area>135,2,200,30</area>
+                        <scroll direction="horizontal" />
                     </textarea>
                     <textarea name="sourcename" from="base_textarea">
-                        <area>170,35,240,20</area>
-                        <align>left,vcenter</align>
+                        <area>135,27,200,20</area>
                         <font>text_small</font>
-                        <cutdown>yes</cutdown>
+                        <scroll direction="horizontal" />
                     </textarea>
+
                 </state>
                 <state name="inactive" from="active" />
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,450,60</area>
-                    </imagetype>
+                    <area>0,0,450,52</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                 </state>
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,450,60</area>
-                    </imagetype>
-                    <textarea name="buttontext">
-                        <font>text_inactive</font>
-                    </textarea>
+                    <area>0,0,450,52</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
-            </statetype>
-
-            <statetype name="upscrollarrow">
-                <position>395,97%</position>
-            </statetype>
-            <statetype name="downscrollarrow">
-                <position>420,97%</position>
             </statetype>
         </buttonlist>
 
-
         <shape name="channeloptions_background" from="base_background_shape">
-            <area>135,505,1010,190</area>
+            <area>135,515,1010,172</area>
         </shape>
 
         <textarea name="sort_label" from="base_textarea">
-            <area>100,520,220,40</area>
+            <area>100,530,220,36</area>
             <value>Sort Mode:</value>
             <align>right,vcenter</align>
         </textarea>
         <textarea name="source_label" from="base_textarea">
-            <area>100,570,220,40</area>
+            <area>100,570,220,36</area>
             <value>Video Source:</value>
             <align>right,vcenter</align>
         </textarea>
         <textarea name="nochannum_label" from="base_textarea">
-            <area>610,570,520,40</area>
+            <area>610,570,520,36</area>
             <value>Hide Channels without channel number.</value>
         </textarea>
 
         <buttonlist name="sorting" from="base_selector">
-            <position>330,520</position>
+            <position>330,530</position>
         </buttonlist>
         <buttonlist name="source" from="base_selector">
             <position>330,570</position>
         </buttonlist>
         <button name="delete" from="base_button">
-            <position>980,520</position>
+            <position>980,530</position>
             <value>Delete</value>
         </button>
         <checkbox name="nochannum" from="base_checkbox">
-            <position>570,575</position>
+            <position>570,570</position>
         </checkbox>
 
-        <shape name="button_separator" from="base_separator_shape">
-            <area>150,625,980,1</area>
+        <shape name="button_separator" from="base_background_shape">
+            <area>136,620,1008,1</area>
         </shape>
 
         <button name="scan" from="base_button_wide">
-            <position>150,640</position>
+            <position>150,635</position>
             <value>Channel Scan</value>
         </button>
         <button name="importicons" from="base_button_wide">
-            <position>490,640</position>
+            <position>490,635</position>
             <value>Icon Download</value>
         </button>
         <button name="edittransport" from="base_button_wide">
-            <position>830,640</position>
+            <position>830,635</position>
             <value>Edit Transports</value>
         </button>
-
     </window>
 
 
@@ -815,20 +798,11 @@
             <area>20,55,760,410</area>
         </shape>
 
-        <buttonlist name="backends">
+        <buttonlist name="backends" from="base_buttonlist">
             <area>30,65,650,265</area>
-            <layout>vertical</layout>
-            <spacing>3</spacing>
-            <scrollstyle>free</scrollstyle>
-            <wrapstyle>items</wrapstyle>
-            <buttonarea>0,0,100%,97%</buttonarea>
-
             <statetype name="buttonitem">
                 <state name="active">
-                    <imagetype name="buttonbackground" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,650,40</area>
-                    </imagetype>
+                    <area>0,0,650,36</area>
                     
                     <textarea name="buttontext">
                         <area>8,5,400,30</area>
@@ -876,11 +850,11 @@
                     </statetype>
 
                     <statetype name="securitypin">
-                        <area>680,7,40,40</area>
+                        <area>680,7,36,36</area>
                         <state name="yes">
-                            <area>0,0,40,40</area>
+                            <area>0,0,36,36</area>
                             <shape name="pin">
-                                <area>0,0,40,40</area>
+                                <area>0,0,36,36</area>
                                 <type>roundbox</type>
                                 <cornerradius>6</cornerradius>
                                 <fill color="#990000" />
@@ -891,9 +865,9 @@
                             </imagetype>
                         </state>
                         <state name="no">
-                            <area>0,0,40,40</area>
+                            <area>0,0,36,36</area>
                             <shape name="nopin">
-                                <area>0,0,40,40</area>
+                                <area>0,0,36,36</area>
                                 <type>roundbox</type>
                                 <cornerradius>6</cornerradius>
                                 <fill color="#009900" />
@@ -909,20 +883,13 @@
                 <state name="inactive" from="active" />
 
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,650,40</area>
-                    </imagetype>
+                    <area>0,0,650,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                 </state>
 
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,650,40</area>
-                    </imagetype>
-                    <textarea name="buttontext">
-                        <font>text_inactive</font>
-                    </textarea>
+                    <area>0,0,650,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
             </statetype>
             
