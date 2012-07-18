@@ -28,32 +28,20 @@
         <buttonlist name="siteslist" from="base_buttonlist">
             <area>135,65,350,435</area>
         </buttonlist>
-            
+
+        <!-- the buttonlist widget with a width of 480px -->
         <buttonlist name="articleslist" from="base_buttonlist">
             <area>495,65,650,435</area>
             <statetype name="buttonitem">
                 <state name="active">
-                    <imagetype name="buttonbackground" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,650,36</area>
-                    </imagetype>
-                    <textarea name="buttontext" from="base_textarea">
-                        <area>8,0,634,36</area>
-                        <scroll direction="horizontal"/>
-                    </textarea>
+                    <area>0,0,650,36</area>
                 </state>
-                <state name="inactive" from="active"/>
-                <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,650,36</area>
-                    </imagetype>
+                <state name="inactive" from="active" />
+                <state name="selectedactive">
+                    <area>0,0,650,36</area>
                 </state>
-                <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,650,36</area>
-                    </imagetype>
+                <state name="selectedinactive">
+                    <area>0,0,650,36</area>
                 </state>
             </statetype>
         </buttonlist>
@@ -235,7 +223,7 @@
         <buttonlist name="category" from="base_buttonlist">
             <area>210,125,350,512</area>
         </buttonlist>
-        <buttonlist name="sites" from="base_buttonlist_wide">
+        <buttonlist name="sites" from="base_buttonlist">
             <area>570,125,480,512</area>
         </buttonlist>
     </window>

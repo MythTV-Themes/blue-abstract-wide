@@ -173,13 +173,14 @@
         <alpha>110</alpha>
     </imagetype>
 
-    <!-- the arrow is not selected and inactive -->
-    <imagetype name="base_image_inactive" from="base_image_selectedinactive" />
-    <!-- the arrow is selected and active (only for buttons) -->
+    <!-- the image is not selected and inactive -->
+    <imagetype name="base_image_inactive" from="base_image_active" />
+    <!-- the image is selected and active (only for buttons) -->
     <imagetype name="base_image_selected" from="base_image_selectedactive" />
     <!-- the image is selected and pushed (only for buttons) -->
-    <imagetype name="base_image_pushed" from="base_image_selectedinactive" />
-
+    <imagetype name="base_image_pushed" from="base_image_selectedactive" />
+    <!-- the image is not selected and disabled -->
+    <imagetype name="base_image_disabled" from="base_image_inactive" />
 
     <!-- alpha values explicitly for the icons in the osd and recording screens -->
     <!-- this is the default active statetype -->
@@ -195,9 +196,9 @@
     <!-- the arrow is selected and inactive -->
     <imagetype name="base_arrow_selectedinactive" from="base_image_selectedinactive" />
     <!-- the arrow is selected and active (only for buttons) -->
-    <imagetype name="base_arrow_selected" from="base_image_selectedactive" />
+    <imagetype name="base_arrow_selected" from="base_image_selectedinactive" />
     <!-- the arrow is selected and pushed (only for buttons) -->
-    <imagetype name="base_arrow_pushed" from="base_image_selectedinactive" />    
+    <imagetype name="base_arrow_pushed" from="base_image_selectedactive" />    
    
     
     <!-- alpha values explicitly for the icons in the osd and recording screens -->
@@ -222,27 +223,30 @@
     <shape name="base_button_shape_active">
         <area>0,0,100%,100%</area>
         <type>roundbox</type>
-        <fill color="#535353" alpha="140" />
-        <line color="#535353" alpha="110" width="1" />
+        <fill color="#535353" alpha="120" />
+        <line color="#535353" alpha="100" width="1" />
         <cornerradius>8</cornerradius>
     </shape>
 
     <shape name="base_button_shape_selectedactive" from="base_button_shape_active">
-        <fill color="#3697ef" alpha="240" />
-        <line color="#3697ef" alpha="210" width="1" />
+        <fill color="#3697ef" alpha="220" />
+        <line color="#3697ef" alpha="200" width="1" />
     </shape>
     
     <shape name="base_button_shape_selectedinactive" from="base_button_shape_active">
-        <fill color="#1d68e0" alpha="110" />
+        <fill color="#1d68e0" alpha="100" />
         <line color="#1d68e0" alpha="80" width="1" />
     </shape>
 
     <!-- these are the same as above but only to keep these names the 
          same as the states in which they are used. These are pretty 
          much only for buttons, checkboxes and similar widgets -->
-    <shape name="base_button_shape_inactive" from="base_button_shape_selectedinactive" />
+    <shape name="base_button_shape_inactive" from="base_button_shape_active" />
     <shape name="base_button_shape_selected" from="base_button_shape_selectedactive" />
-    <shape name="base_button_shape_pushed" from="base_button_shape_selectedinactive" />
+    <shape name="base_button_shape_pushed"   from="base_button_shape_selectedinactive" />
+    <shape name="base_button_shape_disabled" from="base_button_shape_inactive" />
+    
+    
     
     
     
@@ -265,7 +269,6 @@
    
 
     <!-- DONE -->
-    <!-- TODO - arrows images, checkbox images -->
     <!-- the buttonlist widget with a width of 350px -->
     <buttonlist name="base_buttonlist">
         <area>0,0,350,280</area>
@@ -280,10 +283,9 @@
        
             <!-- active menu entry -->
             <state name="active">
-                <imagetype name="buttonbackground" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,350,36</area>
-                </imagetype>
+                <area>0,0,350,36</area>
+                
+                <shape name="background" from="base_button_shape_active" />
                 
                 <!-- the button's text -->
                 <textarea name="buttontext" from="base_textarea">
@@ -322,36 +324,23 @@
             </state>
             
             <!-- inactive menu entry -->
-            <state name="inactive" from="active" />
-
+            <state name="inactive" from="active">
+                <area>0,0,350,36</area>
+                <shape name="background" from="base_button_shape_inactive" />
+            </state>
+            
             <!-- menu entry has been selected and is active -->
             <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,350,36</area>
-                </imagetype>
-                <imagetype name="buttonarrow" from="base_arrow_selectedactive">
-                    <position>100%-26,4</position>
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
+                <area>0,0,350,36</area>
+                <shape name="background" from="base_button_shape_selectedactive" />
             </state>
             
             <!-- menu entry has been selected and is inactive -->
             <state name="selectedinactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,350,36</area>
-                </imagetype>
-                
-                <textarea name="buttontext">
-                    <font>text_inactive</font>
-                </textarea>
-                
-                <imagetype name="buttonarrow" from="base_arrow_selectedinactive">
-                    <position>100%-26,4</position>
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
+                <area>0,0,350,36</area>
+                <shape name="background" from="base_button_shape_selectedinactive" />
             </state>
+
         </statetype>
         
         <!-- show arrows to indicates that there are
@@ -390,37 +379,6 @@
 
 
 
-    
-    
-    <!-- the buttonlist widget with a width of 480px -->
-    <buttonlist name="base_buttonlist_wide" from="base_buttonlist">
-        <area>0,0,480,280</area>
-        <statetype name="buttonitem">
-            <state name="active">
-                <imagetype name="buttonbackground" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,480,36</area>
-                </imagetype>
-            </state>
-            <state name="inactive" from="active" />
-            <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedactive"> 
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,480,36</area>
-                </imagetype>
-            </state>
-            <state name="selectedinactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,480,36</area>
-                </imagetype>
-            </state>
-        </statetype>
-    </buttonlist>
-
-
-
-
 
     <!-- DONE -->
     <!-- Base definition of a buttonlist in 'selector' configuration with a width
@@ -431,21 +389,21 @@
         <buttonarea>0,0,100%,100%</buttonarea>
         <statetype name="buttonitem">
             <state name="active">
-                <imagetype name="buttonbackground" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,200,36</area>
-                </imagetype>
+                <area>0,0,200,36</area>
+                <shape name="background" from="base_button_shape_active" />
                 <textarea name="buttontext" from="base_textarea">
                     <area>8,0,100%-16,36</area>
                     <scroll direction="horizontal" />
                 </textarea>
             </state>
-            <state name="inactive" from="active" />
-            <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,200,36</area>
-                </imagetype>
+            <state name="inactive" from="active"/>
+            <state name="selectedactive">
+                <area>0,0,200,36</area>
+                <shape name="background" from="base_button_shape_selectedactive" />
+                <textarea name="buttontext" from="base_textarea">
+                    <area>8,0,100%-16,36</area>
+                    <scroll direction="horizontal" />
+                </textarea>
             </state>
             <state name="selectedinactive" from="active"/>
         </statetype>
@@ -489,19 +447,17 @@
         <area>0,0,350,36</area>
         <statetype name="buttonitem">
             <state name="active">
-                <imagetype name="buttonbackground" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,350,36</area>
-                </imagetype>
+                <area>0,0,350,36</area>
             </state>
-            <state name="inactive" from="active" />
-            <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,350,36</area>
-                </imagetype>
+            <state name="inactive">
+                <area>0,0,350,36</area>
             </state>
-            <state name="selectedinactive" from="active"/>
+            <state name="selectedactive">
+                <area>0,0,350,36</area>
+            </state>
+            <state name="selectedinactive">
+                <area>0,0,350,36</area>
+            </state>
         </statetype>
     </buttonlist>
 
@@ -515,19 +471,17 @@
         <area>0,0,650,36</area>
         <statetype name="buttonitem">
             <state name="active">
-                <imagetype name="buttonbackground" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,650,36</area>
-                </imagetype>
+                <area>0,0,650,36</area>
             </state>
-            <state name="inactive" from="active"/>
-            <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,650,36</area>
-                </imagetype>
+            <state name="inactive">
+                <area>0,0,650,36</area>
             </state>
-            <state name="selectedinactive" from="active"/>
+            <state name="selectedactive">
+                <area>0,0,650,36</area>
+            </state>
+            <state name="selectedinactive">
+                <area>0,0,650,36</area>
+            </state>
         </statetype>
     </buttonlist>
 
@@ -544,10 +498,8 @@
             
             <!-- an unselected, active button -->
             <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,150,36</area>
-                </imagetype>
+                <area>0,0,150,36</area>
+                <shape name="background" from="base_button_shape_active" />
                 <textarea name="text">
                     <area>8,0,100%-16,36</area>
                     <align>allcenter</align>
@@ -559,21 +511,23 @@
             
             <!-- a selected, active button -->
             <state name="selected" from="active">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,150,36</area>
-                </imagetype>
+                <area>0,0,150,36</area>
+<!--                 <shape name="background" from="base_button_shape_selectedactive" /> -->
+                <shape name="background" from="base_button_shape_selected" />
             </state>
             
             <!-- unselected or a greyed out button -->
-            <state name="disabled" from="active" />
+            <state name="disabled" from="active">
+                <area>0,0,150,36</area>
+<!--                 <shape name="background" from="base_button_shape_active" /> -->
+                <shape name="background" from="base_button_shape_disabled" />
+            </state>
             
             <!-- the down / pushed in state of a button -->
             <state name="pushed" from="active">
-                <imagetype name="background" from="base_image_pushed">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,150,36</area>
-                </imagetype>
+                <area>0,0,150,36</area>
+<!--                 <shape name="background" from="base_button_shape_selectedinactive" /> -->
+                <shape name="background" from="base_button_shape_pushed" />
             </state>
         </statetype>
     </button>
@@ -587,23 +541,16 @@
         <area>0,0,300,36</area>
         <statetype name="buttonstate">
             <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,300,36</area>
-                </imagetype>
+                <area>0,0,300,36</area>
             </state>
-            <state name="selected" from="active">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,300,36</area>
-                </imagetype>
+            <state name="selected">
+                <area>0,0,300,36</area>
             </state>
-            <state name="disabled" from="active" />
-            <state name="pushed" from="active">
-                <imagetype name="background" from="base_image_pushed">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,300,36</area>
-                </imagetype>
+            <state name="disabled">
+                <area>0,0,300,36</area>
+            </state>
+            <state name="pushed">
+                <area>0,0,300,36</area>
             </state>
         </statetype>
     </button>
@@ -735,22 +682,16 @@
         <area>0,0,375,36</area>
         <statetype name="background">
             <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,375,36</area>
-                </imagetype>
+                <area>0,0,375,36</area>
+                <shape name="background" from="base_button_shape_active" />
             </state>
             <state name="selected">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,375,36</area>
-                </imagetype>
+                <area>0,0,375,36</area>
+                <shape name="background" from="base_button_shape_selected" />
             </state>
             <state name="inactive">
-                <imagetype name="background" from="base_image_inactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,375,36</area>
-                </imagetype>
+                <area>0,0,375,36</area>
+                <shape name="background" from="base_button_shape_inactive" />
             </state>
         </statetype>
         <imagetype name="cursor">
@@ -773,22 +714,13 @@
         <area>0,0,480,36</area>
         <statetype name="background">
             <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,480,36</area>
-                </imagetype>
+                <area>0,0,480,36</area>
             </state>
             <state name="selected">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,480,36</area>
-                </imagetype>
+                <area>0,0,480,36</area>
             </state>
             <state name="inactive">
-                <imagetype name="background" from="base_image_inactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,480,36</area>
-                </imagetype>
+                <area>0,0,480,36</area>
             </state>
         </statetype>
     </textedit>
@@ -802,32 +734,30 @@
     <button name="base_searchbutton" from="base_button">
         <area>0,0,36,36</area>
         <statetype name="buttonstate">
+            <area>0,0,36,36</area>
             <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,36,36</area>
-                </imagetype>
+                <area>0,0,36,36</area>
                 <imagetype name="image" from="base_image_active">
                     <filename>images/widgets/search.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
-            <state name="selected" from="active">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,36,36</area>
-                </imagetype>
+            <state name="selected">
+                <area>0,0,36,36</area>
                 <imagetype name="image" from="base_image_selected">
                     <filename>images/widgets/search.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
-            <state name="disabled" from="active" />
-            <state name="pushed" from="active">
-                <imagetype name="background" from="base_image_pushed">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,36,36</area>
+            <state name="disabled">
+                <area>0,0,36,36</area>
+                <imagetype name="image" from="base_image_disabled">
+                    <filename>images/widgets/search.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
+            </state>
+            <state name="pushed">
+                <area>0,0,36,36</area>
                 <imagetype name="image" from="base_image_pushed">
                     <filename>images/widgets/search.png</filename>
                     <area>3,3,30,30</area>
@@ -850,18 +780,17 @@
              Disabled is a non-functional "greyed out" checkbox -->
         <statetype name="background">
             <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,36,36</area>
-                </imagetype>
+                <area>0,0,36,36</area>
+                <shape name="background" from="base_button_shape_active" />
             </state>
             <state name="selected">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,36,36</area>
-                </imagetype>
+                <area>0,0,36,36</area>
+                <shape name="background" from="base_button_shape_selected"/>
             </state>
-            <state name="disabled" />
+            <state name="disabled">
+                <area>0,0,36,36</area>
+                <shape name="background" from="base_button_shape_disabled"/>
+            </state>
         </statetype>
         
         <!-- three states to indicate the fill status of the checkbox. 
@@ -903,11 +832,8 @@
             
             <!-- available but not highlighted -->
             <state name="active">
-                <area>0,0,100%,100%</area>
-                <imagetype name="buttonbackground" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,70,36</area>
-                </imagetype>
+                <area>0,0,70,36</area>
+                <shape name="background" from="base_button_shape_active" />
                 <textarea name="buttontext" from="base_textarea">
                     <area>8,0,100%-8,36</area>
                     <font>text</font>
@@ -917,14 +843,16 @@
             
             <!-- available and highlighted -->
             <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,70,36</area>
-                </imagetype>
+                <area>0,0,70,36</area>
+                <shape name="background" from="base_button_shape_selectedactive" />
             </state>
             
             <!-- unavailable and unhighlighted -->
-            <state name="selectedinactive" from="active" />
+            <state name="selectedinactive">
+                <area>0,0,70,36</area>
+                <shape name="background" from="base_button_shape_selectedinactive" />
+            </state>
+
         </statetype>
 
         <statetype name="downscrollarrow">
@@ -965,18 +893,14 @@
         <area>0,0,350,36</area>
         <statetype name="buttonitem">
             <state name="active">
-                <imagetype name="buttonbackground" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,350,36</area>
-                </imagetype>
+                <area>0,0,350,36</area>
             </state>
-            <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,350,36</area>
-                </imagetype>
+            <state name="selectedactive">
+                <area>0,0,350,36</area>
             </state>
-            <state name="selectedinactive" from="active"/>
+            <state name="selectedinactive">
+                <area>0,0,350,36</area>
+            </state>
         </statetype>
     </spinbox>
 
@@ -989,18 +913,14 @@
         <area>0,0,650,36</area>
         <statetype name="buttonitem">
             <state name="active">
-                <imagetype name="buttonbackground" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,650,36</area>
-                </imagetype>
+                <area>0,0,650,36</area>
             </state>
-            <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,650,36</area>
-                </imagetype>
+            <state name="selectedactive">
+                <area>0,0,650,36</area>
             </state>
-            <state name="selectedinactive" from="active"/>
+            <state name="selectedinactive">
+                <area>0,0,650,36</area>
+            </state>
         </statetype>
     </spinbox>
 
@@ -1128,10 +1048,11 @@
         <style>reveal</style>
         
         <!-- the background when the progressbar has 0% -->
-        <imagetype name="background" from="base_image_active">
+        <shape name="background" from="base_button_shape_active" />
+        <!--<imagetype name="background" from="base_image_active">
             <filename>images/widgets/progressbar/progressbar_inactive.png</filename>
             <area>0,0,500,20</area>
-        </imagetype>
+        </imagetype>-->
         
         <!-- the image when the progressbar has 100% -->
         <imagetype name="progressimage" from="base_image_selected">
@@ -1577,8 +1498,20 @@
         </shape>
         
         <!-- list with the search phrases -->
-        <buttonlist name="itemlist" from="base_buttonlist_wide">
+        <buttonlist name="itemlist" from="base_buttonlist">
             <area>405,245,480,198</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,480,36</area>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive">
+                    <area>0,0,480,36</area>
+                </state>
+                <state name="selectedinactive">
+                    <area>0,0,480,36</area>
+                </state>
+            </statetype>
         </buttonlist>
         <textedit name="input" from="base_textedit_wide">
             <position>405,460</position>
@@ -2065,10 +1998,7 @@
             <area>365,225,550,275</area>
             <statetype name="buttonitem">
                 <state name="active">
-                    <imagetype name="buttonbackground" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,550,36</area>
-                    </imagetype>
+                    <area>0,0,550,36</area>
                     <textarea name="buttontext" from="base_textarea">
                         <area>8,0,350,36</area>
                         <scroll direction="horizontal"/>
@@ -2082,16 +2012,12 @@
                 </state>
                 <state name="inactive" from="active" />
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,550,36</area>
-                    </imagetype>
+                    <area>0,0,550,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive"/>
                 </state>
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,550,36</area>
-                    </imagetype>
+                    <area>0,0,550,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive"/>
                 </state>
             </statetype>
         </buttonlist>

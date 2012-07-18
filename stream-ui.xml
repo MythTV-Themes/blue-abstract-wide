@@ -29,31 +29,27 @@
         </shape>
         <buttonlist name="streamlist" from="base_buttonlist">
             <area>35,68,300,450</area>
-            <spacing>1</spacing>
+            <spacing>3</spacing>
             <statetype name="buttonitem">
                 <state name="active">
-                
-                    <imagetype name="buttonbackground" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,300,54</area>
-                    </imagetype>
+                    <area>0,0,300,52</area>
 
                     <imagetype name="buttonimage">
-                        <area>6,6,42,42</area>                        
+                        <area>6,6,40,40</area>                        
                         <filename />
                     </imagetype>
                     <shape name="buttonimage_background" from="base_background_shape">
-                        <area>5,5,44,44</area>
+                        <area>5,5,42,42</area>
                         <fill color="#000000" alpha="0" />
                         <cornerradius>0</cornerradius>
                     </shape>
 
                     <textarea name="station" from="base_textarea">
-                        <area>65,3,190,30</area>
+                        <area>55,2,150,30</area>
                         <scroll direction="horizontal" />
                     </textarea>
                     <textarea name="channel" from="base_textarea">
-                        <area>65,28,190,20</area>
+                        <area>55,27,190,20</area>
                         <font>text_small</font>
                         <scroll direction="horizontal" />
                     </textarea>
@@ -67,16 +63,12 @@
                 </state>
                 <state name="inactive" from="active"/>
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,300,54</area>
-                    </imagetype>
+                    <area>0,0,300,52</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                 </state>
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,300,54</area>
-                    </imagetype>
+                    <area>0,0,300,52</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
             </statetype>
             
@@ -97,11 +89,7 @@
             <spacing>1</spacing>
             <statetype name="buttonitem">
                 <state name="active">
-                
-                    <imagetype name="buttonbackground" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,865,36</area>
-                    </imagetype>
+                    <area>0,0,865,36</area>
 
                     <imagetype name="buttonimage">
                         <area>5,4,28,28</area>                        
@@ -134,16 +122,12 @@
                 </state>
                 <state name="inactive" from="active"/>
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,865,36</area>
-                    </imagetype>
+                    <area>0,0,865,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                 </state>
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,865,36</area>
-                    </imagetype>
+                    <area>0,0,865,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
             </statetype>
             
@@ -414,10 +398,7 @@
             <spacing>1</spacing>
             <statetype name="buttonitem">
                 <state name="active">
-                    <imagetype name="buttonbackground" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,940,36</area>
-                    </imagetype>
+                    <area>0,0,940,36</area>
                     
                     <imagetype name="buttonimage">
                         <area>5,4,28,28</area>                        
@@ -454,16 +435,12 @@
                 </state>
                 <state name="inactive" from="active"/>
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,940,36</area>
-                    </imagetype>
+                    <area>0,0,940,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                 </state>
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,940,36</area>
-                    </imagetype>
+                    <area>0,0,940,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
             </statetype>
             

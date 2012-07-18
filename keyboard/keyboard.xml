@@ -11,31 +11,27 @@
         </shape>
 
         <!-- top row -->
-        <button name="key_1">
-            <position>26,29</position>
+        <button name="key_1" from="base_button">
+            <area>26,29,36,36</area>
             <statetype name="buttonstate">
                 <state name="active">
-                    <imagetype name="background" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,40,40</area>
-                    </imagetype>
+                    <area>0,0,36,36</area>
                     <textarea name="text" from="base_textarea">
-                        <area>2,0,38,40</area>
+                        <area>0,0,36,36</area>
                         <align>allcenter</align>
                     </textarea>
                 </state>
                 <state name="selected" from="active">
-                    <imagetype name="background" from="base_image_selected">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,40,40</area>
-                    </imagetype>
+                    <area>0,0,36,36</area>
+                    <shape name="background" from="base_button_shape_selected" />
                 </state>
-                <state name="disabled" from="active" />
-                <state name="pushed" from="selected">
-                    <imagetype name="background" from="base_image_pushed">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,40,40</area>
-                    </imagetype>
+                <state name="disabled" from="active">
+                    <area>0,0,36,36</area>
+                    <shape name="background" from="base_button_shape_disabled" />
+                </state>
+                <state name="pushed" from="active">
+                    <area>0,0,36,36</area>
+                    <shape name="background" from="base_button_shape_pushed" />
                 </state>
             </statetype>
         </button>
@@ -189,62 +185,53 @@
         </button>
 
         <!-- special keys -->
-        <button name="key_lshift">
+        <button name="key_lshift" from="base_button">
             <position>28,221</position>
             <statetype name="buttonstate">
                 <state name="active">
-                    <imagetype name="background" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,50,40</area>
-                    </imagetype>
+                    <area>0,0,50,36</area>
                     <textarea name="text" from="base_textarea">
-                        <area>0,0,50,40</area>
+                        <area>0,0,50,36</area>
                         <align>allcenter</align>
                     </textarea>
                 </state>
                 <state name="selected" from="active">
-                    <imagetype name="background" from="base_image_selected">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,50,40</area>
-                    </imagetype>
+                    <area>0,0,50,36</area>
+                    <shape name="background" from="base_button_shape_selected" />
                 </state>
-                <state name="disabled" from="active" />
-                <state name="pushed" from="selected">
-                    <imagetype name="background" from="base_image_pushed">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,50,40</area>
-                    </imagetype>
+                <state name="disabled" from="active">
+                    <area>0,0,50,36</area>
+                    <shape name="background" from="base_button_shape_disabled" />
+                </state>
+                <state name="pushed" from="active">
+                    <area>0,0,50,36</area>
+                    <shape name="background" from="base_button_shape_pushed" />
                 </state>
             </statetype>
         </button>
 
 
-        <button name="key_lock">
+        <button name="key_lock" from="base_button">
             <position>85,221</position>
             <statetype name="buttonstate">
                 <state name="active">
-                    <imagetype name="background" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,62,40</area>
-                    </imagetype>
+                    <area>0,0,62,36</area>
                     <textarea name="text" from="base_textarea">
-                        <area>0,0,62,40</area>
+                        <area>0,0,62,36</area>
                         <align>allcenter</align>
-                        <font>text_small</font>
                     </textarea>
                 </state>
                 <state name="selected" from="active">
-                    <imagetype name="background" from="base_image_selected">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,62,40</area>
-                    </imagetype>
+                    <area>0,0,62,36</area>
+                    <shape name="background" from="base_button_shape_selected" />
                 </state>
-                <state name="disabled" from="active" />
-                <state name="pushed" from="selected">
-                    <imagetype name="background" from="base_image_pushed">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,62,40</area>
-                    </imagetype>
+                <state name="disabled" from="active">
+                    <area>0,0,62,36</area>
+                    <shape name="background" from="base_button_shape_disabled" />
+                </state>
+                <state name="pushed" from="active">
+                    <area>0,0,62,36</area>
+                    <shape name="background" from="base_button_shape_pushed" />
                 </state>
             </statetype>
         </button>
@@ -257,32 +244,20 @@
         </button>
         
         <!-- row 5 -->
-        <button name="key_space">
+        <button name="key_space" from="base_button">
             <position>152,221</position>
             <statetype name="buttonstate">
                 <state name="active">
-                    <imagetype name="background" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,300,40</area>
-                    </imagetype>
-                    <textarea name="text" from="base_textarea">
-                        <area>0,0,300,40</area>
-                        <align>allcenter</align>
-                        <value>Space</value>
-                    </textarea>
+                    <area>0,0,300,36</area>
                 </state>
-                <state name="selected" from="active">
-                    <imagetype name="background" from="base_image_selected">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,300,40</area>
-                    </imagetype>
+                <state name="selected">
+                    <area>0,0,300,36</area>
                 </state>
-                <state name="disabled" from="active" />
-                <state name="pushed" from="selected">
-                    <imagetype name="background" from="base_image_pushed">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,300,40</area>
-                    </imagetype>
+                <state name="disabled">
+                    <area>0,0,300,36</area>
+                </state>
+                <state name="pushed">
+                    <area>0,0,300,36</area>
                 </state>
             </statetype>
         </button>
@@ -291,69 +266,53 @@
             <position>459,221</position>
         </button>
 
-        <button name="key_moveleft">
+        <button name="key_moveleft" from="base_button">
             <position>528,221</position>
             <statetype name="buttonstate">
                 <state name="active">
-                    <imagetype name="background" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,40,40</area>
-                    </imagetype>
+                    <area>0,0,36,36</area>
                     <imagetype name="arrow" from="base_image_active">
                         <filename>images/widgets/keyboard/arrow_left.png</filename>
-                        <area>5,5,30,30</area>
+                        <area>3,3,30,30</area>
                     </imagetype>
-                    <textarea name="text" from="base_textarea">
-                        <area>0,0,40,40</area>
-                        <align>allcenter</align>
-                    </textarea>
                 </state>
                 <state name="selected" from="active">
-                    <imagetype name="background" from="base_image_selected">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,40,40</area>
-                    </imagetype>
+                    <area>0,0,36,36</area>
+                    <shape name="background" from="base_button_shape_selected" />
                 </state>
-                <state name="disabled" from="active" />
-                <state name="pushed" from="selected">
-                    <imagetype name="background" from="base_image_pushed">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,40,40</area>
-                    </imagetype>
+                <state name="disabled" from="active">
+                    <area>0,0,36,36</area>
+                    <shape name="background" from="base_button_shape_disabled" />
+                </state>
+                <state name="pushed" from="active">
+                    <area>0,0,36,36</area>
+                    <shape name="background" from="base_button_shape_pushed" />
                 </state>
             </statetype>
         </button>
 
 
-        <button name="key_moveright">
+        <button name="key_moveright" from="base_button">
             <position>575,221</position>
             <statetype name="buttonstate">
                 <state name="active">
-                    <imagetype name="background" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,40,40</area>
-                    </imagetype>
+                    <area>0,0,36,36</area>
                     <imagetype name="arrow" from="base_image_active">
                         <filename>images/widgets/keyboard/arrow_right.png</filename>
-                        <area>5,5,30,30</area>
+                        <area>3,3,30,30</area>
                     </imagetype>
-                    <textarea name="text" from="base_textarea">
-                        <area>0,0,40,40</area>
-                        <align>allcenter</align>
-                    </textarea>
                 </state>
                 <state name="selected" from="active">
-                    <imagetype name="background" from="base_image_selected">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,40,40</area>
-                    </imagetype>
+                    <area>0,0,36,36</area>
+                    <shape name="background" from="base_button_shape_selected" />
                 </state>
-                <state name="disabled" from="active" />
-                <state name="pushed" from="selected">
-                    <imagetype name="background" from="base_image_pushed">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,40,40</area>
-                    </imagetype>
+                <state name="disabled" from="active">
+                    <area>0,0,36,36</area>
+                    <shape name="background" from="base_button_shape_disabled" />
+                </state>
+                <state name="pushed" from="active">
+                    <area>0,0,36,36</area>
+                    <shape name="background" from="base_button_shape_pushed" />
                 </state>
             </statetype>
         </button>
@@ -363,68 +322,52 @@
             <position>623,221</position>
         </button>
 
-        <button name="key_back">
+        <button name="key_back" from="base_button">
             <position>605,77</position>
             <statetype name="buttonstate">
                 <state name="active">
-                    <imagetype name="background" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,70,40</area>
-                    </imagetype>
+                    <area>0,0,70,36</area>
                     <imagetype name="arrow" from="base_image_active">
                         <filename>images/widgets/keyboard/arrow_back.png</filename>
-                        <area>19,4,32,32</area>
+                        <area>19,3,30,30</area>
                     </imagetype>
-                    <!--<textarea name="text" from="base_textarea">
-                        <area>0,0,70,40</area>
-                        <align>allcenter</align>
-                    </textarea>-->
                 </state>
                 <state name="selected" from="active">
-                    <imagetype name="background" from="base_image_selected">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,70,40</area>
-                    </imagetype>
+                    <area>0,0,70,36</area>
+                    <shape name="background" from="base_button_shape_selected" />
                 </state>
-                <state name="disabled" from="active" />
-                <state name="pushed" from="selected">
-                    <imagetype name="background" from="base_image_pushed">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,70,40</area>
-                    </imagetype>
+                <state name="disabled" from="active">
+                    <area>0,0,70,36</area>
+                    <shape name="background" from="base_button_shape_disabled" />
+                </state>
+                <state name="pushed" from="active">
+                    <area>0,0,70,36</area>
+                    <shape name="background" from="base_button_shape_pushed" />
                 </state>
             </statetype>
         </button>
 
-        <button name="key_done">
+        <button name="key_done" from="base_button">
             <position>575,125</position>
             <statetype name="buttonstate">
                 <state name="active">
-                    <imagetype name="background" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,100,40</area>
-                    </imagetype>
+                    <area>0,0,100,36</area>
                     <imagetype name="arrow" from="base_image_active">
                         <filename>images/widgets/keyboard/arrow_return.png</filename>
-                        <area>49,5,32,32</area>
+                        <area>55,3,30,30</area>
                     </imagetype>
-                    <textarea name="text" from="base_textarea">
-                        <area>0,0,70,40</area>
-                        <align>allcenter</align>
-                    </textarea>
                 </state>
                 <state name="selected" from="active">
-                    <imagetype name="background" from="base_image_selected">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,100,40</area>
-                    </imagetype>
+                    <area>0,0,100,36</area>
+                    <shape name="background" from="base_button_shape_selected" />
                 </state>
-                <state name="disabled" from="active" />
-                <state name="pushed" from="selected">
-                    <imagetype name="background" from="base_image_pushed">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,100,40</area>
-                    </imagetype>
+                <state name="disabled" from="active">            
+                    <area>0,0,100,36</area>
+                    <shape name="background" from="base_button_shape_disabled" />
+                </state>
+                <state name="pushed" from="active">
+                    <area>0,0,100,36</area>
+                    <shape name="background" from="base_button_shape_pushed" />
                 </state>
             </statetype>
         </button>

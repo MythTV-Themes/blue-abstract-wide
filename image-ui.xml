@@ -351,17 +351,14 @@
         </textarea>
 
         <!-- This list shows all the file information -->
-        <buttonlist name="infolist" from="base_buttonlist_wide">
+        <buttonlist name="infolist" from="base_buttonlist">
             <shape name="infolist_background" from="base_background_shape">
                 <area>-15,-15,680,385</area>
             </shape>
             <area>315,190,650,355</area>
             <statetype name="buttonitem">
                 <state name="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,650,36</area>
-                    </imagetype>
+                    <area>0,0,650,36</area>
                     <textarea name="name" from="base_textarea">
                         <area>8,0,250,36</area>
                     </textarea>
@@ -372,16 +369,12 @@
                 </state>
                 <state name="inactive" from="active"/>
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,650,36</area>
-                    </imagetype>
+                    <area>0,0,650,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                 </state>
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,650,36</area>
-                    </imagetype>
+                    <area>0,0,650,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
             </statetype>
         </buttonlist>

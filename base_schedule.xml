@@ -28,7 +28,6 @@
         <buttonlist name="channellist" from="base_buttonlist">
             <area>15,45,250,450</area>
             <spacing>1</spacing>
-            <buttonarea>0,0,250,450</buttonarea>
             <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <statetype name="buttonitem">
                 <state name="active">
