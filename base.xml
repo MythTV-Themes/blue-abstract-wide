@@ -396,18 +396,12 @@
                     <scroll direction="horizontal" />
                 </textarea>
             </state>
-            <state name="inactive" from="active">
-                <area>0,0,200,36</area>
-                <shape name="background" from="base_button_shape_inactive" />
-            </state>
+            <state name="inactive" from="active" />
             <state name="selectedactive" from="active">
                 <area>0,0,200,36</area>
                 <shape name="background" from="base_button_shape_selectedactive" />
             </state>
-            <state name="selectedinactive" from="active">
-                <area>0,0,200,36</area>
-                <shape name="background" from="base_button_shape_selectedinactive" />
-            </state>
+            <state name="selectedinactive" from="active" />
         </statetype>
         
         <statetype name="downscrollarrow">
