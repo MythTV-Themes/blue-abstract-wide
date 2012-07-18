@@ -424,9 +424,9 @@
     <group name="base_current_playlist_group">
     
         <buttonlist name="currentplaylist" from="base_buttonlist">
-            <area>0,0,1210,120</area>
+            <area>0,0,1210,125</area>
             <buttonarea>0,0,100%,100%</buttonarea>
-            <spacing>1</spacing>
+            <spacing>3</spacing>
             <statetype name="buttonitem">
                 <state name="active">
                     <area>0,0,1210,36</area>

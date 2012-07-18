@@ -18,12 +18,12 @@
         
         <!-- shows the current playlist -->
         <shape name="currentplaylist_tree_background" from="base_background_shape">
-            <area>20,50,1240,445</area>
+            <area>20,50,1240,430</area>
         </shape>
         <group name="current_playlist_group" from="base_current_playlist_group">
             <position>35,68</position>
             <buttonlist name="currentplaylist">
-                <area>0,0,1210,420</area>
+                <area>0,0,1210,403</area>
                 <statetype name="upscrollarrow">
                     <position>100%-30,100%-14</position>
                 </statetype>
@@ -42,114 +42,114 @@
         <!-- The currently playing track, time, song count 
              and other status information about the playlist -->
         <shape name="current_playlistinfo_background" from="base_background_shape">
-            <area>-15,500,1310,40</area>
+            <area>-15,490,1310,40</area>
         </shape>
         <textarea name="playlisttime" from="base_textarea">
-            <area>815,505,180,30</area>
+            <area>815,495,180,30</area>
             <align>right,vcenter</align>
         </textarea>
         <statetype name="repeatstate" from="base_music_repeatstate">
-            <area>1015,505,30,30</area>
+            <area>1015,495,30,30</area>
         </statetype>
         <statetype name="shufflestate" from="base_music_shufflestate">
-            <area>1055,505,30,30</area>
+            <area>1055,495,30,30</area>
         </statetype>
         <textarea name="playlistposition" from="base_textarea">
-            <area>1095,505,160,30</area>
+            <area>1095,495,160,30</area>
             <align>right,vcenter</align>
         </textarea>
 
         <!-- this is the background for the information at the bottom like
             shows coverart, track details, ratings and the visualizer -->
         <shape name="trackdetails_background" from="base_background_shape">
-            <area>20,545,1240,165</area>
+            <area>20,540,1240,165</area>
         </shape>
 
         <!-- this is the actual cover image that will be shown if its
             available, otherwise only the background image is visible -->
         <imagetype name="coverart_background_image">
-            <area>36,561,133,133</area>
+            <area>36,556,133,133</area>
             <mask>images/shared/music/album_item_nfmask.png</mask>
             <filename>images/shared/music/default_album.png</filename>
             <preserveaspect>true</preserveaspect>
         </imagetype>
         <imagetype name="coverart">
-            <area>36,561,133,133</area>
+            <area>36,556,133,133</area>
             <mask>images/shared/music/album_item_nfmask.png</mask>
             <preserveaspect>true</preserveaspect>
         </imagetype>
         <imagetype name="coverart_border">
-            <area>36,561,133,133</area>
+            <area>36,556,133,133</area>
             <filename>images/shared/music/album_nfborder.png</filename>
         </imagetype>
 
         <!-- the vertical separator -->
         <shape name="cover_separator" from="base_background_shape">
-            <area>185,546,1,163</area>
+            <area>185,541,1,163</area>
         </shape>
         
         <imagetype name="ratingstate_background" from="base_rating_background">
-            <position>980,565</position>
+            <position>980,560</position>
         </imagetype>
         <statetype name="ratingstate" from="base_rating">
-            <position>980,565</position>
+            <position>980,560</position>
         </statetype>
         
         <textarea name="title" from="base_textarea">
-            <area>200,560,770,30</area>
+            <area>200,555,770,30</area>
             <font>title</font>
             <scroll direction="horizontal" />
             <template>%TITLE%</template>
         </textarea>
         <textarea name="album" from="base_textarea">
-            <area>200,595,870,30</area>
+            <area>200,590,870,30</area>
             <scroll direction="horizontal" />
             <template>From the album %ALBUM% by the artist %ARTIST%</template>
         </textarea>
         <textarea name="nexttitle" from="base_textarea">
-            <area>200,630,600,30</area>
+            <area>200,625,600,30</area>
             <font>text_grey</font>
             <scroll direction="horizontal" />
             <template>Next: %NEXTTITLE% by %NEXTARTIST%</template>
         </textarea>
 
         <progressbar name="progress" from="base_progressbar">
-            <position>200,670</position>
+            <position>200,665</position>
         </progressbar>
         <textarea name="time" from="base_textarea">
-            <area>715,665,140,30</area>
+            <area>715,660,140,30</area>
         </textarea>
         
         <textarea name="lastplayed" from="base_textarea">
-            <area>820,630,250,30</area>
+            <area>820,625,250,30</area>
             <align>right,vcenter</align>
             <template>Last played: %1</template>
         </textarea>
         <textarea name="playcount" from="base_textarea">
-            <area>860,665,210,30</area>
+            <area>860,660,210,30</area>
             <align>right,vcenter</align>
             <template>Played %1 times</template>
         </textarea>
 
         <!-- the vertical separator -->
         <shape name="visualizer_separator" from="base_background_shape">
-            <area>1092,546,1,163</area>
+            <area>1092,541,1,163</area>
         </shape>
 
         <!-- the visualizer and the border around it -->
         <imagetype name="visualizer_background_image">
-            <area>1110,561,133,133</area>
+            <area>1110,556,133,133</area>
             <mask>images/shared/music/album_item_nfmask.png</mask>
             <filename>images/shared/music/default_visualization.png</filename>
             <preserveaspect>true</preserveaspect>
         </imagetype>
         <imagetype name="visualizer">
-            <area>1110,561,133,133</area>
+            <area>1110,556,133,133</area>
             <mask>images/shared/music/album_item_nfmask.png</mask>
             <preserveaspect>true</preserveaspect>
         </imagetype>
         <imagetype name="visualizer_border">
-            <area>1110,561,133,133</area>
+            <area>1110,556,133,133</area>
             <filename>images/shared/music/album_nfborder.png</filename>
         </imagetype>
         
@@ -157,7 +157,7 @@
             the focus from the playlist. If this button has focus 
             then the fast forward and backward action can be used -->
         <button name="musiccontrols" from="base_button">
-            <position>580,725</position>
+            <position>580,720</position>
         </button>
     </window>
 
@@ -180,32 +180,34 @@
         </textarea>
 
         <shape name="playlisteditorview_background" from="base_background_shape">
-            <area>20,50,1240,362</area>
+            <area>20,50,1240,410</area>
         </shape>
 
         <!-- shows path to current item and its position -->
         <textarea name="breadcrumbs" from="base_textarea">
-            <area>35,60,950,30</area>
+            <area>35,57,950,30</area>
             <cutdown>left</cutdown>
         </textarea>
         <textarea name="position" from="base_textarea">
-            <area>1050,60,190,30</area>
+            <area>1050,57,190,30</area>
             <align>right,vcenter</align>
         </textarea>
 
         <!-- shows the buttontree with the tracks, albums, ... -->
         <buttontree name="playlist_tree">
-            <area>35,95,1210,300</area>
+            <area>35,90,1210,300</area>
             <numlists>3</numlists>
             <spacing>10</spacing>
             <buttonlist name="listtemplate" from="base_buttonlist">
-                <area>0,0,395,277</area>
-                <spacing>1</spacing>
+                <area>0,0,395,354</area>
+                <spacing>3</spacing>
                 <statetype name="buttonitem">
                     <state name="active">
                         <area>0,0,395,36</area>
                     </state>
-                    <state name="inactive" from="active"/>
+                    <state name="inactive">
+                        <area>0,0,395,36</area>
+                    </state>
                     <state name="selectedactive">
                         <area>0,0,395,36</area>
                     </state>
@@ -224,12 +226,12 @@
 
         <!-- shows the current playlist -->
         <shape name="currentplaylist_tree_background" from="base_background_shape">
-            <area>20,430,1240,222</area>
+            <area>20,470,1240,190</area>
         </shape>
         <group name="current_playlist_group" from="base_current_playlist_group">
-            <position>35,445</position>
+            <position>35,485</position>
             <buttonlist name="currentplaylist">
-                <area>0,0,1210,195</area>
+                <area>0,0,1210,163</area>
             </buttonlist>
         </group>
 
@@ -653,19 +655,19 @@
         
         <!-- shows the current playlist -->
         <shape name="currentplaylist_tree_background" from="base_background_shape">
-            <area>20,505,1240,150</area>
+            <area>20,500,1240,152</area>
         </shape>
         <group name="current_playlist_group" from="base_current_playlist_group">
-            <position>35,523</position>
+            <position>35,515</position>
         </group>
 
         <!-- The currently playing track, time, song count 
              and other status information about the playlist -->
         <shape name="current_playlistinfo_background" from="base_background_shape">
-            <area>-15,670,1310,38</area>
+            <area>-15,665,1310,38</area>
         </shape>
         <group name="current_playlistinfo_group" from="base_current_playlistinfo_group">
-            <position>20,675</position>
+            <position>20,670</position>
         </group>
         
         <!-- This button is not visible and only included to take away 
