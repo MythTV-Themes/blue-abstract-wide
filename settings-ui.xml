@@ -25,12 +25,12 @@
         </textarea>
         
         <shape name="settings_background" from="base_background_shape">
-            <area>340,250,610,347</area>
+            <area>340,135,610,462</area>
         </shape>
 
         <!-- list with the search phrases -->
         <buttonlist name="settings" from="base_buttonlist">
-            <area>355,265,580,198</area>
+            <area>355,150,580,315</area>
             <statetype name="buttonitem">
                 <state name="active">
                     <area>0,0,580,36</area>
