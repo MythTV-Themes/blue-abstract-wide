@@ -175,7 +175,7 @@
 
         <!-- this is the background around the widgets for the manual schedule  -->
         <shape name="manual_schedule_background" from="base_background_shape">
-            <area>310,220,655,295</area>
+            <area>310,220,655,292</area>
         </shape>
 
         <!-- the labels -->
@@ -945,7 +945,7 @@
             <value>Last Recorded</value>
         </textarea>
         <textarea name="prioritylabel" from="callsignlabel">
-            <area>1155,50,90,36</area>
+            <area>1150,50,90,36</area>
             <value>Priority</value>
             <align>right,vcenter</align>
         </textarea>
@@ -1021,7 +1021,7 @@
         </textarea>
 
         <group name="program_details_group" from="base_program_details_group">
-            <position>20,540</position>            
+            <position>20,538</position>            
         </group>
     </window>
 
@@ -1043,7 +1043,7 @@
         </textarea>
         
         <shape name="customedit_background" from="base_background_shape">
-            <area>305,180,660,375</area>
+            <area>305,180,660,372</area>
         </shape>
 
         <textarea name="ruleslabel" from="base_textarea">
@@ -1138,7 +1138,7 @@
         </textarea>
         
         <shape name="schedule_button_background" from="base_background_shape">
-            <area>290,150,700,375</area>
+            <area>290,150,700,372</area>
         </shape>
 
         <!-- the buttons for the different options -->
@@ -1190,7 +1190,7 @@
         </button>
 
         <group name="program_details_group" from="base_program_details_group">
-            <position>20,540</position>            
+            <position>20,538</position>            
         </group>
     </window>
 
@@ -1213,7 +1213,7 @@
         </textarea>
 
         <shape name="schedule_button_background" from="base_background_shape">
-            <area>290,110,700,415</area>
+            <area>290,110,700,412</area>
         </shape>
         
         <spinbox name="priority" from="base_spinbox_very_wide">
@@ -1264,7 +1264,7 @@
         </button>
 
         <group name="program_details_group" from="base_program_details_group">
-            <position>20,540</position>            
+            <position>20,538</position>            
         </group>
     </window>
 
@@ -1287,7 +1287,7 @@
         </textarea>
         
         <shape name="schedule_button_background" from="base_background_shape">
-            <area>450,110,380,415</area>
+            <area>450,110,380,412</area>
         </shape>
         <buttonlist name="filters" from="base_buttonlist">
             <area>465,125,350,314</area>
@@ -1301,7 +1301,7 @@
         </button>
 
         <group name="program_details_group" from="base_program_details_group">
-            <position>20,540</position>            
+            <position>20,538</position>            
         </group>
     </window>
 
@@ -1324,7 +1324,7 @@
         </textarea>
 
         <shape name="schedule_button_background" from="base_background_shape">
-            <area>290,150,700,375</area>
+            <area>290,150,700,372</area>
         </shape>
 
         <buttonlist name="recprofile" from="base_selector_very_wide">
@@ -1370,7 +1370,7 @@
         </button>
         
         <group name="program_details_group" from="base_program_details_group">
-            <position>20,540</position>            
+            <position>20,538</position>            
         </group>
     </window>
 
@@ -1393,7 +1393,7 @@
         </textarea>
 
         <shape name="schedule_button_background" from="base_background_shape">
-            <area>290,190,700,335</area>
+            <area>290,190,700,332</area>
         </shape>
 
         <checkbox name="metadatalookup" from="base_checkbox">
@@ -1461,7 +1461,7 @@
         </button>
         
         <group name="program_details_group" from="base_program_details_group">
-            <position>20,540</position>            
+            <position>20,538</position>            
         </group>
     </window>
 
@@ -1565,7 +1565,7 @@
         </textarea>
 
         <shape name="metadata_button_background" from="base_background_shape">
-            <area>285,125,710,400</area>
+            <area>285,125,710,397</area>
         </shape>
 
         <!-- the buttons for the different options -->
@@ -1645,7 +1645,7 @@
         </button>
 
         <group name="program_details_group" from="base_program_details_group">
-            <position>20,540</position>            
+            <position>20,538</position>            
         </group>
     </window>
 
