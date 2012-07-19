@@ -239,46 +239,56 @@
 
 
 
-
+    <!-- DONE -->
     <!-- shows the title and the progress of 
          the current recording/movie/tv -->
     <window name="osd_status">
         <area>0,0,1280,720</area>
         
-        <!-- The clock that is shown at the top right of each screen -->
-        <shape name="clock_background">
-            <area>1040,-4,244,36</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="130" />
-            <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
-        </shape>
-        <clock name="text">
-            <area>1040,0,244,30</area>
-            <font>text</font>
-            <template>%DATE%, %TIME%</template>
-            <align>allcenter</align>
-        </clock>
+        <!-- The information and the clock that is 
+             shown at the top left of each screen -->       
+        <textarea name="base_heading">
+            <imagetype name="header_background">
+                <area>-1,-1,560,50</area>
+                <filename>images/widgets/header_left.png</filename>
+            </imagetype>
+            <clock name="clock">
+                <area>10,0,200,30</area>
+                <font>text</font>
+                <template>%DATE%, %TIME%</template>
+                <align>left,vcenter</align>
+            </clock>
+            <textarea name="text" from="base_textarea">
+                <area>215,0,300,30</area>
+                <align>left,vcenter</align>
+                <multiline>no</multiline>
+                <cutdown>no</cutdown>
+                <font>text</font>
+                <scroll direction="horizontal" />
+                <value>OSD Status</value>
+            </textarea>
+        </textarea>
 
         <!-- the background image of the popup dialog box -->
         <shape name="background">
-            <area>220,575,840,100</area>
+            <area>220,600,830,87</area>
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
 
         <textarea name="title">
-            <area>240,590,380,30</area>
+            <area>235,607,380,36</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
-            <cutdown>yes</cutdown>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal" />
             <font>text</font>
         </textarea>
         
         <textarea name="description">
-            <area>640,590,400,30</area>
+            <area>640,607,400,36</area>
             <align>right,vcenter</align>
             <multiline>no</multiline>
             <cutdown>yes</cutdown>
@@ -287,18 +297,22 @@
         </textarea>
 
         <progressbar name="position">
-            <area>240,635,800,20</area>
+            <area>235,650,800,20</area>
             <layout>horizontal</layout>
             <style>reveal</style>
-            <imagetype name="background">
-                <filename>images/widgets/progressbar/progressbar_inactive.png</filename>
+
+            <shape name="background">
                 <area>0,0,800,20</area>
-                <alpha>150</alpha>
-            </imagetype>
+                <type>roundbox</type>
+                <fill color="#535353" alpha="120" />
+                <line color="#535353" alpha="100" width="1" />
+                <cornerradius>8</cornerradius>
+            </shape>
+
             <imagetype name="progressimage">
-                <filename>images/widgets/progressbar/progressbar_active.png</filename>
                 <area>0,0,800,20</area>
-                <alpha>220</alpha>
+                <filename>images/widgets/progressbar/progressbar_active.png</filename>
+                <alpha>240</alpha>
             </imagetype>
         </progressbar>
     </window>
@@ -1128,110 +1142,135 @@
 
 
 
-
+    <!-- DONE -->
     <!-- dialog box that shows the most 
          important options and controls -->
     <window name="MythPopupBox">
     
+        <!--<animation trigger="AboutToShow">
+            <section centre="left" duration="250">
+                <alpha start="0" end="255" easingcurve="Linear"/>
+                <zoom start="50" end="100" easingcurve="OutQuart"/>
+                <position start="-150,0" end="0,0"/>
+            </section>
+        </animation>
+
+        <animation trigger="AboutToHide">
+            <section centre="left" duration="250">
+                <alpha start="255" end="0" easingcurve="Linear"/>
+                <zoom start="100" end="50" easingcurve="InQuart"/>
+                <position start="0,0" end="-150,0"/>
+            </section>
+        </animation>-->
+        
+        <!-- darkens the entire background so 
+             that the popup is better readable -->
+        <shape name="darken_background">
+            <type>box</type>
+            <fill color="#000000" alpha="110" />
+        </shape>
+        
         <!-- the background image of the popup dialog box -->
         <shape name="dialog_background">
-            <area>450,130,380,428</area>
+            <area>450,130,380,388</area>
             <type>roundbox</type>
             <fill color="#000000" alpha="210" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
 
-        <imagetype name="message_background">
-            <area>465,145,350,90</area>
-            <filename>images/widgets/popup_background.png</filename>
-            <alpha>220</alpha>
-        </imagetype>
-
-        <!-- the text that is shown in the popup box -->
-        <textarea name="messagearea" from="base_textarea">
-            <area>485,145,320,90</area>
-            <font>text</font>
-            <multiline>yes</multiline>
+        <textarea name="messagearea">
+            <area>465,140,350,60</area>
+            <value>Search Term</value>
             <align>allcenter</align>
+            <multiline>yes</multiline>
+            <font>text</font>
+            <scroll direction="vertical"/>
         </textarea>
 
+        <shape name="messagearea_separator">
+            <area>451,210,378,1</area>
+            <type>roundbox</type>
+            <fill color="#000000" alpha="130" />
+            <line color="#AAAAAA" alpha="150" width="1" />
+            <cornerradius>10</cornerradius>
+        </shape>
+
         <buttonlist name="list">
-            <area>465,275,350,268</area>
+            <area>465,225,350,275</area>
             <layout>vertical</layout>
             <spacing>3</spacing>
             <scrollstyle>free</scrollstyle>
             <wrapstyle>selection</wrapstyle>
-            <buttonarea>0,0,100%,97%</buttonarea>
-            
+            <buttonarea>0,0,100%,100%</buttonarea>
+        
             <!-- states that the buttonlist can have -->
             <statetype name="buttonitem">
         
                 <!-- active menu entry -->
                 <state name="active">
-                    <imagetype name="buttonbackground">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,350,40</area>
-                        <alpha>150</alpha>
-                    </imagetype>
+                    <area>0,0,350,36</area>
+                    
+                    <shape name="background">
+                        <area>0,0,100%,100%</area>
+                        <type>roundbox</type>
+                        <fill color="#535353" alpha="120" />
+                        <line color="#535353" alpha="100" width="1" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
                     
                     <!-- the button's text -->
                     <textarea name="buttontext">
-                        <area>8,5,300,30</area>
+                        <area>8,0,100%-16,36</area>
                         <font>text</font>
-                        <cutdown>yes</cutdown>
+                        <multiline>no</multiline>
+                        <cutdown>no</cutdown>
                         <align>left,vcenter</align>
+                        <scroll direction="horizontal" />
                     </textarea>
                     
                     <!-- indicates the button contains a submenu -->
                     <imagetype name="buttonarrow">
-                        <area>321,6,18,27</area>
-                        <filename>images/shared/arrow_right.png</filename>
+                        <position>100%-26,4</position>
                         <alpha>70</alpha>
+                        <filename>images/shared/arrow_right.png</filename>
                     </imagetype>
                 </state>
-
+                
                 <!-- inactive menu entry -->
-                <state name="inactive" from="active" />
-
+                <state name="inactive" from="active">
+                    <area>0,0,350,36</area>
+                </state>
+                
                 <!-- menu entry has been selected and is active -->
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,350,40</area>
-                        <alpha>220</alpha>
-                    </imagetype>
-                    <imagetype name="buttonarrow">
-                        <area>321,6,18,27</area>
-                        <filename>images/shared/arrow_right.png</filename>
-                        <alpha>220</alpha>
-                    </imagetype>
+                    <area>0,0,350,36</area>
+                    <shape name="background">
+                        <area>0,0,100%,100%</area>
+                        <type>roundbox</type>
+                        <fill color="#3697ef" alpha="220" />
+                        <line color="#3697ef" alpha="200" width="1" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
                 </state>
                 
                 <!-- menu entry has been selected and is inactive -->
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,350,40</area>
-                        <alpha>120</alpha>
-                    </imagetype>
-                    
-                    <textarea name="buttontext">
-                        <font>text_inactive</font>
-                    </textarea>
-                    
-                    <imagetype name="buttonarrow">
-                        <area>321,6,18,27</area>
-                        <filename>images/shared/arrow_right.png</filename>
-                        <alpha>120</alpha>
-                    </imagetype>
+                    <area>0,0,350,36</area>
+                    <shape name="background">
+                        <area>0,0,100%,100%</area>
+                        <type>roundbox</type>
+                        <fill color="#1d68e0" alpha="100" />
+                        <line color="#1d68e0" alpha="80" width="1" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
                 </state>
             </statetype>
             
             <!-- show arrows to indicates that there are
                 more menu entries above the first visible menu -->
             <statetype name="upscrollarrow">
-                <area>295,260,27,18</area>
+                <position>100%-55,100%-5</position>
                 <state type="off">
                     <imagetype name="upon">
                         <filename>images/shared/arrow_up.png</filename>
@@ -1241,7 +1280,7 @@
                 <state type="full">
                     <imagetype name="upoff">
                         <filename>images/shared/arrow_up.png</filename>
-                        <alpha>220</alpha>
+                        <alpha>240</alpha>
                     </imagetype>
                 </state>
             </statetype>
@@ -1249,7 +1288,7 @@
             <!-- show arrows to indicates that there are
                 more menu entries below the last visible menu -->
             <statetype name="downscrollarrow">
-                <area>320,260,27,18</area>
+                <position>100%-30,100%-5</position>
                 <state type="off">
                     <imagetype name="dnon">
                         <filename>images/shared/arrow_down.png</filename>
@@ -1259,12 +1298,11 @@
                 <state type="full">
                     <imagetype name="dnoff">
                         <filename>images/shared/arrow_down.png</filename>
-                        <alpha>220</alpha>
+                        <alpha>240</alpha>
                     </imagetype>
                 </state>
             </statetype>
         </buttonlist>
-
     </window>
     
 </mythuitheme>
