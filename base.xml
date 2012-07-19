@@ -545,123 +545,6 @@
 
 
 
-    <!-- button widget with a width of 70px -->
-    <!--<button name="base_button_narrow">
-        <area>0,0,70,36</area>
-        
-        <statetype name="buttonstate">
-            <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,70,36</area>
-                </imagetype>
-            </state>
-
-            <state name="selected" from="active">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,70,36</area>
-                </imagetype>
-            </state>
-
-            <state name="disabled" from="active" />
-
-            <state name="pushed" from="active">
-                <imagetype name="background" from="base_image_pushed">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,70,36</area>
-                </imagetype>
-            </state>
-        </statetype>
-    </button>-->
-
-
-
-
-    <!-- button widget that looks like a checkbox with a left arrow -->
-    <!--<button name="base_button_prev">
-        <area>0,0,36,36</area>
-        
-        <statetype name="buttonstate">
-            <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,36,36</area>
-                </imagetype>
-                <imagetype name="arrow" from="base_arrow_active">
-                    <position>4,1</position>
-                    <filename>images/shared/arrow_left.png</filename>
-                </imagetype>
-            </state>
-            
-            <state name="selected" from="active">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,36,36</area>
-                </imagetype>
-                <imagetype name="arrow" from="base_arrow_selected">
-                    <filename>images/shared/arrow_left.png</filename>
-                </imagetype>
-            </state>
-            
-            <state name="disabled" from="active" />
-            <state name="pushed" from="active">
-                <imagetype name="background" from="base_image_pushed">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,36,36</area>
-                </imagetype>
-                <imagetype name="arrow" from="base_arrow_pushed">
-                    <filename>images/shared/arrow_left.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-    </button>-->
-
-
-
-
-    <!-- button widget that looks like a checkbox with a right arrow -->
-    <!--<button name="base_button_next">
-        <area>0,0,36,36</area>
-        
-        <statetype name="buttonstate">
-            <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,36,36</area>
-                </imagetype>
-                <imagetype name="arrow" from="base_arrow_active">
-                    <position>4,1</position>
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-            
-            <state name="selected" from="active">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,36,36</area>
-                </imagetype>
-                <imagetype name="arrow" from="base_arrow_selected">
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-            
-            <state name="disabled" from="active" />
-            <state name="pushed" from="active">
-                <imagetype name="background" from="base_image_pushed">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,36,36</area>
-                </imagetype>
-                <imagetype name="arrow" from="base_arrow_pushed">
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-    </button>-->
-
-
-
-
 
     <!-- DONE -->
     <!-- textedit widget with a width 375px -->
@@ -1040,10 +923,6 @@
         
         <!-- the background when the progressbar has 0% -->
         <shape name="background" from="base_button_shape_active" />
-        <!--<imagetype name="background" from="base_image_active">
-            <filename>images/widgets/progressbar/progressbar_inactive.png</filename>
-            <area>0,0,500,20</area>
-        </imagetype>-->
         
         <!-- the image when the progressbar has 100% -->
         <imagetype name="progressimage" from="base_image_selected">
