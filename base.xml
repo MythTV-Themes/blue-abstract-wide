@@ -1401,6 +1401,10 @@
     
     
     
+    <!-- DONE -->
+    <!-- TODO - statetype add file and executable image -->
+    <!-- TODO - aspect ratio broken? -->
+    <!-- TODO - home and back images white -->
     <!-- Dialog that is used to select a file from the filesystem
          and show a preview of the file if it is an image 
          The dialog is like a full screen with a header and clock -->
@@ -1419,321 +1423,262 @@
             </textarea>
         </textarea>
 
+        <shape name="preview_background" from="base_background_shape">
+            <area>20,90,275,410</area>
+        </shape>
+
+        <!-- the preview image on the right side -->
+        <imagetype name="preview_background_image">
+            <area>35,105,245,355</area>
+            <mask>images/shared/video/movie_cover_mask.png</mask>
+            <filename>images/shared/video/default_movie.png</filename>
+            <preserveaspect>true</preserveaspect>
+            <alpha>180</alpha>
+        </imagetype>
+        <imagetype name="preview">
+            <area>35,105,245,355</area>
+            <mask>images/shared/video/movie_cover_mask.png</mask>
+        </imagetype>
+        <imagetype name="preview_border">
+            <area>35,105,245,355</area>
+            <filename>images/shared/video/movie_cover_nfborder.png</filename>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
+        <!-- information about the preview image -->
+        <textarea name="info" from="base_textarea">
+            <area>35,460,245,36</area>
+            <align>allcenter</align>
+        </textarea>
+        
         <!-- this is the background around the file browser -->
         <shape name="filebrowser_background" from="base_background_shape">
-            <area>80,80,1120,600</area>
+            <area>310,90,830,577</area>
         </shape>
 
         <!-- the filename -->
         <textarea name="filename_label" from="base_textarea">
-            <area>100,100,140,30</area>
+            <area>325,100,140,36</area>
             <align>right,vcenter</align>
-            <cutdown>yes</cutdown>
             <value>Filename:</value>
         </textarea>
 
         <textarea name="filename" from="base_textarea">
-            <area>250,100,650,30</area>
-            <cutdown>yes</cutdown>
-            <align>left,vcenter</align>
-            <font>text</font>
+            <area>475,100,650,36</area>
             <value>Filename</value>
+            <scroll direction="horizontal" />
         </textarea>
 
         <!-- the path where the files are -->
         <textarea name="location_label" from="base_textarea">
-            <area>100,140,140,40</area>
+            <area>325,140,140,36</area>
             <align>right,vcenter</align>
-            <cutdown>yes</cutdown>
             <value>Directory:</value>
         </textarea>
 
         <textedit name="location" from="base_textedit_wide">
-            <position>250,140</position>
+            <position>475,140</position>
         </textedit>
 
         <!-- the buttons to go back or to the users home dir -->
         <button name="back" from="base_button">
-            <position>1030,140</position>
-            <imagetype name="folderimage">
-                <area>18,3,34,34</area>
-                <filename>images/shared/back.png</filename>
-                <preserveaspect>yes</preserveaspect>
-            </imagetype>
+            <area>1000,140,54,36</area>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_image_active">
+                        <filename>images/shared/back.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_image_selected">
+                        <filename>images/shared/back.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="disabled">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_image_disabled">
+                        <filename>images/shared/back.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="pushed">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_image_pushed">
+                        <filename>images/shared/back.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+            </statetype>
         </button>
-        
+
         <button name="home" from="base_button">
-            <position>1110,140</position>
-            <imagetype name="folderimage">
-                <area>18,4,34,34</area>
-                <filename>images/shared/folder_up_open.png</filename>
-                <preserveaspect>yes</preserveaspect>
-            </imagetype>
+            <area>1070,140,54,36</area>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_image_active">
+                        <filename>images/shared/folder_up_open.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_image_selected">
+                        <filename>images/shared/folder_up_open.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="disabled">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_image_disabled">
+                        <filename>images/shared/folder_up_open.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="pushed">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_image_pushed">
+                        <filename>images/shared/folder_up_open.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+            </statetype>
         </button>
 
         <!-- separates the result text from the buttons -->
         <shape name="filename_separator" from="base_background_shape">
-            <area>100,200,1080,1</area>
+            <area>311,190,828,1</area>
         </shape>
 
         <!-- the list of the available videos -->
         <buttonlist name="filelist">
-            <area>100,220,815,380</area>
+            <area>325,205,820,400</area>
             <layout>grid</layout>
-            <spacing>18</spacing>
-            <wrapstyle>flowing</wrapstyle>
-            <buttonarea>0,0,815,380</buttonarea>
+            <spacing>1</spacing>
+            <buttonarea>0,0,100%,100%</buttonarea>
+            
             <statetype name="buttonitem">
                 <state name="active">
-                    <area>0,0,116,170</area>
 
-                    <!-- this is a background and the name of the video behind the cover -->
-                    <shape name="buttonimage_background_shape" from="base_background_shape">
-                        <area>2,2,114,168</area>
-                        <line color="#000000" alpha="0" width="1" />
-                    </shape>
-                    <textarea name="buttontext">
-                        <area>6,6,104,158</area>
-                        <font>text_small</font>
-                        <align>allcenter</align>
-                        <cutdown>yes</cutdown>
-                        <multiline>yes</multiline>
-                    </textarea>
-
-                    <!-- this is the cover image that will be shown if its
-                        available, otherwise only the border is visible -->
-                    <imagetype name="buttonimage">
-                        <area>1,1,114,168</area>
+                    <imagetype name="background_image">
+                        <area>0,0,133,192</area>
+                        <mask>images/shared/video/movie_item_nfmask.png</mask>
+                        <filename>images/shared/video/default_movie.png</filename>
                         <preserveaspect>true</preserveaspect>
-                        <shape name="buttonimage_border_shape">
-                            <area>0,0,116,170</area>
-                            <type>roundbox</type>
-                            <line color="#AAAAAA" alpha="255" width="1" />
-                            <cornerradius>1</cornerradius>
-                        </shape>
+                        <alpha>180</alpha>
                     </imagetype>
 
-                    <!-- the statetypes of the node -->
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>15,15,100,20</area>
+                    </textarea>
+                    
+                    <!-- this is the actual cover image that will be shown if its
+                        available, otherwise only the background image is visible -->
+                    <imagetype name="buttonimage">
+                        <area>0,0,133,192</area>
+                        <mask>images/shared/video/movie_item_nfmask.png</mask>
+                    </imagetype>
+
+                    <!-- the node is a folder and it is currently not selected -->
                     <statetype name="nodetype">
                         <position>0,0</position>
-                        
-                        <!-- the node is a subfolder -->
                         <state name="subfolder">
-                            <shape name="icon_background_shape" from="base_background_shape">
-                                <area>2,138,114,32</area>
-                                <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
-                            </shape>
-                            <imagetype name="icon">
-                                <area>8,142,24,24</area>
+                            <imagetype name="node_icon">
+                                <area>12,160,24,24</area>
                                 <filename>images/shared/folder.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
-                        
-                        <!-- the node is the one that goes one directry up -->
                         <state name="upfolder">
-                            <shape name="icon_background_shape" from="base_background_shape">
-                                <area>2,138,114,32</area>
-                                <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
-                            </shape>
-                            <imagetype name="icon">
-                                <area>8,142,24,24</area>
+                            <imagetype name="node_icon">
+                                <area>12,160,24,24</area>
                                 <filename>images/shared/folder_up.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
-                        
-                        <!-- the node is a file -->
-                        <state name="file">
-                            <shape name="icon_background_shape" from="base_background_shape">
-                                <area>2,138,114,32</area>
-                                <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
-                            </shape>
-                            <imagetype name="icon">
-                                <area>8,142,24,24</area>
-                                <filename>images/shared/folder_open.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
-                    
-                        <!-- the node is a executable file -->
-                        <state name="executable">
-                            <shape name="icon_background_shape" from="base_background_shape">
-                                <area>2,138,114,32</area>
-                                <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
-                            </shape>
-                            <imagetype name="icon">
-                                <area>8,142,24,24</area>
-                                <filename>images/shared/folder_open.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
+                        <state name="file" />
+                        <state name="executable" />
                     </statetype>
+                    
+                    <imagetype name="background_image_border">
+                        <area>0,0,133,192</area>
+                        <filename>images/shared/video/movie_nfborder.png</filename>
+                    </imagetype>
                 </state>
 
-                <state name="inactive" from="active" />
+                <!-- These two states are not used -->
+                <state name="inactive" from="active"/>
+                <state name="selectedinactive" from="active"/>
                     
-                <state name="selectedactive" from="active">
-                    <area>-27,-39,170,248</area>
-
-                    <!-- this is a background and the name of the video behind the cover -->
-                    <shape name="buttonimage_background_shape" from="base_background_shape_dark">
-                        <area>2,2,168,246</area>
-                        <line color="#000000" alpha="0" width="1" />
-                    </shape>
-                    <textarea name="buttontext">
-                        <area>6,6,158,236</area>
-                        <font>text_small</font>
-                        <align>allcenter</align>
-                        <cutdown>yes</cutdown>
-                        <multiline>yes</multiline>
-                    </textarea>
-
-                    <!-- this is the cover image that will be shown if its
-                        available, otherwise only the borders are visible -->
-                    <imagetype name="buttonimage">
-                        <area>1,1,168,246</area>
+                <state name="selectedactive">
+                    <area>-26,-37,133,192</area>
+                    
+                    <imagetype name="background_image">
+                        <area>0,0,185,267</area>
+                        <mask>images/shared/video/movie_item_fmask.png</mask>
+                        <filename>images/shared/video/default_movie.png</filename>
                         <preserveaspect>true</preserveaspect>
-                        <shape name="buttonimage_border_shape">
-                            <area>0,0,170,248</area>
-                            <type>roundbox</type>
-                            <line color="#AAAAAA" alpha="255" width="2" />
-                            <cornerradius>2</cornerradius>
-                        </shape>
+                        <alpha>220</alpha>
                     </imagetype>
 
-                    <!-- the statetypes of the node -->
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>20,20,150,20</area>
+                    </textarea>
+                    
+                    <!-- this is the actual cover image that will be shown if its
+                        available, otherwise only the background image is visible -->
+                    <imagetype name="buttonimage">
+                        <area>0,0,185,267</area>
+                        <mask>images/shared/video/movie_item_fmask.png</mask>
+                    </imagetype>
+
+                    <!-- the node is a folder and it is currently selected -->
                     <statetype name="nodetype">
                         <position>0,0</position>
-                        
-                        <!-- the node is a subfolder -->
                         <state name="subfolder">
-                            <shape name="icon_background_shape" from="base_background_shape">
-                                <area>3,212,166,36</area>
-                                <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
-                            </shape>
-                            <imagetype name="icon">
-                                <area>9,216,30,30</area>
+                            <imagetype name="node_icon">
+                                <area>16,225,30,30</area>
                                 <filename>images/shared/folder_open.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
-                        
-                        <!-- the node is the one that goes one directry up -->
                         <state name="upfolder">
-                            <shape name="icon_background_shape" from="base_background_shape">
-                                <area>3,212,166,36</area>
-                                <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
-                            </shape>
-                            <imagetype name="icon">
-                                <area>9,216,30,30</area>
+                            <imagetype name="node_icon">
+                                <area>16,225,30,30</area>
                                 <filename>images/shared/folder_up_open.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
-                        
-                        <!-- the node is a file -->
-                        <state name="file">
-                            <shape name="icon_background_shape" from="base_background_shape">
-                                <area>3,212,166,36</area>
-                                <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
-                            </shape>
-                            <imagetype name="icon">
-                                <area>9,216,30,30</area>
-                                <filename>images/shared/folder_open.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
-                    
-                        <!-- the node is a executable file -->
-                        <state name="executable">
-                            <shape name="icon_background_shape" from="base_background_shape">
-                                <area>3,212,166,36</area>
-                                <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
-                            </shape>
-                            <imagetype name="icon">
-                                <area>9,216,30,30</area>
-                                <filename>images/shared/folder_open.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
+                        <state name="file" />
+                        <state name="executable" />
                     </statetype>
-                </state>
-                
-                <state name="selectedinactive" from="active" />
-            </statetype>
-            
-            <!-- Show the arrow image that indicates that there are
-                more menu entries above the first visible menu -->
-            <statetype name="upscrollarrow">
-                <position>795,0</position>
-                <state type="off">
-                    <imagetype name="upon">
-                        <filename>images/shared/arrow_up.png</filename>
-                        <alpha>90</alpha>
+
+                    <imagetype name="background_image_border">
+                        <area>0,0,185,267</area>
+                        <filename>images/shared/video/movie_fborder.png</filename>
                     </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="upoff">
-                        <filename>images/shared/arrow_up.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-            
-            <!-- Show the arrow image that indicates that there are
-                more menu entries below the last visible menu -->
-            <statetype name="downscrollarrow">
-                <position>795,342</position>
-                <state type="off">
-                    <imagetype name="dnon">
-                        <filename>images/shared/arrow_down.png</filename>
-                        <alpha>90</alpha>
-                    </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="dnoff">
-                        <filename>images/shared/arrow_down.png</filename>
-                    </imagetype>
+
                 </state>
             </statetype>
         </buttonlist>
 
-        <!-- the preview image on the right side -->
-        <shape name="preview_shape" from="base_background_shape">
-            <area>955,220,225,330</area>
-        </shape>
-        <imagetype name="preview">
-            <area>957,222,221,326</area>
-            <preserveaspect>true</preserveaspect>
-        </imagetype>
         
-        <!-- information about the preview image -->
-        <textarea name="info" from="base_textarea">
-            <area>955,560,225,25</area>
-            <align>allcenter</align>
-            <font>text_small</font>
-        </textarea>
-
         <!-- separates the result text from the buttons -->
         <shape name="button_separator" from="base_background_shape">
-            <area>100,600,1080,1</area>
+            <area>311,600,828,1</area>
         </shape>
 
         <!-- buttons -->
         <button name="ok" from="base_button">
-            <position>485,620</position>
+            <position>570,615</position>
             <value>OK</value>
         </button>
         <button name="cancel" from="base_button">
-            <position>655,620</position>
+            <position>735,615</position>
             <value>Cancel</value>
         </button>
     </window>
