@@ -92,7 +92,7 @@
                     <area>0,0,865,36</area>
 
                     <imagetype name="buttonimage">
-                        <area>5,4,28,28</area>                        
+                        <area>5,4,28,28</area>
                         <filename />
                     </imagetype>
                     <shape name="buttonimage_background" from="base_background_shape">
