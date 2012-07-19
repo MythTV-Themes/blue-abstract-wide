@@ -585,7 +585,7 @@
         
         <!-- the shape where the video cover and primary settings are shown -->
         <shape name="top_background" from="base_background_shape">
-            <area>310,90,955,575</area>
+            <area>310,90,955,572</area>
         </shape>
 
         <!-- the labels that are in the middle -->
@@ -709,26 +709,17 @@
             <position>885,105</position>
             <value>Plot:</value>
         </textarea>
-        <textedit name="description_edit">
+        <textedit name="description_edit" from="base_textedit">
             <area>885,140,365,120</area>
             <statetype name="background">
                 <state name="active">
-                    <imagetype name="background" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,365,150</area>
-                    </imagetype>
+                    <area>0,0,365,150</area>
                 </state>
                 <state name="selected">
-                    <imagetype name="background" from="base_image_selected">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,365,150</area>
-                    </imagetype>
+                    <area>0,0,365,150</area>
                 </state>
                 <state name="inactive">
-                    <imagetype name="background" from="base_image_inactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,365,150</area>
-                    </imagetype>
+                    <area>0,0,365,150</area>
                 </state>
             </statetype>
             <imagetype name="cursor">
@@ -810,40 +801,19 @@
             <area>885,505,300,36</area>
             <value>Player Command:</value>
         </textarea>
-        <textedit name="player_edit">
+        <textedit name="player_edit" from="base_textedit">
             <area>885,545,365,36</area>
             <statetype name="background">
                 <state name="active">
-                    <imagetype name="background" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,365,36</area>
-                    </imagetype>
+                    <area>0,0,365,36</area>
                 </state>
                 <state name="selected">
-                    <imagetype name="background" from="base_image_selected">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,365,36</area>
-                    </imagetype>
+                    <area>0,0,365,36</area>
                 </state>
                 <state name="inactive">
-                    <imagetype name="background" from="base_image_inactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,365,36</area>
-                    </imagetype>
+                    <area>0,0,365,36</area>
                 </state>
             </statetype>
-            <imagetype name="cursor">
-                <shape name="cursor_shape">
-                    <area>0,2,2,20</area>
-                    <type>box</type>
-                    <fill color="#FFFFFF" alpha="240" />
-                </shape>
-            </imagetype>
-            <textarea name="text" from="base_textarea">
-                <area>8,8,100%-8,36</area>
-                <align>top,left</align>
-                <multiline>true</multiline>
-            </textarea>
         </textedit>
 
         <shape name="button_separator" from="base_background_shape">
