@@ -101,14 +101,14 @@
                         <state name="no">
                             <imagetype name="watchedoff">
                                 <area>813,3,31,31</area>
-                                <filename>images/shared/recordings/watched.png</filename>
+                                <filename>images/shared/selected.png</filename>
                                 <alpha>50</alpha>
                             </imagetype>
                         </state>
                         <state name="yes">
                             <imagetype name="watched">
                                 <area>813,3,31,31</area>
-                                <filename>images/shared/recordings/watched.png</filename>
+                                <filename>images/shared/selected.png</filename>
                             </imagetype>
                         </state>
                     </statetype>
@@ -242,14 +242,14 @@
                         <state name="no">
                             <imagetype name="watchedoff">
                                 <area>813,3,31,31</area>
-                                <filename>images/shared/recordings/watched.png</filename>
+                                <filename>images/shared/selected.png</filename>
                                 <alpha>50</alpha>
                             </imagetype>
                         </state>
                         <state name="yes">
                             <imagetype name="watched">
                                 <area>813,3,31,31</area>
-                                <filename>images/shared/recordings/watched.png</filename>
+                                <filename>images/shared/selected.png</filename>
                             </imagetype>
                         </state>
                     </statetype>
@@ -640,7 +640,7 @@
                         </state>
                         <state name="watched">
                             <imagetype name="statusimage">
-                                <filename>images/shared/recordings/watched.png</filename>
+                                <filename>images/shared/selected.png</filename>
                                 <area>6,1,33,33</area>
                             </imagetype>
                         </state>

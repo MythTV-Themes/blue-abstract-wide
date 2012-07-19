@@ -80,7 +80,7 @@
                                 <line color="#000000" alpha="0" width="1" />
                             </shape>
                             <imagetype name="marked">
-                                <filename>images/shared/file_marked.png</filename>
+                                <filename>images/shared/selected.png</filename>
                             </imagetype>
                         </state>
                     </statetype>
@@ -173,7 +173,7 @@
                                 <line color="#000000" alpha="0" width="1" />
                             </shape>
                             <imagetype name="marked">
-                                <filename>images/shared/file_marked.png</filename>
+                                <filename>images/shared/selected.png</filename>
                             </imagetype>
                         </state>
                     </statetype>

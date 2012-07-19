@@ -127,13 +127,13 @@
                         <state name="yes">
                             <imagetype name="homepage">
                                 <area>613,3,31,31</area>
-                                <filename>images/shared/browser/homepage.png</filename>
+                                <filename>images/shared/selected.png</filename>
                             </imagetype>
                         </state>
                         <state name="no">
                             <imagetype name="homepage">
                                 <area>613,3,31,31</area>
-                                <filename>images/shared/browser/homepage.png</filename>
+                                <filename>images/shared/selected.png</filename>
                                 <alpha>50</alpha>
                             </imagetype>
                         </state>

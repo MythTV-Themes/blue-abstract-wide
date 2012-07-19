@@ -125,14 +125,14 @@
                     <statetype name="themelocation">
                         <state name="local">
                             <imagetype name="location">
-                                <area>405,3,31,31</area>
-                                <filename>images/shared/recordings/watched.png</filename>
+                                <area>405,3,30,30</area>
+                                <filename>images/shared/selected.png</filename>
                             </imagetype>
                         </state>
                         <state name="remote">
                             <imagetype name="location">
-                                <area>405,3,31,31</area>
-                                <filename>images/shared/recordings/watched.png</filename>
+                                <area>405,3,30,30</area>
+                                <filename>images/shared/selected.png</filename>
                                 <alpha>50</alpha>
                             </imagetype>
                         </state>
@@ -141,22 +141,22 @@
                     <!-- State to indicate whether an installed 
                         downloadable theme is up to date or not -->
                     <imagetype name="status">
-                        <area>443,3,31,31</area>
-                        <filename>images/shared/recordings/watched.png</filename>
+                        <area>443,3,30,30</area>
+                        <filename>images/shared/selected.png</filename>
                         <alpha>50</alpha>
                     </imagetype>
                     <statetype name="themestatus">
                         <state name="uptodate">
                             <imagetype name="status">
-                                <area>443,5,31,31</area>
-                                <filename>images/shared/recordings/watched.png</filename>
+                                <area>443,3,30,30</area>
+                                <filename>images/shared/selected.png</filename>
                                 <alpha>50</alpha>
                             </imagetype>
                         </state>
                         <state name="updateavailable">
                             <imagetype name="status">
-                                <area>443,5,31,31</area>
-                                <filename>images/shared/recordings/watched.png</filename>
+                                <area>443,3,30,30</area>
+                                <filename>images/shared/selected.png</filename>
                             </imagetype>
                         </state>
                     </statetype>
