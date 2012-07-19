@@ -1150,24 +1150,21 @@
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
-            <area>350,300,580,110</area>
+            <area>350,300,580,90</area>
         </shape>
-        <shape name="busy_separator" from="base_background_shape">
-            <area>460,301,1,108</area>
-        </shape>
-        
-        <imagetype name="animation">
-            <area>380,330,50,50</area>
-            <filepattern low="0" high="11">images/widgets/busy/busy_%1.png</filepattern>
-            <delay>100</delay>
-        </imagetype>
 
         <textarea name="message" from="base_textarea">
-            <area>475,310,455,90</area>
+            <area>365,310,550,60</area>
             <align>allcenter</align>
             <multiline>yes</multiline>
             <scroll direction="vertical"/>
         </textarea>
+
+        <imagetype name="animation">
+            <area>610,370,60,10</area>
+            <filepattern low="1" high="5">images/widgets/busy/busy_%1.png</filepattern>
+            <delay>100</delay>
+        </imagetype>
     </window>
 
 
