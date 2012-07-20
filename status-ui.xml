@@ -54,15 +54,10 @@
         </buttonlist>
         
         <!-- shows some information text about the current selection -->
-        <shape name="helptext_background_bottom" from="base_background_shape">
-            <area>-15,615,1310,90</area>
-        </shape>
-        <textarea name="helptext" from="base_textarea">
-            <area>120,615,1040,90</area>
-            <scroll direction="vertical"/>
-            <align>allcenter</align>
-            <multiline>yes</multiline>
-        </textarea>
+        <group name="base_helptext_group" from="base_helptext_group">
+            <position>0,615</position>
+        </group>
+
     </window>
 
 
@@ -111,6 +106,7 @@
                 </textarea>
             </state>
         </statetype>
+
     </window>
 
 </mythuitheme>

@@ -27,6 +27,7 @@
         <shape name="streamlist_background" from="base_background_shape">
             <area>20,50,330,480</area>
         </shape>
+
         <buttonlist name="streamlist" from="base_buttonlist">
             <area>35,68,300,450</area>
             <spacing>3</spacing>
@@ -53,10 +54,9 @@
                         <font>text_small</font>
                         <scroll direction="horizontal" />
                     </textarea>
-                    <!--<textarea name="genre" from="base_textarea">
-                        <area>780,3,365,30</area>
-                        <scroll direction="horizontal" />
-                    </textarea>-->
+
+                    <!-- optional textarea name="genre" -->
+
                     <statetype name="playstate" from="base_music_playstate">
                         <area>270,3,30,30</area>
                     </statetype>
@@ -181,10 +181,12 @@
             <font>title</font>
             <scroll direction="horizontal" />
         </textarea>
+
         <textarea name="artist" from="base_textarea">
             <area>200,595,870,30</area>
             <scroll direction="horizontal" />
         </textarea>
+
         <textarea name="channel" from="base_textarea">
             <area>200,630,600,30</area>
             <font>text_grey</font>
@@ -195,6 +197,7 @@
         <progressbar name="bufferprogress" from="base_progressbar">
             <position>200,670</position>
         </progressbar>
+
         <textarea name="bufferstatus" from="base_textarea">
             <area>715,665,140,30</area>
         </textarea>
@@ -204,6 +207,7 @@
             <align>right,vcenter</align>
             <template>Last played: %1</template>
         </textarea>
+
         <textarea name="playcount" from="base_textarea">
             <area>860,665,210,30</area>
             <align>right,vcenter</align>
@@ -267,9 +271,11 @@
             <align>right,vcenter</align>
             <value>Station:</value>
         </textarea>
+
         <textedit name="stationedit" from="base_textedit">
             <position>510,210</position>
         </textedit>
+
         <button name="searchbutton" from="base_searchbutton">
             <position>895,210</position>
         </button>
@@ -358,6 +364,7 @@
             <align>right,vcenter</align>
             <value>Station:</value>
         </textarea>
+
         <buttonlist name="stationlist" from="base_selector_wide">
             <position>350,105</position>
         </buttonlist>
@@ -450,6 +457,7 @@
                 <position>100%-55,100%-10</position>
             </statetype>
         </buttonlist>
+
     </window>
 
 </mythuitheme>

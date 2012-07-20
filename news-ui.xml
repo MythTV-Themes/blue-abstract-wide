@@ -50,15 +50,6 @@
             <area>20,540,1240,165</area>
         </shape>
 
-        <!-- the shape around the thumbnail -->
-        <!--<shape name="thumbnail_shape" from="base_background_shape">
-            <area>132,527,174,130</area>
-        </shape>
-        <imagetype name="thumbnail">
-            <area>134,528,170,129</area>
-            <preserveaspect>true</preserveaspect>
-        </imagetype>-->
-
         <textarea name="title" from="base_textarea">
             <area>35,550,960,36</area>
             <font>title</font>
@@ -68,36 +59,11 @@
             <area>35,580,900,36</area>
         </textarea>     
 
-        <!-- status icons -->
-        <!--<imagetype name="download_background">
-            <filename>images/shared/news/need-download.png</filename>
-            <position>1025,521</position>
-            <alpha>60</alpha>
-        </imagetype>
-        <imagetype name="download" from="base_image_active">
-            <filename>images/shared/news/need-download.png</filename>
-            <position>1025,521</position>
-        </imagetype>
-
-        <imagetype name="enclosures_background">
-            <filename>images/shared/news/enclosures.png</filename>
-            <position>1070,520</position>
-            <alpha>60</alpha>
-        </imagetype>
-        <imagetype name="enclosures" from="base_image_active">
-            <filename>images/shared/news/enclosures.png</filename>
-            <position>1070,520</position>
-        </imagetype>
-
-        <imagetype name="ispodcast_background">
-            <filename>images/shared/news/podcast.png</filename>
-            <position>1115,520</position>
-            <alpha>60</alpha>
-        </imagetype>
-        <imagetype name="ispodcast" from="base_image_active">
-            <filename>images/shared/news/podcast.png</filename>
-            <position>1115,520</position>
-        </imagetype>-->
+        <!-- optional status icons -->
+        <!-- imagetype name="thumbnail"
+             imagetype name="download"
+             imagetype name="enclosures"
+             imagetype name="ispodcast" -->
 
         <shape name="description_separator" from="base_background_shape">
             <area>21,617,1238,1</area>
@@ -109,6 +75,7 @@
             <scroll direction="vertical" />
             <align>left,bottom</align>
         </textarea>
+
     </window>
 
 
@@ -139,6 +106,7 @@
             <align>allcenter</align>
             <scroll direction="vertical" />
         </textarea>
+
         <shape name="title_separator" from="base_background_shape">
             <area>301,265,668,1</area>
         </shape>
@@ -186,6 +154,7 @@
             <position>650,465</position>
             <value>Cancel</value>
         </button>
+
     </window>
 
 
@@ -214,6 +183,7 @@
             <value>Available Categories</value>
             <font>text_small</font>
         </textarea>
+
         <textarea name="sites_label" from="base_textarea">
             <area>572,100,350,20</area>
             <value>Available Sites</value>
@@ -223,6 +193,7 @@
         <buttonlist name="category" from="base_buttonlist">
             <area>210,125,350,512</area>
         </buttonlist>
+
         <buttonlist name="sites" from="base_buttonlist">
             <area>570,125,480,512</area>
             <statetype name="buttonitem">
@@ -240,6 +211,7 @@
                 </state>
             </statetype>
         </buttonlist>
+
     </window>
 
 </mythuitheme>

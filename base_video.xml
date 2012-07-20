@@ -24,6 +24,7 @@
             <filename>images/shared/video/movie_cover_nfborder.png</filename>
             <preserveaspect>true</preserveaspect>
         </imagetype>
+
     </group>
     
     
@@ -67,7 +68,7 @@
             <area>380,1,1,393</area>
         </shape>
 
-         <!-- show the description to the different details -->
+         <!-- shows the description to the different details -->
         <textarea name="director_label" from="base_textarea" depends="director">
             <area>395,15,130,30</area>
             <align>left,vcenter</align>
@@ -98,7 +99,7 @@
             <value>Parental Level:</value>
         </textarea>
 
-        <!-- show the values to the different details -->
+        <!-- shows the values to the different details -->
         <textarea name="director" from="base_textarea">
             <area>535,15,170,30</area>
             <scroll direction="vertical" />
@@ -136,6 +137,7 @@
         <statetype name="videolevel" from="base_parentallevel">
             <position>610,356</position>
         </statetype>
+
     </group>
         
         
@@ -179,6 +181,7 @@
             <scroll direction="vertical" />
             <align>left,top</align>
         </textarea>
+
     </group>
 
 
@@ -198,7 +201,7 @@
             <align>right,vcenter</align>
         </textarea>
         
-        <!-- show the description to the different details -->
+        <!-- shows the description to the different details -->
         <textarea name="director_label" from="base_textarea" depends="director">
             <area>0,15,140,30</area>
             <align>right,vcenter</align>
@@ -233,7 +236,7 @@
             <value>Parental Level:</value>
         </textarea>
         
-        <!-- show the values to the different details -->
+        <!-- shows the values to the different details -->
         <textarea name="director" from="base_textarea">
             <area>145,15,180,30</area>
             <scroll direction="horizontal" />
@@ -265,6 +268,7 @@
         <statetype name="videolevel" from="base_parentallevel">
             <position>405,170</position>
         </statetype>
+
     </group>
     
     
@@ -326,12 +330,6 @@
                     <statetype name="nodetype">
                         <position>0,0</position>
                         <state name="subfolder">
-                            <!--<imagetype name="node_image">
-                                <area>0,0,133,192</area>
-                                <mask>images/shared/video/movie_item_nfmask.png</mask>
-                                <filename>images/shared/video/default_movie.png</filename>
-                                <preserveaspect>true</preserveaspect>
-                            </imagetype>-->
                             <imagetype name="node_icon">
                                 <area>12,160,24,24</area>
                                 <filename>images/shared/folder.png</filename>
@@ -339,12 +337,6 @@
                             </imagetype>
                         </state>
                         <state name="upfolder">
-                            <!--<imagetype name="node_image">
-                                <area>0,0,133,192</area>
-                                <mask>images/shared/video/movie_item_nfmask.png</mask>
-                                <filename>images/shared/video/default_movie.png</filename>
-                                <preserveaspect>true</preserveaspect>
-                            </imagetype>-->
                             <imagetype name="node_icon">
                                 <area>12,160,24,24</area>
                                 <filename>images/shared/folder_up.png</filename>
@@ -358,7 +350,7 @@
                         <filename>images/shared/video/movie_nfborder.png</filename>
                     </imagetype>
                     
-                    <!-- show how many videos / directories are in this directory -->
+                    <!-- shows how many videos / directories are in this directory -->
                     <textarea name="childcount" from="base_textarea">
                         <area>42,163,60,20</area>
                     </textarea>
@@ -412,12 +404,6 @@
                     <statetype name="nodetype">
                         <position>0,0</position>
                         <state name="subfolder">
-                            <!--<imagetype name="node_image">
-                                <area>0,0,185,267</area>
-                                <mask>images/shared/video/movie_item_fmask.png</mask>
-                                <filename>images/shared/video/default_movie.png</filename>
-                                <preserveaspect>true</preserveaspect>
-                            </imagetype>-->
                             <imagetype name="node_icon">
                                 <area>16,225,30,30</area>
                                 <filename>images/shared/folder_open.png</filename>
@@ -425,12 +411,6 @@
                             </imagetype>
                         </state>
                         <state name="upfolder">
-                            <!--<imagetype name="node_image">
-                                <area>0,0,185,267</area>
-                                <mask>images/shared/video/movie_item_fmask.png</mask>
-                                <filename>images/shared/video/default_movie.png</filename>
-                                <preserveaspect>true</preserveaspect>
-                            </imagetype>-->
                             <imagetype name="node_icon">
                                 <area>16,225,30,30</area>
                                 <filename>images/shared/folder_up_open.png</filename>
@@ -444,13 +424,14 @@
                         <filename>images/shared/video/movie_fborder.png</filename>
                     </imagetype>
                     
-                    <!-- show how many videos / directories are in this directory -->
+                    <!-- shows how many videos / directories are in this directory -->
                     <textarea name="childcount" from="base_textarea">
                         <area>52,230,66,20</area>
                     </textarea>
                 </state>
             </statetype>
         </buttonlist>
+
     </group>
     
 </mythuitheme>

@@ -116,6 +116,7 @@
                     <textarea name="childcount" from="base_textarea" depends="subfolder_icon">
                         <area>55,16,80,30</area>
                     </textarea>
+
                 </state>
             </statetype>
         </buttonlist>        
@@ -188,6 +189,7 @@
             <scroll direction="vertical"/>
             <align>left,top</align>
         </textarea>
+
     </group>
 
 </mythuitheme> 

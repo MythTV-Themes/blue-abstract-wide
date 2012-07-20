@@ -19,6 +19,7 @@
             <align>allcenter</align>
             <scroll direction="vertical" />
         </textarea>
+
         <shape name="title_separator" from="base_background_shape">
             <area>451,230,378,1</area>
         </shape>
@@ -26,6 +27,7 @@
         <buttonlist name="cast" from="base_buttonlist">
             <area>465,245,350,275</area>
         </buttonlist>
+
     </window>
 
 
@@ -70,6 +72,7 @@
             <position>570,525</position>
             <value>Back</value>
         </button>
+
     </window>
 
 
@@ -145,6 +148,7 @@
                 <buttonarea>0,0,1240,580</buttonarea>
             </buttonlist>
         </group>
+
     </window>
 
 
@@ -185,6 +189,7 @@
                 <buttonarea>0,0,1240,200</buttonarea>
             </buttonlist>
         </group>
+
     </window>
 
 
@@ -226,6 +231,7 @@
         <group name="video_details_group" from="base_video_details_group">
             <position>760,490</position>
         </group>
+
     </window>
 
 
@@ -288,6 +294,7 @@
         <group name="video_details_group" from="base_video_details_group">
             <position>760,490</position>
         </group>
+
     </window>
 
 
@@ -365,6 +372,7 @@
         <group name="base_helptext_group" from="base_helptext_group">
             <position>0,612</position>
         </group>
+
     </window>
 
 
@@ -385,12 +393,10 @@
             </textarea>
         </textarea>
 
-        <!-- this is the background around the covers  -->
         <shape name="videofilter_background" from="base_background_shape">
             <area>175,220,930,380</area>
         </shape>
 
-        <!-- Labels -->
         <textarea name="category_text" from="base_textarea">
             <area>185,240,210,36</area>
             <value>Category:</value>
@@ -446,7 +452,6 @@
             <value>Watched:</value>
         </textarea>
 
-        <!-- Widgets -->
         <buttonlist name="category_select" from="base_selector">
             <position>405,240</position>
         </buttonlist>
@@ -509,7 +514,8 @@
             <area>120,615,1040,90</area>
             <value>Result</value>
             <align>allcenter</align>
-        </textarea>        
+        </textarea>
+
     </window>
 
 
@@ -582,13 +588,11 @@
         <group name="base_video_large_cover_group" from ="base_video_large_cover_group">
             <position>15,85</position>
         </group>
-        
-        <!-- the shape where the video cover and primary settings are shown -->
+
         <shape name="top_background" from="base_background_shape">
             <area>310,90,955,572</area>
         </shape>
 
-        <!-- the labels that are in the middle -->
         <textarea name="title_text" from="base_textarea">
             <area>325,105,150,36</area>
             <scroll direction="horizontal"/>
@@ -652,8 +656,7 @@
             <position>525,545</position>
             <value>Browseable:</value>
         </textarea>
-        
-        <!-- the widgets -->
+
         <textedit name="title_edit" from="base_textedit">
             <position>485,105</position>
         </textedit>
@@ -699,8 +702,7 @@
         <checkbox name="browse_check" from="base_checkbox">
             <position>685,545</position>
         </checkbox>
-        
-        <!-- the labels and widgets that are on the right -->        
+
         <shape name="left_separator" from="base_background_shape">
             <area>870,91,1,505</area>
         </shape>
@@ -709,6 +711,7 @@
             <position>885,105</position>
             <value>Plot:</value>
         </textarea>
+
         <textedit name="description_edit" from="base_textedit">
             <area>885,140,365,120</area>
             <statetype name="background">
@@ -891,6 +894,7 @@
         <checkbox name="altcheck" from="base_checkbox">
             <position>570,400</position>
         </checkbox>
+
         <textedit name="altplayer">
             <area>610,400,335,36</area>
             <statetype name="background">
@@ -926,6 +930,7 @@
                 <multiline>true</multiline>
             </textarea>
         </textedit>
+
         <textedit name="bluraymount" from="base_textedit">
             <position>570,440</position>
         </textedit>
@@ -949,6 +954,7 @@
         <group name="base_helptext_group" from="base_helptext_group">
             <position>0,612</position>
         </group>
+
     </window>
 
 
@@ -1028,6 +1034,7 @@
         <group name="base_helptext_group" from="base_helptext_group">
             <position>0,612</position>
         </group>
+
     </window>
 
 </mythuitheme>

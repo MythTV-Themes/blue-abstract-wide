@@ -75,8 +75,9 @@
         </buttonlist>
 
         <group name="netvision_details_group" from="base_netvision_details_group">
-            <position>20,460</position>            
+            <position>20,460</position>
         </group>
+
     </window>
 
 
@@ -107,6 +108,7 @@
         <buttonlist name="grabbers" from="base_buttonlist">
             <area>465,245,350,275</area>
         </buttonlist>
+
     </window>
 
 
@@ -161,9 +163,11 @@
             <font>title</font>
             <scroll direction="horizontal" />
         </textarea>
+
         <textarea name="url" from="base_textarea">
             <area>35,580,900,36</area>
         </textarea>
+
         <textarea name="author" from="base_textarea">
             <area>945,580,300,36</area>
             <align>right,vcenter</align>
@@ -179,6 +183,7 @@
             <scroll direction="vertical" />
             <align>left,bottom</align>
         </textarea>
+
     </window>
 
 
@@ -350,6 +355,7 @@
         <group name="netvision_details_group" from="base_netvision_details_group">
             <position>20,460</position>            
         </group>
+
     </window>
 
 
@@ -395,6 +401,7 @@
                 <buttonarea>0,0,1230,130</buttonarea>
             </buttonlist>
         </group>
+
     </window>
 
 
@@ -449,6 +456,7 @@
             <area>1100,675,155,20</area>
             <template>Length: %1</template>
         </textarea>
+
     </window>
 
 </mythuitheme>

@@ -59,6 +59,7 @@
         <group name="program_details_group" from="base_program_details_group">
             <position>20,540</position>            
         </group>
+
     </window>
 
 
@@ -178,7 +179,6 @@
             <area>310,220,655,292</area>
         </shape>
 
-        <!-- the labels -->
         <textarea name="title_label" from="base_textarea">
             <area>325,235,240,36</area>
             <align>right,vcenter</align>
@@ -202,7 +202,6 @@
             <value>Duration (min):</value>
         </textarea>
 
-        <!-- the widgets to the labels -->
         <textedit name="title" from="base_textedit">
             <position>575,235</position>
         </textedit>
@@ -235,6 +234,7 @@
             <position>670,460</position>
             <value>Cancel</value>
         </button>
+
     </window>
 
 
@@ -242,6 +242,7 @@
     
     
     <!-- DONE -->
+    <!-- TODO check sorting helptext -->
     <!-- The Upcoming Recordings screen.
         Shows the scheduled recordings in a list like the recording screen. at the
         top is the list and at the bottom some information about the selected recording -->
@@ -321,11 +322,13 @@
         <shape name="status_background" from="base_background_shape">
             <area>-15,490,1310,38</area>
         </shape>
+
         <!--<textarea name="keyinstr" from="base_textarea">
             <area>40,495,400,30</area>
             <font>text_small</font>
             <value>Sort by (1) All, (2) Important</value>
         </textarea>-->
+
         <textarea name="status" from="base_textarea">
             <area>500,491,280,36</area>
             <align>allcenter</align>
@@ -343,6 +346,7 @@
         <group name="program_details_group" from="base_program_details_group">
             <position>20,540</position>            
         </group>
+
     </window>
 
 
@@ -352,6 +356,7 @@
 
     <!-- DONE -->
     <!-- TODO channel icon background -->
+    <!-- TODO check sorting helptext -->
     <!-- The Channel Priority screen.
         Allows the user to set recording priorities for the available channels -->
     <window name="channelrecpriority">
@@ -460,13 +465,14 @@
                 </state>
             </statetype>
         </buttonlist>
+
     </window>
 
 
 
 
 
-
+    <!-- TODO check sorting helptext -->
     <!-- The Program Priority screen.
         Shows the available tv program with the recording priorities -->
     <window name="programrecpriority" include="base_schedule.xml">
@@ -492,11 +498,13 @@
             <font>text_small</font>
             <value>Sort by (1) Title, (2) Priority, (4) Type</value>
         </textarea>
+
         <!--<textarea name="curview" from="base_textarea">
             <area>650,35,640,30</area>
             <font>text_small</font>
             <align>left,vcenter</align>
         </textarea>-->
+
         <textarea name="prioritylabel" from="base_textarea">
             <area>935,32,95,30</area>
             <value>Priority</value>
@@ -594,6 +602,7 @@
         <group name="program_details_group" from="base_program_details_group">
             <position>20,540</position>            
         </group>
+
     </window>
 
 
@@ -701,6 +710,7 @@
             <position>820,495</position>
             <value>Install</value>
         </button>
+
     </window>
 
 
@@ -794,6 +804,7 @@
         <group name="program_details_group" from="base_program_details_group">
             <position>20,540</position>            
         </group>
+
     </window>
 
 
@@ -801,6 +812,7 @@
 
 
     <!-- DONE -->
+    <!-- TODO check sorting helptext -->
     <!-- The Program List screen.
         Shows the previously scheduled recordings in a list like the
         recording screen. at the top is the list and at the bottom
@@ -876,6 +888,7 @@
         <group name="program_details_group" from="base_program_details_group">
             <position>20,535</position>            
         </group>
+
     </window>
 
 
@@ -905,6 +918,7 @@
             <zoom>1.0</zoom>
             <background color="#000000" alpha="1"/>
         </webbrowser>
+
     </window>
 
 
@@ -1023,6 +1037,7 @@
         <group name="program_details_group" from="base_program_details_group">
             <position>20,538</position>            
         </group>
+
     </window>
 
 
@@ -1072,6 +1087,7 @@
         <shape name="numvideos_background" from="base_background_shape">
             <area>575,315,375,76</area>
         </shape>
+
         <textarea name="clausetext" from="base_textarea">
             <area>583,320,359,66</area>
             <align>left,vcenter</align>
@@ -1192,6 +1208,7 @@
         <group name="program_details_group" from="base_program_details_group">
             <position>20,538</position>            
         </group>
+
     </window>
 
 
@@ -1222,34 +1239,42 @@
             <template type="zero">Normal recording priority</template>
             <template type="positive">Raise priority by %n</template>
         </spinbox>
+
         <buttonlist name="input" from="base_selector_very_wide">
             <position>305,164</position>
         </buttonlist>
+
         <spinbox name="startoffset" from="base_spinbox_very_wide">
             <position>305,205</position>
             <template type="negative">Start recording %n minute(s) late</template>
             <template type="zero">Start recording on time</template>
             <template type="positive">Start recording %n minute(s) early</template>
         </spinbox>
+
         <spinbox name="endoffset" from="base_spinbox_very_wide">
             <position>305,245</position>
             <template type="negative">End recording %n minute(s) early</template>
             <template type="zero">End recording on time</template>
             <template type="positive">End recording %n minute(s) late</template>
         </spinbox>
+
         <buttonlist name="dupmethod" from="base_selector_very_wide">
             <position>305,285</position>
         </buttonlist>
+
         <buttonlist name="dupscope" from="base_selector_very_wide">
             <position>305,325</position>
         </buttonlist>
+
         <checkbox name="ruleactive" from="base_checkbox">
             <position>305,365</position>
         </checkbox>
+
         <textarea name="ruleactivelabel" from="base_textarea">
             <area>345,365,300,36</area>
             <value>Recording Rule Active</value>
         </textarea>
+
         <button name="filters" from="base_button_wide">
             <position>305,405</position>
             <value>Schedule filters</value>
@@ -1258,6 +1283,7 @@
         <shape name="button_separator" from="base_background_shape">
             <area>291,455,698,1</area>
         </shape>
+
         <button name="back" from="base_button">
             <position>565,470</position>
             <value>Back</value>
@@ -1266,6 +1292,7 @@
         <group name="program_details_group" from="base_program_details_group">
             <position>20,538</position>            
         </group>
+
     </window>
 
 
@@ -1289,12 +1316,15 @@
         <shape name="schedule_button_background" from="base_background_shape">
             <area>450,110,380,412</area>
         </shape>
+
         <buttonlist name="filters" from="base_buttonlist">
             <area>465,125,350,314</area>
         </buttonlist>
+
         <shape name="button_separator" from="base_background_shape">
             <area>451,455,378,1</area>
         </shape>
+
         <button name="back" from="base_button">
             <position>565,470</position>
             <value>Back</value>
@@ -1303,6 +1333,7 @@
         <group name="program_details_group" from="base_program_details_group">
             <position>20,538</position>            
         </group>
+
     </window>
 
 
@@ -1331,31 +1362,38 @@
             <position>305,165</position>
             <helptext></helptext>
         </buttonlist>
+
         <buttonlist name="recgroup" from="base_selector_very_wide">
             <position>305,205</position>
             <helptext></helptext>
         </buttonlist>
+
         <buttonlist name="storagegroup" from="base_selector_very_wide">
             <position>305,245</position>
             <helptext></helptext>
         </buttonlist>
+
         <buttonlist name="playgroup" from="base_selector_very_wide">
             <position>305,285</position>
             <helptext></helptext>
         </buttonlist>
+
         <spinbox name="maxepisodes" from="base_spinbox_very_wide">
             <position>305,325</position>
             <template type="zero">No episode limit</template>
             <template type="positive">Keep at most %n episode(s)</template>
             <helptext></helptext>
         </spinbox>
+
         <buttonlist name="maxnewest" from="base_selector_very_wide">
             <position>305,365</position>
             <helptext></helptext>
         </buttonlist>
+
         <checkbox name="autoexpire" from="base_checkbox">
             <position>305,405</position>
         </checkbox>
+
         <textarea name="autoexpirelabel" from="base_textarea">
             <area>350,405,450,36</area>
             <value>Allow recordings to expire?</value>
@@ -1364,6 +1402,7 @@
         <shape name="button_separator" from="base_background_shape">
             <area>291,455,698,1</area>
         </shape>
+
         <button name="back" from="base_button">
             <position>565,470</position>
             <value>Back</value>
@@ -1372,6 +1411,7 @@
         <group name="program_details_group" from="base_program_details_group">
             <position>20,538</position>            
         </group>
+
     </window>
 
 
@@ -1455,6 +1495,7 @@
         <shape name="button_separator" from="base_background_shape">
             <area>291,455,698,1</area>
         </shape>
+
         <button name="back" from="base_button">
             <position>565,470</position>
             <value>Back</value>
@@ -1463,6 +1504,7 @@
         <group name="program_details_group" from="base_program_details_group">
             <position>20,538</position>            
         </group>
+
     </window>
 
 
@@ -1543,6 +1585,7 @@
                 <font>text_small</font>
             </textarea>
         </group>
+
     </window>
 
 
@@ -1600,6 +1643,7 @@
             <value>Perform Query</value>
             <helptext></helptext>
         </button>
+
         <shape name="query_separator" from="base_background_shape">
             <area>291,310,698,1</area>
         </shape>
@@ -1639,6 +1683,7 @@
         <shape name="button_separator" from="base_background_shape">
             <area>291,455,698,1</area>
         </shape>
+
         <button name="back" from="base_button">
             <position>565,470</position>
             <value>Back</value>
@@ -1647,6 +1692,7 @@
         <group name="program_details_group" from="base_program_details_group">
             <position>20,538</position>            
         </group>
+
     </window>
 
 
@@ -1708,6 +1754,7 @@
                 </state>
             </statetype>
         </buttonlist>
+
         <textedit name="phrase_edit" from="base_textedit_wide">
             <position>405,460</position>
         </textedit>
@@ -1728,6 +1775,7 @@
             <position>735,525</position>
             <value>Delete</value>
         </button>
+
     </window>
 
 
@@ -1806,6 +1854,7 @@
             <position>735,525</position>
             <value>Delete</value>
         </button>
+
     </window>
 
 
@@ -1899,10 +1948,12 @@
         <shape name="button_separator" from="base_background_shape">
             <area>251,505,788,1</area>
         </shape>
+
         <button name="ok_button" from="base_button">
             <position>570,520</position>
             <value>Ok</value>
         </button>
+
     </window>
     
 </mythuitheme>

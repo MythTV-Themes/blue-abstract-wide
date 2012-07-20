@@ -137,6 +137,7 @@
             <position>1153,14</position>
             <filename>images/shared/recordings/playlist.png</filename>
         </imagetype>
+
         <statetype name="playlist">
             <position>1153,14</position>
             <state name="no">
@@ -200,6 +201,7 @@
             <area>1075,60,98,33</area>
             <filename>images/shared/recordings/audio/dolby_unknown.png</filename>
         </imagetype>
+
         <statetype name="audioprops">
             <position>1075,60</position>
             <showempty>yes</showempty>
@@ -234,6 +236,7 @@
             <area>1180,59,44,35</area>
             <filename>images/shared/recordings/video/hdtv_unknown.png</filename>
         </imagetype>
+
         <statetype name="videoprops">
             <position>1180,59</position>
             <showempty>yes</showempty>

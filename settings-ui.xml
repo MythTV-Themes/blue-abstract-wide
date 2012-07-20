@@ -7,23 +7,13 @@
 
         <imagetype name="background" from="base_background"/>
 
-        <imagetype name="header_background">
-            <area>-1,-1,560,50</area>
-            <filename>images/widgets/header_left.png</filename>
-        </imagetype>
-        <clock name="clock">
-            <area>10,0,200,30</area>
-            <font>text</font>
-            <template>%DATE%, %TIME%</template>
-            <align>left,vcenter</align>
-        </clock>
-        <textarea name="text" from="base_textarea">
-            <area>215,0,300,30</area>
-            <align>allcenter</align>
-            <scroll direction="horizontal" />
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
             <value>System Event Command Editor</value>
+            </textarea>
         </textarea>
-        
+
         <shape name="settings_background" from="base_background_shape">
             <area>340,135,610,462</area>
         </shape>
@@ -49,6 +39,7 @@
                 </state>
             </statetype>
         </buttonlist>
+
         <textarea name="settings_label" from="base_textarea">
             <area>355,480,200,36</area>
             <align>right,vcenter</align>
@@ -203,9 +194,11 @@
             <font>title</font>
             <scroll direction="horizontal" />
         </textarea>
+
         <textarea name="resolution" from="base_textarea">
             <area>105,520,130,36</area>
         </textarea>
+
         <textarea name="aspect" from="base_textarea">
             <area>270,520,100,36</area>
         </textarea> 
@@ -214,6 +207,7 @@
         <shape name="theme_description_separator" from="base_background_shape">
             <area>91,557,1103,1</area>
         </shape>
+
         <textarea name="description" from="base_textarea">
             <area>105,568,1050,63</area>
             <multiline>yes</multiline>
@@ -233,7 +227,6 @@
         <!-- shows a large preview image of the theme -->
         <statetype name="fullpreviewstate">
             <area>0,0,1280,720</area>
-
             <state name="fullscreen">
                 <area>0,0,1280,720</area>
 
@@ -253,9 +246,9 @@
                     <area>215,0,300,30</area>
                     <align>allcenter</align>
                 </textarea>
-                
             </state>
         </statetype>
+
     </window>
 
 </mythuitheme>

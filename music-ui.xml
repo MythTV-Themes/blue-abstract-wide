@@ -159,6 +159,7 @@
         <button name="musiccontrols" from="base_button">
             <position>580,720</position>
         </button>
+
     </window>
 
 
@@ -250,27 +251,18 @@
         <button name="musiccontrols" from="base_button">
             <position>580,725</position>
         </button>
+
     </window>
 
 
 
 
-    <!-- TODO - buttontext background shape without borders at the top
-         buttoncheck is not working -->
+    <!-- DONE -->
+    <!-- TODO - buttonimages marked as todo -->
+    <!-- TODO - buttontext background shape without borders at the top -->
+    <!-- TODO - buttoncheck is not working -->
     <!-- Shows the album / tracks / ... as cover images. -->
     <window name="playlisteditorview_gallery" include="base_music.xml">
-
-        <!--<fontdef name="music_text" from="text">
-            <outlinecolor>#000000</outlinecolor>
-            <outlinesize>2</outlinesize>
-            <outlinealpha>150</outlinealpha>
-        </fontdef>
-        
-        <fontdef name="music_text_small" from="text_small">
-            <outlinecolor>#000000</outlinecolor>
-            <outlinesize>2</outlinesize>
-            <outlinealpha>150</outlinealpha>
-        </fontdef>-->
         
         <imagetype name="background" from="base_background"/>
 
@@ -676,6 +668,7 @@
         <button name="musiccontrols" from="base_button">
             <position>580,725</position>
         </button>
+
     </window>
 
 
@@ -761,6 +754,7 @@
         <group name="current_playlistinfo_group" from="base_current_playlistinfo_group">
             <position>20,675</position>
         </group>
+
     </window>
 
 
@@ -924,6 +918,7 @@
             <multiline>yes</multiline>
             <scroll direction="vertical"/>
         </textarea>
+
     </window>
     
     
@@ -1063,6 +1058,7 @@
             <area>915,146,1,448</area>
         </shape>
         
+        <!-- The artist image with its background and border -->
         <imagetype name="artisticon_background_image">
             <area>930,160,133,133</area>
             <mask>images/shared/music/album_item_nfmask.png</mask>
@@ -1084,6 +1080,7 @@
             <filename>images/shared/music/album_nfborder.png</filename>
         </imagetype>
         
+        <!-- The album image with its background and border -->
         <imagetype name="albumiconn_background_image">
             <area>930,305,133,133</area>
             <mask>images/shared/music/album_item_nfmask.png</mask>
@@ -1105,6 +1102,7 @@
             <filename>images/shared/music/album_nfborder.png</filename>
         </imagetype>
         
+        <!-- The genre image with its background and border -->
         <imagetype name="genreicon_background_image">
             <area>930,445,133,133</area>
             <mask>images/shared/music/album_item_nfmask.png</mask>
@@ -1125,6 +1123,7 @@
             <area>930,445,133,133</area>
             <filename>images/shared/music/album_nfborder.png</filename>
         </imagetype>
+
     </window>
     
     
@@ -1179,10 +1178,12 @@
             <scroll direction="horizontal" />
             <font>title</font>
         </textarea>
+
         <textarea name="artist" from="base_textarea">
             <area>740,590,400,30</area>
             <cutdown>yes</cutdown>
         </textarea>
+
         <textarea name="album" from="base_textarea">
             <area>740,620,360,30</area>
             <cutdown>yes</cutdown>
@@ -1191,6 +1192,7 @@
         <progressbar name="progress" from="base_progressbar">
             <position>740,660</position>
         </progressbar>
+
         <textarea name="time" from="base_textarea">
             <area>1075,620,160,30</area>
             <align>right,vcenter</align>
@@ -1330,11 +1332,13 @@
         <button name="prev" from="base_button_prev">
             <position>473,359</position>
         </button>
+
         <textarea name="status" from="base_textarea">
             <area>513,354,255,40</area>
             <value>Already in database</value>
             <align>allcenter</align>
         </textarea>
+
         <button name="next" from="base_button_next">
             <position>777,359</position>
         </button>
@@ -1392,6 +1396,7 @@
             <position>650,630</position>
             <value>Done</value>
         </button>
+
     </window>
 
 
@@ -1440,7 +1445,6 @@
             <area>160,170,960,1</area>
         </shape>
 
-        <!-- Labels -->
         <textarea name="filename_label" from="location_label">
             <position>160,180</position>
             <value>Filename:</value>
@@ -1478,7 +1482,6 @@
             <value>Track No.:</value>
         </textarea>
 
-        <!-- data fields -->
         <textarea name="filename" from="base_textarea">
             <area>380,190,740,80</area>
             <multiline>yes</multiline>
@@ -1523,7 +1526,6 @@
             <value>Already in database</value>
         </textarea>
 
-        <!-- Push buttons -->
         <button name="play" from="base_button_wide">
             <position>160,550</position>
             <value>Play</value>
@@ -1790,6 +1792,7 @@
             <position>650,625</position>
             <value>Rip CD</value>
         </button>
+
     </window>
 
 
@@ -1864,6 +1867,7 @@
             <area>390,480,500,40</area>
             <align>allcenter</align>
         </textarea>
+
     </window>
 
         
@@ -1904,6 +1908,7 @@
         <shape name="coverartimage_separator" from="base_background_shape">
             <area>430,216,1,313</area>
         </shape>
+
         <shape name="coverartlist_separator" from="base_background_shape">
             <area>431,375,723,1</area>
         </shape>
@@ -2053,6 +2058,7 @@
             <position>805,475</position>
             <value>Done</value>
         </button>
+
     </window>
 
     
@@ -2077,11 +2083,12 @@
             <area>300,145,680,460</area>
         </shape>
         
-        <textarea name="categorylbl"  from="base_textarea">
+        <textarea name="category_label"  from="base_textarea">
             <area>315,160,220,36</area>
             <align>right,vcenter</align>
             <value>Category:</value>
         </textarea>
+
         <buttonlist name="categoryselector" from="base_selector_wide">
             <position>545,160</position>
         </buttonlist>
@@ -2090,7 +2097,7 @@
             <position>928,160</position>
         </button>
 
-        <textarea name="titlelbl"  from="categorylbl">
+        <textarea name="title_label"  from="category_label">
             <position>315,200</position>
             <value>Title:</value>
         </textarea>
@@ -2102,7 +2109,7 @@
             <area>301,250,678,1</area>
         </shape>
         
-        <textarea name="matchlbl"  from="categorylbl">
+        <textarea name="match_label"  from="category_label">
             <position>315,265</position>
             <value>Match</value>
         </textarea>
@@ -2121,7 +2128,7 @@
             </statetype>
         </buttonlist>
         
-        <textarea name="match2lbl" from="base_textarea">
+        <textarea name="match2_label" from="base_textarea">
             <area>680,265,280,36</area>
             <value>Of The Following Conditions</value>
         </textarea>
@@ -2161,7 +2168,7 @@
             <area>301,435,678,1</area>
         </shape>
         
-        <textarea name="orderbylbl"  from="categorylbl">
+        <textarea name="orderby_label"  from="category_label">
             <position>315,450</position>
             <value>Order By:</value>
         </textarea>
@@ -2172,7 +2179,7 @@
             <area>928,450,32,32</area>
         </button>
 
-        <textarea name="matcheslbl"  from="categorylbl">
+        <textarea name="matches_label"  from="category_label">
             <position>315,490</position>
             <value>Matches:</value>
         </textarea>
@@ -2180,7 +2187,7 @@
             <area>545,490,150,36</area>
         </textarea>
 
-        <textarea name="limitlbl"  from="categorylbl">
+        <textarea name="limit_label"  from="category_label">
             <area>595,490,100,36</area>
             <value>Limit:</value>
         </textarea>
@@ -2251,6 +2258,7 @@
             <align>allcenter</align>
             <value>Edit Criteria</value>
         </textarea>
+
         <shape name="title_separator" from="base_background_shape">
             <area>451,190,398,1</area>
         </shape>
@@ -2258,6 +2266,7 @@
         <buttonlist name="fieldselector" from="base_selector_wide">
             <position>465,205</position>
         </buttonlist>
+
         <shape name="fieldselector_separator" from="base_background_shape">
             <area>451,255,398,1</area>
         </shape>
@@ -2363,11 +2372,12 @@
             <align>allcenter</align>
             <value>Edit Date</value>
         </textarea>
+
         <shape name="title_separator" from="base_background_shape">
             <area>451,200,398,1</area>
         </shape>
 
-        <textarea name="fixeddatelbl"  from="base_textarea">
+        <textarea name="fixeddate_label"  from="base_textarea">
             <area>510,215,270,36</area>
             <value>Fixed Date</value>
         </textarea>
@@ -2375,7 +2385,7 @@
             <position>465,215</position>
         </checkbox>
 
-        <textarea name="daylbl"  from="fixeddatelbl">
+        <textarea name="day_label"  from="fixeddate_label">
             <position>465,255</position>
             <value>Day</value>
         </textarea>
@@ -2383,7 +2393,7 @@
             <position>465,295</position>
         </spinbox>
 
-        <textarea name="monthlbl"  from="fixeddatelbl">
+        <textarea name="month_label"  from="fixeddate_label">
             <position>605,255</position>
             <value>Month</value>
         </textarea>
@@ -2391,7 +2401,7 @@
             <position>605,295</position>
         </spinbox>
 
-        <textarea name="yearlbl"  from="fixeddatelbl">
+        <textarea name="year_label"  from="fixeddate_label">
             <position>745,255</position>
             <value>Year</value>
         </textarea>
@@ -2403,7 +2413,7 @@
             <area>451,345,398,1</area>
         </shape>
         
-        <textarea name="nowlbl"  from="fixeddatelbl">
+        <textarea name="now_label"  from="fixeddate_label">
             <position>510,360</position>
             <value>Use Current Date</value>
         </textarea>
@@ -2411,7 +2421,7 @@
             <position>465,360</position>
         </checkbox>
 
-        <textarea name="adddayslbl"  from="fixeddatelbl">
+        <textarea name="adddays_label"  from="fixeddate_label">
             <area>465,410,100,36</area>
             <align>right,vcenter</align>
             <value>+/- Days</value>
@@ -2445,6 +2455,7 @@
             <position>660,540</position>
             <value>Cancel</value>
         </button>
+
     </window>
 
     
@@ -2572,6 +2583,7 @@
             <align>allcenter</align>
             <value>Order By Fields</value>
         </textarea>
+
         <shape name="title_separator" from="base_background_shape">
             <area>451,190,398,1</area>
         </shape>
@@ -2615,6 +2627,7 @@
         <buttonlist name="fieldselector" from="base_selector_wide">
             <position>465,420</position>
         </buttonlist>
+
         <shape name="fieldselector_separator" from="base_background_shape">
             <area>451,470,398,1</area>
         </shape>
@@ -2650,6 +2663,7 @@
             <position>660,550</position>
             <value>Cancel</value>
         </button>
+
     </window>
     
 </mythuitheme>

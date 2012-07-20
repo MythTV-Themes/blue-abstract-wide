@@ -134,14 +134,15 @@
                         <imagetype name="statusimage">
                                 <filename>schedule_record.png</filename>
                             </imagetype>
-                        </state> -->
-<!--                    <state name="running">
+                        </state>
+                        <state name="running">
                             <imagetype name="statusimage">
                                 <filename>schedule_recording.png</filename>
                             </imagetype>
                         </state>
                         <state name="marked"></state>
-                    </statetype> -->
+                    </statetype> 
+-->
                 </state>
 
                 <state name="inactive" from="active" />
@@ -163,6 +164,7 @@
         <group name="recording_details_group" from="base_recording_details_group">
             <position>20,460</position>
         </group>
+
     </window>
 
 
@@ -290,14 +292,14 @@
                 <area>920,200,300,30</area>
                 <align>right,vcenter</align>
             </textarea>
-        </group>        
+        </group>
+
     </window>
 
     
     
     
-    
-    
+
     <!-- The Group Filter popup. -->
     <!-- <window name="groupfilter"> -->
 
@@ -420,6 +422,7 @@
             <align>allcenter</align>
             <scroll direction="vertical" />
         </textarea>
+
         <shape name="title_separator" from="base_background_shape">
             <area>341,305,588,1</area>
         </shape>
@@ -450,6 +453,7 @@
             <position>560,425</position>
             <value>Ok</value>
         </button>
+
     </window>
 
 
@@ -481,6 +485,7 @@
         <buttonlist name="groups" from="base_buttonlist">
             <area>465,225,350,275</area>
         </buttonlist>
+
     </window>
 
 
@@ -504,6 +509,7 @@
             <align>allcenter</align>
             <scroll direction="vertical" />
         </textarea>
+
         <shape name="title_separator" from="base_background_shape">
             <area>451,210,378,1</area>
         </shape>
@@ -662,6 +668,7 @@
                 </state>
             </statetype>
         </buttonlist>
+
     </window>
 
 
@@ -703,7 +710,7 @@
             <align>right,vcenter</align>
             <value>Title:</value>
         </textarea>
-		<textedit name="title" from="base_textedit">
+        <textedit name="title" from="base_textedit">
             <position>570,220</position>
         </textedit>
 
@@ -756,6 +763,7 @@
             <position>580,590</position>
             <value>OK</value>
         </button>
+
     </window>
 
 </mythuitheme>

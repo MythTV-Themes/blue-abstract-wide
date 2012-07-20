@@ -291,6 +291,7 @@
             <value>Back</value>
             <position>652,460</position>
         </button>
+
     </window>
 
 
@@ -418,6 +419,7 @@
             <position>565,580</position>
             <value>Done</value>
         </button>
+
     </window>
 
 </mythuitheme>

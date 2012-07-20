@@ -46,6 +46,7 @@
             <position>655,380</position>
             <value>Cancel</value>
         </button>
+
     </window>
 
 
@@ -117,6 +118,7 @@
             <multiline>yes</multiline>
             <value>This screen displays the status of various system components</value>
         </textarea>
+
     </window>
 
 </mythuitheme>

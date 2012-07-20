@@ -120,6 +120,7 @@
         <group name="base_helptext_group" from="base_helptext_group">
             <position>0,613</position>
         </group>
+
     </window>
 
     
@@ -191,6 +192,7 @@
         <group name="base_helptext_group" from="base_helptext_group">
             <position>0,613</position>
         </group>
+
     </window>
 
     
@@ -262,6 +264,7 @@
         <group name="base_helptext_group" from="base_helptext_group">
             <position>0,613</position>
         </group>
+
     </window>
 
     
@@ -370,6 +373,7 @@
         <group name="base_helptext_group" from="base_helptext_group">
             <position>0,613</position>
         </group>
+
     </window>
 
     
@@ -441,6 +445,7 @@
         <group name="base_helptext_group" from="base_helptext_group">
             <position>0,613</position>
         </group>
+
     </window>
 
 </mythuitheme>

@@ -218,6 +218,7 @@
         <!--<progressbar name="thumbprogress" from="base_spinner" depends="thumbprogresstext">
             <position>1025,640</position>
         </progressbar>-->
+
     </window>
 
 
@@ -306,6 +307,7 @@
         <group name="base_helptext_group" from="base_helptext_group">
             <position>0,615</position>
         </group>
+
     </window>
 
 
@@ -378,6 +380,7 @@
                 </state>
             </statetype>
         </buttonlist>
+
     </window>
 
 </mythuitheme>

@@ -81,6 +81,7 @@
                 <state name="selectedinactive" from="active"/>
             </statetype>
         </buttonlist>
+
     </group>
    
 
@@ -131,6 +132,7 @@
             <align>left,bottom</align>
             <template>%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
+
     </group>
     
 </mythuitheme>

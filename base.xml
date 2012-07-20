@@ -1013,6 +1013,7 @@
             <multiline>yes</multiline>
             <scroll direction="vertical"/>
         </textarea>
+
         <shape name="messagearea_separator" from="base_background_shape">
             <area>451,210,378,1</area>
         </shape>
@@ -1048,6 +1049,7 @@
                 </state>
             </statetype>
         </buttonlist>
+
     </window>
 
 
@@ -1088,6 +1090,7 @@
             <multiline>yes</multiline>
             <scroll direction="vertical"/>
         </textarea>
+
         <shape name="messagearea_separator" from="base_background_shape">
             <area>451,210,378,1</area>
         </shape>
@@ -1123,6 +1126,7 @@
                 </state>
             </statetype>
         </buttonlist>
+
     </window>
 
 
@@ -1150,7 +1154,7 @@
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
-            <area>350,300,580,90</area>
+            <area>350,300,580,95</area>
         </shape>
 
         <textarea name="message" from="base_textarea">
@@ -1165,6 +1169,7 @@
             <filepattern low="1" high="5">images/widgets/busy/busy_%1.png</filepattern>
             <delay>100</delay>
         </imagetype>
+
     </window>
 
 
@@ -1214,6 +1219,7 @@
             <align>allcenter</align>
             <value>0%</value>
         </textarea>
+
     </window>
 
 
@@ -1264,6 +1270,7 @@
             <position>735,380</position>
             <value>Cancel</value>
         </button>
+
     </window>
 
 
@@ -1320,6 +1327,7 @@
             <position>650,405</position>
             <value>Cancel</value>
         </button>
+
     </window>
 
 
@@ -1380,6 +1388,7 @@
                 </state>
             </statetype>
         </buttonlist>
+
         <textedit name="input" from="base_textedit_wide">
             <position>405,460</position>
         </textedit>
@@ -1396,6 +1405,7 @@
             <position>650,525</position>
             <value>Cancel</value>
         </button>
+
     </window>
     
     
@@ -1404,7 +1414,7 @@
     <!-- DONE -->
     <!-- TODO - statetype add file and executable image -->
     <!-- TODO - aspect ratio broken? -->
-    <!-- TODO - home and back images white -->
+    <!-- TODO - home image white -->
     <!-- Dialog that is used to select a file from the filesystem
          and show a preview of the file if it is an image 
          The dialog is like a full screen with a header and clock -->
@@ -1427,7 +1437,7 @@
             <area>20,90,275,410</area>
         </shape>
 
-        <!-- the preview image on the right side -->
+        <!-- the preview image of the selected item -->
         <imagetype name="preview_background_image">
             <area>35,105,245,355</area>
             <mask>images/shared/video/movie_cover_mask.png</mask>
@@ -1456,7 +1466,6 @@
             <area>310,90,830,577</area>
         </shape>
 
-        <!-- the filename -->
         <textarea name="filename_label" from="base_textarea">
             <area>325,100,140,36</area>
             <align>right,vcenter</align>
@@ -1480,7 +1489,7 @@
             <position>475,140</position>
         </textedit>
 
-        <!-- the buttons to go back or to the users home dir -->
+        <!-- the buttons to go back up directory -->
         <button name="back" from="base_button">
             <area>1000,140,54,36</area>
             <statetype name="buttonstate">
@@ -1515,6 +1524,7 @@
             </statetype>
         </button>
 
+        <!-- the button to go to the users home directory -->
         <button name="home" from="base_button">
             <area>1070,140,54,36</area>
             <statetype name="buttonstate">
@@ -1681,6 +1691,7 @@
             <position>735,615</position>
             <value>Cancel</value>
         </button>
+
     </window>
 
     
@@ -1738,6 +1749,7 @@
             <position>560,405</position>
             <value>OK</value>
         </button>
+
     </window>
 
 
@@ -1763,6 +1775,7 @@
         <progressbar name="progress" from="base_progressbar">
             <position>372,435</position>
         </progressbar>
+
     </window>
 
 
@@ -1833,6 +1846,7 @@
                 </state>
             </statetype>
         </buttonlist>
+
     </window>
 
 
@@ -1997,6 +2011,7 @@
             <position>680,425</position>
             <value>Next</value>
         </button>
+
     </window>
 
 
@@ -2006,6 +2021,7 @@
     <!-- DONE -->
     <!-- Shows the help description in the setting windows -->
     <group name="base_helptext_group">
+
         <shape name="helptext_background_bottom" from="base_background_shape">
             <area>-15,0,1310,90</area>
         </shape>
@@ -2015,6 +2031,7 @@
             <align>allcenter</align>
             <multiline>yes</multiline>
         </textarea>
+
     </group>
 
 </mythuitheme>

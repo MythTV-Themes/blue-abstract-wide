@@ -3,7 +3,7 @@
 <mythuitheme>
 
     <!-- DONE -->
-    <!-- shows the selected bookmark or url in a brwoser window -->
+    <!-- shows the selected bookmark or url in a browser window -->
     <window name="browser">
 
         <imagetype name="background" from="base_background"/>
@@ -50,14 +50,8 @@
             <zoom>1.2</zoom>
         </webbrowser>
 
-        <!-- these are optional -->
-        <!--<progressbar name="progressbar" from="base_progressbar">
-            <position>735,635</position>
-        </progressbar>
-        <textarea name="status" from="base_textarea">
-            <area>270,670,740,20</area>
-            <align>left,vcenter</align>
-        </textarea>-->
+        <!-- additonally an optional progressbar 
+             or textarea "status" can be shown -->
 
     </window>
 
@@ -150,6 +144,7 @@
                 </state>
             </statetype>
         </buttonlist>
+
     </window>
 
 
