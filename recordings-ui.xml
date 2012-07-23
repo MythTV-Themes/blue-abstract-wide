@@ -3,6 +3,7 @@
 <mythuitheme>
 
     <!-- DONE -->
+    <!-- TODO processing and jobstate icons -->
     <!-- shows a list of available recording groups and its recordings
         together with some detail information about the recording -->
     <window name="watchrecordings" include="base_recording.xml">
@@ -71,44 +72,46 @@
                         <align>allcenter</align>
                     </textarea>
                     <imagetype name="no_jobstate">
-                        <position>780,4</position>
-                        <filename>images/shared/recordings/processing/no_jobstate.png</filename>
+                        <position>775,0</position>
+                        <filename>images/icons/processing.png</filename>
+                        <area>3,3,30,30</area>
                         <alpha>95</alpha>
                     </imagetype>
                     <statetype name="jobstate">
-                        <position>780,0</position>
+                        <position>775,0</position>
                         <state name="recording">
                             <imagetype name="animation">
-                                <filepattern low="1" high="8">images/shared/recordings/processing/recording_%1.png</filepattern>
-                                <area>0,6,24,24</area>
-                                <delay>160</delay>
+                                <filename>images/icons/recording.png</filename>
+                                <area>3,3,30,30</area>
+                                <alphapulse min="100" max="255" change="2"/>
                             </imagetype>
                         </state>
                         <state name="transcoding" from="recording">
                             <imagetype name="animation">
-                                <filepattern low="1" high="8">images/shared/recordings/processing/transcoding_%1.png</filepattern>
-                                <area>0,6,24,24</area>
+                                <filename>images/icons/transcoded.png</filename>
+                                <area>3,3,30,30</area>
                             </imagetype>
                         </state>
                         <state name="commflagging" from="recording">
                             <imagetype name="animation">
-                                <filepattern low="1" high="8">images/shared/recordings/processing/flagging_%1.png</filepattern>
-                                <area>0,6,24,24</area>
+                                <filename>images/icons/commflagged.png</filename>
+                                <area>3,3,30,30</area>
                             </imagetype>
                         </state>
                     </statetype>
                     <statetype name="watched">
+                        <position>810,0</position>
                         <state name="no">
                             <imagetype name="watchedoff">
-                                <area>813,3,31,31</area>
-                                <filename>images/shared/selected.png</filename>
+                                <area>3,3,30,30</area>
+                                <filename>images/icons/selected.png</filename>
                                 <alpha>50</alpha>
                             </imagetype>
                         </state>
                         <state name="yes">
                             <imagetype name="watched">
-                                <area>813,3,31,31</area>
-                                <filename>images/shared/selected.png</filename>
+                                <area>3,3,30,30</area>
+                                <filename>images/icons/selected.png</filename>
                             </imagetype>
                         </state>
                     </statetype>
@@ -241,17 +244,18 @@
                     </textarea>
                     
                     <statetype name="watched">
+                        <position>810,0</position>
                         <state name="no">
                             <imagetype name="watchedoff">
-                                <area>813,3,31,31</area>
-                                <filename>images/shared/selected.png</filename>
+                                <area>3,3,30,30</area>
+                                <filename>images/icons/selected.png</filename>
                                 <alpha>50</alpha>
                             </imagetype>
                         </state>
                         <state name="yes">
                             <imagetype name="watched">
-                                <area>813,3,31,31</area>
-                                <filename>images/shared/selected.png</filename>
+                                <area>3,3,30,30</area>
+                                <filename>images/icons/selected.png</filename>
                             </imagetype>
                         </state>
                     </statetype>
@@ -523,131 +527,131 @@
                     <statetype name="icons">
                         <state name="commflagged">
                             <imagetype name="statusimage">
-                                <filename>images/shared/recordings/commflagged.png</filename>
-                                <area>6,1,33,33</area>
+                                <filename>images/icons/commflagged.png</filename>
+                                <area>3,3,33,33</area>
                             </imagetype>
                         </state>
                         <state name="cutlist">
                             <imagetype name="statusimage">
-                                <filename>images/shared/recordings/cutlist.png</filename>
-                                <area>6,1,33,33</area>
+                                <filename>images/icons/cutlist.png</filename>
+                                <area>3,3,33,33</area>
                             </imagetype>
                         </state>
                         <state name="autoexpire">
                             <imagetype name="statusimage">
-                                <filename>images/shared/recordings/autoexpire.png</filename>
-                                <area>6,1,33,33</area>
+                                <filename>images/icons/autoexpire.png</filename>
+                                <area>3,3,33,33</area>
                             </imagetype>
                         </state>
                         <state name="processing">
                             <imagetype name="statusimage">
-                                <filename>images/shared/recordings/processing.png</filename>
-                                <area>6,1,33,33</area>
+                                <filename>images/icons/processing.png</filename>
+                                <area>3,3,33,33</area>
                             </imagetype>
                         </state>
                         <state name="bookmark">
                             <imagetype name="statusimage">
-                                <filename>images/shared/recordings/bookmark.png</filename>
-                                <area>6,1,33,33</area>
+                                <filename>images/icons/bookmark.png</filename>
+                                <area>3,3,33,33</area>
                             </imagetype>
                         </state>
                         <state name="playlist">
                             <imagetype name="statusimage">
-                                <filename>images/shared/recordings/playlist.png</filename>
-                                <area>6,1,33,33</area>
+                                <filename>images/icons/playlist.png</filename>
+                                <area>3,3,33,33</area>
                             </imagetype>
                         </state>
                         <state name="mono">
                             <imagetype name="statusimage_background">
-                                <filename>images/shared/recordings/audio/dolby_unknown.png</filename>
+                                <filename>images/icons/audio/dolby_unknown.png</filename>
                                 <area>6,5,78,26</area>
                                 <alpha>40</alpha>
                             </imagetype>
                             <imagetype name="statusimage">
-                                <filename>images/shared/recordings/audio/dolby_10.png</filename>
+                                <filename>images/icons/audio/dolby_10.png</filename>
                                 <area>6,5,78,26</area>
                             </imagetype>
                         </state>
                         <state name="stereo">
                             <imagetype name="statusimage_background">
-                                <filename>images/shared/recordings/audio/dolby_unknown.png</filename>
+                                <filename>images/icons/audio/dolby_unknown.png</filename>
                                 <area>6,5,78,26</area>
                                 <alpha>40</alpha>
                             </imagetype>
                             <imagetype name="statusimage">
-                                <filename>images/shared/recordings/audio/dolby_20.png</filename>
+                                <filename>images/icons/audio/dolby_20.png</filename>
                                 <area>6,5,78,26</area>
                             </imagetype>
                         </state>
                         <state name="surround">
                             <imagetype name="statusimage">
-                                <filename>images/shared/recordings/audio/dolby_51.png</filename>
+                                <filename>images/icons/audio/dolby_51.png</filename>
                                 <area>6,5,78,26</area>
                             </imagetype>
                         </state>
                         <state name="dolby">
                             <imagetype name="statusimage">
-                                <filename>images/shared/recordings/audio/dolby_71.png</filename>
+                                <filename>images/icons/audio/dolby_71.png</filename>
                                 <area>6,5,78,26</area>
                             </imagetype>
                         </state>
                         <state name="cc">
                             <imagetype name="statusimage">
-                                <filename>images/shared/recordings/subtitles/subs_cc.png</filename>
+                                <filename>images/icons/subtitles/cc.png</filename>
                                 <area>6,2,33,32</area>
                             </imagetype>
                         </state>
                         <state name="subtitles">
                             <imagetype name="statusimage">
-                                <filename>images/shared/recordings/subtitles/subs_subtitles.png</filename>
+                                <filename>images/icons/subtitles/subs.png</filename>
                                 <area>6,2,33,32</area>
                             </imagetype>
                         </state>
                         <state name="onscreensub">
                             <imagetype name="statusimage">
-                                <filename>images/shared/recordings/subtitles/subs_osd.png</filename>
+                                <filename>images/icons/subtitles/osd.png</filename>
                                 <area>6,2,33,32</area>
                             </imagetype>
                         </state>
                         <state name="hdtv">
                             <imagetype name="statusimage">
-                                <filename>images/shared/recordings/video/hdtv.png</filename>
+                                <filename>images/icons/video/hdtv.png</filename>
                                 <area>6,2,38,32</area>
                             </imagetype>
                         </state>
                         <state name="hd1080">
                             <imagetype name="statusimage">
-                                <filename>images/shared/recordings/video/hdtv_1080.png</filename>
+                                <filename>images/icons/video/hdtv_1080.png</filename>
                                 <area>6,2,38,32</area>
                             </imagetype>
                         </state>
                         <state name="hd720">
                             <imagetype name="statusimage">
-                                <filename>images/shared/recordings/video/hdtv_720.png</filename>
+                                <filename>images/icons/video/hdtv_720.png</filename>
                                 <area>6,2,38,32</area>
                             </imagetype>
                         </state>
                         <state name="avchd">
                             <imagetype name="statusimage">
-                                <filename>images/shared/recordings/video/hdtv_h264.png</filename>
+                                <filename>images/icons/video/hdtv_h264.png</filename>
                                 <area>6,2,38,32</area>
                             </imagetype>
                         </state>
                         <state name="widescreen">
                             <imagetype name="statusimage_background">
-                                <filename>images/shared/recordings/video/hdtv_unknown.png</filename>
+                                <filename>images/icons/video/hdtv_unknown.png</filename>
                                 <area>6,2,41,33</area>
                                 <alpha>40</alpha>
                             </imagetype>
                             <imagetype name="statusimage">
-                                <filename>images/shared/recordings/video/hdtv_wide.png</filename>
+                                <filename>images/icons/video/hdtv_wide.png</filename>
                                 <area>6,2,41,33</area>
                             </imagetype>
                         </state>
                         <state name="watched">
                             <imagetype name="statusimage">
-                                <filename>images/shared/selected.png</filename>
-                                <area>6,1,33,33</area>
+                                <filename>images/icons/selected.png</filename>
+                                <area>3,3,33,33</area>
                             </imagetype>
                         </state>
                     </statetype>

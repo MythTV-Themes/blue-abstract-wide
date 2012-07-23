@@ -150,18 +150,18 @@
             available, otherwise only the background image is visible -->
         <imagetype name="coverart_background_image">
             <area>36,561,133,133</area>
-            <mask>images/shared/music/album_item_nfmask.png</mask>
-            <filename>images/shared/music/default_album.png</filename>
+            <mask>images/media/music_item_nfmask.png</mask>
+            <filename>images/media/music_type/album.png</filename>
             <preserveaspect>true</preserveaspect>
         </imagetype>
         <imagetype name="coverart">
             <area>36,561,133,133</area>
-            <mask>images/shared/music/album_item_nfmask.png</mask>
+            <mask>images/media/music_item_nfmask.png</mask>
             <preserveaspect>true</preserveaspect>
         </imagetype>
         <imagetype name="coverart_border">
             <area>36,561,133,133</area>
-            <filename>images/shared/music/album_nfborder.png</filename>
+            <filename>images/media/music_item_nfborder.png</filename>
         </imagetype>
 
         <!-- the vertical separator -->
@@ -222,8 +222,8 @@
         <!-- the visualizer and the border around it -->
         <imagetype name="visualizer_background_image">
             <area>1110,561,133,133</area>
-            <mask>images/shared/music/album_item_nfmask.png</mask>
-            <filename>images/shared/music/default_visualization.png</filename>
+            <mask>images/media/music_item_nfmask.png</mask>
+            <filename>images/media/music_visualization_bg.png</filename>
             <preserveaspect>true</preserveaspect>
         </imagetype>
         <video name="visualizer">
@@ -231,7 +231,7 @@
         </video>
         <imagetype name="visualizer_border">
             <area>1110,561,133,133</area>
-            <filename>images/shared/music/album_nfborder.png</filename>
+            <filename>images/media/music_item_nfborder.png</filename>
         </imagetype>
 
 

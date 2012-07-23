@@ -10,20 +10,20 @@
         <statetype name="buttonstate">
             <state name="active">
                 <imagetype name="image" from="base_image_active">
-                    <filename>images/widgets/add.png</filename>
+                    <filename>images/icons/add.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="selected">
                 <imagetype name="image" from="base_image_selected">
-                    <filename>images/widgets/add.png</filename>
+                    <filename>images/icons/add.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed">
                 <imagetype name="image" from="base_image_pushed">
-                    <filename>images/widgets/add.png</filename>
+                    <filename>images/icons/add.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
@@ -38,20 +38,20 @@
         <statetype name="buttonstate">
             <state name="active">
                 <imagetype name="image" from="base_image_active">
-                    <filename>images/widgets/delete.png</filename>
+                    <filename>images/icons/delete.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="selected">
                 <imagetype name="image" from="base_image_selected">
-                    <filename>images/widgets/delete.png</filename>
+                    <filename>images/icons/delete.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed">
                 <imagetype name="image" from="base_image_pushed">
-                    <filename>images/widgets/delete.png</filename>
+                    <filename>images/icons/delete.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
@@ -67,20 +67,20 @@
         <statetype name="buttonstate">
             <state name="active">
                 <imagetype name="image" from="base_image_active">
-                    <filename>images/widgets/rating_increase.png</filename>
+                    <filename>images/icons/increase_rating.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="selected">
                 <imagetype name="image" from="base_image_selected">
-                    <filename>images/widgets/rating_increase.png</filename>
+                    <filename>images/icons/increase_rating.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed">
                 <imagetype name="image" from="base_image_pushed">
-                    <filename>images/widgets/rating_increase.png</filename>
+                    <filename>images/icons/increase_rating.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
@@ -96,20 +96,20 @@
         <statetype name="buttonstate">
             <state name="active">
                 <imagetype name="image" from="base_image_active">
-                    <filename>images/widgets/rating_decrease.png</filename>
+                    <filename>images/icons/decrease_rating.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="selected">
                 <imagetype name="image" from="base_image_selected">
-                    <filename>images/widgets/rating_decrease.png</filename>
+                    <filename>images/icons/decrease_rating.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed">
                 <imagetype name="image" from="base_image_pushed">
-                    <filename>images/widgets/rating_decrease.png</filename>
+                    <filename>images/icons/decrease_rating.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
@@ -125,20 +125,20 @@
         <statetype name="buttonstate">
             <state name="active">
                 <imagetype name="image" from="base_image_active">
-                    <filename>images/widgets/sort_ascending.png</filename>
+                    <filename>images/icons/sort_ascending.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="selected">
                 <imagetype name="image" from="base_image_selected">
-                    <filename>images/widgets/sort_ascending.png</filename>
+                    <filename>images/icons/sort_ascending.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed">
                 <imagetype name="image" from="base_image_pushed">
-                    <filename>images/widgets/sort_ascending.png</filename>
+                    <filename>images/icons/sort_ascending.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
@@ -154,20 +154,20 @@
         <statetype name="buttonstate">
             <state name="active">
                 <imagetype name="image" from="base_image_active">
-                    <filename>images/widgets/sort_descending.png</filename>
+                    <filename>images/icons/sort_descending.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="selected">
                 <imagetype name="image" from="base_image_selected">
-                    <filename>images/widgets/sort_descending.png</filename>
+                    <filename>images/icons/sort_descending.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed">
                 <imagetype name="image" from="base_image_pushed">
-                    <filename>images/widgets/sort_descending.png</filename>
+                    <filename>images/icons/sort_descending.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
@@ -183,20 +183,20 @@
         <statetype name="buttonstate">
             <state name="active">
                 <imagetype name="image" from="base_image_active">
-                    <filename>images/widgets/arrow_up.png</filename>
+                    <filename>images/icons/arrow_up.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="selected">
                 <imagetype name="image" from="base_image_selected">
-                    <filename>images/widgets/arrow_up.png</filename>
+                    <filename>images/icons/arrow_up.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
             <state name="pushed">
                 <imagetype name="image" from="base_image_pushed">
-                    <filename>images/widgets/arrow_up.png</filename>
+                    <filename>images/icons/arrow_up.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
@@ -212,20 +212,20 @@
         <statetype name="buttonstate">
             <state name="active">
                 <imagetype name="image" from="base_image_active">
-                    <filename>images/widgets/arrow_down.png</filename>
+                    <filename>images/icons/arrow_down.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="selected">
                 <imagetype name="image" from="base_image_selected">
-                    <filename>images/widgets/arrow_down.png</filename>
+                    <filename>images/icons/arrow_down.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active"/>
             <state name="pushed">
                 <imagetype name="image" from="base_image_pushed">
-                    <filename>images/widgets/arrow_down.png</filename>
+                    <filename>images/icons/arrow_down.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
@@ -236,24 +236,24 @@
     
     <!-- Shows the playlist moving state as images -->
     <statetype name="base_music_movestate">
-        <area>0,0,30,30</area>
+        <area>0,0,36,36</area>
         <!-- workaround because the off state is not active as a default -->
         <imagetype name="movestate_image">
-            <filename>images/shared/music/arrow_updown.png</filename>
-            <area>2,2,26,26</area>
+            <filename>images/icons/move.png</filename>
+            <area>5,5,26,26</area>
             <alpha>50</alpha>
         </imagetype>
         <state name="off">
             <imagetype name="movestate_image">
-                <filename>images/shared/music/arrow_updown.png</filename>
-                <area>2,2,26,26</area>
+                <filename>images/icons/move.png</filename>
+                <area>5,5,26,26</area>
                 <alpha>50</alpha>
             </imagetype>
         </state>
         <state name="on">
             <imagetype name="movestate_image">
-                <filename>images/shared/music/arrow_updown.png</filename>
-                <area>2,2,26,26</area>
+                <filename>images/icons/move.png</filename>
+                <area>5,5,26,26</area>
             </imagetype>
         </state>
     </statetype>
@@ -261,18 +261,18 @@
 
     <!-- Shows if the track is in a playlist -->
     <statetype name="base_music_playliststate">
-        <area>0,0,30,30</area>
+        <area>0,0,36,36</area>
         <state name="off">
             <imagetype name="playliststate_image">
-                <filename>images/shared/music/playlist.png</filename>
-                <area>2,2,26,26</area>
+                <filename>images/icons/playlist.png</filename>
+                <area>5,5,26,26</area>
                 <alpha>50</alpha>
             </imagetype>
         </state>
         <state name="on">
             <imagetype name="playliststate_image">
-                <filename>images/shared/music/playlist.png</filename>
-                <area>2,2,26,26</area>
+                <filename>images/icons/playlist.png</filename>
+                <area>5,5,26,26</area>
             </imagetype>
         </state>
     </statetype>
@@ -280,30 +280,30 @@
 
     <!-- Shows the playing state as images -->
     <statetype name="base_music_playstate">
-        <area>0,0,30,30</area>
+        <area>0,0,36,36</area>
         <state name="default">
             <imagetype name="playstateimage">
-                <filename>images/shared/music/play.png</filename>
-                <area>2,2,26,26</area>
+                <filename>images/icons/music_play.png</filename>
+                <area>5,5,26,26</area>
                 <alpha>50</alpha>
             </imagetype>
         </state>
         <state name="playing">
             <imagetype name="playstateimage">
-                <filename>images/shared/music/play.png</filename>
-                <area>2,2,26,26</area>
+                <filename>images/icons/music_play.png</filename>
+                <area>5,5,26,26</area>
             </imagetype>
         </state>
         <state name="paused">
             <imagetype name="playstateimage">
-                <filename>images/shared/music/pause.png</filename>
-                <area>2,2,26,26</area>
+                <filename>images/icons/music_pause.png</filename>
+                <area>5,5,26,26</area>
             </imagetype>
         </state>
         <state name="stopped">
             <imagetype name="playstateimage">
-                <filename>images/shared/music/stop.png</filename>
-                <area>2,2,26,26</area>
+                <filename>images/icons/music_stop.png</filename>
+                <area>5,5,26,26</area>
             </imagetype>
         </state>
     </statetype>
@@ -311,24 +311,24 @@
 
     <!-- Shows the repeat types as images -->
     <statetype name="base_music_repeatstate">
-        <area>0,0,30,30</area>
+        <area>0,0,36,36</area>
         <state name="off">
             <imagetype name="repeatstate_image">
-                <area>0,0,30,30</area>
-                <filename>images/shared/music/repeat_all.png</filename>
+                <area>3,3,30,30</area>
+                <filename>images/icons/music_repeat_all.png</filename>
                 <alpha>50</alpha>
             </imagetype>
         </state>
         <state name="track">
             <imagetype name="repeatstate_image">
-                <area>0,0,30,30</area>
-                <filename>images/shared/music/repeat_track.png</filename>
+                <area>3,3,30,30</area>
+                <filename>images/icons/music_repeat_track.png</filename>
             </imagetype>
         </state>
         <state name="all">
             <imagetype name="repeatstate_image">
-                <area>0,0,30,30</area>
-                <filename>images/shared/music/repeat_all.png</filename>
+                <area>3,3,30,30</area>
+                <filename>images/icons/music_repeat_all.png</filename>
             </imagetype>
         </state>
     </statetype>
@@ -337,36 +337,36 @@
 
     <!-- Shows the shuffle types as images -->
     <statetype name="base_music_shufflestate">
-        <area>0,0,30,30</area>
+        <area>0,0,36,36</area>
         <state name="off">
             <imagetype name="shufflestate_image">
-                <area>0,0,30,30</area>
-                <filename>images/shared/music/shuffle_random.png</filename>
+                <area>3,3,30,30</area>
+                <filename>images/icons/music_shuffle_random.png</filename>
                 <alpha>50</alpha>
             </imagetype>
         </state>
         <state name="random">
             <imagetype name="shufflestate_image">
-                <area>0,0,30,30</area>
-                <filename>images/shared/music/shuffle_random.png</filename>
+                <area>3,3,30,30</area>
+                <filename>images/icons/music_shuffle_random.png</filename>
             </imagetype>
         </state>
         <state name="intelligent">
             <imagetype name="shufflestate_image">
-                <area>0,0,30,30</area>
-                <filename>images/shared/music/shuffle_intelligent.png</filename>
+                <area>3,3,30,30</area>
+                <filename>images/icons/music_shuffle_intelligent.png</filename>
             </imagetype>
         </state>
         <state name="album">
             <imagetype name="shufflestate_image">
-                <area>0,0,30,30</area>
-                <filename>images/shared/music/shuffle_album.png</filename>
+                <area>3,3,30,30</area>
+                <filename>images/icons/music_shuffle_album.png</filename>
             </imagetype>
         </state>
         <state name="artist">
             <imagetype name="shufflestate_image">
-                <area>0,0,30,30</area>
-                <filename>images/shared/music/shuffle_artist.png</filename>
+                <area>3,3,30,30</area>
+                <filename>images/icons/music_shuffle_artist.png</filename>
             </imagetype>
         </state>
     </statetype>
@@ -475,10 +475,10 @@
                     </textarea>
 
                     <statetype name="movestate" from="base_music_movestate">
-                        <area>1130,3,30,30</area>
+                        <area>1127,0,36,36</area>
                     </statetype>
                     <statetype name="playstate" from="base_music_playstate">
-                        <area>1170,3,30,30</area>
+                        <area>1167,0,36,36</area>
                     </statetype>
                 </state>
                 <state name="inactive" from="active"/>

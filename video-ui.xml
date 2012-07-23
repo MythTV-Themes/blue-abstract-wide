@@ -895,26 +895,17 @@
             <position>570,400</position>
         </checkbox>
 
-        <textedit name="altplayer">
+        <textedit name="altplayer" from="base_textedit">
             <area>610,400,335,36</area>
             <statetype name="background">
                 <state name="active">
-                    <imagetype name="background" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,335,36</area>
-                    </imagetype>
+                    <area>0,0,375,36</area>
                 </state>
                 <state name="selected">
-                    <imagetype name="background" from="base_image_selected">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,335,36</area>
-                    </imagetype>
+                    <area>0,0,375,36</area>
                 </state>
                 <state name="inactive">
-                    <imagetype name="background" from="base_image_inactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,335,36</area>
-                    </imagetype>
+                    <area>0,0,375,36</area>
                 </state>
             </statetype>
             <imagetype name="cursor">

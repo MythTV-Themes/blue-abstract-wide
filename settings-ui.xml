@@ -117,13 +117,13 @@
                         <state name="local">
                             <imagetype name="location">
                                 <area>405,3,30,30</area>
-                                <filename>images/shared/selected.png</filename>
+                                <filename>images/icons/selected.png</filename>
                             </imagetype>
                         </state>
                         <state name="remote">
                             <imagetype name="location">
                                 <area>405,3,30,30</area>
-                                <filename>images/shared/selected.png</filename>
+                                <filename>images/icons/selected.png</filename>
                                 <alpha>50</alpha>
                             </imagetype>
                         </state>
@@ -133,21 +133,21 @@
                         downloadable theme is up to date or not -->
                     <imagetype name="status">
                         <area>443,3,30,30</area>
-                        <filename>images/shared/selected.png</filename>
+                        <filename>images/icons/selected.png</filename>
                         <alpha>50</alpha>
                     </imagetype>
                     <statetype name="themestatus">
                         <state name="uptodate">
                             <imagetype name="status">
                                 <area>443,3,30,30</area>
-                                <filename>images/shared/selected.png</filename>
+                                <filename>images/icons/selected.png</filename>
                                 <alpha>50</alpha>
                             </imagetype>
                         </state>
                         <state name="updateavailable">
                             <imagetype name="status">
                                 <area>443,3,30,30</area>
-                                <filename>images/shared/selected.png</filename>
+                                <filename>images/icons/selected.png</filename>
                             </imagetype>
                         </state>
                     </statetype>
@@ -171,16 +171,16 @@
         <!-- shows a preview image of the theme on the right side -->
         <imagetype name="preview_image_border">
             <area>610,120,576,330</area>
-            <filename>images/shared/themechooser_nfborder.png</filename>
+            <filename>images/media/themechooser_border.png</filename>
         </imagetype>
         <imagetype name="preview_background_image">
             <area>610,120,576,330</area>
-            <filename>images/shared/themechooser_default.png</filename>
-            <mask>images/shared/themechooser_mask.png</mask>
+            <filename>images/media/themechooser_bg.png</filename>
+            <mask>images/media/themechooser_mask.png</mask>
         </imagetype>
         <imagetype name="preview">
             <area>610,120,576,330</area>
-            <mask>images/shared/themechooser_mask.png</mask>
+            <mask>images/media/themechooser_mask.png</mask>
         </imagetype>        
 
         <!-- this is the background for the descriptions and the small preview at the bottom -->

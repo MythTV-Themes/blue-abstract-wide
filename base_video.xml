@@ -9,19 +9,19 @@
 
         <imagetype name="coverart_background_image">
             <area>20,20,245,355</area>
-            <mask>images/shared/video/movie_cover_mask.png</mask>
-            <filename>images/shared/video/default_movie.png</filename>
+            <mask>images/media/movie_cover_mask.png</mask>
+            <filename>images/media/movie_bg.png</filename>
             <preserveaspect>true</preserveaspect>
             <alpha>180</alpha>
         </imagetype>
         <imagetype name="coverart">
             <area>20,20,245,355</area>
-            <mask>images/shared/video/movie_cover_mask.png</mask>
+            <mask>images/media/movie_cover_mask.png</mask>
             <preserveaspect>true</preserveaspect>
         </imagetype>
         <imagetype name="coverart_border">
             <area>20,20,245,355</area>
-            <filename>images/shared/video/movie_cover_nfborder.png</filename>
+            <filename>images/media/movie_cover_border.png</filename>
             <preserveaspect>true</preserveaspect>
         </imagetype>
 
@@ -291,8 +291,8 @@
 
                     <imagetype name="background_image">
                         <area>0,0,133,192</area>
-                        <mask>images/shared/video/movie_item_nfmask.png</mask>
-                        <filename>images/shared/video/default_movie.png</filename>
+                        <mask>images/media/movie_item_nfmask.png</mask>
+                        <filename>images/media/movie_bg.png</filename>
                         <preserveaspect>true</preserveaspect>
                         <alpha>180</alpha>
                     </imagetype>
@@ -305,7 +305,7 @@
                         available, otherwise only the background image is visible -->
                     <imagetype name="buttonimage">
                         <area>0,0,133,192</area>
-                        <mask>images/shared/video/movie_item_nfmask.png</mask>
+                        <mask>images/media/movie_item_nfmask.png</mask>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
 
@@ -315,13 +315,13 @@
                         <state name="yes">
                             <imagetype name="watchedimage">
                                 <area>0,0,50,50</area>
-                                <filename>images/shared/video/watched.png</filename>
+                                <filename>images/media/movie_watched.png</filename>
                             </imagetype>
                         </state>
                         <state name="no">
                             <imagetype name="unwatchedimage">
                                 <area>0,0,50,50</area>
-                                <filename>images/shared/video/unwatched.png</filename>
+                                <filename>images/media/movie_unwatched.png</filename>
                             </imagetype>
                         </state>
                     </statetype>
@@ -332,14 +332,14 @@
                         <state name="subfolder">
                             <imagetype name="node_icon">
                                 <area>12,160,24,24</area>
-                                <filename>images/shared/folder.png</filename>
+                                <filename>images/icons/folder.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
                         <state name="upfolder">
                             <imagetype name="node_icon">
                                 <area>12,160,24,24</area>
-                                <filename>images/shared/folder_up.png</filename>
+                                <filename>images/icons/folder_up.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
@@ -347,7 +347,7 @@
                     
                     <imagetype name="background_image_border">
                         <area>0,0,133,192</area>
-                        <filename>images/shared/video/movie_nfborder.png</filename>
+                        <filename>images/media/movie_item_nfborder.png</filename>
                     </imagetype>
                     
                     <!-- shows how many videos / directories are in this directory -->
@@ -365,8 +365,8 @@
                     
                     <imagetype name="background_image">
                         <area>0,0,185,267</area>
-                        <mask>images/shared/video/movie_item_fmask.png</mask>
-                        <filename>images/shared/video/default_movie.png</filename>
+                        <mask>images/media/movie_item_fmask.png</mask>
+                        <filename>images/media/movie_bg.png</filename>
                         <preserveaspect>true</preserveaspect>
                         <alpha>220</alpha>
                     </imagetype>
@@ -379,7 +379,7 @@
                         available, otherwise only the background image is visible -->
                     <imagetype name="buttonimage">
                         <area>0,0,185,267</area>
-                        <mask>images/shared/video/movie_item_fmask.png</mask>
+                        <mask>images/media/movie_item_fmask.png</mask>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
 
@@ -389,13 +389,13 @@
                         <state name="yes">
                             <imagetype name="watchedimage">
                                 <area>0,0,65,65</area>
-                                <filename>images/shared/video/watched.png</filename>
+                                <filename>images/media/movie_watched.png</filename>
                             </imagetype>
                         </state>
                         <state name="no">
                             <imagetype name="unwatchedimage">
                                 <area>0,0,65,65</area>
-                                <filename>images/shared/video/unwatched.png</filename>
+                                <filename>images/media/movie_unwatched.png</filename>
                             </imagetype>
                         </state>
                     </statetype>
@@ -406,14 +406,14 @@
                         <state name="subfolder">
                             <imagetype name="node_icon">
                                 <area>16,225,30,30</area>
-                                <filename>images/shared/folder_open.png</filename>
+                                <filename>images/icons/folder_selected.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
                         <state name="upfolder">
                             <imagetype name="node_icon">
                                 <area>16,225,30,30</area>
-                                <filename>images/shared/folder_up_open.png</filename>
+                                <filename>images/icons/folder_up_selected.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
@@ -421,7 +421,7 @@
 
                     <imagetype name="background_image_border">
                         <area>0,0,185,267</area>
-                        <filename>images/shared/video/movie_fborder.png</filename>
+                        <filename>images/media/movie_item_fborder.png</filename>
                     </imagetype>
                     
                     <!-- shows how many videos / directories are in this directory -->

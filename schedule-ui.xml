@@ -44,13 +44,13 @@
             <textoffset>6,6</textoffset>
             <!-- the status of the recording. These are letters
                 that are shown in the affected tv program timeslot -->
-            <recordstatus type="SingleRecord"   image="images/shared/schedules/single.png"/>
-            <recordstatus type="TimeslotRecord" image="images/shared/schedules/timeslot.png"/>
-            <recordstatus type="ChannelRecord"  image="images/shared/schedules/channel.png"/>
-            <recordstatus type="AllRecord"      image="images/shared/schedules/all.png"/>
-            <recordstatus type="WeekslotRecord" image="images/shared/schedules/weekslot.png"/>
-            <recordstatus type="FindOneRecord"  image="images/shared/schedules/findone.png"/>
-            <recordstatus type="OverrideRecord" image="images/shared/schedules/override.png"/>
+            <recordstatus type="SingleRecord"   image="images/icons/schedule_single.png"/>
+            <recordstatus type="TimeslotRecord" image="images/icons/schedule_timeslot.png"/>
+            <recordstatus type="ChannelRecord"  image="images/icons/schedule_channel.png"/>
+            <recordstatus type="AllRecord"      image="images/icons/schedule_all.png"/>
+            <recordstatus type="WeekslotRecord" image="images/icons/schedule_weekslot.png"/>
+            <recordstatus type="FindOneRecord"  image="images/icons/schedule_findone.png"/>
+            <recordstatus type="OverrideRecord" image="images/icons/schedule_override.png"/>
             <arrow direction="left" image="images/shared/arrow_left.png"/>
             <arrow direction="right" image="images/shared/arrow_right.png"/>
             <font>text_small</font>
@@ -106,13 +106,13 @@
             <textoffset>6,6</textoffset>
             <!-- the status of the recording. These are letters
                 that are shown in the affected tv program timeslot -->
-            <recordstatus type="SingleRecord"   image="images/shared/schedules/single.png"/>
-            <recordstatus type="TimeslotRecord" image="images/shared/schedules/timeslot.png"/>
-            <recordstatus type="ChannelRecord"  image="images/shared/schedules/channel.png"/>
-            <recordstatus type="AllRecord"      image="images/shared/schedules/all.png"/>
-            <recordstatus type="WeekslotRecord" image="images/shared/schedules/weekslot.png"/>
-            <recordstatus type="FindOneRecord"  image="images/shared/schedules/findone.png"/>
-            <recordstatus type="OverrideRecord" image="images/shared/schedules/override.png"/>
+            <recordstatus type="SingleRecord"   image="images/icons/schedule_single.png"/>
+            <recordstatus type="TimeslotRecord" image="images/icons/schedule_timeslot.png"/>
+            <recordstatus type="ChannelRecord"  image="images/icons/schedule_channel.png"/>
+            <recordstatus type="AllRecord"      image="images/icons/schedule_all.png"/>
+            <recordstatus type="WeekslotRecord" image="images/icons/schedule_weekslot.png"/>
+            <recordstatus type="FindOneRecord"  image="images/icons/schedule_findone.png"/>
+            <recordstatus type="OverrideRecord" image="images/icons/schedule_override.png"/>
             <arrow direction="left" image="images/shared/arrow_left.png"/>
             <arrow direction="right" image="images/shared/arrow_right.png"/>
             <font>text_small</font>

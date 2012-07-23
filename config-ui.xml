@@ -71,8 +71,8 @@
 
                     <imagetype name="background_image">
                         <area>0,0,133,100</area>
-                        <mask>images/shared/config/channel_item_nfmask.png</mask>
-                        <filename>images/shared/config/default_channel.png</filename>
+                        <mask>images/media/channel_item_nfmask.png</mask>
+                        <filename>images/media/channel_bg.png</filename>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
 
@@ -89,13 +89,13 @@
                         available, otherwise only the background image is visible -->
                     <imagetype name="icon">
                         <area>0,0,133,100</area>
-                        <mask>images/shared/config/channel_item_nfmask.png</mask>
+                        <mask>images/media/channel_nfmask.png</mask>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>                      
                     
                     <imagetype name="background_image_border">
                         <area>0,0,133,100</area>
-                        <filename>images/shared/config/channel_nfborder.png</filename>
+                        <filename>images/media/channel_nfborder.png</filename>
                     </imagetype>
                 </state>
 
@@ -106,8 +106,8 @@
                     
                     <imagetype name="background_image">
                         <area>0,0,185,138</area>
-                        <mask>images/shared/config/channel_item_fmask.png</mask>
-                        <filename>images/shared/config/default_channel.png</filename>
+                        <mask>images/media/channel_fmask.png</mask>
+                        <filename>images/media/channel_bg.png</filename>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
 
@@ -122,13 +122,13 @@
                         available, otherwise only the background image is visible -->
                     <imagetype name="icon">
                         <area>0,0,185,138</area>
-                        <mask>images/shared/config/channel_item_fmask.png</mask>
+                        <mask>images/media/channel_fmask.png</mask>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
                     
                     <imagetype name="background_image_border">
                         <area>1,1,183,136</area>
-                        <filename>images/shared/config/channel_fborder.png</filename>
+                        <filename>images/media/channel_fborder.png</filename>
                     </imagetype>
                 </state>
 

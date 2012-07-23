@@ -15,10 +15,6 @@
     <fontdef name="normal" face="DejaVu Sans">
         <color>#FFFFFF</color>
         <pixelsize>18</pixelsize>
-<!--         <weight>normal</weight> -->
-<!--         <outlinecolor>#000000</outlinecolor> -->
-<!--         <outlinesize>1</outlinesize> -->
-<!--         <outlinealpha>150</outlinealpha> -->
     </fontdef>
 
 
@@ -199,14 +195,6 @@
     <imagetype name="base_icon_inactive">
         <alpha>40</alpha>
     </imagetype>
-
-
-   <!-- the background image behind the popup title description -->
-    <imagetype name="base_popup_background" from="base_image_selected">
-        <area>0,0,350,90</area>
-        <filename>images/widgets/popup_background.png</filename>
-    </imagetype>
-    
         
     
     <!-- the definitions of the buttons and buttonlists in case the 
@@ -289,19 +277,19 @@
                     <position>100%-37,0</position>
                     <state type="off">
                         <imagetype name="checkoff">
-                            <filename>images/widgets/checkbox_off.png</filename>
+                            <filename>images/icons/button_checkbox_off.png</filename>
                             <area>5,5,26,26</area>
                         </imagetype>
                     </state>
                     <state type="half">
                     <imagetype name="checkhalf">
-                            <filename>images/widgets/checkbox_half.png</filename>
+                            <filename>images/icons/button_checkbox_half.png</filename>
                             <area>5,5,26,26</area>
                         </imagetype>
                     </state>
                     <state type="full">
                         <imagetype name="checkfull">
-                            <filename>images/widgets/checkbox_full.png</filename>
+                            <filename>images/icons/button_checkbox_full.png</filename>
                             <area>5,5,26,26</area>
                         </imagetype>
                     </state>
@@ -310,7 +298,7 @@
                 <!-- indicates the button contains a submenu -->
                 <imagetype name="buttonarrow" from="base_arrow_active">
                     <position>100%-26,4</position>
-                    <filename>images/shared/arrow_right.png</filename>
+                    <filename>images/icons/scroll_right.png</filename>
                 </imagetype>
             </state>
             
@@ -340,12 +328,12 @@
             <position>100%-55,100%-5</position>
             <state type="off">
                 <imagetype name="upon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_up.png</filename>
+                    <filename>images/icons/button_arrow_up.png</filename>
                 </imagetype>
             </state>
             <state type="full">
                 <imagetype name="upoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_up.png</filename>
+                    <filename>images/icons/button_arrow_up.png</filename>
                 </imagetype>
             </state>
         </statetype>
@@ -356,12 +344,12 @@
             <position>100%-30,100%-5</position>
             <state type="off">
                 <imagetype name="dnon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_down.png</filename>
+                    <filename>images/icons/button_arrow_down.png</filename>
                 </imagetype>
             </state>
             <state type="full">
                 <imagetype name="dnoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_down.png</filename>
+                    <filename>images/icons/button_arrow_down.png</filename>
                 </imagetype>
             </state>
         </statetype>
@@ -399,12 +387,12 @@
             <position>100%+2,-2</position>
             <state type="off">
                 <imagetype name="dnon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_right.png</filename>
+                    <filename>images/icons/button_arrow_right.png</filename>
                 </imagetype>
             </state>
             <state type="full">
                 <imagetype name="dnoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_right.png</filename>
+                    <filename>images/icons/button_arrow_right.png</filename>
                 </imagetype>
             </state>
         </statetype>
@@ -413,12 +401,12 @@
             <position>100%+3,13</position>
             <state type="off">
                 <imagetype name="upon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_left.png</filename>
+                    <filename>images/icons/button_arrow_left.png</filename>
                 </imagetype>
             </state>
             <state type="full">
                 <imagetype name="upoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_left.png</filename>
+                    <filename>images/icons/button_arrow_left.png</filename>
                 </imagetype>
             </state>
         </statetype>
@@ -499,21 +487,18 @@
             <!-- a selected, active button -->
             <state name="selected" from="active">
                 <area>0,0,150,36</area>
-<!--                 <shape name="background" from="base_button_shape_selectedactive" /> -->
                 <shape name="background" from="base_button_shape_selected" />
             </state>
             
             <!-- unselected or a greyed out button -->
             <state name="disabled" from="active">
                 <area>0,0,150,36</area>
-<!--                 <shape name="background" from="base_button_shape_active" /> -->
                 <shape name="background" from="base_button_shape_disabled" />
             </state>
             
             <!-- the down / pushed in state of a button -->
             <state name="pushed" from="active">
                 <area>0,0,150,36</area>
-<!--                 <shape name="background" from="base_button_shape_selectedinactive" /> -->
                 <shape name="background" from="base_button_shape_pushed" />
             </state>
         </statetype>
@@ -608,28 +593,28 @@
             <state name="active">
                 <area>0,0,36,36</area>
                 <imagetype name="image" from="base_image_active">
-                    <filename>images/widgets/search.png</filename>
+                    <filename>images/icons/search.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="selected">
                 <area>0,0,36,36</area>
                 <imagetype name="image" from="base_image_selected">
-                    <filename>images/widgets/search.png</filename>
+                    <filename>images/icons/search.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled">
                 <area>0,0,36,36</area>
                 <imagetype name="image" from="base_image_disabled">
-                    <filename>images/widgets/search.png</filename>
+                    <filename>images/icons/search.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="pushed">
                 <area>0,0,36,36</area>
                 <imagetype name="image" from="base_image_pushed">
-                    <filename>images/widgets/search.png</filename>
+                    <filename>images/icons/search.png</filename>
                     <area>3,3,30,30</area>
                 </imagetype>
             </state>
@@ -672,19 +657,19 @@
             <state type="off">
                 <imagetype name="checkstate_image" from="base_image_selected">
                     <area>5,5,26,26</area>
-                    <filename>images/widgets/checkbox_off.png</filename>
+                    <filename>images/icons/button_checkbox_off.png</filename>
                 </imagetype>
             </state>
             <state type="half">
                 <imagetype name="checkstate_image" from="base_image_selected">
                     <area>5,5,26,26</area>
-                    <filename>images/widgets/checkbox_half.png</filename>
+                    <filename>images/icons/button_checkbox_half.png</filename>
                 </imagetype>
             </state>
             <state type="full">
                 <imagetype name="checkstate_image" from="base_image_selected">
                     <area>5,5,26,26</area>
-                    <filename>images/widgets/checkbox_full.png</filename>
+                    <filename>images/icons/button_checkbox_full.png</filename>
                 </imagetype>
             </state>
         </statetype>
@@ -727,12 +712,12 @@
             <position>100%+2,0</position>
             <state type="off">
                 <imagetype name="dnon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_right.png</filename>
+                    <filename>images/icons/button_arrow_right.png</filename>
                 </imagetype>
             </state>
             <state type="full">
                 <imagetype name="dnoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_right.png</filename>
+                    <filename>images/icons/button_arrow_right.png</filename>
                 </imagetype>
             </state>
         </statetype>
@@ -741,12 +726,12 @@
             <position>100%+3,13</position>
             <state type="off">
                 <imagetype name="upon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_left.png</filename>
+                    <filename>images/icons/button_arrow_left.png</filename>
                 </imagetype>
             </state>
             <state type="full">
                 <imagetype name="upoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_left.png</filename>
+                    <filename>images/icons/button_arrow_left.png</filename>
                 </imagetype>
             </state>
         </statetype>
@@ -821,52 +806,52 @@
         <state name="0" />
         <state name="1">
             <imagetype name="stars">
-                <filename>images/widgets/rating/0.5_star.png</filename>
+                <filename>images/icons/ratings/0.5_star.png</filename>
             </imagetype>
         </state>
         <state name="2">
             <imagetype name="stars">
-                <filename>images/widgets/rating/1.0_star.png</filename>
+                <filename>images/icons/ratings/1.0_star.png</filename>
             </imagetype>
         </state>
         <state name="3">
             <imagetype name="stars">
-                <filename>images/widgets/rating/1.5_stars.png</filename>
+                <filename>images/icons/ratings/1.5_stars.png</filename>
             </imagetype>
         </state>
         <state name="4">
             <imagetype name="stars">
-                <filename>images/widgets/rating/2.0_stars.png</filename>
+                <filename>images/icons/ratings/2.0_stars.png</filename>
             </imagetype>
         </state>
         <state name="5">
             <imagetype name="stars">
-                <filename>images/widgets/rating/2.5_stars.png</filename>
+                <filename>images/icons/ratings/2.5_stars.png</filename>
             </imagetype>
         </state>
         <state name="6">
             <imagetype name="stars">
-                <filename>images/widgets/rating/3.0_stars.png</filename>
+                <filename>images/icons/ratings/3.0_stars.png</filename>
             </imagetype>
         </state>
         <state name="7">
             <imagetype name="stars">
-                <filename>images/widgets/rating/3.5_stars.png</filename>
+                <filename>images/icons/ratings/3.5_stars.png</filename>
             </imagetype>
         </state>
         <state name="8">
             <imagetype name="stars">
-                <filename>images/widgets/rating/4.0_stars.png</filename>
+                <filename>images/icons/ratings/4.0_stars.png</filename>
             </imagetype>
         </state>
         <state name="9">
             <imagetype name="stars">
-                <filename>images/widgets/rating/4.5_stars.png</filename>
+                <filename>images/icons/ratings/4.5_stars.png</filename>
             </imagetype>
         </state>
         <state name="10">
             <imagetype name="stars">
-                <filename>images/widgets/rating/5.0_stars.png</filename>
+                <filename>images/icons/ratings/5.0_stars.png</filename>
             </imagetype>
         </state>
     </statetype>
@@ -879,7 +864,7 @@
         that shows only the inactive stars-->
     <imagetype name="base_parentallevel_background">
         <area>0,0,72,18</area>
-        <filename>images/widgets/parentallevel/background.png</filename>
+        <filename>images/icons/ratings/parentallevel_bg.png</filename>
         <preserveaspect>true</preserveaspect>
     </imagetype>
 
@@ -892,22 +877,22 @@
         <area>0,0,72,18</area>
         <state name="Lowest">
             <imagetype name="icon">
-                <filename>images/widgets/parentallevel/lowest.png</filename>
+                <filename>images/icons/ratings//parentallevel_1.png</filename>
             </imagetype>
         </state>
         <state name="Low" from="Lowest">
             <imagetype name="icon">
-                <filename>images/widgets/parentallevel/low.png</filename>
+                <filename>images/icons/ratings//parentallevel_2.png</filename>
             </imagetype>
         </state>
         <state name="Medium" from="Lowest">
             <imagetype name="icon">
-                <filename>images/widgets/parentallevel/medium.png</filename>
+                <filename>images/icons/ratings//parentallevel_3.png</filename>
             </imagetype>
         </state>
         <state name="High" from="Lowest">
             <imagetype name="icon">
-                <filename>images/widgets/parentallevel/high.png</filename>
+                <filename>images/icons/ratings//parentallevel_4.png</filename>
             </imagetype>
         </state>
     </statetype>
@@ -926,7 +911,7 @@
         
         <!-- the image when the progressbar has 100% -->
         <imagetype name="progressimage" from="base_image_selected">
-            <filename>images/widgets/progressbar/progressbar_active.png</filename>
+            <filename>images/icons/progressbar.png</filename>
             <area>0,0,500,20</area>
         </imagetype>
     </progressbar>
@@ -939,7 +924,7 @@
         <area>0,0,30,30</area>
         <imagetype name="spinner">
             <area>0,0,30,30</area>
-            <filepattern low="0" high="11">images/widgets/busy/busy_%1.png</filepattern>
+            <filepattern low="0" high="11">images/icons/animation/busy_%1.png</filepattern>
             <delay>100</delay>
         </imagetype>
     </progressbar>
@@ -952,7 +937,7 @@
     <textarea name="base_heading">
         <imagetype name="header_background">
             <area>-1,-1,560,50</area>
-            <filename>images/widgets/header_left.png</filename>
+            <filename>images/media/header_left.png</filename>
         </imagetype>
         <clock name="clock">
             <area>10,0,200,30</area>
@@ -1166,7 +1151,7 @@
 
         <imagetype name="animation">
             <area>610,370,60,10</area>
-            <filepattern low="1" high="5">images/widgets/busy/busy_%1.png</filepattern>
+            <filepattern low="1" high="5">images/icons/animation/busy_%1.png</filepattern>
             <delay>100</delay>
         </imagetype>
 
@@ -1440,18 +1425,18 @@
         <!-- the preview image of the selected item -->
         <imagetype name="preview_background_image">
             <area>35,105,245,355</area>
-            <mask>images/shared/video/movie_cover_mask.png</mask>
-            <filename>images/shared/video/default_movie.png</filename>
+            <mask>images/media/movie_cover_mask.png</mask>
+            <filename>images/media/movie_bg.png</filename>
             <preserveaspect>true</preserveaspect>
             <alpha>180</alpha>
         </imagetype>
         <imagetype name="preview">
             <area>35,105,245,355</area>
-            <mask>images/shared/video/movie_cover_mask.png</mask>
+            <mask>images/media/movie_cover_mask.png</mask>
         </imagetype>
         <imagetype name="preview_border">
             <area>35,105,245,355</area>
-            <filename>images/shared/video/movie_cover_nfborder.png</filename>
+            <filename>images/media/movie_cover_border.png</filename>
             <preserveaspect>true</preserveaspect>
         </imagetype>
 
@@ -1496,28 +1481,28 @@
                 <state name="active">
                     <area>0,0,54,36</area>
                     <imagetype name="image" from="base_image_active">
-                        <filename>images/shared/back.png</filename>
+                        <filename>images/icons/arrow_left.png</filename>
                         <area>12,3,30,30</area>
                     </imagetype>
                 </state>
                 <state name="selected">
                     <area>0,0,54,36</area>
                     <imagetype name="image" from="base_image_selected">
-                        <filename>images/shared/back.png</filename>
+                        <filename>images/icons/arrow_left.png</filename>
                         <area>12,3,30,30</area>
                     </imagetype>
                 </state>
                 <state name="disabled">
                     <area>0,0,54,36</area>
                     <imagetype name="image" from="base_image_disabled">
-                        <filename>images/shared/back.png</filename>
+                        <filename>images/icons/arrow_left.png</filename>
                         <area>12,3,30,30</area>
                     </imagetype>
                 </state>
                 <state name="pushed">
                     <area>0,0,54,36</area>
                     <imagetype name="image" from="base_image_pushed">
-                        <filename>images/shared/back.png</filename>
+                        <filename>images/icons/arrow_left.png</filename>
                         <area>12,3,30,30</area>
                     </imagetype>
                 </state>
@@ -1531,28 +1516,28 @@
                 <state name="active">
                     <area>0,0,54,36</area>
                     <imagetype name="image" from="base_image_active">
-                        <filename>images/shared/folder_up_open.png</filename>
+                        <filename>images/icons/folder_up_selected.png</filename>
                         <area>12,3,30,30</area>
                     </imagetype>
                 </state>
                 <state name="selected">
                     <area>0,0,54,36</area>
                     <imagetype name="image" from="base_image_selected">
-                        <filename>images/shared/folder_up_open.png</filename>
+                        <filename>images/icons/folder_up_selected.png</filename>
                         <area>12,3,30,30</area>
                     </imagetype>
                 </state>
                 <state name="disabled">
                     <area>0,0,54,36</area>
                     <imagetype name="image" from="base_image_disabled">
-                        <filename>images/shared/folder_up_open.png</filename>
+                        <filename>images/icons/folder_up_selected.png</filename>
                         <area>12,3,30,30</area>
                     </imagetype>
                 </state>
                 <state name="pushed">
                     <area>0,0,54,36</area>
                     <imagetype name="image" from="base_image_pushed">
-                        <filename>images/shared/folder_up_open.png</filename>
+                        <filename>images/icons/folder_up_selected.png</filename>
                         <area>12,3,30,30</area>
                     </imagetype>
                 </state>
@@ -1576,8 +1561,8 @@
 
                     <imagetype name="background_image">
                         <area>0,0,133,192</area>
-                        <mask>images/shared/video/movie_item_nfmask.png</mask>
-                        <filename>images/shared/video/default_movie.png</filename>
+                        <mask>images/media/movie_item_nfmask.png</mask>
+                        <filename>images/media/default_movie.png</filename>
                         <preserveaspect>true</preserveaspect>
                         <alpha>180</alpha>
                     </imagetype>
@@ -1590,7 +1575,7 @@
                         available, otherwise only the background image is visible -->
                     <imagetype name="buttonimage">
                         <area>0,0,133,192</area>
-                        <mask>images/shared/video/movie_item_nfmask.png</mask>
+                        <mask>images/media/movie_item_nfmask.png</mask>
                     </imagetype>
 
                     <!-- the node is a folder and it is currently not selected -->
@@ -1599,14 +1584,14 @@
                         <state name="subfolder">
                             <imagetype name="node_icon">
                                 <area>12,160,24,24</area>
-                                <filename>images/shared/folder.png</filename>
+                                <filename>images/icons/folder.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
                         <state name="upfolder">
                             <imagetype name="node_icon">
                                 <area>12,160,24,24</area>
-                                <filename>images/shared/folder_up.png</filename>
+                                <filename>images/icons/folder_up.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
@@ -1616,7 +1601,7 @@
                     
                     <imagetype name="background_image_border">
                         <area>0,0,133,192</area>
-                        <filename>images/shared/video/movie_nfborder.png</filename>
+                        <filename>images/media/movie_nfborder.png</filename>
                     </imagetype>
                 </state>
 
@@ -1629,8 +1614,8 @@
                     
                     <imagetype name="background_image">
                         <area>0,0,185,267</area>
-                        <mask>images/shared/video/movie_item_fmask.png</mask>
-                        <filename>images/shared/video/default_movie.png</filename>
+                        <mask>images/media/movie_item_fmask.png</mask>
+                        <filename>images/media/movie_bg.png</filename>
                         <preserveaspect>true</preserveaspect>
                         <alpha>220</alpha>
                     </imagetype>
@@ -1643,7 +1628,7 @@
                         available, otherwise only the background image is visible -->
                     <imagetype name="buttonimage">
                         <area>0,0,185,267</area>
-                        <mask>images/shared/video/movie_item_fmask.png</mask>
+                        <mask>images/media/movie_item_fmask.png</mask>
                     </imagetype>
 
                     <!-- the node is a folder and it is currently selected -->
@@ -1652,14 +1637,14 @@
                         <state name="subfolder">
                             <imagetype name="node_icon">
                                 <area>16,225,30,30</area>
-                                <filename>images/shared/folder_open.png</filename>
+                                <filename>images/icons/folder_selected.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
                         <state name="upfolder">
                             <imagetype name="node_icon">
                                 <area>16,225,30,30</area>
-                                <filename>images/shared/folder_up_open.png</filename>
+                                <filename>images/icons/folder_up_selected.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
@@ -1669,7 +1654,7 @@
 
                     <imagetype name="background_image_border">
                         <area>0,0,185,267</area>
-                        <filename>images/shared/video/movie_fborder.png</filename>
+                        <filename>images/media/movie_item_fborder.png</filename>
                     </imagetype>
 
                 </state>
@@ -1887,6 +1872,7 @@
             <multiline>yes</multiline>
             <scroll direction="vertical"/>
         </textarea>
+
         <shape name="title_separator" from="base_background_shape">
             <area>351,210,578,1</area>
         </shape>
@@ -1895,10 +1881,6 @@
             <area>365,225,550,275</area>
             <statetype name="buttonitem">
                 <state name="active">
-                    <imagetype name="buttonbackground" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,550,36</area>
-                    </imagetype>
                     <imagetype name="buttonimage">
                         <area>8,0,350,36</area>
                         <preserveaspect>true</preserveaspect>
@@ -1911,16 +1893,12 @@
                 </state>
                 <state name="inactive" from="active" />
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,550,36</area>
-                    </imagetype>
+                    <area>0,0,550,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive"/>
                 </state>
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,550,36</area>
-                    </imagetype>
+                    <area>0,0,550,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive"/>
                 </state>
             </statetype>
         </buttonlist>
