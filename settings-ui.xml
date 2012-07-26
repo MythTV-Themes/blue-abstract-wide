@@ -79,7 +79,6 @@
 
 
     <!-- DONE -->
-    <!-- TODO - icons in buttonlist -->
     <!-- Presents a list of available themes 
         that the user can download and install -->
     <window name="themechooser">
