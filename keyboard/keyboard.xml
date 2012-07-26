@@ -2,6 +2,9 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
+    <!-- DONE -->
+    <!-- TODO key alignment (width is now 36, not 40) -->
+    <!-- Shows the keyboard -->
     <window name="keyboard">
         <area>-1,-1,580,165</area>
 
@@ -11,11 +14,12 @@
         </shape>
 
         <!-- top row -->
-        <button name="key_1" from="base_button">
+        <button name="key_1">
             <area>26,29,36,36</area>
             <statetype name="buttonstate">
                 <state name="active">
                     <area>0,0,36,36</area>
+                    <shape name="background" from="base_button_shape_active" />
                     <textarea name="text" from="base_textarea">
                         <area>0,0,36,36</area>
                         <align>allcenter</align>
@@ -185,15 +189,16 @@
         </button>
 
         <!-- special keys -->
-        <button name="key_lshift" from="base_button">
+        <button name="key_lshift">
             <position>28,221</position>
             <statetype name="buttonstate">
                 <state name="active">
                     <area>0,0,50,36</area>
-                    <textarea name="text" from="base_textarea">
-                        <area>0,0,50,36</area>
-                        <align>allcenter</align>
-                    </textarea>
+                    <shape name="background" from="base_button_shape_active" />
+                    <imagetype name="arrow" from="base_image_active">
+                        <filename>images/icons/arrow_up.png</filename>
+                        <area>13,8,20,20</area>
+                    </imagetype>
                 </state>
                 <state name="selected" from="active">
                     <area>0,0,50,36</area>
@@ -211,11 +216,12 @@
         </button>
 
 
-        <button name="key_lock" from="base_button">
+        <button name="key_lock">
             <position>85,221</position>
             <statetype name="buttonstate">
                 <state name="active">
                     <area>0,0,62,36</area>
+                    <shape name="background" from="base_button_shape_active" />
                     <textarea name="text" from="base_textarea">
                         <area>0,0,62,36</area>
                         <align>allcenter</align>
@@ -244,20 +250,24 @@
         </button>
         
         <!-- row 5 -->
-        <button name="key_space" from="base_button">
+        <button name="key_space">
             <position>152,221</position>
             <statetype name="buttonstate">
                 <state name="active">
                     <area>0,0,300,36</area>
+                    <shape name="background" from="base_button_shape_active" />
                 </state>
                 <state name="selected">
                     <area>0,0,300,36</area>
+                    <shape name="background" from="base_button_shape_selected" />
                 </state>
                 <state name="disabled">
                     <area>0,0,300,36</area>
+                    <shape name="background" from="base_button_shape_disabled" />
                 </state>
                 <state name="pushed">
                     <area>0,0,300,36</area>
+                    <shape name="background" from="base_button_shape_pushed" />
                 </state>
             </statetype>
         </button>
@@ -266,13 +276,14 @@
             <position>459,221</position>
         </button>
 
-        <button name="key_moveleft" from="base_button">
+        <button name="key_moveleft">
             <position>528,221</position>
             <statetype name="buttonstate">
                 <state name="active">
                     <area>0,0,36,36</area>
+                    <shape name="background" from="base_button_shape_active" />
                     <imagetype name="arrow" from="base_image_active">
-                        <filename>images/widgets/keyboard/arrow_left.png</filename>
+                        <filename>images/icons/arrow_left.png</filename>
                         <area>3,3,30,30</area>
                     </imagetype>
                 </state>
@@ -292,13 +303,14 @@
         </button>
 
 
-        <button name="key_moveright" from="base_button">
+        <button name="key_moveright">
             <position>575,221</position>
             <statetype name="buttonstate">
                 <state name="active">
                     <area>0,0,36,36</area>
+                    <shape name="background" from="base_button_shape_active" />
                     <imagetype name="arrow" from="base_image_active">
-                        <filename>images/widgets/keyboard/arrow_right.png</filename>
+                        <filename>images/icons/arrow_right.png</filename>
                         <area>3,3,30,30</area>
                     </imagetype>
                 </state>
@@ -322,13 +334,14 @@
             <position>623,221</position>
         </button>
 
-        <button name="key_back" from="base_button">
+        <button name="key_back">
             <position>605,77</position>
             <statetype name="buttonstate">
                 <state name="active">
                     <area>0,0,70,36</area>
+                    <shape name="background" from="base_button_shape_active" />
                     <imagetype name="arrow" from="base_image_active">
-                        <filename>images/widgets/keyboard/arrow_back.png</filename>
+                        <filename>images/icons/arrow_left.png</filename>
                         <area>19,3,30,30</area>
                     </imagetype>
                 </state>
@@ -347,14 +360,15 @@
             </statetype>
         </button>
 
-        <button name="key_done" from="base_button">
+        <button name="key_done">
             <position>575,125</position>
             <statetype name="buttonstate">
                 <state name="active">
                     <area>0,0,100,36</area>
+                    <shape name="background" from="base_button_shape_active" />
                     <imagetype name="arrow" from="base_image_active">
-                        <filename>images/widgets/keyboard/arrow_return.png</filename>
-                        <area>55,3,30,30</area>
+                        <filename>images/icons/enter.png</filename>
+                        <area>48,3,30,30</area>
                     </imagetype>
                 </state>
                 <state name="selected" from="active">
