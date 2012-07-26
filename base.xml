@@ -57,15 +57,12 @@
     </fontdef>
 
 
-    <!-- Other color variations on the normal text font -->
+    <!-- Other color variations of the normal text font -->
     <fontdef name="text_grey" from="text">
         <color>#999999</color>
     </fontdef>
     <fontdef name="text_light_blue" from="text">
         <color>#BBBBBB</color>
-    </fontdef>
-    <fontdef name="text_black" from="text">
-        <color>#000000</color>
     </fontdef>
     <fontdef name="text_yellow" from="text">
         <color>#FFFF33</color>
@@ -74,39 +71,9 @@
         <color>#FF3333</color>
     </fontdef>
 
-    <!-- Smaller font that is used in many screens -->
+    <!-- Smaller font that is used in some screens -->
     <fontdef name="text_small" from="normal">
         <pixelsize>16</pixelsize>
-    </fontdef>
-    <fontdef name="text_small_inactive" from="text_small">
-        <color>#999999</color>
-    </fontdef>
-    <fontdef name="text_small_error" from="text_small">
-        <color>#800600</color>
-    </fontdef>
-    <fontdef name="text_small_warning" from="text_small">
-        <color>#FFFF33</color>
-    </fontdef>
-
-
-    <!-- Other color variations on the small text font -->
-    <fontdef name="text_small_grey" from="text_small">
-        <color>#666666</color>
-    </fontdef>
-    <fontdef name="text_small_black" from="text_small">
-        <color>#000000</color>
-    </fontdef>
-    <fontdef name="text_small_purple" from="text_small">
-        <color>#9999cc</color>
-    </fontdef>
-    <fontdef name="text_small_yellow" from="text_small">
-        <color>#FFFF33</color>
-    </fontdef>
-    <fontdef name="text_small_green" from="text_small">
-        <color>#80d400</color>
-    </fontdef>
-    <fontdef name="text_small_blue" from="text_small">
-        <color>#0492A7</color>
     </fontdef>
     <fontdef name="text_small_red" from="text_small">
         <color>#800900</color>
