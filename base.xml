@@ -298,7 +298,7 @@
                 <!-- indicates the button contains a submenu -->
                 <imagetype name="buttonarrow" from="base_arrow_active">
                     <position>100%-26,4</position>
-                    <filename>images/icons/scroll_right.png</filename>
+                    <filename>images/icons/button_arrow_right.png</filename>
                 </imagetype>
             </state>
             
