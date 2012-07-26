@@ -2001,12 +2001,12 @@
             <statetype name="downscrollarrow">
                 <position>100%-5,55</position>
                 <state type="off">
-                    <imagetype name="dnon" from="base_arrow_inactive">
+                    <imagetype name="dnon" from="base_image_inactive">
                         <filename>images/icons/button_arrow_right.png</filename>
                     </imagetype>
                 </state>
                 <state type="full">
-                    <imagetype name="dnoff" from="base_arrow_selectedactive">
+                    <imagetype name="dnoff" from="base_image_selectedactive">
                         <filename>images/icons/button_arrow_right.png</filename>
                     </imagetype>
                 </state>
@@ -2015,12 +2015,12 @@
             <statetype name="upscrollarrow">
                 <position>-20,55</position>
                 <state type="off">
-                    <imagetype name="upon" from="base_arrow_inactive">
+                    <imagetype name="upon" from="base_image_inactive">
                         <filename>images/icons/button_arrow_left.png</filename>
                     </imagetype>
                 </state>
                 <state type="full">
-                    <imagetype name="upoff" from="base_arrow_selectedactive">
+                    <imagetype name="upoff" from="base_image_selectedactive">
                         <filename>images/icons/button_arrow_left.png</filename>
                     </imagetype>
                 </state>
