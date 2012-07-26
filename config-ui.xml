@@ -816,18 +816,19 @@
                         <state name="good">
                             <textarea name="description" from="base_textarea">
                                 <value>Connection Ok</value>
+                                <font>text_small</font>
                             </textarea>
                         </state>
                         <state name="protocolmismatch">
                             <textarea name="description" from="base_textarea">
                                 <value>Protocol Version Mismatch</value>
-                                <font>text_red</font>
+                                <font>text_small_red</font>
                             </textarea>
                         </state>
                         <state name="blocked">
                             <textarea name="description" from="base_textarea">
                                 <value>Blocked By Firewall</value>
-                                <font>text_red</font>
+                                <font>text_small_red</font>
                             </textarea>
                         </state>
                     </statetype>
