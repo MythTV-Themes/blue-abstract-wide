@@ -293,7 +293,6 @@
                             <mask>images/media/music_item_nfmask.png</mask>
                             <filename>images/media/music_type/album.png</filename>
                             <preserveaspect>true</preserveaspect>
-                            <!--<alpha>180</alpha>-->
                         </imagetype>
                         
                         <!-- this is the actual cover image that will be shown if its
@@ -1064,7 +1063,6 @@
             <mask>images/media/music_item_nfmask.png</mask>
             <filename>images/media/music_type/artist.png</filename>
             <preserveaspect>true</preserveaspect>
-            <alpha>180</alpha>
         </imagetype>
         <textarea name="artisttext" from="base_textarea">
             <area>940,255,110,30</area>
@@ -1086,7 +1084,6 @@
             <mask>images/media/music_item_nfmask.png</mask>
             <filename>images/media/music_type/album.png</filename>
             <preserveaspect>true</preserveaspect>
-            <alpha>180</alpha>
         </imagetype>
         <textarea name="albumtext" from="base_textarea">
             <area>940,400,110,30</area>
@@ -1108,7 +1105,6 @@
             <mask>images/media/music_item_nfmask.png</mask>
             <filename>images/media/music_type/genre.png</filename>
             <preserveaspect>true</preserveaspect>
-            <alpha>180</alpha>
         </imagetype>
         <textarea name="genretext" from="base_textarea">
             <area>940,540,110,30</area>
@@ -1927,7 +1923,6 @@
                         <mask>images/media/music_item_nfmask.png</mask>
                         <filename>images/media/music_type/album.png</filename>
                         <preserveaspect>true</preserveaspect>
-                        <!--<alpha>180</alpha>-->
                     </imagetype>
                     
                     <!-- this is the actual cover image that will be shown if its
