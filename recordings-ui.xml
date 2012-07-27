@@ -526,71 +526,67 @@
                         <state name="commflagged">
                             <imagetype name="statusimage" from="base_icon_selected">
                                 <filename>images/icons/commflagged.png</filename>
-                                <area>3,3,33,33</area>
+                                <area>3,2,33,33</area>
                             </imagetype>
                         </state>
 
                         <state name="cutlist">
                             <imagetype name="statusimage" from="base_icon_selected">
                                 <filename>images/icons/cutlist.png</filename>
-                                <area>3,3,33,33</area>
+                                <area>3,2,33,33</area>
                             </imagetype>
                         </state>
 
                         <state name="autoexpire">
                             <imagetype name="statusimage" from="base_icon_selected">
                                 <filename>images/icons/autoexpire.png</filename>
-                                <area>3,3,33,33</area>
+                                <area>3,2,33,33</area>
                             </imagetype>
                         </state>
 
                         <state name="processing">
                             <imagetype name="statusimage" from="base_icon_selected">
                                 <filename>images/icons/processing.png</filename>
-                                <area>3,3,33,33</area>
+                                <area>3,2,33,33</area>
                             </imagetype>
                         </state>
 
                         <state name="bookmark">
                             <imagetype name="statusimage" from="base_icon_selected">
                                 <filename>images/icons/bookmark.png</filename>
-                                <area>3,3,33,33</area>
+                                <area>3,2,33,33</area>
                             </imagetype>
                         </state>
 
                         <state name="playlist">
                             <imagetype name="statusimage" from="base_icon_selected">
                                 <filename>images/icons/playlist.png</filename>
-                                <area>3,3,33,33</area>
+                                <area>3,2,33,33</area>
                             </imagetype>
                         </state>
 
-                        <imagetype name="statusimage_background" from="base_icon_inactive">
-                            <filename>images/icons/audio/dolby_unknown.png</filename>
-                            <area>6,5,78,26</area>
-                        </imagetype>
                         <state name="mono">                            
                             <imagetype name="statusimage" from="base_icon_selected">
-                                <filename>images/icons/audio/dolby_10.png</filename>
+                                <filename>images/icons/audio/dolby_1.0.png</filename>
                                 <area>6,5,78,26</area>
                             </imagetype>
                         </state>
                         <state name="stereo">
                             <imagetype name="statusimage" from="base_icon_selected">
-                                <filename>images/icons/audio/dolby_20.png</filename>
+                                <filename>images/icons/audio/dolby_2.0.png</filename>
                                 <area>6,5,78,26</area>
                             </imagetype>
                         </state>
                         <state name="surround">
                             <imagetype name="statusimage" from="base_icon_selected">
-                                <filename>images/icons/audio/dolby_51.png</filename>
+                                <filename>images/icons/audio/dolby_5.1.png</filename>
                                 <area>6,5,78,26</area>
                             </imagetype>
                         </state>
 
                         <state name="dolby">
                             <imagetype name="statusimage" from="base_icon_selected">
-                                <filename>images/icons/audio/dolby_71.png</filename>
+                                <filename>images/icons/audio/dolby_7.1.png</filename>
                                 <area>6,5,78,26</area>
                             </imagetype>
                         </state>
@@ -638,10 +634,6 @@
                             </imagetype>
                         </state>
 
-                        <imagetype name="statusimage_background" from="base_icon_inactive">
-                            <filename>images/icons/video/hdtv_unknown.png</filename>
-                            <area>6,2,41,33</area>
-                        </imagetype>
                         <state name="widescreen">
                             <imagetype name="statusimage" from="base_icon_selected">
                                 <filename>images/icons/video/hdtv_wide.png</filename>
@@ -652,7 +644,7 @@
                         <state name="watched">
                             <imagetype name="statusimage" from="base_icon_selected">
                                 <filename>images/icons/selected.png</filename>
-                                <area>3,3,33,33</area>
+                                <area>9,2,33,33</area>
                             </imagetype>
                         </state>
                     </statetype>
