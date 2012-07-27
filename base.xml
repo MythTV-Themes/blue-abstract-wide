@@ -115,15 +115,15 @@
     <!-- base definitions for the transparency of the used images -->
     <imagetype name="base_image_active">
         <filename />
-        <alpha>160</alpha>
+        <alpha>150</alpha>
     </imagetype>
     <imagetype name="base_image_selectedactive">
         <filename />
-        <alpha>240</alpha>
+        <alpha>200</alpha>
     </imagetype>
     <imagetype name="base_image_selectedinactive">
         <filename />
-        <alpha>110</alpha>
+        <alpha>120</alpha>
     </imagetype>
 
     <!-- the image is not selected and inactive -->
@@ -141,7 +141,7 @@
         <alpha>220</alpha>
     </imagetype>
     <imagetype name="base_icon_inactive">
-        <alpha>40</alpha>
+        <alpha>50</alpha>
     </imagetype>
         
     
@@ -244,7 +244,7 @@
                 </statetype>
                 
                 <!-- indicates the button contains a submenu -->
-                <imagetype name="buttonarrow" from="base_image_active">
+                <imagetype name="buttonarrow" from="base_icon_inactive">
                     <position>100%-26,4</position>
                     <filename>images/icons/button_arrow_right.png</filename>
                 </imagetype>
@@ -260,6 +260,11 @@
             <state name="selectedactive" from="active">
                 <area>0,0,350,36</area>
                 <shape name="background" from="base_button_shape_selectedactive" />
+
+                <imagetype name="buttonarrow" from="base_icon_selected">
+                    <position>100%-26,4</position>
+                    <filename>images/icons/button_arrow_right.png</filename>
+                </imagetype>
             </state>
             
             <!-- menu entry has been selected and is inactive -->
@@ -275,12 +280,12 @@
         <statetype name="upscrollarrow">
             <position>100%-55,100%-5</position>
             <state type="off">
-                <imagetype name="upon" from="base_image_inactive">
+                <imagetype name="upon" from="base_icon_inactive">
                     <filename>images/icons/button_arrow_up.png</filename>
                 </imagetype>
             </state>
             <state type="full">
-                <imagetype name="upoff" from="base_image_selectedactive">
+                <imagetype name="upoff" from="base_icon_selected">
                     <filename>images/icons/button_arrow_up.png</filename>
                 </imagetype>
             </state>
@@ -291,12 +296,12 @@
         <statetype name="downscrollarrow">
             <position>100%-30,100%-5</position>
             <state type="off">
-                <imagetype name="dnon" from="base_image_inactive">
+                <imagetype name="dnon" from="base_icon_inactive">
                     <filename>images/icons/button_arrow_down.png</filename>
                 </imagetype>
             </state>
             <state type="full">
-                <imagetype name="dnoff" from="base_image_selectedactive">
+                <imagetype name="dnoff" from="base_icon_selected">
                     <filename>images/icons/button_arrow_down.png</filename>
                 </imagetype>
             </state>
@@ -334,12 +339,12 @@
         <statetype name="downscrollarrow">
             <position>100%+2,-2</position>
             <state type="off">
-                <imagetype name="dnon" from="base_image_inactive">
+                <imagetype name="dnon" from="base_icon_inactive">
                     <filename>images/icons/button_arrow_right.png</filename>
                 </imagetype>
             </state>
             <state type="full">
-                <imagetype name="dnoff" from="base_image_selectedactive">
+                <imagetype name="dnoff" from="base_icon_selected">
                     <filename>images/icons/button_arrow_right.png</filename>
                 </imagetype>
             </state>
@@ -348,12 +353,12 @@
         <statetype name="upscrollarrow">
             <position>100%+3,13</position>
             <state type="off">
-                <imagetype name="upon" from="base_image_inactive">
+                <imagetype name="upon" from="base_icon_inactive">
                     <filename>images/icons/button_arrow_left.png</filename>
                 </imagetype>
             </state>
             <state type="full">
-                <imagetype name="upoff" from="base_image_selectedactive">
+                <imagetype name="upoff" from="base_icon_selected">
                     <filename>images/icons/button_arrow_left.png</filename>
                 </imagetype>
             </state>
@@ -659,12 +664,12 @@
         <statetype name="downscrollarrow">
             <position>100%+2,0</position>
             <state type="off">
-                <imagetype name="dnon" from="base_image_inactive">
+                <imagetype name="dnon" from="base_icon_inactive">
                     <filename>images/icons/button_arrow_right.png</filename>
                 </imagetype>
             </state>
             <state type="full">
-                <imagetype name="dnoff" from="base_image_selectedactive">
+                <imagetype name="dnoff" from="base_icon_selected">
                     <filename>images/icons/button_arrow_right.png</filename>
                 </imagetype>
             </state>
@@ -673,12 +678,12 @@
         <statetype name="upscrollarrow">
             <position>100%+3,13</position>
             <state type="off">
-                <imagetype name="upon" from="base_image_inactive">
+                <imagetype name="upon" from="base_icon_inactive">
                     <filename>images/icons/button_arrow_left.png</filename>
                 </imagetype>
             </state>
             <state type="full">
-                <imagetype name="upoff" from="base_image_selectedactive">
+                <imagetype name="upoff" from="base_icon_selected">
                     <filename>images/icons/button_arrow_left.png</filename>
                 </imagetype>
             </state>
