@@ -119,16 +119,15 @@
                     </statetype>
                     <statetype name="homepage">
                         <state name="yes">
-                            <imagetype name="homepage">
+                            <imagetype name="homepage" from="base_icon_selected">
                                 <area>613,3,31,31</area>
                                 <filename>images/shared/selected.png</filename>
                             </imagetype>
                         </state>
                         <state name="no">
-                            <imagetype name="homepage">
+                            <imagetype name="homepage" from="base_icon_inactive">
                                 <area>613,3,31,31</area>
                                 <filename>images/shared/selected.png</filename>
-                                <alpha>50</alpha>
                             </imagetype>
                         </state>
                     </statetype>

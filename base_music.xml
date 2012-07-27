@@ -238,20 +238,18 @@
     <statetype name="base_music_movestate">
         <area>0,0,36,36</area>
         <!-- workaround because the off state is not active as a default -->
-        <imagetype name="movestate_image">
+        <imagetype name="movestate_image" from="base_icon_inactive">
             <filename>images/icons/move.png</filename>
             <area>5,5,26,26</area>
-            <alpha>50</alpha>
         </imagetype>
         <state name="off">
-            <imagetype name="movestate_image">
+            <imagetype name="movestate_image" from="base_icon_inactive">
                 <filename>images/icons/move.png</filename>
                 <area>5,5,26,26</area>
-                <alpha>50</alpha>
             </imagetype>
         </state>
         <state name="on">
-            <imagetype name="movestate_image">
+            <imagetype name="movestate_image" from="base_icon_selected">
                 <filename>images/icons/move.png</filename>
                 <area>5,5,26,26</area>
             </imagetype>
@@ -263,14 +261,13 @@
     <statetype name="base_music_playliststate">
         <area>0,0,36,36</area>
         <state name="off">
-            <imagetype name="playliststate_image">
+            <imagetype name="playliststate_image" from="base_icon_inactive">
                 <filename>images/icons/playlist.png</filename>
                 <area>5,5,26,26</area>
-                <alpha>50</alpha>
             </imagetype>
         </state>
         <state name="on">
-            <imagetype name="playliststate_image">
+            <imagetype name="playliststate_image" from="base_icon_selected">
                 <filename>images/icons/playlist.png</filename>
                 <area>5,5,26,26</area>
             </imagetype>
@@ -282,26 +279,25 @@
     <statetype name="base_music_playstate">
         <area>0,0,36,36</area>
         <state name="default">
-            <imagetype name="playstateimage">
+            <imagetype name="playstateimage" from="base_icon_inactive">
                 <filename>images/icons/music_play.png</filename>
                 <area>5,5,26,26</area>
-                <alpha>50</alpha>
             </imagetype>
         </state>
         <state name="playing">
-            <imagetype name="playstateimage">
+            <imagetype name="playstateimage" from="base_icon_selected">
                 <filename>images/icons/music_play.png</filename>
                 <area>5,5,26,26</area>
             </imagetype>
         </state>
         <state name="paused">
-            <imagetype name="playstateimage">
+            <imagetype name="playstateimage" from="base_icon_selected">
                 <filename>images/icons/music_pause.png</filename>
                 <area>5,5,26,26</area>
             </imagetype>
         </state>
         <state name="stopped">
-            <imagetype name="playstateimage">
+            <imagetype name="playstateimage" from="base_icon_selected">
                 <filename>images/icons/music_stop.png</filename>
                 <area>5,5,26,26</area>
             </imagetype>
@@ -313,20 +309,19 @@
     <statetype name="base_music_repeatstate">
         <area>0,0,36,36</area>
         <state name="off">
-            <imagetype name="repeatstate_image">
+            <imagetype name="repeatstate_image" from="base_icon_inactive">
                 <area>3,3,30,30</area>
                 <filename>images/icons/music_repeat_all.png</filename>
-                <alpha>50</alpha>
             </imagetype>
         </state>
         <state name="track">
-            <imagetype name="repeatstate_image">
+            <imagetype name="repeatstate_image" from="base_icon_selected">
                 <area>3,3,30,30</area>
                 <filename>images/icons/music_repeat_track.png</filename>
             </imagetype>
         </state>
         <state name="all">
-            <imagetype name="repeatstate_image">
+            <imagetype name="repeatstate_image" from="base_icon_selected">
                 <area>3,3,30,30</area>
                 <filename>images/icons/music_repeat_all.png</filename>
             </imagetype>
@@ -339,32 +334,31 @@
     <statetype name="base_music_shufflestate">
         <area>0,0,36,36</area>
         <state name="off">
-            <imagetype name="shufflestate_image">
+            <imagetype name="shufflestate_image" from="base_icon_inactive">
                 <area>3,3,30,30</area>
                 <filename>images/icons/music_shuffle_random.png</filename>
-                <alpha>50</alpha>
             </imagetype>
         </state>
         <state name="random">
-            <imagetype name="shufflestate_image">
+            <imagetype name="shufflestate_image" from="base_icon_selected">
                 <area>3,3,30,30</area>
                 <filename>images/icons/music_shuffle_random.png</filename>
             </imagetype>
         </state>
         <state name="intelligent">
-            <imagetype name="shufflestate_image">
+            <imagetype name="shufflestate_image" from="base_icon_selected">
                 <area>3,3,30,30</area>
                 <filename>images/icons/music_shuffle_intelligent.png</filename>
             </imagetype>
         </state>
         <state name="album">
-            <imagetype name="shufflestate_image">
+            <imagetype name="shufflestate_image" from="base_icon_selected">
                 <area>3,3,30,30</area>
                 <filename>images/icons/music_shuffle_album.png</filename>
             </imagetype>
         </state>
         <state name="artist">
-            <imagetype name="shufflestate_image">
+            <imagetype name="shufflestate_image" from="base_icon_selected">
                 <area>3,3,30,30</area>
                 <filename>images/icons/music_shuffle_artist.png</filename>
             </imagetype>

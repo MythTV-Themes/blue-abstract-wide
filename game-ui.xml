@@ -103,14 +103,13 @@
         <statetype name="favorite">
             <position>1150,540</position>
             <state name="no">
-                <imagetype name="no">
+                <imagetype name="no" from="base_icon_inactive">
                     <area>0,0,18,18</area>
                     <filename>images/icons/favorite.png</filename>
-                    <alpha>100</alpha>
                 </imagetype>
             </state>
             <state name="yes">
-                <imagetype name="yes">
+                <imagetype name="yes" from="base_icon_selected">
                     <area>0,0,18,18</area>
                     <filename>images/icons/favorite.png</filename>
                 </imagetype>
@@ -190,14 +189,13 @@
         <statetype name="favorite">
             <position>785,262</position>
             <state name="no">
-                <imagetype name="no">
+                <imagetype name="no" from="base_icon_inactive">
                     <area>0,0,18,18</area>
                     <filename>images/icons/favorite.png</filename>
-                    <alpha>100</alpha>
                 </imagetype>
             </state>
             <state name="yes">
-                <imagetype name="yes">
+                <imagetype name="yes" from="base_icon_selected">
                     <area>0,0,18,18</area>
                     <filename>images/icons/favorite.png</filename>
                 </imagetype>
