@@ -163,19 +163,18 @@
             <state name="yes">
                 <imagetype name="processing" from="base_icon_selected">
                     <filename>images/icons/processing.png</filename>
-                    <alphapulse min="80" max="255" change="2"/>
                 </imagetype>
             </state>
         </statetype>
 
         <!-- subtitle types -->
         <imagetype name="no_subtitletypes" from="base_icon_inactive">
-            <area>1030,59,38,36</area>
+            <area>1030,57,36,36</area>
             <filename>images/icons/subtitles/unknown.png</filename>
         </imagetype>
         
         <statetype name="subtitletypes">
-            <position>1030,59</position>
+            <position>1030,57</position>
             <showempty>yes</showempty>
             <state name="cc">
                 <imagetype name="cc" from="base_icon_selected">
@@ -234,41 +233,41 @@
 
         <!-- video codecs -->
         <imagetype name="no_videoprops" from="base_icon_inactive">
-            <area>1180,59,44,35</area>
+            <area>1180,61,44,33</area>
             <filename>images/icons/video/hdtv_unknown.png</filename>
         </imagetype>
 
         <statetype name="videoprops">
-            <position>1180,59</position>
+            <position>1180,61</position>
             <showempty>yes</showempty>
             <state name="hdtv">
                 <imagetype name="hdtv" from="base_icon_selected">
                     <filename>images/icons/video/hdtv.png</filename>
-                    <area>0,0,44,35</area>
+                    <area>0,0,44,33</area>
                 </imagetype>
             </state>
             <state name="widescreen">
                 <imagetype name="widescreen" from="base_icon_selected">
                     <filename>images/icons/video/hdtv_wide.png</filename>
-                    <area>0,0,44,35</area>
+                    <area>0,0,44,33</area>
                 </imagetype>
             </state>
             <state name="avchd">
                 <imagetype name="avchd" from="base_icon_selected">
                     <filename>images/icons/video/hdtv_h264.png</filename>
-                    <area>0,0,44,35</area>
+                    <area>0,0,44,33</area>
                 </imagetype>
             </state>
             <state name="hd720">
                 <imagetype name="hd720" from="base_icon_selected">
                     <filename>images/icons/video/hdtv_720.png</filename>
-                    <area>0,0,44,35</area>
+                    <area>0,0,44,33</area>
                 </imagetype>
             </state>
             <state name="hd1080">
                 <imagetype name="hd1080" from="base_icon_selected">
                     <filename>images/icons/video/hdtv_1080.png</filename>
-                    <area>0,0,44,35</area>
+                    <area>0,0,44,33</area>
                 </imagetype>
             </state>
         </statetype>
