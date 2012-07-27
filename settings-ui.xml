@@ -79,6 +79,7 @@
 
 
     <!-- DONE -->
+    <!-- TODO: icons for buttonlist -->
     <!-- Presents a list of available themes 
         that the user can download and install -->
     <window name="themechooser">
@@ -114,39 +115,32 @@
                         installed or remotely downloadable -->
                     <statetype name="themelocation">
                         <state name="local">
-                            <imagetype name="location">
+                            <imagetype name="location" from="base_icon_selected">
                                 <area>405,3,30,30</area>
-                                <filename>images/icons/selected.png</filename>
+                                <filename>images/icons/home.png</filename>
                             </imagetype>
                         </state>
                         <state name="remote">
-                            <imagetype name="location">
+                            <imagetype name="location" from="base_icon_selected">
                                 <area>405,3,30,30</area>
-                                <filename>images/icons/selected.png</filename>
-                                <alpha>50</alpha>
+                                <filename>images/icons/world.png</filename>
                             </imagetype>
                         </state>
                     </statetype>
 
                     <!-- State to indicate whether an installed 
                         downloadable theme is up to date or not -->
-                    <imagetype name="status">
-                        <area>443,3,30,30</area>
-                        <filename>images/icons/selected.png</filename>
-                        <alpha>50</alpha>
-                    </imagetype>
                     <statetype name="themestatus">
                         <state name="uptodate">
-                            <imagetype name="status">
+                            <imagetype name="status" from="base_icon_selected">
                                 <area>443,3,30,30</area>
                                 <filename>images/icons/selected.png</filename>
-                                <alpha>50</alpha>
                             </imagetype>
                         </state>
                         <state name="updateavailable">
-                            <imagetype name="status">
+                            <imagetype name="status" from="base_icon_selected">
                                 <area>443,3,30,30</area>
-                                <filename>images/icons/selected.png</filename>
+                                <filename>images/icons/update.png</filename>
                             </imagetype>
                         </state>
                     </statetype>
