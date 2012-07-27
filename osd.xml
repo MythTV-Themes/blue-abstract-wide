@@ -1232,8 +1232,8 @@
                     <!-- indicates the button contains a submenu -->
                     <imagetype name="buttonarrow">
                         <position>100%-26,4</position>
-                        <alpha>70</alpha>
-                        <filename>images/shared/arrow_right.png</filename>
+                        <alpha>50</alpha>
+                        <filename>images/icons/button_arrow_right.png</filename>
                     </imagetype>
                 </state>
                 
@@ -1252,6 +1252,13 @@
                         <line color="#3697ef" alpha="200" width="1" />
                         <cornerradius>8</cornerradius>
                     </shape>
+                    
+                    <!-- indicates the button contains a submenu -->
+                    <imagetype name="buttonarrow">
+                        <position>100%-26,4</position>
+                        <alpha>220</alpha>
+                        <filename>images/icons/button_arrow_right.png</filename>
+                    </imagetype>
                 </state>
                 
                 <!-- menu entry has been selected and is inactive -->
@@ -1273,14 +1280,14 @@
                 <position>100%-55,100%-5</position>
                 <state type="off">
                     <imagetype name="upon">
-                        <filename>images/shared/arrow_up.png</filename>
-                        <alpha>70</alpha>
+                        <filename>images/icons/button_arrow_up.png</filename>
+                        <alpha>50</alpha>
                     </imagetype>
                 </state>
                 <state type="full">
                     <imagetype name="upoff">
-                        <filename>images/shared/arrow_up.png</filename>
-                        <alpha>240</alpha>
+                        <filename>images/icons/button_arrow_up.png</filename>
+                        <alpha>220</alpha>
                     </imagetype>
                 </state>
             </statetype>
@@ -1291,14 +1298,14 @@
                 <position>100%-30,100%-5</position>
                 <state type="off">
                     <imagetype name="dnon">
-                        <filename>images/shared/arrow_down.png</filename>
-                        <alpha>70</alpha>
+                        <filename>images/icons/button_arrow_down.png</filename>
+                        <alpha>50</alpha>
                     </imagetype>
                 </state>
                 <state type="full">
                     <imagetype name="dnoff">
-                        <filename>images/shared/arrow_down.png</filename>
-                        <alpha>240</alpha>
+                        <filename>images/icons/button_arrow_down.png</filename>
+                        <alpha>220</alpha>
                     </imagetype>
                 </state>
             </statetype>
