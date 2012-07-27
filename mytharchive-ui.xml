@@ -2,18 +2,14 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- ================================================================== -->
-    <!-- this is the screen where the user can choose from the avialable
-        dvd formats where the recordings will be saved to. -->
+
+    <!-- DONE -->
+    <!-- This is the screen where the user can choose from the avialable
+         dvd formats where the recordings will be saved to. -->
     <window name="selectdestination">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background"/>
 
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -21,86 +17,85 @@
             </textarea>
         </textarea>
 
-        <!-- destination selector -->
-        <shape name="topbackground" from="base_background_shape">
-            <area>280,150,705,460</area>
+        <shape name="selectdestination_background" from="base_background_shape">
+            <area>360,185,570,347</area>
         </shape>
 
-        <buttonlist name="destination_selector" from="base_selector_wide">
-            <position>300,170</position>
+        <buttonlist name="destination_selector" from="base_selector">
+            <position>375,200</position>
         </buttonlist>
         <textarea name="destination_text" from="base_textarea">
-            <area>300,220,1190,40</area>
-            <value>description goes here.</value>
-            <multiline>yes</multiline>
+            <area>610,200,315,36</area>
         </textarea>
 
         <textedit name="filename_edit" from="base_textedit">
-            <position>300,270</position>
+            <position>375,240</position>
         </textedit>
         <button name="find_button" from="base_button">
-            <position>690,270</position>
+            <position>765,240</position>
             <value>Find</value>
         </button>
 
         <textarea name="freespace_label" from="base_textarea">
-            <area>300,320,160,40</area>
+            <area>375,280,160,36</area>
             <align>right,vcenter</align>
             <value>Free Space:</value>
         </textarea>
         <textarea name="freespace_text" from="base_textarea">
-            <area>470,320,200,40</area>
+            <area>545,280,200,36</area>
             <value>0.00 GB</value>
         </textarea>
 
-    <shape name="checkbox_separator" from="base_separator_shape">
-            <area>300,370,665,1</area>
+        <shape name="selection_separator" from="base_background_shape">
+            <area>361,320,568,1</area>
         </shape>
 
-        <textarea name="title" from="base_textarea">
-            <area>340,380,500,40</area>
+        <checkbox name="makeisoimage_check" from="base_checkbox">
+            <position>375,335</position>
+        </checkbox>
+        <checkbox name="burntodvdr_check" from="base_checkbox">
+            <position>375,375</position>
+        </checkbox>
+        <checkbox name="erasedvdrw_check" from="base_checkbox">
+            <position>375,415</position>
+        </checkbox>
+
+        <textarea name="makeisoimage_text" from="base_textarea">
+            <area>425,335,480,36</area>
             <value>Make ISO Image</value>
         </textarea>
         <textarea name="burntodvdr_text" from="base_textarea">
-            <area>340,430,500,40</area>
+            <area>425,375,480,36</area>
             <value>Burn to DVD</value>
         </textarea>
         <textarea name="erasedvdrw_text" from="base_textarea">
-            <area>340,480,500,40</area>
+            <area>425,415,480,36</area>
             <value>Force Overwrite of DVD-RW Media</value>
         </textarea>
 
-        <checkbox name="makeisoimage_check" from="base_checkbox">
-            <position>300,385</position>
-        </checkbox>
-        <checkbox name="burntodvdr_check" from="base_checkbox">
-            <position>300,435</position>
-        </checkbox>
-        <checkbox name="erasedvdrw_check" from="base_checkbox">
-            <position>300,485</position>
-        </checkbox>
-
-        <shape name="button_separator" from="base_separator_shape">
-            <area>300,530,665,1</area>
+        <shape name="button_separator" from="base_background_shape">
+            <area>361,465,568,1</area>
         </shape>
 
         <button name="cancel_button" from="base_button">
-            <position>300,550</position>
+            <position>375,480</position>
             <value>Cancel</value>
         </button>
         <button name="prev_button" from="base_button">
-            <position>645,550</position>
+            <position>570,480</position>
             <value>Previous</value>
         </button>
         <button name="next_button" from="base_button">
-            <position>815,550</position>
+            <position>765,480</position>
             <value>Next</value>
         </button>
 
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
     <!-- this is the screen where the user can select the avialable
         recordings that will be saved to dvd. -->
     <window name="recording_selector">
@@ -137,7 +132,6 @@
             <wrapstyle>captive</wrapstyle>
         </buttonlist>
 
-        <!-- ================================================================== -->
         <!-- this is the background for the information at the bottom -->
         <shape name="bottom_background" from="base_background_shape">
             <area>25,441,1230,255</area>
@@ -221,7 +215,9 @@
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
     <!-- this is the screen where the user can select the
         files from the harddisk that will be saved to dvd. -->
     <window name="file_selector">
@@ -247,7 +243,7 @@
         <textedit name="location_edit" from="base_textedit">
             <position>310,95</position>
         </textedit>
-        <button name="back_button" from="base_button_narrow">
+        <button name="back_button" from="base_button">
             <position>800,95</position>
             <imagetype name="folderimage">
                 <area>20,0,30,40</area>
@@ -255,7 +251,7 @@
                 <preserveaspect>yes</preserveaspect>
             </imagetype>
         </button>
-        <button name="home_button" from="base_button_narrow">
+        <button name="home_button" from="base_button">
             <position>890,95</position>
             <imagetype name="folderimage">
                 <area>20,0,30,40</area>
@@ -264,11 +260,11 @@
             </imagetype>
         </button>
 
-        <shape name="search_separator" from="base_separator_shape">
+        <shape name="search_separator" from="base_background_shape">
             <area>310,155,650,1</area>
         </shape>
 
-        <buttonlist name="filelist" from="base_buttonlist_wide">
+        <buttonlist name="filelist" from="base_buttonlist">
             <area>310,175,650,409</area>
             <statetype name="buttonitem">
                 <state name="active">
@@ -308,7 +304,7 @@
             </statetype>
         </buttonlist>
 
-        <shape name="button_separator" from="base_separator_shape">
+        <shape name="button_separator" from="base_background_shape">
             <area>310,595,650,1</area>
         </shape>
 
@@ -324,7 +320,9 @@
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
     <!-- this is the screen where the user can select the avialable
         videos that will be saved to dvd. -->
     <window name="video_selector">
@@ -348,7 +346,7 @@
             <area>25,80,1230,347</area>
         </shape>
 
-    <textarea name="warning_text" from="base_textarea">
+        <textarea name="warning_text" from="base_textarea">
             <area>25,80,1230,347</area>
             <align>allcenter</align>
             <value>No videos available</value>
@@ -367,7 +365,6 @@
             <wrapstyle>captive</wrapstyle>
         </buttonlist>
 
-        <!-- ================================================================== -->
         <!-- this is the background for the information at the bottom -->
         <shape name="bottom_background" from="base_background_shape">
             <area>25,455,1230,230</area>
@@ -435,7 +432,9 @@
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
     <!-- this is the screen shows the logs of the dvd creation -->
     <window name="logviewer">
 
