@@ -22,11 +22,9 @@
             but mythwelcome needs it to load properly -->
         <textarea name="time_text" from="base_textarea">
             <area>0,0,0,0</area>
-            <value></value>
         </textarea>
         <textarea name="date_text" from="base_textarea">
             <area>0,0,0,0</area>
-            <multiline>yes</multiline>
         </textarea>
 
         <!-- current myth status -->
@@ -39,7 +37,7 @@
         </textarea>
 
         <!-- current recordings status -->
-        <shape name="recording_separator" from="base_separator_shape">
+        <shape name="recording_separator" from="base_background_shape">
             <area>270,150,740,1</area>
         </shape>
         <textarea name="recording_label" from="base_textarea">
@@ -54,7 +52,7 @@
         </textarea>
 
         <!-- next scheduled recording status -->
-        <shape name="schedule_separator" from="base_separator_shape">
+        <shape name="schedule_separator" from="base_background_shape">
             <area>270,330,740,1</area>
         </shape>
         <textarea name="scheduled_label" from="base_textarea">
@@ -69,7 +67,7 @@
         </textarea>
 
         <!-- scheduled recordings conflict warning -->
-        <shape name="conflicts_separator" from="base_separator_shape">
+        <shape name="conflicts_separator" from="base_background_shape">
             <area>270,510,740,1</area>
         </shape>
         <textarea name="conflicts_text" from="base_textarea">
@@ -80,7 +78,7 @@
         </textarea>
 
         <!-- start frontend button -->
-        <shape name="button_separator" from="base_separator_shape">
+        <shape name="button_separator" from="base_background_shape">
             <area>270,580,740,1</area>
         </shape>
         
