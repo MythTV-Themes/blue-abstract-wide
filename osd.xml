@@ -2,37 +2,36 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
+    <!-- DONE -->
     <!-- shows some debug information on the screen -->
     <!--<window name="osd_debug">-->
     <window name="osd_debug">
         
         <!-- The information and the clock that is 
              shown at the top left of each screen -->       
-        <textarea name="base_heading">
-            <imagetype name="header_background">
-                <area>-1,-1,560,50</area>
-                <filename>images/media/header_left.png</filename>
-            </imagetype>
-            <clock name="clock">
-                <area>10,0,200,30</area>
-                <font>text</font>
-                <template>%DATE%, %TIME%</template>
-                <align>left,vcenter</align>
-            </clock>
-            <textarea name="text">
-                <area>215,0,300,30</area>
-                <align>left,vcenter</align>
-                <multiline>no</multiline>
-                <cutdown>no</cutdown>
-                <font>text</font>
-                <scroll direction="horizontal" />
-                <value>OSD Debug</value>
-            </textarea>
+        <imagetype name="header_background">
+            <area>-1,-1,560,50</area>
+            <filename>images/media/header_left.png</filename>
+        </imagetype>
+        <clock name="clock">
+            <area>10,0,200,30</area>
+            <font>text</font>
+            <template>%DATE%, %TIME%</template>
+            <align>left,vcenter</align>
+        </clock>
+        <textarea name="text">
+            <area>215,0,300,30</area>
+            <align>left,vcenter</align>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <font>text</font>
+            <scroll direction="horizontal" />
+            <value>OSD Debug Information</value>
         </textarea>
 
         <!-- the background image of the popup dialog box -->
         <shape name="background">
-            <area>140,60,1000,330</area>
+            <area>185,200,890,330</area>
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
@@ -40,120 +39,123 @@
         </shape>
         
         <textarea name="filename_label">
-            <area>160,75,210,36</area>
+            <area>200,215,210,36</area>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <font>text</font>
+            <scroll direction="horizontal" />
             <align>right,vcenter</align>
             <value>Filename :</value>
         </textarea>
-        <textarea name="filename">
-            <area>380,75,750,36</area>
+        <textarea name="filename" from="filename_label">
+            <area>420,215,635,36</area>
             <cutdown>yes</cutdown>
             <align>left,vcenter</align>
         </textarea>
         
         <!-- separates the filename from the other information -->
         <shape name="filename_separator">
-            <area>160,125,960,1</area>
-            <type>box</type>
+            <area>184,265,888,1</area>
+            <type>roundbox</type>
+            <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
+            <cornerradius>10</cornerradius>
         </shape>
         
         <!-- First column with information -->
-        <textarea name="storagerate_label">
-            <area>160,140,210,36</area>
+        <textarea name="storagerate_label" from="filename_label">
+            <area>200,275,210,36</area>
             <align>right,vcenter</align>
             <value>Storage to Buffer :</value>
         </textarea>
         <textarea name="decoderrate_label" from="storagerate_label">
-            <position>160,180</position>
+            <position>200,315</position>
             <value>Buffer to Decoder :</value>
         </textarea>
         <textarea name="bufferavail_label" from="storagerate_label">
-            <position>160,220</position>
+            <position>200,355</position>
             <value>Available Buffer :</value>
         </textarea>
         <textarea name="videowidth_label" from="storagerate_label">
-            <position>160,260</position>
+            <position>200,395</position>
             <value>Video :</value>
         </textarea>
         <textarea name="videocodec_label" from="storagerate_label">
-            <position>160,300</position>
+            <position>200,435</position>
             <value>Codec/Dec :</value>
         </textarea>
         <textarea name="load_label" from="storagerate_label">
-            <position>160,340</position>
+            <position>200,475</position>
             <value>CPUs :</value>
         </textarea>
         
-        <textarea name="storagerate">
-            <area>380,140,240,36</area>
-            <cutdown>yes</cutdown>
+        <textarea name="storagerate" from="filename_label">
+            <area>420,275,200,36</area>
             <align>left,vcenter</align>
         </textarea>
         <textarea name="decoderrate" from="storagerate">
-            <position>380,180</position>
+            <position>420,315</position>
         </textarea>
         <textarea name="bufferavail" from="storagerate">
-            <position>380,220</position>
+            <position>420,355</position>
             <template>%BUFFERAVAIL% of %BUFFERSIZE%Mb</template>
         </textarea>
         <textarea name="videowidth" from="storagerate">
-            <position>380,260</position>
+            <position>420,395</position>
             <template>%VIDEOWIDTH%x%VIDEOHEIGHT%@%VIDEOFRAMERATE%fps</template>
         </textarea>
         <textarea name="videocodec" from="storagerate">
-            <position>380,300</position>
+            <position>420,435</position>
             <template>%VIDEOCODEC% %VIDEODECODER%</template>
         </textarea>
         <textarea name="load" from="storagerate">
-            <position>380,340</position>
+            <position>420,475</position>
         </textarea>
 
         <!-- Second column with information -->
-        <textarea name="framerate_label">
-            <area>640,140,260,36</area>
-            <align>right,vcenter</align>
+        <textarea name="framerate_label" from="filename_label">
+            <area>640,275,210,36</area>
             <value>FPS :</value>
         </textarea>
         <textarea name="avsync_label" from="framerate_label">
-            <position>640,180</position>
+            <position>640,315</position>
             <value>A/V Sync :</value>
         </textarea>
         <textarea name="videoframes_label" from="framerate_label">
-            <position>640,220</position>
+            <position>640,355</position>
             <value>Frames decoded/free :</value>
         </textarea>
         <textarea name="audiocodec_label" from="framerate_label">
-            <position>640,260</position>
+            <position>640,395</position>
             <value>Audio :</value>
         </textarea>
         <textarea name="audiochannels_label" from="framerate_label">
-            <position>640,300</position>
+            <position>640,435</position>
             <value>Channels :</value>
         </textarea>
         <textarea name="samplerate_label" from="framerate_label">
-            <position>640,340</position>
+            <position>640,475</position>
             <value>Sample rate :</value>
         </textarea>
 
-        <textarea name="framerate">
-            <area>910,140,190,36</area>
-            <cutdown>yes</cutdown>
+        <textarea name="framerate" from="filename_label">
+            <area>870,275,190,36</area>
             <align>left,vcenter</align>
         </textarea>
         <textarea name="avsync" from="framerate">
-            <position>910,180</position>
+            <position>870,315</position>
         </textarea>
         <textarea name="videoframes" from="framerate">
-            <position>910,220</position>
+            <position>870,355</position>
         </textarea>
         <textarea name="audiocodec" from="framerate">
-            <position>910,260</position>
+            <position>870,395</position>
         </textarea>
         <textarea name="audiochannels" from="framerate">
-            <position>910,300</position>
+            <position>870,435</position>
         </textarea>
         <textarea name="samplerate" from="framerate">
-            <position>910,340</position>
+            <position>870,475</position>
         </textarea>
 
     </window>
@@ -162,105 +164,65 @@
 
 
 
-
+    <!-- DONE -->
     <!-- shows a message on the screen -->
     <window name="osd_message">
         <area>0,0,1280,720</area>
 
         <!-- The information and the clock that is 
              shown at the top left of each screen -->       
-        <textarea name="base_heading">
-            <imagetype name="header_background">
-                <area>-1,-1,560,50</area>
-                <filename>images/media/header_left.png</filename>
-            </imagetype>
-            <clock name="clock">
-                <area>10,0,200,30</area>
-                <font>text</font>
-                <template>%DATE%, %TIME%</template>
-                <align>left,vcenter</align>
-            </clock>
-            <textarea name="text" from="base_textarea">
-                <area>215,0,300,30</area>
-                <align>left,vcenter</align>
-                <multiline>no</multiline>
-                <cutdown>no</cutdown>
-                <font>text</font>
-                <scroll direction="horizontal" />
-                <value>OSD Message</value>
-            </textarea>
-        </textarea>
-        
-        <!-- the background image of the popup dialog box -->
-        <shape name="background">
-            <area>440,-4,400,44</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="130" />
-            <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>10</cornerradius>
-        </shape>
-
-        <!-- shows the message -->
+        <imagetype name="header_background">
+            <area>-1,-1,560,50</area>
+            <filename>images/media/header_left.png</filename>
+        </imagetype>
+        <clock name="clock">
+            <area>10,0,200,30</area>
+            <font>text</font>
+            <template>%DATE%, %TIME%</template>
+            <align>left,vcenter</align>
+        </clock>
         <textarea name="message_text">
-            <area>460,3,360,36</area>
-            <align>allcenter</align>
+            <area>215,0,300,30</area>
+            <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
-            <scroll direction="horizontal"/>
             <font>text</font>
+            <scroll direction="horizontal" />
         </textarea>
+       
     </window>
 
 
 
 
 
-
+    <!-- DONE -->
     <!-- shows an input message on the screen -->
     <window name="osd_input">
         <area>0,0,1280,720</area>
         
         <!-- The information and the clock that is 
              shown at the top left of each screen -->       
-        <textarea name="base_heading">
-            <imagetype name="header_background">
-                <area>-1,-1,560,50</area>
-                <filename>images/media/header_left.png</filename>
-            </imagetype>
-            <clock name="clock">
-                <area>10,0,200,30</area>
-                <font>text</font>
-                <template>%DATE%, %TIME%</template>
-                <align>left,vcenter</align>
-            </clock>
-            <textarea name="text" from="base_textarea">
-                <area>215,0,300,30</area>
-                <align>left,vcenter</align>
-                <multiline>no</multiline>
-                <cutdown>no</cutdown>
-                <font>text</font>
-                <scroll direction="horizontal" />
-                <value>OSD Input</value>
-            </textarea>
-        </textarea>
-
-        <!-- the background image of the popup dialog box -->
-        <shape name="background">
-            <area>540,-4,200,44</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="130" />
-            <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>10</cornerradius>
-        </shape>
-
-        <!-- shows the message -->
-        <textarea name="osd_number_entry">
-            <area>560,3,160,30</area>
-            <align>allcenter</align>
-            <multiline>no</multiline>
-            <cutdown>yes</cutdown>
+        <imagetype name="header_background">
+            <area>-1,-1,560,50</area>
+            <filename>images/media/header_left.png</filename>
+        </imagetype>
+        <clock name="clock">
+            <area>10,0,200,30</area>
             <font>text</font>
+            <template>%DATE%, %TIME%</template>
+            <align>left,vcenter</align>
+        </clock>
+        <textarea name="osd_number_entry">
+            <area>215,0,300,30</area>
+            <align>left,vcenter</align>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <font>text</font>
+            <scroll direction="horizontal" />
+            <value>OSD Input</value>
         </textarea>
+
     </window>
 
 
@@ -273,30 +235,6 @@
     <window name="osd_status">
         <area>0,0,1280,720</area>
         
-        <!-- The information and the clock that is 
-             shown at the top left of each screen -->       
-        <textarea name="base_heading">
-            <imagetype name="header_background">
-                <area>-1,-1,560,50</area>
-                <filename>images/media/header_left.png</filename>
-            </imagetype>
-            <clock name="clock">
-                <area>10,0,200,30</area>
-                <font>text</font>
-                <template>%DATE%, %TIME%</template>
-                <align>left,vcenter</align>
-            </clock>
-            <textarea name="text" from="base_textarea">
-                <area>215,0,300,30</area>
-                <align>left,vcenter</align>
-                <multiline>no</multiline>
-                <cutdown>no</cutdown>
-                <font>text</font>
-                <scroll direction="horizontal" />
-                <value>OSD Status</value>
-            </textarea>
-        </textarea>
-
         <!-- the background image of the popup dialog box -->
         <shape name="background">
             <area>220,600,830,87</area>
@@ -315,12 +253,9 @@
             <font>text</font>
         </textarea>
         
-        <textarea name="description">
-            <area>640,607,400,36</area>
+        <textarea name="description" from="title">
+            <area>640,607,395,36</area>
             <align>right,vcenter</align>
-            <multiline>no</multiline>
-            <cutdown>yes</cutdown>
-            <font>text</font>
             <template>%DESCRIPTION% %VALUE%%UNITS%</template>
         </textarea>
 
@@ -356,46 +291,6 @@
     <window name="program_info">
         <area>0,0,1280,720</area>
         
-        <animation trigger="AboutToShow">
-            <section centre="bottom" duration="250">
-                <alpha start="0" end="255" easingcurve="Linear"/>
-                <zoom start="50" end="100" easingcurve="OutQuart"/>
-                <position start="0,-100" end="0,0"/>
-            </section>
-        </animation>
-
-        <animation trigger="AboutToHide">
-            <section centre="bottom" duration="250">
-                <alpha start="255" end="0" easingcurve="Linear"/>
-                <zoom start="100" end="50" easingcurve="InQuart"/>
-                <position start="0,0" end="0,-100"/>
-            </section>
-        </animation>
-        
-        <!-- The information and the clock that is 
-             shown at the top left of each screen -->       
-        <textarea name="base_heading">
-            <imagetype name="header_background">
-                <area>-1,-1,560,50</area>
-                <filename>images/media/header_left.png</filename>
-            </imagetype>
-            <clock name="clock">
-                <area>10,0,200,30</area>
-                <font>text</font>
-                <template>%DATE%, %TIME%</template>
-                <align>left,vcenter</align>
-            </clock>
-            <textarea name="text" from="base_textarea">
-                <area>215,0,300,30</area>
-                <align>left,vcenter</align>
-                <multiline>no</multiline>
-                <cutdown>no</cutdown>
-                <font>text</font>
-                <scroll direction="horizontal" />
-                <value>Program Information</value>
-            </textarea>
-        </textarea>
-
         <!-- the background image of the popup dialog box -->
         <shape name="background">
             <area>100,380,1080,295</area>
@@ -750,45 +645,27 @@
     <window name="browse_info">
         <area>0,0,1280,720</area>
         
-        <animation trigger="AboutToShow">
-            <section centre="bottom" duration="250">
-                <alpha start="0" end="255" easingcurve="Linear"/>
-                <zoom start="50" end="100" easingcurve="OutQuart"/>
-                <position start="0,-100" end="0,0"/>
-            </section>
-        </animation>
-
-        <animation trigger="AboutToHide">
-            <section centre="bottom" duration="250">
-                <alpha start="255" end="0" easingcurve="Linear"/>
-                <zoom start="100" end="50" easingcurve="InQuart"/>
-                <position start="0,0" end="0,-100"/>
-            </section>
-        </animation>
-        
         <!-- The clock that is shown at the top right of each screen -->
         <!-- The information and the clock that is 
              shown at the top left of each screen -->       
-        <textarea name="base_heading">
-            <imagetype name="header_background">
-                <area>-1,-1,560,50</area>
-                <filename>images/media/header_left.png</filename>
-            </imagetype>
-            <clock name="clock">
-                <area>10,0,200,30</area>
-                <font>text</font>
-                <template>%DATE%, %TIME%</template>
-                <align>left,vcenter</align>
-            </clock>
-            <textarea name="text" from="base_textarea">
-                <area>215,0,300,30</area>
-                <align>left,vcenter</align>
-                <multiline>no</multiline>
-                <cutdown>no</cutdown>
-                <font>text</font>
-                <scroll direction="horizontal" />
-                <value>General Information</value>
-            </textarea>
+        <imagetype name="header_background">
+            <area>-1,-1,560,50</area>
+            <filename>images/media/header_left.png</filename>
+        </imagetype>
+        <clock name="clock">
+            <area>10,0,200,30</area>
+            <font>text</font>
+            <template>%DATE%, %TIME%</template>
+            <align>left,vcenter</align>
+        </clock>
+        <textarea name="text" from="base_textarea">
+            <area>215,0,300,30</area>
+            <align>left,vcenter</align>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <font>text</font>
+            <scroll direction="horizontal" />
+            <value>General Information</value>
         </textarea>
 
         <!-- the background image of the popup dialog box -->
@@ -892,55 +769,37 @@
 
 
 
-
+    <!-- DONE -->
     <!-- dialog box that shows the current channel 
          options. The user can edit these -->
     <window name="ChannelEditor">
         <area>0,0,1280,720</area>
 
-        <animation trigger="AboutToShow">
-            <section centre="left" duration="250">
-                <alpha start="0" end="255" easingcurve="Linear"/>
-                <zoom start="50" end="100" easingcurve="OutQuart"/>
-                <position start="-150,0" end="0,0"/>
-            </section>
-        </animation>
-
-        <animation trigger="AboutToHide">
-            <section centre="left" duration="250">
-                <alpha start="255" end="0" easingcurve="Linear"/>
-                <zoom start="100" end="50" easingcurve="InQuart"/>
-                <position start="0,0" end="-150,0"/>
-            </section>
-        </animation>
-
         <!-- The information and the clock that is 
              shown at the top left of each screen -->       
-        <textarea name="base_heading">
-            <imagetype name="header_background">
-                <area>-1,-1,560,50</area>
-                <filename>images/media/header_left.png</filename>
-            </imagetype>
-            <clock name="clock">
-                <area>10,0,200,30</area>
-                <font>text</font>
-                <template>%DATE%, %TIME%</template>
-                <align>left,vcenter</align>
-            </clock>
-            <textarea name="text" from="base_textarea">
-                <area>215,0,300,30</area>
-                <align>left,vcenter</align>
-                <multiline>no</multiline>
-                <cutdown>no</cutdown>
-                <font>text</font>
-                <scroll direction="horizontal" />
-                <value>Channel Editor</value>
-            </textarea>
+        <imagetype name="header_background">
+            <area>-1,-1,560,50</area>
+            <filename>images/media/header_left.png</filename>
+        </imagetype>
+        <clock name="clock">
+            <area>10,0,200,30</area>
+            <font>text</font>
+            <template>%DATE%, %TIME%</template>
+            <align>left,vcenter</align>
+        </clock>
+        <textarea name="text">
+            <area>215,0,300,30</area>
+            <align>left,vcenter</align>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <font>text</font>
+            <scroll direction="horizontal" />
+            <value>Channel Editor</value>
         </textarea>
 
         <!-- the background image of the popup dialog box -->
         <shape name="background">
-            <area>345,190,585,370</area>
+            <area>400,200,480,330</area>
             <type>roundbox</type>
             <fill color="#000000" alpha="210" />
             <line color="#AAAAAA" alpha="150" width="1" />
@@ -949,32 +808,44 @@
 
         <!-- shows the title -->
         <textarea name="title">
-            <area>380,205,515,70</area>
+            <area>415,210,450,60</area>
             <align>allcenter</align>
             <font>text</font>
             <value>Channel Editor</value>
         </textarea>
 
+        <shape name="title_separator">
+            <area>401,280,478,1</area>
+            <type>roundbox</type>
+            <fill color="#000000" alpha="130" />
+            <line color="#AAAAAA" alpha="150" width="1" />
+            <cornerradius>10</cornerradius>
+        </shape>
+
         <textarea name="callsign_label">
-            <area>360,290,170,40</area>
+            <area>415,295,140,36</area>
             <align>right,vcenter</align>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <font>text</font>
+            <scroll direction="horizontal" />
             <value>Callsign</value>
         </textarea>
         <textarea name="channum_label" from="callsign_label">
-            <area>360,335,170,40</area>
+            <area>415,335,140,36</area>
             <value>Channel #</value>
         </textarea>
         <textarea name="channame_label" from="callsign_label">
-            <area>360,380,170,40</area>
+            <area>415,375,140,36</area>
             <value>Channel Name</value>
         </textarea>
         <textarea name="xmltv_label" from="callsign_label">
-            <area>360,425,170,40</area>
+            <area>415,415,140,36</area>
             <value>XMLTV ID</value>
         </textarea>
-        
+
         <textedit name="callsign">
-            <area>540,290,300,40</area>
+            <area>565,295,300,36</area>
             <statetype name="background">
                 <state name="active">
                     <area>0,0,300,36</area>
@@ -1000,7 +871,7 @@
                     <area>0,0,300,36</area>
                 </state>
             </statetype>
-            
+
             <imagetype name="cursor">
                 <shape name="cursor_shape">
                     <area>0,2,2,20</area>
@@ -1015,19 +886,19 @@
                 <align>left,vcenter</align>
             </textarea>
         </textedit>
-        
+
         <textedit name="channum" from="callsign">
-            <area>540,335,300,40</area>
+            <area>565,335,300,36</area>
         </textedit>
         <textedit name="channame" from="callsign">
-            <area>540,380,300,40</area>
+            <area>565,375,300,36</area>
         </textedit>
         <textedit name="XMLTV" from="callsign">
-            <area>540,425,300,40</area>
+            <area>565,415,300,36</area>
         </textedit>
 
         <shape name="button_separator">
-            <area>360,480,555,1</area>
+            <area>401,465,478,1</area>
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
@@ -1035,7 +906,7 @@
         </shape>
         
         <button name="probe">
-            <area>465,500,150,40</area>
+            <area>465,480,150,36</area>
             <statetype name="buttonstate">
                 <state name="active">
                     <area>0,0,150,36</area>
@@ -1047,7 +918,7 @@
                         <cornerradius>8</cornerradius>
                     </shape>
                     <textarea name="text">
-                        <area>8,5,134,30</area>
+                        <area>8,3,134,30</area>
                         <align>allcenter</align>
                         <font>text</font>
                         <value>Probe</value>
@@ -1078,13 +949,13 @@
                 </state>
             </statetype>
         </button>
-        
+
         <button name="ok" from="probe">
-            <area>665,500,150,40</area>
+            <area>665,480,150,36</area>
             <value>OK</value>
         </button>
-    </window>
 
+    </window>
 
 
 
@@ -1095,26 +966,24 @@
         
         <!-- The information and the clock that is 
              shown at the top left of each screen -->       
-        <textarea name="base_heading">
-            <imagetype name="header_background">
-                <area>-1,-1,560,50</area>
-                <filename>images/media/header_left.png</filename>
-            </imagetype>
-            <clock name="clock">
-                <area>10,0,200,30</area>
-                <font>text</font>
-                <template>%DATE%, %TIME%</template>
-                <align>left,vcenter</align>
-            </clock>
-            <textarea name="text" from="base_textarea">
-                <area>215,0,300,30</area>
-                <align>left,vcenter</align>
-                <multiline>no</multiline>
-                <cutdown>no</cutdown>
-                <font>text</font>
-                <scroll direction="horizontal" />
-                <value>OSD Program Editor</value>
-            </textarea>
+        <imagetype name="header_background">
+            <area>-1,-1,560,50</area>
+            <filename>images/media/header_left.png</filename>
+        </imagetype>
+        <clock name="clock">
+            <area>10,0,200,30</area>
+            <font>text</font>
+            <template>%DATE%, %TIME%</template>
+            <align>left,vcenter</align>
+        </clock>
+        <textarea name="text" from="base_textarea">
+            <area>215,0,300,30</area>
+            <align>left,vcenter</align>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <font>text</font>
+            <scroll direction="horizontal" />
+            <value>OSD Program Editor</value>
         </textarea>
 
         <!-- the background image of the popup dialog box -->
@@ -1214,22 +1083,6 @@
          important options and controls -->
     <window name="MythPopupBox">
     
-        <animation trigger="AboutToShow">
-            <section centre="left" duration="250">
-                <alpha start="0" end="255" easingcurve="Linear"/>
-                <zoom start="50" end="100" easingcurve="OutQuart"/>
-                <position start="-150,0" end="0,0"/>
-            </section>
-        </animation>
-
-        <animation trigger="AboutToHide">
-            <section centre="left" duration="250">
-                <alpha start="255" end="0" easingcurve="Linear"/>
-                <zoom start="100" end="50" easingcurve="InQuart"/>
-                <position start="0,0" end="-150,0"/>
-            </section>
-        </animation>
-        
         <!-- darkens the entire background so 
              that the popup is better readable -->
         <shape name="darken_background">
