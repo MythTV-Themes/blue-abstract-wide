@@ -3,6 +3,7 @@
 <mythuitheme>
 
     <!-- DONE -->
+    <!-- TODO channek icon border and background -->
     <!-- Shows the channel list and time at the top 
          The frontend will segfault when guidegrid is put in a group -->
     <group name="base_channellist_group">
@@ -26,11 +27,17 @@
 
         <!-- this is the vertical list of the available channels -->
         <buttonlist name="channellist" from="base_buttonlist">
-            <area>15,45,250,450</area>
+            <area>15,45,200,450</area>
             <spacing>1</spacing>
             <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <statetype name="buttonitem">
                 <state name="active">
+                    <area>0,0,225,70</area>
+                    <shape name="background">
+                        <area>0,0,100%,100%</area>
+                        <fill color="#000000" alpha="0" />
+                        <line color="#000000" alpha="0" width="0" />
+                    </shape>
                     <imagetype name="channelicon">
                         <area>5,9,51,51</area>
                         <preserveaspect>true</preserveaspect>
