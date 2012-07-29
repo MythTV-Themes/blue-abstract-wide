@@ -46,11 +46,11 @@
                     </shape>
 
                     <textarea name="station" from="base_textarea">
-                        <area>55,2,150,30</area>
+                        <area>55,2,200,30</area>
                         <scroll direction="horizontal" />
                     </textarea>
                     <textarea name="channel" from="base_textarea">
-                        <area>55,27,190,20</area>
+                        <area>55,27,200,20</area>
                         <font>text_small</font>
                         <scroll direction="horizontal" />
                     </textarea>
@@ -58,7 +58,7 @@
                     <!-- optional textarea name="genre" -->
 
                     <statetype name="playstate" from="base_music_playstate">
-                        <area>270,3,30,30</area>
+                        <area>265,3,30,30</area>
                     </statetype>
                 </state>
                 <state name="inactive" from="active"/>
