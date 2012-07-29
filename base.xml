@@ -1187,7 +1187,7 @@
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
-            <area>320,295,640,140</area>
+            <area>320,295,640,137</area>
         </shape>
 
         <textarea name="message" from="base_textarea">
@@ -1237,7 +1237,7 @@
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
-            <area>437,245,405,215</area>
+            <area>437,245,405,212</area>
         </shape>
 
         <textarea name="message" from="base_textarea">
@@ -1353,7 +1353,6 @@
     <!-- DONE -->
     <!-- TODO - statetype add file and executable image -->
     <!-- TODO - aspect ratio broken? -->
-    <!-- TODO - home image white -->
     <!-- Dialog that is used to select a file from the filesystem
          and show a preview of the file if it is an image 
          The dialog is like a full screen with a header and clock -->
@@ -1434,32 +1433,20 @@
             <statetype name="buttonstate">
                 <state name="active">
                     <area>0,0,54,36</area>
-                    <imagetype name="image" from="base_image_active">
+                    <imagetype name="image" from="base_icon_selected">
                         <filename>images/icons/arrow_left.png</filename>
                         <area>12,3,30,30</area>
                     </imagetype>
                 </state>
                 <state name="selected">
                     <area>0,0,54,36</area>
-                    <imagetype name="image" from="base_image_selected">
+                    <imagetype name="image" from="base_icon_selected">
                         <filename>images/icons/arrow_left.png</filename>
                         <area>12,3,30,30</area>
                     </imagetype>
                 </state>
-                <state name="disabled">
-                    <area>0,0,54,36</area>
-                    <imagetype name="image" from="base_image_disabled">
-                        <filename>images/icons/arrow_left.png</filename>
-                        <area>12,3,30,30</area>
-                    </imagetype>
-                </state>
-                <state name="pushed">
-                    <area>0,0,54,36</area>
-                    <imagetype name="image" from="base_image_pushed">
-                        <filename>images/icons/arrow_left.png</filename>
-                        <area>12,3,30,30</area>
-                    </imagetype>
-                </state>
+                <state name="disabled" from="active"/>
+                <state name="pushed" from="selected"/>
             </statetype>
         </button>
 
@@ -1469,32 +1456,20 @@
             <statetype name="buttonstate">
                 <state name="active">
                     <area>0,0,54,36</area>
-                    <imagetype name="image" from="base_image_active">
-                        <filename>images/icons/folder_up_selected.png</filename>
+                    <imagetype name="image" from="base_icon_selected">
+                        <filename>images/icons/home.png</filename>
                         <area>12,3,30,30</area>
                     </imagetype>
                 </state>
                 <state name="selected">
                     <area>0,0,54,36</area>
                     <imagetype name="image" from="base_image_selected">
-                        <filename>images/icons/folder_up_selected.png</filename>
+                        <filename>images/icons/home.png</filename>
                         <area>12,3,30,30</area>
                     </imagetype>
                 </state>
-                <state name="disabled">
-                    <area>0,0,54,36</area>
-                    <imagetype name="image" from="base_image_disabled">
-                        <filename>images/icons/folder_up_selected.png</filename>
-                        <area>12,3,30,30</area>
-                    </imagetype>
-                </state>
-                <state name="pushed">
-                    <area>0,0,54,36</area>
-                    <imagetype name="image" from="base_image_pushed">
-                        <filename>images/icons/folder_up_selected.png</filename>
-                        <area>12,3,30,30</area>
-                    </imagetype>
-                </state>
+                <state name="disabled" from="active"/>
+                <state name="pushed" from="selected"/>
             </statetype>
         </button>
 
@@ -1516,9 +1491,7 @@
                     <imagetype name="background_image">
                         <area>0,0,133,192</area>
                         <mask>images/media/movie_item_nfmask.png</mask>
-                        <filename>images/media/default_movie.png</filename>
-                        <preserveaspect>true</preserveaspect>
-                        <alpha>180</alpha>
+                        <filename>images/media/movie_bg.png</filename>
                     </imagetype>
 
                     <textarea name="buttontext" from="base_textarea">
@@ -1530,23 +1503,22 @@
                     <imagetype name="buttonimage">
                         <area>0,0,133,192</area>
                         <mask>images/media/movie_item_nfmask.png</mask>
+                        <preserveaspect>false</preserveaspect>
                     </imagetype>
 
                     <!-- the node is a folder and it is currently not selected -->
                     <statetype name="nodetype">
                         <position>0,0</position>
                         <state name="subfolder">
-                            <imagetype name="node_icon">
+                            <imagetype name="node_icon" from="base_icon_inactive">
                                 <area>12,160,24,24</area>
                                 <filename>images/icons/folder.png</filename>
-                                <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
                         <state name="upfolder">
-                            <imagetype name="node_icon">
+                            <imagetype name="node_icon" from="base_icon_inactive">
                                 <area>12,160,24,24</area>
                                 <filename>images/icons/folder_up.png</filename>
-                                <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
                         <state name="file" />
@@ -1555,7 +1527,7 @@
                     
                     <imagetype name="background_image_border">
                         <area>0,0,133,192</area>
-                        <filename>images/media/movie_nfborder.png</filename>
+                        <filename>images/media/movie_item_nfborder.png</filename>
                     </imagetype>
                 </state>
 
@@ -1570,8 +1542,6 @@
                         <area>0,0,185,267</area>
                         <mask>images/media/movie_item_fmask.png</mask>
                         <filename>images/media/movie_bg.png</filename>
-                        <preserveaspect>true</preserveaspect>
-                        <alpha>220</alpha>
                     </imagetype>
 
                     <textarea name="buttontext" from="base_textarea">
@@ -1583,23 +1553,22 @@
                     <imagetype name="buttonimage">
                         <area>0,0,185,267</area>
                         <mask>images/media/movie_item_fmask.png</mask>
+                        <preserveaspect>false</preserveaspect>
                     </imagetype>
 
                     <!-- the node is a folder and it is currently selected -->
                     <statetype name="nodetype">
                         <position>0,0</position>
                         <state name="subfolder">
-                            <imagetype name="node_icon">
+                            <imagetype name="node_icon" from="base_icon_selected">
                                 <area>16,225,30,30</area>
                                 <filename>images/icons/folder_selected.png</filename>
-                                <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
                         <state name="upfolder">
-                            <imagetype name="node_icon">
+                            <imagetype name="node_icon" from="base_icon_selected">
                                 <area>16,225,30,30</area>
                                 <filename>images/icons/folder_up_selected.png</filename>
-                                <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
                         <state name="file" />
