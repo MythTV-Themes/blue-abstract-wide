@@ -195,21 +195,19 @@
                     <statetype name="cutliststatus">
                         <position>1115,6</position>
                         <state name="none">
-                            <imagetype name="statusimage">
-                                <filename>images/shared/archive/cutlist.png</filename>
-                                <alpha>55</alpha>
+                            <imagetype name="statusimage" from="base_icon_inactive">
+                                <filename>images/icons/cutlist.png</filename>
                             </imagetype>
                         </state>
                         <state name="notusing">
                             <imagetype name="statusimage">
-                                <filename>images/shared/archive/cutlist.png</filename>
+                                <filename>images/icons/cutlist.png</filename>
                                 <alpha>155</alpha>
                             </imagetype>
                         </state>
                         <state name="using">
-                            <imagetype name="statusimage">
-                                <filename>images/shared/archive/cutlist.png</filename>
-                                <alpha>255</alpha>
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/cutlist.png</filename>
                             </imagetype>
                         </state>
                     </statetype>
@@ -217,15 +215,13 @@
                     <statetype name="movestate">
                         <position>1152,6</position>
                         <state name="no">
-                            <imagetype name="movedoff">
-                                <filename>images/shared/archive/moved.png</filename>
-                                <alpha>55</alpha>
+                            <imagetype name="movedoff" from="base_icon_inactive">
+                                <filename>images/icons/move.png</filename>
                             </imagetype>
                         </state>
                         <state name="yes">
-                            <imagetype name="movedon">
-                                <filename>images/shared/archive/moved.png</filename>
-                                <alpha>255</alpha>
+                            <imagetype name="movedon" from="base_icon_selected">
+                                <filename>images/icons/move.png</filename>
                             </imagetype>
                         </state>
                     </statetype>

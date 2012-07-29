@@ -257,7 +257,7 @@
                 <showempty>yes</showempty>
                 <state type="full">
                     <imagetype name="upoff">
-                        <filename>images/shared/arrow_up.png</filename>
+                        <filename>images/icons/button_arrow_up.png</filename>
                     </imagetype>
                 </state>
             </statetype>
@@ -269,7 +269,7 @@
                 <showempty>yes</showempty>
                 <state type="full">
                     <imagetype name="dnoff">
-                        <filename>images/shared/arrow_down.png</filename>
+                        <filename>images/icons/button_arrow_down.png</filename>
                     </imagetype>
                 </state>
             </statetype>

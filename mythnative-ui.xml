@@ -170,17 +170,15 @@
         <button name="back_button" from="base_button_narrow">
             <position>800,90</position>
             <imagetype name="folderimage">
-                <area>20,0,30,40</area>
-                <filename>images/shared/back.png</filename>
-                <preserveaspect>yes</preserveaspect>
+                <area>20,3,30,30</area>
+                <filename>images/icons/back.png</filename>
             </imagetype>
         </button>
         <button name="home_button" from="base_button_narrow">
             <position>890,90</position>
             <imagetype name="folderimage">
-                <area>20,0,30,40</area>
-                <filename>images/shared/folder_up_open.png</filename>
-                <preserveaspect>yes</preserveaspect>
+                <area>20,3,30,30</area>
+                <filename>images/icons/folder_up_selected.png</filename>
             </imagetype>
         </button>
 
@@ -196,9 +194,8 @@
                         <filename>images/widgets/buttonlist_inactive_wide.png</filename>
                     </imagetype>
                     <imagetype name="folderimage">
-                        <area>7,0,30,40</area>
-                        <filename>images/shared/folder.png</filename>
-                        <preserveaspect>yes</preserveaspect>
+                        <area>7,3,30,30</area>
+                        <filename>images/icons/folder.png</filename>
                     </imagetype>
                     <textarea name="buttontext" from="base_textarea">
                         <area>44,0,345,40</area>
@@ -211,9 +208,8 @@
                         <filename>images/widgets/buttonlist_active_wide.png</filename>
                     </imagetype>
                     <imagetype name="icon">
-                        <area>7,0,30,40</area>
-                        <filename>images/shared/folder_open.png</filename>
-                        <preserveaspect>yes</preserveaspect>
+                        <area>7,3,30,30</area>
+                        <filename>images/icons/folder_open.png</filename>
                     </imagetype>
                 </state>
                 <state name="selectedinactive" from="active">

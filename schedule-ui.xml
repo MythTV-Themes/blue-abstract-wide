@@ -51,8 +51,8 @@
             <recordstatus type="WeekslotRecord" image="images/icons/schedule_weekslot.png"/>
             <recordstatus type="FindOneRecord"  image="images/icons/schedule_findone.png"/>
             <recordstatus type="OverrideRecord" image="images/icons/schedule_override.png"/>
-            <arrow direction="left" image="images/shared/arrow_left.png"/>
-            <arrow direction="right" image="images/shared/arrow_right.png"/>
+            <arrow direction="left" image="images/icons/button_arrow_left.png"/>
+            <arrow direction="right" image="images/icons/button_arrow_right.png"/>
             <font>text_small</font>
         </guidegrid>       
 
@@ -113,8 +113,8 @@
             <recordstatus type="WeekslotRecord" image="images/icons/schedule_weekslot.png"/>
             <recordstatus type="FindOneRecord"  image="images/icons/schedule_findone.png"/>
             <recordstatus type="OverrideRecord" image="images/icons/schedule_override.png"/>
-            <arrow direction="left" image="images/shared/arrow_left.png"/>
-            <arrow direction="right" image="images/shared/arrow_right.png"/>
+            <arrow direction="left" image="images/icons/button_arrow_left.png"/>
+            <arrow direction="right" image="images/icons/button_arrow_right.png"/>
             <font>text_small</font>
         </guidegrid>       
                 

@@ -217,7 +217,7 @@
                 <position>1140,360</position>
                 <state type="on">
                     <imagetype name="upon">
-                        <filename>images/shared/arrow_up.png</filename>
+                        <filename>images/icons/button_arrow_up.png</filename>
                     </imagetype>
                 </state>
             </statetype>
@@ -225,7 +225,7 @@
                 <position>1165,360</position>
                 <state type="on">
                     <imagetype name="dnon">
-                        <filename>images/shared/arrow_down.png</filename>
+                        <filename>images/icons/button_arrow_down.png</filename>
                     </imagetype>
                 </state>
             </statetype>
@@ -480,7 +480,7 @@
                 <position>240,270</position>
                 <state type="on">
                     <imagetype name="upon">
-                        <filename>images/shared/arrow_up.png</filename>
+                        <filename>images/icons/button_arrow_up.png</filename>
                     </imagetype>
                 </state>
             </statetype>
@@ -488,7 +488,7 @@
                 <position>456,270</position>
                 <state type="on">
                     <imagetype name="down">
-                        <filename>images/shared/arrow_down.png</filename>
+                        <filename>images/icons/button_arrow_down.png</filename>
                     </imagetype>
                 </state>
             </statetype>
@@ -543,7 +543,7 @@
                 <position>240,270</position>
                 <state type="on">
                     <imagetype name="upon">
-                        <filename>images/shared/arrow_up.png</filename>
+                        <filename>images/icons/button_arrow_up.png</filename>
                     </imagetype>
                 </state>
             </statetype>
@@ -551,7 +551,7 @@
                 <position>456,270</position>
                 <state type="on">
                     <imagetype name="down">
-                        <filename>images/shared/arrow_down.png</filename>
+                        <filename>images/icons/button_arrow_down.png</filename>
                     </imagetype>
                 </state>
             </statetype>
