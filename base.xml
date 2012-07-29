@@ -138,7 +138,7 @@
     
     <!-- alpha values explicitly for the icons in the osd and recording screens -->
     <imagetype name="base_icon_selected">
-        <alpha>220</alpha>
+        <alpha>210</alpha>
     </imagetype>
     <imagetype name="base_icon_inactive">
         <alpha>50</alpha>
@@ -156,8 +156,8 @@
     </shape>
 
     <shape name="base_button_shape_selectedactive" from="base_button_shape_active">
-        <fill color="#3697ef" alpha="220" />
-        <line color="#3697ef" alpha="200" width="1" />
+        <fill color="#3697ef" alpha="200" />
+        <line color="#3697ef" alpha="180" width="1" />
     </shape>
     
     <shape name="base_button_shape_selectedinactive" from="base_button_shape_active">
@@ -261,6 +261,7 @@
                 <area>0,0,350,36</area>
                 <shape name="background" from="base_button_shape_selectedactive" />
 
+                <!-- indicates the button contains a submenu -->
                 <imagetype name="buttonarrow" from="base_icon_selected">
                     <position>100%-26,4</position>
                     <filename>images/icons/button_arrow_right.png</filename>
