@@ -72,9 +72,8 @@
                         <align>allcenter</align>
                     </textarea>
                     <imagetype name="no_jobstate" from="base_icon_inactive">
-                        <position>775,0</position>
                         <filename>images/icons/processing.png</filename>
-                        <area>3,3,30,30</area>
+                        <area>778,3,30,30</area>
                     </imagetype>
                     <statetype name="jobstate">
                         <position>775,0</position>
@@ -387,7 +386,7 @@
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
-            <area>340,225,590,255</area>
+            <area>340,225,590,252</area>
         </shape>
 
         <textarea name="title" from="base_textarea">
@@ -442,7 +441,7 @@
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
-            <area>450,130,380,388</area>
+            <area>450,130,380,385</area>
         </shape>
 
         <textarea name="title" from="base_textarea">
