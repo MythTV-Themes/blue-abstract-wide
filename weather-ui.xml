@@ -6,7 +6,7 @@
          screens that show the actual weather information -->
     <window name="weatherbase">
 
-        <imagetype name="fanart" from="base_background"/>
+        <imagetype name="background" from="base_background"/>
 
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
@@ -37,11 +37,11 @@
             <font>text_small</font>
         </textarea>
 
-        <shape name="title_separator" from="base_separator_shape">
+        <shape name="title_separator" from="base_background_shape">
             <area>90,130,1100,1</area>
         </shape>
 
-        <shape name="update_separator" from="base_separator_shape">
+        <shape name="update_separator" from="base_background_shape">
             <area>90,620,1100,1</area>
         </shape>
 
@@ -113,7 +113,7 @@
             <position>410,455</position>
         </textarea>
 
-        <shape name="title_separator" from="base_separator_shape">
+        <shape name="title_separator" from="base_background_shape">
             <area>730,230,1,255</area>
         </shape>
 
@@ -711,7 +711,7 @@
             <align>right,vcenter</align>
         </textarea>
 
-        <shape name="button_separator" from="base_separator_shape">
+        <shape name="button_separator" from="base_background_shape">
             <area>170,445,940,1</area>
         </shape>
 
@@ -743,9 +743,6 @@
             <area>210,120,860,500</area>
         </shape>
 
-        <imagetype name="title_background_overlay" from="base_popup_background">
-            <area>230,140,820,90</area>
-        </imagetype>  
         <textarea name="helptext_label" from="base_textarea">
             <area>250,140,780,90</area>
             <value>Enter your current location, nearest large town or city. In some countries postal codes are also supported.</value>
@@ -768,15 +765,15 @@
             <value>Search</value>
         </button>
 
-        <shape name="search_separator" from="base_separator_shape">
+        <shape name="search_separator" from="base_background_shape">
             <area>230,310,820,1</area>
         </shape>
 
-        <buttonlist name="results" from="base_buttonlist_very_wide">
+        <buttonlist name="results" from="base_buttonlist">
             <area>230,330,820,224</area>
         </buttonlist>
 
-        <shape name="result_separator" from="base_separator_shape">
+        <shape name="result_separator" from="base_background_shape">
             <area>230,570,820,1</area>
         </shape>
 
