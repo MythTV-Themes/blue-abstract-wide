@@ -1358,12 +1358,8 @@
          The dialog is like a full screen with a header and clock -->
     <window name="MythFileBrowser">
         
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background" />
 
-        <!-- The name of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
