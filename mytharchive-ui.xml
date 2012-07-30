@@ -96,17 +96,13 @@
 
 
 
+
     <!-- this is the screen where the user can select the avialable
         recordings that will be saved to dvd. -->
     <window name="recording_selector">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background" />
 
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -121,14 +117,11 @@
 
         <buttonlist name="category_selector" from="base_buttonlist">
             <area>45,91,350,312</area>
-            <spacing>4</spacing>
             <wrapstyle>items</wrapstyle>
         </buttonlist>
 
-        <buttonlist name="recordinglist" from="base_buttonlist_very_wide">
+        <buttonlist name="recordinglist" from="base_buttonlist">
             <area>412,91,825,312</area>
-            <buttonarea>0,0,825,315</buttonarea>
-            <spacing>4</spacing>
             <wrapstyle>captive</wrapstyle>
         </buttonlist>
 
@@ -149,7 +142,7 @@
         </imagetype>
 
         <!-- the vertical separator -->
-        <shape name="recording_description_separator" from="base_separator_shape">
+        <shape name="recording_description_separator" from="base_background_shape">
             <area>419,455,1,225</area>
         </shape>
 
@@ -171,7 +164,7 @@
             <filename>images/icons/cutlist.png</filename>
         </imagetype>
 
-        <shape name="title_separator" from="base_separator_shape">
+        <shape name="title_separator" from="base_background_shape">
             <area>420,502,818,1</area>
         </shape>
 
@@ -184,7 +177,7 @@
             <template>%|"SUBTITLE|"% %|(ORIGINALAIRDATE|)% %STARS% %DESCRIPTION%</template>
         </textarea>
 
-        <shape name="button_separator" from="base_separator_shape">
+        <shape name="button_separator" from="base_background_shape">
             <area>420,636,475,1</area>
         </shape>
 
@@ -216,17 +209,13 @@
 
 
 
+    <!-- DONE -->
     <!-- this is the screen where the user can select the
         files from the harddisk that will be saved to dvd. -->
     <window name="file_selector">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background"/>
 
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -234,80 +223,103 @@
             </textarea>
         </textarea>
 
-        <shape name="topbackground" from="base_background_shape">
-            <area>290,75,690,600</area>
+        <shape name="file_selector_background" from="base_background_shape">
+            <area>300,100,680,552</area>
         </shape>
 
         <textedit name="location_edit" from="base_textedit">
-            <position>310,95</position>
+            <position>315,115</position>
         </textedit>
+
+        <!-- the buttons to go back up directory -->
         <button name="back_button" from="base_button">
-            <position>800,95</position>
-            <imagetype name="folderimage">
-                <area>20,3,30,30</area>
-                <filename>images/icons/back.png</filename>
-            </imagetype>
+            <area>840,115,54,36</area>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_icon_selected">
+                        <filename>images/icons/arrow_left.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_icon_selected">
+                        <filename>images/icons/arrow_left.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="disabled" from="active"/>
+                <state name="pushed" from="selected"/>
+            </statetype>
         </button>
+
+        <!-- the button to go to the users home directory -->
         <button name="home_button" from="base_button">
-            <position>890,95</position>
-            <imagetype name="folderimage">
-                <area>20,3,30,30</area>
-                <filename>images/icons/folder_up_selected.png</filename>
-            </imagetype>
+            <area>910,115,54,36</area>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_icon_selected">
+                        <filename>images/icons/home.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_image_selected">
+                        <filename>images/icons/home.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="disabled" from="active"/>
+                <state name="pushed" from="selected"/>
+            </statetype>
         </button>
 
         <shape name="search_separator" from="base_background_shape">
-            <area>310,155,650,1</area>
+            <area>315,165,650,1</area>
         </shape>
 
         <buttonlist name="filelist" from="base_buttonlist">
-            <area>310,175,650,409</area>
+            <area>315,180,650,392</area>
             <statetype name="buttonitem">
                 <state name="active">
-                    <imagetype name="buttonbackground" from="base_image_active">
-                        <filename>images/widgets/buttonlist_inactive_wide.png</filename>
-                    </imagetype>
+                    <area>0,0,650,36</area>
                     <imagetype name="folderimage">
-                        <area>7,3,30,30</area>
+                        <area>8,3,30,30</area>
                         <filename>images/icons/folder.png</filename>
                     </imagetype>
                     <textarea name="buttontext" from="base_textarea">
-                        <area>44,0,345,40</area>
-                        <align>left,vcenter</align>
-                        <cutdown>yes</cutdown>
+                        <area>50,0,100%-58,36</area>
+                        <scroll direction="horizontal"/>
                     </textarea>
                 </state>
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selected">
-                        <filename>images/widgets/buttonlist_active_wide.png</filename>
-                        <!--<alphapulse min="160" max="255" change="2"/>-->
-                    </imagetype>
+                    <area>0,0,650,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                     <imagetype name="icon">
-                        <area>7,3,30,30</area>
-                        <filename>images/icons/folder_open.png</filename>
+                        <area>8,3,30,30</area>
+                        <filename>images/icons/folder_selected.png</filename>
                     </imagetype>
                 </state>
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_inactive">
-                        <filename>images/widgets/buttonlist_active_wide.png</filename>
-                    </imagetype>
-                    <textarea name="buttontext">
-                        <font>text_inactive</font>
-                    </textarea>
+                    <area>0,0,650,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
             </statetype>
         </buttonlist>
 
         <shape name="button_separator" from="base_background_shape">
-            <area>310,595,650,1</area>
+            <area>310,585,650,1</area>
         </shape>
 
         <button name="cancel_button" from="base_button">
-            <position>310,615</position>
+            <position>485,600</position>
             <value>Cancel</value>
         </button>
         <button name="ok_button" from="base_button">
-            <position>810,615</position>
+            <position>650,600</position>
             <value>Ok</value>
         </button>
 
@@ -321,13 +333,8 @@
         videos that will be saved to dvd. -->
     <window name="video_selector">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background" />
 
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -348,14 +355,11 @@
 
         <buttonlist name="category_selector" from="base_buttonlist">
             <area>45,101,350,312</area>
-            <spacing>4</spacing>
             <wrapstyle>items</wrapstyle>
         </buttonlist>
 
-        <buttonlist name="videolist" from="base_buttonlist_very_wide">
+        <buttonlist name="videolist" from="base_buttonlist">
             <area>412,101,825,312</area>
-            <buttonarea>0,0,825,315</buttonarea>
-            <spacing>4</spacing>
             <wrapstyle>captive</wrapstyle>
         </buttonlist>
 
@@ -382,7 +386,7 @@
             <cutdown>yes</cutdown>
         </textarea>
 
-        <shape name="title_separator" from="base_separator_shape">
+        <shape name="title_separator" from="base_background_shape">
             <area>195,520,1040,1</area>
         </shape>
 
@@ -393,7 +397,7 @@
             <align>left,top</align>
         </textarea>
 
-        <shape name="button_separator" from="base_separator_shape">
+        <shape name="button_separator" from="base_background_shape">
             <area>195,626,700,1</area>
         </shape>
 
@@ -432,13 +436,8 @@
     <!-- this is the screen shows the logs of the dvd creation -->
     <window name="logviewer">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background" />
 
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -449,10 +448,8 @@
         <shape name="topbackground" from="base_background_shape">
             <area>25,70,1230,437</area>
         </shape>
-        <buttonlist name="loglist" from="base_buttonlist_extra_wide">
+        <buttonlist name="loglist" from="base_buttonlist">
             <area>45,90,1190,404</area>
-            <spacing>4</spacing>
-            <wrapstyle>items</wrapstyle>
         </buttonlist>
 
 
@@ -467,7 +464,7 @@
             <cutdown>yes</cutdown>
         </textarea>
 
-        <shape name="button_separator" from="base_separator_shape">
+        <shape name="button_separator" from="base_background_shape">
             <area>45,615,1190,1</area>
         </shape>
 

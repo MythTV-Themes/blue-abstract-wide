@@ -2,18 +2,13 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- ================================================================== -->
+    <!-- DONE -->
     <!-- this is the theme selector screen where the user can choose from
         a list of available themes. The DVD menu will then look like it -->
     <window name="themeselector">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background"/>
 
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -21,125 +16,156 @@
             </textarea>
         </textarea>
 
-        <!-- the theme selection with the preview image and the help text -->
-        <shape name="topbackground" from="base_background_shape">
-            <area>165,90,950,200</area>
+        <shape name="themeselector_background" from="base_background_shape">
+            <area>250,55,795,647</area>
         </shape>
 
         <textarea name="themetitle" from="base_textarea">
-            <area>185,110,190,40</area>
+            <area>245,70,220,36</area>
             <align>right,vcenter</align>
             <value>Select a theme</value>
         </textarea>
 
         <buttonlist name="theme_selector" from="base_selector_wide">
-            <position>385,110</position>
+            <position>475,70</position>
         </buttonlist>
 
-    <shape name="theme_selector_separator" from="base_separator_shape">
-            <area>185,169,660,1</area>
-        </shape>
-        <shape name="description_separator" from="base_separator_shape">
-            <area>845,110,1,160</area>
-        </shape>
-
         <textarea name="themedescription" from="base_textarea">
-            <area>185,188,640,120</area>
+            <area>265,115,762,50</area>
             <value>description goes here.</value>
             <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
+            <cutdown>no</cutdown>
+            <scroll direction="vertical" />
             <align>left,top</align>
         </textarea>
 
-        <shape name="theme_image_background" from="base_background_shape">
-            <area>865,110,230,160</area>
+        <shape name="title_separator" from="base_background_shape">
+            <area>251,170,793,1</area>
         </shape>
+
         <imagetype name="theme_image" >
-            <area>867,112,226,156</area>
+            <area>0,0,1,1</area>
         </imagetype>
 
-
-        <!-- the theme preview images -->
-        <shape name="middlebackground" from="base_background_shape">
-            <area>45,330,1190,340</area>
-        </shape>
-
-        <shape name="intro_image_background" from="base_background_shape">
-            <area>65,350,272,183</area>
-        </shape>
-        <shape name="menu_image_background" from="base_background_shape">
-            <area>357,350,272,183</area>
-        </shape>
-        <shape name="chapter_image_background" from="base_background_shape">
-            <area>649,350,272,183</area>
-        </shape>
-        <shape name="details_image_background" from="base_background_shape">
-            <area>941,350,272,183</area>
-        </shape>
-
+        <!-- the four preview images -->
+        <imagetype name="intro_image_background">
+            <area>260,180,384,220</area>
+            <filename>images/media/recording_preview_bg.png</filename>
+            <mask>images/media/recording_preview_mask.png</mask>
+            <preserveaspect>true</preserveaspect>
+            <alpha>220</alpha>
+        </imagetype>
         <imagetype name="intro_image">
-            <area>67,352,268,179</area>
+            <area>260,180,384,220</area>
+            <mask>images/media/recording_preview_mask.png</mask>
+            <preserveaspect>true</preserveaspect>
         </imagetype>
-        <imagetype name="mainmenu_image">
-            <area>359,352,268,179</area>
-        </imagetype>
-        <imagetype name="chapter_image">
-            <area>651,352,268,179</area>
-        </imagetype>
-        <imagetype name="details_image">
-            <area>943,352,268,179</area>
+        <imagetype name="intro_image_border">
+            <area>260,180,384,220</area>
+            <filename>images/media/recording_preview_border.png</filename>
         </imagetype>
 
         <textarea name="introtitle" from="base_textarea">
-            <area>65,540,272,40</area>
-            <align>allcenter</align>
+            <area>280,355,344,36</area>
             <value>Intro</value>
         </textarea>
+
+        <imagetype name="mainmenu_image_background">
+            <area>650,180,384,220</area>
+            <filename>images/media/recording_preview_bg.png</filename>
+            <mask>images/media/recording_preview_mask.png</mask>
+            <preserveaspect>true</preserveaspect>
+            <alpha>220</alpha>
+        </imagetype>
+        <imagetype name="mainmenu_image">
+            <area>650,180,384,220</area>
+            <mask>images/media/recording_preview_mask.png</mask>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="mainmenu_image_border">
+            <area>650,180,384,220</area>
+            <filename>images/media/recording_preview_border.png</filename>
+        </imagetype>
+
         <textarea name="menutitle" from="introtitle">
-            <area>357,540,272,40</area>
+            <position>670,355</position>
             <value>Main Menu</value>
         </textarea>
-    <textarea name="chaptertitle" from="introtitle">
-            <area>649,540,272,40</area>
+
+        <imagetype name="chapter_image_background">
+            <area>260,405,384,220</area>
+            <filename>images/media/recording_preview_bg.png</filename>
+            <mask>images/media/recording_preview_mask.png</mask>
+            <preserveaspect>true</preserveaspect>
+            <alpha>220</alpha>
+        </imagetype>
+        <imagetype name="chapter_image">
+            <area>260,405,384,220</area>
+            <mask>images/media/recording_preview_mask.png</mask>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="chapter_image_border">
+            <area>260,405,384,220</area>
+            <filename>images/media/recording_preview_border.png</filename>
+        </imagetype>
+
+        <textarea name="chaptertitle" from="introtitle">
+            <position>280,580</position>
             <value>Chapter Menu</value>
         </textarea>
+
+        <imagetype name="details_image_background">
+            <area>650,405,384,220</area>
+            <filename>images/media/recording_preview_bg.png</filename>
+            <mask>images/media/recording_preview_mask.png</mask>
+            <preserveaspect>true</preserveaspect>
+            <alpha>220</alpha>
+        </imagetype>
+        <imagetype name="details_image">
+            <area>650,405,384,220</area>
+            <mask>images/media/recording_preview_mask.png</mask>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="details_image_border">
+            <area>650,405,384,220</area>
+            <filename>images/media/recording_preview_border.png</filename>
+        </imagetype>
+
         <textarea name="detailtitle" from="introtitle">
-            <area>941,540,272,40</area>
+            <position>670,580</position>
             <value>Details</value>
         </textarea>
 
-    <shape name="button_separator" from="base_separator_shape">
-            <area>65,590,1150,1</area>
+        <shape name="button_separator" from="base_background_shape">
+            <area>251,635,793,1</area>
         </shape>
 
         <button name="cancel_button" from="base_button">
-            <position>65,610</position>
+            <position>375,650</position>
             <value>Cancel</value>
         </button>
         <button name="prev_button" from="base_button">
-            <position>895,610</position>
+            <position>570,650</position>
             <value>Previous</value>
         </button>
         <button name="next_button" from="base_button">
-            <position>1065,610</position>
+            <position>765,650</position>
             <value>Next</value>
         </button>
 
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
+
     <!-- this is the main mythburn screen where the user can select the
         recordings and videos that shall be burnt to disc -->
     <window name="mythburn">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background" />
 
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -157,17 +183,13 @@
             <value>No files are selected for archive</value>
         </textarea>
 
-        <buttonlist name="archivelist" from="base_buttonlist_extra_wide">
+        <buttonlist name="archivelist" from="base_buttonlist">
             <area>45,90,1230,403</area>
             <statetype name="buttonitem">
-                <area>0,0,1145,100</area>
                 <state name="active">
-                    <imagetype name="buttonbackground" from="base_image_active">
-                        <filename>images/widgets/buttonlist_inactive_extra_wide.png</filename>
-                    </imagetype>
+                    <area>8,0,1230,36</area>
                     <textarea name="buttontext" from="base_textarea">
-                        <area>8,5,430,30</area>
-                        <cutdown>yes</cutdown>
+                        <area>8,0,430,36</area>
                     </textarea>
                     <!--<textarea name="subtitle" from="base_textarea">
                         <area>10,5,300,30</area>
@@ -227,21 +249,20 @@
                     </statetype>
 
                 </state>
+                <state name="inactive" from="active" />
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selected">
-                        <filename>images/widgets/buttonlist_active_extra_wide.png</filename>
-                    </imagetype>
+                    <area>0,0,1230,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                 </state>
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_inactive">
-                        <filename>images/widgets/buttonlist_active_extra_wide.png</filename>
-                    </imagetype>
+                    <area>0,0,1230,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
             </statetype>
         </buttonlist>
 
 
-        <shape name="button_separator" from="base_separator_shape">
+        <shape name="button_separator" from="base_background_shape">
             <area>45,505,1190,1</area>
         </shape>
 
@@ -258,13 +279,12 @@
             <value>Add File</value>
         </button>
 
-        <!-- ================================================================== -->
         <!-- this is the background for the information at the bottom -->
         <shape name="bottombackground" from="base_background_shape">
             <area>25,610,1230,80</area>
         </shape>
 
-        <progressbar name="size_bar" from="base_progressbar_flat">
+        <progressbar name="size_bar" from="base_progressbar">
             <position>45,630</position>
             <layout>horizontal</layout>
             <style>reveal</style>
@@ -370,18 +390,17 @@
     </window>
 -->
 
-    <!-- ================================================================== -->
+
+
+
+
+
     <!-- this is the screen where the user can edit some
         information about the archive -->
     <window name="edit_metadata">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background" />
 
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
