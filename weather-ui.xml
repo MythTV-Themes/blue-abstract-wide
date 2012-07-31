@@ -546,7 +546,7 @@
 
 
 
-
+    <!-- DONE -->
     <!-- global settings of the weather screen -->
     <window name="global-setup">
 
@@ -559,45 +559,48 @@
             </textarea>
         </textarea>
 
-        <shape name="weather_settings_background" from="base_background_shape">
-            <area>300,200,680,360</area>
+        <shape name="global-setup_background" from="base_background_shape">
+            <area>360,425,560,172</area>
         </shape>
 
         <textarea name="timeout_label" from="base_textarea">
-            <area>300,220,560,40</area>
+            <area>375,440,430,36</area>
             <value>Seconds to display each page:</value>
             <align>right,vcenter</align>
         </textarea>
 
-        <spinbox name="timeout_spinbox" from="base_spinbox">
-            <position>870,220</position>
-        </spinbox>
-
-        <textarea name="background_label" from="base_textarea">
-            <area>300,270,560,40</area>
+        <textarea name="backgroundcheck_label" from="base_textarea">
+            <area>375,480,430,36</area>
             <value>Retrieve data in the background:</value>
             <align>right,vcenter</align>
         </textarea>
 
+        <spinbox name="timeout_spinbox" from="base_spinbox">
+            <position>820,440</position>
+        </spinbox>
         <checkbox name="backgroundcheck" from="base_checkbox">
-            <position>870,275</position>
+            <position>820,480</position>
         </checkbox>
 
-        <shape name="helparea_background" from="base_background_shape">
-            <area>320,320,640,160</area>
+        <shape name="button_separator" from="base_background_shape">
+            <area>361,530,558,1</area>
         </shape>
-        <textarea name="helparea" from="basetextarea">
-            <area>340,322,600,160</area>
-            <multiline>yes</multiline>
-            <font>text_small</font>
-            <align>allcenter</align>
-            <value>This screen governs the behavior of the weather screens. You can enable a background weather update which will run regardless of being on the weather screen, and configure how many seconds each screen will display.\nWhen you are done configuring the weather plugin, click "Finish" to continue.</value>
-        </textarea>
 
         <button name="finishbutton" from="base_button">
-            <position>565,500</position>
+            <position>565,545</position>
             <value>Finish</value>
         </button>
+
+        <shape name="helptext_background_bottom" from="base_background_shape">
+            <area>-15,615,1310,90</area>
+        </shape>
+        <textarea name="helptext" from="base_textarea">
+            <area>120,615,1040,90</area>
+            <scroll direction="vertical"/>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+            <value>This screen governs the behavior of the weather screens. You can enable a background weather update which will run regardless of being on the weather screen, and configure how many seconds each screen will display. When you are done configuring the weather plugin, click "Finish" to continue.</value>
+        </textarea>
 
     </window>
 
@@ -605,7 +608,7 @@
 
 
 
-
+    <!-- DONE -->
     <!-- alows the user to select and activate the sources
         where the weather will be fetched from -->
     <window name="screen-setup">
@@ -619,44 +622,48 @@
             </textarea>
         </textarea>
 
-        <shape name="weather_settings_background" from="base_background_shape">
-            <area>260,120,760,510</area>
+        <shape name="screen-setup_background" from="base_background_shape">
+            <area>265,200,745,397</area>
         </shape>
 
         <textarea name="inactivehdr" from="base_textarea">
-            <area>285,135,350,20</area>
+            <area>285,205,350,36</area>
+            <font>text_small</font>
+            <align>left,vcenter</align>
+        </textarea>
+
+        <textarea name="activehdr" from="inactivehdr">
+            <area>650,205,350,36</area>
             <font>text_small</font>
             <align>left,vcenter</align>
         </textarea>
 
         <buttonlist name="inactivelist" from="base_buttonlist">
-            <area>280,160,350,225</area>
+            <area>280,240,350,275</area>
         </buttonlist>
-
-        <textarea name="activehdr" from="inactivehdr">
-            <area>655,135,350,20</area>
-            <font>text_small</font>
-            <align>left,vcenter</align>
-        </textarea>
 
         <buttonlist name="activelist" from="base_buttonlist">
-            <area>650,160,350,225</area>
+            <area>645,240,350,275</area>
         </buttonlist>
 
-        <shape name="helptext_background" from="base_background_shape">
-            <area>280,400,720,150</area>
+        <shape name="button_separator" from="base_background_shape">
+            <area>281,530,723,1</area>
         </shape>
-        <textarea name="helptxt" from="base_textarea">
-            <area>300,400,680,150</area>
-            <multiline>yes</multiline>
-            <align>allcenter</align>
-            <font>text_small</font>
-        </textarea>
 
         <button name="finishbutton" from="base_button">
-            <position>565,570</position>
+            <position>565,545</position>
             <value>Finish</value>
         </button>
+
+        <shape name="helptext_background_bottom" from="base_background_shape">
+            <area>-15,615,1310,90</area>
+        </shape>
+        <textarea name="helptxt" from="base_textarea">
+            <area>120,615,1040,90</area>
+            <scroll direction="vertical"/>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+        </textarea>
 
     </window>
 
@@ -664,7 +671,7 @@
 
 
 
-
+    <!-- DONE -->
     <!-- alows the user to set up some values 
          of the sources that he has choosen  -->
     <window name="source-setup">
@@ -678,54 +685,59 @@
             </textarea>
         </textarea>
 
-        <shape name="weather_settings_background" from="base_background_shape">
-            <area>150,230,980,295</area>
+        <shape name="source-setup_background" from="base_background_shape">
+            <area>185,340,910,257</area>
         </shape>
 
         <buttonlist name="srclist" from="base_buttonlist">
-            <area>170,250,350,178</area>
+            <area>200,355,350,160</area>
         </buttonlist>
 
         <textarea name="update_label" from="base_textarea">
-            <area>530,255,480,30</area>
+            <area>600,355,380,36</area>
             <value>Data Retrieval Interval (minutes):</value>
             <align>right,vcenter</align>
         </textarea>
         <spinbox name="update_spinbox" from="base_spinbox">
-            <position>1020,250</position>
+            <position>990,355</position>
         </spinbox>
 
         <textarea name="retrieve_label" from="base_textarea">
-            <area>530,305,480,30</area>
+            <area>600,395,380,36</area>
             <value>Source Update Timeout (seconds):</value>
             <align>right,vcenter</align>
         </textarea>
         <spinbox name="retrieve_spinbox" from="base_spinbox">
-            <position>1020,300</position>
+            <position>990,395</position>
         </spinbox>
 
         <textarea name="srcinfo" from="base_textarea">
-            <area>530,350,480,90</area>
+            <area>600,435,475,90</area>
             <multiline>yes</multiline>
-            <font>text_small</font>
+            <scroll direction="vertical"/>
             <align>right,vcenter</align>
         </textarea>
 
         <shape name="button_separator" from="base_background_shape">
-            <area>170,445,940,1</area>
+            <area>186,530,908,1</area>
         </shape>
 
         <button name="finishbutton" from="base_button">
-            <position>565,465</position>
+            <position>565,545</position>
             <value>Finish</value>
         </button>
+
+        <group name="base_helptext_group" from="base_helptext_group">
+            <position>0,615</position>
+        </group>
+
     </window>
 
 
 
 
 
-
+    <!-- DONE -->
     <!-- allows the user to search for the nearest city
         that provides weather information source -->
     <window name="setup-location">
@@ -739,53 +751,73 @@
             </textarea>
         </textarea>
 
-        <shape name="weather_settings_background" from="base_background_shape">
-            <area>210,120,860,500</area>
+        <shape name="setup-location_background" from="base_background_shape">
+            <area>320,105,650,495</area>
         </shape>
 
-        <textarea name="helptext_label" from="base_textarea">
-            <area>250,140,780,90</area>
-            <value>Enter your current location, nearest large town or city. In some countries postal codes are also supported.</value>
-            <multiline>yes</multiline>
-            <align>allcenter</align>
-        </textarea>
-
         <textarea name="loc-edit_label" from="base_textarea">
-            <area>250,250,210,40</area>
+            <area>335,120,180,36</area>
             <value>Enter Location:</value>
             <align>right,vcenter</align>
         </textarea>
 
         <textedit name="loc-edit" from="base_textedit">
-            <position>470,250</position>
+            <position>525,120</position>
         </textedit>
-
-        <button name="searchbtn" from="base_button">
-            <position>900,250</position>
-            <value>Search</value>
+        
+        <button name="searchbtn" from="base_searchbutton">
+            <position>917,120</position>
         </button>
 
         <shape name="search_separator" from="base_background_shape">
-            <area>230,310,820,1</area>
+            <area>321,170,648,1</area>
         </shape>
 
+        <!-- list with the search results -->
         <buttonlist name="results" from="base_buttonlist">
-            <area>230,330,820,224</area>
+            <area>335,185,620,355</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,620,36</area>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,100%-16,36</area>
+                    </textarea>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive">
+                    <area>0,0,620,36</area>
+                </state>
+                <state name="selectedinactive">
+                    <area>0,0,620,36</area>
+                </state>
+            </statetype>
         </buttonlist>
 
         <shape name="result_separator" from="base_background_shape">
-            <area>230,570,820,1</area>
+            <area>321,555,648,1</area>
         </shape>
 
         <textarea name="numresults" from="base_textarea">
-            <area>230,585,400,20</area>
+            <area>335,560,300,36</area>
         </textarea>
 
         <textarea name="source" from="base_textarea">
-            <area>650,585,400,20</area>
+            <area>650,560,300,36</area>
             <cutdown>yes</cutdown>
             <align>right,vcenter</align>
         </textarea>
+
+        <shape name="helptext_background_bottom" from="base_background_shape">
+            <area>-15,615,1310,90</area>
+        </shape>
+        <textarea name="helptext" from="base_textarea">
+            <area>120,615,1040,90</area>
+            <scroll direction="vertical"/>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+            <value>Enter your current location, nearest large town or city. In some countries postal codes are also supported.</value>
+        </textarea>
+
     </window>
 
 </mythuitheme>
