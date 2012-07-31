@@ -75,28 +75,34 @@
                         <filename>images/icons/processing.png</filename>
                         <area>778,3,30,30</area>
                     </imagetype>
+
                     <statetype name="jobstate">
                         <position>775,0</position>
-                        <state name="recording" from="base_icon_selected">
-                            <imagetype name="animation">
-                                <filename>images/icons/recording.png</filename>
+                        <state name="recording">
+                            <imagetype name="background" from="base_icon_selected">
+                                <filename>images/icons/processing.png</filename>
                                 <area>3,3,30,30</area>
-                                <alphapulse min="100" max="240" change="2"/>
+                            </imagetype>
+                            <imagetype name="status" from="base_icon_selected">
+                                <filename>images/icons/recording.png</filename>
+                                <area>8,8,20,21</area>
+                                <alphapulse min="60" max="220" change="3"/>
                             </imagetype>
                         </state>
                         <state name="transcoding" from="recording">
-                            <imagetype name="animation">
+                            <imagetype name="status" from="base_icon_selected">
                                 <filename>images/icons/transcoded.png</filename>
-                                <area>3,3,30,30</area>
+                                <area>8,8,20,21</area>
                             </imagetype>
                         </state>
                         <state name="commflagging" from="recording">
-                            <imagetype name="animation">
+                            <imagetype name="status" from="base_icon_selected">
                                 <filename>images/icons/commflagged.png</filename>
-                                <area>3,3,30,30</area>
+                                <area>8,8,20,21</area>
                             </imagetype>
                         </state>
                     </statetype>
+
                     <statetype name="watched">
                         <position>810,0</position>
                         <state name="no">
