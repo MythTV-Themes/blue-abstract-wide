@@ -655,7 +655,7 @@
 
 
 
-
+    <!-- DONE -->
     <!-- The Edit Recording Title / Subtitle window -->
     <window name="editmetadata">
 
@@ -670,80 +670,96 @@
         </textarea>
         
         <shape name="editmetadata_background" from="base_background_shape">
-            <area>350,100,610,550</area>
+            <area>340,155,600,442</area>
         </shape>
 
-        <!-- the title of the window -->
-        <imagetype name="message_background_overlay" from="base_popup_background">
-            <area>365,115,580,90</area>
-        </imagetype>
-        <textarea name="messagearea" from="base_textarea">
-            <area>370,115,550,90</area>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-            <align>allcenter</align>
-            <value>Edit Recording Metadata</value>
-        </textarea>
-
         <textarea name="titlelabel" from="base_textarea">
-            <area>370,220,190,40</area>
+            <area>355,170,185,36</area>
             <align>right,vcenter</align>
             <value>Title:</value>
         </textarea>
-        <textedit name="title" from="base_textedit">
-            <position>570,220</position>
-        </textedit>
 
         <textarea name="subtitlelabel" from="titlelabel">
-            <position>370,270</position>
+            <position>355,210</position>
             <value>Subtitle:</value>
         </textarea>
-        <textedit name="subtitle" from="base_textedit">
-            <position>570,270</position>
-        </textedit>
 
         <textarea name="inetreflabel" from="titlelabel">
-            <position>370,320</position>
+            <position>355,250</position>
             <value>Inetref:</value>
         </textarea>
-        <textedit name="inetref" from="base_textedit">
-            <position>570,320</position>
-        </textedit>
 
         <textarea name="seasonlabel" from="titlelabel">
-            <position>370,370</position>
+            <position>355,290</position>
             <value>Season:</value>
-        </textarea>
-        <spinbox name="season" from="base_spinbox">
-            <position>570,370</position>
-        </spinbox>
+        </textarea>        
 
         <textarea name="episodelabel" from="titlelabel">
-            <position>370,420</position>
+            <position>355,330</position>
             <value>Episode:</value>
         </textarea>
-        <spinbox name="episode" from="base_spinbox">
-            <position>570,420</position>
-        </spinbox>
 
         <textarea name="descriptionlabel" from="titlelabel">
-            <position>370,470</position>
+            <position>355,370</position>
             <value>Description:</value>
         </textarea>
-
-        <textedit name="description" from="base_multiline_textedit">
-            <position>570,470</position>
+        
+        <textedit name="title" from="base_textedit">
+            <position>550,170</position>
         </textedit>
+        
+        <textedit name="subtitle" from="base_textedit">
+            <position>550,210</position>
+        </textedit>
+        
+        <textedit name="inetref" from="base_textedit">
+            <position>550,250</position>
+        </textedit>
+        
+        <spinbox name="season" from="base_spinbox">
+            <position>550,290</position>
+        </spinbox>
+        
+        <spinbox name="episode" from="base_spinbox">
+            <position>550,330</position>
+        </spinbox>
 
-        <shape name="button_separator" from="base_separator_shape">
-            <area>370,570,570,1</area>
+        <textedit name="description" from="base_textedit">
+            <area>550,370,375,145</area>
+            <statetype name="background">
+                <state name="active">
+                    <area>0,0,375,145</area>
+                </state>
+                <state name="selected">
+                    <area>0,0,375,145</area>
+                </state>
+                <state name="inactive">
+                    <area>0,0,375,145</area>
+                </state>
+            </statetype>
+            <imagetype name="cursor">
+                <shape name="cursor_shape">
+                    <area>0,2,2,20</area>
+                    <type>box</type>
+                    <fill color="#FFFFFF" alpha="240" />
+                </shape>
+            </imagetype>
+            <textarea name="text" from="base_textarea">
+                <area>8,10,100%-16,139</area>
+                <align>top,left</align>
+                <multiline>true</multiline>
+            </textarea>
+        </textedit>
+        
+        <shape name="button_separator" from="base_background_shape">
+            <area>341,530,598,1</area>
         </shape>
 
         <button name="ok" from="base_button">
-            <position>580,590</position>
+            <position>565,545</position>
             <value>OK</value>
         </button>
-
+        
     </window>
 
 </mythuitheme>
