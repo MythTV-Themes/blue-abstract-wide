@@ -713,7 +713,7 @@
         </textarea>
 
         <textedit name="description_edit" from="base_textedit">
-            <area>885,140,365,120</area>
+            <area>885,140,365,150</area>
             <statetype name="background">
                 <state name="active">
                     <area>0,0,365,150</area>
@@ -733,7 +733,7 @@
                 </shape>
             </imagetype>
             <textarea name="text" from="base_textarea">
-                <area>8,10,100%-8,144</area>
+                <area>8,10,100%-16,144</area>
                 <align>top,left</align>
                 <multiline>true</multiline>
             </textarea>
