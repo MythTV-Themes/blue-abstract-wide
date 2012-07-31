@@ -207,25 +207,25 @@
             <showempty>yes</showempty>
             <state name="mono">
                 <imagetype name="mono" from="base_icon_selected">
-                    <filename>images/icons/audio/dolby_10.png</filename>
+                    <filename>images/icons/audio/dolby_1.0.png</filename>
                     <area>0,0,98,33</area>
                 </imagetype>
             </state>
             <state name="stereo">
                 <imagetype name="stereo" from="base_icon_selected">
-                    <filename>images/icons/audio/dolby_20.png</filename>
+                    <filename>images/icons/audio/dolby_2.0.png</filename>
                     <area>0,0,98,33</area>
                 </imagetype>
             </state>
             <state name="surround">
                 <imagetype name="surround" from="base_icon_selected">
-                    <filename>images/icons/audio/dolby_51.png</filename>
+                    <filename>images/icons/audio/dolby_5.1.png</filename>
                     <area>0,0,98,33</area>
                 </imagetype>
             </state>
             <state name="dolby">
                 <imagetype name="dolby" from="base_icon_selected">
-                    <filename>images/icons/audio/dolby_71.png</filename>
+                    <filename>images/icons/audio/dolby_7.1.png</filename>
                     <area>0,0,98,33</area>
                 </imagetype>
             </state>
