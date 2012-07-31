@@ -293,7 +293,7 @@
         
         <!-- the background image of the popup dialog box -->
         <shape name="background">
-            <area>100,380,1080,295</area>
+            <area>105,385,1070,285</area>
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
@@ -302,18 +302,16 @@
 
         <!-- shows the title and the plot of the selected video -->
         <textarea name="title">
-            <area>120,400,820,30</area>
+            <area>120,400,820,36</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
-            <cutdown>yes</cutdown>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal"/>
             <font>title</font>
         </textarea>
 
-        <textarea name="starttime">
-            <area>120,440,400,20</area>
-            <align>left,vcenter</align>
-            <multiline>no</multiline>
-            <cutdown>yes</cutdown>
+        <textarea name="starttime" from="title">
+            <area>120,440,400,36</area>
             <font>text</font>
             <template>%STARTTIME%-%ENDTIME% : %LENMINS%</template>
         </textarea>
