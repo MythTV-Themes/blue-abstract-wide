@@ -48,11 +48,11 @@
         
         <!-- show the channel and the recorded time of the recording -->
         <textarea name="channel" from="base_textarea">
-            <area>420,75,165,30</area>
+            <area>420,75,225,30</area>
         </textarea>
 
         <textarea name="timedate" from="base_textarea">
-            <area>720,75,250,30</area>
+            <area>660,75,310,30</area>
             <align>right,vcenter</align>
         </textarea>
 
