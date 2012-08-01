@@ -295,6 +295,7 @@
                         <scroll direction="horizontal"/>
                     </textarea>
                 </state>
+                <state name="inactive" from="active" />
                 <state name="selectedactive" from="active">
                     <area>0,0,650,36</area>
                     <shape name="background" from="base_button_shape_selectedactive" />
@@ -329,6 +330,7 @@
 
 
 
+    <!-- DONE -->
     <!-- this is the screen where the user can select the avialable
         videos that will be saved to dvd. -->
     <window name="video_selector">
@@ -342,88 +344,102 @@
             </textarea>
         </textarea>
 
-        <!-- destination selector -->
-        <shape name="topbackground" from="base_background_shape">
-            <area>25,80,1230,347</area>
+        <!-- The large cover image -->
+        <shape name="coverart_background" from="base_background_shape">
+            <area>145,170,1000,395</area>
         </shape>
 
+        <imagetype name="coverimage_background_image">
+            <area>165,190,245,355</area>
+            <mask>images/media/movie_cover_mask.png</mask>
+            <filename>images/media/movie_bg.png</filename>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="cover_image">
+            <area>165,190,245,355</area>
+            <mask>images/media/movie_cover_mask.png</mask>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="coverimage_border">
+            <area>165,190,245,355</area>
+            <filename>images/media/movie_cover_border.png</filename>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
+        <shape name="video_large_cover_separator" from="base_background_shape">
+            <area>425,171,1,393</area>
+        </shape>
+
+        <textarea name="videotitle" from="base_textarea">
+            <area>440,185,350,30</area>
+            <font>title</font>
+            <scroll direction="horizontal"/>
+        </textarea>
+        <textarea name="filesize" from="base_textarea">
+            <area>440,215,200,30</area>
+            <template>Filesize: %1</template>
+        </textarea>
+
+        <textarea name="parentallevel_text" from="base_textarea">
+            <area>610,215,180,30</area>
+            <align>right,vcenter</align>
+            <template>Parental Level: %1</template>
+        </textarea>
+
+        <shape name="top_separator" from="base_background_shape">
+            <area>426,250,378,1</area>
+        </shape>
+
+        <textarea name="videoplot" from="base_textarea">
+            <area>440,265,350,230</area>
+            <multiline>yes</multiline>
+            <scroll direction="vertical" />
+            <align>left,top</align>
+        </textarea>
+
         <textarea name="warning_text" from="base_textarea">
-            <area>25,80,1230,347</area>
+            <area>440,265,350,285</area>
             <align>allcenter</align>
             <value>No videos available</value>
         </textarea>
 
-        <buttonlist name="category_selector" from="base_buttonlist">
-            <area>45,101,350,312</area>
-            <wrapstyle>items</wrapstyle>
+        <shape name="left_separator" from="base_background_shape">
+            <area>805,171,1,393</area>
+        </shape>
+
+        <buttonlist name="category_selector" from="base_selector">
+            <position>830,185</position>
         </buttonlist>
+
+        <shape name="category_separator" from="base_background_shape">
+            <area>806,225,308,1</area>
+        </shape>
 
         <buttonlist name="videolist" from="base_buttonlist">
-            <area>412,101,825,312</area>
-            <wrapstyle>captive</wrapstyle>
+            <area>830,240,295,306</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,295,36</area>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <area>0,0,295,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
+                </state>
+                <state name="selectedinactive" from="active">
+                    <area>0,0,295,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
+                </state>
+            </statetype>
         </buttonlist>
 
-        <!-- this is the background for the information at the bottom -->
-        <shape name="bottom_background" from="base_background_shape">
-            <area>25,455,1230,230</area>
-        </shape>
-
-        <shape name="cover_background" from="base_background_shape">
-            <area>45,475,130,190</area>
-        </shape>
-
-        <imagetype name="cover_image">
-            <area>46,477,128,186</area>
-            <filename />
-            <preserveaspect>true</preserveaspect>
-        </imagetype>
-
-        <textarea name="videotitle" from="base_textarea">
-            <area>195,474,1040,30</area>
-            <multiline>no</multiline>
-            <font>title</font>
-            <align>left,vcenter</align>
-            <cutdown>yes</cutdown>
-        </textarea>
-
-        <shape name="title_separator" from="base_background_shape">
-            <area>195,520,1040,1</area>
-        </shape>
-
-        <textarea name="videoplot" from="base_textarea">
-            <area>195,537,1040,100</area>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-            <align>left,top</align>
-        </textarea>
-
-        <shape name="button_separator" from="base_background_shape">
-            <area>195,626,700,1</area>
-        </shape>
-
-        <textarea name="filesize" from="base_textarea">
-            <area>195,636,100,40</area>
-            <font>text_small</font>
-            <cutdown>yes</cutdown>
-            <value>x.xx Gb</value>
-        </textarea>
-        <textarea name="label" from="base_textarea">
-            <area>330,636,60,40</area>
-            <align>right,vcenter</align>
-            <value>PL:</value>
-        </textarea>
-        <textarea name="parentallevel_text" from="base_textarea">
-            <area>400,636,60,40</area>
-            <align>left,vcenter</align>
-            <value>?</value>
-        </textarea>
-
         <button name="cancel_button" from="base_button">
-            <position>915,626</position>
+            <position>440,515</position>
             <value>Cancel</value>
         </button>
+
         <button name="ok_button" from="base_button">
-            <position>1085,626</position>
+            <position>640,515</position>
             <value>Ok</value>
         </button>
 
