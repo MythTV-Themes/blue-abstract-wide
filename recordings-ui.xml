@@ -86,19 +86,19 @@
                             <imagetype name="status" from="base_icon_selected">
                                 <filename>images/icons/recording.png</filename>
                                 <area>8,8,20,21</area>
-                                <alphapulse min="60" max="220" change="3"/>
+                                <alphapulse min="100" max="220" change="2"/>
                             </imagetype>
                         </state>
-                        <state name="transcoding" from="recording">
+                        <state name="transcoding">
                             <imagetype name="status" from="base_icon_selected">
                                 <filename>images/icons/transcoded.png</filename>
-                                <area>8,8,20,21</area>
+                                <area>3,3,30,30</area>
                             </imagetype>
                         </state>
-                        <state name="commflagging" from="recording">
+                        <state name="commflagging">
                             <imagetype name="status" from="base_icon_selected">
                                 <filename>images/icons/commflagged.png</filename>
-                                <area>8,8,20,21</area>
+                                <area>3,3,30,30</area>
                             </imagetype>
                         </state>
                     </statetype>
