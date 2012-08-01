@@ -869,19 +869,6 @@
             <area>0,0,500,20</area>
         </imagetype>
     </progressbar>
-
-
-
-    <!-- DONE -->
-    <!-- Spinner widget that shows that something is going on -->
-    <progressbar name="base_spinner">
-        <area>0,0,30,30</area>
-        <imagetype name="spinner">
-            <area>0,0,30,30</area>
-            <filepattern low="0" high="11">images/icons/animation/busy_%1.png</filepattern>
-            <delay>100</delay>
-        </imagetype>
-    </progressbar>
     
     
     
