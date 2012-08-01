@@ -21,13 +21,13 @@
         </shape>
 
         <textarea name="header" from="base_textarea">
-            <area>90,86,450,30</area>
+            <area>90,86,450,36</area>
             <cutdown>yes</cutdown>
             <font>title</font>
             <align>left,vcenter</align>
         </textarea>
         <textarea name="update_text" from="base_textarea">
-            <area>550,86,300,30</area>
+            <area>550,86,300,36</area>
             <align>vcenter</align>
         </textarea>
         
@@ -141,6 +141,12 @@
             <area>90,630,800,30</area>
             <font>text_small</font>
         </textarea>
+
+        <imagetype name="copyrightlogo">
+            <area>900,645,80,20</area>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
     </window>
 
 
@@ -217,6 +223,12 @@
             <area>90,630,800,30</area>
             <font>text_small</font>
         </textarea>
+
+        <imagetype name="copyrightlogo">
+            <area>900,645,80,20</area>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
     </window>
 
 
@@ -338,6 +350,12 @@
             <area>90,630,800,30</area>
             <font>text_small</font>
         </textarea>
+
+        <imagetype name="copyrightlogo">
+            <area>900,645,80,20</area>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
     </window>
 
 
@@ -460,6 +478,12 @@
             <area>90,630,800,30</area>
             <font>text_small</font>
         </textarea>
+
+        <imagetype name="copyrightlogo">
+            <area>900,645,80,20</area>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
     </window>
 
 
@@ -487,6 +511,12 @@
             <area>90,630,800,30</area>
             <font>text_small</font>
         </textarea>
+
+        <imagetype name="copyrightlogo">
+            <area>900,645,80,20</area>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
     </window>
 
 
@@ -514,6 +544,12 @@
             <area>90,630,800,30</area>
             <font>text_small</font>
         </textarea>
+
+        <imagetype name="copyrightlogo">
+            <area>900,645,80,20</area>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
     </window>
 
 
@@ -540,6 +576,12 @@
             <area>90,645,800,20</area>
             <font>text_small</font>
         </textarea>
+
+        <imagetype name="copyrightlogo">
+            <area>900,645,80,20</area>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
     </window>
 
 
