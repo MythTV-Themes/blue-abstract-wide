@@ -42,9 +42,15 @@
                 <state name="inactive" from="active" />
                 <state name="selectedactive">
                     <area>0,0,650,36</area>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,100%-16,36</area>
+                    </textarea>
                 </state>
                 <state name="selectedinactive">
                     <area>0,0,650,36</area>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,100%-16,36</area>
+                    </textarea>
                 </state>
             </statetype>
         </buttonlist>
