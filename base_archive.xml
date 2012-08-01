@@ -7,11 +7,11 @@
     <group name="base_archive_archivelist_group">
 
         <shape name="topbackground" from="base_background_shape">
-            <area>0,0,960,357</area>
+            <area>0,0,960,397</area>
         </shape>
 
         <textarea name="nofiles" from="base_textarea">
-            <area>15,15,930,325</area>
+            <area>15,15,930,365</area>
             <align>allcenter</align>
             <value>No files are selected for archive</value>
         </textarea>
@@ -101,19 +101,19 @@
         </buttonlist>
 
         <shape name="button_separator" from="base_background_shape">
-            <area>1,290,958,1</area>
+            <area>1,330,958,1</area>
         </shape>
 
         <button name="addrecording_button" from="base_button_wide">
-            <position>15,305</position>
+            <position>15,345</position>
             <value>Add Recording</value>
         </button>
         <button name="addvideo_button" from="base_button_wide">
-            <position>130,305</position>
+            <position>330,345</position>
             <value>Add Video</value>
         </button>
         <button name="addfile_button" from="base_button_wide">
-            <position>645,305</position>
+            <position>645,345</position>
             <value>Add File</value>
         </button>
 
