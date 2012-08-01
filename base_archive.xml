@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "../mythuitheme.dtd">
+<mythuitheme> 
+
+    <!-- Shows the list of archive in a list with 
+         some details and two or three buttons -->
+    <group name="base_archive_archivelist_group">
+
+        <shape name="topbackground" from="base_background_shape">
+            <area>0,0,960,357</area>
+        </shape>
+
+        <textarea name="nofiles" from="base_textarea">
+            <area>15,15,930,325</area>
+            <align>allcenter</align>
+            <value>No files are selected for archive</value>
+        </textarea>
+
+        <buttonlist name="archivelist" from="base_buttonlist">
+            <area>15,15,930,306</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,930,36</area>
+
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,380,36</area>
+                        <scroll direction="horizontal"/>
+                    </textarea>
+
+                    <textarea name="date" from="base_textarea">
+                        <area>405,0,130,36</area>
+                        <scroll direction="horizontal"/>
+                        <align>right,vcenter</align>
+                    </textarea>
+
+                    <textarea name="size" from="base_textarea">
+                        <area>550,0,120,36</area>
+                        <scroll direction="horizontal"/>
+                        <align>right,vcenter</align>
+                    </textarea>
+
+                    <textarea name="profile" from="base_textarea">
+                        <area>690,0,150,36</area>
+                        <scroll direction="horizontal"/>
+                        <align>right,vcenter</align>
+                    </textarea>
+
+                    <!-- optional: cut status textarea "cutlist" -->
+                    <!-- optional: cut status textarea "subtitle" -->
+
+                    <statetype name="cutliststatus">
+                        <position>855,0</position>
+                        <state name="none">
+                            <imagetype name="statusimage" from="base_icon_inactive">
+                                <filename>images/icons/cutlist.png</filename>
+                                <area>3,3,30,30</area>
+                            </imagetype>
+                        </state>
+                        <state name="notusing">
+                            <imagetype name="statusimage">
+                                <filename>images/icons/cutlist.png</filename>
+                                <area>3,3,30,30</area>
+                                <alpha>155</alpha>
+                            </imagetype>
+                        </state>
+                        <state name="using">
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/cutlist.png</filename>
+                                <area>3,3,30,30</area>
+                            </imagetype>
+                        </state>
+                    </statetype>
+
+                    <statetype name="movestate">
+                        <position>890,0</position>
+                        <state name="no">
+                            <imagetype name="movedoff" from="base_icon_inactive">
+                                <filename>images/icons/move.png</filename>
+                                <area>3,3,30,30</area>
+                            </imagetype>
+                        </state>
+                        <state name="off">
+                            <imagetype name="movedon" from="base_icon_selected">
+                                <filename>images/icons/move.png</filename>
+                                <area>3,3,30,30</area>
+                            </imagetype>
+                        </state>
+                    </statetype>
+
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <area>0,0,930,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
+                </state>
+                <state name="selectedinactive" from="active">
+                    <area>0,0,930,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <shape name="button_separator" from="base_background_shape">
+            <area>1,290,958,1</area>
+        </shape>
+
+        <button name="addrecording_button" from="base_button_wide">
+            <position>15,305</position>
+            <value>Add Recording</value>
+        </button>
+        <button name="addvideo_button" from="base_button_wide">
+            <position>130,305</position>
+            <value>Add Video</value>
+        </button>
+        <button name="addfile_button" from="base_button_wide">
+            <position>645,305</position>
+            <value>Add File</value>
+        </button>
+
+    </group>
+
+</mythuitheme>

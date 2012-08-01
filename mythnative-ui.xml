@@ -4,7 +4,7 @@
 
     <!-- this is the screen where main mythburn screen where the user can select the
         recordings and videos that shall be burnt to disc -->
-    <window name="exportnative">
+    <window name="exportnative" include="base_archive.xml">
 
         <imagetype name="background" from="base_background" />
 
@@ -15,33 +15,13 @@
             </textarea>
         </textarea>
 
-        <!-- destination selector -->
-        <shape name="topbackground" from="base_background_shape">
-            <area>290,63,690,338</area>
-        </shape>
+        <group name="archive_archivelist_group" from="base_archive_archivelist_group">
+            <position>160,75</position>
+        </group>
 
-        <textarea name="nofiles" from="base_textarea">
-            <area>310,63,650,268</area>
-            <align>allcenter</align>
-            <value>No files are selected for archive</value>
-        </textarea>
+        
 
-        <buttonlist name="archivelist" from="base_buttonlist">
-            <area>310,83,650,223</area>
-        </buttonlist>
 
-        <shape name="archivelist_separator" from="base_background_shape">
-            <area>310,322,650,1</area>
-        </shape>
-
-        <button name="addrecording_button" from="base_button_wide">
-            <position>310,342</position>
-            <value>Add Recording</value>
-        </button>
-        <button name="addvideo_button" from="base_button_wide">
-            <position>660,342</position>
-            <value>Add Video</value>
-        </button>
 
         <!-- this is the background for the information at the bottom -->
         <shape name="bottom_background" from="base_background_shape">
