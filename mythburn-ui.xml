@@ -163,7 +163,7 @@
 
 
 
-
+    <!-- DONE -->
     <!-- this is the main mythburn screen where the user can select the
         recordings and videos that shall be burnt to disc -->
     <window name="mythburn" include="base_archive.xml">
@@ -177,61 +177,13 @@
             </textarea>
         </textarea>
 
-        <group name="archive_archivelist_group" from="base_archive_archivelist_group">
-            <position>160,75</position>
+        <group name="archivelist_group" from="base_archivelist_group">
+            <position>125,125</position>
         </group>
 
-
-
-
-        <!-- this is the background for the information at the bottom -->
-        <shape name="bottombackground" from="base_background_shape">
-            <area>25,610,1230,80</area>
-        </shape>
-
-        <progressbar name="size_bar" from="base_progressbar">
-            <position>45,630</position>
-            <layout>horizontal</layout>
-            <style>reveal</style>
-        </progressbar>
-
-        <textarea name="minsize" from="base_textarea">
-            <area>45,655,100,20</area>
-            <font>text_small</font>
-            <align>left,vcenter</align>
-            <value>0 mb</value>
-        </textarea>
-        <textarea name="currentsize" from="base_textarea">
-            <area>200,655,200,20</area>
-            <font>text_small</font>
-            <align>allcenter</align>
-            <value>xxxxx mb</value>
-        </textarea>
-        <textarea name="maxsize" from="base_textarea">
-            <area>445,655,100,20</area>
-            <font>text_small</font>
-            <align>right,vcenter</align>
-            <value>xxxxx mb</value>
-        </textarea>
-        <textarea name="currentsize_error" from="base_textarea">
-            <area>250,655,100,20</area>
-            <font>text_small</font>
-            <align>allcenter</align>
-            <value>xxxxx mb</value>
-        </textarea>
-
-        <button name="cancel_button" from="base_button">
-            <position>745,630</position>
-            <value>Cancel</value>
-        </button>
-        <button name="prev_button" from="base_button">
-            <position>915,630</position>
-            <value>Back</value>
-        </button>
-        <button name="next_button" from="base_button">
-            <position>1085,630</position>
-            <value>Finish</value>
-        </button>
+        <group name="progress_status_group" from="base_progress_status_group">
+            <position>125,555</position>
+        </group>
 
     </window>
 
