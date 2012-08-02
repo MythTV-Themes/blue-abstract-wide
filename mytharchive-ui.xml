@@ -18,75 +18,75 @@
         </textarea>
 
         <shape name="selectdestination_background" from="base_background_shape">
-            <area>360,185,570,347</area>
+            <area>355,185,570,347</area>
         </shape>
 
         <buttonlist name="destination_selector" from="base_selector">
-            <position>375,200</position>
+            <position>370,200</position>
         </buttonlist>
         <textarea name="destination_text" from="base_textarea">
-            <area>610,200,315,36</area>
+            <area>605,200,315,36</area>
         </textarea>
 
         <textedit name="filename_edit" from="base_textedit">
-            <position>375,240</position>
+            <position>370,240</position>
         </textedit>
         <button name="find_button" from="base_button">
-            <position>765,240</position>
+            <position>760,240</position>
             <value>Find</value>
         </button>
 
         <textarea name="freespace_label" from="base_textarea">
-            <area>375,280,160,36</area>
+            <area>370,280,160,36</area>
             <align>right,vcenter</align>
             <value>Free Space:</value>
         </textarea>
         <textarea name="freespace_text" from="base_textarea">
-            <area>545,280,200,36</area>
+            <area>540,280,200,36</area>
             <value>0.00 GB</value>
         </textarea>
 
         <shape name="selection_separator" from="base_background_shape">
-            <area>361,320,568,1</area>
+            <area>356,320,568,1</area>
         </shape>
 
         <checkbox name="makeisoimage_check" from="base_checkbox">
-            <position>375,335</position>
+            <position>370,335</position>
         </checkbox>
         <checkbox name="burntodvdr_check" from="base_checkbox">
-            <position>375,375</position>
+            <position>370,375</position>
         </checkbox>
         <checkbox name="erasedvdrw_check" from="base_checkbox">
-            <position>375,415</position>
+            <position>370,415</position>
         </checkbox>
 
         <textarea name="makeisoimage_text" from="base_textarea">
-            <area>425,335,480,36</area>
+            <area>420,335,480,36</area>
             <value>Make ISO Image</value>
         </textarea>
         <textarea name="burntodvdr_text" from="base_textarea">
-            <area>425,375,480,36</area>
+            <area>420,375,480,36</area>
             <value>Burn to DVD</value>
         </textarea>
         <textarea name="erasedvdrw_text" from="base_textarea">
-            <area>425,415,480,36</area>
+            <area>420,415,480,36</area>
             <value>Force Overwrite of DVD-RW Media</value>
         </textarea>
 
         <shape name="button_separator" from="base_background_shape">
-            <area>361,465,568,1</area>
+            <area>356,465,568,1</area>
         </shape>
 
         <button name="cancel_button" from="base_button">
-            <position>375,480</position>
+            <position>400,480</position>
             <value>Cancel</value>
         </button>
         <button name="prev_button" from="base_button">
-            <position>570,480</position>
+            <position>565,480</position>
             <value>Previous</value>
         </button>
         <button name="next_button" from="base_button">
-            <position>765,480</position>
+            <position>730,480</position>
             <value>Next</value>
         </button>
 
