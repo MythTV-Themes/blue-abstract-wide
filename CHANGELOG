@@ -1,4 +1,44 @@
 ===========================================================
+01.08.2012 - Version 1.8
+===========================================================
+
+Reworked the entire theme and all available screens. These are the most important changes:
+- Identical spacing and alignment of the shapes and widgets throughout the theme
+- The button images were replaced by shapes
+- The image folder structure has been improved (more reuse and better structure)
+- Widgets that are used multiple times were outsources into the base files
+- All widgets have rounded corners
+- The transparency of the images is now centrally defined in the base.xml file
+- Removed a lot of unused definitions
+
+(Changelog taken from the internal bugtracker and additional information)
+
+Feature #306: Add a button to reset the database on the music settings page
+Feature #305: Add a button to show the file browser in the music settings
+Feature #299: Improve mythmusic gallery screen
+Feature #293: Change some strings in the audiowizard window
+Feature #291: Remove music icons in the playlist window
+Feature #286: Add new music nodetype statetype to the playlist tree
+Feature #264: Add dependants to some widgets
+Feature #208: Add a new popup for inputting time and/or date values
+Feature #207: Add a standby mode screen
+Feature #206: Remove the timepopup screen
+Feature #200: Remove unused mythmusic screen definitions
+Feature #199: Port the mythmusic settings pages to MythUI 
+Feature #190: Add remaining new mythmusic screens
+Feature #58: Add icons to OSD browser
+Feature #57: Better icons in volume control dialog
+Feature #40: Better processing icons in recording screen.
+Feature #39: Improve icons in busy dialog
+Feature #10: Improve video icon for mythgallery plugin
+
+Bug #292: Program guide is not aligned
+Bug #204: Fix alignment issues when using relative positions
+Bug #141: Fix xml validation errors
+
+
+
+===========================================================
 13.01.2012 - Version 1.7
 ===========================================================
 (Changelog taken from the internal bugtracker)
