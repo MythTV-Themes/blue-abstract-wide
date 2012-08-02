@@ -30,7 +30,7 @@
 
 
 
-
+    <!-- DONE -->
     <!-- this is the screen where the user can select files from the file
         system to add these to the archive -->
     <window name="archivefile_selector">
@@ -44,35 +44,66 @@
             </textarea>
         </textarea>
 
-        <!-- destination selector -->
-        <shape name="topbackground" from="base_background_shape">
-            <area>290,70,690,610</area>
+        <shape name="archivefile_selector_background" from="base_background_shape">
+            <area>300,100,680,552</area>
         </shape>
 
         <textedit name="location_edit" from="base_textedit">
-            <position>310,90</position>
+            <position>315,115</position>
         </textedit>
+
+        <!-- the buttons to go back up directory -->
         <button name="back_button" from="base_button">
-            <position>800,90</position>
-            <imagetype name="folderimage">
-                <area>20,3,30,30</area>
-                <filename>images/icons/arrow_left.png</filename>
-            </imagetype>
+            <area>840,115,54,36</area>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_icon_selected">
+                        <filename>images/icons/arrow_left.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_icon_selected">
+                        <filename>images/icons/arrow_left.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="disabled" from="active"/>
+                <state name="pushed" from="selected"/>
+            </statetype>
         </button>
+
+        <!-- the button to go to the users home directory -->
         <button name="home_button" from="base_button">
-            <position>890,90</position>
-            <imagetype name="folderimage">
-                <area>20,3,30,30</area>
-                <filename>images/icons/folder_up_selected.png</filename>
-            </imagetype>
+            <area>910,115,54,36</area>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_icon_selected">
+                        <filename>images/icons/home.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_image_selected">
+                        <filename>images/icons/home.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="disabled" from="active"/>
+                <state name="pushed" from="selected"/>
+            </statetype>
         </button>
 
         <shape name="search_separator" from="base_background_shape">
-            <area>310,150,650,1</area>
+            <area>301,165,678,1</area>
         </shape>
 
         <buttonlist name="filelist" from="base_buttonlist">
-            <area>310,170,650,275</area>
+            <area>315,180,650,275</area>
             <statetype name="buttonitem">
                 <state name="active">
                     <area>0,0,650,36</area>
@@ -82,13 +113,15 @@
                     </imagetype>
                     <textarea name="buttontext" from="base_textarea">
                         <area>50,0,100%-58,36</area>
+                        <scroll direction="horizontal"/>
                     </textarea>
                 </state>
+                <state name="inactive" from="active" />
                 <state name="selectedactive" from="active">
                     <area>0,0,650,36</area>
                     <shape name="background" from="base_button_shape_selectedactive" />
                     <imagetype name="icon">
-                        <area>7,3,30,30</area>
+                        <area>8,3,30,30</area>
                         <filename>images/icons/folder_selected.png</filename>
                     </imagetype>
                 </state>
@@ -99,48 +132,48 @@
             </statetype>
         </buttonlist>
 
-        <shape name="info_separator" from="base_background_shape">
-            <area>310,460,650,1</area>
+        <shape name="filelist_separator" from="base_background_shape">
+            <area>301,470,678,1</area>
         </shape>
 
         <textarea name="title_label" from="base_textarea">
-            <area>310,470,160,40</area>
+            <area>315,480,150,36</area>
             <align>right,vcenter</align>
             <value>Title:</value>
         </textarea>
         <textarea name="subtitle_label" from="title_label">
-            <area>310,510,160,40</area>
+            <position>315,510</position>
             <value>Subtitle:</value>
         </textarea>
         <textarea name="starttime_label" from="title_label">
-            <area>310,550,160,40</area>
+            <position>315,540</position>
             <value>Start Time:</value>
         </textarea>
 
         <textarea name="title_text" from="base_textarea">
-            <area>490,470,470,40</area>
+            <area>475,480,470,36</area>
         </textarea>
-        <textarea name="subtitle_text" from="base_textarea">
-            <area>490,510,470,40</area>
+        <textarea name="subtitle_text" from="title_text">
+            <position>475,510</position>
         </textarea>
-        <textarea name="starttime_text" from="base_textarea">
-            <area>490,550,470,40</area>
+        <textarea name="starttime_text" from="title_text">
+            <position>475,540</position>
         </textarea>
 
         <shape name="button_separator" from="base_background_shape">
-            <area>310,600,650,1</area>
+            <area>301,585,678,1</area>
         </shape>
 
         <button name="cancel_button" from="base_button">
-            <position>310,620</position>
+            <position>400,600</position>
             <value>Cancel</value>
         </button>
         <button name="prev_button" from="base_button">
-            <position>640,620</position>
+            <position>565,600</position>
             <value>Previous</value>
         </button>
         <button name="next_button" from="base_button">
-            <position>810,620</position>
+            <position>730,600</position>
             <value>Next</value>
         </button>
 
