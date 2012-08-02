@@ -15,6 +15,7 @@
             <textarea name="text">
                 <value>Select Destination</value>
             </textarea>
+
         </textarea>
 
         <shape name="selectdestination_background" from="base_background_shape">
@@ -278,7 +279,7 @@
         </button>
 
         <shape name="search_separator" from="base_background_shape">
-            <area>315,165,650,1</area>
+            <area>301,165,678,1</area>
         </shape>
 
         <buttonlist name="filelist" from="base_buttonlist">
@@ -312,7 +313,7 @@
         </buttonlist>
 
         <shape name="button_separator" from="base_background_shape">
-            <area>310,585,650,1</area>
+            <area>301,585,678,1</area>
         </shape>
 
         <button name="cancel_button" from="base_button">
@@ -346,7 +347,7 @@
 
         <!-- The large cover image -->
         <shape name="coverart_background" from="base_background_shape">
-            <area>145,170,1000,395</area>
+            <area>145,170,985,395</area>
         </shape>
 
         <imagetype name="coverimage_background_image">
@@ -387,7 +388,7 @@
         </textarea>
 
         <shape name="top_separator" from="base_background_shape">
-            <area>426,250,378,1</area>
+            <area>426,250,379,1</area>
         </shape>
 
         <textarea name="videoplot" from="base_textarea">
@@ -408,15 +409,11 @@
         </shape>
 
         <buttonlist name="category_selector" from="base_selector">
-            <position>830,185</position>
+            <position>820,185</position>
         </buttonlist>
 
-        <shape name="category_separator" from="base_background_shape">
-            <area>806,225,308,1</area>
-        </shape>
-
         <buttonlist name="videolist" from="base_buttonlist">
-            <area>830,240,295,306</area>
+            <area>820,235,295,314</area>
             <statetype name="buttonitem">
                 <state name="active">
                     <area>0,0,295,36</area>

@@ -32,20 +32,19 @@
         </buttonlist>
 
         <shape name="title_separator" from="base_background_shape">
-            <area>336,250,598,1</area>
+            <area>336,250,628,1</area>
         </shape>
 
         <textarea name="themedescription" from="base_textarea">
-            <area>350,260,600,60</area>
-            <value>description goes here.</value>
+            <area>350,260,600,70</area>
             <multiline>yes</multiline>
             <cutdown>no</cutdown>
             <scroll direction="vertical" />
-            <align>left,top</align>
+            <align>left,vcenter</align>
         </textarea>
 
         <shape name="button_separator" from="base_background_shape">
-            <area>336,340,598,1</area>
+            <area>336,335,628,1</area>
         </shape>
 
         <button name="cancel_button" from="base_button">
