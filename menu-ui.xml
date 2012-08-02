@@ -237,7 +237,7 @@
                 <!-- Menu entry has been selected and is active -->
                 <state name="selectedactive" from="active">
                     <imagetype name="background">
-                        <filename>images/widgets/menu_active_fade.png</filename>
+                        <filename>images/media/menu.png</filename>
                         <alphapulse min="120" max="255" change="2"/>
                         <alpha>200</alpha>
                     </imagetype>
