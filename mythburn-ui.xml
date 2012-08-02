@@ -3,7 +3,6 @@
 <mythuitheme>
 
     <!-- DONE -->
-    <!-- TODO finetuning of the alignment -->
     <!-- this is the theme selector screen where the user can choose from
         a list of available themes. The DVD menu will then look like it -->
     <window name="themeselector">
