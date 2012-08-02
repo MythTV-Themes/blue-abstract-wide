@@ -10,12 +10,12 @@
 
         <!-- the background image of the popup dialog box -->
         <shape name="popup_background" from="base_background_shape_dark">
-            <area>7,10,689,270</area>
+            <area>5,5,585,225</area>
         </shape>
 
         <!-- top row -->
         <button name="key_1">
-            <area>26,29,36,36</area>
+            <area>20,20,36,36</area>
             <statetype name="buttonstate">
                 <state name="active">
                     <area>0,0,36,36</area>
@@ -41,163 +41,215 @@
         </button>
 
         <button name="key_2" from="key_1">
-            <position>73,29</position>
+            <position>60,20</position>
         </button>
         <button name="key_3" from="key_1">
-            <position>120,29</position>
+            <position>100,20</position>
         </button>
         <button name="key_4" from="key_1">
-            <position>167,29</position>
+            <position>140,20</position>
         </button>
         <button name="key_5" from="key_1">
-            <position>214,29</position>
+            <position>180,20</position>
         </button>
         <button name="key_6" from="key_1">
-            <position>261,29</position>
+            <position>220,20</position>
         </button>
         <button name="key_7" from="key_1">
-            <position>308,29</position>
+            <position>260,20</position>
         </button>
         <button name="key_8" from="key_1">
-            <position>355,29</position>
+            <position>300,20</position>
         </button>
         <button name="key_9" from="key_1">
-            <position>402,29</position>
+            <position>340,20</position>
         </button>
         <button name="key_0" from="key_1">
-            <position>449,29</position>
+            <position>380,20</position>
         </button>
         <button name="key_-" from="key_1">
-            <position>496,29</position>
+            <position>420,20</position>
         </button>
         <button name="key_=" from="key_1">
-            <position>543,29</position>
+            <position>460,20</position>
         </button>
         <button name="key_#" from="key_1">
-            <position>590,29</position>
+            <position>500,20</position>
         </button>
         <button name="key_`" from="key_1">
-            <position>637,29</position>
+            <position>540,20</position>
         </button>
 
         <!-- row 2 -->
         <button name="key_q" from="key_1">
-            <position>41,77</position>
+            <position>30,60</position>
         </button>
         <button name="key_w" from="key_1">
-            <position>88,77</position>
+            <position>70,60</position>
         </button>
         <button name="key_e" from="key_1">
-            <position>135,77</position>
+            <position>110,60</position>
         </button>
         <button name="key_r" from="key_1">
-            <position>182,77</position>
+            <position>150,60</position>
         </button>
         <button name="key_t" from="key_1">
-            <position>229,77</position>
+            <position>190,60</position>
         </button>
         <button name="key_y" from="key_1">
-            <position>276,77</position>
+            <position>230,60</position>
         </button>
         <button name="key_u" from="key_1">
-            <position>323,77</position>
+            <position>270,60</position>
         </button>
         <button name="key_i" from="key_1">
-            <position>370,77</position>
+            <position>310,60</position>
         </button>
         <button name="key_o" from="key_1">
-            <position>417,77</position>
+            <position>350,60</position>
         </button>
         <button name="key_p" from="key_1">
-            <position>464,77</position>
+            <position>390,60</position>
         </button>
         <button name="key_[" from="key_1">
-            <position>511,77</position>
+            <position>430,60</position>
         </button>
         <button name="key_]" from="key_1">
-            <position>558,77</position>
+            <position>470,60</position>
+        </button>
+
+        <button name="key_back">
+            <position>510,60</position>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <area>0,0,65,36</area>
+                    <shape name="background" from="base_button_shape_active" />
+                    <imagetype name="arrow" from="base_image_active">
+                        <filename>images/icons/arrow_left.png</filename>
+                        <area>19,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="selected" from="active">
+                    <area>0,0,65,36</area>
+                    <shape name="background" from="base_button_shape_selected" />
+                </state>
+                <state name="disabled" from="active">
+                    <area>0,0,65,36</area>
+                    <shape name="background" from="base_button_shape_disabled" />
+                </state>
+                <state name="pushed" from="active">
+                    <area>0,0,65,36</area>
+                    <shape name="background" from="base_button_shape_pushed" />
+                </state>
+            </statetype>
         </button>
 
         <!-- row 3 -->
         <button name="key_a" from="key_1">
-            <position>56,125</position>
+            <position>40,100</position>
         </button>
         <button name="key_s" from="key_1">
-            <position>103,125</position>
+            <position>80,100</position>
         </button>
         <button name="key_d" from="key_1">
-            <position>150,125</position>
+            <position>120,100</position>
         </button>
         <button name="key_f" from="key_1">
-            <position>197,125</position>
+            <position>160,100</position>
         </button>
         <button name="key_g" from="key_1">
-            <position>244,125</position>
+            <position>200,100</position>
         </button>
         <button name="key_h" from="key_1">
-            <position>291,125</position>
+            <position>240,100</position>
         </button>
         <button name="key_j" from="key_1">
-            <position>338,125</position>
+            <position>280,100</position>
         </button>
         <button name="key_k" from="key_1">
-            <position>385,125</position>
+            <position>320,100</position>
         </button>
         <button name="key_l" from="key_1">
-            <position>432,125</position>
+            <position>360,100</position>
         </button>
         <button name="key_;" from="key_1">
-            <position>479,125</position>
+            <position>400,100</position>
         </button>
         <button name="key_'" from="key_1">
-            <position>526,125</position>
+            <position>440,100</position>
+        </button>
+
+        <button name="key_done">
+            <position>480,100</position>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <area>0,0,95,36</area>
+                    <shape name="background" from="base_button_shape_active" />
+                    <imagetype name="arrow" from="base_image_active">
+                        <filename>images/icons/enter.png</filename>
+                        <area>48,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="selected" from="active">
+                    <area>0,0,95,36</area>
+                    <shape name="background" from="base_button_shape_selected" />
+                </state>
+                <state name="disabled" from="active">            
+                    <area>0,0,95,36</area>
+                    <shape name="background" from="base_button_shape_disabled" />
+                </state>
+                <state name="pushed" from="active">
+                    <area>0,0,95,36</area>
+                    <shape name="background" from="base_button_shape_pushed" />
+                </state>
+            </statetype>
         </button>
 
         <!-- row 4 -->
         <button name="key_\" from="key_1">
-            <position>26,173</position>
+            <position>20,140</position>
         </button>
         <button name="key_z" from="key_1">
-            <position>73,173</position>
+            <position>60,140</position>
         </button>
         <button name="key_x" from="key_1">
-            <position>120,173</position>
+            <position>100,140</position>
         </button>
         <button name="key_c" from="key_1">
-            <position>167,173</position>
+            <position>140,140</position>
         </button>
         <button name="key_v" from="key_1">
-            <position>214,173</position>
+            <position>180,140</position>
         </button>
         <button name="key_b" from="key_1">
-            <position>261,173</position>
+            <position>220,140</position>
         </button>
         <button name="key_n" from="key_1">
-            <position>308,173</position>
+            <position>260,140</position>
         </button>
         <button name="key_m" from="key_1">
-            <position>355,173</position>
+            <position>300,140</position>
         </button>
         <button name="key_," from="key_1">
-            <position>402,173</position>
+            <position>340,140</position>
         </button>
         <button name="key_." from="key_1">
-            <position>449,173</position>
+            <position>380,140</position>
         </button>
         <button name="key_/" from="key_1">
-            <position>496,173</position>
+            <position>420,140</position>
         </button>
 
         <!-- special keys -->
         <button name="key_lshift">
-            <position>28,221</position>
+            <position>20,180</position>
             <statetype name="buttonstate">
                 <state name="active">
                     <area>0,0,50,36</area>
                     <shape name="background" from="base_button_shape_active" />
                     <imagetype name="arrow" from="base_image_active">
                         <filename>images/icons/arrow_up.png</filename>
-                        <area>13,8,20,20</area>
+                        <area>10,5,26,26</area>
                     </imagetype>
                 </state>
                 <state name="selected" from="active">
@@ -215,69 +267,68 @@
             </statetype>
         </button>
 
-
         <button name="key_lock">
-            <position>85,221</position>
+            <position>74,180</position>
             <statetype name="buttonstate">
                 <state name="active">
-                    <area>0,0,62,36</area>
+                    <area>0,0,60,36</area>
                     <shape name="background" from="base_button_shape_active" />
                     <textarea name="text" from="base_textarea">
-                        <area>0,0,62,36</area>
+                        <area>0,0,60,36</area>
                         <align>allcenter</align>
                     </textarea>
                 </state>
                 <state name="selected" from="active">
-                    <area>0,0,62,36</area>
+                    <area>0,0,60,36</area>
                     <shape name="background" from="base_button_shape_selected" />
                 </state>
                 <state name="disabled" from="active">
-                    <area>0,0,62,36</area>
+                    <area>0,0,60,36</area>
                     <shape name="background" from="base_button_shape_disabled" />
                 </state>
                 <state name="pushed" from="active">
-                    <area>0,0,62,36</area>
+                    <area>0,0,60,36</area>
                     <shape name="background" from="base_button_shape_pushed" />
                 </state>
             </statetype>
         </button>
 
         <button name="key_comp" from="key_lock">
-            <position>543,173</position>
+            <position>460,140</position>
         </button>
         <button name="key_del" from="key_lock">
-            <position>612,173</position>
+            <position>526,140</position>
         </button>
         
         <!-- row 5 -->
         <button name="key_space">
-            <position>152,221</position>
+            <position>140,180</position>
             <statetype name="buttonstate">
                 <state name="active">
-                    <area>0,0,300,36</area>
+                    <area>0,0,200,36</area>
                     <shape name="background" from="base_button_shape_active" />
                 </state>
                 <state name="selected">
-                    <area>0,0,300,36</area>
+                    <area>0,0,200,36</area>
                     <shape name="background" from="base_button_shape_selected" />
                 </state>
                 <state name="disabled">
-                    <area>0,0,300,36</area>
+                    <area>0,0,200,36</area>
                     <shape name="background" from="base_button_shape_disabled" />
                 </state>
                 <state name="pushed">
-                    <area>0,0,300,36</area>
+                    <area>0,0,200,36</area>
                     <shape name="background" from="base_button_shape_pushed" />
                 </state>
             </statetype>
         </button>
 
         <button name="key_alt" from="key_lock">
-            <position>459,221</position>
+            <position>380,180</position>
         </button>
 
         <button name="key_moveleft">
-            <position>528,221</position>
+            <position>400,180</position>
             <statetype name="buttonstate">
                 <state name="active">
                     <area>0,0,36,36</area>
@@ -304,7 +355,7 @@
 
 
         <button name="key_moveright">
-            <position>575,221</position>
+            <position>440,180</position>
             <statetype name="buttonstate">
                 <state name="active">
                     <area>0,0,36,36</area>
@@ -331,60 +382,10 @@
 
 
         <button name="key_rshift" from="key_lshift">
-            <position>623,221</position>
+            <position>480,180</position>
         </button>
 
-        <button name="key_back">
-            <position>605,77</position>
-            <statetype name="buttonstate">
-                <state name="active">
-                    <area>0,0,70,36</area>
-                    <shape name="background" from="base_button_shape_active" />
-                    <imagetype name="arrow" from="base_image_active">
-                        <filename>images/icons/arrow_left.png</filename>
-                        <area>19,3,30,30</area>
-                    </imagetype>
-                </state>
-                <state name="selected" from="active">
-                    <area>0,0,70,36</area>
-                    <shape name="background" from="base_button_shape_selected" />
-                </state>
-                <state name="disabled" from="active">
-                    <area>0,0,70,36</area>
-                    <shape name="background" from="base_button_shape_disabled" />
-                </state>
-                <state name="pushed" from="active">
-                    <area>0,0,70,36</area>
-                    <shape name="background" from="base_button_shape_pushed" />
-                </state>
-            </statetype>
-        </button>
 
-        <button name="key_done">
-            <position>575,125</position>
-            <statetype name="buttonstate">
-                <state name="active">
-                    <area>0,0,100,36</area>
-                    <shape name="background" from="base_button_shape_active" />
-                    <imagetype name="arrow" from="base_image_active">
-                        <filename>images/icons/enter.png</filename>
-                        <area>48,3,30,30</area>
-                    </imagetype>
-                </state>
-                <state name="selected" from="active">
-                    <area>0,0,100,36</area>
-                    <shape name="background" from="base_button_shape_selected" />
-                </state>
-                <state name="disabled" from="active">            
-                    <area>0,0,100,36</area>
-                    <shape name="background" from="base_button_shape_disabled" />
-                </state>
-                <state name="pushed" from="active">
-                    <area>0,0,100,36</area>
-                    <shape name="background" from="base_button_shape_pushed" />
-                </state>
-            </statetype>
-        </button>
 
     </window>
 
