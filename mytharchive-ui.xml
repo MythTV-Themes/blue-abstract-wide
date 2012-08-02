@@ -15,7 +15,6 @@
             <textarea name="text">
                 <value>Select Destination</value>
             </textarea>
-
         </textarea>
 
         <shape name="selectdestination_background" from="base_background_shape">
@@ -446,6 +445,7 @@
 
 
 
+    <!-- DONE -->
     <!-- this is the screen shows the logs of the dvd creation -->
     <window name="logviewer">
 
@@ -458,41 +458,62 @@
             </textarea>
         </textarea>
 
-        <shape name="topbackground" from="base_background_shape">
-            <area>25,70,1230,437</area>
+        <shape name="logviewer_background" from="base_background_shape">
+            <area>100,145,1080,452</area>
         </shape>
+
         <buttonlist name="loglist" from="base_buttonlist">
-            <area>45,90,1190,404</area>
+            <area>115,160,1050,355</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,1050,36</area>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,100%-16,36</area>
+                        <scroll direction="horizontal"/>
+                    </textarea>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive">
+                    <area>0,0,1050,36</area>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,100%-16,36</area>
+                    </textarea>
+                </state>
+                <state name="selectedinactive">
+                    <area>0,0,1050,36</area>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,100%-16,36</area>
+                    </textarea>
+                </state>
+            </statetype>
         </buttonlist>
 
-
-        <shape name="bottombackground" from="base_background_shape">
-            <area>25,532,1230,160</area>
-        </shape>
-
-        <textarea name="logitem_text" from="base_textarea">
-            <area>45,553,1190,120</area>
-            <align>left,top</align>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-        </textarea>
-
         <shape name="button_separator" from="base_background_shape">
-            <area>45,615,1190,1</area>
+            <area>101,530,1078,1</area>
         </shape>
 
         <button name="cancel_button" from="base_button">
-            <position>395,635</position>
+            <position>400,545</position>
             <value>Cancel</value>
         </button>
         <button name="update_button" from="base_button">
-            <position>565,635</position>
+            <position>565,545</position>
             <value>Update</value>
         </button>
         <button name="exit_button" from="base_button">
-            <position>735,635</position>
+            <position>730,545</position>
             <value>Exit</value>
         </button>
+
+        <shape name="logitem_text_background_bottom" from="base_background_shape">
+            <area>-5,615,1290,90</area>
+        </shape>
+        <textarea name="logitem_text" from="base_textarea">
+            <area>120,615,1040,90</area>
+            <cutdown>yes</cutdown>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+        </textarea>
 
     </window>
 
