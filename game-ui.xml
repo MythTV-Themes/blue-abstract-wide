@@ -164,12 +164,12 @@
             available, otherwise only the background image is visible -->
         <imagetype name="coverart">
             <area>52,222,373,280</area>
-            <mask>images/shared/game/game_cover_details_mask.png</mask>
+            <mask>images/media/game_cover_mask.png</mask>
         </imagetype>
         
         <imagetype name="coverart_background_image_border">
             <area>52,222,373,280</area>
-            <filename>images/shared/game/game_cover_border.png</filename>
+            <filename>images/media/game_cover_border.png</filename>
         </imagetype>
         
         <shape name="coverart_separator" from="base_background_shape">
