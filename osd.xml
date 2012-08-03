@@ -990,63 +990,56 @@
             <template>%DATE%, %TIME%</template>
             <align>left,vcenter</align>
         </clock>
-        <textarea name="text" from="base_textarea">
-            <area>215,0,300,30</area>
-            <align>left,vcenter</align>
-            <multiline>no</multiline>
-            <cutdown>no</cutdown>
-            <font>text</font>
-            <scroll direction="horizontal" />
-            <value>OSD Program Editor</value>
-        </textarea>
 
         <!-- the background image of the popup dialog box -->
         <shape name="background">
-            <area>220,75,840,140</area>
+            <area>220,100,830,117</area>
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
 
-        <!-- shows the title and the plot of the selected video -->
         <textarea name="title">
-            <area>240,90,380,30</area>
+            <area>235,108,380,36</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
-            <cutdown>yes</cutdown>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal" />
             <font>text</font>
         </textarea>
-        
+
         <!-- shows the current position (as time) -->
         <textarea name="timedisplay" from="title">
-            <area>620,90,300,30</area>
+            <area>640,108,200,36</area>
             <align>right,vcenter</align>
         </textarea>
         
         <!-- displays the frame of the shown image -->
         <textarea name="framedisplay" from="title">
-            <area>940,90,100,30</area>
+            <area>830,108,200,36</area>
             <align>right,vcenter</align>
+            <template>Frames: %1</template>
         </textarea>
         
         <!-- shows how far pressing left/right 
              will jump within the recording -->
         <textarea name="seekamount" from="title">
-            <area>840,170,200,30</area>
+            <area>830,175,200,36</area>
             <align>right,vcenter</align>
         </textarea>
         
         <!-- description of the current action, like cutting... -->
         <textarea name="cutindicator" from="title">
-            <area>540,170,200,30</area>
+            <area>540,175,200,36</area>
             <align>allcenter</align>
         </textarea>
-        
-        
+
         <!-- progressbar that shows the cutting points -->
         <editbar name="editbar">
-            <area>240,135,800,20</area>
+            <area>235,150,800,20</area>
+            <layout>horizontal</layout>
+            <style>reveal</style>
 
             <shape name="background">
                 <area>0,0,800,20</area>
