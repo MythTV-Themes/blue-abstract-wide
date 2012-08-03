@@ -524,7 +524,7 @@
     <!-- DONE -->
     <window name="Animated Map">
 
-        <shape name="animatedimage_shape" from="base_background_shape">
+        <shape name="animatedmap_background" from="base_background_shape">
             <area>290,80,697,575</area>
         </shape>
 
