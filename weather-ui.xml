@@ -562,20 +562,31 @@
 
 
 
-
+    <!-- DONE -->
     <window name="Severe Weather Alerts">
 
+        <shape name="sw_alerts_background" from="base_background_shape">
+            <area>290,80,697,575</area>
+        </shape>
+
         <textarea name="swlocation" from="base_textarea">
-            <area>800,86,390,30</area>
-            <align>right,vcenter</align>
-            <cutdown>yes</cutdown>
+            <area>305,85,410,36</area>
         </textarea>
 
+        <textarea name="updatetime" from="base_textarea">
+            <area>730,85,240,36</area>
+            <align>right,vcenter</align>
+            <scroll direction="horizontal"/>
+        </textarea>
+
+        <shape name="title_separator" from="base_background_shape">
+            <area>291,125,695,1</area>
+        </shape>
+
         <textarea name="alerts" from="base_textarea">
-            <area>90,150,1100,450</area>
-            <multiline>yes</multiline>
+            <area>305,140,667,500</area>
             <align>left,top</align>
-            <value>Weather Alerts</value>
+            <scroll direction="vertical" />
         </textarea>
 
         <!-- These two are shown at the bottom -->
