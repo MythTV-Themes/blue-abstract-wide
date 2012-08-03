@@ -652,12 +652,12 @@
 
 
 
+    <!-- DONE -->
     <!-- shows the icon and the details/description 
          of the current recording/movie/tv -->
     <window name="browse_info">
         <area>0,0,1280,720</area>
         
-        <!-- The clock that is shown at the top right of each screen -->
         <!-- The information and the clock that is 
              shown at the top left of each screen -->       
         <imagetype name="header_background">
@@ -670,19 +670,10 @@
             <template>%DATE%, %TIME%</template>
             <align>left,vcenter</align>
         </clock>
-        <textarea name="text" from="base_textarea">
-            <area>215,0,300,30</area>
-            <align>left,vcenter</align>
-            <multiline>no</multiline>
-            <cutdown>no</cutdown>
-            <font>text</font>
-            <scroll direction="horizontal" />
-            <value>General Information</value>
-        </textarea>
 
         <!-- the background image of the popup dialog box -->
-        <shape name="background">
-            <area>100,380,1080,295</area>
+        <shape name="program_info_background">
+            <area>105,445,1070,245</area>
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
@@ -691,77 +682,88 @@
 
         <!-- shows the title and the plot of the selected video -->
         <textarea name="title">
-            <area>120,400,820,30</area>
+            <area>120,460,820,36</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
-            <cutdown>yes</cutdown>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal"/>
             <font>title</font>
         </textarea>
 
         <textarea name="starttime" from="title">
-            <area>120,440,400,20</area>
-            <align>left,vcenter</align>
+            <area>120,495,400,36</area>
+            <font>text</font>
             <template>%STARTTIME%-%ENDTIME% : %LENMINS%</template>
         </textarea>
 
-        <!-- separates the title and channel and the status icons from the description -->
+        <!-- separates the title and channel and the 
+             status icons from the description -->
         <shape name="program_info_separator">
-            <area>120,475,1040,1</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="130" />
+            <area>106,535,1068,1</area>
+            <type>box</type>
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>10</cornerradius>
         </shape>
 
-        <!-- show the channel and the recorded time of the recording -->
-        <shape name="channelicon_background">
-            <area>120,495,131,131</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="130" />
-            <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
-        </shape>
-        <imagetype name="iconpath">
-            <area>122,497,126,126</area>
-            <preserveaspect>true</preserveaspect>
+        <!-- show the channel or the channel name if 
+             no channel icon is available -->
+        <imagetype name="iconpath_background_image">
+            <area>120,550,133,100</area>
+            <mask>images/media/channel_item_nfmask.png</mask>
+            <filename>images/media/channel_bg.png</filename>
         </imagetype>
-
-        <!-- channel number and name -->
-        <textarea name="channum" from="title">
-            <area>100,635,40,30</area>
-            <align>right,vcenter</align>
+        
+        <textarea name="callsign">
+            <area>130,560,113,80</area>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+            <cutdown>no</cutdown>
+            <scroll direction="vertical"/>
+            <font>text</font>
         </textarea>
         
-        <textarea name="callsign" from="title">
-            <area>150,635,120,30</area>
+        <imagetype name="iconpath">
+            <area>120,550,133,100</area>
+            <mask>images/media/channel_nfmask.png</mask>
+        </imagetype>
+        <imagetype name="iconpath_border">
+            <area>120,550,133,100</area>
+            <filename>images/media/channel_nfborder.png</filename>
+        </imagetype>
+
+        <textarea name="channum">
+            <area>120,650,133,36</area>
             <align>left,vcenter</align>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal"/>
+            <font>text</font>
+            <template>Channel: %1</template>
         </textarea>
 
         <shape name="description_separator">
-            <area>270,476,1,180</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="130" />
+            <area>265,536,1,153</area>
+            <type>box</type>
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>10</cornerradius>
         </shape>
 
         <!-- show the plot of the recording -->
-        <textarea name="description" from="title">
-            <area>290,490,870,140</area>
+        <textarea name="description">
+            <area>279,550,870,125</area>
             <multiline>yes</multiline>
             <cutdown>no</cutdown>
             <scroll direction="vertical"/>
             <align>left,top</align>
+            <font>text</font>
             <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
         </textarea>       
        
         <progressbar name="elapsedpercent">
-            <area>290,635,800,20</area>
+            <area>560,500,600,20</area>
             <layout>horizontal</layout>
             <style>reveal</style>
             
             <shape name="progressimage_background">
-                <area>0,0,800,20</area>
+                <area>0,0,600,20</area>
                 <type>roundbox</type>
                 <fill color="#535353" alpha="120" />
                 <line color="#535353" alpha="100" width="1" />
@@ -769,7 +771,7 @@
             </shape>
 
             <imagetype name="progressimage">
-                <area>0,0,800,20</area>
+                <area>0,0,600,20</area>
                 <filename>images/icons/progressbar.png</filename>
                 <alpha>200</alpha>
             </imagetype>
