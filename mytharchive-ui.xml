@@ -506,7 +506,7 @@
         </button>
 
         <shape name="logitem_text_background_bottom" from="base_background_shape">
-            <area>-5,615,1290,90</area>
+            <area>-15,615,1310,90</area>
         </shape>
         <textarea name="logitem_text" from="base_textarea">
             <area>120,615,1040,90</area>
