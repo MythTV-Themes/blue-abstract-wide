@@ -49,7 +49,7 @@
                     <!-- optional: cut status textarea "subtitle" -->
 
                     <statetype name="cutliststatus">
-                        <position>855,0</position>
+                        <position>925,0</position>
                         <state name="none">
                             <imagetype name="statusimage" from="base_icon_inactive">
                                 <filename>images/icons/cutlist.png</filename>
@@ -72,7 +72,7 @@
                     </statetype>
 
                     <statetype name="movestate">
-                        <position>890,0</position>
+                        <position>960,0</position>
                         <state name="no">
                             <imagetype name="movedoff" from="base_icon_inactive">
                                 <filename>images/icons/move.png</filename>
@@ -101,7 +101,7 @@
         </buttonlist>
 
         <shape name="button_separator" from="base_background_shape">
-            <area>1,345,958,1</area>
+            <area>1,345,1028,1</area>
         </shape>
 
         <button name="addrecording_button" from="base_button_wide">
