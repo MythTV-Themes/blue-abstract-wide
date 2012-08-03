@@ -2,6 +2,7 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
+    <!-- DONE -->
     <!-- base screen that acs as a background for the other 
          screens that show the actual weather information -->
     <window name="weatherbase">
@@ -10,40 +11,30 @@
 
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
-            <textarea name="text">
-                <value>Weather</value>
-            </textarea>
+            <textarea name="text" />
         </textarea>
 
-        <!-- the shape where the weather information is displayed -->
-        <shape name="weather_background" from="base_background_shape">
-            <area>70,70,1140,600</area>
-        </shape>
-
+        <!-- shows the name of the current screen in the header area -->
         <textarea name="header" from="base_textarea">
-            <area>90,86,450,36</area>
-            <cutdown>yes</cutdown>
-            <font>title</font>
-            <align>left,vcenter</align>
-        </textarea>
-        <textarea name="update_text" from="base_textarea">
-            <area>550,86,300,36</area>
-            <align>vcenter</align>
-        </textarea>
-        
-        <textarea name="pause_text" from="base_textarea">
-            <area>580,50,120,20</area>
+            <area>215,0,300,30</area>
             <align>allcenter</align>
-            <font>text_small</font>
+            <scroll direction="horizontal" />
         </textarea>
 
-        <shape name="title_separator" from="base_background_shape">
-            <area>90,130,1100,1</area>
+        <shape name="weatherbase_background" from="base_background_shape">
+            <area>-15,670,1310,38</area>
         </shape>
 
-        <shape name="update_separator" from="base_background_shape">
-            <area>90,620,1100,1</area>
-        </shape>
+        <textarea name="pause_text" from="base_textarea">
+            <area>750,675,130,30</area>
+            <align>right,vcenter</align>
+        </textarea>
+
+        <textarea name="update_text" from="base_textarea">
+            <area>910,675,350,30</area>
+            <align>right,vcenter</align>
+            <scroll direction="horizontal"/>
+        </textarea>
 
     </window>
 
@@ -133,19 +124,25 @@
         </textarea>
 
         <!-- the labels on the bottom -->
-        <textarea name="observation_time" from="base_textarea">
+        <!--<textarea name="observation_time" from="base_textarea">
             <area>90,590,500,20</area>
-            <font>text_small</font>
-        </textarea>
-        <textarea name="copyright" from="base_textarea">
-            <area>90,630,800,30</area>
-            <font>text_small</font>
-        </textarea>
+        </textarea>-->
 
+        
+
+        <!--<textarea name="updatetime" from="base_textarea">
+            <area>-10,675,1,1</area>
+        </textarea>-->
+
+        <!-- These two are shown at the bottom -->
         <imagetype name="copyrightlogo">
-            <area>900,645,80,20</area>
-            <preserveaspect>true</preserveaspect>
+            <area>0,730,1,1</area>
         </imagetype>
+
+        <textarea name="copyright" from="base_textarea">
+            <area>35,675,700,30</area>
+            <scroll direction="horizontal"/>
+        </textarea>
 
     </window>
 
@@ -219,15 +216,15 @@
             <position>860,325</position>
         </textarea>
 
-        <textarea name="copyright" from="base_textarea">
-            <area>90,630,800,30</area>
-            <font>text_small</font>
-        </textarea>
-
+        <!-- These two are shown at the bottom -->
         <imagetype name="copyrightlogo">
-            <area>900,645,80,20</area>
-            <preserveaspect>true</preserveaspect>
+            <area>0,730,1,1</area>
         </imagetype>
+
+        <textarea name="copyright" from="base_textarea">
+            <area>35,675,700,30</area>
+            <scroll direction="horizontal"/>
+        </textarea>
 
     </window>
 
@@ -346,15 +343,15 @@
             <position>860,560</position>
         </textarea>
 
-        <textarea name="copyright" from="base_textarea">
-            <area>90,630,800,30</area>
-            <font>text_small</font>
-        </textarea>
-
+        <!-- These two are shown at the bottom -->
         <imagetype name="copyrightlogo">
-            <area>900,645,80,20</area>
-            <preserveaspect>true</preserveaspect>
+            <area>0,730,1,1</area>
         </imagetype>
+
+        <textarea name="copyright" from="base_textarea">
+            <area>35,675,700,30</area>
+            <scroll direction="horizontal"/>
+        </textarea>
 
     </window>
 
@@ -474,15 +471,15 @@
             <position>860,560</position>
         </textarea>
         
-        <textarea name="copyright" from="base_textarea">
-            <area>90,630,800,30</area>
-            <font>text_small</font>
-        </textarea>
-
+        <!-- These two are shown at the bottom -->
         <imagetype name="copyrightlogo">
-            <area>900,645,80,20</area>
-            <preserveaspect>true</preserveaspect>
+            <area>0,730,1,1</area>
         </imagetype>
+
+        <textarea name="copyright" from="base_textarea">
+            <area>35,675,700,30</area>
+            <scroll direction="horizontal"/>
+        </textarea>
 
     </window>
 
@@ -507,15 +504,15 @@
             <preserveaspect>yes</preserveaspect>
         </imagetype>
 
-        <textarea name="copyright" from="base_textarea">
-            <area>90,630,800,30</area>
-            <font>text_small</font>
-        </textarea>
-
+        <!-- These two are shown at the bottom -->
         <imagetype name="copyrightlogo">
-            <area>900,645,80,20</area>
-            <preserveaspect>true</preserveaspect>
+            <area>0,730,1,1</area>
         </imagetype>
+
+        <textarea name="copyright" from="base_textarea">
+            <area>35,675,700,30</area>
+            <scroll direction="horizontal"/>
+        </textarea>
 
     </window>
 
@@ -523,32 +520,40 @@
 
 
 
-
+    <!-- DONE -->
     <window name="Animated Map">
 
+        <shape name="animatedimage_shape" from="base_background_shape">
+            <area>290,80,697,575</area>
+
+        </shape>
+
         <textarea name="amdesc" from="base_textarea">
-            <area>800,86,390,30</area>
-            <align>right,vcenter</align>
-            <cutdown>yes</cutdown>
+            <area>305,85,410,36</area>
         </textarea>
 
-        <shape name="animatedimage_shape" from="base_background_shape_dark">
-            <area>90,150,1100,450</area>
+        <textarea name="updatetime" from="base_textarea">
+            <area>730,85,240,36</area>
+            <align>right,vcenter</align>
+        </textarea>
+
+        <shape name="title_separator" from="base_background_shape">
+            <area>291,125,695,1</area>
         </shape>
+
         <imagetype name="animatedimage">
-            <area>92,152,1096,446</area>
-            <preserveaspect>yes</preserveaspect>
+            <area>305,140,667,500</area>
+        </imagetype>
+
+        <!-- These two are shown at the bottom -->
+        <imagetype name="copyrightlogo">
+            <area>0,730,1,1</area>
         </imagetype>
 
         <textarea name="copyright" from="base_textarea">
-            <area>90,630,800,30</area>
-            <font>text_small</font>
+            <area>35,675,700,30</area>
+            <scroll direction="horizontal"/>
         </textarea>
-
-        <imagetype name="copyrightlogo">
-            <area>900,645,80,20</area>
-            <preserveaspect>true</preserveaspect>
-        </imagetype>
 
     </window>
 
@@ -572,15 +577,15 @@
             <value>Weather Alerts</value>
         </textarea>
 
-        <textarea name="copyright" from="base_textarea">
-            <area>90,645,800,20</area>
-            <font>text_small</font>
-        </textarea>
-
+        <!-- These two are shown at the bottom -->
         <imagetype name="copyrightlogo">
-            <area>900,645,80,20</area>
-            <preserveaspect>true</preserveaspect>
+            <area>0,730,1,1</area>
         </imagetype>
+
+        <textarea name="copyright" from="base_textarea">
+            <area>35,675,700,30</area>
+            <scroll direction="horizontal"/>
+        </textarea>
 
     </window>
 
