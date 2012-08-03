@@ -235,6 +235,19 @@
     <window name="osd_status">
         <area>0,0,1280,720</area>
         
+        <!-- The information and the clock that is 
+             shown at the top left of each screen -->       
+        <imagetype name="header_background">
+            <area>-1,-1,560,50</area>
+            <filename>images/media/header_left.png</filename>
+        </imagetype>
+        <clock name="clock">
+            <area>10,0,200,30</area>
+            <font>text</font>
+            <template>%DATE%, %TIME%</template>
+            <align>left,vcenter</align>
+        </clock>
+        
         <!-- the background image of the popup dialog box -->
         <shape name="background">
             <area>220,600,830,87</area>
@@ -285,15 +298,29 @@
 
 
 
+    <!-- DONE -->
     <!-- TODO: eac3.png -->
     <!-- shows the icon and the details/description 
          of the current recording/movie/tv -->
     <window name="program_info">
         <area>0,0,1280,720</area>
-        
+
+        <!-- The information and the clock that is 
+             shown at the top left of each screen -->       
+        <imagetype name="header_background">
+            <area>-1,-1,560,50</area>
+            <filename>images/media/header_left.png</filename>
+        </imagetype>
+        <clock name="clock">
+            <area>10,0,200,30</area>
+            <font>text</font>
+            <template>%DATE%, %TIME%</template>
+            <align>left,vcenter</align>
+        </clock>
+
         <!-- the background image of the popup dialog box -->
-        <shape name="background">
-            <area>105,385,1070,285</area>
+        <shape name="program_info_background">
+            <area>105,445,1070,245</area>
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
@@ -302,7 +329,7 @@
 
         <!-- shows the title and the plot of the selected video -->
         <textarea name="title">
-            <area>120,400,820,36</area>
+            <area>120,460,820,36</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
@@ -311,132 +338,119 @@
         </textarea>
 
         <textarea name="starttime" from="title">
-            <area>120,440,400,36</area>
+            <area>120,495,400,36</area>
             <font>text</font>
             <template>%STARTTIME%-%ENDTIME% : %LENMINS%</template>
         </textarea>
 
-        <!-- separates the title and channel and the status icons from the description -->
+        <!-- separates the title and channel and the 
+             status icons from the description -->
         <shape name="program_info_separator">
-            <area>120,475,1040,1</area>
+            <area>106,535,1068,1</area>
             <type>box</type>
             <line color="#AAAAAA" alpha="150" width="1" />
         </shape>
 
-        <!-- show the channel and the recorded time of the recording -->
-        <shape name="channelicon_background">
-            <area>120,495,131,131</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="130" />
-            <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
-        </shape>
-        <imagetype name="iconpath">
-            <area>122,497,126,126</area>
-            <preserveaspect>true</preserveaspect>
+        <!-- show the channel or the channel name if 
+             no channel icon is available -->
+        <imagetype name="iconpath_background_image">
+            <area>120,550,133,100</area>
+            <mask>images/media/channel_item_nfmask.png</mask>
+            <filename>images/media/channel_bg.png</filename>
         </imagetype>
-
-        <!-- channel number and name -->
-        <textarea name="channum">
-            <area>100,635,40,30</area>
-            <align>right,vcenter</align>
-            <multiline>no</multiline>
+        
+        <textarea name="callsign">
+            <area>130,560,113,80</area>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
             <cutdown>no</cutdown>
+            <scroll direction="vertical"/>
             <font>text</font>
         </textarea>
         
-        <textarea name="callsign">
-            <area>150,635,120,30</area>
+        <imagetype name="iconpath">
+            <area>120,550,133,100</area>
+            <mask>images/media/channel_nfmask.png</mask>
+        </imagetype>
+        <imagetype name="iconpath_border">
+            <area>120,550,133,100</area>
+            <filename>images/media/channel_nfborder.png</filename>
+        </imagetype>
+
+        <textarea name="channum">
+            <area>120,650,133,36</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
-            <cutdown>yes</cutdown>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal"/>
             <font>text</font>
+            <template>Channel: %1</template>
         </textarea>
 
         <shape name="description_separator">
-            <area>270,476,1,180</area>
+            <area>265,536,1,153</area>
             <type>box</type>
             <line color="#AAAAAA" alpha="150" width="1" />
         </shape>
 
         <!-- show the plot of the recording -->
         <textarea name="description">
-            <area>290,490,870,180</area>
+            <area>279,550,870,125</area>
             <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
+            <cutdown>no</cutdown>
+            <scroll direction="vertical"/>
             <align>left,top</align>
             <font>text</font>
             <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
-        
-        
+
         <!-- show some images about the type of recording, audio and video codecs -->
         <statetype name="tvstate">
-            
+            <position>1058,452</position>
             <state name="WatchingLiveTV">
-                <!--<imagetype name="image">
-                    <area>1100,405,45,45</area>
-                    <filename>images/icons/codecs/tv.png</filename>
-                    <preserveaspect>true</preserveaspect>
-                </imagetype>-->
-                <textarea name="livetv_label" from="base_textarea">
+                <textarea name="livetv_label">
                     <align>right,vcenter</align>
-                    <area>1055,400,100,20</area>
+                    <area>0,0,100,36</area>
                     <font>text</font>
                     <value>Live TV</value>
                 </textarea>
             </state>
             <state name="WatchingPreRecorded">
-                <textarea name="livetv_label" from="base_textarea">
+                <textarea name="livetv_label">
                     <align>right,vcenter</align>
-                    <area>1055,400,100,20</area>
+                    <area>0,0,100,36</area>
                     <font>text</font>
                     <value>Recorded</value>
                 </textarea>
             </state>
             <state name="WatchingVideo">
-                <textarea name="livetv_label" from="base_textarea">
+                <textarea name="livetv_label">
                     <align>right,vcenter</align>
-                    <area>1055,400,100,20</area>
+                    <area>0,0,100,36</area>
                     <font>text</font>
                     <value>Video</value>
                 </textarea>
             </state>
             <state name="WatchingDVD">
-                <!--<imagetype name="image">
-                    <area>1100,405,45,45</area>
-                    <filename>images/icons/codecs/dvd.png</filename>
-                    <preserveaspect>true</preserveaspect>
-                </imagetype>-->
-                <textarea name="livetv_label" from="base_textarea">
+                <textarea name="livetv_label">
                     <align>right,vcenter</align>
-                    <area>1055,400,100,20</area>
+                    <area>0,0,100,36</area>
                     <font>text</font>
                     <value>DVD</value>
                 </textarea>
             </state>
             <state name="WatchingBD">
-                <!--<imagetype name="image">
-                    <area>1100,405,45,45</area>
-                    <filename>images/icons/codecs/bd.png</filename>
-                    <preserveaspect>true</preserveaspect>
-                </imagetype>-->
-                <textarea name="image" from="base_textarea">
+                <textarea name="image">
                     <align>right,vcenter</align>
-                    <area>1055,440,100,20</area>
+                    <area>0,0,100,36</area>
                     <font>text</font>
                     <value>Bluray</value>
                 </textarea>
             </state>
             <state name="WatchingRecording">
-                <!--<imagetype name="image">
-                    <area>1100,405,45,45</area>
-                    <filename>images/icons/codecs/recording.png</filename>
-                    <preserveaspect>true</preserveaspect>
-                </imagetype>-->
-                <textarea name="image" from="base_textarea">
+                <textarea name="image">
                     <align>right,vcenter</align>
-                    <area>1060,440,100,20</area>
+                    <area>0,0,100,36</area>
                     <font>text</font>
                     <value>Recording</value>
                 </textarea>
@@ -444,7 +458,7 @@
         </statetype>
 
         <statetype name="videodescrip">
-            <position>1080,433</position>
+            <position>1080,493</position>
             <state name="SD">
                 <imagetype name="image" from="base_icon_selected">
                     <filename>images/icons/resolution/480.png</filename>
@@ -472,7 +486,7 @@
         </statetype>
 
         <statetype name="audiocodec">
-            <position>990,433</position>
+            <position>990,493</position>
             <state name="PCM_DVD">
                 <imagetype name="image" from="base_icon_selected">
                     <filename>images/icons/audio_codec/dolbydigital.png</filename>
@@ -542,11 +556,11 @@
         </statetype>
 
         <imagetype name="no_audiochannels" from="base_icon_inactive">
-            <area>900,433,78,30</area>
+            <area>900,493,78,30</area>
             <filename>images/icons/audio/2.0.png</filename>
         </imagetype>
         <statetype name="audiochannels">
-            <area>900,433,78,30</area>
+            <area>900,493,78,30</area>
             <state name="1">
                 <imagetype name="image" from="base_icon_selected">
                     <filename>images/icons/audio/1.0.png</filename>
@@ -586,7 +600,7 @@
         </statetype>
 
         <statetype name="videocodec">
-            <position>810,433</position>
+            <position>810,493</position>
             <state name="MPEG-2">
                 <imagetype name="image" from="base_icon_selected">
                     <filename>images/icons/video_codec/mpeg2.png</filename>
