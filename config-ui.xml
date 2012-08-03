@@ -71,7 +71,7 @@
 
                     <imagetype name="background_image">
                         <area>0,0,133,100</area>
-                        <mask>images/media/channel_item_nfmask.png</mask>
+                        <mask>images/media/channel_nfmask.png</mask>
                         <filename>images/media/channel_bg.png</filename>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
