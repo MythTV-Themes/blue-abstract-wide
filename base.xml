@@ -1719,6 +1719,7 @@
                         <area>8,0,350,36</area>
                         <scroll direction="horizontal"/>
                     </textarea>
+                    
                     <textarea name="year" from="base_textarea">
                         <area>365,0,170,36</area>
                         <align>right,vcenter</align>
@@ -1744,10 +1745,11 @@
 
 
 
-
+    <!-- DONE -->
+    <!-- TODO - aspect ratio broken? -->
     <!-- Shows the screen where the user can select the different
          artwork choices that the search has returned -->
-    <!--<window name="MythArtworkResults">
+    <window name="MythArtworkResults">
         
         <animation trigger="AboutToShow">
             <section centre="left" duration="250">
@@ -1768,11 +1770,11 @@
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
-            <area>350,130,580,388</area>
+            <area>350,170,575,300</area>
         </shape>
 
         <textarea name="title" from="base_textarea">
-            <area>365,140,550,60</area>
+            <area>365,180,545,60</area>
             <value>Artwork Search Results</value>
             <align>allcenter</align>
             <multiline>yes</multiline>
@@ -1780,35 +1782,120 @@
         </textarea>
 
         <shape name="title_separator" from="base_background_shape">
-            <area>351,210,578,1</area>
+            <area>351,250,573,1</area>
         </shape>
 
-        <buttonlist name="results" from="base_buttonlist">
-            <area>365,225,550,275</area>
+        <buttonlist name="results">
+            <area>370,265,540,195</area>
+            <layout>grid</layout>
+            <wrapstyle>flowing</wrapstyle>
+            <spacing>1</spacing>
+            <buttonarea>0,0,100%,100%</buttonarea>
+            
             <statetype name="buttonitem">
                 <state name="active">
-                    <imagetype name="buttonimage">
-                        <area>8,0,350,36</area>
-                        <preserveaspect>true</preserveaspect>
+
+                    <imagetype name="background_image">
+                        <area>0,0,133,192</area>
+                        <mask>images/media/movie_item_nfmask.png</mask>
+                        <filename>images/media/movie_bg.png</filename>
                     </imagetype>
+                    
+                    <!-- this is the actual cover image that will be shown if its
+                        available, otherwise only the background image is visible -->
+                    <imagetype name="buttonimage">
+                        <area>0,0,133,192</area>
+                        <mask>images/media/movie_item_nfmask.png</mask>
+                    </imagetype>
+                    
+                    <shape name="resolution_background" from="base_background_shape_dark">
+                        <area>3,158,130,32</area>
+                        <line color="#AAAAAA" alpha="0" width="0" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
                     <textarea name="resolution" from="base_textarea">
-                        <area>365,0,170,36</area>
-                        <align>right,vcenter</align>
-                        <scroll direction="horizontal"/>
+                        <area>15,155,103,36</area>
+                        <align>allcenter</align>
                     </textarea>
+
+                    <imagetype name="background_image_border">
+                        <area>0,0,133,192</area>
+                        <filename>images/media/movie_item_nfborder.png</filename>
+                    </imagetype>
+
                 </state>
-                <state name="inactive" from="active" />
-                <state name="selectedactive" from="active">
-                    <area>0,0,550,36</area>
-                    <shape name="background" from="base_button_shape_selectedactive"/>
-                </state>
-                <state name="selectedinactive" from="active">
-                    <area>0,0,550,36</area>
-                    <shape name="background" from="base_button_shape_selectedinactive"/>
+
+                <!-- These two states are not used -->
+                <state name="inactive" from="active"/>
+                <state name="selectedinactive" from="active"/>
+                    
+                <state name="selectedactive">
+                    <area>-26,-37,133,192</area>
+                    
+                    <imagetype name="background_image">
+                        <area>0,0,185,267</area>
+                        <mask>images/media/movie_item_fmask.png</mask>
+                        <filename>images/media/movie_bg.png</filename>
+                    </imagetype>
+
+                    <imagetype name="buttonimage">
+                        <area>0,0,185,267</area>
+                        <mask>images/media/movie_item_fmask.png</mask>
+                        <preserveaspect>false</preserveaspect>
+                    </imagetype>
+
+                    <shape name="resolution_background" from="base_background_shape_dark">
+                        <area>7,225,180,37</area>
+                        <line color="#AAAAAA" alpha="0" width="0" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
+                    <textarea name="resolution" from="base_textarea">
+                        <area>10,225,165,36</area>
+                        <align>allcenter</align>
+                    </textarea>
+                    
+                    <imagetype name="background_image_border">
+                        <area>0,0,185,267</area>
+                        <filename>images/media/movie_item_fborder.png</filename>
+                    </imagetype>
+
                 </state>
             </statetype>
+                
+            <!-- show arrows to indicates that there are
+                more menu entries above the first visible menu -->
+            <statetype name="upscrollarrow">
+                <position>-17,85</position>
+                <state type="off">
+                    <imagetype name="upon" from="base_icon_inactive">
+                        <filename>images/icons/button_arrow_left.png</filename>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="upoff" from="base_icon_selected">
+                        <filename>images/icons/button_arrow_left.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+            
+            <!-- show arrows to indicates that there are
+                more menu entries below the last visible menu -->
+            <statetype name="downscrollarrow">
+                <position>100%-5,85</position>
+                <state type="off">
+                    <imagetype name="dnon" from="base_icon_inactive">
+                        <filename>images/icons/button_arrow_right.png</filename>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="dnoff" from="base_icon_selected">
+                        <filename>images/icons/button_arrow_right.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>            
         </buttonlist>
-    </window>-->
+
+    </window>
 
 
 
