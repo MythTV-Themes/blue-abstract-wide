@@ -242,7 +242,7 @@
                         <alpha>200</alpha>
                     </imagetype>
                     <textarea name="description">
-                        <area>8,35,420,20</area>
+                        <area>8,35,420,21</area>
                         <font>menu_description</font>
                         <align>left,vcenter</align>
                         <cutdown>yes</cutdown>
