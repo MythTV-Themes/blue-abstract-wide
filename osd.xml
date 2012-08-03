@@ -49,7 +49,6 @@
         </textarea>
         <textarea name="filename" from="filename_label">
             <area>420,215,635,36</area>
-            <cutdown>yes</cutdown>
             <align>left,vcenter</align>
         </textarea>
         
@@ -355,7 +354,7 @@
              no channel icon is available -->
         <imagetype name="iconpath_background_image">
             <area>120,550,133,100</area>
-            <mask>images/media/channel_item_nfmask.png</mask>
+            <mask>images/media/channel_nfmask.png</mask>
             <filename>images/media/channel_bg.png</filename>
         </imagetype>
         
@@ -708,7 +707,7 @@
              no channel icon is available -->
         <imagetype name="iconpath_background_image">
             <area>120,550,133,100</area>
-            <mask>images/media/channel_item_nfmask.png</mask>
+            <mask>images/media/channel_nfmask.png</mask>
             <filename>images/media/channel_bg.png</filename>
         </imagetype>
         
@@ -1038,8 +1037,6 @@
         <!-- progressbar that shows the cutting points -->
         <editbar name="editbar">
             <area>235,150,800,20</area>
-            <layout>horizontal</layout>
-            <style>reveal</style>
 
             <shape name="background">
                 <area>0,0,800,20</area>
@@ -1057,25 +1054,25 @@
 
             <shape name="position">
                 <area>0,-13,2,18</area>
-                <fill color="#FFFFFF" alpha="255" />
+                <fill color="#FFFFFF" alpha="200" />
             </shape>
             
             <shape name="cuttoright">
-                <area>0,16,1,20</area>
-                <fill color="#AAAAAA" alpha="255" />
+                <area>0,16,2,20</area>
+                <fill color="#AAAAAA" alpha="200" />
             </shape>
             <shape name="cuttoleft">
-                <area>0,16,1,20</area>
-                <fill color="#AAAAAA" alpha="255" />
+                <area>0,16,2,20</area>
+                <fill color="#AAAAAA" alpha="200" />
             </shape>
             
             <shape name="keeptoright">
-                <area>0,16,1,12</area>
-                <fill color="#FFFFFF" alpha="255" />
+                <area>0,16,2,12</area>
+                <fill color="#FFFFFF" alpha="200" />
             </shape>
             <shape name="keeptoleft">
-                <area>0,16,1,12</area>
-                <fill color="#FFFFFF" alpha="255" />
+                <area>0,16,2,12</area>
+                <fill color="#FFFFFF" alpha="200" />
             </shape>
             
         </editbar>
@@ -1108,13 +1105,18 @@
 
         <textarea name="messagearea">
             <area>465,140,350,60</area>
-            <value>Search Term</value>
             <align>allcenter</align>
             <multiline>yes</multiline>
+            <cutdown>no</cutdown>
             <font>text</font>
             <scroll direction="vertical"/>
         </textarea>
-
+        
+        <!-- this needs to be here to prevent errors in the logs. -->
+        <textarea name="title" from="messagearea">
+            <area>465,140,350,60</area>
+        </textarea>
+        
         <shape name="messagearea_separator">
             <area>451,210,378,1</area>
             <type>roundbox</type>
