@@ -187,70 +187,85 @@
     </window>
 
 
-<!--
-    *******************************************************************
-    The editmetadata dialog
-    *******************************************************************
--->
 
-<!--
+
+
+    <!-- DONE -->
+    <!-- Presents a list of the available encoding profiles with a small 
+         description that the user can choose to create an archive -->
     <window name="profilepopup">
-        <area>-1,-1,413,426</area>
 
-        <imagetype name="box">
-            <filename>mz_function_popup.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background" />
 
-        <textarea name="title" from="base_textarea">
-            <area>20,20,360,40</area>
-            <font>basemedium</font>
-            <align>hcenter,top</align>
-            <value>Change Encoding Profile</value>
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Change Encoding Profile</value>
+            </textarea>
+        </textarea>
+
+        <shape name="profilepopup_background" from="base_background_shape">
+            <area>445,345,390,252</area>
+        </shape>
+
+        <textarea name="title_label" from="base_textarea">
+            <area>460,360,135,36</area>
+            <align>right,vcenter</align>
+            <value>Title:</value>
+        </textarea>
+        <textarea name="profile_label" from="title_label">
+            <position>460,400</position>
+            <value>Profile:</value>
+        </textarea>
+        <textarea name="oldsize_label" from="title_label">
+            <position>460,440</position>
+            <value>Old Size:</value>
+        </textarea>
+        <textarea name="newsize_label" from="title_label">
+            <position>460,480</position>
+            <value>New Size:</value>
         </textarea>
 
         <textarea name="caption_text" from="base_textarea">
-            <area>20,70,360,30</area>
-            <align>hcenter,top</align>
+            <area>605,360,185,36</area>
         </textarea>
-
-        <buttonlist name="profile_list" from="baseselector">
-            <position>90,130</position>
+        <buttonlist name="profile_list" from="base_selector">
+            <position>605,400</position>
         </buttonlist>
-
-        <textarea name="description_text" from="base_textarea">
-            <area>25,180,350,90</area>
-            <align>allcenter</align>
-            <font>basesmallgrey</font>
-            <multiline>yes</multiline>
-            <value></value>
+        <textarea name="oldsize_text" from="caption_text">
+            <position>605,440</position>
+        </textarea>
+        <textarea name="newsize_text" from="caption_text">
+            <position>605,480</position>
         </textarea>
 
-    <textarea name="oldsize_text" from="base_textarea">
-            <area>30,300,200,60</area>
-            <font>basesmallpurple</font>
-            <align>left</align>
-            <value>12.34GB</value>
-        </textarea>
-
-    <textarea name="newsize_text" from="base_textarea">
-            <area>170,300,200,60</area>
-            <font>basesmallpurple</font>
-            <align>right</align>
-            <value>12.34GB</value>
-        </textarea>
-
+        <shape name="button_separator" from="base_background_shape">
+            <area>446,530,388,1</area>
+        </shape>
+        
         <button name="ok_button" from="base_button">
-            <position>125,350</position>
-            <value>Ok</value>
+            <position>565,545</position>
+            <value>Save</value>
         </button>
+        
+        <shape name="description_text_background_bottom" from="base_background_shape">
+            <area>-5,615,1290,90</area>
+        </shape>
+        <textarea name="description_text" from="base_textarea">
+            <area>120,615,1040,90</area>
+            <cutdown>yes</cutdown>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+        </textarea>
+
     </window>
--->
 
 
 
 
 
 
+    <!-- DONE -->
     <!-- this is the screen where the user can edit some
         information about the archive -->
     <window name="edit_metadata">
@@ -264,59 +279,64 @@
             </textarea>
         </textarea>
 
-        <shape name="topbackground" from="base_background_shape">
-            <area>25,70,1230,515</area>
+        <shape name="edit_metadata_background" from="base_background_shape">
+            <area>350,305,600,295</area>
         </shape>
 
-        <!-- Labels -->
         <textarea name="title_label" from="base_textarea">
-            <area>45,70,170,50</area>
+            <area>365,320,175,36</area>
             <align>right,vcenter</align>
             <value>Title:</value>
         </textarea>
         <textarea name="subtitle_label" from="title_label">
-            <area>45,135,170,50</area>
+            <position>365,360</position>
             <value>Subtitle:</value>
         </textarea>
         <textarea name="startdate_label" from="title_label">
-            <area>45,200,170,50</area>
+            <position>365,400</position>
             <value>Start Date:</value>
         </textarea>
         <textarea name="starttime_label" from="title_label">
-            <area>45,265,170,50</area>
+            <position>365,440</position>
             <value>Time:</value>
         </textarea>
         <textarea name="description_label" from="title_label">
-            <area>45,330,170,50</area>
+            <position>365,480</position>
             <value>Description:</value>
         </textarea>
 
-        <!-- edits -->
         <textedit name="title_edit" from="base_textedit">
-            <position>225,70</position>
+            <position>550,320</position>
         </textedit>
         <textedit name="subtitle_edit" from="base_textedit">
-            <position>225,135</position>
+            <position>550,360</position>
         </textedit>
         <textedit name="startdate_edit" from="base_textedit">
-            <position>225,200</position>
+            <position>550,400</position>
         </textedit>
         <textedit name="starttime_edit" from="base_textedit">
-            <position>225,265</position>
+            <position>550,440</position>
         </textedit>
         <textedit name="description_edit" from="base_textedit">
-            <position>225,330</position>
+            <position>550,480</position>
         </textedit>
 
-        <!-- Push buttons -->
-        <button name="cancel_button" from="base_button">
-            <position>250,540</position>
-            <value>Cancel</value>
-        </button>
+        <shape name="button_separator" from="base_background_shape">
+            <area>351,530,598,1</area>
+        </shape>
+        
         <button name="ok_button" from="base_button">
-            <position>450,540</position>
+            <position>485,545</position>
             <value>Save</value>
         </button>
+        <button name="cancel_button" from="base_button">
+            <position>650,545</position>
+            <value>Cancel</value>
+        </button>
+        
+        <group name="base_helptext_group" from="base_helptext_group">
+            <position>0,615</position>
+        </group>
 
     </window>
 
