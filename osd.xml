@@ -974,6 +974,9 @@
 
 
 
+    <!-- DONE -->
+    <!-- TODO: cutpoint are not visible -->
+    <!-- TODO: move down -->
     <!-- dialog box where the user can edit the current program -->
     <window name="osd_program_editor">
         
@@ -1026,12 +1029,14 @@
         <textarea name="seekamount" from="title">
             <area>830,175,200,36</area>
             <align>right,vcenter</align>
+            <template>Seek: %1</template>
         </textarea>
         
         <!-- description of the current action, like cutting... -->
         <textarea name="cutindicator" from="title">
             <area>540,175,200,36</area>
             <align>allcenter</align>
+            <template>Action: %1</template>
         </textarea>
 
         <!-- progressbar that shows the cutting points -->
@@ -1054,25 +1059,25 @@
 
             <shape name="position">
                 <area>0,-13,2,18</area>
-                <fill color="#FFFFFF" alpha="200" />
+                <fill color="#FFFFFF" alpha="255" />
             </shape>
             
             <shape name="cuttoright">
                 <area>0,16,2,20</area>
-                <fill color="#AAAAAA" alpha="200" />
+                <fill color="#AAAAAA" alpha="255" />
             </shape>
             <shape name="cuttoleft">
                 <area>0,16,2,20</area>
-                <fill color="#AAAAAA" alpha="200" />
+                <fill color="#AAAAAA" alpha="255" />
             </shape>
             
             <shape name="keeptoright">
                 <area>0,16,2,12</area>
-                <fill color="#FFFFFF" alpha="200" />
+                <fill color="#FFFFFF" alpha="255" />
             </shape>
             <shape name="keeptoleft">
                 <area>0,16,2,12</area>
-                <fill color="#FFFFFF" alpha="200" />
+                <fill color="#FFFFFF" alpha="255" />
             </shape>
             
         </editbar>
