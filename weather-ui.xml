@@ -42,98 +42,91 @@
 
 
 
-
+    <!-- DONE -->
     <!-- shows the surrent conditions of the weather -->
     <window name="Current Conditions">
 
-        <textarea name="cclocation" from="base_textarea">
-            <area>800,86,390,30</area>
-            <align>right,vcenter</align>
-            <cutdown>yes</cutdown>
-        </textarea>
-        
-        <shape name="current_background" from="base_background_shape">
-            <area>245,210,800,295</area>
-            <fill color="#000000" alpha="60" />
+        <shape name="current_condition_background" from="base_background_shape">
+            <area>290,210,697,302</area>
         </shape>
+
+        <textarea name="cclocation" from="base_textarea">
+            <area>305,215,410,36</area>
+        </textarea>
+
+        <textarea name="observation_time" from="base_textarea">
+            <area>730,215,240,36</area>
+            <align>right,vcenter</align>
+            <scroll direction="horizontal"/>
+        </textarea>
+
+        <shape name="title_separator" from="base_background_shape">
+            <area>291,255,695,1</area>
+        </shape>
+
+        <!-- the icon and the temp information -->
+        <imagetype name="weather_icon">
+            <area>305,265,200,150</area>
+            <filename>unknown.png</filename>
+        </imagetype>
+        <textarea name="weather" from="base_textarea">
+            <area>305,425,200,36</area>
+            <multiline>yes</multiline>
+            <align>allcenter</align>
+        </textarea>
+        <textarea name="temp" from="base_textarea">
+            <area>305,465,200,36</area>
+            <align>allcenter</align>
+        </textarea>
 
         <!-- the labels on the left side -->
         <textarea name="humiditylbl" from="base_textarea">
-            <area>270,230,250,30</area>
+            <area>520,265,220,36</area>
             <value>Humidity</value>
+            <align>right,vcenter</align>
         </textarea>
         <textarea name="pressurelbl" from="humiditylbl">
-            <position>270,275</position>
+            <position>520,305</position>
             <value>Pressure</value>
         </textarea>
         <textarea name="windlbl" from="humiditylbl">
-            <position>270,320</position>
+            <position>520,345</position>
             <value>Wind(Gust)</value>
         </textarea>
         <textarea name="dirlbl" from="humiditylbl">
-            <position>270,365</position>
+            <position>520,385</position>
             <value>Wind Direction</value>
         </textarea>
         <textarea name="visilbl" from="humiditylbl">
-            <position>270,410</position>
+            <position>520,425</position>
             <value>Visibility</value>
         </textarea>
         <textarea name="apptlbl" from="humiditylbl">
-            <position>270,455</position>
+            <position>520,465</position>
             <value>Feels Like</value>
         </textarea>
 
         <!-- the value in the center -->
         <textarea name="relative_humidity" from="base_textarea">
-            <area>410,230,300,30</area>
-            <align>right,vcenter</align>
+            <area>755,265,300,36</area>
         </textarea>
         <textarea name="pressure" from="relative_humidity">
-            <position>410,275</position>
+            <position>755,305</position>
         </textarea>
         <textarea name="wind_spdgst" from="relative_humidity">
-            <position>410,320</position>
+            <position>755,345</position>
         </textarea>
         <textarea name="wind_dir" from="relative_humidity">
-            <position>410,365</position>
+            <position>755,385</position>
         </textarea>
         <textarea name="visibility" from="relative_humidity">
-            <position>410,410</position>
+            <position>755,425</position>
         </textarea>
         <textarea name="appt" from="relative_humidity">
-            <position>410,455</position>
+            <position>755,465</position>
         </textarea>
-
-        <shape name="title_separator" from="base_background_shape">
-            <area>730,230,1,255</area>
-        </shape>
-
-        <!-- the icon and the temp -->
-        <imagetype name="weather_icon">
-            <area>780,240,200,150</area>
-            <filename>unknown.png</filename>
-        </imagetype>
-        <textarea name="weather" from="base_textarea">
-            <area>740,400,280,60</area>
-            <multiline>yes</multiline>
-            <align>allcenter</align>
-        </textarea>
-        <textarea name="temp" from="base_textarea">
-            <area>740,460,280,30</area>
-            <align>allcenter</align>
-        </textarea>
-
-        <!-- the labels on the bottom -->
-        <!--<textarea name="observation_time" from="base_textarea">
-            <area>90,590,500,20</area>
-        </textarea>-->
 
         
-
-        <!--<textarea name="updatetime" from="base_textarea">
-            <area>-10,675,1,1</area>
-        </textarea>-->
-
         <!-- These two are shown at the bottom -->
         <imagetype name="copyrightlogo">
             <area>0,730,1,1</area>
@@ -525,7 +518,6 @@
 
         <shape name="animatedimage_shape" from="base_background_shape">
             <area>290,80,697,575</area>
-
         </shape>
 
         <textarea name="amdesc" from="base_textarea">
@@ -535,6 +527,7 @@
         <textarea name="updatetime" from="base_textarea">
             <area>730,85,240,36</area>
             <align>right,vcenter</align>
+            <scroll direction="horizontal"/>
         </textarea>
 
         <shape name="title_separator" from="base_background_shape">
