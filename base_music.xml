@@ -375,31 +375,31 @@
         
         <!-- Current track name -->
         <textarea name="title" from="base_textarea">
-            <area>15,0,610,30</area>
+            <area>15,0,600,30</area>
             <scroll direction="horizontal" />
             <template>Now Playing: %TITLE% by %ARTIST% on %ALBUM%</template>
         </textarea>
 
         <!-- Track length -->
         <textarea name="time" from="base_textarea">
-            <area>635,0,150,30</area>
+            <area>625,0,150,30</area>
             <align>right,vcenter</align>
         </textarea>
 
         <!-- Playlist time -->
         <textarea name="playlisttime" from="base_textarea">
-            <area>795,0,180,30</area>
+            <area>785,0,190,30</area>
             <align>right,vcenter</align>
         </textarea>
 
         <!-- Repeat state -->
         <statetype name="repeatstate" from="base_music_repeatstate">
-            <area>995,0,30,30</area>
+            <area>995,-3,36,36</area>
         </statetype>
 
         <!-- Shuffle state -->
         <statetype name="shufflestate" from="base_music_shufflestate">
-            <area>1035,0,30,30</area>
+            <area>1035,-3,36,36</area>
         </statetype>
         
         <!-- Current number in the playlist -->

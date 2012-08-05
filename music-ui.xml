@@ -34,7 +34,7 @@
         </group>
 
         <textarea name="notracks" from="base_textarea">
-            <area>20,505,1240,30</area>
+            <area>20,50,1240,430</area>
             <align>allcenter</align>
             <value>You haven't selected any tracks to play</value>
         </textarea>
