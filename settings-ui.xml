@@ -7,10 +7,10 @@
 
         <imagetype name="background" from="base_background"/>
 
-        <textarea name="heading" from="base_heading">
+        <textarea name="header" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
-            <value>System Event Command Editor</value>
+                <value>System Event Command Editor</value>
             </textarea>
         </textarea>
 
