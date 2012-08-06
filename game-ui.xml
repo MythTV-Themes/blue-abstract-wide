@@ -54,12 +54,11 @@
             <area>85,490,275,210</area>
         </shape>
         
-        <!--<imagetype name="coverart_background_image">
-            <area>100,505,240,180</area>
+        <imagetype name="coverart_background_image">
+            <area>95,500,255,190</area>
             <mask>images/media/game_cover_mask.png</mask>
-            <filename>images/media/game_bg.png</filename>
-            <preserveaspect>true</preserveaspect>
-        </imagetype>-->
+            <filename>images/media/game_cover_bg.png</filename>
+        </imagetype>
 
         <!-- this is the actual cover image that will be shown if its
             available, otherwise only the background image is visible -->
@@ -72,7 +71,6 @@
         <imagetype name="coverart_background_image_border">
             <area>95,500,255,190</area>
             <filename>images/media/game_cover_border.png</filename>
-            <mask>images/media/game_cover_mask.png</mask>
         </imagetype>
         
         
@@ -153,18 +151,17 @@
             <area>40,210,1195,305</area>
         </shape>
         
-        <!--<imagetype name="coverart_background_image">
-            <area>55,145,367,275</area>
+        <imagetype name="coverart_background_image">
+            <area>52,222,373,280</area>
             <mask>images/media/game_cover_details_mask.png</mask>
-            <filename>images/media/game_bg.png</filename>
-            <preserveaspect>true</preserveaspect>
-        </imagetype>-->
+            <filename>images/media/game_cover_bg.png</filename>
+        </imagetype>
 
         <!-- this is the actual cover image that will be shown if its
             available, otherwise only the background image is visible -->
         <imagetype name="coverart">
             <area>52,222,373,280</area>
-            <mask>images/media/game_cover_mask.png</mask>
+            <mask>images/media/game_cover_details_mask.png</mask>
         </imagetype>
         
         <imagetype name="coverart_background_image_border">
