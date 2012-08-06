@@ -34,6 +34,19 @@
 
             <statetype name="buttonitem">
                 <state name="active">
+                   
+                    <!-- Shows the name of the item over a black background -->
+                    <shape name="buttontext_background" from="base_background_shape">
+                        <area>3,99,127,31</area>
+                        <line color="#AAAAAA" alpha="0" width="0" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>10,105,110,20</area>
+                        <font>text_small</font>
+                        <multiline>yes</multiline>
+                        <align>allcenter</align>
+                    </textarea>
 
                     <!-- Shows the background image (if no thumbnail is available) or 
                          the actual thumbnail image and a border around it -->
@@ -60,19 +73,6 @@
                         <area>66,50,44,33</area>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>-->
-                    
-                    <!-- Shows the name of the item over a black background -->
-                    <shape name="buttontext_background" from="base_background_shape">
-                        <area>3,99,127,31</area>
-                        <line color="#AAAAAA" alpha="0" width="0" />
-                        <cornerradius>8</cornerradius>
-                    </shape>
-                    <textarea name="buttontext" from="base_textarea">
-                        <area>10,105,110,20</area>
-                        <font>text_small</font>
-                        <multiline>yes</multiline>
-                        <align>allcenter</align>
-                    </textarea>
 
                     <imagetype name="buttonimage">
                         <area>0,0,133,99</area>
@@ -127,6 +127,19 @@
                 <state name="selectedactive" from="active">
                     <area>-26,-26,133,133</area>
                     
+                    <!-- Shows the name of the item over a black background -->
+                    <shape name="buttontext_background" from="base_background_shape_dark">
+                        <area>7,118,171,60</area>
+                        <line color="#AAAAAA" alpha="0" width="0" />
+                        <cornerradius>10</cornerradius>
+                    </shape>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>20,131,145,42</area>
+                        <multiline>yes</multiline>
+                        <scroll direction="vertical" />
+                        <align>allcenter</align>
+                    </textarea>
+                    
                     <!-- Shows the background image (if no thumbnail is available) or 
                          the actual thumbnail image and a border around it -->
                     <imagetype name="background_image">
@@ -151,19 +164,6 @@
                         <area>66,50,44,33</area>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>-->
-                    
-                    <!-- Shows the name of the item over a black background -->
-                    <shape name="buttontext_background" from="base_background_shape_dark">
-                        <area>7,118,171,60</area>
-                        <line color="#AAAAAA" alpha="0" width="0" />
-                        <cornerradius>10</cornerradius>
-                    </shape>
-                    <textarea name="buttontext" from="base_textarea">
-                        <area>20,131,145,42</area>
-                        <multiline>yes</multiline>
-                        <scroll direction="vertical" />
-                        <align>allcenter</align>
-                    </textarea>
 
                     <imagetype name="buttonimage">
                         <area>0,0,185,125</area>

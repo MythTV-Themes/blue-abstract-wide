@@ -18,36 +18,65 @@
             <statetype name="buttonitem">
                 <state name="active">
 
+                    <!-- Shows the name of the item over a black background -->
+                    <shape name="buttontext_background" from="base_background_shape">
+                        <area>3,99,127,31</area>
+                        <line color="#AAAAAA" alpha="0" width="0" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>10,105,110,20</area>
+                        <font>text_small</font>
+                        <multiline>yes</multiline>
+                        <align>allcenter</align>
+                    </textarea>
+
                     <!-- Shows the background image (if no thumbnail is available) or 
                          the actual thumbnail image and a border around it -->
                     <imagetype name="background_image">
                         <area>0,0,133,133</area>
                         <mask>images/media/image_item_nfmask.png</mask>
                         <filename>images/media/image_item_bg.png</filename>
-                        <preserveaspect>true</preserveaspect>
-                    </imagetype>                    
+                    </imagetype>
+
+                    <imagetype name="buttonimage">
+                        <area>0,0,133,99</area>
+                        <mask>images/media/image_item_nfmask.png</mask>
+                    </imagetype>
+
+                    <!-- show a folder above the image if its a folder and not an image.
+                        the node is a folder and it is currently not selected -->
+                    <statetype name="nodetype">
+                        <position>0,0</position>
+                        <state name="subfolder">
+                            <shape name="subfolder_background" from="base_background_shape">
+                                <area>2,2,129,36</area>
+                                <line color="#AAAAAA" alpha="0" width="0" />
+                                <cornerradius>10</cornerradius>
+                            </shape>
+                            <imagetype name="subfolder_icon">
+                                <area>10,6,28,28</area>
+                                <filename>images/icons/folder_selected.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="upfolder">
+                            <imagetype name="upfolder_icon">
+                                <area>10,6,28,28</area>
+                                <filename>images/icons/folder_up_selected.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
+ 
                     <imagetype name="background_image_border">
                         <area>0,0,133,133</area>
                         <filename>images/media/image_item_nfborder.png</filename>
                     </imagetype>
-                    <imagetype name="buttonimage">
-                        <area>0,0,133,99</area>
-                        <mask>images/media/image_item_nfmask.png</mask>
-                        <preserveaspect>true</preserveaspect>
-                    </imagetype>
 
-                    <!-- Shows the name of the item over a black background -->
-                    <shape name="buttontext_background" from="base_background_shape">
-                        <area>3,79,127,51</area>
-                        <line color="#AAAAAA" alpha="0" width="0" />
-                        <cornerradius>8</cornerradius>
-                    </shape>
-                    <textarea name="buttontext" from="base_textarea">
-                        <area>10,85,110,40</area>
-                        <font>text_small</font>
-                        <multiline>yes</multiline>
-                        <align>allcenter</align>
+                    <!-- show how many images / directories are in this directory -->
+                    <textarea name="childcount" from="base_textarea" depends="subfolder_icon">
+                        <area>45,3,80,36</area>
                     </textarea>
+
                 </state>
 
                 <!-- These two states are not used -->
@@ -56,65 +85,58 @@
                     
                 <state name="selectedactive" from="active">
                     <area>-26,-26,133,133</area>
-                    
-                    <!-- Shows the background image (if no thumbnail is available) or 
-                         the actual thumbnail image and a border around it -->
-                    <imagetype name="background_image">
-                        <area>0,0,185,185</area>
-                        <mask>images/media/image_item_fmask.png</mask>
-                        <filename>images/media/image_item_bg.png</filename>
-                        <preserveaspect>true</preserveaspect>
-                    </imagetype>
-                    <imagetype name="background_image_border">
-                        <area>0,0,185,185</area>
-                        <filename>images/media/image_item_fborder.png</filename>
-                    </imagetype>
-                    <imagetype name="buttonimage">
-                        <area>0,0,185,139</area>
-                        <mask>images/media/image_item_fmask.png</mask>
-                        <preserveaspect>true</preserveaspect>
-                    </imagetype>        
 
-                    <!-- Shows the name of the item over a black background -->
                     <shape name="buttontext_background" from="base_background_shape_dark">
                         <area>7,118,171,60</area>
                         <line color="#AAAAAA" alpha="0" width="0" />
                         <cornerradius>10</cornerradius>
                     </shape>
                     <textarea name="buttontext" from="base_textarea">
-                        <area>20,126,145,44</area>
+                        <area>20,131,145,42</area>
                         <multiline>yes</multiline>
                         <scroll direction="vertical" />
                         <align>allcenter</align>
                     </textarea>
 
-                    <!-- Shows the type of the item. It can be either 
-                         a subfolder, upfolder, image or a video -->
+                    <imagetype name="background_image">
+                        <area>0,0,185,185</area>
+                        <mask>images/media/image_item_fmask.png</mask>
+                        <filename>images/media/image_item_bg.png</filename>
+                    </imagetype>   
+
+                    <imagetype name="buttonimage">
+                        <area>0,0,185,125</area>
+                        <mask>images/media/image_item_fmask.png</mask>
+                    </imagetype>
+
                     <statetype name="nodetype">
                         <position>0,0</position>
                         <state name="subfolder">
                             <shape name="subfolder_background" from="base_background_shape">
-                                <area>7,7,171,46</area>
+                                <area>7,7,171,40</area>
                                 <line color="#AAAAAA" alpha="0" width="0" />
                                 <cornerradius>10</cornerradius>
                             </shape>
                             <imagetype name="subfolder_icon">
-                                <area>15,15,30,30</area>
+                                <area>15,12,30,30</area>
                                 <filename>images/icons/folder_selected.png</filename>
-                                <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
                         <state name="upfolder">
                             <imagetype name="upfolder_icon">
-                                <area>15,15,30,30</area>
+                                <area>15,12,30,30</area>
                                 <filename>images/icons/folder_up_selected.png</filename>
-                                <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
                     </statetype>
-                    
+
+                    <imagetype name="background_image_border">
+                        <area>0,0,185,185</area>
+                        <filename>images/media/image_item_fborder.png</filename>
+                    </imagetype>
+
                     <textarea name="childcount" from="base_textarea" depends="subfolder_icon">
-                        <area>55,16,80,30</area>
+                        <area>50,12,80,30</area>
                     </textarea>
 
                 </state>
