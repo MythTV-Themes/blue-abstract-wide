@@ -22,17 +22,17 @@
                          the actual thumbnail image and a border around it -->
                     <imagetype name="background_image">
                         <area>0,0,133,133</area>
-                        <mask>images/shared/gallery/gallery_item_nfmask.png</mask>
-                        <filename>images/shared/netvision/default_netvision.png</filename>
+                        <mask>images/media/image_item_nfmask.png</mask>
+                        <filename>images/media/image_item_bg.png</filename>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>                    
                     <imagetype name="background_image_border">
                         <area>0,0,133,133</area>
-                        <filename>images/shared/gallery/gallery_nfborder.png</filename>
+                        <filename>images/media/image_item_nfborder.png</filename>
                     </imagetype>
                     <imagetype name="buttonimage">
                         <area>0,0,133,99</area>
-                        <mask>images/shared/gallery/gallery_image_nfmask.png</mask>
+                        <mask>images/media/image_item_nfmask.png</mask>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
 
@@ -61,17 +61,17 @@
                          the actual thumbnail image and a border around it -->
                     <imagetype name="background_image">
                         <area>0,0,185,185</area>
-                        <mask>images/shared/gallery/gallery_item_fmask.png</mask>
-                        <filename>images/shared/netvision/default_netvision.png</filename>
+                        <mask>images/media/image_item_fmask.png</mask>
+                        <filename>images/media/image_item_bg.png</filename>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
                     <imagetype name="background_image_border">
                         <area>0,0,185,185</area>
-                        <filename>images/shared/gallery/gallery_fborder.png</filename>
+                        <filename>images/media/image_item_fborder.png</filename>
                     </imagetype>
                     <imagetype name="buttonimage">
                         <area>0,0,185,139</area>
-                        <mask>images/shared/gallery/gallery_image_fmask.png</mask>
+                        <mask>images/media/image_item_fmask.png</mask>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>        
 
@@ -100,14 +100,14 @@
                             </shape>
                             <imagetype name="subfolder_icon">
                                 <area>15,15,30,30</area>
-                                <filename>images/shared/folder_open.png</filename>
+                                <filename>images/icons/folder_selected.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
                         <state name="upfolder">
                             <imagetype name="upfolder_icon">
                                 <area>15,15,30,30</area>
-                                <filename>images/shared/folder_up_open.png</filename>
+                                <filename>images/icons/folder_up_selected.png</filename>
                                 <preserveaspect>yes</preserveaspect>
                             </imagetype>
                         </state>
