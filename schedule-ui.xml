@@ -910,13 +910,14 @@
         </textarea>
 
         <shape name="progdetails_background" from="base_background_shape">
-            <area>20,50,1240,660</area>
+            <area>20,50,1240,655</area>
+			<fill color="#000000" alpha="0" />
         </shape>
 
         <webbrowser name="browser">
-            <area>25,55,1230,650</area>
+            <area>22,52,1236,651</area>
             <zoom>1.0</zoom>
-            <background color="#000000" alpha="1"/>
+            <background color="#000000" alpha="0" />
         </webbrowser>
 
     </window>
