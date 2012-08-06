@@ -164,7 +164,7 @@
         </textarea>
 
         <shape name="editor_background" from="base_background_shape">
-            <area>245,345,790,255</area>
+            <area>245,345,790,252</area>
         </shape>
 
         <textarea name="categorylabel" from="base_textarea">
