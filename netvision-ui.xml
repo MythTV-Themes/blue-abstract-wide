@@ -404,7 +404,7 @@
         </group>
 
         <shape name="netvision_videolist_background" from="base_background_shape">
-            <area>-10,535,1300,160</area>
+            <area>-15,535,1310,160</area>
         </shape>
         
         <textarea name="nosites" from="base_textarea">
@@ -459,7 +459,7 @@
         </group>     
         
         <shape name="netvision_gallery_info_background" from="base_background_shape">
-            <area>-5,636,1290,70</area>
+            <area>-15,636,1310,70</area>
         </shape>
         <textarea name="title" from="base_textarea">
             <area>25,640,1000,30</area>
