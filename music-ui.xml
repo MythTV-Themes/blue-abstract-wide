@@ -778,11 +778,23 @@
         <shape name="trackdetails_background" from="base_background_shape">
             <area>90,125,1110,480</area>
         </shape>
-        
+       
+        <!-- this is the actual cover image that will be shown if its
+            available, otherwise only the background image is visible -->
+        <imagetype name="coverart_background_image">
+            <area>105,140,450,450</area>
+            <mask>images/media/music_cover_mask.png</mask>
+            <filename>images/media/music_cover_bg.png</filename>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
         <imagetype name="coverart">
             <area>105,140,450,450</area>
             <filename />
             <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="coverart_border">
+            <area>105,140,450,450</area>
+            <filename>images/media/music_cover_border.png</filename>
         </imagetype>
 
         <shape name="coverart_separator" from="base_background_shape">
@@ -861,7 +873,7 @@
         </textarea>
 
         <!-- separates the title, album and artist information from the rest -->
-        <shape name="artist_separator" from="base_background_shape">
+        <shape name="details_separator" from="base_background_shape">
             <area>571,380,628,1</area>
         </shape>        
         
@@ -875,11 +887,11 @@
         </textarea>
         
         <textarea name="lastplayed_label" from="title_label">
-            <position>890,390</position>
+            <position>860,390</position>
             <value>Last Played:</value>
         </textarea>
         <textarea name="lastplayed" from="title">
-            <position>1090,390</position>
+            <position>1070,390</position>
             <value>Last Value</value>
         </textarea>
             
@@ -912,7 +924,7 @@
             <value>Filename:</value>
         </textarea>
         <textarea name="filename" from="title_label">
-            <area>790,503,400,65</area>
+            <area>790,504,395,65</area>
             <align>left,top</align>
             <multiline>yes</multiline>
             <scroll direction="vertical"/>
