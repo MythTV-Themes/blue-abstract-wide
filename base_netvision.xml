@@ -131,17 +131,22 @@
         <shape name="netvision_details_background" from="base_background_shape">
             <area>0,0,1240,245</area>
         </shape>
-        
-        <imagetype name="preview_image_border">
+
+        <imagetype name="preview_image_background">
             <area>12,13,384,220</area>
-            <filename>images/shared/recordings/recording_preview_nfborder.png</filename>
-        </imagetype>
+            <filename>images/media/recording_preview_bg.png</filename>
+            <mask>images/media/recording_preview_mask.png</mask>
+        </imagetype>        
         <imagetype name="preview">
             <area>12,13,384,220</area>
-            <mask>images/shared/recordings/recording_preview_mask.png</mask>
+            <mask>images/media/recording_preview_mask.png</mask>
             <preserveaspect>true</preserveaspect>
         </imagetype>
-        
+        <imagetype name="preview_image_border">
+            <area>12,13,384,220</area>
+            <filename>images/media/recording_preview_border.png</filename>
+        </imagetype>
+
         <!-- the vertical separator -->
         <shape name="preview_separator" from="base_background_shape">
             <area>410,1,1,243</area>
