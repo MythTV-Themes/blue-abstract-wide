@@ -706,7 +706,7 @@
         </buttonlist>
 
         <shape name="button_separator" from="base_background_shape">
-            <area>281,530,723,1</area>
+            <area>266,530,743,1</area>
         </shape>
 
         <button name="finishbutton" from="base_button">
