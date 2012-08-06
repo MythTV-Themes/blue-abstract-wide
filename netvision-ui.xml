@@ -130,10 +130,10 @@
         </textarea>
 
         <shape name="rsslist_background" from="base_background_shape">
-            <area>390,185,510,340</area>
+            <area>390,185,510,337</area>
         </shape>
        
-        <buttonlist name="sites" from="base_buttonlist_wide">
+        <buttonlist name="sites" from="base_buttonlist">
             <area>405,200,480,238</area>
         </buttonlist>       
         
@@ -205,7 +205,7 @@
         </textarea>
 
         <shape name="rsseditpopup_background" from="base_background_shape">
-            <area>265,185,765,335</area>
+            <area>265,185,765,332</area>
         </shape>
 
         <textarea name="title_label" from="base_textarea">
@@ -254,7 +254,7 @@
         </button>
 
         <shape name="button_separator" from="base_background_shape">
-            <area>266,450,552,1</area>
+            <area>266,450,763,1</area>
         </shape>
 
         <button name="ok" from="base_button">
