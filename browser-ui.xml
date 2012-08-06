@@ -20,15 +20,15 @@
             <statetype name="buttonitem">
                 <state name="active">
                     <imagetype name="favicon">
-                        <area>5,5,26,26</area>
+                        <area>4,4,28,28</area>
                     </imagetype>
                     <statetype name="loadingstate">
-                        <position>5,5</position>
+                        <position>0,0</position>
                         <state name="loading">
-                            <imagetype name="animation">
-                                <area>0,0,26,26</area>
-                                <filepattern low="1" high="8">images/shared/browser/loading_%1.png</filepattern>
-                                <delay>100</delay>
+                            <imagetype name="animation" from="base_icon_selected">
+                                <filename>images/icons/processing.png</filename>
+                                <area>4,4,28,28</area>
+                                <alphapulse min="100" max="220" change="2"/>
                             </imagetype>
                         </state>
                     </statetype>
