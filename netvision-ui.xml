@@ -135,6 +135,27 @@
        
         <buttonlist name="sites" from="base_buttonlist">
             <area>405,200,480,238</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,480,36</area>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,100%-16,36</area>
+                    </textarea>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive">
+                    <area>0,0,480,36</area>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,100%-16,36</area>
+                    </textarea>
+                </state>
+                <state name="selectedinactive">
+                    <area>0,0,480,36</area>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,100%-16,36</area>
+                    </textarea>
+                </state>
+            </statetype>
         </buttonlist>       
         
         <shape name="button_separator" from="base_background_shape">
