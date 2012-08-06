@@ -1364,7 +1364,6 @@
             <mask>images/media/movie_cover_mask.png</mask>
             <filename>images/media/movie_bg.png</filename>
             <preserveaspect>true</preserveaspect>
-            <alpha>180</alpha>
         </imagetype>
         <imagetype name="preview">
             <area>35,105,245,355</area>
