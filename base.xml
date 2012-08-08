@@ -745,7 +745,7 @@
          shows only the inactive stars -->
     <imagetype name="base_rating_background">
         <area>0,0,90,18</area>
-        <filename>images/widgets/rating/stars_background.png</filename>
+        <filename>images/icons/ratings/stars_bg.png</filename>
         <preserveaspect>true</preserveaspect>
     </imagetype>
 
