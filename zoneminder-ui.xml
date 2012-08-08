@@ -161,56 +161,39 @@
             <value>Events</value>
         </textarea>
 
-        <buttonlist name="monitor_list" from="base_buttonlist_extra_wide">
+        <buttonlist name="monitor_list" from="base_buttonlist">
             <area>45,220,1170,370</area>
             <layout>vertical</layout>
-            <spacing>0</spacing>
-            <buttonarea>0,0,1170,380</buttonarea>
 
             <statetype name="buttonitem">
                 <state name="active">
-            <imagetype name="buttonbackground" from="base_image_active">
-                        <filename>images/widgets/buttonlist_inactive_extra_wide.png</filename>
-                    </imagetype>
-                    <textarea name="buttontext">
-                        <area>20,4,250,30</area>
-            <align>left,vcenter</align>
-                        <font>text</font>
+                    <area>0,0,1170,36</area>
+                    <shape name="background" from="base_button_shape_active" />
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>20,0,250,36</area>
                     </textarea>
                     <textarea name="name" from="buttontext">
-                        <area>20,4,200,25</area>
+                        <area>20,0,200,36</area>
                     </textarea>
                     <textarea name="zmcstatus" from="buttontext">
-                        <area>330,4,200,25</area>
+                        <area>330,0,200,36</area>
                     </textarea>
                     <textarea name="zmastatus" from="buttontext">
-                        <area>640,4,350,25</area>
+                        <area>640,0,350,36</area>
                     </textarea>
                     <textarea name="eventcount" from="buttontext">
-                        <area>950,4,100,25</area>
-                        <align>right</align>
+                        <area>950,0,100,36</area>
+                        <align>right,vcenter</align>
                     </textarea>
                 </state>
+                <state name="inactive" from="active" />                
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selected">
-                        <filename>images/widgets/buttonlist_active_extra_wide.png</filename>
-                        <!--<alphapulse min="160" max="255" change="2"/>-->
-                    </imagetype>
-                    <textarea name="buttontext">
-                        <font>text</font>
-                    </textarea>
-                    <textarea name="name">
-                        <font>text</font>
-                    </textarea>
-                    <textarea name="zmcstatus">
-                        <font>text</font>
-                    </textarea>
-                    <textarea name="zmastatus">
-                        <font>text</font>
-                    </textarea>
-                    <textarea name="eventcount">
-                        <font>text</font>
-                    </textarea>
+                    <area>0,0,1170,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
+                </state>
+                <state name="selectedinactive" from="active">
+                    <area>0,0,1170,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
             </statetype>
             <statetype name="upscrollarrow">
@@ -307,7 +290,7 @@
             <value>0/0</value>
         </textarea>
 
-    <!--+++++++++++++++++++ layout 1 - list view +++++++++++++++++++++++++-->
+        <!--+++++++++++++++++++ layout 1 - list view +++++++++++++++++++++++++-->
         <textarea name="layout1_title1">
             <!--<context>1</context>-->
             <area>60,190,130,30</area>
@@ -337,65 +320,34 @@
             <value>Length</value>
         </textarea>
 
-        <buttonlist name="layout1_eventlist" from="base_buttonlist_extra_wide">
+        <buttonlist name="layout1_eventlist" from="base_buttonlist">
             <area>45,220,1170,370</area>
-            <layout>vertical</layout>
-            <spacing>0</spacing>
-            <buttonarea>0,0,1170,380</buttonarea>
             <statetype name="buttonitem">
                 <state name="active">
-            <imagetype name="buttonbackground" from="base_image_active">
-                        <filename>images/widgets/buttonlist_inactive_extra_wide.png</filename>
-                    </imagetype>
+                    <area>0,0,1170,36</area>
+                    <shape name="background" from="base_button_shape_active" />
                     <textarea name="buttontext" from="base_textarea">
-                        <area>35,4,385,25</area>
-                        <font>text</font>
+                        <area>35,0,385,36</area>
                     </textarea>
                     <textarea name="camera" from="buttontext">
-                        <area>370,4,300,25</area>
+                        <area>370,0,300,36</area>
                     </textarea>
                     <textarea name="time" from="buttontext">
-                        <area>680,4,300,25</area>
+                        <area>680,0,300,36</area>
                     </textarea>
                     <textarea name="length" from="buttontext">
-                        <area>950,4,130,25</area>
-                        <align>right</align>
+                        <area>950,0,130,36</area>
+                        <align>right,vcenter</align>
                     </textarea>
                 </state>
+                <state name="inactive" from="active" />                
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selected">
-                        <filename>images/widgets/buttonlist_active_extra_wide.png</filename>
-                        <!--<alphapulse min="160" max="255" change="2"/>-->
-                    </imagetype>
-                    <textarea name="buttontext">
-                        <font>text</font>
-                    </textarea>
-                    <textarea name="camera">
-                        <font>text</font>
-                    </textarea>
-                    <textarea name="time">
-                        <font>text</font>
-                    </textarea>
-                    <textarea name="length">
-                        <font>text</font>
-                    </textarea>
+                    <area>0,0,1170,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                 </state>
                 <state name="selectedinactive" from="active">
-            <imagetype name="buttonbackground" from="base_image_inactive">
-                        <filename>images/widgets/buttonlist_active_extra_wide.png</filename>
-                    </imagetype>
-                    <textarea name="buttontext">
-                        <font>text_inactive</font>
-                    </textarea>
-                    <textarea name="camera">
-                        <font>text_inactive</font>
-                    </textarea>
-                    <textarea name="time">
-                        <font>text_inactive</font>
-                    </textarea>
-                    <textarea name="length">
-                        <font>text_inactive</font>
-                    </textarea>
+                    <area>0,0,1170,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
             </statetype>
 
@@ -410,15 +362,14 @@
 
             <statetype name="buttonitem">
                 <area>0,0,800,400</area>
-
                 <state name="active">
-            <shape name="image_background1">
-                <area>0,0,800,390</area>
-            <type>roundbox</type>
-            <fill color="#202020" alpha="180" />
-            <line color="#a0a0a0" alpha="128" width="2" />
-            <cornerradius>15</cornerradius>
-            </shape> 
+                    <shape name="image_background1">
+                        <area>0,0,800,390</area>
+                        <type>roundbox</type>
+                        <fill color="#202020" alpha="180" />
+                        <line color="#a0a0a0" alpha="128" width="2" />
+                        <cornerradius>15</cornerradius>
+                    </shape> 
                     <imagetype name="buttonimage">
                         <area>10,10,500,370</area>
                     </imagetype>
