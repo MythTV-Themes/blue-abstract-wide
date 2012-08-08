@@ -237,10 +237,16 @@
             <scroll direction="horizontal" />
         </textarea>
 
+        <textarea name="syncprogresstext" from="base_textarea">
+            <area>750,640,300,30</area>
+            <align>right,vcenter</align>
+            <template>Syncing image %1</template>
+        </textarea>
+
         <textarea name="thumbprogresstext" from="base_textarea">
             <area>750,640,300,30</area>
             <align>right,vcenter</align>
-            <template>Creating thumbnail: %1</template>
+            <template>Creating thumbnail %1</template>
         </textarea>
         <!--<progressbar name="thumbprogress" from="base_spinner" depends="thumbprogresstext">
             <position>1025,640</position>
