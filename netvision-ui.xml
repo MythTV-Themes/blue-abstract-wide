@@ -451,7 +451,7 @@
             <area>220,50,840,570</area>
             <multiline>yes</multiline>
             <align>allcenter</align>
-            <value>You haven't added any Sites/RSS Feeds yet!  To add a site, press MENU, then choose "Scan/Manage Subscriptions," then "Manage Site Subscriptions."</value>
+            <value>You haven't added any Sites/RSS Feeds yet! To add a site, press MENU, then choose "Scan/Manage Subscriptions," then "Manage Site Subscriptions."</value>
         </textarea>
 
         <group name="netvision_videolist_group" from="base_netvision_videolist_group">
