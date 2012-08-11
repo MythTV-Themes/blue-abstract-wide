@@ -1093,7 +1093,7 @@
         <imagetype name="animation">
             <area>610,370,60,10</area>
             <filepattern low="1" high="5">images/icons/animation/busy_%1.png</filepattern>
-            <delay>100</delay>
+            <delay>200</delay>
         </imagetype>
 
     </window>
