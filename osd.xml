@@ -554,10 +554,6 @@
             </state>
         </statetype>
 
-        <imagetype name="no_audiochannels" from="base_icon_inactive">
-            <area>900,493,78,30</area>
-            <filename>images/icons/audio/2.0.png</filename>
-        </imagetype>
         <statetype name="audiochannels">
             <area>900,493,78,30</area>
             <state name="1">
