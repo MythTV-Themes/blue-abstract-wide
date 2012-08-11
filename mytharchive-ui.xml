@@ -96,7 +96,7 @@
 
 
 
-
+    <!-- DONE -->
     <!-- this is the screen where the user can select the avialable
         recordings that will be saved to dvd. -->
     <window name="recording_selector">
@@ -111,95 +111,121 @@
         </textarea>
 
         <!-- destination selector -->
-        <shape name="topbackground" from="base_background_shape">
-            <area>25,70,1230,347</area>
+        <shape name="recording_selector_background" from="base_background_shape">
+            <area>20,50,1240,390</area>
         </shape>
 
+        <!-- the selection of available recording groups -->
         <buttonlist name="category_selector" from="base_buttonlist">
-            <area>45,91,350,312</area>
-            <wrapstyle>items</wrapstyle>
+            <area>35,65,350,355</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,350,36</area>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,100%-16,36</area>
+                        <scroll direction="horizontal" />
+                    </textarea>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <area>0,0,350,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
+                </state>
+                <state name="selectedinactive" from="active">
+                    <area>0,0,350,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
+                </state>
+            </statetype>
         </buttonlist>
 
+        <!-- the selection of the available recordings in the group -->
         <buttonlist name="recordinglist" from="base_buttonlist">
-            <area>412,91,825,312</area>
-            <wrapstyle>captive</wrapstyle>
+            <area>395,65,850,355</area>            
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,850,36</area>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,100%-50,36</area>
+                        <scroll direction="horizontal" />
+                    </textarea>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <area>0,0,850,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
+                </state>
+                <state name="selectedinactive" from="active">
+                    <area>0,0,850,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
+                </state>
+            </statetype>
         </buttonlist>
 
         <!-- this is the background for the information at the bottom -->
-        <shape name="bottom_background" from="base_background_shape">
-            <area>25,441,1230,255</area>
+        <shape name="video_plot_background" from="base_background_shape">
+            <area>20,460,1240,245</area>
         </shape>
 
-        <!-- the shape around the preview -->
-        <shape name="preview_shape" from="base_background_shape">
-            <area>45,465,355,208</area>
-        </shape>
-
-        <!-- the preview image or video itself -->
-        <imagetype name="preview_image">
-            <area>48,468,349,202</area>
-            <preserveaspect>yes</preserveaspect>
+        <imagetype name="preview_background_image">
+            <area>32,473,384,220</area>
+            <filename>images/media/recording_preview_bg.png</filename>
+            <mask>images/media/recording_preview_mask.png</mask>
+            <preserveaspect>true</preserveaspect>
+            <alpha>220</alpha>
         </imagetype>
-
-        <!-- the vertical separator -->
+        <imagetype name="preview_image">
+            <area>32,473,384,220</area>
+            <mask>images/media/recording_preview_mask.png</mask>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="preview_image_border">
+            <area>32,473,384,220</area>
+            <filename>images/media/recording_preview_border.png</filename>
+        </imagetype>
+        
         <shape name="recording_description_separator" from="base_background_shape">
-            <area>419,455,1,225</area>
+            <area>425,461,1,243</area>
         </shape>
 
-        <!-- shows the title and the plot of the selected video -->
         <textarea name="progtitle" from="base_textarea">
-            <area>435,458,770,30</area>
-            <multiline>no</multiline>
-            <align>left,vcenter</align>
-            <cutdown>yes</cutdown>
+            <area>440,475,465,36</area>
+            <scroll direction="horizontal" />
             <font>title</font>
         </textarea>
 
-        <imagetype name="cutlist_image_off" from="base_icon_inactive">
-            <position>1200,460</position>
-            <filename>images/icons/cutlist.png</filename>
-        </imagetype>
-        <imagetype name="cutlist_image" from="base_icon_selected">
-            <position>1200,460</position>
-            <filename>images/icons/cutlist.png</filename>
-        </imagetype>
-
-        <shape name="title_separator" from="base_background_shape">
-            <area>420,502,818,1</area>
-        </shape>
-
-        <!-- show the plot of the recording -->
-        <textarea name="progdescription" from="base_textarea">
-            <area>435,523,805,100</area>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-            <align>left,top</align>
-            <template>%|"SUBTITLE|"% %|(ORIGINALAIRDATE|)% %STARS% %DESCRIPTION%</template>
-        </textarea>
-
-        <shape name="button_separator" from="base_background_shape">
-            <area>420,636,475,1</area>
-        </shape>
-
         <textarea name="filesize" from="base_textarea">
-            <area>440,646,110,40</area>
-            <font>text_small</font>
-            <cutdown>yes</cutdown>
+            <area>440,535,225,30</area>
+            <template>Filesize: %1</template>
         </textarea>
 
         <textarea name="progdatetime" from="base_textarea">
-            <area>570,646,280,40</area>
-            <cutdown>yes</cutdown>
-            <font>text_small</font>
-            <align>left,vcenter</align>
+            <area>680,534,310,30</area>
+            <template>Recorded Time: %1</template>
         </textarea>
 
+        <shape name="recording_time_separator" from="base_background_shape">
+            <area>425,525,834,1</area>
+        </shape>
+        
+        <!-- show the plot of the recording -->
+        <textarea name="progdescription" from="base_textarea">
+            <area>440,567,805,128</area>
+            <multiline>yes</multiline>
+            <scroll direction="vertical"/>
+            <align>left,top</align>
+            <template>%"|SUBTITLE|" %%(|ORIGINALAIRDATE|) %%(|STARS|) %%DESCRIPTION%</template>
+        </textarea>
+
+        <shape name="button_separator" from="base_background_shape">
+            <area>920,461,1,63</area>
+        </shape>
+
         <button name="cancel_button" from="base_button">
-            <position>915,636</position>
+            <position>935,475</position>
             <value>Cancel</value>
         </button>
         <button name="ok_button" from="base_button">
-            <position>1085,636</position>
+            <position>1095,475</position>
             <value>Ok</value>
         </button>
 
