@@ -45,7 +45,7 @@
             <area>-15,490,1310,40</area>
         </shape>
         <textarea name="playlisttime" from="base_textarea">
-            <area>815,492,180,36</area>
+            <area>785,492,220,36</area>
             <align>right,vcenter</align>
         </textarea>
         <statetype name="repeatstate" from="base_music_repeatstate">
