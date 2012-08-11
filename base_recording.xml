@@ -43,7 +43,7 @@
         <textarea name="subtitle" from="base_textarea">
             <area>420,45,545,30</area>
             <cutdown>yes</cutdown>
-            <font>text_light_blue</font>
+            <font>text_light_grey</font>
         </textarea>
         
         <!-- show the channel and the recorded time of the recording -->

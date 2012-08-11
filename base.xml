@@ -61,7 +61,7 @@
     <fontdef name="text_grey" from="text">
         <color>#999999</color>
     </fontdef>
-    <fontdef name="text_light_blue" from="text">
+    <fontdef name="text_light_grey" from="text">
         <color>#BBBBBB</color>
     </fontdef>
     <fontdef name="text_yellow" from="text">
