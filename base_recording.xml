@@ -36,21 +36,24 @@
 
         <!-- shows the title and the plot of the selected video -->
         <textarea name="title" from="base_textarea">
-            <area>420,15,545,30</area>
+            <area>420,15,550,30</area>
             <scroll direction="horizontal" />
             <font>title</font>
         </textarea>
         <textarea name="subtitle" from="base_textarea">
-            <area>420,45,545,30</area>
+            <area>420,45,430,30</area>
             <cutdown>yes</cutdown>
             <font>text_light_grey</font>
+        </textarea>
+        <textarea name="00x00" from="base_textarea">
+            <area>860,45,110,30</area>
+            <align>right,vcenter</align>
         </textarea>
         
         <!-- show the channel and the recorded time of the recording -->
         <textarea name="channel" from="base_textarea">
             <area>420,75,225,30</area>
         </textarea>
-
         <textarea name="timedate" from="base_textarea">
             <area>660,75,310,30</area>
             <align>right,vcenter</align>
