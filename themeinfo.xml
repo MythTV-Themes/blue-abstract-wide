@@ -20,6 +20,7 @@
     <types>
         <type>UI</type>
         <type>OSD</type>
+        <type>Menu</type>
     </types>
 
     <!-- This is the value that myth uses to parse all the coordinates in your theme. It is the number of 
