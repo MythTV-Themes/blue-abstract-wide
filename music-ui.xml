@@ -255,8 +255,6 @@
 
 
 
-    <!-- TODO - buttonimages marked as todo -->
-    <!-- TODO - buttontext background shape without borders at the top -->
     <!-- TODO - buttoncheck is not working -->
     <!-- Shows the album / tracks / ... as cover images. -->
     <window name="playlisteditorview_gallery" include="base_music.xml">
@@ -434,22 +432,19 @@
                         </textarea>
                         
                         <!-- status if the album/track has been added to the playlist -->
-                        <!--<statetype name="buttoncheck">
+                        <statetype name="buttoncheck">
                             <position>79,4</position>
-                            <showempty>yes</showempty>
                             <state name="full">
-                                <imagetype name="watchedimage">
-                                    <area>0,0,50,50</area>
-                                    <filename>images/media/flags/watched.png</filename>
+                                <imagetype name="full" from="base_icon_selected">
+                                    <filename>images/icons/selected.png</filename>
                                 </imagetype>
                             </state>
                             <state name="off">
-                                <imagetype name="watchedimage">
-                                    <area>0,0,50,50</area>
-                                    <filename>images/media/flags/unwatched.png</filename>
+                                <imagetype name="off" from="base_icon_inactive">
+                                    <filename>images/icons/selected.png</filename>
                                 </imagetype>
                             </state>
-                        </statetype>-->
+                        </statetype>
                         
                         <imagetype name="background_image_border">
                             <area>0,0,133,133</area>
@@ -607,22 +602,19 @@
                         </textarea>
                         
                         <!-- status if the album/track has been added to the playlist -->
-                        <!--<statetype name="buttoncheck">
-                            <showempty>yes</showempty>
+                        <statetype name="buttoncheck">
                             <position>112,8</position>
                             <state name="full">
-                                <imagetype name="watchedimage">
-                                    <area>0,0,65,65</area>
-                                    <filename>images/media/flags/watched.png</filename>
+                                <imagetype name="on" from="base_icon_selected">
+                                    <filename>images/icons/selected.png</filename>
                                 </imagetype>
                             </state>
                             <state name="off">
-                                <imagetype name="watchedimage">
-                                    <area>0,0,65,65</area>
-                                    <filename>images/media/flags/unwatched.png</filename>
+                                <imagetype name="off" from="base_icon_inactive">
+                                    <filename>images/icons/selected.png</filename>
                                 </imagetype>
                             </state>
-                        </statetype>-->
+                        </statetype>
 
                         <imagetype name="background_image_border">
                             <area>0,0,185,185</area>
