@@ -37,20 +37,25 @@
                         <fill color="#000000" alpha="0" />
                         <line color="#000000" alpha="0" width="0" />
                     </shape>
+                    <imagetype name="channelicon_background">
+                        <area>4,8,71,53</area>
+                        <filename>images/media/channel_bg.png</filename>
+                    </imagetype>
                     <imagetype name="channelicon">
-                        <area>5,9,51,51</area>
+                        <area>5,9,68,51</area>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
-                    <shape name="channelicon_background" from="base_background_shape">
-                        <area>4,8,53,53</area>
+                    <shape name="channelicon_border" from="base_background_shape">
+                        <area>4,8,71,53</area>
                         <fill color="#000000" alpha="0" />
                         <cornerradius>0</cornerradius>
                     </shape>
                     <textarea name="buttontext" from="base_textarea">
-                        <area>70,0,155,70</area>
+                        <area>90,0,135,70</area>
                         <font state="favourite">text_yellow</font>
                         <font state="unavailable">text_blue</font>
                         <font state="favunavailable">text_purple</font>
+                        <scroll direction="horizontal" />
                     </textarea>
                 </state>
                 <state name="inactive" from="active"/>
