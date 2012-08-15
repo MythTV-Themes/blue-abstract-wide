@@ -352,7 +352,7 @@
                             <state name="compartists">
                                 <imagetype name="nodetype_compartists_image">
                                     <area>0,0,133,133</area>
-                                    <filename>images/media/music_type/compartists.png</filename>
+                                    <filename>images/media/music_type/compartist.png</filename>
                                     <mask>images/media/music_item_nfmask.png</mask>
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
@@ -526,7 +526,7 @@
                             <state name="compartists">
                                 <imagetype name="nodetype_compartists_image">
                                     <area>0,0,185,185</area>
-                                    <filename>images/media/music_type/compartists.png</filename>
+                                    <filename>images/media/music_type/compartist.png</filename>
                                     <mask>images/media/music_item_fmask.png</mask>
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
