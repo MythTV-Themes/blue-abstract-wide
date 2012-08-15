@@ -294,14 +294,6 @@
                             <filename>images/media/music_type/album.png</filename>
                             <preserveaspect>true</preserveaspect>
                         </imagetype>
-                        
-                        <!-- this is the actual cover image that will be shown if its
-                            available, otherwise only the background image is visible -->
-                        <imagetype name="buttonimage">
-                            <area>0,0,133,133</area>
-                            <mask>images/media/music_item_nfmask.png</mask>
-                            <preserveaspect>true</preserveaspect>
-                        </imagetype>
 
                         <!-- This specifies the background image of the item. It can be 
                              set according to the type, like artist, genre, year, album,... -->
@@ -362,7 +354,6 @@
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
-                            <!-- TODO update image -->
                             <state name="compartists">
                                 <imagetype name="nodetype_compartists_image">
                                     <area>0,0,133,133</area>
@@ -371,7 +362,6 @@
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
-                            <!-- TODO update image -->
                             <state name="ratings">
                                 <imagetype name="nodetype_ratings_image">
                                     <area>0,0,133,133</area>
@@ -412,7 +402,6 @@
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
-                            <!-- TODO update image -->
                             <state name="smartplaylists">
                                 <imagetype name="nodetype_smartplaylists_image">
                                     <area>0,0,133,133</area>
@@ -422,7 +411,15 @@
                                 </imagetype>
                             </state>
                         </statetype>
-                            
+
+                        <!-- this is the actual cover image that will be shown if its
+                            available, otherwise only the background image is visible -->
+                        <imagetype name="buttonimage">
+                            <area>0,0,133,133</area>
+                            <mask>images/media/music_item_nfmask.png</mask>
+                            <preserveaspect>true</preserveaspect>
+                        </imagetype>
+
                         <!-- This is the dark background behind the album name -->
                         <shape name="buttontext_background" from="base_background_shape">
                             <area>3,81,127,49</area>
@@ -474,14 +471,6 @@
                             <filename>images/media/music_type/album.png</filename>
                             <preserveaspect>true</preserveaspect>
                         </imagetype>
-                        
-                        <!-- this is the actual cover image that will be shown if its
-                            available, otherwise only the background image is visible -->
-                        <imagetype name="buttonimage">
-                            <area>0,0,185,185</area>
-                            <mask>images/media/music_item_fmask.png</mask>
-                            <preserveaspect>true</preserveaspect>
-                        </imagetype>
 
                         <!-- This specifies the background image of the item. It can be 
                              set according to the type, like artist, genre, year, album,... -->
@@ -542,7 +531,6 @@
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
-                            <!-- TODO update image -->
                             <state name="compartists">
                                 <imagetype name="nodetype_compartists_image">
                                     <area>0,0,185,185</area>
@@ -551,7 +539,6 @@
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
-                            <!-- TODO update image -->
                             <state name="ratings">
                                 <imagetype name="nodetype_ratings_image">
                                     <area>0,0,185,185</area>
@@ -592,7 +579,6 @@
                                     <preserveaspect>true</preserveaspect>
                                 </imagetype>
                             </state>
-                            <!-- TODO update image -->
                             <state name="smartplaylists">
                                 <imagetype name="nodetype_smartplaylists_image">
                                     <area>0,0,185,185</area>
@@ -602,6 +588,14 @@
                                 </imagetype>
                             </state>
                         </statetype>
+
+                        <!-- this is the actual cover image that will be shown if its
+                            available, otherwise only the background image is visible -->
+                        <imagetype name="buttonimage">
+                            <area>0,0,185,185</area>
+                            <mask>images/media/music_item_fmask.png</mask>
+                            <preserveaspect>true</preserveaspect>
+                        </imagetype>
 
                         <shape name="buttontext_background" from="base_background_shape_dark">
                             <area>7,118,171,60</area>
@@ -761,7 +755,6 @@
 
 
     <!-- DONE -->
-    <!-- TODO - cover border image and mask -->
     <!-- Shows the details of a song including coverart -->
     <window name="trackdetail_popup">
 
@@ -784,12 +777,12 @@
         <imagetype name="coverart_background_image">
             <area>105,140,450,450</area>
             <mask>images/media/music_cover_mask.png</mask>
-            <filename>images/media/music_cover_bg.png</filename>
+            <filename>images/media/music_type/album.png</filename>
             <preserveaspect>true</preserveaspect>
         </imagetype>
         <imagetype name="coverart">
             <area>105,140,450,450</area>
-            <filename />
+            <mask>images/media/music_cover_mask.png</mask>
             <preserveaspect>true</preserveaspect>
         </imagetype>
         <imagetype name="coverart_border">
