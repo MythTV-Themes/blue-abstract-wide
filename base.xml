@@ -1867,7 +1867,6 @@
 
 
 
-    <!-- UNFINISHED -->
     <!-- Popup search dialog used to search for something -->
     <window name="MythSearchListDialog">
        
@@ -1890,7 +1889,7 @@
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
-            <area>340,225,590,255</area>
+            <area>340,225,590,252</area>
         </shape>
 
         <textarea name="title" from="base_textarea">
