@@ -1310,7 +1310,6 @@
     
     
     
-    <!-- TODO - statetype add file and executable image -->
     <!-- TODO - aspect ratio broken? -->
     <!-- Dialog that is used to select a file from the filesystem
          and show a preview of the file if it is an image 
@@ -1475,8 +1474,18 @@
                                 <filename>images/icons/folder_up.png</filename>
                             </imagetype>
                         </state>
-                        <state name="file" />
-                        <state name="executable" />
+                        <state name="file">
+                            <imagetype name="node_icon" from="base_icon_inactive">
+                                <area>12,160,24,24</area>
+                                <filename>images/icons/file.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="executable">
+                            <imagetype name="node_icon" from="base_icon_inactive">
+                                <area>12,160,24,24</area>
+                                <filename>images/icons/file_executable.png</filename>
+                            </imagetype>
+                        </state>
                     </statetype>
                     
                     <imagetype name="background_image_border">
@@ -1525,8 +1534,18 @@
                                 <filename>images/icons/folder_up_selected.png</filename>
                             </imagetype>
                         </state>
-                        <state name="file" />
-                        <state name="executable" />
+                        <state name="file">
+                            <imagetype name="node_icon" from="base_icon_selected">
+                                <area>16,225,30,30</area>
+                                <filename>images/icons/file.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="executable">
+                            <imagetype name="node_icon" from="base_icon_selected">
+                                <area>16,225,30,30</area>
+                                <filename>images/icons/file_executable.png</filename>
+                            </imagetype>
+                        </state>
                     </statetype>
 
                     <imagetype name="background_image_border">

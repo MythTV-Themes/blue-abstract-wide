@@ -2,7 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "../mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- TODO channel icon border and background -->
     <!-- Shows the channel list and time at the top 
          The frontend will segfault when guidegrid is put in a group -->
     <group name="base_channellist_group">
