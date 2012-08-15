@@ -3,7 +3,6 @@
 <mythuitheme>
 
 
-    <!-- DONE -->
     <!-- The Non-LiveTV program guide.
         Shows the available tv program in a table like view. -->
     <window name="programguide" include="base_schedule.xml">
@@ -65,7 +64,6 @@
 
 
 
-    <!-- DONE -->
     <!-- TODO - video border image -->
     <!-- The LiveTV Program Guide. -->
     <window name="programguide-video" from="base_schedule.xml">
@@ -159,7 +157,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The Manual Schedule editor.
         Allows the user to schedule a recording manually. The input fields
         for the specific settings are shown here -->
@@ -241,7 +238,6 @@
     
     
     
-    <!-- DONE -->
     <!-- TODO check sorting helptext -->
     <!-- The Upcoming Recordings screen.
         Shows the scheduled recordings in a list like the recording screen. at the
@@ -354,7 +350,6 @@
 
 
 
-    <!-- DONE -->
     <!-- TODO channel icon background -->
     <!-- TODO check sorting helptext -->
     <!-- The Channel Priority screen.
@@ -609,7 +604,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The Custom Priority screen.
         Allows the user to create a custom priority rule -->
     <window name="custompriority">
@@ -717,7 +711,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Allows the user to find a program by browsing through the list
         of all available shows. they are sorted alphabetically -->
     <window name="programfind" include="base_schedule.xml">
@@ -811,7 +804,6 @@
 
 
 
-    <!-- DONE -->
     <!-- TODO check sorting helptext -->
     <!-- The Program List screen.
         Shows the previously scheduled recordings in a list like the
@@ -895,7 +887,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The Program Details screen.
         Shows detail information about the scheduled recording -->
     <window name="progdetails">
@@ -926,7 +917,6 @@
 
 
 
-    <!-- DONE -->
     <!-- shows the recording rules in a list like the recording screen.
         at the top is the list and at the bottom some information about the rule -->
     <window name="managerecrules" include="base_schedule.xml">
@@ -1045,7 +1035,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Allows the users to define custom record rules. -->
     <window name="customedit">
 
@@ -1140,7 +1129,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The Schedule Editor screen.
         Shows the general options for the currently scheduled recording. -->
     <window name="scheduleeditor" include="base_schedule.xml">
@@ -1216,7 +1204,6 @@
     
     
 
-    <!-- DONE -->
     <!-- The Schedule Options screen.
         Shows the schedule options for the currently scheduled recording. -->
     <window name="scheduleoptionseditor" include="base_schedule.xml">
@@ -1300,7 +1287,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The Schedule Filter Options screen.
         Shows the schedule filter options for the currently scheduled recording. -->
     <window name="schedulefiltereditor" include="base_schedule.xml">
@@ -1341,7 +1327,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The Storage Options screen.
         Shows the storage options for the currently scheduled recording. -->
     <window name="storageoptionseditor" include="base_schedule.xml">
@@ -1419,7 +1404,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The Post Processing screen.
         Shows the post processing options for the currently scheduled recording. -->
     <window name="postproceditor" include="base_schedule.xml">
@@ -1512,7 +1496,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The schedule changes screen. -->
     <window name="schedulediff" include="base_schedule.xml">
 
@@ -1593,7 +1576,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Allows the user to download fanart, coverart
          by specifying an IMDB number -->
     <window name="metadataoptions">
@@ -1700,7 +1682,6 @@
 
     
 
-    <!-- DONE -->
     <!-- Multiple screen template for screen using a text entry popup.
         Allows the user to enter a search term. -->
     <window name="phrasepopup">
@@ -1783,7 +1764,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The Power Search popup.
          Allows the user to enter a search term. -->
     <window name="powersearchpopup">
@@ -1862,7 +1842,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The Edit Power Search popup.
         Allows the user to enter a more specific search term. -->
     <window name="editpowersearchpopup">

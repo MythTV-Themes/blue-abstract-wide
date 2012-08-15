@@ -2,7 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- DONE -->
     <!-- TODO - buttonstate and buttoncheck -->
     <!-- Default screen that shows the the available images in a list -->
     <window name="gallery">
@@ -258,7 +257,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Configuration dialog. This is currently
          used by the MythImage plugin only -->
     <window name="galleryconfig">
@@ -346,7 +344,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Slideshow window which shows the a single image only or a slideshow.
          This is currently used by the MythImage plugin only -->
     <window name="slideshow">

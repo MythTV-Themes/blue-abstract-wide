@@ -2,7 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- DONE -->
     <!-- this is the screen where main mythburn screen where the user can select the
         recordings and videos that shall be burnt to disc -->
     <window name="exportnative" include="base_archive.xml">
@@ -30,7 +29,6 @@
 
 
 
-    <!-- DONE -->
     <!-- this is the screen where the user can select files from the file
         system to add these to the archive -->
     <window name="archivefile_selector">
@@ -183,7 +181,7 @@
 
 
 
-
+    <!-- UNFINISHED -->
     <!-- this is the screen where the user can see the info about the
         selected archive file -->
     <window name="importnative">

@@ -3,7 +3,6 @@
 <mythuitheme>
 
 
-    <!-- DONE -->
     <!-- TODO channel icon background -->
     <!-- Shows the available downloaded icons in 
         a lists where the user can select them -->
@@ -152,7 +151,6 @@
     
     
     
-    <!-- DONE -->
     <!-- TODO channel icon background -->
     <!-- Shows the available channels in a lists where
         the user can select them and download the logos, edit them,... -->
@@ -275,7 +273,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Shows two vertical lists where the user can select
         which entries he wants to see in the OSD menu -->
     <window name="osdmenueditor">
@@ -327,7 +324,6 @@
     
     
     
-    <!-- DONE -->
     <!-- Shows two vertical lists where the user can select
         the language and country that the frontend shall use -->
     <window name="languageselection">
@@ -456,7 +452,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Shows a list of the grabbers that are available -->
     <window name="grabbersettings">
 
@@ -530,7 +525,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Shows a screen where the user can 
          specify the display of the date and time -->
     <window name="generalwizard">
@@ -598,7 +592,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Shows a screen where the user can set his audio settings -->
     <window name="audiowizard">
 
@@ -708,7 +701,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Shows a screen where the user can 
          choose the vdpau playback profile, -->
     <window name="videowizard">
@@ -769,7 +761,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Shows a list of available backends -->
     <window name="backendselection">
 

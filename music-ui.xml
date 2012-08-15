@@ -2,7 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- DONE -->
     <!-- Shows the current playlist and more detailed information about
         the current song. Also shows the coverart and the visualizer -->
     <window name="playlistview" include="base_music.xml">
@@ -166,7 +165,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Shows the buttonlist tree at the top and the playlist information
         at the bottom. The user can navigate and select / add music -->
     <window name="playlisteditorview_tree" include="base_music.xml">
@@ -257,7 +255,6 @@
 
 
 
-    <!-- DONE -->
     <!-- TODO - buttonimages marked as todo -->
     <!-- TODO - buttontext background shape without borders at the top -->
     <!-- TODO - buttoncheck is not working -->
@@ -667,7 +664,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Allows the user to search for music -->
     <window name="searchview" include="base_music.xml">
 
@@ -754,7 +750,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Shows the details of a song including coverart -->
     <window name="trackdetail_popup">
 
@@ -928,7 +923,6 @@
     
 
     
-    <!-- DONE -->
     <!-- The user can edit the available music metadata 
          tags and select album, genre and artist images -->
     <window name="editmetadata">
@@ -1131,7 +1125,6 @@
     
    
    
-    <!-- DONE -->
     <!-- this is the small screen that pops up on every screen when a new
         song is played. it shows some information about the song. -->
     <window name="miniplayer">
@@ -1234,7 +1227,6 @@
 
 
 
-    <!-- DONE -->
     <!-- this is the popup screen that shows the volume progressbar. -->
     <window name="volume_popup">
 
@@ -1301,6 +1293,7 @@
 
 
 
+    <!-- UNFINISHED -->
     <!-- this is a screen where the user can import new cover images for the
         music from a choosen directory. It will be added to the collection. -->
     <window name="import_coverart">
@@ -1405,6 +1398,7 @@
 
 
 
+    <!-- UNFINISHED -->
     <!-- this is a screen where the user can import new music from a
         choosen directory. It will be added to the collection. -->
     <window name="import_music">
@@ -1558,6 +1552,7 @@
     
     
     
+    <!-- UNFINISHED -->
     <!-- shows the music in a three column list. Not required until the port
         to mythui is complete. -->
     <window name="musicplayer">
@@ -1644,6 +1639,7 @@
 
 
 
+    <!-- UNFINISHED -->
     <!-- this is the screen where the user can rip audio cds. -->
     <window name="cdripper">
 
@@ -1800,6 +1796,7 @@
 
 
 
+    <!-- UNFINISHED -->
     <!-- this is the screen that shows the progress of the cd rip. -->
     <window name="ripstatus">
 
@@ -1876,7 +1873,6 @@
     
     
     
-    <!-- DONE -->
     <!-- Shows the available album art for the selected song / album / artist -->
     <window name="editalbumart">
 
@@ -2066,7 +2062,6 @@
     
     
     
-    <!-- DONE -->
     <!-- this is the main smartplaylist editor screen -->
      <window name="smartplaylisteditor">
 
@@ -2223,7 +2218,6 @@
     
     
     
-    <!-- DONE -->
     <!-- Popup to edit a smartplaylist criteria row -->
     <window name="criteriaroweditor">
 
@@ -2337,7 +2331,6 @@
     
     
     
-    <!-- DONE -->
     <!-- popup to edit the date in a smartplaylist criteria dates -->
     <window name="dateeditordialog">
 
@@ -2463,7 +2456,6 @@
     
     
     
-    <!-- DONE -->
     <!-- Shows some information for the selected smartplaylist -->
     <window name="smartplresultviewer">
         
@@ -2548,7 +2540,6 @@
     
     
     
-    <!-- DONE -->
     <!-- popup to edit the smartplaylist order by clause-->
     <window name="orderbydialog">
 

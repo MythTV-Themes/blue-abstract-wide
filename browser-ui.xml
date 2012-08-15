@@ -2,7 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- DONE -->
     <!-- shows the selected bookmark or url in a browser window -->
     <window name="browser">
 
@@ -59,7 +58,6 @@
 
 
 
-    <!-- DONE -->
     <!-- presents the user with the available bookmarksm he can choose from -->
     <window name="bookmarkmanager">
 
@@ -150,7 +148,6 @@
 
 
 
-    <!-- DONE -->
     <!-- allows the user to add a new bookmarks -->
     <window name="bookmarkeditor">
 
@@ -234,7 +231,6 @@
 
 
 
-    <!-- DONE -->
     <!-- allows the user to configure some mythbrowser settings -->
     <window name="browserconfig">
 

@@ -2,9 +2,7 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- DONE -->
     <!-- shows some debug information on the screen -->
-    <!--<window name="osd_debug">-->
     <window name="osd_debug">
         
         <!-- The information and the clock that is 
@@ -163,7 +161,6 @@
 
 
 
-    <!-- DONE -->
     <!-- shows a message on the screen -->
     <window name="osd_message">
         <area>0,0,1280,720</area>
@@ -195,7 +192,6 @@
 
 
 
-    <!-- DONE -->
     <!-- shows an input message on the screen -->
     <window name="osd_input">
         <area>0,0,1280,720</area>
@@ -228,7 +224,6 @@
 
 
 
-    <!-- DONE -->
     <!-- shows the title and the progress of 
          the current recording/movie/tv -->
     <window name="osd_status">
@@ -297,7 +292,6 @@
 
 
 
-    <!-- DONE -->
     <!-- TODO: eac3.png -->
     <!-- shows the icon and the details/description 
          of the current recording/movie/tv -->
@@ -647,7 +641,6 @@
 
 
 
-    <!-- DONE -->
     <!-- shows the icon and the details/description 
          of the current recording/movie/tv -->
     <window name="browse_info">
@@ -778,7 +771,6 @@
 
 
 
-    <!-- DONE -->
     <!-- dialog box that shows the current channel 
          options. The user can edit these -->
     <window name="ChannelEditor">
@@ -970,7 +962,6 @@
 
 
 
-    <!-- DONE -->
     <!-- TODO: cutpoint are not visible -->
     <!-- TODO: move down -->
     <!-- dialog box where the user can edit the current program -->
@@ -1083,7 +1074,6 @@
 
 
 
-    <!-- DONE -->
     <!-- dialog box that shows the most 
          important options and controls -->
     <window name="MythPopupBox">

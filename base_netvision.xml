@@ -2,7 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "../mythuitheme.dtd">
 <mythuitheme> 
 
-    <!-- DONE -->
     <!-- TODO - Upfolder background image, Preview background icon -->
     <!-- Shows the preview icon, the description and some 
          details about the selected video/rss feed -->

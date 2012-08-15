@@ -2,7 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- DONE -->
     <!-- waits for a keypress fom the user -->
     <window name="keygrabpopup">
 
@@ -53,7 +52,7 @@
 
 
 
-    <!-- DONE -->
+
     <!-- allows the user to change the keyboard associations -->
     <window name="controls">
 

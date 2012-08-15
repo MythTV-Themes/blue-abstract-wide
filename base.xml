@@ -183,7 +183,6 @@
 
 
 
-    <!-- DONE -->
     <!-- the textare widget that shows only text -->
     <textarea name="base_textarea">
         <area>0,0,30,30</area>
@@ -195,7 +194,6 @@
 
    
 
-    <!-- DONE -->
     <!-- the buttonlist widget with a width of 350px -->
     <buttonlist name="base_buttonlist">
         <area>0,0,350,280</area>
@@ -313,7 +311,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Base definition of a buttonlist in 'selector' configuration with a width
          of 200px. This is pretty much the same as the base_buttonlist -->
     <buttonlist name="base_selector">
@@ -369,7 +366,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Base definition of a buttonlist in wide 'selector' 
          configuration with a width of 350px -->
     <buttonlist name="base_selector_wide" from="base_selector">
@@ -393,7 +389,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Base definition of a buttonlist in wide 'selector' 
          configuration with a width of 650px -->
     <buttonlist name="base_selector_very_wide" from="base_selector">
@@ -417,7 +412,6 @@
 
 
 
-    <!-- DONE -->
     <!-- button widget with a width 150px -->
     <button name="base_button">
         <area>0,0,150,36</area>
@@ -461,7 +455,6 @@
 
 
 
-    <!-- DONE -->
     <!-- button widget with a width of 300px -->
     <button name="base_button_wide" from="base_button">
         <area>0,0,300,36</area>
@@ -485,7 +478,6 @@
 
 
 
-    <!-- DONE -->
     <!-- textedit widget with a width 375px -->
     <textedit name="base_textedit">
         <area>0,0,375,36</area>
@@ -538,7 +530,6 @@
     
     
 
-    <!-- DONE -->
     <!-- a search button widget -->
     <button name="base_searchbutton" from="base_button">
         <area>0,0,36,36</area>
@@ -578,8 +569,6 @@
 
 
 
-    <!-- DONE -->
-    <!-- TODO - checkbox image -->
     <!-- checkbox widget -->
     <checkbox name="base_checkbox">
         <area>0,0,36,36</area>
@@ -632,7 +621,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Spinbox widget with a width 90px -->
     <spinbox name="base_spinbox">
         <area>0,0,70,36</area>
@@ -694,7 +682,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Spinbox widget with a width 350px -->
     <spinbox name="base_spinbox_wide" from="base_spinbox">
         <area>0,0,350,36</area>
@@ -717,7 +704,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Spinbox with a width of 650px -->
     <spinbox name="base_spinbox_very_wide" from="base_spinbox">
         <area>0,0,650,36</area>
@@ -740,7 +726,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Background of the rating widget that 
          shows only the inactive stars -->
     <imagetype name="base_rating_background">
@@ -752,7 +737,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Rating widget that shows 1 to 5 stars -->
     <statetype name="base_rating">
         <area>0,0,90,18</area>
@@ -813,7 +797,6 @@
 
 
 
-    <!-- DONE -->
    <!-- Background of the parental level widget 
         that shows only the inactive stars-->
     <imagetype name="base_parentallevel_background">
@@ -825,7 +808,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Parental level widget that shows 1 to 4 stars -->
     <statetype name="base_parentallevel">
         <area>0,0,72,18</area>
@@ -853,7 +835,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Progressbar widget with a width of 500px -->
     <progressbar name="base_progressbar">
         <area>0,0,500,20</area>
@@ -872,7 +853,6 @@
     
     
     
-    <!-- DONE -->
     <!-- Shows the clock and the name of the screen  
          in the top left corner of each screen -->
     <textarea name="base_heading">
@@ -903,7 +883,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Popup dialog box that has various usages in many screens -->
     <window name="MythPopupBox">
 
@@ -981,7 +960,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Fullscreen Dialogue Box -->
     <window name="MythDialogBox">
 
@@ -1057,7 +1035,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Shows a rotating icon when mythtv is busy doing stuff -->
     <window name="MythBusyDialog">
 
@@ -1100,7 +1077,6 @@
 
 
     
-    <!-- DONE -->
     <!-- Shows a progressbar when mythtv is busy doing stuff -->
     <window name="MythProgressDialog">
 
@@ -1150,7 +1126,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Confirmation dialog box that is used
         in many screens for different things -->
     <window name="MythConfirmationDialog">
@@ -1201,7 +1176,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Shows a dialog box that is used for text input -->
     <window name="MythTextInputDialog">
 
@@ -1258,7 +1232,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Dialog box that is used to enter a search 
          string and show the results of the search -->
     <window name="MythSearchDialog">
@@ -1337,7 +1310,6 @@
     
     
     
-    <!-- DONE -->
     <!-- TODO - statetype add file and executable image -->
     <!-- TODO - aspect ratio broken? -->
     <!-- Dialog that is used to select a file from the filesystem
@@ -1587,7 +1559,6 @@
     
     
 
-    <!-- DONE -->
     <!-- Template screen type for screens using a date and time buttonlist.
          Allows the user to select how (timewise) the schedule will be recorded. -->
     <window name="MythTimeInputDialog">
@@ -1645,7 +1616,6 @@
 
 
     
-    <!-- DONE -->
     <!-- Screen that shows the please wait and a progressbar -->
     <window name="videowindow">
 
@@ -1671,7 +1641,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Shows the screen where the user can select the different
         choices that the imdb or the other movie databases offers -->
     <window name="MythMetadataResults">
@@ -1744,7 +1713,6 @@
 
 
 
-    <!-- DONE -->
     <!-- TODO - aspect ratio broken? -->
     <!-- Shows the screen where the user can select the different
          artwork choices that the search has returned -->
@@ -1899,7 +1867,7 @@
 
 
 
-
+    <!-- UNFINISHED -->
     <!-- Popup search dialog used to search for something -->
     <window name="MythSearchListDialog">
        
@@ -1988,7 +1956,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Shows the help description in the setting windows -->
     <group name="base_helptext_group">
 

@@ -2,7 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "../mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- DONE -->
     <!-- The "View Cast" popup which shows details 
         about the cast of the selected video  -->
     <window name="castpopup">
@@ -34,7 +33,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The "View Plot" popup which shows details 
         about the description of the selected video  -->
     <window name="descriptionpopup">
@@ -79,7 +77,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The Video Gallery view type which shows 
         pretty much only the videos and nothing else. -->
     <window name="gallery" include="base_video.xml">
@@ -155,7 +152,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Shows a horizontal list of videos and only the
         cover and details of one video at a time. the cover is shown
         at the left and in the center of the screen some video details -->
@@ -196,7 +192,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The manager screen shows a list of all videos in 
         two rows and some video details at the bottom -->
     <window name="manager" include="base_video.xml">
@@ -238,7 +233,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The List View screen shows a list of videos like in a file browser. there are
         two columns like in the music plugin where the user can navigate
         through the videos and see some details at the bottom -->
@@ -301,7 +295,6 @@
 
 
 
-    <!-- DONE -->
     <!-- In the File Extensions screen the user can change 
         the file extensions that determine which files 
         shall be scanned and recognized as a video file -->
@@ -379,7 +372,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The Video Filter Dialog shows the screen where the 
         user can filter the list of videos by different criteries -->
     <window name="filter">
@@ -522,7 +514,6 @@
 
 
 
-    <!-- DONE -->
     <!-- When an item is selected in Gallery View, this
         window is popped up showing details before playback.
         (Main window) shows details about the slected video and the option to play it -->
@@ -568,7 +559,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The Edit Metadata Screen allows to edit 
         the available metadata of the video -->
     <window name="edit_metadata">
@@ -838,7 +828,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The Player Settings Screen shows the settings how to 
         play the videos. Either by the internal or external player. -->
     <window name="playersettings">
@@ -952,7 +941,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The Metadata Settings Screen shows the settings how 
         the data for the videos will be retrieved. The 
         user can choose from different movie grabbers. -->

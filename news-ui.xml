@@ -91,7 +91,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Allows the user to add a new news site -->
     <window name="editor">
 
@@ -170,7 +169,6 @@
 
 
 
-    <!-- DONE -->
     <!-- This is the configuration window for mythnews -->
     <window name="config">
 

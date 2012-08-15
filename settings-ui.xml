@@ -2,7 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
     
-    <!-- DONE -->
     <window name="rawsettingseditor">
 
         <imagetype name="background" from="base_background"/>
@@ -78,7 +77,6 @@
 
 
 
-    <!-- DONE -->
     <!-- TODO: icons for buttonlist -->
     <!-- Presents a list of available themes 
         that the user can download and install -->

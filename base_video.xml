@@ -3,7 +3,6 @@
 <mythuitheme>
 
 
-    <!-- DONE -->
     <!-- Shows a large version of the video cover with the rating below it -->
     <group name="base_video_large_cover_group">
 
@@ -30,7 +29,6 @@
     
     
     
-    <!-- DONE -->
     <!-- Shows all information about the selected video without a border
          This is usually used in the itemdetailpopup window -->
     <group name="base_video_detailed_description_group">
@@ -143,7 +141,6 @@
         
         
         
-    <!-- DONE -->
     <!-- Shows the title and the description of the selected video -->
     <group name="base_video_description_group">
 
@@ -187,7 +184,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Shows more details about the selected video -->
     <group name="base_video_details_group">
 
@@ -274,7 +270,6 @@
     
     
     
-    <!-- DONE -->
     <!-- the list of the available videos -->
     <group name="base_video_gallery_list_group">
 

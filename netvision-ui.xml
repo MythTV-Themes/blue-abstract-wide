@@ -2,7 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- DONE -->
     <!-- shows a list of available sites that the user can search for videos
         the results will be presented on the right and information with a
         preview image at the bottom -->
@@ -84,7 +83,6 @@
     
     
 
-    <!-- DONE -->
     <!-- shows a list of available sites that the user can activate -->
     <window name="treeeditor">
 
@@ -115,7 +113,6 @@
 
 
 
-    <!-- DONE -->
     <!-- shows a list of available rss feeds that the user has configured.
         Allows the user to add, edit or remove the feeds. -->
     <window name="rsseditor">
@@ -211,7 +208,6 @@
 
 
 
-    <!-- DONE -->
     <!-- allows the user to edit or enter new values for the selected
         rss feed that he selected in the rsseditor window. -->
     <window name="rsseditpopup">
@@ -309,8 +305,6 @@
    
    
    
-    <!-- DONE -->
-    <!-- TODO - Preview background icon from watch recordings -->
     <!-- Shows a list of rss feeds and videos like in a file browser.
          there are three columns like in the video plugin where the user can navigate
          through the items and see some details at the bottom -->
@@ -383,8 +377,6 @@
 
 
 
-    <!-- DONE -->
-    <!-- TODO - Preview background icon from watch recordings -->
     <!-- The Browser view shows a horizontal list of videos and only the
         cover and details of one video at a time. the preview is shown
         at the left and in the center of the screen some video details -->
@@ -429,8 +421,6 @@
 
 
 
-    <!-- DONE -->
-    <!-- TODO - buttontext background shape without borders at the top -->
     <!-- The Gallery view shows a list of all videos side by side -->
     <window name="gallery" include="base_netvision.xml">
 

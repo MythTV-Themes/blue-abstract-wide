@@ -2,6 +2,7 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
+    <!-- UNFINISHED -->
     <window name="welcome_screen">
         
         <imagetype name="background" from="base_background"/>

@@ -3,7 +3,6 @@
 
 <mythuitheme>
 
-    <!-- DONE -->
     <!-- TODO Fix the visualizer border stuff, mask isnt working for the video widget -->
     <!-- Shows the current internet streams and more detailed information about
         the current song. Also shows the coverart and the visualizer -->
@@ -249,7 +248,6 @@
     
     
     
-    <!-- DONE -->
     <!-- Shows the available stream information that can be edited -->
     <window name="editstreammetadata">
 
@@ -340,7 +338,6 @@
     
     
     
-    <!-- DONE -->
     <!-- TODO add a better icecase placeholder -->
     <!-- TODO check whats with the selectedstate -->
     <!-- Shows all available streams that can be selected -->

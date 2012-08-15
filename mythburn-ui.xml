@@ -2,7 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- DONE -->
     <!-- this is the theme selector screen where the user can choose from
         a list of available themes. The DVD menu will then look like it -->
     <window name="themeselector">
@@ -162,7 +161,6 @@
 
 
 
-    <!-- DONE -->
     <!-- this is the main mythburn screen where the user can select the
         recordings and videos that shall be burnt to disc -->
     <window name="mythburn" include="base_archive.xml">
@@ -190,7 +188,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Presents a list of the available encoding profiles with a small 
          description that the user can choose to create an archive -->
     <window name="profilepopup">
@@ -265,7 +262,6 @@
 
 
 
-    <!-- DONE -->
     <!-- this is the screen where the user can edit some
         information about the archive -->
     <window name="edit_metadata">

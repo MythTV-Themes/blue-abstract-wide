@@ -3,7 +3,6 @@
 <mythuitheme>
 
 
-    <!-- DONE -->
     <!-- TODO: add coverart background image -->
     <!-- Shows the list of available games -->
     <window name="gameui">
@@ -131,7 +130,6 @@
 
 
 
-    <!-- DONE -->
     <!-- TODO: add coverart background image -->
     <!-- TODO: add favorite star not working -->
     <!-- Shows details about the selected game -->
@@ -294,7 +292,6 @@
 
 
 
-    <!-- DONE -->
     <!-- Allows the user to edit the metadata of the selected game -->
     <window name="edit_metadata">
 

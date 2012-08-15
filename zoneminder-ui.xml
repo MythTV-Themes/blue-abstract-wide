@@ -3,7 +3,8 @@
 <mythuitheme>
 
     <!-- ported to 0.22 by warpme@o2.pl Contact for any bugs/comments-->
-        
+
+    <!-- UNFINISHED -->        
     <window name="functionpopup">
 
         <!-- darkens the entire background so that the popup is better readable -->
@@ -59,6 +60,7 @@
     </window>
 
 
+    <!-- UNFINISHED -->
     <window name="zmconsole">
 
         <fontdef name="running" from="title">
@@ -225,6 +227,7 @@
     </window>
 
 
+    <!-- UNFINISHED -->
     <window name="zmevents">
 
         <!-- the background image of the screen -->
@@ -520,6 +523,7 @@
     </window>
 
 
+    <!-- UNFINISHED -->
     <window name="zmplayer">
 
         <!-- the background image of the screen -->
@@ -629,6 +633,7 @@
     </window>
 
 
+    <!-- UNFINISHED -->
     <window name="zmliveplayer">
 
         <fontdef name="monitor" from="text_small">

@@ -3,7 +3,6 @@
 <mythuitheme>
 
 
-    <!-- DONE -->
     <!-- a search button widget -->
     <button name="base_add_button" from="base_searchbutton">
         <area>0,0,36,36</area>
@@ -31,7 +30,6 @@
     </button>
     
     
-    <!-- DONE -->
     <!-- a search button widget -->
     <button name="base_delete_button" from="base_searchbutton">
         <area>0,0,36,36</area>
@@ -60,7 +58,6 @@
     
     
     
-    <!-- DONE -->
     <!-- a button widget to increase the music rating -->
     <button name="base_rating_inc_button" from="base_searchbutton">
         <area>0,0,36,36</area>
@@ -89,7 +86,6 @@
     
     
  
-    <!-- DONE -->
     <!-- a button widget to decrease the music rating -->
     <button name="base_rating_dec_button" from="base_searchbutton">
         <area>0,0,36,36</area>
@@ -118,7 +114,6 @@
     
     
     
-    <!-- DONE -->
     <!-- a search button widget -->
     <button name="base_sort_asc_button" from="base_searchbutton">
         <area>0,0,36,36</area>
@@ -147,7 +142,6 @@
     
     
     
-    <!-- DONE -->
     <!-- a search button widget -->
     <button name="base_sort_desc_button" from="base_searchbutton">
         <area>0,0,36,36</area>
@@ -176,7 +170,6 @@
     
     
     
-    <!-- DONE -->
     <!-- a search button widget -->
     <button name="base_move_up_button" from="base_searchbutton">
         <area>0,0,36,36</area>
@@ -205,7 +198,6 @@
     
     
     
-    <!-- DONE -->
     <!-- a search button widget -->
     <button name="base_move_down_button" from="base_searchbutton">
         <area>0,0,36,36</area>
@@ -369,7 +361,6 @@
     
     
     
-    <!-- DONE -->
     <!-- Shows track information and the shuffle and repeat states -->
     <group name="base_current_playlistinfo_group">
         
@@ -414,7 +405,6 @@
     
     
     
-    <!-- DONE -->
     <!-- The active playlist with more details about the tracks -->
     <group name="base_current_playlist_group">
     

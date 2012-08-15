@@ -3,7 +3,6 @@
 <mythuitheme>
 
 
-    <!-- DONE -->
     <!-- This is the screen where the user can choose from the avialable
          dvd formats where the recordings will be saved to. -->
     <window name="selectdestination">
@@ -96,7 +95,6 @@
 
 
 
-    <!-- DONE -->
     <!-- this is the screen where the user can select the avialable
         recordings that will be saved to dvd. -->
     <window name="recording_selector">
@@ -235,7 +233,6 @@
 
 
 
-    <!-- DONE -->
     <!-- this is the screen where the user can select the
         files from the harddisk that will be saved to dvd. -->
     <window name="file_selector">
@@ -356,7 +353,6 @@
 
 
 
-    <!-- DONE -->
     <!-- this is the screen where the user can select the avialable
         videos that will be saved to dvd. -->
     <window name="video_selector">
@@ -471,7 +467,6 @@
 
 
 
-    <!-- DONE -->
     <!-- this is the screen shows the logs of the dvd creation -->
     <window name="logviewer">
 

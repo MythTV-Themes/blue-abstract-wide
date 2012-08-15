@@ -2,7 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- DONE -->
     <window name="status">
 
         <imagetype name="background" from="base_background"/>
@@ -63,7 +62,6 @@
 
 
 
-    <!-- DONE -->
     <window name="standbymode">
 
         <!-- the background behind the images (black) -->

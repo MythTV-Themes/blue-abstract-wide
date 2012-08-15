@@ -2,6 +2,7 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
+    <!-- UNFINISHED -->
     <!-- The screen where the user can adjust the monitor. -->
     <window name="appearance">
 

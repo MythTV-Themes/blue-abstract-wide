@@ -2,7 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- DONE -->
     <!-- TODO processing and jobstate icons -->
     <!-- shows a list of available recording groups and its recordings
         together with some detail information about the recording -->
@@ -150,7 +149,6 @@
 
     
 
-    <!-- DONE -->
     <!-- shows a list of available recording groups and its recordings
         together with some detail information about the recording -->
     <window name="deleterecordings" include="base_recording.xml">
@@ -279,18 +277,19 @@
     
     
 
+    <!-- UNFINISHED -->
     <!-- The Group Filter popup. -->
     <!-- <window name="groupfilter"> -->
 
 
 
 
+    <!-- UNFINISHED -->
     <!-- <window name="customexport"> -->
 
 
 
 
-    <!-- DONE -->
     <!-- The Change View popup.
         Shows a list of icons that describe the status of a recording  -->
     <window name="changeview">
@@ -384,7 +383,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The Group selector popup.
         Allows the user to change the password -->
     <window name="passwordchanger">
@@ -439,7 +437,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The Group selector popup.
         Shows a list of available groups that can be preselected -->
     <window name="groupselector">
@@ -471,7 +468,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The Help popup which shows a list of icons 
          that describe the status of a recording  -->
     <window name="iconhelp">
@@ -655,7 +651,6 @@
 
 
 
-    <!-- DONE -->
     <!-- The Edit Recording Title / Subtitle window -->
     <window name="editmetadata">
 
