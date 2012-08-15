@@ -77,7 +77,6 @@
 
 
 
-    <!-- TODO: icons for buttonlist -->
     <!-- Presents a list of available themes 
         that the user can download and install -->
     <window name="themechooser">
@@ -114,13 +113,13 @@
                     <statetype name="themelocation">
                         <state name="local">
                             <imagetype name="location" from="base_icon_selected">
-                                <area>405,3,30,30</area>
+                                <area>406,4,28,28</area>
                                 <filename>images/icons/home.png</filename>
                             </imagetype>
                         </state>
                         <state name="remote">
                             <imagetype name="location" from="base_icon_selected">
-                                <area>405,3,30,30</area>
+                                <area>406,4,28,28</area>
                                 <filename>images/icons/world.png</filename>
                             </imagetype>
                         </state>
@@ -131,13 +130,13 @@
                     <statetype name="themestatus">
                         <state name="uptodate">
                             <imagetype name="status" from="base_icon_selected">
-                                <area>443,3,30,30</area>
+                                <area>444,4,28,28</area>
                                 <filename>images/icons/selected.png</filename>
                             </imagetype>
                         </state>
                         <state name="updateavailable">
                             <imagetype name="status" from="base_icon_selected">
-                                <area>443,3,30,30</area>
+                                <area>444,4,28,28</area>
                                 <filename>images/icons/update.png</filename>
                             </imagetype>
                         </state>
