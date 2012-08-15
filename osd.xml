@@ -292,7 +292,6 @@
 
 
 
-    <!-- TODO: eac3.png -->
     <!-- shows the icon and the details/description 
          of the current recording/movie/tv -->
     <window name="program_info">
