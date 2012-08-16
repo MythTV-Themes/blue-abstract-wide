@@ -173,20 +173,14 @@
             <statetype name="buttonitem">
                 <state name="active">
                     <area>0,0,450,52</area>
-                    
-                    <imagetype name="icon_background">
-                        <area>6,6,53,40</area>
-                        <filename>images/media/channel_bg.png</filename>
-                    </imagetype>
-                    <imagetype name="icon">
-                        <area>6,6,53,40</area>                        
-                        <filename />
-                    </imagetype>
-                    <shape name="icon_border" from="base_background_shape">
+
+                    <shape name="icon_background" from="base_background_shape">
                         <area>5,5,55,42</area>
-                        <fill color="#000000" alpha="0" />
                         <cornerradius>0</cornerradius>
                     </shape>
+                    <imagetype name="icon">
+                        <area>6,6,53,40</area>
+                    </imagetype>
 
                     <textarea name="channum" from="base_textarea">
                         <area>70,2,70,30</area>
