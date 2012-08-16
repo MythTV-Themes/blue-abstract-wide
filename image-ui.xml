@@ -274,7 +274,7 @@
 
         <!-- the shape where the imagelist is displayed -->
         <shape name="galleryconfig_background" from="base_background_shape">
-            <area>160,265,960,335</area>
+            <area>160,265,960,332</area>
         </shape>
 
         <textarea name="sgname_label" from="base_textarea">
