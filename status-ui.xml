@@ -84,7 +84,7 @@
             </imagetype>
             <state name="idle">
                 <textarea name="status" from="base_textarea">
-                    <area>70,0,480,30</area>
+                    <area>70,0,465,30</area>
                     <value>Backend is idle</value>
                 </textarea>
             </state>
