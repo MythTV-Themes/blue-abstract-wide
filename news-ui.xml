@@ -60,7 +60,7 @@
         </shape>
 
         <textarea name="title" from="base_textarea">
-            <area>35,550,960,36</area>
+            <area>35,550,1210,36</area>
             <font>title</font>
             <scroll direction="horizontal" />
         </textarea>
