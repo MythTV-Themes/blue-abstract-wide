@@ -40,13 +40,13 @@
                     <area>0,0,650,36</area>
                     <shape name="background" from="base_button_shape_selectedactive"/>
                 </state>
+                <state name="selectedinactive" from="active"/>
             </statetype>
 
         </buttonlist>
 
         <webbrowser name="webbrowser">
             <area>0,45,1280,675</area>
-            <zoom>1.2</zoom>
         </webbrowser>
 
         <!-- additonally an optional progressbar 
