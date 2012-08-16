@@ -2,37 +2,26 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- UNFINISHED -->
     <!-- The screen where the user can adjust the monitor. -->
     <window name="appearance">
 
         <imagetype name="background" from="base_background"/>
 
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Appearance Wizard</value>
-            </textarea>
-        </textarea>
+        <!-- The header is not shown so that the user can see 
+             the arrow on the top left on the screen -->
         
         <!-- this is the background for the information at the bottom -->
         <shape name="appearance_background" from="base_background_shape">
             <area>350,250,580,220</area>
         </shape>
 
-        <imagetype name="topleft">
+        <imagetype name="topleft" from="base_icon_selected">
             <position>0,0</position>
-            <filename />
-            <shape name="topleft_shape" from="base_background_shape_dark">
-                <area>0,0,40,40</area>
-            </shape>
+            <filename>images/icons/calibrate_top_left.png</filename>
         </imagetype>
-        <imagetype name="bottomright">
-            <position>1240,640</position>
-            <filename />
-            <shape name="bottomright_shape" from="base_background_shape_dark">
-                <area>1240,640,40,40</area>
-            </shape>
+        <imagetype name="bottomright" from="base_icon_selected">
+            <position>1216,576</position>
+            <filename>images/icons/calibrate_bottom_right.png</filename>
         </imagetype>
 
         <textarea name="part1" from="base_textarea">
