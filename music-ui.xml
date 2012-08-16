@@ -44,17 +44,17 @@
             <area>-15,490,1310,40</area>
         </shape>
         <textarea name="playlisttime" from="base_textarea">
-            <area>785,492,220,36</area>
+            <area>765,492,220,36</area>
             <align>right,vcenter</align>
         </textarea>
         <statetype name="repeatstate" from="base_music_repeatstate">
-            <area>1012,492,36,36</area>
+            <area>992,492,36,36</area>
         </statetype>
         <statetype name="shufflestate" from="base_music_shufflestate">
-            <area>1052,492,36,36</area>
+            <area>1032,492,36,36</area>
         </statetype>
         <textarea name="playlistposition" from="base_textarea">
-            <area>1095,492,160,36</area>
+            <area>1075,492,180,36</area>
             <align>right,vcenter</align>
         </textarea>
 
