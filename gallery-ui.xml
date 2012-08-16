@@ -239,60 +239,61 @@
             </textarea>
         </textarea>
 
-        <!-- the shape where the imagelist is displayed -->
         <shape name="filter_background" from="base_background_shape">
-            <area>260,190,760,320</area>
+            <area>310,385,660,212</area>
         </shape>
 
-        <!-- Filter: labels -->
         <textarea name="filter_text" from="base_textarea">
-            <area>280,210,200,40</area>
+            <area>330,400,240,36</area>
+            <align>right,vcenter</align>
             <value>Directory filter:</value>
-            <align>right,vcenter</align>
         </textarea>
-        <textarea name="type_filter" from="base_textarea">
-            <area>280,260,200,40</area>
+        <textarea name="type_filter" from="filter_text">
+            <position>330,440</position>
             <value>Type filter:</value>
-            <align>right,vcenter</align>
         </textarea>
-        <textarea name="sort_text" from="base_textarea">
-            <area>280,310,200,40</area>
+        <textarea name="sort_text" from="filter_text">
+            <position>330,480</position>
             <value>Sort by:</value>
-            <align>right,vcenter</align>
         </textarea>
 
-        <!-- Widgets -->
         <textedit name="dirfilter_text" from="base_textedit">
-            <position>490,210</position>
+            <position>580,400</position>
         </textedit>
         <buttonlist name="typefilter_select" from="base_selector">
-            <position>490,260</position>
+            <position>580,440</position>
         </buttonlist>
         <button name="check_button" from="base_button">
-            <position>715,260</position>
+            <position>805,440</position>
             <value>Check Filter</value>
         </button>
         <buttonlist name="sort_select" from="base_selector_wide">
-            <position>490,310</position>
+            <position>580,480</position>
         </buttonlist>
 
-        <!-- shows the amount of filtered videos -->
-        <shape name="numvideos_background" from="base_background_shape">
-            <area>280,370,720,60</area>
-        </shape> 
-        <textarea name="numimages_text" from="base_textarea">
-            <area>300,370,680,60</area>
-            <align>allcenter</align>
-        </textarea>
-
-        <button name="save_button" from="base_button_wide">
-            <position>490,450</position>
-            <value>Save as default</value>
+        <shape name="button_separator" from="base_background_shape">
+            <area>311,530,658,1</area>
+        </shape>
+        
+        <button name="save_button" from="base_button">
+            <position>485,545</position>
+            <value>Save</value>
         </button>
         <button name="done_button" from="base_button">
-            <position>850,450</position>
-            <value>Done</value>
+            <position>650,545</position>
+            <value>Cancel</value>
         </button>
+
+        <shape name="helptext_background_bottom" from="base_background_shape">
+            <area>-15,615,1310,90</area>
+        </shape>
+        <textarea name="numimages_text" from="base_textarea">
+            <area>120,615,1040,90</area>
+            <scroll direction="vertical"/>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+            <value>Enter your current location, nearest large town or city. In some countries postal codes are also supported.</value>
+        </textarea>
 
     </window>
 
