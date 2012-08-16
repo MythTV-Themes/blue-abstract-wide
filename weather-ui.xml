@@ -21,14 +21,18 @@
             <scroll direction="horizontal" />
         </textarea>
 
+        <imagetype name="status_background">
+            <area>730,-1,560,50</area>
+            <filename>images/media/header_right.png</filename>
+        </imagetype>
+
+        <textarea name="pause_text" from="base_textarea">
+            <area>780,0,100,30</area>
+        </textarea>
+
         <shape name="weatherbase_background" from="base_background_shape">
             <area>-15,670,1310,38</area>
         </shape>
-
-        <textarea name="pause_text" from="base_textarea">
-            <area>750,675,130,30</area>
-            <align>right,vcenter</align>
-        </textarea>
 
         <textarea name="update_text" from="base_textarea">
             <area>910,675,350,30</area>
@@ -47,83 +51,81 @@
     <window name="Current Conditions">
 
         <shape name="current_condition_background" from="base_background_shape">
-            <area>290,210,697,302</area>
+            <area>290,220,697,262</area>
         </shape>
 
         <textarea name="cclocation" from="base_textarea">
-            <area>305,215,410,36</area>
-        </textarea>
-
-        <textarea name="observation_time" from="base_textarea">
-            <area>730,215,240,36</area>
+            <area>900,0,365,30</area>
             <align>right,vcenter</align>
             <scroll direction="horizontal"/>
         </textarea>
 
-        <shape name="title_separator" from="base_background_shape">
-            <area>291,255,695,1</area>
-        </shape>
+        <textarea name="observation_time" from="base_textarea">
+            <area>910,675,350,30</area>
+            <align>right,vcenter</align>
+            <scroll direction="horizontal"/>
+        </textarea>
 
         <!-- the icon and the temp information -->
         <imagetype name="weather_icon">
-            <area>305,265,200,150</area>
+            <area>305,235,200,150</area>
             <filename>unknown.png</filename>
         </imagetype>
         <textarea name="weather" from="base_textarea">
-            <area>305,425,200,36</area>
+            <area>305,395,200,36</area>
             <multiline>yes</multiline>
             <align>allcenter</align>
         </textarea>
         <textarea name="temp" from="base_textarea">
-            <area>305,465,200,36</area>
+            <area>305,435,200,36</area>
             <align>allcenter</align>
         </textarea>
 
         <!-- the labels on the left side -->
         <textarea name="humiditylbl" from="base_textarea">
-            <area>520,265,220,36</area>
+            <area>520,235,220,36</area>
             <value>Humidity</value>
             <align>right,vcenter</align>
         </textarea>
         <textarea name="pressurelbl" from="humiditylbl">
-            <position>520,305</position>
+            <position>520,275</position>
             <value>Pressure</value>
         </textarea>
         <textarea name="windlbl" from="humiditylbl">
-            <position>520,345</position>
+            <position>520,315</position>
             <value>Wind(Gust)</value>
         </textarea>
         <textarea name="dirlbl" from="humiditylbl">
-            <position>520,385</position>
+            <position>520,355</position>
             <value>Wind Direction</value>
         </textarea>
         <textarea name="visilbl" from="humiditylbl">
-            <position>520,425</position>
+            <position>520,395</position>
             <value>Visibility</value>
         </textarea>
         <textarea name="apptlbl" from="humiditylbl">
-            <position>520,465</position>
+            <position>520,435</position>
             <value>Feels Like</value>
         </textarea>
 
         <!-- the value in the center -->
         <textarea name="relative_humidity" from="base_textarea">
-            <area>755,265,300,36</area>
+            <area>755,235,300,36</area>
         </textarea>
         <textarea name="pressure" from="relative_humidity">
-            <position>755,305</position>
+            <position>755,275</position>
         </textarea>
         <textarea name="wind_spdgst" from="relative_humidity">
-            <position>755,345</position>
+            <position>755,315</position>
         </textarea>
         <textarea name="wind_dir" from="relative_humidity">
-            <position>755,385</position>
+            <position>755,355</position>
         </textarea>
         <textarea name="visibility" from="relative_humidity">
-            <position>755,425</position>
+            <position>755,395</position>
         </textarea>
         <textarea name="appt" from="relative_humidity">
-            <position>755,465</position>
+            <position>755,435</position>
         </textarea>
 
         
@@ -143,70 +145,69 @@
 
 
 
-    <!-- UNFINISHED -->
     <window name="Three Day Forecast">
 
         <textarea name="3dlocation" from="base_textarea">
-            <area>800,86,390,30</area>
+            <area>900,0,365,30</area>
             <align>right,vcenter</align>
-            <cutdown>yes</cutdown>
+            <scroll direction="horizontal"/>
         </textarea>
 
+        <shape name="background-0" from="base_background_shape">
+            <area>100,100,350,245</area>
+        </shape>
+        <shape name="background-1" from="background-0">
+            <position>465,100</position>
+        </shape>
+        <shape name="background-2" from="background-0">
+            <position>830,100</position>
+        </shape>
+
         <imagetype name="icon-0">
-            <area>170,200,210,150</area>
+            <area>190,140,196,140</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
         <imagetype name="icon-1" from="icon-0">
-            <position>545,200</position>
+            <position>545,140</position>
         </imagetype>
         <imagetype name="icon-2" from="icon-0">
-            <position>920,200</position>
+            <position>910,140</position>
         </imagetype>
         
-        <shape name="background-0" from="base_background_shape">
-            <area>90,150,350,215</area>
-        </shape>
-        <shape name="background-1" from="background-0">
-            <position>465,150</position>
-        </shape>
-        <shape name="background-2" from="background-0">
-            <position>840,150</position>
-        </shape>
-
         <textarea name="date-0" from="base_textarea">
-            <area>110,160,330,30</area>
+            <area>115,110,330,30</area>
             <align>left,vcenter</align>
             <cutdown>yes</cutdown>
         </textarea>
         <textarea name="date-1" from="date-0">
-            <position>485,160</position>
+            <position>480,110</position>
         </textarea>
         <textarea name="date-2" from="date-0">
-            <position>860,160</position>
+            <position>845,110</position>
         </textarea>
         
         <textarea name="high-0" from="base_textarea">
-            <area>110,295,330,30</area>
+            <area>115,290,330,20</area>
             <font>text_small</font>
             <template>High Temperature:  %1</template>
         </textarea>
         <textarea name="high-1" from="high-0">
-            <position>485,295</position>
+            <position>480,290</position>
         </textarea>
         <textarea name="high-2" from="high-0">
-            <position>860,295</position>
+            <position>845,290</position>
         </textarea>
 
         <textarea name="low-0" from="base_textarea">
-            <area>110,325,330,30</area>
+            <area>115,315,330,20</area>
             <font>text_small</font>
             <template>Low Temperature:  %1</template>
         </textarea>
         <textarea name="low-1" from="low-0">
-            <position>485,325</position>
+            <position>480,315</position>
         </textarea>
         <textarea name="low-2" from="low-0">
-            <position>860,325</position>
+            <position>845,315</position>
         </textarea>
 
         <!-- These two are shown at the bottom -->
@@ -225,115 +226,114 @@
 
 
 
-    <!-- UNFINISHED -->
     <window name="Six Day Forecast">
 
         <textarea name="6dlocation" from="base_textarea">
-            <area>800,86,390,30</area>
+            <area>900,0,365,30</area>
             <align>right,vcenter</align>
-            <cutdown>yes</cutdown>
+            <scroll direction="horizontal"/>
         </textarea>
 
+        <shape name="background-0" from="base_background_shape">
+            <area>100,100,350,245</area>
+        </shape>
+        <shape name="background-1" from="background-0">
+            <position>465,100</position>
+        </shape>
+        <shape name="background-2" from="background-0">
+            <position>830,100</position>
+        </shape>
+        <shape name="background-3" from="background-0">
+            <position>100,360</position>
+        </shape>
+        <shape name="background-4" from="background-0">
+            <position>465,360</position>
+        </shape>
+        <shape name="background-5" from="background-0">
+            <position>830,360</position>
+        </shape>
+
         <imagetype name="icon-0">
-            <area>170,200,210,150</area>
+            <area>190,140,196,140</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
         <imagetype name="icon-1" from="icon-0">
-            <position>545,200</position>
+            <position>545,140</position>
         </imagetype>
         <imagetype name="icon-2" from="icon-0">
-            <position>920,200</position>
+            <position>910,140</position>
         </imagetype>
         <imagetype name="icon-3" from="icon-0">
-            <position>170,435</position>
+            <position>180,400</position>
         </imagetype>
         <imagetype name="icon-4" from="icon-0">
-            <position>545,435</position>
+            <position>545,400</position>
         </imagetype>
         <imagetype name="icon-5" from="icon-0">
-            <position>920,435</position>
+            <position>910,400</position>
         </imagetype>
         
-        <shape name="background-0" from="base_background_shape">
-            <area>90,150,350,215</area>
-        </shape>
-        <shape name="background-1" from="background-0">
-            <position>465,150</position>
-        </shape>
-        <shape name="background-2" from="background-0">
-            <position>840,150</position>
-        </shape>
-        <shape name="background-3" from="background-0">
-            <position>90,385</position>
-        </shape>
-        <shape name="background-4" from="background-0">
-            <position>465,385</position>
-        </shape>
-        <shape name="background-5" from="background-0">
-            <position>840,385</position>
-        </shape>
-
         <textarea name="date-0" from="base_textarea">
-            <area>110,160,330,30</area>
+            <area>115,110,330,30</area>
             <align>left,vcenter</align>
             <cutdown>yes</cutdown>
         </textarea>
         <textarea name="date-1" from="date-0">
-            <position>485,160</position>
+            <position>480,110</position>
         </textarea>
         <textarea name="date-2" from="date-0">
-            <position>860,160</position>
+            <position>845,110</position>
         </textarea>
         <textarea name="date-3" from="date-0">
-            <position>110,395</position>
+            <position>115,370</position>
         </textarea>
         <textarea name="date-4" from="date-0">
-            <position>485,395</position>
+            <position>480,370</position>
         </textarea>
         <textarea name="date-5" from="date-0">
-            <position>860,395</position>
+            <position>845,370</position>
         </textarea>
         
         <textarea name="high-0" from="base_textarea">
-            <area>110,295,330,30</area>
+            <area>115,290,330,20</area>
             <font>text_small</font>
             <template>High Temperature:  %1</template>
         </textarea>
         <textarea name="high-1" from="high-0">
-            <position>485,295</position>
+            <position>480,290</position>
         </textarea>
         <textarea name="high-2" from="high-0">
-            <position>860,295</position>
+            <position>845,290</position>
         </textarea>
         <textarea name="high-3" from="high-0">
-            <position>110,530</position>
+            <position>115,550</position>
         </textarea>
         <textarea name="high-4" from="high-0">
-            <position>485,530</position>
+            <position>480,550</position>
         </textarea>
         <textarea name="high-5" from="high-0">
-            <position>860,530</position>
+            <position>845,550</position>
         </textarea>
 
         <textarea name="low-0" from="base_textarea">
-            <area>110,325,330,30</area>
+            <area>115,315,330,20</area>
             <font>text_small</font>
             <template>Low Temperature:  %1</template>
         </textarea>
         <textarea name="low-1" from="low-0">
-            <position>485,325</position>
+            <position>480,315</position>
         </textarea>
         <textarea name="low-2" from="low-0">
-            <position>860,325</position>
+            <position>845,315</position>
         </textarea>
         <textarea name="low-3" from="low-0">
-            <position>110,560</position>
+            <position>115,575</position>
         </textarea>
         <textarea name="low-4" from="low-0">
-            <position>485,560</position>
+            <position>480,575</position>
         </textarea>
         <textarea name="low-5" from="low-0">
-            <position>860,560</position>
+            <position>845,575</position>
         </textarea>
 
         <!-- These two are shown at the bottom -->
@@ -353,117 +353,116 @@
 
 
 
-    <!-- UNFINISHED -->
     <window name="18 Hour Forecast">
 
         <textarea name="18hrlocation" from="base_textarea">
-            <area>800,86,390,30</area>
+            <area>900,0,365,30</area>
             <align>right,vcenter</align>
-            <cutdown>yes</cutdown>
+            <scroll direction="horizontal"/>
         </textarea>
 
+        <shape name="background-0" from="base_background_shape">
+            <area>100,100,350,245</area>
+        </shape>
+        <shape name="background-1" from="background-0">
+            <position>465,100</position>
+        </shape>
+        <shape name="background-2" from="background-0">
+            <position>830,100</position>
+        </shape>
+        <shape name="background-3" from="background-0">
+            <position>100,360</position>
+        </shape>
+        <shape name="background-4" from="background-0">
+            <position>465,360</position>
+        </shape>
+        <shape name="background-5" from="background-0">
+            <position>830,360</position>
+        </shape>
+
         <imagetype name="18icon-0">
-            <area>170,200,210,150</area>
+            <area>190,140,196,140</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
         <imagetype name="18icon-1" from="18icon-0">
-            <position>545,200</position>
+            <position>545,140</position>
         </imagetype>
         <imagetype name="18icon-2" from="18icon-0">
-            <position>920,200</position>
+            <position>910,140</position>
         </imagetype>
         <imagetype name="18icon-3" from="18icon-0">
-            <position>170,435</position>
+            <position>180,400</position>
         </imagetype>
         <imagetype name="18icon-4" from="18icon-0">
-            <position>545,435</position>
+            <position>545,400</position>
         </imagetype>
         <imagetype name="18icon-5" from="18icon-0">
-            <position>920,435</position>
+            <position>910,400</position>
         </imagetype>
-        
-        <shape name="background-0" from="base_background_shape">
-            <area>90,150,350,215</area>
-        </shape>
-        <shape name="background-1" from="background-0">
-            <position>465,150</position>
-        </shape>
-        <shape name="background-2" from="background-0">
-            <position>840,150</position>
-        </shape>
-        <shape name="background-3" from="background-0">
-            <position>90,385</position>
-        </shape>
-        <shape name="background-4" from="background-0">
-            <position>465,385</position>
-        </shape>
-        <shape name="background-5" from="background-0">
-            <position>840,385</position>
-        </shape>
 
         <textarea name="time-0" from="base_textarea">
-            <area>110,160,330,30</area>
+            <area>115,110,330,30</area>
             <align>left,vcenter</align>
             <cutdown>yes</cutdown>
         </textarea>
         <textarea name="time-1" from="time-0">
-            <position>485,160</position>
+            <position>480,110</position>
         </textarea>
         <textarea name="time-2" from="time-0">
-            <position>860,160</position>
+            <position>845,110</position>
         </textarea>
         <textarea name="time-3" from="time-0">
-            <position>110,395</position>
+            <position>115,370</position>
         </textarea>
         <textarea name="time-4" from="time-0">
-            <position>485,395</position>
+            <position>480,370</position>
         </textarea>
         <textarea name="time-5" from="time-0">
-            <position>860,395</position>
+            <position>845,370</position>
         </textarea>
         
         <textarea name="temp-0" from="base_textarea">
-            <area>110,295,330,30</area>
+            <area>115,290,330,20</area>
             <font>text_small</font>
             <template>Temperature:  %1</template>
         </textarea>
         <textarea name="temp-1" from="temp-0">
-            <position>485,295</position>
+            <position>480,290</position>
         </textarea>
         <textarea name="temp-2" from="temp-0">
-            <position>860,295</position>
+            <position>845,290</position>
         </textarea>
         <textarea name="temp-3" from="temp-0">
-            <position>110,530</position>
+            <position>115,550</position>
         </textarea>
         <textarea name="temp-4" from="temp-0">
-            <position>485,530</position>
+            <position>480,550</position>
         </textarea>
         <textarea name="temp-5" from="temp-0">
-            <position>860,530</position>
+            <position>845,550</position>
         </textarea>
 
         <textarea name="pop-0" from="base_textarea">
-            <area>110,325,350,30</area>
+            <area>115,315,330,20</area>
             <font>text_small</font>
             <template>Chance of Precipitation:  %1</template>
         </textarea>
         <textarea name="pop-1" from="pop-0">
-            <position>485,325</position>
+            <position>480,315</position>
         </textarea>
         <textarea name="pop-2" from="pop-0">
-            <position>860,325</position>
+            <position>845,315</position>
         </textarea>
         <textarea name="pop-3" from="pop-0">
-            <position>110,560</position>
+            <position>115,575</position>
         </textarea>
         <textarea name="pop-4" from="pop-0">
-            <position>485,560</position>
+            <position>480,575</position>
         </textarea>
         <textarea name="pop-5" from="pop-0">
-            <position>860,560</position>
+            <position>845,575</position>
         </textarea>
-        
+
         <!-- These two are shown at the bottom -->
         <imagetype name="copyrightlogo">
             <area>0,730,1,1</area>
@@ -491,11 +490,7 @@
             <area>305,85,410,36</area>
         </textarea>
 
-        <textarea name="updatetime" from="base_textarea">
-            <area>730,85,240,36</area>
-            <align>right,vcenter</align>
-            <scroll direction="horizontal"/>
-        </textarea>
+        <textarea name="updatetime" />
 
         <shape name="title_separator" from="base_background_shape">
             <area>291,125,695,1</area>
@@ -532,11 +527,7 @@
             <area>305,85,410,36</area>
         </textarea>
 
-        <textarea name="updatetime" from="base_textarea">
-            <area>730,85,240,36</area>
-            <align>right,vcenter</align>
-            <scroll direction="horizontal"/>
-        </textarea>
+        <textarea name="updatetime"/>
 
         <shape name="title_separator" from="base_background_shape">
             <area>291,125,695,1</area>
@@ -573,11 +564,7 @@
             <area>305,85,410,36</area>
         </textarea>
 
-        <textarea name="updatetime" from="base_textarea">
-            <area>730,85,240,36</area>
-            <align>right,vcenter</align>
-            <scroll direction="horizontal"/>
-        </textarea>
+        <textarea name="updatetime" />
 
         <shape name="title_separator" from="base_background_shape">
             <area>291,125,695,1</area>
