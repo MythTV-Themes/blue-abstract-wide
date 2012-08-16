@@ -223,7 +223,6 @@
 
 
 
-    <!-- UNFINISHED -->
     <!-- Filter screen that lets the user decide what
          and how images shall be shown in the gallery screen -->
     <window name="filter">
