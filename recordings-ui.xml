@@ -277,19 +277,6 @@
     
     
 
-    <!-- UNFINISHED -->
-    <!-- The Group Filter popup. -->
-    <!-- <window name="groupfilter"> -->
-
-
-
-
-    <!-- UNFINISHED -->
-    <!-- <window name="customexport"> -->
-
-
-
-
     <!-- The Change View popup.
         Shows a list of icons that describe the status of a recording  -->
     <window name="changeview">
