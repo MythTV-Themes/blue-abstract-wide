@@ -233,7 +233,7 @@
                             </shape>
                             <imagetype name="hidden" from="base_icon_selected">
                                 <area>3,3,30,30</area>
-                                <filename>images/icons/visible.png</filename>
+                                <filename>images/icons/hidden.png</filename>
                             </imagetype>
                         </state>
                     </statetype>
