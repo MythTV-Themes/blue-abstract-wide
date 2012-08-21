@@ -63,13 +63,15 @@
                     <!-- shows that the image was marked/selected and
                         might be manipulated with other images -->
                     <statetype name="buttoncheck">
-                        <position>2,2</position>
-                        <state type="full">
-                            <shape name="marked_background" from="base_background_shape">
-                                <area>0,0,33,33</area>
-                                <line color="#000000" alpha="0" width="1" />
+                        <position>96,3</position>
+                        <state name="full">
+                            <shape name="buttoncheck_background" from="base_background_shape">
+                                <area>0,0,34,34</area>
+                                <line color="#AAAAAA" alpha="0" width="0" />
+                                <cornerradius>10</cornerradius>
                             </shape>
-                            <imagetype name="marked">
+                            <imagetype name="checkfull" from="base_icon_selected">
+                                <area>4,3,28,28</area>
                                 <filename>images/icons/selected.png</filename>
                             </imagetype>
                         </state>
@@ -146,13 +148,15 @@
                     <!-- shows that the image was marked/selected and
                         might be manipulated with other images -->
                     <statetype name="buttoncheck">
-                        <position>5,5</position>
-                        <state type="full">
-                            <shape name="marked_background" from="base_background_shape">
-                                <area>0,0,33,33</area>
-                                <line color="#000000" alpha="0" width="1" />
+                        <position>143,7</position>
+                        <state name="full">
+                            <shape name="buttoncheck_background" from="base_background_shape">
+                                <area>0,0,36,36</area>
+                                <line color="#AAAAAA" alpha="0" width="0" />
+                                <cornerradius>10</cornerradius>
                             </shape>
-                            <imagetype name="marked">
+                            <imagetype name="checkfull" from="base_icon_selected">
+                                <area>3,3,30,30</area>
                                 <filename>images/icons/selected.png</filename>
                             </imagetype>
                         </state>
