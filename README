@@ -1,3 +1,5 @@
-This theme provides a clean and modern look for MythTV.
+The Blue-Abstract theme provides a clean, modern and elegant look for MythTV, the most popular linux homebrew DVR software. All screens of the main application and major plugins have been themed. The only unfinished screens are from outside plugins like mythmovies, mythteatime and mythzoneminder. By now the Blue-abstract theme offers the highest grade of themed screens.
 
-To install copy the entire blue-abstract-wide folder to the theme directory in your home directory or where MythTV was installed. Example: /home/<user>/.mythtv/themes or /usr/share/mythtv/themes.
+The theme also contains a blue-abstract-wide menu which offers a improved menu structure.
+
+To install the theme use mythfrontends internal theme downloader or copy the entire blue-abstract-wide folder to your theme directory. Example: /home/<user>/.mythtv/themes or /usr/share/mythtv/themes.
