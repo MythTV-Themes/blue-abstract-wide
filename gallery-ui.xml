@@ -56,7 +56,7 @@
                     </imagetype>
 
                     <imagetype name="buttonimage">
-                        <area>0,0,133,99</area>
+                        <area>0,0,133,133</area>
                         <mask>images/media/image_item_nfmask.png</mask>
                     </imagetype>
 
@@ -139,7 +139,7 @@
                     </imagetype>   
 
                     <imagetype name="buttonimage">
-                        <area>0,0,185,125</area>
+                        <area>0,0,185,185</area>
                         <mask>images/media/image_item_fmask.png</mask>
                     </imagetype>    
 
