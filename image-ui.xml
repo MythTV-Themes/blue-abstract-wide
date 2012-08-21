@@ -80,10 +80,36 @@
                     </imagetype>
 
                     <!-- Shows if the item is marked or not -->
-                    <statetype name="buttoncheck" />
+                    <statetype name="nodecheck">
+                        <position>96,3</position>
+                        <state name="full">
+                            <shape name="buttoncheck_background" from="base_background_shape">
+                                <area>0,0,34,34</area>
+                                <line color="#AAAAAA" alpha="0" width="0" />
+                                <cornerradius>10</cornerradius>
+                            </shape>
+                            <imagetype name="checkfull" from="base_icon_selected">
+                                <area>4,3,28,28</area>
+                                <filename>images/icons/selected.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
                     
                     <!-- Shows if the item is either hidden or visible -->
-                    <statetype name="nodevisibility" />
+                    <statetype name="nodevisibility">
+                        <position>62,3</position>
+                        <state name="hidden">
+                            <shape name="buttoncheck_background" from="base_background_shape">
+                                <area>0,0,34,34</area>
+                                <line color="#AAAAAA" alpha="0" width="0" />
+                                <cornerradius>10</cornerradius>
+                            </shape>
+                            <imagetype name="hidden" from="base_icon_selected">
+                                <area>4,3,28,28</area>
+                                <filename>images/icons/hidden.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
 
                     <!-- Shows the type of the item. It can be either 
                          a subfolder, upfolder, image or a video -->
@@ -104,6 +130,16 @@
                             <imagetype name="upfolder_icon">
                                 <area>10,6,28,28</area>
                                 <filename>images/icons/folder_up_selected.png</filename>
+                            </imagetype>
+                        </state>
+                        <!-- Do not show something extra when the file 
+                             is an image. The image preview is enough -->
+                        <state name="image" />
+                        <state name="video">
+                            <imagetype name="videoimage_background">
+                                <area>0,0,133,133</area>
+                                <filename>images/media/image_item_video.png</filename>
+                                <mask>images/media/image_item_nfmask.png</mask>
                             </imagetype>
                         </state>
                     </statetype>
@@ -168,13 +204,39 @@
                         <area>0,0,185,185</area>
                         <mask>images/media/image_item_fmask.png</mask>
                         <preserveaspect>true</preserveaspect>
-                    </imagetype>   
+                    </imagetype>
 
                     <!-- Shows if the item is marked or not -->
-                    <statetype name="buttoncheck" />
+                    <statetype name="nodecheck">
+                        <position>143,7</position>
+                        <state name="full">
+                            <shape name="buttoncheck_background" from="base_background_shape">
+                                <area>0,0,36,36</area>
+                                <line color="#AAAAAA" alpha="0" width="0" />
+                                <cornerradius>10</cornerradius>
+                            </shape>
+                            <imagetype name="checkfull" from="base_icon_selected">
+                                <area>3,3,30,30</area>
+                                <filename>images/icons/selected.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
                     
                     <!-- Shows if the item is either hidden or visible -->
-                    <statetype name="nodevisibility" />
+                    <statetype name="nodevisibility">
+                        <position>107,7</position>
+                        <state name="hidden">
+                            <shape name="buttoncheck_background" from="base_background_shape">
+                                <area>0,0,36,36</area>
+                                <line color="#AAAAAA" alpha="0" width="0" />
+                                <cornerradius>10</cornerradius>
+                            </shape>
+                            <imagetype name="hidden" from="base_icon_selected">
+                                <area>3,3,30,30</area>
+                                <filename>images/icons/visible.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
 
                     <!-- Shows the type of the item. It can be either 
                          a subfolder, upfolder, image or a video -->
@@ -197,8 +259,16 @@
                                 <filename>images/icons/folder_up_selected.png</filename>
                             </imagetype>
                         </state>
+                        <!-- Do not show something extra when the file 
+                             is an image. The image preview is enough -->
                         <state name="image" />
-                        <state name="video" />
+                        <state name="video">
+                            <imagetype name="videoimage_background">
+                                <area>0,0,185,185</area>
+                                <filename>images/media/image_item_video.png</filename>
+                                <mask>images/media/image_item_fmask.png</mask>
+                            </imagetype>
+                        </state>
                     </statetype>
 
                     <imagetype name="background_image_border">
