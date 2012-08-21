@@ -1838,7 +1838,7 @@
             <value>Switch Titles</value>
         </button>
 
-        <shape name="status_separator" from="base_separator_shape">
+        <shape name="status_separator" from="base_background_shape">
             <area>230,365,820,1</area>
         </shape>
 
@@ -1900,7 +1900,7 @@
         </buttonlist>
 
         <!-- Buttons -->
-        <shape name="button_separator" from="base_separator_shape">
+        <shape name="button_separator" from="base_background_shape">
             <area>230,605,820,1</area>
         </shape>
         <button name="scan" from="base_button_wide">
