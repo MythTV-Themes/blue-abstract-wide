@@ -1285,7 +1285,6 @@
 
 
 
-    <!-- UNFINISHED -->
     <!-- this is a screen where the user can import new cover images for the
         music from a choosen directory. It will be added to the collection. -->
     <window name="import_coverart">
@@ -1299,87 +1298,155 @@
             </textarea>
         </textarea>
 
-        <shape name="coverart_background" from="base_background_shape">
-            <area>240,70,800,620</area>
+        <shape name="import_coverart_background" from="base_background_shape">
+            <area>215,155,850,408</area>
         </shape>
-
-        <shape name="coverart_shape">
-            <area>513,90,254,254</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="70" />
-            <line color="#FFFFFF" alpha="70" width="1" />
-            <cornerradius>2</cornerradius>
-        </shape>
+       
+        <imagetype name="coverart_background_image">
+            <area>230,170,311,311</area>
+            <mask>images/media/music_album_mask.png</mask>
+            <filename>images/media/music_type/album.png</filename>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
         <imagetype name="coverart">
-            <area>515,92,250,250</area>
-            <filename />
+            <area>230,170,311,311</area>
+            <mask>images/media/music_album_mask.png</mask>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="coverart_border">
+            <area>225,165,322,322</area>
+            <filename>images/media/music_album_border.png</filename>
         </imagetype>
 
-        <button name="prev" from="base_button_prev">
-            <position>473,359</position>
+        <shape name="coverart_separator" from="base_background_shape">
+            <area>555,156,1,406</area>
+        </shape>
+
+        <button name="prev" from="base_button">
+            <position>230,510</position>
+            <statetype name="buttonstate">
+                <area>0,0,36,36</area>
+                <state name="active">
+                    <area>0,0,36,36</area>
+                    <imagetype name="image" from="base_image_active">
+                        <filename>images/icons/button_arrow_left.png</filename>
+                        <area>3,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <area>0,0,36,36</area>
+                    <imagetype name="image" from="base_image_selected">
+                        <filename>images/icons/button_arrow_left.png</filename>
+                        <area>3,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="disabled">
+                    <area>0,0,36,36</area>
+                    <imagetype name="image" from="base_image_disabled">
+                        <filename>images/icons/button_arrow_left.png</filename>
+                        <area>3,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="pushed">
+                    <area>0,0,36,36</area>
+                    <imagetype name="image" from="base_image_pushed">
+                        <filename>images/icons/button_arrow_left.png</filename>
+                        <area>3,3,30,30</area>
+                    </imagetype>
+                </state>
+            </statetype>
         </button>
 
         <textarea name="status" from="base_textarea">
-            <area>513,354,255,40</area>
+            <area>280,510,210,36</area>
             <value>Already in database</value>
             <align>allcenter</align>
         </textarea>
 
-        <button name="next" from="base_button_next">
-            <position>777,359</position>
+        <button name="next" from="base_button">
+            <position>505,510</position>
+            <statetype name="buttonstate">
+                <area>0,0,36,36</area>
+                <state name="active">
+                    <area>0,0,36,36</area>
+                    <imagetype name="image" from="base_image_active">
+                        <filename>images/icons/button_arrow_right.png</filename>
+                        <area>3,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <area>0,0,36,36</area>
+                    <imagetype name="image" from="base_image_selected">
+                        <filename>images/icons/button_arrow_right.png</filename>
+                        <area>3,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="disabled">
+                    <area>0,0,36,36</area>
+                    <imagetype name="image" from="base_image_disabled">
+                        <filename>images/icons/button_arrow_right.png</filename>
+                        <area>3,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="pushed">
+                    <area>0,0,36,36</area>
+                    <imagetype name="image" from="base_image_pushed">
+                        <filename>images/icons/button_arrow_right.png</filename>
+                        <area>3,3,30,30</area>
+                    </imagetype>
+                </state>
+            </statetype>
         </button>
 
-        <shape name="cover_separator" from="base_separator_shape">
-            <area>260,402,760,1</area>
-        </shape>
-
         <textarea name="position_label" from="base_textarea">
-            <area>260,420,170,40</area>
+            <area>570,170,140,36</area>
             <align>right,vcenter</align>
             <value>Position:</value>
         </textarea>
-        <textarea name="position" from="base_textarea">
-            <area>440,420,580,40</area>
-            <align>left,vcenter</align>
+        <textarea name="title" from="position_label">
+            <position>570,210</position>
+            <value>Image Type:</value>
         </textarea>
-
-        <textarea name="file_label" from="base_textarea">
-            <area>260,464,170,40</area>
+        <textarea name="file_label" from="position_label">
+            <position>570,250</position>
             <align>right,vcenter</align>
             <value>File:</value>
         </textarea>
-        <textarea name="file" from="base_textarea">
-            <area>440,464,580,40</area>
-            <align>left,vcenter</align>
-        </textarea>
-
-        <textarea name="destination_label" from="file_label">
-            <position>260,508</position>
+        <textarea name="destination_label" from="position_label">
+            <position>570,330</position>
             <value>Destination:</value>
         </textarea>
-        <textarea name="destination" from="base_textarea">
-            <area>440,508,580,40</area>
+
+        <textarea name="position" from="base_textarea">
+            <area>720,170,330,36</area>
             <align>left,vcenter</align>
         </textarea>
-
-        <textarea name="title" from="file_label">
-            <position>260,552</position>
-            <value>Image Type:</value>
-        </textarea>
         <buttonlist name="type" from="base_selector">
-            <position>440,552</position>
+            <position>720,210</position>
         </buttonlist>
+        <textarea name="file" from="base_textarea">
+            <area>720,258,330,65</area>
+            <align>left,top</align>
+            <multiline>yes</multiline>
+            <scroll direction="vertical"/>
+        </textarea>
+        <textarea name="destination" from="base_textarea">
+            <area>720,338,330,65</area>
+            <align>left,top</align>
+            <multiline>yes</multiline>
+            <scroll direction="vertical"/>
+        </textarea>
 
-        <shape name="button_separator" from="base_separator_shape">
-            <area>260,610,760,1</area>
+        <shape name="button_separator" from="base_background_shape">
+            <area>216,495,848,1</area>
         </shape>
 
         <button name="copy" from="base_button">
-            <position>480,630</position>
+            <position>650,510</position>
             <value>Copy</value>
         </button>
         <button name="exit" from="base_button">
-            <position>650,630</position>
+            <position>810,510</position>
             <value>Done</value>
         </button>
 
@@ -1389,8 +1456,6 @@
 
 
 
-
-    <!-- UNFINISHED -->
     <!-- this is a screen where the user can import new music from a
         choosen directory. It will be added to the collection. -->
     <window name="import_music">
@@ -1405,136 +1470,201 @@
         </textarea>
 
         <shape name="music_import_background" from="base_background_shape">
-            <area>140,90,1000,560</area>
+            <area>145,95,990,552</area>
         </shape>
 
         <textarea name="location_label" from="base_textarea">
-            <area>160,110,210,40</area>
+            <area>160,110,210,36</area>
             <align>right,vcenter</align>
             <value>Location:</value>
         </textarea>
         <textedit name="location" from="base_textedit">
             <position>380,110</position>
         </textedit>
+
         <button name="directoryfinder" from="base_searchbutton">
-            <position>762,115</position>
+            <position>765,110</position>
         </button>
+        
         <button name="scan" from="base_button">
             <position>810,110</position>
             <value>Search</value>
         </button>
+
         <button name="coverart" from="base_button">
             <position>970,110</position>
             <value>Cover Art</value>
         </button>
 
-        <shape name="location_separator" from="base_separator_shape">
-            <area>160,170,960,1</area>
+        <shape name="location_separator" from="base_background_shape">
+            <area>146,160,988,1</area>
         </shape>
 
         <textarea name="filename_label" from="location_label">
-            <position>160,180</position>
+            <position>160,170</position>
             <value>Filename:</value>
         </textarea>
         <textarea name="compilation_label" from="location_label">
-            <position>160,240</position>
+            <position>160,210</position>
             <value>Compilation:</value>
         </textarea>
         <textarea name="compilation_artist_label" from="location_label">
-            <position>160,280</position>
+            <position>160,250</position>
             <value>Comp. Artist:</value>
         </textarea>
         <textarea name="artist_label" from="location_label">
-            <position>160,320</position>
+            <position>160,290</position>
             <value>Artist:</value>
         </textarea>
         <textarea name="album_label" from="location_label">
-            <position>160,360</position>
+            <position>160,330</position>
             <value>Album:</value>
         </textarea>
         <textarea name="title_text" from="location_label">
-            <position>160,400</position>
+            <position>160,370</position>
             <value>Title:</value>
         </textarea>
         <textarea name="genre_label" from="location_label">
-            <position>160,440</position>
+            <position>160,410</position>
             <value>Genre:</value>
         </textarea>
         <textarea name="year_label" from="location_label">
-            <position>160,480</position>
+            <position>160,450</position>
             <value>Year:</value>
         </textarea>
         <textarea name="track_label" from="location_label">
-            <position>360,480</position>
+            <position>160,490</position>
             <value>Track No.:</value>
         </textarea>
 
         <textarea name="filename" from="base_textarea">
-            <area>380,190,740,80</area>
-            <multiline>yes</multiline>
-            <align>left,top</align>
+            <area>380,170,740,36</area>
+            <scroll direction="horizontal"/>
         </textarea>
         <checkbox name="compilation" from="base_checkbox">
-            <position>380,245</position>
+            <position>380,210</position>
         </checkbox>
-        <textarea name="compartist" from="base_textarea">
-            <area>380,280,515,40</area>
+        <textarea name="compartist" from="filename">
+            <position>380,250</position>
         </textarea>
-        <textarea name="artist" from="base_textarea">
-            <area>380,320,515,40</area>
+        <textarea name="artist" from="filename">
+            <position>380,290</position>
         </textarea>
-        <textarea name="album" from="base_textarea">
-            <area>380,360,515,40</area>
+        <textarea name="album" from="filename">
+            <position>380,330</position>
         </textarea>
-        <textarea name="title" from="base_textarea">
-            <area>380,400,515,40</area>
+        <textarea name="title" from="filename">
+            <position>380,370</position>
         </textarea>
-        <textarea name="genre" from="base_textarea">
-            <area>380,440,515,40</area>
+        <textarea name="genre" from="filename">
+            <position>380,410</position>
         </textarea>
-        <textarea name="year" from="base_textarea">
-            <area>380,480,165,40</area>
+        <textarea name="year" from="filename">
+            <position>380,450</position>
         </textarea>
-        <textarea name="track" from="base_textarea">
-            <area>580,480,165,40</area>
+        <textarea name="track" from="filename">
+            <position>380,490</position>
         </textarea>
 
-        <shape name="status_separator" from="base_separator_shape">
-            <area>160,530,960,1</area>
+        <shape name="status_separator" from="base_background_shape">
+            <area>146,530,988,1</area>
         </shape>
 
         <textarea name="position" from="base_textarea">
-            <area>490,550,300,40</area>
+            <area>490,545,300,36</area>
             <align>allcenter</align>
         </textarea>
         <textarea name="status" from="base_textarea">
-            <area>490,590,300,40</area>
+            <area>470,595,340,36</area>
             <align>allcenter</align>
             <value>Already in database</value>
         </textarea>
 
         <button name="play" from="base_button_wide">
-            <position>160,550</position>
+            <position>160,545</position>
             <value>Play</value>
         </button>
         <button name="add" from="base_button_wide">
-            <position>160,590</position>
+            <position>160,595</position>
             <value>Add</value>
         </button>
 
-        <button name="prev" from="base_button_prev">
-            <position>520,555</position>
+        <button name="prev" from="base_button">
+            <position>510,545</position>
+            <statetype name="buttonstate">
+                <area>0,0,36,36</area>
+                <state name="active">
+                    <area>0,0,36,36</area>
+                    <imagetype name="image" from="base_image_active">
+                        <filename>images/icons/button_arrow_left.png</filename>
+                        <area>3,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <area>0,0,36,36</area>
+                    <imagetype name="image" from="base_image_selected">
+                        <filename>images/icons/button_arrow_left.png</filename>
+                        <area>3,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="disabled">
+                    <area>0,0,36,36</area>
+                    <imagetype name="image" from="base_image_disabled">
+                        <filename>images/icons/button_arrow_left.png</filename>
+                        <area>3,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="pushed">
+                    <area>0,0,36,36</area>
+                    <imagetype name="image" from="base_image_pushed">
+                        <filename>images/icons/button_arrow_left.png</filename>
+                        <area>3,3,30,30</area>
+                    </imagetype>
+                </state>
+            </statetype>
         </button>
-        <button name="next" from="base_button_next">
-            <position>730,555</position>
+
+        <button name="next" from="base_button">
+            <position>735,545</position>
+            <statetype name="buttonstate">
+                <area>0,0,36,36</area>
+                <state name="active">
+                    <area>0,0,36,36</area>
+                    <imagetype name="image" from="base_image_active">
+                        <filename>images/icons/button_arrow_right.png</filename>
+                        <area>3,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <area>0,0,36,36</area>
+                    <imagetype name="image" from="base_image_selected">
+                        <filename>images/icons/button_arrow_right.png</filename>
+                        <area>3,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="disabled">
+                    <area>0,0,36,36</area>
+                    <imagetype name="image" from="base_image_disabled">
+                        <filename>images/icons/button_arrow_right.png</filename>
+                        <area>3,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="pushed">
+                    <area>0,0,36,36</area>
+                    <imagetype name="image" from="base_image_pushed">
+                        <filename>images/icons/button_arrow_right.png</filename>
+                        <area>3,3,30,30</area>
+                    </imagetype>
+                </state>
+            </statetype>
         </button>
 
         <button name="nextnew" from="base_button_wide">
-            <position>820,550</position>
+            <position>820,545</position>
             <value>Next New</value>
         </button>
         <button name="addallnew" from="base_button_wide">
-            <position>820,590</position>
+            <position>820,595</position>
             <value>Add All New</value>
         </button>
 
