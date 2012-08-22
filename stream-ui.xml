@@ -6,7 +6,7 @@
     <!-- TODO Fix the visualizer border stuff, mask isnt working for the video widget -->
     <!-- Shows the current internet streams and more detailed information about
         the current song. Also shows the coverart and the visualizer -->
-    <window name="streamview">
+    <window name="streamview" include="base_music.xml">
 
         <imagetype name="background" from="base_background"/>
 
