@@ -1869,7 +1869,7 @@
                     <statetype name="buttoncheck">
                         <position>8,0</position>
                     </statetype>
-                    <textarea name="track" from="buttontext">
+                    <textarea name="track" from="base_textarea">
                         <area>30,0,45,36</area>
                         <cutdown>yes</cutdown>
                         <align>right,vcenter</align>
@@ -1918,7 +1918,6 @@
 
 
 
-    <!-- UNFINISHED -->
     <!-- this is the screen that shows the progress of the cd rip. -->
     <window name="ripstatus">
 
@@ -1933,58 +1932,59 @@
             </textarea>
         </textarea>
 
-        <shape name="cd_rip_status_background" from="base_background_shape">
-            <area>370,190,540,350</area>
+        <shape name="ripstatus_background" from="base_background_shape">
+            <area>375,230,530,267</area>
         </shape>
 
         <textarea name="overall" from="base_textarea">
-            <area>390,210,500,60</area>
+            <area>490,245,300,65</area>
             <align>allcenter</align>
             <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
+            <scroll direction="vertical"/>
         </textarea>
 
-        <shape name="title_separator" from="base_separator_shape">
-            <area>390,290,500,1</area>
+        <shape name="title_separator" from="base_background_shape">
+            <area>376,320,528,1</area>
         </shape>
 
         <textarea name="track_label" from="base_textarea">
-            <area>390,310,170,30</area>
+            <area>390,330,170,36</area>
             <align>right,vcenter</align>
             <value>Encoding Track:</value>
         </textarea>
+
         <textarea name="track" from="base_textarea">
-            <area>570,310,330,30</area>
-            <align>left,vcenter</align>
+            <area>570,330,320,36</area>
+            <scroll direction="horizontal"/>
         </textarea>
 
         <textarea name="status_label" from="base_textarea">
-            <area>390,350,170,40</area>
+            <area>390,365,170,36</area>
             <align>right,vcenter</align>
             <value>Status:</value>
         </textarea>
+
         <textarea name="status" from="base_textarea">
-            <area>570,350,330,40</area>
-            <align>left,vcenter</align>
+            <area>570,365,320,36</area>
         </textarea>
 
-        <shape name="status_separator" from="base_separator_shape">
-            <area>390,400,500,1</area>
+        <shape name="status_separator" from="base_background_shape">
+            <area>376,410,528,1</area>
         </shape>
 
         <progressbar name="overall_progress" from="base_progressbar">
-            <position>390,420</position>
+            <position>390,425</position>
         </progressbar>
         <textarea name="overallpct" from="base_textarea">
-            <area>390,420,500,40</area>
+            <area>390,425,500,20</area>
             <align>allcenter</align>
         </textarea>
 
         <progressbar name="track_progress" from="base_progressbar">
-            <position>390,480</position>
+            <position>390,460</position>
         </progressbar>
         <textarea name="trackpct" from="base_textarea">
-            <area>390,480,500,40</area>
+            <area>390,460,500,20</area>
             <align>allcenter</align>
         </textarea>
 
