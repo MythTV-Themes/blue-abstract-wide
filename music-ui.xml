@@ -1761,7 +1761,6 @@
 
 
 
-    <!-- UNFINISHED -->
     <!-- this is the screen where the user can rip audio cds. -->
     <window name="cdripper">
 
@@ -1775,140 +1774,141 @@
         </textarea>
 
         <shape name="cd_rip_background" from="base_background_shape">
-            <area>210,70,860,615</area>
+            <area>215,75,850,582</area>
         </shape>
 
-        <!-- Labels -->
         <textarea name="quality_label" from="base_textarea">
-            <area>230,90,210,40</area>
+            <area>230,90,240,36</area>
             <value>Quality:</value>
             <align>right,vcenter</align>
         </textarea>
         <textarea name="artist_label" from="quality_label">
-            <position>230,134</position>
+            <position>230,130</position>
             <value>Artist:</value>
         </textarea>
         <textarea name="album_label" from="quality_label">
-            <position>230,178</position>
+            <position>230,170</position>
             <value>Album:</value>
         </textarea>
         <textarea name="genre_text" from="quality_label">
-            <position>230,222</position>
+            <position>230,210</position>
             <value>Genre:</value>
         </textarea>
         <textarea name="year_label" from="quality_label">
-            <position>230,266</position>
+            <position>230,250</position>
             <value>Year:</value>
         </textarea>
         <textarea name="comp_label" from="quality_label">
-            <position>230,310</position>
+            <position>230,290</position>
             <value>Multi-Artist:</value>
         </textarea>
 
-        <!-- edits -->
         <buttonlist name="quality" from="base_selector">
-            <position>450,90</position>
+            <position>480,90</position>
         </buttonlist>
         <textedit name="artist" from="base_textedit">
-            <position>450,134</position>
+            <position>480,130</position>
         </textedit>
         <button name="searchartist" from="base_searchbutton">
-            <position>840,139</position>
+            <position>865,130</position>
         </button>
         <textedit name="album" from="base_textedit">
-            <position>450,178</position>
+            <position>480,170</position>
         </textedit>
         <button name="searchalbum" from="base_searchbutton">
-            <position>840,183</position>
+            <position>865,170</position>
         </button>
         <textedit name="genre" from="base_textedit">
-            <position>450,222</position>
+            <position>480,210</position>
         </textedit>
         <button name="searchgenre" from="base_searchbutton">
-            <position>840,227</position>
+            <position>865,210</position>
         </button>
         <textedit name="year" from="base_textedit">
-            <position>450,266</position>
+            <position>480,250</position>
         </textedit>
         <checkbox name="compilation" from="base_checkbox">
-            <position>450,315</position>
+            <position>480,290</position>
         </checkbox>
-        <button name="switch" from="base_button">
-            <position>490,310</position>
+        <button name="switch" from="base_button_wide">
+            <position>525,290</position>
             <value>Switch Titles</value>
         </button>
 
         <shape name="status_separator" from="base_background_shape">
-            <area>230,365,820,1</area>
+            <area>216,340,848,1</area>
         </shape>
 
         <textarea name="track_label" from="base_textarea">
-            <area>260,380,50,30</area>
+            <area>245,350,60,20</area>
             <value>Track</value>
-            <align>left,vcenter</align>
+            <font>text_small</font>
+            <align>right,vcenter</align>
+        </textarea>
+        <textarea name="title_label" from="base_textarea">
+            <area>320,350,150,20</area>
+            <value>Title</value>
             <font>text_small</font>
         </textarea>
-        <textarea name="title_label" from="track_label">
-            <area>320,380,300,30</area>
-            <value>Title</value>
-        </textarea>
-        <textarea name="list_artist_label" from="track_label">
-            <area>700,380,220,30</area>
+        <textarea name="list_artist_label" from="base_textarea">
+            <area>630,350,150,20</area>
             <value>Artist</value>
+            <font>text_small</font>
         </textarea>
-        <textarea name="length_label" from="track_label">
-            <area>950,380,100,30</area>
+        <textarea name="length_label" from="base_textarea">
+            <area>985,350,100,20</area>
             <value>Length</value>
+            <font>text_small</font>
         </textarea>
 
         <buttonlist name="tracks" from="base_buttonlist">
-            <area>230,410,820,181</area>
-            <buttonarea>0,0,820,179</buttonarea>
+            <area>230,375,820,200</area>
             <statetype name="buttonitem">
                 <state name="active">
-                    <area>0,0,820,181</area>
+                    <area>0,0,820,36</area>
                     <statetype name="buttoncheck">
-                        <position>8,8</position>
+                        <position>8,0</position>
                     </statetype>
                     <textarea name="track" from="buttontext">
-                        <area>30,0,40,40</area>
+                        <area>30,0,45,36</area>
                         <cutdown>yes</cutdown>
                         <align>right,vcenter</align>
                     </textarea>
-                    <textarea name="title" from="track">
-                        <area>90,0,370,40</area>
-                        <align>left,vcenter</align>
+                    <textarea name="title" from="base_textarea">
+                        <area>90,0,295,36</area>
+                        <scroll direction="horizontal"/>
                     </textarea>
-                    <textarea name="artist" from="track">
-                        <area>470,0,250,40</area>
-                        <align>left,vcenter</align>
+                    <textarea name="artist" from="base_textarea">
+                        <area>400,0,275,36</area>
+                        <scroll direction="horizontal"/>
                     </textarea>
-                    <textarea name="length" from="track">
-                        <area>720,0,90,40</area>
+                    <textarea name="length" from="base_textarea">
+                        <area>690,0,110,36</area>
                         <align>right,vcenter</align>
                     </textarea>
                 </state>
+                <state name="inactive" from="active" />
                 <state name="selectedactive" from="active">
-                    <area>0,0,820,181</area>
+                    <area>0,0,820,36</area>
                     <shape name="background" from="base_button_shape_selectedactive" />
                 </state>
                 <state name="selectedinactive" from="active">
-                    <area>0,0,820,181</area>
+                    <area>0,0,820,36</area>
                     <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
             </statetype>
         </buttonlist>
 
-        <!-- Buttons -->
         <shape name="button_separator" from="base_background_shape">
-            <area>230,605,820,1</area>
+            <area>216,590,848,1</area>
         </shape>
+
         <button name="scan" from="base_button_wide">
-            <position>340,625</position>
+            <position>340,605</position>
             <value>Scan CD</value>
         </button>
         <button name="rip" from="base_button_wide">
-            <position>650,625</position>
+            <position>650,605</position>
             <value>Rip CD</value>
         </button>
 
