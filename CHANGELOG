@@ -29,6 +29,7 @@ Feature #205: Increase reusability by using group definitions
 Feature #200: Remove unused mythmusic screen definitions
 Feature #199: Port the mythmusic settings pages to MythUI 
 Feature #190: Add remaining new mythmusic screens
+Feature #132: Add background images
 Feature #58: Add icons to OSD browser
 Feature #57: Better icons in volume control dialog
 Feature #45: Miniplayer song information
@@ -36,8 +37,10 @@ Feature #40: Better processing icons in recording screen.
 Feature #39: Improve icons in busy dialog
 Feature #10: Improve video icon for mythgallery plugin
 
+Bug #297: Wrong button position and alignment
 Bug #292: Program guide is not aligned
 Bug #204: Fix alignment issues when using relative positions
+Bug #189: Improve mythimage image details screen
 Bug #141: Fix xml validation errors
 
 
