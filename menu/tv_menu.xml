@@ -34,7 +34,7 @@
         <text lang="DE">TV-Aufnahmen organisieren</text>
         <description>Find shows or pick shows to record or delete</description>
         <description lang="DE">Sendungen suchen, aufnehmen oder löschen</description>
-        <action>MENU tv_menu_organize.xml</action>
+        <action>MENU menu/tv_menu_organize.xml</action>
     </button>
 
 </mythmenu>

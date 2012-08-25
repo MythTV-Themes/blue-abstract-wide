@@ -16,7 +16,7 @@
         <text lang="DE">Erweiterte Planung</text>
         <description>Search for shows and more options</description>
         <description lang="DE">Sendungen suchen und weitere Optionen</description>
-        <action>MENU tv_menu_schedule.xml</action>
+        <action>MENU menu/tv_menu_schedule.xml</action>
     </button>
 
     <button>
