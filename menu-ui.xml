@@ -14,10 +14,13 @@
             <align>left,vcenter</align>
         </clock>
 
-<!--
+        <!-- Shows different background images for different menus 
+			 Only the main menu entries have extra backgrounds. 
+			 The actual screens and settings do not. -->
         <statetype name="watermarks">
             <position>0,0</position>
         
+            <!-- Background images for the main menu -->
             <state name="MENU_TV">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -68,6 +71,7 @@
                 </imagetype>
             </state>
             
+            <!-- Background images for the TV menu -->
             <state name="TV_WATCH_TV">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -82,6 +86,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <!-- TODO change image -->
             <state name="TV_MENU_ORGANIZE">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -89,6 +94,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <!-- TODO change image -->
             <state name="TV_WATCH_RECORDINGS">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -97,6 +103,7 @@
                 </imagetype>
             </state>
             
+            <!-- Background images for the Video menu -->
             <state name="VIDEO_BROWSER">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -104,6 +111,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <!-- TODO change image -->
             <state name="TV_WATCH_RECORDINGS">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -118,6 +126,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <!-- TODO change image -->
             <state name="NET_VIDEO_SEARCH">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -125,6 +134,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <!-- TODO change image -->
             <state name="NET_VIDEO_TREE">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -132,7 +142,8 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
-            
+
+            <!-- Background images for the Music menu -->
             <state name="MUSIC_PLAY">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -140,6 +151,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <!-- TODO change image -->
             <state name="STREAM_PLAY">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -154,6 +166,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <!-- TODO change image -->
             <state name="MUSIC_SCAN">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -162,6 +175,8 @@
                 </imagetype>
             </state>
             
+            <!-- Background images for the information menu -->
+            <!-- TODO change image -->
             <state name="WEBPAGE">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -169,6 +184,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <!-- TODO change image -->
             <state name="NEWS">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -176,6 +192,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <!-- TODO change image -->
             <state name="WEATHER">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -184,6 +201,7 @@
                 </imagetype>
             </state>
             
+            <!-- Background images for the extras menu -->
             <state name="DVD_RIP">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -220,7 +238,6 @@
                 </imagetype>
             </state>
         </statetype>
--->
 
         <!-- The structure of the menu. This is a vertical list -->
         <buttonlist name="menu">
