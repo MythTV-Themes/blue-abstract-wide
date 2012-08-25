@@ -107,13 +107,23 @@
         </shape>
                
         <textarea name="title" from="base_textarea">
-            <area>15,10,920,36</area>
+            <area>15,10,600,36</area>
             <font>title</font>
             <scroll direction="horizontal" />
         </textarea>
         <textarea name="subtitle" from="base_textarea">
-            <area>15,40,800,36</area>
+            <area>15,40,600,36</area>
             <scroll direction="horizontal" />
+        </textarea>
+        <textarea name="template" from="base_textarea">
+            <area>625,10,300,36</area>
+            <scroll direction="horizontal" />
+            <template>%Using |TEMPLATE| Template%</template>
+        </textarea>
+        <textarea name="channel" from="base_textarea">
+            <area>625,40,200,36</area>
+            <scroll direction="horizontal" />
+            <template>Channel: %1</template>
         </textarea>
         <textarea name="timedate" from="base_textarea">
             <area>945,10,280,36</area>
