@@ -30,8 +30,8 @@
 
     <button>
         <type>MENU_PICTURES</type>
-        <text>Pictures (MythGallery)</text>
-        <text lang="DE">Bilder (MythGallery)</text>
+        <text>Pictures</text>
+        <text lang="DE">Bilder</text>
         <description>Look at Pictures</description>
         <description lang="DE">Bilder aus deiner Sammlung anschauen</description>
         <action>PLUGIN mythgallery</action>
@@ -44,8 +44,7 @@
         <text lang="DE">Bilder</text>
         <description>Look at Pictures</description>
         <description lang="DE">Bilder aus deiner Sammlung anschauen</description>
-        <action>PLUGIN mythimage</action>
-        <depends>mythimage</depends>
+        <action>JUMP Gallery Default</action>
     </button>
 
     <button>
