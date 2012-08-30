@@ -4,7 +4,7 @@
     <window name="mainmenu">  
 
         <imagetype name="header_background">
-            <area>-340,-1,560,50</area>
+            <area>-320,-1,560,50</area>
             <filename>images/media/header_left.png</filename>
         </imagetype>
         <clock name="clock">
