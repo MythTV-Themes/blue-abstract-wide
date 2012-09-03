@@ -35,7 +35,7 @@
 
     <!-- Defines an image in your theme directory to act as a preview and also some information about the theme -->
     <detail>
-        <thumbnail name="preview">images/preview.png</thumbnail>
+        <thumbnail name="preview">preview.png</thumbnail>
         <description>Blue-abstract is a modern looking theme meant for widescreen HD displays. The blue background and the consistent layout makes it an attractive and elegant looking theme.</description>
         <errata></errata>
     </detail>
