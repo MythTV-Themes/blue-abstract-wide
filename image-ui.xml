@@ -291,35 +291,32 @@
 
         <!-- shows the name of the folder or image -->
         <textarea name="title" from="base_textarea">
-            <area>25,640,700,30</area>
+            <area>25,640,770,30</area>
         </textarea>
 
         <!-- optional - shows current position in grid eg '1 of 123' -->
         <textarea name="position" from="base_textarea">
-            <area>1100,640,155,30</area>
+            <area>1120,640,135,36</area>
             <align>right,vcenter</align>
         </textarea>
 
         <!-- shows path to current image -->
         <textarea name="breadcrumbs" from="base_textarea">
-            <area>25,675,1230,20</area>
+            <area>25,670,770,30</area>
             <scroll direction="horizontal" />
         </textarea>
 
         <textarea name="syncprogresstext" from="base_textarea">
-            <area>750,640,300,30</area>
+            <area>800,640,300,36</area>
             <align>right,vcenter</align>
             <template>Syncing image %1</template>
         </textarea>
 
         <textarea name="thumbprogresstext" from="base_textarea">
-            <area>750,640,300,30</area>
+            <area>800,670,300,30</area>
             <align>right,vcenter</align>
             <template>Creating thumbnail %1</template>
         </textarea>
-        <!--<progressbar name="thumbprogress" from="base_spinner" depends="thumbprogresstext">
-            <position>1025,640</position>
-        </progressbar>-->
 
     </window>
 

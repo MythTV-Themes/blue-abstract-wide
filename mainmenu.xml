@@ -30,24 +30,26 @@
 
     <button>
         <type>MENU_PICTURES</type>
-        <text>Pictures (MythGallery)</text>
-        <text lang="DE">Bilder (MythGallery)</text>
+        <text>Pictures</text>
+        <text lang="DE">Bilder</text>
         <description>Look at Pictures</description>
         <description lang="DE">Bilder aus deiner Sammlung anschauen</description>
         <action>PLUGIN mythgallery</action>
         <depends>mythgallery</depends>
     </button>
 
+<!-- This is the new gallery plugin which is integrated into the forntend. Until 
+     its added to MythTV the menu entry must be uncommented manually. -->
+<!--
     <button>
         <type>MENU_IMAGES</type>
         <text>Pictures</text>
         <text lang="DE">Bilder</text>
         <description>Look at Pictures</description>
         <description lang="DE">Bilder aus deiner Sammlung anschauen</description>
-        <action>PLUGIN mythimage</action>
-        <depends>mythimage</depends>
+        <action>JUMP Gallery Default</action>
     </button>
-
+-->
     <button>
         <type>MENU_GAMES</type>
         <text>Games</text>

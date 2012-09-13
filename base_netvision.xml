@@ -35,7 +35,7 @@
                     <imagetype name="background_image">
                         <area>0,0,133,133</area>
                         <mask>images/media/image_item_nfmask.png</mask>
-                        <filename>images/media/image_item_bg.png</filename>
+                        <filename>images/media/netvision_item_bg.png</filename>
                     </imagetype>
 
                     <imagetype name="buttonimage">
@@ -100,7 +100,7 @@
                     <imagetype name="background_image">
                         <area>0,0,185,185</area>
                         <mask>images/media/image_item_fmask.png</mask>
-                        <filename>images/media/image_item_bg.png</filename>
+                        <filename>images/media/netvision_item_bg.png</filename>
                     </imagetype>   
 
                     <imagetype name="buttonimage">

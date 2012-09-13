@@ -2692,5 +2692,106 @@
         </button>
 
     </window>
-    
+
+
+
+
+
+    <!-- Shows the music visualizer effects in fullscreen -->
+    <window name="visualizerview">
+
+        <video name="visualizer">
+            <area>0,0,1280,720,</area>
+        </video>
+
+    </window>
+
+
+
+
+
+    <!-- UNFINISHED -->
+    <!-- used in the visualiser screen to show some 
+         track details after a track change.
+         This popup is similar to the miniplayer popup -->
+    <window name="trackinfo_popup">
+
+        <shape name="track_info_background" from="base_background_shape">
+            <area>575,535,680,165</area>
+        </shape>
+
+        <!-- this is the actual cover image that will be shown if its
+            available, otherwise only the background image is visible -->
+        <imagetype name="coverart_background_image">
+            <area>590,550,133,133</area>
+            <mask>images/media/music_item_nfmask.png</mask>
+            <filename>images/media/music_type/album.png</filename>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="coverart">
+            <area>590,550,133,133</area>
+            <mask>images/media/music_item_nfmask.png</mask>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="coverart_border">
+            <area>590,550,133,133</area>
+            <filename>images/media/music_item_nfborder.png</filename>
+        </imagetype>
+        
+        <textarea name="title" from="base_textarea">
+            <area>740,555,460,30</area>
+            <scroll direction="horizontal" />
+            <font>title</font>
+        </textarea>
+
+        <textarea name="artist" from="base_textarea">
+            <area>740,590,400,30</area>
+            <cutdown>yes</cutdown>
+        </textarea>
+
+        <textarea name="album" from="base_textarea">
+            <area>740,620,360,30</area>
+            <cutdown>yes</cutdown>
+        </textarea>
+        
+        <progressbar name="progress" from="base_progressbar">
+            <position>740,660</position>
+        </progressbar>
+
+        <textarea name="time" from="base_textarea">
+            <area>1075,620,160,30</area>
+            <align>right,vcenter</align>
+        </textarea>
+
+        <imagetype name="rating_background" from="base_rating_background">
+            <position>1150,595</position>
+        </imagetype>
+        <statetype name="ratings_state" from="base_rating">
+            <position>1150,595</position>
+        </statetype>
+
+        <statetype name="trackstate">
+            <position>1207,552</position>
+            <state name="playing">
+                <imagetype name="playicon" from="base_icon_selected">
+                    <area>3,3,30,30</area>
+                <filename>images/icons/music_play.png</filename>
+                </imagetype>
+            </state>
+            <state name="paused">
+                <imagetype name="pauseicon" from="base_icon_selected">
+                    <area>3,3,30,30</area>
+                    <filename>images/icons/music_pause.png</filename>
+                </imagetype>
+            </state>
+            <state name="stopped">
+                <imagetype name="stopicon" from="base_icon_selected">
+                    <area>3,3,30,30</area>
+                    <filename>images/icons/music_stop.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+
+    </window>
+
 </mythuitheme>
