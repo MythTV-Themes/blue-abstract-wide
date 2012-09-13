@@ -3,152 +3,159 @@
 <mythuitheme>
 
     <!-- shows some debug information on the screen -->
-    <!--<window name="osd_debug">-->
     <window name="osd_debug">
         
-        <!-- The clock that is shown at the top right of each screen -->
-        <shape name="clock_background">
-            <area>1040,-4,244,36</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="130" />
-            <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
-        </shape>
-        <clock name="text">
-            <area>1040,0,244,30</area>
+        <!-- The information and the clock that is 
+             shown at the top left of each screen -->       
+        <imagetype name="header_background">
+            <area>-1,-1,560,50</area>
+            <filename>images/media/header_left.png</filename>
+        </imagetype>
+        <clock name="clock">
+            <area>10,0,200,30</area>
             <font>text</font>
             <template>%DATE%, %TIME%</template>
-            <align>allcenter</align>
+            <align>left,vcenter</align>
         </clock>
+        <textarea name="text">
+            <area>215,0,300,30</area>
+            <align>left,vcenter</align>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <font>text</font>
+            <scroll direction="horizontal" />
+            <value>OSD Debug Information</value>
+        </textarea>
 
         <!-- the background image of the popup dialog box -->
         <shape name="background">
-            <area>140,60,1000,330</area>
+            <area>185,200,890,330</area>
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
         
-        <textarea name="filename_label" from="base_textarea">
-            <area>160,75,210,40</area>
+        <textarea name="filename_label">
+            <area>200,215,210,36</area>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <font>text</font>
+            <scroll direction="horizontal" />
             <align>right,vcenter</align>
             <value>Filename :</value>
         </textarea>
-        <textarea name="filename" from="base_textarea">
-            <area>380,75,750,40</area>
-            <cutdown>yes</cutdown>
+        <textarea name="filename" from="filename_label">
+            <area>420,215,635,36</area>
             <align>left,vcenter</align>
         </textarea>
         
         <!-- separates the filename from the other information -->
         <shape name="filename_separator">
-            <area>160,125,960,1</area>
-            <type>box</type>
+            <area>184,265,888,1</area>
+            <type>roundbox</type>
+            <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
+            <cornerradius>10</cornerradius>
         </shape>
         
         <!-- First column with information -->
-        <textarea name="storagerate_label" from="base_textarea">
-            <area>160,140,210,40</area>
+        <textarea name="storagerate_label" from="filename_label">
+            <area>200,275,210,36</area>
             <align>right,vcenter</align>
             <value>Storage to Buffer :</value>
         </textarea>
         <textarea name="decoderrate_label" from="storagerate_label">
-            <position>160,180</position>
+            <position>200,315</position>
             <value>Buffer to Decoder :</value>
         </textarea>
         <textarea name="bufferavail_label" from="storagerate_label">
-            <position>160,220</position>
+            <position>200,355</position>
             <value>Available Buffer :</value>
         </textarea>
         <textarea name="videowidth_label" from="storagerate_label">
-            <position>160,260</position>
+            <position>200,395</position>
             <value>Video :</value>
         </textarea>
         <textarea name="videocodec_label" from="storagerate_label">
-            <position>160,300</position>
+            <position>200,435</position>
             <value>Codec/Dec :</value>
         </textarea>
         <textarea name="load_label" from="storagerate_label">
-            <position>160,340</position>
+            <position>200,475</position>
             <value>CPUs :</value>
         </textarea>
         
-        <textarea name="storagerate" from="base_textarea">
-            <area>380,140,240,40</area>
-            <cutdown>yes</cutdown>
+        <textarea name="storagerate" from="filename_label">
+            <area>420,275,200,36</area>
             <align>left,vcenter</align>
         </textarea>
         <textarea name="decoderrate" from="storagerate">
-            <position>380,180</position>
+            <position>420,315</position>
         </textarea>
         <textarea name="bufferavail" from="storagerate">
-            <position>380,220</position>
+            <position>420,355</position>
             <template>%BUFFERAVAIL% of %BUFFERSIZE%Mb</template>
         </textarea>
         <textarea name="videowidth" from="storagerate">
-            <position>380,260</position>
+            <position>420,395</position>
             <template>%VIDEOWIDTH%x%VIDEOHEIGHT%@%VIDEOFRAMERATE%fps</template>
         </textarea>
         <textarea name="videocodec" from="storagerate">
-            <position>380,300</position>
+            <position>420,435</position>
             <template>%VIDEOCODEC% %VIDEODECODER%</template>
         </textarea>
         <textarea name="load" from="storagerate">
-            <position>380,340</position>
+            <position>420,475</position>
         </textarea>
 
         <!-- Second column with information -->
-        <textarea name="framerate_label" from="base_textarea">
-            <area>640,140,260,40</area>
-            <align>right,vcenter</align>
+        <textarea name="framerate_label" from="filename_label">
+            <area>640,275,210,36</area>
             <value>FPS :</value>
         </textarea>
         <textarea name="avsync_label" from="framerate_label">
-            <position>640,180</position>
+            <position>640,315</position>
             <value>A/V Sync :</value>
         </textarea>
         <textarea name="videoframes_label" from="framerate_label">
-            <position>640,220</position>
+            <position>640,355</position>
             <value>Frames decoded/free :</value>
         </textarea>
         <textarea name="audiocodec_label" from="framerate_label">
-            <position>640,260</position>
+            <position>640,395</position>
             <value>Audio :</value>
         </textarea>
         <textarea name="audiochannels_label" from="framerate_label">
-            <position>640,300</position>
+            <position>640,435</position>
             <value>Channels :</value>
         </textarea>
         <textarea name="samplerate_label" from="framerate_label">
-            <position>640,340</position>
+            <position>640,475</position>
             <value>Sample rate :</value>
         </textarea>
 
-        <textarea name="framerate" from="base_textarea">
-            <area>910,140,190,40</area>
-            <cutdown>yes</cutdown>
+        <textarea name="framerate" from="filename_label">
+            <area>870,275,190,36</area>
             <align>left,vcenter</align>
         </textarea>
         <textarea name="avsync" from="framerate">
-            <position>910,180</position>
+            <position>870,315</position>
         </textarea>
         <textarea name="videoframes" from="framerate">
-            <position>910,220</position>
+            <position>870,355</position>
         </textarea>
         <textarea name="audiocodec" from="framerate">
-            <position>910,260</position>
+            <position>870,395</position>
         </textarea>
         <textarea name="audiochannels" from="framerate">
-            <position>910,300</position>
+            <position>870,435</position>
         </textarea>
         <textarea name="samplerate" from="framerate">
-            <position>910,340</position>
+            <position>870,475</position>
         </textarea>
 
     </window>
-
 
 
 
@@ -158,40 +165,28 @@
     <window name="osd_message">
         <area>0,0,1280,720</area>
 
-        <!-- The clock that is shown at the top right of each screen -->
-        <shape name="clock_background">
-            <area>1040,-4,244,36</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="130" />
-            <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
-        </shape>
-        <clock name="text">
-            <area>1040,0,244,30</area>
+        <!-- The information and the clock that is 
+             shown at the top left of each screen -->       
+        <imagetype name="header_background">
+            <area>-1,-1,560,50</area>
+            <filename>images/media/header_left.png</filename>
+        </imagetype>
+        <clock name="clock">
+            <area>10,0,200,30</area>
             <font>text</font>
             <template>%DATE%, %TIME%</template>
-            <align>allcenter</align>
+            <align>left,vcenter</align>
         </clock>
-        
-        <!-- the background image of the popup dialog box -->
-        <shape name="background">
-            <area>440,-4,400,44</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="130" />
-            <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
-        </shape>
-
-        <!-- shows the message -->
         <textarea name="message_text">
-            <area>460,3,360,30</area>
-            <align>allcenter</align>
+            <area>215,0,300,30</area>
+            <align>left,vcenter</align>
             <multiline>no</multiline>
-            <cutdown>yes</cutdown>
+            <cutdown>no</cutdown>
             <font>text</font>
+            <scroll direction="horizontal" />
         </textarea>
+       
     </window>
-
 
 
 
@@ -200,41 +195,30 @@
     <!-- shows an input message on the screen -->
     <window name="osd_input">
         <area>0,0,1280,720</area>
-
-         <!-- The clock that is shown at the top right of each screen -->
-        <shape name="clock_background">
-            <area>1040,-4,244,36</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="130" />
-            <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
-        </shape>
-        <clock name="text">
-            <area>1040,0,244,30</area>
+        
+        <!-- The information and the clock that is 
+             shown at the top left of each screen -->       
+        <imagetype name="header_background">
+            <area>-1,-1,560,50</area>
+            <filename>images/media/header_left.png</filename>
+        </imagetype>
+        <clock name="clock">
+            <area>10,0,200,30</area>
             <font>text</font>
             <template>%DATE%, %TIME%</template>
-            <align>allcenter</align>
+            <align>left,vcenter</align>
         </clock>
-
-        <!-- the background image of the popup dialog box -->
-        <shape name="background">
-            <area>540,-4,200,44</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="130" />
-            <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
-        </shape>
-
-        <!-- shows the message -->
         <textarea name="osd_number_entry">
-            <area>560,3,160,30</area>
-            <align>allcenter</align>
+            <area>215,0,300,30</area>
+            <align>left,vcenter</align>
             <multiline>no</multiline>
-            <cutdown>yes</cutdown>
+            <cutdown>no</cutdown>
             <font>text</font>
+            <scroll direction="horizontal" />
+            <value>OSD Input</value>
         </textarea>
-    </window>
 
+    </window>
 
 
 
@@ -245,64 +229,64 @@
     <window name="osd_status">
         <area>0,0,1280,720</area>
         
-        <!-- The clock that is shown at the top right of each screen -->
-        <shape name="clock_background">
-            <area>1040,-4,244,36</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="130" />
-            <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
-        </shape>
-        <clock name="text">
-            <area>1040,0,244,30</area>
+        <!-- The information and the clock that is 
+             shown at the top left of each screen -->       
+        <imagetype name="header_background">
+            <area>-1,-1,560,50</area>
+            <filename>images/media/header_left.png</filename>
+        </imagetype>
+        <clock name="clock">
+            <area>10,0,200,30</area>
             <font>text</font>
             <template>%DATE%, %TIME%</template>
-            <align>allcenter</align>
+            <align>left,vcenter</align>
         </clock>
-
+        
         <!-- the background image of the popup dialog box -->
         <shape name="background">
-            <area>220,575,840,100</area>
+            <area>220,600,830,87</area>
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
 
         <textarea name="title">
-            <area>240,590,380,30</area>
+            <area>235,607,380,36</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
-            <cutdown>yes</cutdown>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal" />
             <font>text</font>
         </textarea>
         
-        <textarea name="description">
-            <area>640,590,400,30</area>
+        <textarea name="description" from="title">
+            <area>640,607,395,36</area>
             <align>right,vcenter</align>
-            <multiline>no</multiline>
-            <cutdown>yes</cutdown>
-            <font>text</font>
             <template>%DESCRIPTION% %VALUE%%UNITS%</template>
         </textarea>
 
         <progressbar name="position">
-            <area>240,635,800,20</area>
+            <area>235,650,800,20</area>
             <layout>horizontal</layout>
             <style>reveal</style>
-            <imagetype name="background">
-                <filename>images/widgets/progressbar/progressbar_inactive.png</filename>
+
+            <shape name="background">
                 <area>0,0,800,20</area>
-                <alpha>150</alpha>
-            </imagetype>
+                <type>roundbox</type>
+                <fill color="#535353" alpha="120" />
+                <line color="#535353" alpha="100" width="1" />
+                <cornerradius>8</cornerradius>
+            </shape>
+
             <imagetype name="progressimage">
-                <filename>images/widgets/progressbar/progressbar_active.png</filename>
                 <area>0,0,800,20</area>
-                <alpha>220</alpha>
+                <filename>images/icons/progressbar.png</filename>
+                <alpha>200</alpha>
             </imagetype>
         </progressbar>
-    </window>
 
+    </window>
 
 
 
@@ -312,387 +296,338 @@
          of the current recording/movie/tv -->
     <window name="program_info">
         <area>0,0,1280,720</area>
-        
-        <animation trigger="AboutToShow">
-            <section centre="bottom" duration="250">
-                <alpha start="0" end="255" easingcurve="Linear"/>
-                <zoom start="50" end="100" easingcurve="OutQuart"/>
-                <position start="0,-100" end="0,0"/>
-            </section>
-        </animation>
 
-        <animation trigger="AboutToHide">
-            <section centre="bottom" duration="250">
-                <alpha start="255" end="0" easingcurve="Linear"/>
-                <zoom start="100" end="50" easingcurve="InQuart"/>
-                <position start="0,0" end="0,-100"/>
-            </section>
-        </animation>
-        
-        <!-- The clock that is shown at the top right of each screen -->
-        <shape name="clock_background">
-            <area>1040,-4,244,36</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="130" />
-            <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
-        </shape>
-        <clock name="text">
-            <area>1040,0,244,30</area>
+        <!-- The information and the clock that is 
+             shown at the top left of each screen -->       
+        <imagetype name="header_background">
+            <area>-1,-1,560,50</area>
+            <filename>images/media/header_left.png</filename>
+        </imagetype>
+        <clock name="clock">
+            <area>10,0,200,30</area>
             <font>text</font>
             <template>%DATE%, %TIME%</template>
-            <align>allcenter</align>
+            <align>left,vcenter</align>
         </clock>
 
         <!-- the background image of the popup dialog box -->
-        <shape name="background">
-            <area>100,380,1080,295</area>
+        <shape name="program_info_background">
+            <area>105,445,1070,245</area>
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
 
         <!-- shows the title and the plot of the selected video -->
         <textarea name="title">
-            <area>120,400,820,30</area>
+            <area>120,460,820,36</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
-            <cutdown>yes</cutdown>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal"/>
             <font>title</font>
         </textarea>
 
-        <textarea name="starttime">
-            <area>120,440,400,20</area>
-            <align>left,vcenter</align>
-            <multiline>no</multiline>
-            <cutdown>yes</cutdown>
-            <font>text_small</font>
+        <textarea name="starttime" from="title">
+            <area>120,495,400,36</area>
+            <font>text</font>
             <template>%STARTTIME%-%ENDTIME% : %LENMINS%</template>
         </textarea>
 
-        <!-- separates the title and channel and the status icons from the description -->
+        <!-- separates the title and channel and the 
+             status icons from the description -->
         <shape name="program_info_separator">
-            <area>120,475,1040,1</area>
+            <area>106,535,1068,1</area>
             <type>box</type>
             <line color="#AAAAAA" alpha="150" width="1" />
         </shape>
 
-        <!-- show the channel and the recorded time of the recording -->
-        <shape name="channelicon_background">
-            <area>120,495,131,131</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="130" />
-            <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
-        </shape>
-        <imagetype name="iconpath">
-            <area>122,497,126,126</area>
-            <preserveaspect>true</preserveaspect>
+        <!-- show the channel or the channel name if 
+             no channel icon is available -->
+        <imagetype name="iconpath_background_image">
+            <area>120,550,133,100</area>
+            <mask>images/media/channel_nfmask.png</mask>
+            <filename>images/media/channel_bg.png</filename>
         </imagetype>
-
-        <!-- channel number and name -->
-        <textarea name="channum">
-            <area>100,635,40,30</area>
-            <align>right,vcenter</align>
-            <multiline>no</multiline>
-            <cutdown>no</cutdown>
-            <font>text_small</font>
-        </textarea>
         
         <textarea name="callsign">
-            <area>150,635,120,30</area>
+            <area>130,560,113,80</area>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+            <cutdown>no</cutdown>
+            <scroll direction="vertical"/>
+            <font>text</font>
+        </textarea>
+        
+        <imagetype name="iconpath">
+            <area>120,550,133,100</area>
+            <mask>images/media/channel_nfmask.png</mask>
+        </imagetype>
+        <imagetype name="iconpath_border">
+            <area>120,550,133,100</area>
+            <filename>images/media/channel_nfborder.png</filename>
+        </imagetype>
+
+        <textarea name="channum">
+            <area>120,650,133,36</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
-            <cutdown>yes</cutdown>
-            <font>text_small</font>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal"/>
+            <font>text</font>
+            <template>Channel: %1</template>
         </textarea>
 
         <shape name="description_separator">
-            <area>270,476,1,180</area>
+            <area>265,536,1,153</area>
             <type>box</type>
             <line color="#AAAAAA" alpha="150" width="1" />
         </shape>
 
         <!-- show the plot of the recording -->
         <textarea name="description">
-            <area>290,490,870,180</area>
+            <area>279,550,870,125</area>
             <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
+            <cutdown>no</cutdown>
+            <scroll direction="vertical"/>
             <align>left,top</align>
-            <font>text_small</font>
+            <font>text</font>
             <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
-        
-        
+
         <!-- show some images about the type of recording, audio and video codecs -->
         <statetype name="tvstate">
-            
+            <position>1058,452</position>
             <state name="WatchingLiveTV">
-                <!--<imagetype name="image">
-                    <area>1100,405,45,45</area>
-                    <filename>images/widgets/codecs/tv.png</filename>
-                    <preserveaspect>true</preserveaspect>
-                </imagetype>-->
-                <textarea name="livetv_label" from="base_textarea">
+                <textarea name="livetv_label">
                     <align>right,vcenter</align>
-                    <area>1055,400,100,20</area>
-                    <font>text_small</font>
+                    <area>0,0,100,36</area>
+                    <font>text</font>
                     <value>Live TV</value>
                 </textarea>
             </state>
             <state name="WatchingPreRecorded">
-                <textarea name="livetv_label" from="base_textarea">
+                <textarea name="livetv_label">
                     <align>right,vcenter</align>
-                    <area>1055,400,100,20</area>
-                    <font>text_small</font>
+                    <area>0,0,100,36</area>
+                    <font>text</font>
                     <value>Recorded</value>
                 </textarea>
             </state>
             <state name="WatchingVideo">
-                <textarea name="livetv_label" from="base_textarea">
+                <textarea name="livetv_label">
                     <align>right,vcenter</align>
-                    <area>1055,400,100,20</area>
-                    <font>text_small</font>
+                    <area>0,0,100,36</area>
+                    <font>text</font>
                     <value>Video</value>
                 </textarea>
             </state>
             <state name="WatchingDVD">
-                <!--<imagetype name="image">
-                    <area>1100,405,45,45</area>
-                    <filename>images/widgets/codecs/dvd.png</filename>
-                    <preserveaspect>true</preserveaspect>
-                </imagetype>-->
-                <textarea name="livetv_label" from="base_textarea">
+                <textarea name="livetv_label">
                     <align>right,vcenter</align>
-                    <area>1055,400,100,20</area>
-                    <font>text_small</font>
+                    <area>0,0,100,36</area>
+                    <font>text</font>
                     <value>DVD</value>
                 </textarea>
             </state>
             <state name="WatchingBD">
-                <!--<imagetype name="image">
-                    <area>1100,405,45,45</area>
-                    <filename>images/widgets/codecs/bd.png</filename>
-                    <preserveaspect>true</preserveaspect>
-                </imagetype>-->
-                <textarea name="image" from="base_textarea">
+                <textarea name="image">
                     <align>right,vcenter</align>
-                    <area>1055,440,100,20</area>
-                    <font>text_small</font>
+                    <area>0,0,100,36</area>
+                    <font>text</font>
                     <value>Bluray</value>
                 </textarea>
             </state>
             <state name="WatchingRecording">
-                <!--<imagetype name="image">
-                    <area>1100,405,45,45</area>
-                    <filename>images/widgets/codecs/recording.png</filename>
-                    <preserveaspect>true</preserveaspect>
-                </imagetype>-->
-                <textarea name="image" from="base_textarea">
+                <textarea name="image">
                     <align>right,vcenter</align>
-                    <area>1060,440,100,20</area>
-                    <font>text_small</font>
+                    <area>0,0,100,36</area>
+                    <font>text</font>
                     <value>Recording</value>
                 </textarea>
             </state>
         </statetype>
 
-        <imagetype name="no_videodescrip" from="base_icon_inactive">
-            <area>1080,433,78,30</area>
-            <filename>images/shared/osd/resolution/480.png</filename>
-        </imagetype>
         <statetype name="videodescrip">
-            <position>1080,433</position>
+            <position>1080,493</position>
             <state name="SD">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/resolution/480.png</filename>
+                    <filename>images/icons/resolution/480.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="HD_720_P">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/resolution/720.png</filename>
+                    <filename>images/icons/resolution/720.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="HD_1080_I">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/resolution/1080.png</filename>
+                    <filename>images/icons/resolution/1080.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="HD_1080_P">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/resolution/1080.png</filename>
+                    <filename>images/icons/resolution/1080.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
         </statetype>
 
-        <imagetype name="no_audiocodec" from="base_icon_inactive">
-            <area>990,433,78,30</area>
-            <filename>images/shared/osd/audiocodec/ac3.png</filename>
-        </imagetype>
         <statetype name="audiocodec">
-            <position>990,433</position>
+            <position>990,493</position>
             <state name="PCM_DVD">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/audiocodec/dolbydigital.png</filename>
+                    <filename>images/icons/audio_codec/dolbydigital.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="PCM_BLURAY">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/audiocodec/dolbydigital.png</filename>
+                    <filename>images/icons/audio_codec/dolbydigital.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="AC3">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/audiocodec/ac3.png</filename>
+                    <filename>images/icons/audio_codec/ac3.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="E-AC3">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/audiocodec/eac3.png</filename>
+                    <filename>images/icons/audio_codec/eac3.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="TRUEHD">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/audiocodec/truehd.png</filename>
+                    <filename>images/icons/audio_codec/truehd.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="WMAPRO">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/audiocodec/wmapro.png</filename>
+                    <filename>images/icons/audio_codec/wmapro.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="DTS">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/audiocodec/dts.png</filename>
+                    <filename>images/icons/audio_codec/dts.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="AAC">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/audiocodec/aac.png</filename>
+                    <filename>images/icons/audio_codec/aac.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="MP2">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/audiocodec/mp2.png</filename>
+                    <filename>images/icons/audio_codec/mp2.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="MP3">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/audiocodec/mp3.png</filename>
+                    <filename>images/icons/audio_codec/mp3.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="VORBIS">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/audiocodec/vorbis.png</filename>
+                    <filename>images/icons/audio_codec/vorbis.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
         </statetype>
 
-        <imagetype name="no_audiochannels" from="base_icon_inactive">
-            <area>900,433,78,30</area>
-            <filename>images/shared/osd/audio/2.png</filename>
-        </imagetype>
         <statetype name="audiochannels">
-            <area>900,433,78,30</area>
+            <area>900,493,78,30</area>
             <state name="1">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/audio/1.png</filename>
+                    <filename>images/icons/audio/1.0.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="2">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/audio/2.png</filename>
+                    <filename>images/icons/audio/2.0.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="5">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/audio/6.png</filename>
+                    <filename>images/icons/audio/4.1.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="6">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/audio/6.png</filename>
+                    <filename>images/icons/audio/5.1.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="7">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/audio/7.png</filename>
+                    <filename>images/icons/audio/6.1.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="8">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/audio/8.png</filename>
+                    <filename>images/icons/audio/7.1.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
         </statetype>
 
-        <imagetype name="no_videocodec" from="base_icon_inactive">
-            <area>810,433,78,30</area>
-            <filename>images/shared/osd/videocodec/mpeg2.png</filename>
-        </imagetype>
-        <statetype name="videocodec">audio
-            <position>810,433</position>
+        <statetype name="videocodec">
+            <position>810,493</position>
             <state name="MPEG-2">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/videocodec/mpeg2.png</filename>
+                    <filename>images/icons/video_codec/mpeg2.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="VC-1">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/videocodec/vc-1.png</filename>
+                    <filename>images/icons/video_codec/vc-1.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="H.264">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/videocodec/h264.png</filename>
+                    <filename>images/icons/video_codec/h264.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="MPEG-4">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/videocodec/mpeg4.png</filename>
+                    <filename>images/icons/video_codec/mpeg4.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="RTjpeg">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/videocodec/mpeg1.png</filename>
+                    <filename>images/icons/video_codec/mpeg1.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="WMV3">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/videocodec/wmv.png</filename>
+                    <filename>images/icons/video_codec/wmv.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
             <state name="H.263">
                 <imagetype name="image" from="base_icon_selected">
-                    <filename>images/shared/osd/videocodec/h264.png</filename>
+                    <filename>images/icons/video_codec/h264.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
@@ -710,136 +645,128 @@
     <window name="browse_info">
         <area>0,0,1280,720</area>
         
-        <animation trigger="AboutToShow">
-            <section centre="bottom" duration="250">
-                <alpha start="0" end="255" easingcurve="Linear"/>
-                <zoom start="50" end="100" easingcurve="OutQuart"/>
-                <position start="0,-100" end="0,0"/>
-            </section>
-        </animation>
-
-        <animation trigger="AboutToHide">
-            <section centre="bottom" duration="250">
-                <alpha start="255" end="0" easingcurve="Linear"/>
-                <zoom start="100" end="50" easingcurve="InQuart"/>
-                <position start="0,0" end="0,-100"/>
-            </section>
-        </animation>
-        
-        <!-- The clock that is shown at the top right of each screen -->
-        <shape name="clock_background">
-            <area>1040,-4,244,36</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="130" />
-            <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
-        </shape>
-        <clock name="text">
-            <area>1040,0,244,30</area>
+        <!-- The information and the clock that is 
+             shown at the top left of each screen -->       
+        <imagetype name="header_background">
+            <area>-1,-1,560,50</area>
+            <filename>images/media/header_left.png</filename>
+        </imagetype>
+        <clock name="clock">
+            <area>10,0,200,30</area>
             <font>text</font>
             <template>%DATE%, %TIME%</template>
-            <align>allcenter</align>
+            <align>left,vcenter</align>
         </clock>
 
         <!-- the background image of the popup dialog box -->
-        <shape name="background">
-            <area>100,380,1080,295</area>
+        <shape name="program_info_background">
+            <area>105,445,1070,245</area>
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
 
         <!-- shows the title and the plot of the selected video -->
         <textarea name="title">
-            <area>120,400,820,30</area>
+            <area>120,460,820,36</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
-            <cutdown>yes</cutdown>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal"/>
             <font>title</font>
         </textarea>
 
-        <textarea name="starttime">
-            <area>120,440,400,20</area>
-            <align>left,vcenter</align>
-            <multiline>no</multiline>
-            <cutdown>yes</cutdown>
-            <font>text_small</font>
+        <textarea name="starttime" from="title">
+            <area>120,495,400,36</area>
+            <font>text</font>
             <template>%STARTTIME%-%ENDTIME% : %LENMINS%</template>
         </textarea>
 
-        <!-- separates the title and channel and the status icons from the description -->
+        <!-- separates the title and channel and the 
+             status icons from the description -->
         <shape name="program_info_separator">
-            <area>120,475,1040,1</area>
+            <area>106,535,1068,1</area>
             <type>box</type>
             <line color="#AAAAAA" alpha="150" width="1" />
         </shape>
 
-        <!-- show the channel and the recorded time of the recording -->
-        <shape name="channelicon_background">
-            <area>120,495,131,131</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="130" />
-            <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
-        </shape>
-        <imagetype name="iconpath">
-            <area>122,497,126,126</area>
-            <preserveaspect>true</preserveaspect>
+        <!-- show the channel or the channel name if 
+             no channel icon is available -->
+        <imagetype name="iconpath_background_image">
+            <area>120,550,133,100</area>
+            <mask>images/media/channel_nfmask.png</mask>
+            <filename>images/media/channel_bg.png</filename>
         </imagetype>
-
-        <!-- channel number and name -->
-        <textarea name="channum">
-            <area>100,635,40,30</area>
-            <align>right,vcenter</align>
-            <multiline>no</multiline>
-            <cutdown>no</cutdown>
-            <font>text_small</font>
-        </textarea>
         
         <textarea name="callsign">
-            <area>150,635,120,30</area>
+            <area>130,560,113,80</area>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+            <cutdown>no</cutdown>
+            <scroll direction="vertical"/>
+            <font>text</font>
+        </textarea>
+        
+        <imagetype name="iconpath">
+            <area>120,550,133,100</area>
+            <mask>images/media/channel_nfmask.png</mask>
+        </imagetype>
+        <imagetype name="iconpath_border">
+            <area>120,550,133,100</area>
+            <filename>images/media/channel_nfborder.png</filename>
+        </imagetype>
+
+        <textarea name="channum">
+            <area>120,650,133,36</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
-            <cutdown>yes</cutdown>
-            <font>text_small</font>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal"/>
+            <font>text</font>
+            <template>Channel: %1</template>
         </textarea>
 
         <shape name="description_separator">
-            <area>270,476,1,180</area>
+            <area>265,536,1,153</area>
             <type>box</type>
             <line color="#AAAAAA" alpha="150" width="1" />
         </shape>
 
         <!-- show the plot of the recording -->
         <textarea name="description">
-            <area>290,490,870,140</area>
+            <area>279,550,870,125</area>
             <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
+            <cutdown>no</cutdown>
+            <scroll direction="vertical"/>
             <align>left,top</align>
-            <font>text_small</font>
+            <font>text</font>
             <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
         </textarea>       
        
         <progressbar name="elapsedpercent">
-            <area>290,635,800,20</area>
+            <area>560,500,600,20</area>
             <layout>horizontal</layout>
             <style>reveal</style>
-            <imagetype name="background">
-                <filename>images/widgets/progressbar/progressbar_inactive.png</filename>
-                <area>0,0,800,20</area>
-                <alpha>150</alpha>
-            </imagetype>
+            
+            <shape name="progressimage_background">
+                <area>0,0,600,20</area>
+                <type>roundbox</type>
+                <fill color="#535353" alpha="120" />
+                <line color="#535353" alpha="100" width="1" />
+                <cornerradius>8</cornerradius>
+            </shape>
+
             <imagetype name="progressimage">
-                <filename>images/widgets/progressbar/progressbar_active.png</filename>
-                <area>0,0,800,20</area>
-                <alpha>220</alpha>
-            </imagetype> 
+                <area>0,0,600,20</area>
+                <filename>images/icons/progressbar.png</filename>
+                <alpha>200</alpha>
+            </imagetype>
         </progressbar>
+
     </window>
     
     
-
 
 
 
@@ -848,142 +775,150 @@
     <window name="ChannelEditor">
         <area>0,0,1280,720</area>
 
-        <animation trigger="AboutToShow">
-            <section centre="left" duration="250">
-                <alpha start="0" end="255" easingcurve="Linear"/>
-                <zoom start="50" end="100" easingcurve="OutQuart"/>
-                <position start="-150,0" end="0,0"/>
-            </section>
-        </animation>
-
-        <animation trigger="AboutToHide">
-            <section centre="left" duration="250">
-                <alpha start="255" end="0" easingcurve="Linear"/>
-                <zoom start="100" end="50" easingcurve="InQuart"/>
-                <position start="0,0" end="-150,0"/>
-            </section>
-        </animation>
-
-        <!-- The clock that is shown at the top right of each screen -->
-        <shape name="clock_background">
-            <area>1040,-4,244,36</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="130" />
-            <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
-        </shape>
-        <clock name="text">
-            <area>1040,0,244,30</area>
+        <!-- The information and the clock that is 
+             shown at the top left of each screen -->       
+        <imagetype name="header_background">
+            <area>-1,-1,560,50</area>
+            <filename>images/media/header_left.png</filename>
+        </imagetype>
+        <clock name="clock">
+            <area>10,0,200,30</area>
             <font>text</font>
             <template>%DATE%, %TIME%</template>
-            <align>allcenter</align>
+            <align>left,vcenter</align>
         </clock>
+        <textarea name="text">
+            <area>215,0,300,30</area>
+            <align>left,vcenter</align>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <font>text</font>
+            <scroll direction="horizontal" />
+            <value>Channel Editor</value>
+        </textarea>
 
         <!-- the background image of the popup dialog box -->
-        <shape name="background" from="base_background_dark">
-            <area>345,190,585,370</area>
+        <shape name="background">
+            <area>400,200,480,330</area>
+            <type>roundbox</type>
+            <fill color="#000000" alpha="210" />
+            <line color="#AAAAAA" alpha="150" width="1" />
+            <cornerradius>10</cornerradius>
         </shape>
-
-        <imagetype name="title_background">
-            <area>360,205,555,70</area>
-            <filename>images/widgets/popup_background.png</filename>
-            <alpha>220</alpha>
-        </imagetype>
 
         <!-- shows the title -->
         <textarea name="title">
-            <area>380,205,515,70</area>
+            <area>415,210,450,60</area>
             <align>allcenter</align>
             <font>text</font>
             <value>Channel Editor</value>
         </textarea>
 
+        <shape name="title_separator">
+            <area>401,280,478,1</area>
+            <type>roundbox</type>
+            <fill color="#000000" alpha="130" />
+            <line color="#AAAAAA" alpha="150" width="1" />
+            <cornerradius>10</cornerradius>
+        </shape>
+
         <textarea name="callsign_label">
-            <area>360,290,170,40</area>
+            <area>415,295,140,36</area>
             <align>right,vcenter</align>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <font>text</font>
+            <scroll direction="horizontal" />
             <value>Callsign</value>
         </textarea>
         <textarea name="channum_label" from="callsign_label">
-            <area>360,335,170,40</area>
+            <area>415,335,140,36</area>
             <value>Channel #</value>
         </textarea>
         <textarea name="channame_label" from="callsign_label">
-            <area>360,380,170,40</area>
+            <area>415,375,140,36</area>
             <value>Channel Name</value>
         </textarea>
         <textarea name="xmltv_label" from="callsign_label">
-            <area>360,425,170,40</area>
+            <area>415,415,140,36</area>
             <value>XMLTV ID</value>
         </textarea>
-        
+
         <textedit name="callsign">
-            <area>540,290,300,40</area>
+            <area>565,295,300,36</area>
             <statetype name="background">
                 <state name="active">
-                    <imagetype name="background">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,300,40</area>
-                        <alpha>150</alpha>
-                    </imagetype>
+                    <area>0,0,300,36</area>
+                    <shape name="background">
+                        <area>0,0,100%,100%</area>
+                        <type>roundbox</type>
+                        <fill color="#535353" alpha="120" />
+                        <line color="#535353" alpha="100" width="1" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
                 </state>
                 <state name="selected">
-                    <imagetype name="background">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,300,40</area>
-                        <alpha>220</alpha>
-                    </imagetype>
+                    <area>0,0,300,36</area>
+                    <shape name="background">
+                        <area>0,0,100%,100%</area>
+                        <type>roundbox</type>
+                        <fill color="#3697ef" alpha="220" />
+                        <line color="#3697ef" alpha="200" width="1" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
                 </state>
-                <state name="inactive">
-                    <imagetype name="background">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,300,40</area>
-                        <alpha>120</alpha>
-                    </imagetype>
+                <state name="inactive" from="active">
+                    <area>0,0,300,36</area>
                 </state>
             </statetype>
-            
+
             <imagetype name="cursor">
                 <shape name="cursor_shape">
-                    <area>0,4,2,32</area>
+                    <area>0,2,2,20</area>
                     <type>box</type>
                     <fill color="#FFFFFF" alpha="240" />
                 </shape>
             </imagetype>
-            
+
             <textarea name="text">
-                <area>8,0,290,40</area>
+                <area>8,0,100%-8,36</area>
                 <font>text</font>
                 <align>left,vcenter</align>
             </textarea>
         </textedit>
-        
+
         <textedit name="channum" from="callsign">
-            <area>540,335,300,40</area>
+            <area>565,335,300,36</area>
         </textedit>
         <textedit name="channame" from="callsign">
-            <area>540,380,300,40</area>
+            <area>565,375,300,36</area>
         </textedit>
         <textedit name="XMLTV" from="callsign">
-            <area>540,425,300,40</area>
+            <area>565,415,300,36</area>
         </textedit>
 
         <shape name="button_separator">
-            <area>360,480,555,1</area>
-            <type>box</type>
+            <area>401,465,478,1</area>
+            <type>roundbox</type>
+            <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
+            <cornerradius>10</cornerradius>
         </shape>
         
         <button name="probe">
-            <area>465,500,150,40</area>
+            <area>465,480,150,36</area>
             <statetype name="buttonstate">
                 <state name="active">
-                    <imagetype name="background">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,150,40</area>
-                        <alpha>150</alpha>
-                    </imagetype>
+                    <area>0,0,150,36</area>
+                    <shape name="background">
+                        <area>0,0,100%,100%</area>
+                        <type>roundbox</type>
+                        <fill color="#535353" alpha="120" />
+                        <line color="#535353" alpha="100" width="1" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
                     <textarea name="text">
-                        <area>8,5,134,30</area>
+                        <area>8,3,134,30</area>
                         <align>allcenter</align>
                         <font>text</font>
                         <value>Probe</value>
@@ -992,110 +927,120 @@
                     </textarea>
                 </state>
                 <state name="selected" from="active">
-                    <imagetype name="background">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,150,40</area>
-                        <alpha>220</alpha>
-                    </imagetype>
+                    <area>0,0,150,36</area>
+                    <shape name="background">
+                        <area>0,0,100%,100%</area>
+                        <type>roundbox</type>
+                        <fill color="#3697ef" alpha="220" />
+                        <line color="#3697ef" alpha="200" width="1" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
                 </state>
                 <state name="disabled" from="active" />
-                <state name="pushed" from="active">
-                    <imagetype name="background">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,150,40</area>
-                        <alpha>120</alpha>
-                    </imagetype>
+                <state name="pushed" from="selected">
+                    <area>0,0,150,36</area>
+                    <shape name="background">
+                        <area>0,0,100%,100%</area>
+                        <type>roundbox</type>
+                        <fill color="#1d68e0" alpha="100" />
+                        <line color="#1d68e0" alpha="80" width="1" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
                 </state>
             </statetype>
         </button>
-        
+
         <button name="ok" from="probe">
-            <area>665,500,150,40</area>
+            <area>665,480,150,36</area>
             <value>OK</value>
         </button>
+
     </window>
 
 
 
 
 
-
+    <!-- TODO: cutpoint are not visible -->
+    <!-- TODO: move down -->
     <!-- dialog box where the user can edit the current program -->
     <window name="osd_program_editor">
         
-        <!-- The clock that is shown at the top right of each screen -->
-        <shape name="clock_background">
-            <area>1040,-4,244,36</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="130" />
-            <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
-        </shape>
-        <clock name="text">
-            <area>1040,0,244,30</area>
+        <!-- The information and the clock that is 
+             shown at the top left of each screen -->       
+        <imagetype name="header_background">
+            <area>-1,-1,560,50</area>
+            <filename>images/media/header_left.png</filename>
+        </imagetype>
+        <clock name="clock">
+            <area>10,0,200,30</area>
             <font>text</font>
             <template>%DATE%, %TIME%</template>
-            <align>allcenter</align>
+            <align>left,vcenter</align>
         </clock>
 
         <!-- the background image of the popup dialog box -->
         <shape name="background">
-            <area>220,75,840,140</area>
+            <area>220,100,830,117</area>
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
 
-        <!-- shows the title and the plot of the selected video -->
         <textarea name="title">
-            <area>240,90,380,30</area>
+            <area>235,108,380,36</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
-            <cutdown>yes</cutdown>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal" />
             <font>text</font>
         </textarea>
-        
+
         <!-- shows the current position (as time) -->
         <textarea name="timedisplay" from="title">
-            <area>620,90,300,30</area>
+            <area>640,108,200,36</area>
             <align>right,vcenter</align>
         </textarea>
         
         <!-- displays the frame of the shown image -->
         <textarea name="framedisplay" from="title">
-            <area>940,90,100,30</area>
+            <area>830,108,200,36</area>
             <align>right,vcenter</align>
+            <template>Frames: %1</template>
         </textarea>
         
         <!-- shows how far pressing left/right 
              will jump within the recording -->
         <textarea name="seekamount" from="title">
-            <area>840,170,200,30</area>
+            <area>830,175,200,36</area>
             <align>right,vcenter</align>
+            <template>Seek: %1</template>
         </textarea>
         
         <!-- description of the current action, like cutting... -->
         <textarea name="cutindicator" from="title">
-            <area>540,170,200,30</area>
+            <area>540,175,200,36</area>
             <align>allcenter</align>
+            <template>Action: %1</template>
         </textarea>
-        
-        
+
         <!-- progressbar that shows the cutting points -->
         <editbar name="editbar">
-            <area>240,135,800,20</area>
+            <area>235,150,800,20</area>
 
-            <imagetype name="cut">
-                <filename>images/widgets/progressbar/progressbar_inactive.png</filename>
+            <shape name="background">
                 <area>0,0,800,20</area>
-                <alpha>150</alpha>
-            </imagetype>
+                <type>roundbox</type>
+                <fill color="#535353" alpha="120" />
+                <line color="#535353" alpha="100" width="1" />
+                <cornerradius>8</cornerradius>
+            </shape>
 
-            <imagetype name="keep">
-                <filename>images/widgets/progressbar/progressbar_active.png</filename>
+            <imagetype name="progressimage">
                 <area>0,0,800,20</area>
-                <alpha>220</alpha>
+                <filename>images/icons/progressbar.png</filename>
+                <alpha>200</alpha>
             </imagetype>
 
             <shape name="position">
@@ -1104,20 +1049,20 @@
             </shape>
             
             <shape name="cuttoright">
-                <area>0,16,1,20</area>
+                <area>0,16,2,20</area>
                 <fill color="#AAAAAA" alpha="255" />
             </shape>
             <shape name="cuttoleft">
-                <area>0,16,1,20</area>
+                <area>0,16,2,20</area>
                 <fill color="#AAAAAA" alpha="255" />
             </shape>
             
             <shape name="keeptoright">
-                <area>0,16,1,12</area>
+                <area>0,16,2,12</area>
                 <fill color="#FFFFFF" alpha="255" />
             </shape>
             <shape name="keeptoleft">
-                <area>0,16,1,12</area>
+                <area>0,16,2,12</area>
                 <fill color="#FFFFFF" alpha="255" />
             </shape>
             
@@ -1128,119 +1073,141 @@
 
 
 
-
     <!-- dialog box that shows the most 
          important options and controls -->
     <window name="MythPopupBox">
     
+        <!-- darkens the entire background so 
+             that the popup is better readable -->
+        <shape name="darken_background">
+            <type>box</type>
+            <fill color="#000000" alpha="110" />
+        </shape>
+        
         <!-- the background image of the popup dialog box -->
         <shape name="dialog_background">
-            <area>450,130,380,428</area>
+            <area>450,130,380,388</area>
             <type>roundbox</type>
             <fill color="#000000" alpha="210" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>2</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
 
-        <imagetype name="message_background">
-            <area>465,145,350,90</area>
-            <filename>images/widgets/popup_background.png</filename>
-            <alpha>220</alpha>
-        </imagetype>
-
-        <!-- the text that is shown in the popup box -->
-        <textarea name="messagearea" from="base_textarea">
-            <area>485,145,320,90</area>
-            <font>text</font>
-            <multiline>yes</multiline>
+        <textarea name="messagearea">
+            <area>465,140,350,60</area>
             <align>allcenter</align>
+            <multiline>yes</multiline>
+            <cutdown>no</cutdown>
+            <font>text</font>
+            <scroll direction="vertical"/>
         </textarea>
+        
+        <!-- this needs to be here to prevent errors in the logs. -->
+        <textarea name="title" from="messagearea">
+            <area>465,140,350,60</area>
+        </textarea>
+        
+        <shape name="messagearea_separator">
+            <area>451,210,378,1</area>
+            <type>roundbox</type>
+            <fill color="#000000" alpha="130" />
+            <line color="#AAAAAA" alpha="150" width="1" />
+            <cornerradius>10</cornerradius>
+        </shape>
 
         <buttonlist name="list">
-            <area>465,275,350,268</area>
+            <area>465,225,350,275</area>
             <layout>vertical</layout>
             <spacing>3</spacing>
             <scrollstyle>free</scrollstyle>
             <wrapstyle>selection</wrapstyle>
-            <buttonarea>0,0,100%,97%</buttonarea>
-            
+            <buttonarea>0,0,100%,100%</buttonarea>
+        
             <!-- states that the buttonlist can have -->
             <statetype name="buttonitem">
         
                 <!-- active menu entry -->
                 <state name="active">
-                    <imagetype name="buttonbackground">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,350,40</area>
-                        <alpha>150</alpha>
-                    </imagetype>
+                    <area>0,0,350,36</area>
+                    
+                    <shape name="background">
+                        <area>0,0,100%,100%</area>
+                        <type>roundbox</type>
+                        <fill color="#535353" alpha="120" />
+                        <line color="#535353" alpha="100" width="1" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
                     
                     <!-- the button's text -->
                     <textarea name="buttontext">
-                        <area>8,5,300,30</area>
+                        <area>8,0,100%-16,36</area>
                         <font>text</font>
-                        <cutdown>yes</cutdown>
+                        <multiline>no</multiline>
+                        <cutdown>no</cutdown>
                         <align>left,vcenter</align>
+                        <scroll direction="horizontal" />
                     </textarea>
                     
                     <!-- indicates the button contains a submenu -->
                     <imagetype name="buttonarrow">
-                        <area>321,6,18,27</area>
-                        <filename>images/shared/arrow_right.png</filename>
-                        <alpha>70</alpha>
+                        <area>100%-26,4,18,27</area>
+                        <alpha>50</alpha>
+                        <filename>images/icons/button_arrow_right.png</filename>
                     </imagetype>
                 </state>
-
+                
                 <!-- inactive menu entry -->
-                <state name="inactive" from="active" />
-
+                <state name="inactive" from="active">
+                    <area>0,0,350,36</area>
+                </state>
+                
                 <!-- menu entry has been selected and is active -->
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,350,40</area>
-                        <alpha>220</alpha>
-                    </imagetype>
+                    <area>0,0,350,36</area>
+                    <shape name="background">
+                        <area>0,0,100%,100%</area>
+                        <type>roundbox</type>
+                        <fill color="#3697ef" alpha="220" />
+                        <line color="#3697ef" alpha="200" width="1" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
+                    
+                    <!-- indicates the button contains a submenu -->
                     <imagetype name="buttonarrow">
-                        <area>321,6,18,27</area>
-                        <filename>images/shared/arrow_right.png</filename>
+                        <area>100%-26,4,18,27</area>
                         <alpha>220</alpha>
+                        <filename>images/icons/button_arrow_right.png</filename>
                     </imagetype>
                 </state>
                 
                 <!-- menu entry has been selected and is inactive -->
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,350,40</area>
-                        <alpha>120</alpha>
-                    </imagetype>
-                    
-                    <textarea name="buttontext">
-                        <font>text_inactive</font>
-                    </textarea>
-                    
-                    <imagetype name="buttonarrow">
-                        <area>321,6,18,27</area>
-                        <filename>images/shared/arrow_right.png</filename>
-                        <alpha>120</alpha>
-                    </imagetype>
+                    <area>0,0,350,36</area>
+                    <shape name="background">
+                        <area>0,0,100%,100%</area>
+                        <type>roundbox</type>
+                        <fill color="#1d68e0" alpha="100" />
+                        <line color="#1d68e0" alpha="80" width="1" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
                 </state>
             </statetype>
             
             <!-- show arrows to indicates that there are
                 more menu entries above the first visible menu -->
             <statetype name="upscrollarrow">
-                <area>295,260,27,18</area>
+                <area>100%-55,100%-5,27,18</area>
                 <state type="off">
                     <imagetype name="upon">
-                        <filename>images/shared/arrow_up.png</filename>
-                        <alpha>70</alpha>
+                        <filename>images/icons/button_arrow_up.png</filename>
+                        <area>0,0,27,18</area>
+                        <alpha>50</alpha>
                     </imagetype>
                 </state>
                 <state type="full">
                     <imagetype name="upoff">
-                        <filename>images/shared/arrow_up.png</filename>
+                        <filename>images/icons/button_arrow_up.png</filename>
+                        <area>0,0,27,18</area>
                         <alpha>220</alpha>
                     </imagetype>
                 </state>
@@ -1249,22 +1216,23 @@
             <!-- show arrows to indicates that there are
                 more menu entries below the last visible menu -->
             <statetype name="downscrollarrow">
-                <area>320,260,27,18</area>
+                <area>100%-30,100%-5,27,18</area>
                 <state type="off">
                     <imagetype name="dnon">
-                        <filename>images/shared/arrow_down.png</filename>
-                        <alpha>70</alpha>
+                        <filename>images/icons/button_arrow_down.png</filename>
+                        <area>0,0,27,18</area>
+                        <alpha>50</alpha>
                     </imagetype>
                 </state>
                 <state type="full">
                     <imagetype name="dnoff">
-                        <filename>images/shared/arrow_down.png</filename>
+                        <filename>images/icons/button_arrow_down.png</filename>
+                        <area>0,0,27,18</area>
                         <alpha>220</alpha>
                     </imagetype>
                 </state>
             </statetype>
         </buttonlist>
-
     </window>
     
 </mythuitheme>

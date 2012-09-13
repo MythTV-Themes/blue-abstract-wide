@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "../mythuitheme.dtd">
+<mythuitheme> 
+
+    <!-- TODO - Upfolder background image, Preview background icon -->
+    <!-- Shows the preview icon, the description and some 
+         details about the selected video/rss feed -->
+    <group name="base_netvision_videolist_group">
+
+        <buttonlist name="videos">
+            <area>0,0,1220,540</area>
+            <layout>grid</layout>
+            <spacing>2</spacing>
+            <wrapstyle>flowing</wrapstyle>
+            <buttonarea>0,0,100%,100%</buttonarea>
+
+            <statetype name="buttonitem">
+                <state name="active">
+
+                    <!-- Shows the name of the item over a black background -->
+                    <shape name="buttontext_background" from="base_background_shape">
+                        <area>3,99,127,31</area>
+                        <line color="#AAAAAA" alpha="0" width="0" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>10,105,110,20</area>
+                        <font>text_small</font>
+                        <multiline>yes</multiline>
+                        <align>allcenter</align>
+                    </textarea>
+
+                    <!-- Shows the background image (if no thumbnail is available) or 
+                         the actual thumbnail image and a border around it -->
+                    <imagetype name="background_image">
+                        <area>0,0,133,133</area>
+                        <mask>images/media/image_item_nfmask.png</mask>
+                        <filename>images/media/netvision_item_bg.png</filename>
+                    </imagetype>
+
+                    <imagetype name="buttonimage">
+                        <area>0,0,133,99</area>
+                        <mask>images/media/image_item_nfmask.png</mask>
+                    </imagetype>
+
+                    <!-- show a folder above the image if its a folder and not an image.
+                        the node is a folder and it is currently not selected -->
+                    <statetype name="nodetype">
+                        <position>0,0</position>
+                        <state name="subfolder">
+                            <shape name="subfolder_background" from="base_background_shape">
+                                <area>2,2,129,36</area>
+                                <line color="#AAAAAA" alpha="0" width="0" />
+                                <cornerradius>10</cornerradius>
+                            </shape>
+                            <imagetype name="subfolder_icon">
+                                <area>10,6,28,28</area>
+                                <filename>images/icons/folder_selected.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="upfolder">
+                            <imagetype name="upfolder_icon">
+                                <area>10,6,28,28</area>
+                                <filename>images/icons/folder_up_selected.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
+ 
+                    <imagetype name="background_image_border">
+                        <area>0,0,133,133</area>
+                        <filename>images/media/image_item_nfborder.png</filename>
+                    </imagetype>
+
+                    <!-- show how many images / directories are in this directory -->
+                    <textarea name="childcount" from="base_textarea" depends="subfolder_icon">
+                        <area>45,3,80,36</area>
+                    </textarea>
+
+                </state>
+
+                <!-- These two states are not used -->
+                <state name="inactive" from="active"/>
+                <state name="selectedinactive" from="active"/>
+                    
+                <state name="selectedactive" from="active">
+                    <area>-26,-26,133,133</area>
+
+                    <shape name="buttontext_background" from="base_background_shape_dark">
+                        <area>7,118,171,60</area>
+                        <line color="#AAAAAA" alpha="0" width="0" />
+                        <cornerradius>10</cornerradius>
+                    </shape>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>20,131,145,42</area>
+                        <multiline>yes</multiline>
+                        <scroll direction="vertical" />
+                        <align>allcenter</align>
+                    </textarea>
+
+                    <imagetype name="background_image">
+                        <area>0,0,185,185</area>
+                        <mask>images/media/image_item_fmask.png</mask>
+                        <filename>images/media/netvision_item_bg.png</filename>
+                    </imagetype>   
+
+                    <imagetype name="buttonimage">
+                        <area>0,0,185,125</area>
+                        <mask>images/media/image_item_fmask.png</mask>
+                    </imagetype>
+
+                    <statetype name="nodetype">
+                        <position>0,0</position>
+                        <state name="subfolder">
+                            <shape name="subfolder_background" from="base_background_shape">
+                                <area>7,7,171,40</area>
+                                <line color="#AAAAAA" alpha="0" width="0" />
+                                <cornerradius>10</cornerradius>
+                            </shape>
+                            <imagetype name="subfolder_icon">
+                                <area>15,12,30,30</area>
+                                <filename>images/icons/folder_selected.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="upfolder">
+                            <imagetype name="upfolder_icon">
+                                <area>15,12,30,30</area>
+                                <filename>images/icons/folder_up_selected.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
+
+                    <imagetype name="background_image_border">
+                        <area>0,0,185,185</area>
+                        <filename>images/media/image_item_fborder.png</filename>
+                    </imagetype>
+
+                    <textarea name="childcount" from="base_textarea" depends="subfolder_icon">
+                        <area>50,12,80,30</area>
+                    </textarea>
+
+                </state>
+            </statetype>
+        </buttonlist>        
+
+    </group>
+    
+    
+    
+    <group name="base_netvision_details_group">
+        
+        <!-- this is the background around the covers  -->
+        <shape name="netvision_details_background" from="base_background_shape">
+            <area>0,0,1240,245</area>
+        </shape>
+
+        <imagetype name="preview_image_background">
+            <area>12,13,384,220</area>
+            <filename>images/media/recording_preview_bg.png</filename>
+            <mask>images/media/recording_preview_mask.png</mask>
+        </imagetype>        
+        <imagetype name="preview">
+            <area>12,13,384,220</area>
+            <mask>images/media/recording_preview_mask.png</mask>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="preview_image_border">
+            <area>12,13,384,220</area>
+            <filename>images/media/recording_preview_border.png</filename>
+        </imagetype>
+
+        <!-- the vertical separator -->
+        <shape name="preview_separator" from="base_background_shape">
+            <area>410,1,1,243</area>
+        </shape>
+        
+        <textarea name="title" from="base_textarea">
+            <area>425,15,800,30</area>
+            <scroll direction="horizontal" />
+            <font>title</font>
+        </textarea>
+        
+        <textarea name="author" from="base_textarea">
+            <area>425,45,230,30</area>
+            <scroll direction="horizontal"/>
+            <template>Author: %1</template>
+        </textarea>
+        <textarea name="date" from="author">
+            <position>425,75</position>
+            <template>Posted: %1</template>
+        </textarea>
+        <textarea name="length" from="author">
+            <position>730,45</position>
+            <template>Length: %1</template>
+        </textarea>
+        <textarea name="duration" from="author">
+            <position>730,75</position>
+            <template>Runtime: %1</template>
+        </textarea>
+        <textarea name="rating" from="author">
+            <position>1000,45</position>
+            <scroll direction="horizontal"/>
+            <template>Rating: %1</template>
+        </textarea>
+         <textarea name="filesize_str" from="author">
+            <position>1000,75</position>
+            <template>Size: %1</template>
+        </textarea>
+        
+        <shape name="description_separator" from="base_background_shape">
+            <area>411,110,828,1</area>
+        </shape>
+        <textarea name="description" from="base_textarea">
+            <area>420,125,805,108</area>
+            <multiline>yes</multiline>
+            <scroll direction="vertical"/>
+            <align>left,top</align>
+        </textarea>
+
+    </group>
+
+</mythuitheme> 

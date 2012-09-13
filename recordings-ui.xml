@@ -2,9 +2,10 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
+    <!-- TODO processing and jobstate icons -->
     <!-- shows a list of available recording groups and its recordings
         together with some detail information about the recording -->
-    <window name="watchrecordings">
+    <window name="watchrecordings" include="base_recording.xml">
 
         <!-- background, name of screen and the clock -->
         <imagetype name="fanart" from="base_background" />
@@ -15,526 +16,355 @@
                 <value>Watch Recordings</value>
             </textarea>
         </textarea>
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
 
         <!-- this is the background around the recording information -->
         <shape name="group_background" from="base_background_shape">
-            <area>25,60,1230,345</area>
+            <area>20,50,1240,390</area>
         </shape>
 
-        <textarea name="recdate_status_label">
-            <area>970,40,80,20</area>
+        <!-- text that is displayed when there are no recordings availble -->
+        <textarea name="norecordings">
+            <area>220,50,840,390</area>
+            <multiline>yes</multiline>
             <align>allcenter</align>
-            <font>text_very_small</font>
-            <value>Date</value>
-        </textarea>
-        <textarea name="rectime_status_label">
-            <area>1060,40,90,20</area>
-            <align>allcenter</align>
-            <font>text_very_small</font>
-            <value>Time</value>
         </textarea>
 
         <!-- the selection of available recording groups -->
         <buttonlist name="groups" from="base_buttonlist">
-            <area>46,80,350,312</area>
-            <wrapstyle>items</wrapstyle>
+            <area>35,65,350,355</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,350,36</area>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,100%-16,36</area>
+                        <scroll direction="horizontal" />
+                    </textarea>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <area>0,0,350,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
+                </state>
+                <state name="selectedinactive" from="active">
+                    <area>0,0,350,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
+                </state>
+            </statetype>
         </buttonlist>
 
         <!-- the selection of the available recordings in the group -->
-        <buttonlist name="recordings" from="base_buttonlist_very_wide">
-            <area>415,80,820,310</area>
-            <wrapstyle>captive</wrapstyle>
-            
+        <buttonlist name="recordings" from="base_buttonlist">
+            <area>395,65,850,355</area>            
             <statetype name="buttonitem">
                 <state name="active">
+                    <area>0,0,850,36</area>
                     <textarea name="titlesubtitle" from="base_textarea">
-                        <area>8,5,540,30</area>
-                        <align>left,vcenter</align>
-                        <cutdown>yes</cutdown>
+                        <area>8,0,535,36</area>
+                        <scroll direction="horizontal" />
                     </textarea>
                     <textarea name="shortstartdate" from="base_textarea">
-                        <area>520,5,110,30</area>
+                        <area>550,0,110,36</area>
                         <align>right,vcenter</align>
                     </textarea>
                     <textarea name="starttime" from="base_textarea">
-                        <area>640,5,100,30</area>
+                        <area>670,0,100,36</area>
                         <align>allcenter</align>
                     </textarea>
-                    <imagetype name="no_jobstate">
-                        <position>750,6</position>
-                        <filename>images/shared/recordings/processing/no_jobstate.png</filename>
-                        <alpha>95</alpha>
+                    <imagetype name="no_jobstate" from="base_icon_inactive">
+                        <filename>images/icons/processing.png</filename>
+                        <area>778,3,30,30</area>
                     </imagetype>
+
                     <statetype name="jobstate">
-                        <position>750,6</position>
+                        <position>775,0</position>
                         <state name="recording">
-                            <imagetype name="animation">
-                                <filepattern low="1" high="8">images/shared/recordings/processing/recording_%1.png</filepattern>
-                                <delay>160</delay>
+                            <imagetype name="background" from="base_icon_selected">
+                                <filename>images/icons/processing.png</filename>
+                                <area>3,3,30,30</area>
+                            </imagetype>
+                            <imagetype name="status" from="base_icon_selected">
+                                <filename>images/icons/recording.png</filename>
+                                <area>8,8,20,21</area>
+                                <alphapulse min="100" max="220" change="2"/>
                             </imagetype>
                         </state>
-                        <state name="transcoding" from="recording">
-                            <imagetype name="animation">
-                                <filepattern low="1" high="8">images/shared/recordings/processing/transcoding_%1.png</filepattern>
+                        <state name="transcoding">
+                            <imagetype name="status" from="base_icon_selected">
+                                <filename>images/icons/transcoded.png</filename>
+                                <area>3,3,30,30</area>
                             </imagetype>
                         </state>
-                        <state name="commflagging" from="recording">
-                            <imagetype name="animation">
-                                <filepattern low="1" high="8">images/shared/recordings/processing/flagging_%1.png</filepattern>
+                        <state name="commflagging">
+                            <imagetype name="status" from="base_icon_selected">
+                                <filename>images/icons/commflagged.png</filename>
+                                <area>3,3,30,30</area>
                             </imagetype>
                         </state>
                     </statetype>
+
                     <statetype name="watched">
+                        <position>810,0</position>
                         <state name="no">
-                            <imagetype name="watchedoff">
-                                <area>783,5,31,31</area>
-                                <filename>images/shared/recordings/watched.png</filename>
-                                <alpha>50</alpha>
+                            <imagetype name="watchedoff" from="base_icon_inactive">
+                                <area>3,3,30,30</area>
+                                <filename>images/icons/selected.png</filename>
                             </imagetype>
                         </state>
                         <state name="yes">
-                            <imagetype name="watched">
-                                <area>783,5,31,31</area>
-                                <filename>images/shared/recordings/watched.png</filename>
+                            <imagetype name="watched" from="base_icon_selected">
+                                <area>3,3,30,30</area>
+                                <filename>images/icons/selected.png</filename>
                             </imagetype>
                         </state>
                     </statetype>
 <!--
-                    <statetype name="status">
-                        <position>0,2</position>
-                        <state name="disabled">
-                            <imagetype name="statusimage">
-                                <filename>schedule_disabled.png</filename>
-                            </imagetype>
-                        </state>
-                        <state name="error">
-                            <imagetype name="statusimage">
-                                <filename>schedule_conflict.png</filename>
-                            </imagetype>
-                        </state>
-                        <state name="warning">
-                            <imagetype name="statusimage">
-                                <filename>schedule_other.png</filename>
-                            </imagetype>
-                        </state> -->
-                        <!-- <state name="normal">
-                        <imagetype name="statusimage">
-                                <filename>schedule_record.png</filename>
-                            </imagetype>
-                        </state> -->
-<!--                    <state name="running">
-                            <imagetype name="statusimage">
-                                <filename>schedule_recording.png</filename>
-                            </imagetype>
-                        </state>
-                        <state name="marked"></state>
-                    </statetype> -->
+                    optional statetype status with states
+                    disabled, error, warning, normal, running, marked
+-->
                 </state>
 
                 <state name="inactive" from="active" />
-
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,820,40</area>
-                    </imagetype>
+                    <area>0,0,850,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                 </state>
-
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,820,40</area>
-                    </imagetype>
+                    <area>0,0,850,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                     <textarea name="buttontext">
                         <font>text_inactive</font>
                     </textarea>
                 </state>
-                
             </statetype>
         </buttonlist>
 
-
-        <!-- this is the background for the information at the bottom -->
-        <shape name="video_plot_background" from="base_background_shape">
-            <area>25,430,1230,265</area>
-        </shape>
-
-        <!-- the preview and the border around the preview -->
-        <shape name="preview_shape" from="base_background_shape">
-            <area>45,450,389,225</area>
-        </shape>
-        <imagetype name="preview">
-            <area>47,452,385,221</area>
-            <preserveaspect>yes</preserveaspect>
-        </imagetype>
-
-        <!-- the vertical separator -->
-        <shape name="recording_description_separator" from="base_separator_shape">
-            <area>452,450,1,225</area>
-        </shape>
-
-        <!-- shows the title and the plot of the selected video -->
-        <textarea name="title" from="base_textarea">
-            <area>468,450,510,30</area>
-            <multiline>no</multiline>
-            <align>left,vcenter</align>
-            <cutdown>yes</cutdown>
-            <font>title</font>
-        </textarea>
-
-        <!-- show the channel and the recorded time of the recording -->
-        <textarea name="channel" from="base_textarea">
-            <area>468,500,215,20</area>
-            <font>text_small</font>
-            <cutdown>yes</cutdown>
-        </textarea>
-
-        <textarea name="timedate" from="base_textarea">
-            <area>730,500,250,20</area>
-            <cutdown>yes</cutdown>
-            <font>text_small</font>
-            <align>right,vcenter</align>
-        </textarea>
-
-        <!-- separates the time and channel and the status icons from the plot -->
-        <shape name="recording_time_separator" from="base_separator_shape">
-            <area>452,535,785,1</area>
-        </shape>
-
-        <!-- show the plot of the recording -->
-        <textarea name="description" from="base_textarea">
-            <area>470,550,770,130</area>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-            <align>left,top</align>
-            <font>text_small</font>
-            <template>%"|SUBTITLE|" %%(|ORIGINALAIRDATE|) %%(|STARS|) %%DESCRIPTION%</template>
-        </textarea>
-
-        <shape name="recording_icon_separator" from="base_separator_shape">
-            <area>995,450,1,86</area>
-        </shape>
-        
-        <!-- the icons that show the status of the recording, like
-            commercials flagged, autoexpire on/off, ...-->
-        <statetype name="autoexpire">
-            <position>1010,444</position>
-            <state name="no">
-                <imagetype name="autoexpireoff" from="base_icon_inactive">
-                    <filename>images/shared/recordings/autoexpire.png</filename>
-                </imagetype>
-            </state>
-            <state name="yes">
-                <imagetype name="autoexpire" from="base_icon_selected">
-                    <filename>images/shared/recordings/autoexpire.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <statetype name="commflagged">
-            <position>1050,444</position>
-            <state name="no">
-                <imagetype name="commflaggedoff" from="base_icon_inactive">
-                    <filename>images/shared/recordings/commflagged.png</filename>
-                </imagetype>
-            </state>
-            <state name="yes">
-                <imagetype name="commflagged" from="base_icon_selected">
-                    <filename>images/shared/recordings/commflagged.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <statetype name="bookmark">
-            <position>1090,444</position>
-            <state name="no">
-                <imagetype name="bookmarkoff" from="base_icon_inactive">
-                    <filename>images/shared/recordings/bookmark.png</filename>
-                </imagetype>
-            </state>
-            <state name="yes">
-                <imagetype name="bookmark" from="base_icon_selected">
-                    <filename>images/shared/recordings/bookmark.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <statetype name="cutlist">
-            <position>1133,444</position>
-            <state name="no">
-                <imagetype name="cutlistoff" from="base_icon_inactive">
-                    <filename>images/shared/recordings/cutlist.png</filename>
-                </imagetype>
-            </state>
-            <state name="yes">
-                <imagetype name="cutlist" from="base_icon_selected">
-                    <filename>images/shared/recordings/cutlist.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <!-- recording has been added to the playlist -->
-        <imagetype name="no_playlist" from="base_icon_inactive">
-            <position>1168,444</position>
-            <filename>images/shared/recordings/playlist.png</filename>
-        </imagetype>
-        <statetype name="playlist">
-            <position>1168,444</position>
-            <state name="no">
-                <imagetype name="playlistoff" from="base_icon_inactive">
-                    <filename>images/shared/recordings/playlist.png</filename>
-                </imagetype>
-            </state>
-            <state name="yes">
-                <imagetype name="playlist" from="base_icon_selected">
-                    <filename>images/shared/recordings/playlist.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <!-- commercial flagging or transcoding is in progress or not -->
-        <statetype name="processing">
-            <position>1205,444</position>
-            <state name="no">
-                <imagetype name="processingoff" from="base_icon_inactive">
-                    <filename>images/shared/recordings/processing.png</filename>
-                </imagetype>
-            </state>
-            <state name="yes">
-                <imagetype name="processing" from="base_icon_selected">
-                    <filename>images/shared/recordings/processing.png</filename>
-                    <alphapulse min="80" max="255" change="2"/>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <imagetype name="no_subtitletypes" from="base_icon_inactive">
-            <area>1045,489,38,36</area>
-            <filename>images/shared/recordings/subtitles/subs_cc.png</filename>
-        </imagetype>
-        
-        <statetype name="subtitletypes">
-            <position>1045,489</position>
-            <showempty>yes</showempty>
-            <state name="cc">
-                <imagetype name="cc" from="base_icon_selected">
-                    <filename>images/shared/recordings/subtitles/subs_cc.png</filename>
-                    <area>0,0,38,36</area>
-                </imagetype>
-            </state>
-            <state name="subtitles">
-                <imagetype name="subtitles" from="base_icon_selected">
-                    <filename>images/shared/recordings/subtitles/subs_subtitles.png</filename>
-                    <area>0,0,38,36</area>
-                </imagetype>
-            </state>
-            <state name="onscreensub">
-                <imagetype name="onscreensub" from="base_icon_selected">
-                    <filename>images/shared/recordings/subtitles/subs_osd.png</filename>
-                    <area>0,0,38,36</area>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <!-- audio codecs -->
-        <imagetype name="no_audioprops" from="base_icon_inactive">
-            <area>1090,490,98,33</area>
-            <filename>images/shared/recordings/audio/dolby_unknown.png</filename>
-        </imagetype>
-        <statetype name="audioprops">
-            <position>1090,490</position>
-            <showempty>yes</showempty>
-            <state name="mono">
-                <imagetype name="mono" from="base_icon_selected">
-                    <filename>images/shared/recordings/audio/dolby_10.png</filename>
-                    <area>0,0,98,33</area>
-                </imagetype>
-            </state>
-            <state name="stereo">
-                <imagetype name="stereo" from="base_icon_selected">
-                    <filename>images/shared/recordings/audio/dolby_20.png</filename>
-                    <area>0,0,98,33</area>
-                </imagetype>
-            </state>
-            <state name="surround">
-                <imagetype name="surround" from="base_icon_selected">
-                    <filename>images/shared/recordings/audio/dolby_51.png</filename>
-                    <area>0,0,98,33</area>
-                </imagetype>
-            </state>
-            <state name="dolby">
-                <imagetype name="dolby" from="base_icon_selected">
-                    <filename>images/shared/recordings/audio/dolby_71.png</filename>
-                    <area>0,0,98,33</area>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <!-- video codecs -->
-        <imagetype name="no_videoprops" from="base_icon_inactive">
-            <area>1195,489,44,35</area>
-            <filename>images/shared/recordings/video/hdtv_unknown.png</filename>
-        </imagetype>
-        <statetype name="videoprops">
-            <position>1195,489</position>
-            <showempty>yes</showempty>
-            <state name="hdtv">
-                <imagetype name="hdtv" from="base_icon_selected">
-                    <filename>images/shared/recordings/video/hdtv.png</filename>
-                    <area>0,0,44,35</area>
-                </imagetype>
-            </state>
-            <state name="widescreen">
-                <imagetype name="widescreen" from="base_icon_selected">
-                    <filename>images/shared/recordings/video/hdtv_wide.png</filename>
-                    <area>0,0,44,35</area>
-                </imagetype>
-            </state>
-            <state name="avchd">
-                <imagetype name="avchd" from="base_icon_selected">
-                    <filename>images/shared/recordings/video/hdtv_h264.png</filename>
-                    <area>0,0,44,35</area>
-                </imagetype>
-            </state>
-            <state name="hd720">
-                <imagetype name="hd720" from="base_icon_selected">
-                    <filename>images/shared/recordings/video/hdtv_720.png</filename>
-                    <area>0,0,44,35</area>
-                </imagetype>
-            </state>
-            <state name="hd1080">
-                <imagetype name="hd1080" from="base_icon_selected">
-                    <filename>images/shared/recordings/video/hdtv_1080.png</filename>
-                    <area>0,0,44,35</area>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <!-- text that is displayed when there are no recordings availble -->
-        <textarea name="norecordings">
-            <area>25,60,1230,306</area>
-            <font>text</font>
-            <value>
-            </value>
-            <multiline>yes</multiline>
-            <align>allcenter</align>
-        </textarea>
+        <!-- The preview image and the details to the selected recording -->
+        <group name="recording_details_group" from="base_recording_details_group">
+            <position>20,460</position>
+        </group>
 
     </window>
 
 
 
+    
 
-    <!-- The Group Filter popup. -->
-    <!-- <window name="groupfilter"> -->
+    <!-- shows a list of available recording groups and its recordings
+        together with some detail information about the recording -->
+    <window name="deleterecordings" include="base_recording.xml">
 
+        <!-- background, name of screen -->
+        <imagetype name="fanart" from="base_background" />
+        
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Delete Recordings</value>
+            </textarea>
+        </textarea>
 
+        <!-- this is the background around the recording information -->
+        <shape name="group_background" from="base_background_shape">
+            <area>20,50,1240,390</area>
+        </shape>
 
+        <!-- text that is displayed when there are no recordings availble -->
+        <textarea name="norecordings">
+            <area>220,50,840,390</area>
+            <multiline>yes</multiline>
+            <align>allcenter</align>
+        </textarea>
+        
+        <!--<textarea name="recdate_status_label">
+            <area>970,40,80,20</area>
+            <align>allcenter</align>
+            <font>text_small</font>
+            <value>Date</value>
+        </textarea>
+        <textarea name="rectime_status_label">
+            <area>1060,40,90,20</area>
+            <align>allcenter</align>
+            <font>text_small</font>
+            <value>Time</value>
+        </textarea>-->
 
-    <!-- <window name="customexport"> -->
+        <!-- the selection of available recording groups -->
+        <buttonlist name="groups" from="base_buttonlist">
+            <area>35,65,350,355</area>
+        </buttonlist>
 
+        <!-- the selection of the available recordings in the group -->
+        <buttonlist name="recordings" from="base_buttonlist">
+            <area>395,65,850,355</area>            
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,850,36</area>
+                    
+                    <textarea name="title" from="base_textarea">
+                        <area>8,0,455,36</area>
+                        <scroll direction="horizontal" />
+                    </textarea>
+                    <textarea name="startdate" from="base_textarea">
+                        <area>470,0,110,36</area>
+                        <align>right,vcenter</align>
+                    </textarea>
+                    <textarea name="starttime" from="base_textarea">
+                        <area>590,0,100,36</area>
+                        <align>allcenter</align>
+                    </textarea>
+                    <textarea name="filesize_str" from="base_textarea">
+                        <area>700,6,100,36</area>
+                        <align>right,vcenter</align>
+                    </textarea>
+                    
+                    <statetype name="watched">
+                        <position>810,0</position>
+                        <state name="no">
+                            <imagetype name="watchedoff" from="base_icon_inactive">
+                                <area>3,3,30,30</area>
+                                <filename>images/icons/selected.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="yes">
+                            <imagetype name="watched" from="base_icon_selected">
+                                <area>3,3,30,30</area>
+                                <filename>images/icons/selected.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
+                </state>
 
+                <state name="inactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <area>0,0,850,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
+                </state>
+                <state name="selectedinactive" from="active">
+                    <area>0,0,850,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
+                    <textarea name="buttontext">
+                        <font>text_inactive</font>
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>
 
+        <!-- The preview image and the details to the selected recording -->
+        <group name="recording_details_group" from="base_recording_details_group">
+            <position>20,460</position>
+
+            <textarea name="description" from="base_textarea">
+                <area>420,125,805,65</area>
+                <multiline>yes</multiline>
+                <cutdown>yes</cutdown>
+                <align>left,top</align>
+                <template>%"|SUBTITLE|" %%(|ORIGINALAIRDATE|) %%(|STARS|) %%DESCRIPTION%</template>
+            </textarea>
+
+            <progressbar name="usedbar" from="base_progressbar_flat">
+                <position>420,205</position>
+            </progressbar>
+
+            <textarea name="freereport" from="base_textarea">
+                <area>920,200,300,30</area>
+                <align>right,vcenter</align>
+            </textarea>
+        </group>
+
+    </window>
+
+    
+    
+    
 
     <!-- The Change View popup.
         Shows a list of icons that describe the status of a recording  -->
     <window name="changeview">
 
         <shape name="darken_background" from="base_darken_background" />
-        
-        <shape name="changeview_background" from="base_background_shape_dark">
-            <area>400,130,480,480</area>
+
+        <shape name="dialog_background" from="base_background_shape_dark">
+            <area>420,130,450,455</area>
         </shape>
 
-        <imagetype name="title_background_overlay" from="base_popup_background">
-            <area>420,150,440,70</area>
-        </imagetype>
         <textarea name="title" from="base_textarea">
-            <area>420,150,440,70</area>
+            <area>435,140,420,60</area>
             <value>Change View</value>
             <align>allcenter</align>
+            <scroll direction="vertical" />
         </textarea>
+        <shape name="title_separator" from="base_background_shape">
+            <area>421,210,448,1</area>
+        </shape>
 
-        <!-- the widgets that will be display -->
         <checkbox name="titles" from="base_checkbox">
-            <position>420,240</position>
+            <position>435,225</position>
         </checkbox>
-
         <textarea name="titlelabel" from="base_textarea">
-            <area>465,240,390,34</area>
+            <area>480,225,375,36</area>
             <value>Show Titles</value>
             <cutdown>yes</cutdown>
             <align>left,vcenter</align>
         </textarea>
 
         <checkbox name="categories" from="base_checkbox">
-            <position>420,280</position>
+            <position>435,265</position>
         </checkbox>
-
         <textarea name="catlabel" from="titlelabel">
-            <position>465,280</position>
+            <position>480,265</position>
             <value>Show Categories</value>
         </textarea>
 
         <checkbox name="recgroups" from="base_checkbox">
-            <position>420,320</position>
+            <position>435,305</position>
         </checkbox>
-
         <textarea name="grouplabel" from="titlelabel">
-            <position>465,320</position>
+            <position>480,305</position>
             <value>Show Recording Groups</value>
         </textarea>
 
         <checkbox name="watchlist" from="base_checkbox">
-            <position>420,360</position>
+            <position>435,345</position>
         </checkbox>
-
         <textarea name="watchlabel" from="titlelabel">
-            <position>465,360</position>
+            <position>480,345</position>
             <value>Show Watch List</value>
         </textarea>
 
         <checkbox name="searches" from="base_checkbox">
-            <position>420,400</position>
+            <position>435,385</position>
         </checkbox>
-
         <textarea name="searchlabel" from="titlelabel">
-            <position>465,400</position>
+            <position>480,385</position>
             <value>Show Searches</value>
         </textarea>
 
         <checkbox name="livetv" from="base_checkbox">
-            <position>420,440</position>
+            <position>435,425</position>
         </checkbox>
-
         <textarea name="livelabel" from="titlelabel">
-            <position>465,440</position>
+            <position>480,425</position>
             <value>Show LiveTV</value>
         </textarea>
 
         <checkbox name="watched" from="base_checkbox">
-            <position>420,480</position>
+            <position>435,465</position>
         </checkbox>
-
         <textarea name="watchedlabel" from="titlelabel">
-            <position>465,480</position>
+            <position>480,465</position>
             <value>Show Watched Programs</value>
         </textarea>
 
-        <shape name="button_separator" from="base_separator_shape">
-            <area>420,530,440,1</area>
+        <shape name="button_separator" from="base_background_shape">
+            <area>421,515,448,1</area>
         </shape>
 
         <button name="save" from="base_button">
-            <position>560,550</position>
+            <position>560,530</position>
             <value>Save</value>
         </button>
 
     </window>
-
 
 
 
@@ -545,51 +375,50 @@
     <window name="passwordchanger">
 
         <shape name="darken_background" from="base_darken_background" />
-        
-        <shape name="passwordchanger_background" from="base_background_shape_dark">
-            <area>350,210,610,300</area>
+
+        <shape name="dialog_background" from="base_background_shape_dark">
+            <area>340,225,590,252</area>
         </shape>
 
-        <!-- the title of the window -->
-        <imagetype name="title_background_overlay" from="base_popup_background">
-            <area>370,230,570,70</area>
-        </imagetype>
         <textarea name="title" from="base_textarea">
-            <area>370,230,570,70</area>
+            <area>355,235,560,60</area>
             <value>Change Password</value>
             <align>allcenter</align>
+            <scroll direction="vertical" />
         </textarea>
 
+        <shape name="title_separator" from="base_background_shape">
+            <area>341,305,588,1</area>
+        </shape>
+
         <textarea name="oldlabel" from="base_textarea">
-            <area>370,320,185,40</area>
+            <area>360,320,170,36</area>
             <align>right,vcenter</align>
             <value>Old Password:</value>
         </textarea>
-        
-        <textedit name="oldpassword" from="base_textedit">
-            <position>565,320</position>
-        </textedit>
-
         <textarea name="newlabel" from="base_textarea">
-            <area>370,370,185,40</area>
+            <area>360,360,170,36</area>
             <align>right,vcenter</align>
             <value>New Password:</value>
         </textarea>
 
+        <textedit name="oldpassword" from="base_textedit">
+            <position>540,320</position>
+        </textedit>
         <textedit name="newpassword" from="base_textedit">
-            <position>565,370</position>
+            <position>540,360</position>
         </textedit>
 
-        <shape name="button_separator" from="base_separator_shape">
-            <area>370,430,570,1</area>
+        <shape name="button_separator" from="base_background_shape">
+            <area>341,410,588,1</area>
         </shape>
 
         <button name="ok" from="base_button">
-            <position>580,450</position>
-            <value>OK</value>
+            <position>560,425</position>
+            <value>Ok</value>
         </button>
-    </window>
 
+    </window>
 
 
 
@@ -598,30 +427,29 @@
     <!-- The Group selector popup.
         Shows a list of available groups that can be preselected -->
     <window name="groupselector">
-
-        <shape name="darken_background" from="base_darken_background" />
         
-        <shape name="groupselector_background" from="base_background_shape_dark">
-            <area>455,148,390,428</area>
+        <shape name="darken_background" from="base_darken_background" />
+
+        <shape name="dialog_background" from="base_background_shape_dark">
+            <area>450,130,380,385</area>
         </shape>
 
         <textarea name="title" from="base_textarea">
-            <area>475,168,350,30</area>
+            <area>465,140,350,60</area>
             <value>Change Groups</value>
             <align>allcenter</align>
+            <scroll direction="vertical" />
         </textarea>
-        <shape name="title_separator" from="base_separator_shape">
-            <area>475,218,350,1</area>
+        <shape name="title_separator" from="base_background_shape">
+            <area>451,210,378,1</area>
         </shape>
 
         <!-- the list of the available groups -->
         <buttonlist name="groups" from="base_buttonlist">
-            <area>475,293,350,268</area>
-            <layout>vertical</layout>
-            <drawfrombottom>yes</drawfrombottom>
+            <area>465,225,350,275</area>
         </buttonlist>
-    </window>
 
+    </window>
 
 
 
@@ -632,598 +460,179 @@
     <window name="iconhelp">
 
         <shape name="darken_background" from="base_darken_background" />
-        
-        <shape name="popup_background" from="base_background_shape_dark">
-            <area>450,130,380,428</area>
+
+        <shape name="dialog_background" from="base_background_shape_dark">
+            <area>450,130,380,388</area>
         </shape>
 
-        <imagetype name="message_background_overlay" from="base_popup_background">
-            <area>465,145,350,75</area>
-        </imagetype>
-
-        <!-- the text that is shown in the popup box -->
         <textarea name="title" from="base_textarea">
-            <area>485,145,320,75</area>
-            <multiline>yes</multiline>
-            <align>allcenter</align>
+            <area>465,140,350,60</area>
             <value>Status Icons</value>
+            <align>allcenter</align>
+            <scroll direction="vertical" />
         </textarea>
+
+        <shape name="title_separator" from="base_background_shape">
+            <area>451,210,378,1</area>
+        </shape>
 
         <!-- the list of the available icons with their description -->
         <buttonlist name="iconlist" from="base_buttonlist">
-            <area>466,275,350,268</area>
-            <drawfrombottom>yes</drawfrombottom>
-            <showarrow>no</showarrow>
+            <area>465,225,350,275</area>
             <statetype name="buttonitem">
                 <state name="active">
-                    <imagetype name="buttonbackground" from="base_image_active">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,350,40</area>
-                    </imagetype>
+                    <area>0,0,350,36</area>
                     <statetype name="icons">
-                        <position>6,1</position>
+
                         <state name="commflagged">
-                            <imagetype name="statusimage">
-                                <filename>images/shared/recordings/commflagged.png</filename>
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/commflagged.png</filename>
+                                <area>3,2,33,33</area>
                             </imagetype>
                         </state>
+
                         <state name="cutlist">
-                            <imagetype name="statusimage">
-                                <filename>images/shared/recordings/cutlist.png</filename>
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/cutlist.png</filename>
+                                <area>3,2,33,33</area>
                             </imagetype>
                         </state>
+
                         <state name="autoexpire">
-                            <imagetype name="statusimage">
-                                <filename>images/shared/recordings/autoexpire.png</filename>
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/autoexpire.png</filename>
+                                <area>3,2,33,33</area>
                             </imagetype>
                         </state>
+
                         <state name="processing">
-                            <imagetype name="statusimage">
-                                <filename>images/shared/recordings/processing.png</filename>
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/processing.png</filename>
+                                <area>3,2,33,33</area>
                             </imagetype>
                         </state>
+
                         <state name="bookmark">
-                            <imagetype name="statusimage">
-                                <filename>images/shared/recordings/bookmark.png</filename>
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/bookmark.png</filename>
+                                <area>3,2,33,33</area>
                             </imagetype>
                         </state>
+
                         <state name="playlist">
-                            <imagetype name="statusimage">
-                                <filename>images/shared/recordings/playlist.png</filename>
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/playlist.png</filename>
+                                <area>3,2,33,33</area>
                             </imagetype>
                         </state>
-                        <state name="mono">
-                            <imagetype name="statusimage_background">
-                                <filename>images/shared/recordings/audio/dolby_unknown.png</filename>
-                                <area>0,6,78,26</area>
-                                <alpha>40</alpha>
-                            </imagetype>
-                            <imagetype name="statusimage">
-                                <filename>images/shared/recordings/audio/dolby_10.png</filename>
-                                <area>0,6,78,26</area>
+
+                        <state name="mono">                            
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/audio/dolby_1.0.png</filename>
+                                <area>6,5,78,26</area>
                             </imagetype>
                         </state>
                         <state name="stereo">
-                            <imagetype name="statusimage_background">
-                                <filename>images/shared/recordings/audio/dolby_unknown.png</filename>
-                                <area>0,6,78,26</area>
-                                <alpha>40</alpha>
-                            </imagetype>
-                            <imagetype name="statusimage">
-                                <filename>images/shared/recordings/audio/dolby_20.png</filename>
-                                <area>0,6,78,26</area>
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/audio/dolby_2.0.png</filename>
+                                <area>6,5,78,26</area>
                             </imagetype>
                         </state>
                         <state name="surround">
-                            <imagetype name="statusimage">
-                                <filename>images/shared/recordings/audio/dolby_51.png</filename>
-                                <area>0,6,78,26</area>
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/audio/dolby_5.1.png</filename>
+                                <area>6,5,78,26</area>
                             </imagetype>
                         </state>
+
                         <state name="dolby">
-                            <imagetype name="statusimage">
-                                <filename>images/shared/recordings/audio/dolby_71.png</filename>
-                                <area>0,6,78,26</area>
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/audio/dolby_7.1.png</filename>
+                                <area>6,5,78,26</area>
                             </imagetype>
                         </state>
                         <state name="cc">
-                            <imagetype name="statusimage">
-                                <filename>images/shared/recordings/subtitles/subs_cc.png</filename>
-                                <area>0,2,37,35</area>
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/subtitles/cc.png</filename>
+                                <area>6,2,33,32</area>
                             </imagetype>
                         </state>
                         <state name="subtitles">
-                            <imagetype name="statusimage">
-                                <filename>images/shared/recordings/subtitles/subs_subtitles.png</filename>
-                                <area>0,2,37,35</area>
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/subtitles/subs.png</filename>
+                                <area>6,2,33,32</area>
                             </imagetype>
                         </state>
                         <state name="onscreensub">
-                            <imagetype name="statusimage">
-                                <filename>images/shared/recordings/subtitles/subs_osd.png</filename>
-                                <area>0,2,37,35</area>
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/subtitles/osd.png</filename>
+                                <area>6,2,33,32</area>
                             </imagetype>
                         </state>
+
                         <state name="hdtv">
-                            <imagetype name="statusimage">
-                                <filename>images/shared/recordings/video/hdtv.png</filename>
-                                <area>0,3,41,33</area>
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/video/hdtv.png</filename>
+                                <area>6,2,38,32</area>
                             </imagetype>
                         </state>
                         <state name="hd1080">
-                            <imagetype name="statusimage">
-                                <filename>images/shared/recordings/video/hdtv_1080.png</filename>
-                                <area>0,3,41,33</area>
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/video/hdtv_1080.png</filename>
+                                <area>6,2,38,32</area>
                             </imagetype>
                         </state>
                         <state name="hd720">
-                            <imagetype name="statusimage">
-                                <filename>images/shared/recordings/video/hdtv_720.png</filename>
-                                <area>0,3,41,33</area>
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/video/hdtv_720.png</filename>
+                                <area>6,2,38,32</area>
                             </imagetype>
                         </state>
                         <state name="avchd">
-                            <imagetype name="statusimage">
-                                <filename>images/shared/recordings/video/hdtv_h264.png</filename>
-                                <area>0,3,41,33</area>
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/video/hdtv_h264.png</filename>
+                                <area>6,2,38,32</area>
                             </imagetype>
                         </state>
+
                         <state name="widescreen">
-                            <imagetype name="statusimage_background">
-                                <filename>images/shared/recordings/video/hdtv_unknown.png</filename>
-                                <area>0,3,41,33</area>
-                                <alpha>40</alpha>
-                            </imagetype>
-                            <imagetype name="statusimage">
-                                <filename>images/shared/recordings/video/hdtv_wide.png</filename>
-                                <area>0,3,41,33</area>
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/video/hdtv_wide.png</filename>
+                                <area>6,2,41,33</area>
                             </imagetype>
                         </state>
+
                         <state name="watched">
-                            <imagetype name="statusimage">
-                                <position>2,5</position>
-                                <filename>images/shared/recordings/watched.png</filename>
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/selected.png</filename>
+                                <area>9,2,33,33</area>
                             </imagetype>
                         </state>
                     </statetype>
+
                     <textarea name="buttontext" from="base_textarea">
-                        <area>100,5,240,30</area>
+                        <area>100,0,240,36</area>
                         <multiline>no</multiline>
-                        <cutdown>yes</cutdown>
-                        <align>left,vcenter</align>
+                        <scroll direction="horizontal"/>
                     </textarea>
-                </state>
-                <state name="inactive" from="active" />
-                <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,350,40</area>
-                    </imagetype>
-                </state>
-                <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_inactive.png</filename>
-                        <area>0,0,350,40</area>
-                    </imagetype>
-                </state>
-            </statetype>
-        </buttonlist>
-    </window>
-
-
-
-
-
-
-    <!-- shows a list of available recording groups and its recordings
-        together with some detail information about the recording -->
-    <window name="deleterecordings">
-
-        <!-- background, name of screen and the clock -->
-        <imagetype name="fanart" from="base_background" />
-        
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Watch Recordings</value>
-            </textarea>
-        </textarea>
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <!-- this is the background around the recording information -->
-        <shape name="group_background" from="base_background_shape">
-            <area>25,60,1230,345</area>
-        </shape>
-
-        <textarea name="recdate_status_label">
-            <area>970,40,80,20</area>
-            <align>allcenter</align>
-            <font>text_very_small</font>
-            <value>Date</value>
-        </textarea>
-        <textarea name="rectime_status_label">
-            <area>1060,40,90,20</area>
-            <align>allcenter</align>
-            <font>text_very_small</font>
-            <value>Time</value>
-        </textarea>
-
-        <!-- the selection of available recording groups -->
-        <buttonlist name="groups" from="base_buttonlist">
-            <area>46,80,350,312</area>
-            <wrapstyle>items</wrapstyle>
-        </buttonlist>
-
-        <!-- the selection of the available recordings in the group -->
-        <buttonlist name="recordings" from="base_buttonlist_very_wide">
-            <area>415,80,820,310</area>
-            <wrapstyle>captive</wrapstyle>
-            
-            <statetype name="buttonitem">
-                <state name="active">
-                    <textarea name="titlesubtitle" from="base_textarea">
-                        <area>8,5,540,30</area>
-                        <align>left,vcenter</align>
-                        <cutdown>yes</cutdown>
-                    </textarea>
-                    <textarea name="shortdate" from="base_textarea">
-                        <area>520,5,110,30</area>
-                        <align>right,vcenter</align>
-                    </textarea>
-                    <textarea name="starttime" from="base_textarea">
-                        <area>640,5,100,30</area>
-                        <align>allcenter</align>
-                    </textarea>
-                    <imagetype name="no_jobstate">
-                        <position>750,6</position>
-                        <filename>images/shared/recordings/processing/no_jobstate.png</filename>
-                        <alpha>95</alpha>
-                    </imagetype>
-                    <statetype name="jobstate">
-                        <position>750,6</position>
-                        <state name="recording">
-                            <imagetype name="animation">
-                                <filepattern low="1" high="8">images/shared/recordings/processing/recording_%1.png</filepattern>
-                                <delay>160</delay>
-                            </imagetype>
-                        </state>
-                        <state name="transcoding" from="recording">
-                            <imagetype name="animation">
-                                <filepattern low="1" high="8">images/shared/recordings/processing/transcoding_%1.png</filepattern>
-                            </imagetype>
-                        </state>
-                        <state name="commflagging" from="recording">
-                            <imagetype name="animation">
-                                <filepattern low="1" high="8">images/shared/recordings/processing/flagging_%1.png</filepattern>
-                            </imagetype>
-                        </state>
-                    </statetype>
-                    <statetype name="watched">
-                        <state name="no">
-                            <imagetype name="watchedoff">
-                                <area>783,5,31,31</area>
-                                <filename>images/shared/recordings/watched.png</filename>
-                                <alpha>50</alpha>
-                            </imagetype>
-                        </state>
-                        <state name="yes">
-                            <imagetype name="watched">
-                                <area>783,5,31,31</area>
-                                <filename>images/shared/recordings/watched.png</filename>
-                            </imagetype>
-                        </state>
-                    </statetype>
                 </state>
 
                 <state name="inactive" from="active" />
 
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,820,40</area>
-                    </imagetype>
+                    <area>0,0,350,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                 </state>
 
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,820,40</area>
-                    </imagetype>
-                    <textarea name="buttontext">
-                        <font>text_inactive</font>
-                    </textarea>
+                    <area>0,0,350,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
-                
+
             </statetype>
         </buttonlist>
 
-        <!-- this is the background for the information at the bottom -->
-        <shape name="video_plot_background" from="base_background_shape">
-            <area>25,430,1230,265</area>
-        </shape>
-
-        <!-- the preview and the border around the preview -->
-        <shape name="preview_shape" from="base_background_shape">
-            <area>45,450,389,225</area>
-        </shape>
-        <imagetype name="preview">
-            <area>47,452,385,221</area>
-            <preserveaspect>yes</preserveaspect>
-        </imagetype>
-
-        <!-- the vertical separator -->
-        <shape name="recording_description_separator" from="base_separator_shape">
-            <area>452,450,1,225</area>
-        </shape>
-
-        <!-- shows the title and the plot of the selected video -->
-        <textarea name="title" from="base_textarea">
-            <area>468,450,510,30</area>
-            <multiline>no</multiline>
-            <align>left,vcenter</align>
-            <cutdown>yes</cutdown>
-            <font>title</font>
-        </textarea>
-
-        <!-- show the channel and the recorded time of the recording -->
-        <textarea name="channel" from="base_textarea">
-            <area>468,500,150,20</area>
-            <font>text_small</font>
-            <cutdown>yes</cutdown>
-        </textarea>
-
-        <textarea name="timedate" from="base_textarea">
-            <area>620,500,250,20</area>
-            <cutdown>yes</cutdown>
-            <font>text_small</font>
-            <align>right,vcenter</align>
-        </textarea>
-
-        <textarea name="filesize_str" from="base_textarea">
-            <area>880,500,100,20</area>
-            <font>text_small</font>
-            <cutdown>yes</cutdown>
-            <align>right,vcenter</align>
-        </textarea>
-        
-        <!-- separates the time and channel and the status icons from the plot -->
-        <shape name="recording_time_separator" from="base_separator_shape">
-            <area>452,535,785,1</area>
-        </shape>
-
-        <!-- show the plot of the recording -->
-        <textarea name="description" from="base_textarea">
-            <area>470,550,770,100</area>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-            <align>left,top</align>
-            <font>text_small</font>
-            <template>%"|SUBTITLE|" %%(|ORIGINALAIRDATE|) %%(|STARS|) %%DESCRIPTION%</template>
-        </textarea>
-
-        <progressbar name="usedbar" from="base_progressbar_flat">
-            <position>470,655</position>
-        </progressbar>
-
-        <textarea name="freereport" from="base_textarea">
-            <area>935,655,300,20</area>
-            <align>right,vcenter</align>
-            <font>text_small</font>
-        </textarea>
-
-        <shape name="recording_icon_separator" from="base_separator_shape">
-            <area>995,450,1,86</area>
-        </shape>
-
-        <!-- the icons that show the status of the recording, like
-            commercials flagged, autoexpire on/off, ...-->
-        <statetype name="autoexpire">
-            <position>1010,444</position>
-            <state name="no">
-                <imagetype name="autoexpireoff" from="base_icon_inactive">
-                    <filename>images/shared/recordings/autoexpire.png</filename>
-                </imagetype>
-            </state>
-            <state name="yes">
-                <imagetype name="autoexpire" from="base_icon_selected">
-                    <filename>images/shared/recordings/autoexpire.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <statetype name="commflagged">
-            <position>1050,444</position>
-            <state name="no">
-                <imagetype name="commflaggedoff" from="base_icon_inactive">
-                    <filename>images/shared/recordings/commflagged.png</filename>
-                </imagetype>
-            </state>
-            <state name="yes">
-                <imagetype name="commflagged" from="base_icon_selected">
-                    <filename>images/shared/recordings/commflagged.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <statetype name="bookmark">
-            <position>1090,444</position>
-            <state name="no">
-                <imagetype name="bookmarkoff" from="base_icon_inactive">
-                    <filename>images/shared/recordings/bookmark.png</filename>
-                </imagetype>
-            </state>
-            <state name="yes">
-                <imagetype name="bookmark" from="base_icon_selected">
-                    <filename>images/shared/recordings/bookmark.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <statetype name="cutlist">
-            <position>1133,444</position>
-            <state name="no">
-                <imagetype name="cutlistoff" from="base_icon_inactive">
-                    <filename>images/shared/recordings/cutlist.png</filename>
-                </imagetype>
-            </state>
-            <state name="yes">
-                <imagetype name="cutlist" from="base_icon_selected">
-                    <filename>images/shared/recordings/cutlist.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <!-- recording has been added to the playlist -->
-        <imagetype name="no_playlist" from="base_icon_inactive">
-            <position>1168,444</position>
-            <filename>images/shared/recordings/playlist.png</filename>
-        </imagetype>
-        <statetype name="playlist">
-            <position>1168,444</position>
-            <state name="no">
-                <imagetype name="playlistoff" from="base_icon_inactive">
-                    <filename>images/shared/recordings/playlist.png</filename>
-                </imagetype>
-            </state>
-            <state name="yes">
-                <imagetype name="playlist" from="base_icon_selected">
-                    <filename>images/shared/recordings/playlist.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <!-- commercial flagging or transcoding is in progress or not -->
-        <statetype name="processing">
-            <position>1205,444</position>
-            <state name="no">
-                <imagetype name="processingoff" from="base_icon_inactive">
-                    <filename>images/shared/recordings/processing.png</filename>
-                </imagetype>
-            </state>
-            <state name="yes">
-                <imagetype name="processing" from="base_icon_selected">
-                    <filename>images/shared/recordings/processing.png</filename>
-                    <alphapulse min="80" max="255" change="2"/>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <imagetype name="no_subtitletypes" from="base_icon_inactive">
-            <area>1045,489,38,36</area>
-            <filename>images/shared/recordings/subtitles/subs_cc.png</filename>
-        </imagetype>
-        
-        <statetype name="subtitletypes">
-            <position>1045,489</position>
-            <showempty>yes</showempty>
-            <state name="cc">
-                <imagetype name="cc" from="base_icon_selected">
-                    <filename>images/shared/recordings/subtitles/subs_cc.png</filename>
-                    <area>0,0,38,36</area>
-                </imagetype>
-            </state>
-            <state name="subtitles">
-                <imagetype name="subtitles" from="base_icon_selected">
-                    <filename>images/shared/recordings/subtitles/subs_subtitles.png</filename>
-                    <area>0,0,38,36</area>
-                </imagetype>
-            </state>
-            <state name="onscreensub">
-                <imagetype name="onscreensub" from="base_icon_selected">
-                    <filename>images/shared/recordings/subtitles/subs_osd.png</filename>
-                    <area>0,0,38,36</area>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <!-- audio codecs -->
-        <imagetype name="no_audioprops" from="base_icon_inactive">
-            <area>1090,490,98,33</area>
-            <filename>images/shared/recordings/audio/dolby_unknown.png</filename>
-        </imagetype>
-        <statetype name="audioprops">
-            <position>1090,490</position>
-            <showempty>yes</showempty>
-            <state name="mono">
-                <imagetype name="mono" from="base_icon_selected">
-                    <filename>images/shared/recordings/audio/dolby_10.png</filename>
-                    <area>0,0,98,33</area>
-                </imagetype>
-            </state>
-            <state name="stereo">
-                <imagetype name="stereo" from="base_icon_selected">
-                    <filename>images/shared/recordings/audio/dolby_20.png</filename>
-                    <area>0,0,98,33</area>
-                </imagetype>
-            </state>
-            <state name="surround">
-                <imagetype name="surround" from="base_icon_selected">
-                    <filename>images/shared/recordings/audio/dolby_51.png</filename>
-                    <area>0,0,98,33</area>
-                </imagetype>
-            </state>
-            <state name="dolby">
-                <imagetype name="dolby" from="base_icon_selected">
-                    <filename>images/shared/recordings/audio/dolby_71.png</filename>
-                    <area>0,0,98,33</area>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <!-- video codecs -->
-        <imagetype name="no_videoprops" from="base_icon_inactive">
-            <area>1195,489,44,35</area>
-            <filename>images/shared/recordings/video/hdtv_unknown.png</filename>
-        </imagetype>
-        <statetype name="videoprops">
-            <position>1195,489</position>
-            <showempty>yes</showempty>
-            <state name="hdtv">
-                <imagetype name="hdtv" from="base_icon_selected">
-                    <filename>images/shared/recordings/video/hdtv.png</filename>
-                    <area>0,0,44,35</area>
-                </imagetype>
-            </state>
-            <state name="widescreen">
-                <imagetype name="widescreen" from="base_icon_selected">
-                    <filename>images/shared/recordings/video/hdtv_wide.png</filename>
-                    <area>0,0,44,35</area>
-                </imagetype>
-            </state>
-            <state name="avchd">
-                <imagetype name="avchd" from="base_icon_selected">
-                    <filename>images/shared/recordings/video/hdtv_h264.png</filename>
-                    <area>0,0,44,35</area>
-                </imagetype>
-            </state>
-            <state name="hd720">
-                <imagetype name="hd720" from="base_icon_selected">
-                    <filename>images/shared/recordings/video/hdtv_720.png</filename>
-                    <area>0,0,44,35</area>
-                </imagetype>
-            </state>
-            <state name="hd1080">
-                <imagetype name="hd1080" from="base_icon_selected">
-                    <filename>images/shared/recordings/video/hdtv_1080.png</filename>
-                    <area>0,0,44,35</area>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <!-- text that is displayed when there are no recordings availble -->
-        <textarea name="norecordings">
-            <area>25,60,1230,306</area>
-            <font>text</font>
-            <value>
-            </value>
-            <multiline>yes</multiline>
-            <align>allcenter</align>
-        </textarea>
-        
     </window>
-
 
 
 
@@ -1232,95 +641,107 @@
     <!-- The Edit Recording Title / Subtitle window -->
     <window name="editmetadata">
 
-        <!-- background, name of screen and the clock -->
+        <!-- background, name of screen -->
         <imagetype name="background" from="base_background" />
 
-        <shape name="heading_background" from="base_background_shape">
-            <area>-4,-4,370,36</area>
-        </shape>
-        <textarea name="text" from="base_textarea">
-            <area>0,0,366,30</area>
-            <align>allcenter</align>
-            <value>Edit Recording Metadata</value>
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Edit Recording Metadata</value>
+            </textarea>
         </textarea>
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
+        
         <shape name="editmetadata_background" from="base_background_shape">
-            <area>350,100,610,550</area>
+            <area>340,155,600,442</area>
         </shape>
-
-        <!-- the title of the window -->
-		<imagetype name="message_background_overlay" from="base_popup_background">
-		    <area>365,115,580,90</area>
-        </imagetype>
-		<textarea name="messagearea" from="base_textarea">
-            <area>370,115,550,90</area>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-            <align>allcenter</align>
-            <value>Edit Recording Metadata</value>
-        </textarea>
 
         <textarea name="titlelabel" from="base_textarea">
-            <area>370,220,190,40</area>
+            <area>355,170,185,36</area>
             <align>right,vcenter</align>
             <value>Title:</value>
         </textarea>
-		<textedit name="title" from="base_textedit">
-            <position>570,220</position>
-        </textedit>
 
         <textarea name="subtitlelabel" from="titlelabel">
-            <position>370,270</position>
+            <position>355,210</position>
             <value>Subtitle:</value>
         </textarea>
-        <textedit name="subtitle" from="base_textedit">
-            <position>570,270</position>
-        </textedit>
 
         <textarea name="inetreflabel" from="titlelabel">
-            <position>370,320</position>
+            <position>355,250</position>
             <value>Inetref:</value>
         </textarea>
-        <textedit name="inetref" from="base_textedit">
-            <position>570,320</position>
-        </textedit>
 
         <textarea name="seasonlabel" from="titlelabel">
-            <position>370,370</position>
+            <position>355,290</position>
             <value>Season:</value>
-        </textarea>
-        <spinbox name="season" from="base_spinbox">
-            <position>570,370</position>
-        </spinbox>
+        </textarea>        
 
         <textarea name="episodelabel" from="titlelabel">
-            <position>370,420</position>
+            <position>355,330</position>
             <value>Episode:</value>
         </textarea>
-        <spinbox name="episode" from="base_spinbox">
-            <position>570,420</position>
-        </spinbox>
 
         <textarea name="descriptionlabel" from="titlelabel">
-            <position>370,470</position>
+            <position>355,370</position>
             <value>Description:</value>
         </textarea>
-
-        <textedit name="description" from="base_multiline_textedit">
-            <position>570,470</position>
+        
+        <textedit name="title" from="base_textedit">
+            <position>550,170</position>
         </textedit>
+        
+        <textedit name="subtitle" from="base_textedit">
+            <position>550,210</position>
+        </textedit>
+        
+        <textedit name="inetref" from="base_textedit">
+            <position>550,250</position>
+        </textedit>
+        
+        <spinbox name="season" from="base_spinbox">
+            <position>550,290</position>
+        </spinbox>
+        
+        <spinbox name="episode" from="base_spinbox">
+            <position>550,330</position>
+        </spinbox>
 
-        <shape name="button_separator" from="base_separator_shape">
-            <area>370,570,570,1</area>
+        <textedit name="description" from="base_textedit">
+            <area>550,370,375,145</area>
+            <statetype name="background">
+                <state name="active">
+                    <area>0,0,375,145</area>
+                </state>
+                <state name="selected">
+                    <area>0,0,375,145</area>
+                </state>
+                <state name="inactive">
+                    <area>0,0,375,145</area>
+                </state>
+            </statetype>
+            <imagetype name="cursor">
+                <shape name="cursor_shape">
+                    <area>0,2,2,20</area>
+                    <type>box</type>
+                    <fill color="#FFFFFF" alpha="240" />
+                </shape>
+            </imagetype>
+            <textarea name="text" from="base_textarea">
+                <area>8,10,100%-16,139</area>
+                <align>top,left</align>
+                <multiline>true</multiline>
+            </textarea>
+        </textedit>
+        
+        <shape name="button_separator" from="base_background_shape">
+            <area>341,530,598,1</area>
         </shape>
 
         <button name="ok" from="base_button">
-            <position>580,590</position>
+            <position>565,545</position>
             <value>OK</value>
         </button>
+        
     </window>
 
 </mythuitheme>

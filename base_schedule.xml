@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "../mythuitheme.dtd">
+<mythuitheme>
+
+    <!-- Shows the channel list and time at the top 
+         The frontend will segfault when guidegrid is put in a group -->
+    <group name="base_channellist_group">
+        
+       <!-- this is the background for the entire tv program list -->
+        <shape name="channellist_background" from="base_background_shape">
+            <area>0,0,1240,480</area>
+        </shape>
+        <shape name="channellist_separator" from="base_background_shape">
+            <area>255,1,1,478</area>
+        </shape>
+        <shape name="timelist_separator" from="base_background_shape">
+            <area>1,35,1238,1</area>
+        </shape>
+        
+        <!-- shows the channel group in the top left corner -->
+        <textarea name="channelgroup" from="base_textarea">
+            <area>15,2,226,36</area>
+            <align>left,vcenter</align>
+        </textarea>
+
+        <!-- this is the vertical list of the available channels -->
+        <buttonlist name="channellist" from="base_buttonlist">
+            <area>15,45,200,450</area>
+            <spacing>1</spacing>
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,225,70</area>
+                    <shape name="background">
+                        <area>0,0,100%,100%</area>
+                        <fill color="#000000" alpha="0" />
+                        <line color="#000000" alpha="0" width="0" />
+                    </shape>
+
+                    <shape name="channelicon_background" from="base_background_shape">
+                        <area>4,8,71,53</area>
+                        <cornerradius>0</cornerradius>
+                    </shape>
+                    <imagetype name="channelicon">
+                        <area>5,9,68,51</area>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
+
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>90,0,135,70</area>
+                        <font state="favourite">text_yellow</font>
+                        <font state="unavailable">text_blue</font>
+                        <font state="favunavailable">text_purple</font>
+                        <scroll direction="horizontal" />
+                    </textarea>
+                </state>
+                <state name="inactive" from="active"/>
+                <state name="selectedactive" from="active"/>
+                <state name="selectedinactive" from="active"/>
+            </statetype>
+            <statetype name="upscrollarrow">
+                <position>100%-140,0</position>
+            </statetype>
+            <statetype name="downscrollarrow">
+                <position>100%-140,410</position>
+            </statetype>
+        </buttonlist>
+        
+        <!-- this is the horizontal list of the time slots -->
+        <buttonlist name="timelist">
+            <area>255,2,980,30</area>
+            <layout>horizontal</layout>
+            <spacing>0</spacing>
+            <buttonarea>20,0,945,30</buttonarea>
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <imagetype name="buttonbackground">
+                        <area>0,0,36,36</area>
+                        <filename />
+                    </imagetype>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>30,0,150,36</area>
+                    </textarea>
+                </state>
+                <state name="inactive" from="active"/>
+                <state name="selectedactive" from="active"/>
+                <state name="selectedinactive" from="active"/>
+            </statetype>
+        </buttonlist>
+
+    </group>
+   
+
+    
+    
+    
+    <!-- Shows the channel icon or text at the left side and the 
+         actual program title, subtitle and its description in the 
+         center together with some additional information -->
+    <group name="base_program_details_group">
+    
+        <!-- this is the background for the information at the bottom like
+            shows coverart, track details, ratings and the visualizer -->
+        <shape name="program_details_background" from="base_background_shape">
+            <area>0,0,1240,165</area>
+        </shape>
+               
+        <textarea name="title" from="base_textarea">
+            <area>15,10,600,36</area>
+            <font>title</font>
+            <scroll direction="horizontal" />
+        </textarea>
+        <textarea name="subtitle" from="base_textarea">
+            <area>15,40,600,36</area>
+            <scroll direction="horizontal" />
+        </textarea>
+        <textarea name="template" from="base_textarea">
+            <area>625,10,300,36</area>
+            <scroll direction="horizontal" />
+            <template>%Using |TEMPLATE| Template%</template>
+        </textarea>
+        <textarea name="channel" from="base_textarea">
+            <area>625,40,200,36</area>
+            <scroll direction="horizontal" />
+            <template>Channel: %1</template>
+        </textarea>
+        <textarea name="timedate" from="base_textarea">
+            <area>945,10,280,36</area>
+            <align>right,vcenter</align>
+            <cutdown>yes</cutdown>
+        </textarea>
+        <textarea name="rectypestatus" from="base_textarea">
+            <area>825,40,400,36</area>
+            <align>right,vcenter</align>
+            <scroll direction="horizontal" />
+        </textarea>
+
+        <shape name="description_separator" from="base_background_shape">
+            <area>1,77,1238,1</area>
+        </shape>
+        
+        <!-- show the plot of the recording -->
+        <textarea name="description" from="base_textarea">
+            <area>15,87,1210,63</area>
+            <multiline>yes</multiline>
+            <scroll direction="vertical" />
+            <align>left,bottom</align>
+            <template>%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
+        </textarea>
+
+    </group>
+    
+</mythuitheme>

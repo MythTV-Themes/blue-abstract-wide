@@ -20,6 +20,7 @@
     <types>
         <type>UI</type>
         <type>OSD</type>
+        <type>Menu</type>
     </types>
 
     <!-- This is the value that myth uses to parse all the coordinates in your theme. It is the number of 
@@ -29,12 +30,12 @@
     <!-- define the Major and Minor version numbers of your theme.-->
     <version>
         <major>1</major>
-        <minor>7</minor>
+        <minor>8</minor>
     </version>
 
     <!-- Defines an image in your theme directory to act as a preview and also some information about the theme -->
     <detail>
-        <thumbnail name="preview">images/preview.png</thumbnail>
+        <thumbnail name="preview">preview.png</thumbnail>
         <description>Blue-abstract is a modern looking theme meant for widescreen HD displays. The blue background and the consistent layout makes it an attractive and elegant looking theme. This theme can be used with MythTV 0.25 and later.</description>
         <errata></errata>
     </detail>

@@ -7,66 +7,48 @@
 
         <imagetype name="background" from="base_background"/>
 
-        <!-- The name of the screen needs to be defined 
-             again because it is in the center of the screen -->
-        <shape name="heading_background" from="base_background_shape">
-            <area>470,-4,350,36</area>
-        </shape>
-        <textarea name="text" from="base_textarea">
-            <area>475,0,340,30</area>
-            <align>allcenter</align>
-            <value>Appearance Wizard</value>
-        </textarea>
-
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
+        <!-- The header is not shown so that the user can see 
+             the arrow on the top left on the screen -->
+        
         <!-- this is the background for the information at the bottom -->
         <shape name="appearance_background" from="base_background_shape">
-            <area>350,240,580,240</area>
+            <area>350,250,580,220</area>
         </shape>
 
-        <imagetype name="topleft">
+        <imagetype name="topleft" from="base_icon_selected">
             <position>0,0</position>
-            <filename />
-            <shape name="topleft_shape" from="base_background_shape_dark">
-                <area>0,0,40,40</area>
-            </shape>
+            <filename>images/icons/calibrate_top_left.png</filename>
         </imagetype>
-        <imagetype name="bottomright">
-            <position>1240,640</position>
-            <filename />
-            <shape name="bottomright_shape" from="base_background_shape_dark">
-                <area>1240,640,40,40</area>
-            </shape>
+        <imagetype name="bottomright" from="base_icon_selected">
+            <position>1216,576</position>
+            <filename>images/icons/calibrate_bottom_right.png</filename>
         </imagetype>
 
         <textarea name="part1" from="base_textarea">
-            <area>370,240,540,100</area>
+            <area>370,250,540,100</area>
             <value>Move the selected arrow to the corner of the TV screen. Press SELECT to edit the other arrow. Press MENU for options and ESC to quit.</value>
             <multiline>yes</multiline>
             <align>allcenter</align>
         </textarea>
 
-        <shape name="title_separator" from="base_separator_shape">
-            <area>370,340,540,1</area>
+        <shape name="title_separator" from="base_background_shape">
+            <area>351,350,578,1</area>
         </shape>
 
         <textarea name="size" from="base_textarea">
-            <area>370,350,540,40</area>
+            <area>370,360,540,36</area>
             <align>allcenter</align>
         </textarea>
 
         <textarea name="offsets" from="base_textarea">
-            <area>370,390,540,40</area>
+            <area>370,390,540,36</area>
             <align>allcenter</align>
         </textarea>
 
         <textarea name="changeamount" from="base_textarea">
-            <area>370,430,540,40</area>
+            <area>370,420,540,36</area>
             <align>allcenter</align>
         </textarea>
-
     </window>
+
 </mythuitheme>

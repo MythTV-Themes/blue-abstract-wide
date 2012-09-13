@@ -2,52 +2,8 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- Shows the list of available games that 
-        the metadata grabber has returned -->
-    <window name="gamesel">
-        
-        <shape name="darken_background" from="base_darken_background"/>
-        
-        <shape name="game_selection_background" from="base_background_shape">
-            <area>295,165,690,392</area>
-            <fill color="#000000" alpha="255" />
-        </shape>
 
-        <buttonlist name="results" from="base_buttonlist_wide">
-            <area>315,185,650,356</area>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <textarea name="buttontext" from="base_textarea">
-                        <area>8,5,350,30</area>
-                        <cutdown>yes</cutdown>
-                    </textarea>
-                    <textarea name="year" from="base_textarea">
-                        <area>380,5,260,30</area>
-                        <align>right,vcenter</align>
-                        <template>Released %1</template>
-                    </textarea>
-                </state>
-                <state name="inactive" from="active" />
-                <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                    </imagetype>
-                </state>
-                <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-        </buttonlist>
-
-    </window>
-
-
-
-
-
-
+    <!-- TODO: add coverart background image -->
     <!-- Shows the list of available games -->
     <window name="gameui">
 
@@ -60,119 +16,122 @@
             </textarea>
         </textarea>
 
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
         <!-- the shape where the imagelist is displayed -->
         <shape name="gameui_background" from="base_background_shape">
-            <area>80,100,1110,302</area>
+            <area>85,85,1100,390</area>
         </shape>
 
         <!-- the list of the games -->
         <buttontree name="gametreelist">
-            <area>100,121,1080,149</area>
+            <area>100,100,1070,357</area>
             <numlists>3</numlists>
-            <buttonlist name="listtemplate" from="base_buttonlist" />
+            <spacing>10</spacing>
+            <buttonlist name="listtemplate" from="base_buttonlist">
+                <statetype name="buttonitem">
+                    <state name="active">
+                        <area>0,0,350,36</area>
+                        <textarea name="buttontext" from="base_textarea">
+                            <area>8,0,100%-16,36</area>
+                            <scroll direction="horizontal" />
+                        </textarea>
+                    </state>
+                    <state name="inactive" from="active" />
+                    <state name="selectedactive" from="active">
+                        <area>0,0,350,36</area>
+                        <shape name="background" from="base_button_shape_selectedactive" />
+                    </state>
+                    <state name="selectedinactive" from="active">
+                        <area>0,0,350,36</area>
+                        <shape name="background" from="base_button_shape_selectedinactive" />
+                    </state>
+                </statetype>
+            </buttonlist>
         </buttontree>
 
-        <!-- this is the background for the information at the bottom -->
-        <shape name="game_details_background" from="base_background_shape">
-            <area>80,430,1110,230</area>
-        </shape>
 
         <shape name="cover_background" from="base_background_shape">
-            <area>100,450,250,190</area>
+            <area>85,490,275,210</area>
         </shape>
+        
+        <imagetype name="coverart_background_image">
+            <area>95,500,255,190</area>
+            <mask>images/media/game_cover_mask.png</mask>
+            <filename>images/media/game_cover_bg.png</filename>
+        </imagetype>
 
+        <!-- this is the actual cover image that will be shown if its
+            available, otherwise only the background image is visible -->
         <imagetype name="coverart">
-            <area>101,452,246,186</area>
-            <filename />
+            <area>95,500,255,190</area>
+            <mask>images/media/game_cover_mask.png</mask>
             <preserveaspect>true</preserveaspect>
         </imagetype>
-        <!--<imagetype name="screenshot">
-            <area>101,452,246,186</area>
-            <filename />
-            <preserveaspect>true</preserveaspect>
-        </imagetype>-->
-
-        <shape name="screenshot_separator" from="base_separator_shape">
-            <area>370,450,1,190</area>
-        </shape>
         
-        <textarea name="title" from="base_textarea">
-            <area>390,450,825,30</area>
-            <font>title</font>
-            <cutdown>yes</cutdown>
-        </textarea>
+        <imagetype name="coverart_background_image_border">
+            <area>95,500,255,190</area>
+            <filename>images/media/game_cover_border.png</filename>
+        </imagetype>
+        
+        
+        <!-- this is the background for the information at the bottom -->        
+        <shape name="game_description_background" from="base_background_shape">
+            <area>375,490,810,210</area>
+        </shape>
 
-        <!-- information about the selected game -->
-        <textarea name="year_label" from="base_textarea">
-            <area>390,490,60,20</area>
-            <align>right,vcenter</align>
-            <font>text_small</font>
-            <value>Year:</value>
+        <textarea name="title" from="base_textarea">
+            <area>390,505,690,30</area>
+            <multiline>no</multiline>
+            <scroll direction="horizontal" />
+            <font>title</font>
         </textarea>
         <textarea name="year" from="base_textarea">
-            <area>455,490,60,20</area>
-            <font>text_small</font>
-        </textarea>        
-
-        <textarea name="system_label" from="year_label">
-            <area>520,490,100,20</area>
-            <value>System:</value>
+            <area>390,535,150,30</area>
+            <template>From %1</template>
         </textarea>
-         <textarea name="system" from="year">
-            <area>625,490,150,20</area>
+        <textarea name="system" from="base_textarea">
+            <area>555,535,230,30</area>
+            <template>System: %1</template>
         </textarea>
-        
-        <textarea name="genre_label" from="year_label">
-            <area>780,490,80,20</area>
-            <value>Genre:</value>
-        </textarea>
-        <textarea name="genre" from="year">
-            <area>865,490,150,20</area>
+        <textarea name="genre" from="base_textarea">
+            <area>800,535,230,30</area>
+            <template>Genre: %1</template>
         </textarea>
         
-        <textarea name="favorite_label" from="year_label">
-            <area>1020,490,100,20</area>
-            <value>Favorite:</value>
-        </textarea>
         <statetype name="favorite">
+            <position>1150,540</position>
             <state name="no">
-                <textarea name="favorite" from="base_textarea">
-                    <area>1125,490,50,20</area>
-                    <font>text_small</font>
-                    <value>No</value>
-                </textarea>
+                <imagetype name="no" from="base_icon_inactive">
+                    <area>0,0,18,18</area>
+                    <filename>images/icons/favorite.png</filename>
+                </imagetype>
             </state>
-            <state name="yes" from="no">
-                <textarea name="favorite" from="base_textarea">
-                    <area>1125,490,50,20</area>
-                    <font>text_small</font>
-                    <value>Yes</value>
-                </textarea>
+            <state name="yes">
+                <imagetype name="yes" from="base_icon_selected">
+                    <area>0,0,18,18</area>
+                    <filename>images/icons/favorite.png</filename>
+                </imagetype>
             </state>
         </statetype>
-        
-        <shape name="information_separator" from="base_separator_shape">
-            <area>370,523,800,1</area>
+
+        <shape name="title_separator" from="base_background_shape">
+            <area>376,570,808,1</area>
         </shape>
 
         <textarea name="description" from="base_textarea">
-            <area>390,538,760,120</area>
-            <font>text_small</font>
+            <area>390,582,780,105</area>
             <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
+            <scroll direction="vertical" />
             <align>left,top</align>
         </textarea>
+
     </window>
 
 
 
 
 
-
+    <!-- TODO: add coverart background image -->
+    <!-- TODO: add favorite star not working -->
     <!-- Shows details about the selected game -->
     <window name="gamedetailspopup">
 
@@ -185,130 +144,145 @@
             </textarea>
         </textarea>
 
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <!-- this is the background around the covers  -->
-        <shape name="coverart_background" from="base_background_shape">
-            <area>100,120,305,510</area>
+        <!-- this is the background around the game details -->
+        <shape name="game_details_background" from="base_background_shape">
+            <area>40,210,1195,305</area>
         </shape>
-        <shape name="coverart_shape" from="base_background_shape">
-            <area>120,140,268,470</area>
-        </shape>
-
-        <imagetype name="coverart">
-            <area>123,143,262,410</area>
-            <filename />
-            <preserveaspect>true</preserveaspect>
-            <reflection axis="vertical" scale="65" length="35" />
+        
+        <imagetype name="coverart_background_image">
+            <area>52,222,373,280</area>
+            <mask>images/media/game_cover_details_mask.png</mask>
+            <filename>images/media/game_cover_bg.png</filename>
         </imagetype>
 
-        <!-- this is the background around the video details -->
-        <shape name="game_details_background" from="base_background_shape">
-            <area>425,120,755,510</area>
+        <!-- this is the actual cover image that will be shown if its
+            available, otherwise only the background image is visible -->
+        <imagetype name="coverart">
+            <area>52,222,373,280</area>
+            <mask>images/media/game_cover_details_mask.png</mask>
+        </imagetype>
+        
+        <imagetype name="coverart_background_image_border">
+            <area>52,222,373,280</area>
+            <filename>images/media/game_cover_border.png</filename>
+        </imagetype>
+        
+        <shape name="coverart_separator" from="base_background_shape">
+            <area>435,211,1,303</area>
         </shape>
 
         <textarea name="title" from="base_textarea">
-            <area>445,135,600,30</area>
+            <area>450,225,350,30</area>
             <font>title</font>
             <cutdown>yes</cutdown>
         </textarea>
+        <textarea name="gametype" from="base_textarea">
+            <area>450,255,260,30</area>
+            <cutdown>yes</cutdown>
+        </textarea>
 
-        <shape name="title_separator" from="base_separator_shape">
-            <area>445,180,715,1</area>
+        <statetype name="favorite">
+            <position>785,262</position>
+            <state name="no">
+                <imagetype name="no" from="base_icon_inactive">
+                    <area>0,0,18,18</area>
+                    <filename>images/icons/favorite.png</filename>
+                </imagetype>
+            </state>
+            <state name="yes">
+                <imagetype name="yes" from="base_icon_selected">
+                    <area>0,0,18,18</area>
+                    <filename>images/icons/favorite.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+        
+        <shape name="top_separator" from="base_background_shape">
+            <area>436,290,379,1</area>
         </shape>
 
         <textarea name="description" from="base_textarea">
-            <area>445,195,715,180</area>
-            <font>text_small</font>
+            <area>450,305,350,140</area>
             <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-            <align>left,top</align>
+            <scroll direction="vertical" />
+            <align>right,top</align>
         </textarea>
 
-        <shape name="description_separator" from="base_separator_shape">
-            <area>445,355,715,1</area>
+        <shape name="left_separator" from="base_background_shape">
+            <area>815,211,1,303</area>
         </shape>
 
-        <!-- show the name of the different labels -->
-        <textarea name="gametype_label" from="base_textarea">
-            <area>445,365,150,30</area>
-            <align>right,vcenter</align>
-            <font>text_small</font>
-            <value>Gametype:</value>
-        </textarea>
-        <textarea name="publisher_label" from="gametype_label">
-            <position>445,395</position>
+         <!-- show the description to the different details -->
+        <textarea name="publisher_label" from="base_textarea" depends="publisher">
+            <area>830,225,130,30</area>
             <value>Publisher:</value>
         </textarea>
-        <textarea name="allsystems_label" from="gametype_label">
-            <position>445,425</position>
+        <textarea name="allsystems_label" from="publisher_label" depends="allsystems">
+            <position>830,255</position>
             <value>System(s):</value>
-        </textarea>        
-        <textarea name="genre_label" from="gametype_label">
-            <position>750,365</position>
+        </textarea>
+        <textarea name="genre_label" from="publisher_label" depends="genre">
+            <position>830,285</position>
             <value>Genre:</value>
         </textarea>
-        <textarea name="year_label" from="gametype_label">
-            <position>750,395</position>
+        <textarea name="year_label" from="publisher_label" depends="year">
+            <position>830,315</position>
             <value>Year:</value>
         </textarea>
-        <textarea name="country_label" from="gametype_label">
-            <position>750,425</position>
+        <textarea name="country_label" from="publisher_label" depends="country">
+            <position>830,345</position>
             <value>Country:</value>
         </textarea>
-        <textarea name="romname_label" from="gametype_label">
-            <position>445,485</position>
+        <textarea name="romname_label" from="publisher_label" depends="romname">
+            <position>830,375</position>
             <value>Filename:</value>
         </textarea>
-        <textarea name="rompath_label" from="gametype_label">
-            <position>445,515</position>
+        <textarea name="crc_label" from="publisher_label" depends="crc">
+            <position>830,405</position>
+            <value>CRC:</value>
+        </textarea>
+        <textarea name="rompath_label" from="publisher_label" depends="rompath">
+            <position>830,435</position>
             <value>ROM Path:</value>
         </textarea>
         
-        <!-- show the values to the different labels -->
-        <textarea name="gametype" from="base_textarea">
-            <area>605,365,210,30</area>
-            <font>text_small</font>
-            <cutdown>yes</cutdown>
-            <value>Gametype:</value>
+        <!-- show the values to the different details -->
+        <textarea name="publisher" from="base_textarea">
+            <area>970,225,240,30</area>
+            <scroll direction="horizontal" />
         </textarea>
-        <textarea name="publisher" from="gametype">
-            <position>605,395</position>
+        <textarea name="allsystems" from="publisher">
+            <position>970,255</position>
         </textarea>
-        <textarea name="allsystems" from="gametype">
-            <position>605,425</position>
+        <textarea name="genre" from="publisher">
+            <position>970,285</position>
         </textarea>
-        <textarea name="genre" from="gametype">
-            <position>910,365</position>
+        <textarea name="year" from="publisher">
+            <position>970,315</position>
         </textarea>
-        <textarea name="year" from="gametype">
-            <position>910,395</position>
+        <textarea name="country" from="publisher">
+            <position>970,345</position>
         </textarea>
-        <textarea name="country" from="gametype">
-            <position>910,425</position>
+        <textarea name="romname" from="publisher">
+            <position>970,375</position>
         </textarea>
-        <textarea name="romname" from="base_textarea">
-            <area>605,485,555,30</area>
-            <font>text_small</font>
+        <textarea name="crc" from="publisher">
+            <position>970,405</position>
         </textarea>
         <textarea name="rompath" from="base_textarea">
-            <area>605,515,555,30</area>
-            <font>text_small</font>
+             <area>970,440,240,63</area>
+            <align>left,top</align>
+            <multiline>yes</multiline>
+            <scroll direction="vertical" />
         </textarea>
-                
-        <shape name="details_separator" from="base_separator_shape">
-            <area>445,554,715,1</area>
-        </shape>
 
         <button name="play_button" from="base_button">
             <value>Play</value>
-            <position>445,572</position>
+            <position>450,460</position>
         </button>
         <button name="done_button" from="base_button">
             <value>Back</value>
-            <position>617,572</position>
+            <position>652,460</position>
         </button>
 
     </window>
@@ -330,115 +304,114 @@
             </textarea>
         </textarea>
 
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
         <shape name="editmetadata_shape" from="base_background_shape">
-            <area>230,80,820,560</area>
+            <area>310,115,645,517</area>
         </shape>
 
-        <!-- Labels -->
         <textarea name="gamename_label" from="base_textarea">
-            <area>250,100,250,40</area>
+            <area>325,130,230,36</area>
             <value>Game Name:</value>
             <align>right,vcenter</align>
         </textarea>
         <textarea name="genre_label" from="gamename_label">
-            <position>250,145</position>
+            <position>325,170</position>
             <value>Genre:</value>
         </textarea>
         <textarea name="year_label" from="gamename_label">
-            <position>250,190</position>
+            <position>325,210</position>
             <value>Year:</value>
         </textarea>
         <textarea name="country_label" from="gamename_label">
-            <position>250,235</position>
+            <position>325,250</position>
             <value>Country:</value>
         </textarea>
         <textarea name="publisher_label" from="gamename_label">
-            <position>250,280</position>
+            <position>325,290</position>
             <value>Publisher:</value>
         </textarea>
         <textarea name="plot_label" from="gamename_label">
-            <position>250,325</position>
+            <position>325,330</position>
             <value>Plot:</value>
         </textarea>
         <textarea name="fav_label" from="gamename_label">
-            <position>250,370</position>
+            <position>325,370</position>
             <value>Favorite:</value>
         </textarea>
-        <textarea name="screenshot_label" from="gamename_label">
-            <position>250,415</position>
-            <value>Screenshot:</value>
-        </textarea>
-        <textarea name="fanart_label" from="gamename_label">
-            <position>250,460</position>
-            <value>Fanart:</value>
-        </textarea>
-        <textarea name="coverart_label" from="gamename_label">
-            <position>250,505</position>
-            <value>Boxart:</value>
-        </textarea>
 
-        <!-- Widgets -->
         <textedit name="title_edit" from="base_textedit">
-            <position>510,100</position>
+            <position>565,130</position>
         </textedit>
         <textedit name="genre_edit" from="base_textedit">
-            <position>510,145</position>
+            <position>565,170</position>
         </textedit>
         <textedit name="year_edit" from="base_textedit">
-            <position>510,190</position>
+            <position>565,210</position>
         </textedit>
         <textedit name="country_edit" from="base_textedit">
-            <position>510,235</position>
+            <position>565,250</position>
         </textedit>
         <textedit name="publisher_edit" from="base_textedit">
-            <position>510,280</position>
+            <position>565,290</position>
         </textedit>
         <textedit name="description_edit" from="base_textedit">
-            <position>510,325</position>
+            <position>565,330</position>
         </textedit>
         <checkbox name="favorite_check" from="base_checkbox">
-            <position>510,375</position>
+            <position>565,370</position>
         </checkbox>
         
+        <shape name="screenshot_separator" from="base_background_shape">
+            <area>311,420,643,1</area>
+        </shape>
+
+        <textarea name="screenshot_label" from="gamename_label">
+            <position>325,435</position>
+            <value>Screenshot:</value>
+        </textarea>
         <button name="screenshot_button" from="base_searchbutton">
-            <position>510,420</position>
+            <position>565,435</position>
         </button>
         <textarea name="screenshot_text" from="base_textarea">
-            <area>550,415,490,40</area>
+            <area>610,435,320,36</area>
             <value>Click here to search existing screenshots...</value>
-            <cutdown>yes</cutdown>
+            <scroll direction="horizontal" />
         </textarea>
 
+        <textarea name="fanart_label" from="gamename_label">
+            <position>325,475</position>
+            <value>Fanart:</value>
+        </textarea>
         <button name="fanart_button" from="base_searchbutton">
-            <position>510,465</position>
+            <position>565,475</position>
         </button>
         <textarea name="fanart_text" from="base_textarea">
-            <area>550,455,490,40</area>
+            <area>610,475,320,36</area>
             <value>Click here to search existing fanart...</value>
-            <cutdown>yes</cutdown>
+            <scroll direction="horizontal" />
         </textarea>
 
+        <textarea name="coverart_label" from="gamename_label">
+            <position>325,515</position>
+            <value>Boxart:</value>
+        </textarea>
         <button name="coverart_button" from="base_searchbutton">
-            <position>510,510</position>
+            <position>565,515</position>
         </button>
         <textarea name="coverart_text" from="base_textarea">
-            <area>550,505,490,40</area>
+            <area>610,515,320,36</area>
             <value>Click here to search existing coverart...</value>
-            <cutdown>yes</cutdown>
+            <scroll direction="horizontal" />
         </textarea>
 
-        <shape name="button_separator" from="base_separator_shape">
-            <area>250,560,780,1</area>
+        <shape name="button_separator" from="base_background_shape">
+            <area>311,565,643,1</area>
         </shape>
 
         <button name="done_button" from="base_button">
             <position>565,580</position>
             <value>Done</value>
         </button>
+
     </window>
 
 </mythuitheme>

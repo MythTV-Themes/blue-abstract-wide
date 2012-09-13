@@ -14,267 +14,214 @@
             </textarea>
         </textarea>
 
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
+        <shape name="gallery_background" from="base_background_shape">
+            <area>20,50,1240,570</area>
+        </shape>
+
+        <textarea name="noimages" from="base_textarea">
+            <area>220,50,840,570</area>
+            <align>allcenter</align>
         </textarea>
 
-        <shape name="gallery_background" from="base_background_shape">
-            <area>25,60,1230,633</area>
+        <!-- the list that shows the images in the screen -->
+        <buttonlist name="images">
+            <area>35,65,1220,540</area>
+            <layout>grid</layout>
+            <spacing>2</spacing>
+            <wrapstyle>flowing</wrapstyle>
+            <buttonarea>0,0,100%,100%</buttonarea>
+
+            <statetype name="buttonitem">
+                <state name="active">
+                    
+                    <!-- Shows the name of the item over a black background -->
+                    <shape name="buttontext_background" from="base_background_shape">
+                        <area>3,99,127,31</area>
+                        <line color="#AAAAAA" alpha="0" width="0" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>10,105,110,20</area>
+                        <font>text_small</font>
+                        <multiline>yes</multiline>
+                        <align>allcenter</align>
+                    </textarea>
+
+                    <!-- Shows the background image (if no thumbnail is available) or 
+                         the actual thumbnail image and a border around it -->
+                    <imagetype name="background_image">
+                        <area>0,0,133,133</area>
+                        <mask>images/media/image_item_nfmask.png</mask>
+                        <filename>images/media/image_item_bg.png</filename>
+                    </imagetype>
+
+                    <imagetype name="buttonimage">
+                        <area>0,0,133,133</area>
+                        <mask>images/media/image_item_nfmask.png</mask>
+                    </imagetype>
+
+                    <!-- shows that the image was marked/selected and
+                        might be manipulated with other images -->
+                    <statetype name="buttoncheck">
+                        <position>96,3</position>
+                        <state name="full">
+                            <shape name="buttoncheck_background" from="base_background_shape">
+                                <area>0,0,34,34</area>
+                                <line color="#AAAAAA" alpha="0" width="0" />
+                                <cornerradius>10</cornerradius>
+                            </shape>
+                            <imagetype name="checkfull" from="base_icon_selected">
+                                <area>4,3,28,28</area>
+                                <filename>images/icons/selected.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
+
+                    <!-- show a folder above the image if its a folder and not an image.
+                        the node is a folder and it is currently not selected -->
+                    <statetype name="nodetype">
+                        <position>0,0</position>
+                        <state name="subfolder">
+                            <shape name="subfolder_background" from="base_background_shape">
+                                <area>2,2,129,36</area>
+                                <line color="#AAAAAA" alpha="0" width="0" />
+                                <cornerradius>10</cornerradius>
+                            </shape>
+                            <imagetype name="subfolder_icon">
+                                <area>10,6,28,28</area>
+                                <filename>images/icons/folder_selected.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="upfolder">
+                            <imagetype name="upfolder_icon">
+                                <area>10,6,28,28</area>
+                                <filename>images/icons/folder_up_selected.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
+
+                    <imagetype name="background_image_border">
+                        <area>0,0,133,133</area>
+                        <filename>images/media/image_item_nfborder.png</filename>
+                    </imagetype>
+
+                    <!-- show how many images / directories are in this directory -->
+                    <textarea name="childcount" from="base_textarea" depends="subfolder_icon">
+                        <area>45,3,80,36</area>
+                    </textarea>
+                </state>
+
+
+                <!-- These two states are not used -->
+                <state name="inactive" from="active"/>
+                <state name="selectedinactive" from="active"/>
+                    
+                <state name="selectedactive" from="active">
+                    <area>-26,-26,133,133</area>
+                    
+                    <!-- Shows the name of the item over a black background -->
+                    <shape name="buttontext_background" from="base_background_shape_dark">
+                        <area>7,118,171,60</area>
+                        <line color="#AAAAAA" alpha="0" width="0" />
+                        <cornerradius>10</cornerradius>
+                    </shape>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>20,131,145,42</area>
+                        <multiline>yes</multiline>
+                        <scroll direction="vertical" />
+                        <align>allcenter</align>
+                    </textarea>
+
+                    <!-- Shows the background image (if no thumbnail is available) or 
+                         the actual thumbnail image and a border around it -->
+                    <imagetype name="background_image">
+                        <area>0,0,185,185</area>
+                        <mask>images/media/image_item_fmask.png</mask>
+                        <filename>images/media/image_item_bg.png</filename>
+                    </imagetype>   
+
+                    <imagetype name="buttonimage">
+                        <area>0,0,185,185</area>
+                        <mask>images/media/image_item_fmask.png</mask>
+                    </imagetype>    
+
+                    <!-- shows that the image was marked/selected and
+                        might be manipulated with other images -->
+                    <statetype name="buttoncheck">
+                        <position>143,7</position>
+                        <state name="full">
+                            <shape name="buttoncheck_background" from="base_background_shape">
+                                <area>0,0,36,36</area>
+                                <line color="#AAAAAA" alpha="0" width="0" />
+                                <cornerradius>10</cornerradius>
+                            </shape>
+                            <imagetype name="checkfull" from="base_icon_selected">
+                                <area>3,3,30,30</area>
+                                <filename>images/icons/selected.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
+
+                    <!-- show a folder above the image if its a folder and not an image.
+                        the node is a folder and it is currently not selected -->
+                    <statetype name="nodetype">
+                        <position>0,0</position>
+                        <state name="subfolder">
+                            <shape name="subfolder_background" from="base_background_shape">
+                                <area>7,7,171,40</area>
+                                <line color="#AAAAAA" alpha="0" width="0" />
+                                <cornerradius>10</cornerradius>
+                            </shape>
+                            <imagetype name="subfolder_icon">
+                                <area>15,12,30,30</area>
+                                <filename>images/icons/folder_selected.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="upfolder">
+                            <imagetype name="upfolder_icon">
+                                <area>15,12,30,30</area>
+                                <filename>images/icons/folder_up_selected.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
+
+                    <imagetype name="background_image_border">
+                        <area>0,0,185,185</area>
+                        <filename>images/media/image_item_fborder.png</filename>
+                    </imagetype>
+
+                    <!-- show how many images / directories are in this directory -->
+                    <textarea name="childcount" from="base_textarea" depends="subfolder_icon">
+                        <area>50,12,80,30</area>
+                    </textarea>
+
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <shape name="gallery_info_background" from="base_background_shape">
+            <area>-15,636,1310,70</area>
         </shape>
+
 
         <!-- shows the name of the folder or image -->
         <textarea name="title" from="base_textarea">
-            <area>45,80,900,30</area>
-            <cutdown>yes</cutdown>
-            <font>title</font>
-            <align>left,vcenter</align>
+            <area>25,640,700,30</area>
         </textarea>
 
         <!-- optional - shows current position in grid eg '1 of 123' -->
         <textarea name="position" from="base_textarea">
-            <area>985,80,250,30</area>
+            <area>1100,640,155,30</area>
             <align>right,vcenter</align>
         </textarea>
 
         <!-- shows path to current image -->
         <textarea name="breadcrumbs" from="base_textarea">
-            <area>45,120,1000,20</area>
-            <font>text_very_small</font>
-            <cutdown>yes</cutdown>
+            <area>25,675,1230,20</area>
+            <scroll direction="horizontal" />
         </textarea>
 
-        <!-- the list that shows the images in the screen -->
-        <buttonlist name="images">
-            <area>45,155,1170,535</area>
-            <buttonarea>0,0,1190,535</buttonarea>
-            <wrapstyle>flowing</wrapstyle>
-            <layout>grid</layout>
-            <spacing>7</spacing>
-            <statetype name="buttonitem">
-                
-                <state name="active">
-                    <area>0,0,164,124</area>
-                    
-                    <imagetype name="buttonimage_background">
-                        <shape name="buttonimage_background_shape" from="base_background_shape">
-                            <area>0,0,164,124</area>
-                            <line color="#000000" alpha="0" width="1" />
-                        </shape>
-                    </imagetype>
-                    
-                    <!-- this shows the actual image -->
-                    <imagetype name="buttonimage">
-                        <area>2,2,160,120</area>
-                        <preserveaspect>yes</preserveaspect>
-                    </imagetype>
-
-                    <imagetype name="buttonimage_border">
-                        <shape name="buttonimage_border_shape" from="base_background_shape">
-                            <area>0,0,164,124</area>
-                            <fill color="#000000" alpha="0" />
-                        </shape>
-                    </imagetype>
-                    
-                    <!-- shows that the image was marked/selected and
-                        might be manipulated with other images -->
-                    <statetype name="buttoncheck">
-                        <position>2,2</position>
-                        <showempty>yes</showempty>
-                        <state type="full">
-                            <shape name="marked_background" from="base_background_shape">
-                                <area>0,0,33,33</area>
-                                <line color="#000000" alpha="0" width="1" />
-                            </shape>
-                            <imagetype name="marked">
-                                <filename>images/shared/file_marked.png</filename>
-                            </imagetype>
-                        </state>
-                    </statetype>
-
-                    <!-- shows the name of the currently active file.
-                        this is the same as the title in the top -->
-                    <!--<shape name="buttonimage_shape" from="base_background_shape">
-                        <area>1,1,162,26</area>
-                        <type>box</type>
-                        <line color="#000000" alpha="0" width="1" />
-                    </shape>
-                    <textarea name="buttontext">
-                        <area>0,4,164,20</area>
-                        <font>text_very_small</font>
-                        <align>allcenter</align>
-                        <cutdown>yes</cutdown>
-                    </textarea>-->
-
-                    <!-- show a folder above the image if its a folder and not an image.
-                        the node is a folder and it is currently not selected -->
-                    <statetype name="nodetype">
-                        <position>0,0</position>
-                        <state name="subfolder">
-                            <shape name="buttonimage_shape" from="base_background_shape">
-                                <area>1,93,162,30</area>
-                                <type>box</type>
-                                <line color="#000000" alpha="0" width="1" />
-                            </shape>
-                            <imagetype name="icon">
-                                <area>7,97,24,24</area>
-                                <filename>images/shared/folder.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
-                        <state name="upfolder">
-                            <shape name="buttonimage_shape" from="base_background_shape">
-                                <area>1,93,162,30</area>
-                                <type>box</type>
-                                <line color="#000000" alpha="0" width="1" />
-                            </shape>
-                            <imagetype name="icon">
-                                <area>7,97,24,24</area>
-                                <filename>images/shared/folder_up.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
-                    </statetype>
-
-                    <!-- show how many images / directories are in this directory -->
-                    <textarea name="childcount" from="base_textarea">
-                        <area>37,95,60,30</area>
-                        <font>text_small</font>
-                        <align>left,vcenter</align>
-                    </textarea>
-                </state>
-
-
-                <state name="selectedactive">
-                    <area>-38,-28,240,180</area>
-
-                    <imagetype name="buttonimage_background">
-                        <shape name="buttonimage_background_shape" from="base_background_shape_dark">
-                            <area>0,0,240,180</area>
-                            <line color="#000000" alpha="0" width="1" />
-                        </shape>
-                    </imagetype>
-                    
-                    <!-- this shows the actual image -->
-                    <imagetype name="buttonimage">
-                        <area>2,2,235,176</area>
-                        <preserveaspect>yes</preserveaspect>
-                    </imagetype>
-
-                    <imagetype name="buttonimage_border">
-                        <shape name="buttonimage_border_shape" from="base_background_shape">
-                            <area>0,0,240,180</area>
-                            <fill color="#000000" alpha="0" />
-                            <line color="#AAAAAA" alpha="150" width="2" />
-                        </shape>
-                    </imagetype>
-                    
-                    <!-- shows that the image was marked/selected and
-                        might be manipulated with other images -->
-                    <statetype name="buttoncheck">
-                        <position>2,2</position>
-                        <showempty>yes</showempty>
-                        <state type="full">
-                            <shape name="marked_background" from="base_background_shape">
-                                <area>0,0,33,33</area>
-                                <line color="#000000" alpha="0" width="1" />
-                            </shape>
-                            <imagetype name="marked">
-                                <filename>images/shared/file_marked.png</filename>
-                            </imagetype>
-                        </state>
-                    </statetype>
-
-                    <!-- shows the name of the currently active file.
-                        this is the same as the title in the top -->
-                    <!--<shape name="buttonimage_shape" from="base_background_shape">
-                        <area>1,1,238,26</area>
-                        <type>box</type>
-                        <line color="#000000" alpha="0" width="1" />
-                    </shape>
-                    <textarea name="buttontext">
-                        <area>0,4,240,20</area>
-                        <font>text_very_small</font>
-                        <align>allcenter</align>
-                        <cutdown>yes</cutdown>
-                    </textarea>-->
-
-                    <!-- show a folder above the image if its a folder and not an image.
-                        the node is a folder and it is currently not selected -->
-                    <statetype name="nodetype">
-                        <position>0,0</position>
-                        <state name="subfolder">
-                            <shape name="buttonimage_shape" from="base_background_shape">
-                                <area>1,139,238,40</area>
-                                <line color="#000000" alpha="0" width="1" />
-                            </shape>
-                            <imagetype name="icon">
-                                <area>9,144,32,32</area>
-                                <filename>images/shared/folder_open.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
-                        <state name="upfolder">
-                            <shape name="buttonimage_shape" from="base_background_shape">
-                                <area>1,139,238,40</area>
-                                <line color="#000000" alpha="0" width="1" />
-                            </shape>
-                            <imagetype name="icon">
-                                <area>9,144,32,32</area>
-                                <filename>images/shared/folder_up_open.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
-                    </statetype>
-
-                    <!-- show how many images / directories are in this directory -->
-                    <textarea name="childcount" from="base_textarea">
-                        <area>49,145,60,30</area>
-                        <font>text_small</font>
-                        <align>left,vcenter</align>
-                    </textarea>
-
-                </state>
-            </statetype>
-
-            <!-- Show the arrow image that indicates that there are
-                more menu entries above the first visible menu -->
-            <statetype name="upscrollarrow">
-                <position>1135,-20</position>
-                <state type="off">
-                    <imagetype name="upon" from="base_arrow_inactive">
-                        <filename>images/shared/arrow_up.png</filename>
-                    </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="upoff" from="base_arrow_selectedactive">
-                        <filename>images/shared/arrow_up.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-
-            <!-- Show the arrow image that indicates that there are
-                more menu entries below the last visible menu -->
-            <statetype name="downscrollarrow">
-                <position>1160,-20</position>
-                <state type="off">
-                    <imagetype name="dnon" from="base_arrow_inactive">
-                        <filename>images/shared/arrow_down.png</filename>
-                    </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="dnoff" from="base_arrow_selectedactive">
-                        <filename>images/shared/arrow_down.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-        </buttonlist>
-
-        <textarea name="noimages" from="base_textarea">
-            <area>225,60,830,633</area>
-            <align>allcenter</align>
-        </textarea>
     </window>
-
 
 
 
@@ -291,70 +238,65 @@
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
-            <value>Filter/sort images</value>
+                <value>Filter/sort images</value>
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <!-- the shape where the imagelist is displayed -->
         <shape name="filter_background" from="base_background_shape">
-            <area>260,190,760,320</area>
+            <area>310,385,660,212</area>
         </shape>
 
-        <!-- Filter: labels -->
         <textarea name="filter_text" from="base_textarea">
-            <area>280,210,200,40</area>
+            <area>330,400,240,36</area>
+            <align>right,vcenter</align>
             <value>Directory filter:</value>
-            <align>right,vcenter</align>
         </textarea>
-        <textarea name="type_filter" from="base_textarea">
-            <area>280,260,200,40</area>
+        <textarea name="type_filter" from="filter_text">
+            <position>330,440</position>
             <value>Type filter:</value>
-            <align>right,vcenter</align>
         </textarea>
-        <textarea name="sort_text" from="base_textarea">
-            <area>280,310,200,40</area>
+        <textarea name="sort_text" from="filter_text">
+            <position>330,480</position>
             <value>Sort by:</value>
-            <align>right,vcenter</align>
         </textarea>
 
-        <!-- Widgets -->
         <textedit name="dirfilter_text" from="base_textedit">
-            <position>490,210</position>
+            <position>580,400</position>
         </textedit>
         <buttonlist name="typefilter_select" from="base_selector">
-            <position>490,260</position>
+            <position>580,440</position>
         </buttonlist>
         <button name="check_button" from="base_button">
-            <position>715,260</position>
+            <position>805,440</position>
             <value>Check Filter</value>
         </button>
         <buttonlist name="sort_select" from="base_selector_wide">
-            <position>490,310</position>
+            <position>580,480</position>
         </buttonlist>
 
-        <!-- shows the amount of filtered videos -->
-        <shape name="numvideos_background" from="base_background_shape">
-            <area>280,370,720,60</area>
-        </shape> 
-        <textarea name="numimages_text" from="base_textarea">
-            <area>300,370,680,60</area>
-            <align>allcenter</align>
-            <font>text_small</font>
-        </textarea>
-
-        <button name="save_button" from="base_button_wide">
-            <position>490,450</position>
-            <value>Save as default</value>
+        <shape name="button_separator" from="base_background_shape">
+            <area>311,530,658,1</area>
+        </shape>
+        
+        <button name="save_button" from="base_button">
+            <position>485,545</position>
+            <value>Save</value>
         </button>
         <button name="done_button" from="base_button">
-            <position>850,450</position>
-            <value>Done</value>
+            <position>650,545</position>
+            <value>Cancel</value>
         </button>
+
+        <shape name="helptext_background_bottom" from="base_background_shape">
+            <area>-15,615,1310,90</area>
+        </shape>
+        <textarea name="numimages_text" from="base_textarea">
+            <area>120,615,1040,90</area>
+            <scroll direction="vertical"/>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+            <value>Enter your current location, nearest large town or city. In some countries postal codes are also supported.</value>
+        </textarea>
 
     </window>
 

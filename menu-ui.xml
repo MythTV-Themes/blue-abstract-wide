@@ -2,10 +2,25 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
     <window name="mainmenu">  
-<!--
+
+        <imagetype name="header_background">
+            <area>-320,-1,560,50</area>
+            <filename>images/media/header_left.png</filename>
+        </imagetype>
+        <clock name="clock">
+            <area>10,0,200,30</area>
+            <font>text</font>
+            <template>%DATE%, %TIME%</template>
+            <align>left,vcenter</align>
+        </clock>
+
+        <!-- Shows different background images for different menus 
+			 Only the main menu entries have extra backgrounds. 
+			 The actual screens and settings do not. -->
         <statetype name="watermarks">
             <position>0,0</position>
         
+            <!-- Background images for the main menu -->
             <state name="MENU_TV">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -56,6 +71,7 @@
                 </imagetype>
             </state>
             
+            <!-- Background images for the TV menu -->
             <state name="TV_WATCH_TV">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -70,6 +86,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <!-- TODO change image -->
             <state name="TV_MENU_ORGANIZE">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -77,6 +94,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <!-- TODO change image -->
             <state name="TV_WATCH_RECORDINGS">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -85,6 +103,7 @@
                 </imagetype>
             </state>
             
+            <!-- Background images for the Video menu -->
             <state name="VIDEO_BROWSER">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -92,6 +111,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <!-- TODO change image -->
             <state name="TV_WATCH_RECORDINGS">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -106,6 +126,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <!-- TODO change image -->
             <state name="NET_VIDEO_SEARCH">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -113,6 +134,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <!-- TODO change image -->
             <state name="NET_VIDEO_TREE">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -120,7 +142,8 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
-            
+
+            <!-- Background images for the Music menu -->
             <state name="MUSIC_PLAY">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -128,6 +151,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <!-- TODO change image -->
             <state name="STREAM_PLAY">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -142,6 +166,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <!-- TODO change image -->
             <state name="MUSIC_SCAN">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -150,6 +175,8 @@
                 </imagetype>
             </state>
             
+            <!-- Background images for the information menu -->
+            <!-- TODO change image -->
             <state name="WEBPAGE">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -157,6 +184,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <!-- TODO change image -->
             <state name="NEWS">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -164,6 +192,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
+            <!-- TODO change image -->
             <state name="WEATHER">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -172,6 +201,7 @@
                 </imagetype>
             </state>
             
+            <!-- Background images for the extras menu -->
             <state name="DVD_RIP">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
@@ -208,15 +238,10 @@
                 </imagetype>
             </state>
         </statetype>
--->
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>   
-        
+
         <!-- The structure of the menu. This is a vertical list -->
         <buttonlist name="menu">
-            <area>160,105,450,520</area>
+            <area>160,125,450,520</area>
             <layout>vertical</layout>
             <spacing>10</spacing>
             <wrapstyle>items</wrapstyle>
@@ -241,12 +266,12 @@
                 <!-- Menu entry has been selected and is active -->
                 <state name="selectedactive" from="active">
                     <imagetype name="background">
-                        <filename>images/widgets/menu_active_fade.png</filename>
+                        <filename>images/media/menu.png</filename>
                         <alphapulse min="120" max="255" change="2"/>
                         <alpha>200</alpha>
                     </imagetype>
                     <textarea name="description">
-                        <area>8,35,420,20</area>
+                        <area>8,35,420,21</area>
                         <font>menu_description</font>
                         <align>left,vcenter</align>
                         <cutdown>yes</cutdown>
@@ -261,7 +286,7 @@
                 <showempty>yes</showempty>
                 <state type="full">
                     <imagetype name="upoff">
-                        <filename>images/shared/arrow_up.png</filename>
+                        <filename>images/icons/button_arrow_up.png</filename>
                     </imagetype>
                 </state>
             </statetype>
@@ -273,7 +298,7 @@
                 <showempty>yes</showempty>
                 <state type="full">
                     <imagetype name="dnoff">
-                        <filename>images/shared/arrow_down.png</filename>
+                        <filename>images/icons/button_arrow_down.png</filename>
                     </imagetype>
                 </state>
             </statetype>

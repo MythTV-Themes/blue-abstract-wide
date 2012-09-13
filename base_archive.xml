@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "../mythuitheme.dtd">
+<mythuitheme> 
+
+    <!-- Shows the list of archive in a list with 
+         some details and two or three buttons -->
+    <group name="base_archivelist_group">
+
+        <shape name="topbackground" from="base_background_shape">
+            <area>0,0,1030,412</area>
+        </shape>
+
+        <textarea name="nofiles" from="base_textarea">
+            <area>15,15,1000,310</area>
+            <align>allcenter</align>
+            <value>No files are selected for archive</value>
+        </textarea>
+
+        <buttonlist name="archivelist" from="base_buttonlist">
+            <area>15,15,1000,314</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,1000,36</area>
+
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,450,36</area>
+                        <scroll direction="horizontal"/>
+                    </textarea>
+
+                    <textarea name="date" from="base_textarea">
+                        <area>475,0,130,36</area>
+                        <scroll direction="horizontal"/>
+                        <align>right,vcenter</align>
+                    </textarea>
+
+                    <textarea name="size" from="base_textarea">
+                        <area>620,0,120,36</area>
+                        <scroll direction="horizontal"/>
+                        <align>right,vcenter</align>
+                    </textarea>
+
+                    <textarea name="profile" from="base_textarea">
+                        <area>760,0,150,36</area>
+                        <scroll direction="horizontal"/>
+                        <align>right,vcenter</align>
+                    </textarea>
+
+                    <!-- optional: cut status textarea "cutlist" -->
+                    <!-- optional: cut status textarea "subtitle" -->
+
+                    <statetype name="cutliststatus">
+                        <position>925,0</position>
+                        <state name="none">
+                            <imagetype name="statusimage" from="base_icon_inactive">
+                                <filename>images/icons/cutlist.png</filename>
+                                <area>3,3,30,30</area>
+                            </imagetype>
+                        </state>
+                        <state name="notusing">
+                            <imagetype name="statusimage">
+                                <filename>images/icons/cutlist.png</filename>
+                                <area>3,3,30,30</area>
+                                <alpha>155</alpha>
+                            </imagetype>
+                        </state>
+                        <state name="using">
+                            <imagetype name="statusimage" from="base_icon_selected">
+                                <filename>images/icons/cutlist.png</filename>
+                                <area>3,3,30,30</area>
+                            </imagetype>
+                        </state>
+                    </statetype>
+
+                    <statetype name="movestate">
+                        <position>960,0</position>
+                        <state name="no">
+                            <imagetype name="movedoff" from="base_icon_inactive">
+                                <filename>images/icons/move.png</filename>
+                                <area>3,3,30,30</area>
+                            </imagetype>
+                        </state>
+                        <state name="off">
+                            <imagetype name="movedon" from="base_icon_selected">
+                                <filename>images/icons/move.png</filename>
+                                <area>3,3,30,30</area>
+                            </imagetype>
+                        </state>
+                    </statetype>
+
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <area>0,0,1000,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
+                </state>
+                <state name="selectedinactive" from="active">
+                    <area>0,0,1000,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <shape name="button_separator" from="base_background_shape">
+            <area>1,345,1028,1</area>
+        </shape>
+
+        <button name="addrecording_button" from="base_button_wide">
+            <position>15,360</position>
+            <value>Add Recording</value>
+        </button>
+        <button name="addvideo_button" from="base_button_wide">
+            <position>365,360</position>
+            <value>Add Video</value>
+        </button>
+        <button name="addfile_button" from="base_button_wide">
+            <position>715,360</position>
+            <value>Add File</value>
+        </button>
+
+    </group>
+
+
+
+
+    <!-- Shows the progressbar with the sizes and  
+         the three buttons to cancel, back or end it -->    
+    <group name="base_progress_status_group">
+
+        <!-- These must be present so that the screen loads. 
+             To be consistent with the mythburn screen from 
+             the mythburn.xml file they will not be shown -->
+        <textarea name="progtitle" />
+        <textarea name="progdatetime" />
+        <textarea name="filesize"/>
+        <textarea name="progdescription"/>
+
+        <!-- this is the background for the information at the bottom -->
+        <shape name="status_background" from="base_background_shape">
+            <area>0,0,1030,67</area>
+        </shape>
+
+        <progressbar name="size_bar" from="base_progressbar">
+            <position>15,15</position>
+            <layout>horizontal</layout>
+            <style>reveal</style>
+        </progressbar>
+
+        <textarea name="minsize" from="base_textarea">
+            <area>15,35,100,26</area>
+            <value>0 mb</value>
+            <font>text_small</font>
+        </textarea>
+        <textarea name="currentsize" from="minsize">
+            <position>225,35</position>
+            <align>allcenter</align>
+            <value>xxxxx mb</value>
+        </textarea>
+        <textarea name="maxsize" from="minsize">
+            <position>412,35</position>
+            <align>right,vcenter</align>
+            <value>xxxxx mb</value>
+        </textarea>
+        <textarea name="currentsize_error" from="minsize">
+            <position>225,35</position>
+            <align>allcenter</align>
+            <value>xxxxx mb</value>
+        </textarea>
+
+        <shape name="progress_separator" from="base_background_shape">
+            <area>530,0,1,65</area>
+        </shape>
+
+        <button name="cancel_button" from="base_button">
+            <position>545,15</position>
+            <value>Cancel</value>
+        </button>
+        <button name="prev_button" from="base_button">
+            <position>705,15</position>
+            <value>Back</value>
+        </button>
+        <button name="next_button" from="base_button">
+            <position>865,15</position>
+            <value>Finish</value>
+        </button>
+
+    </group>
+
+</mythuitheme>

@@ -2,18 +2,12 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-    <!-- ================================================================== -->
     <!-- this is the screen where main mythburn screen where the user can select the
         recordings and videos that shall be burnt to disc -->
-    <window name="exportnative">
+    <window name="exportnative" include="base_archive.xml">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background" />
 
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -21,142 +15,26 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
+        <group name="archivelist_group" from="base_archivelist_group">
+            <position>125,125</position>
+        </group>
 
-        <!-- destination selector -->
-        <shape name="topbackground" from="base_background_shape">
-            <area>290,63,690,338</area>
-        </shape>
-
-        <textarea name="nofiles" from="base_textarea">
-            <area>310,63,650,268</area>
-            <align>allcenter</align>
-            <value>No files are selected for archive</value>
-        </textarea>
-
-        <buttonlist name="archivelist" from="base_buttonlist_wide">
-            <area>310,83,650,223</area>
-            <spacing>4</spacing>
-            <wrapstyle>captive</wrapstyle>
-        </buttonlist>
-
-        <shape name="archivelist_separator" from="base_separator_shape">
-            <area>310,322,650,1</area>
-        </shape>
-
-        <button name="addrecording_button" from="base_button_wide">
-            <position>310,342</position>
-            <value>Add Recording</value>
-        </button>
-        <button name="addvideo_button" from="base_button_wide">
-            <position>660,342</position>
-            <value>Add Video</value>
-        </button>
-
-
-        <!-- ================================================================== -->
-        <!-- this is the background for the information at the bottom -->
-        <shape name="bottom_background" from="base_background_shape">
-            <area>25,430,1230,260</area>
-        </shape>
-
-        <textarea name="progtitle" from="base_textarea">
-            <area>45,440,700,40</area>
-            <multiline>no</multiline>
-            <font>title</font>
-            <align>left,vcenter</align>
-            <cutdown>yes</cutdown>
-        </textarea>
-
-        <textarea name="progdatetime">
-            <area>830,440,250,40</area>
-            <align>right,vcenter</align>
-            <value>sep 13, 2004 11:00 pm (1h 15m)</value>
-        </textarea>
-        <textarea name="filesize" from="base_textarea">
-            <area>1135,440,100,40</area>
-            <align>right,vcenter</align>
-            <value>x.xx Gb</value>
-        </textarea>
-
-        <shape name="title_separator" from="base_separator_shape">
-            <area>45,486,1190,1</area>
-        </shape>
-
-        <textarea name="progdescription" from="base_textarea">
-            <area>45,500,1190,100</area>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-            <align>left,top</align>
-        </textarea>
-
-
-        <shape name="button_separator" from="base_separator_shape">
-            <area>45,610,1190,1</area>
-        </shape>
-
-        <progressbar name="size_bar" from="base_progressbar_flat">
-            <position>45,630</position>
-            <layout>horizontal</layout>
-            <style>reveal</style>
-        </progressbar>
-
-        <textarea name="minsize" from="base_textarea">
-            <area>45,655,100,20</area>
-            <font>text_small</font>
-            <align>left,vcenter</align>
-            <value>0 mb</value>
-        </textarea>
-        <textarea name="currentsize" from="base_textarea">
-            <area>250,655,100,20</area>
-            <font>text_small</font>
-            <align>allcenter</align>
-            <value>xxxxx mb</value>
-        </textarea>
-        <textarea name="maxsize" from="base_textarea">
-            <area>445,655,100,20</area>
-            <font>text_small</font>
-            <align>right,vcenter</align>
-            <value>xxxxx mb</value>
-        </textarea>
-        <textarea name="currentsize_error" from="base_textarea">
-            <area>250,655,100,20</area>
-            <font>text_small</font>
-            <align>allcenter</align>
-            <value>xxxxx mb</value>
-        </textarea>
-
-        <button name="cancel_button" from="base_button">
-            <position>745,630</position>
-            <value>Cancel</value>
-        </button>
-        <button name="prev_button" from="base_button">
-            <position>915,630</position>
-            <value>Back</value>
-        </button>
-        <button name="next_button" from="base_button">
-            <position>1085,630</position>
-            <value>Finish</value>
-        </button>
+        <group name="progress_status_group" from="base_progress_status_group">
+            <position>125,555</position>
+        </group>
 
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
     <!-- this is the screen where the user can select files from the file
         system to add these to the archive -->
     <window name="archivefile_selector">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background" />
 
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -164,151 +42,158 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <!-- destination selector -->
-        <shape name="topbackground" from="base_background_shape">
-            <area>290,70,690,610</area>
+        <shape name="archivefile_selector_background" from="base_background_shape">
+            <area>300,100,680,552</area>
         </shape>
 
         <textedit name="location_edit" from="base_textedit">
-            <position>310,90</position>
+            <position>315,115</position>
         </textedit>
-        <button name="back_button" from="base_button_narrow">
-            <position>800,90</position>
-            <imagetype name="folderimage">
-                <area>20,0,30,40</area>
-                <filename>images/shared/back.png</filename>
-                <preserveaspect>yes</preserveaspect>
-            </imagetype>
-        </button>
-        <button name="home_button" from="base_button_narrow">
-            <position>890,90</position>
-            <imagetype name="folderimage">
-                <area>20,0,30,40</area>
-                <filename>images/shared/folder_up_open.png</filename>
-                <preserveaspect>yes</preserveaspect>
-            </imagetype>
+
+        <!-- the buttons to go back up directory -->
+        <button name="back_button" from="base_button">
+            <area>840,115,54,36</area>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_icon_selected">
+                        <filename>images/icons/arrow_left.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_icon_selected">
+                        <filename>images/icons/arrow_left.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="disabled" from="active"/>
+                <state name="pushed" from="selected"/>
+            </statetype>
         </button>
 
-        <shape name="search_separator" from="base_separator_shape">
-            <area>310,150,650,1</area>
+        <!-- the button to go to the users home directory -->
+        <button name="home_button" from="base_button">
+            <area>910,115,54,36</area>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_icon_selected">
+                        <filename>images/icons/home.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_image_selected">
+                        <filename>images/icons/home.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="disabled" from="active"/>
+                <state name="pushed" from="selected"/>
+            </statetype>
+        </button>
+
+        <shape name="search_separator" from="base_background_shape">
+            <area>301,165,678,1</area>
         </shape>
 
-        <buttonlist name="filelist" from="base_buttonlist_wide">
-            <area>310,170,650,275</area>
+        <buttonlist name="filelist" from="base_buttonlist">
+            <area>315,180,650,275</area>
             <statetype name="buttonitem">
                 <state name="active">
-                    <imagetype name="buttonbackground" from="base_image_active">
-                        <filename>images/widgets/buttonlist_inactive_wide.png</filename>
-                    </imagetype>
+                    <area>0,0,650,36</area>
                     <imagetype name="folderimage">
-                        <area>7,0,30,40</area>
-                        <filename>images/shared/folder.png</filename>
-                        <preserveaspect>yes</preserveaspect>
+                        <area>8,3,30,30</area>
+                        <filename>images/icons/folder.png</filename>
                     </imagetype>
                     <textarea name="buttontext" from="base_textarea">
-                        <area>44,0,345,40</area>
-                        <align>left,vcenter</align>
-                        <cutdown>yes</cutdown>
+                        <area>50,0,100%-58,36</area>
+                        <scroll direction="horizontal"/>
                     </textarea>
                 </state>
+                <state name="inactive" from="active" />
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selected">
-                        <filename>images/widgets/buttonlist_active_wide.png</filename>
-                    </imagetype>
+                    <area>0,0,650,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                     <imagetype name="icon">
-                        <area>7,0,30,40</area>
-                        <filename>images/shared/folder_open.png</filename>
-                        <preserveaspect>yes</preserveaspect>
+                        <area>8,3,30,30</area>
+                        <filename>images/icons/folder_selected.png</filename>
                     </imagetype>
                 </state>
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_inactive">
-                        <filename>images/widgets/buttonlist_active_wide.png</filename>
-                    </imagetype>
-                    <textarea name="buttontext">
-                        <font>text_inactive</font>
-                    </textarea>
+                    <area>0,0,650,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
             </statetype>
         </buttonlist>
 
-        <shape name="info_separator" from="base_separator_shape">
-            <area>310,460,650,1</area>
+        <shape name="filelist_separator" from="base_background_shape">
+            <area>301,470,678,1</area>
         </shape>
 
         <textarea name="title_label" from="base_textarea">
-            <area>310,470,160,40</area>
+            <area>315,480,150,36</area>
             <align>right,vcenter</align>
             <value>Title:</value>
         </textarea>
         <textarea name="subtitle_label" from="title_label">
-            <area>310,510,160,40</area>
+            <position>315,510</position>
             <value>Subtitle:</value>
         </textarea>
         <textarea name="starttime_label" from="title_label">
-            <area>310,550,160,40</area>
+            <position>315,540</position>
             <value>Start Time:</value>
         </textarea>
 
         <textarea name="title_text" from="base_textarea">
-            <area>490,470,470,40</area>
+            <area>475,480,470,36</area>
         </textarea>
-        <textarea name="subtitle_text" from="base_textarea">
-            <area>490,510,470,40</area>
+        <textarea name="subtitle_text" from="title_text">
+            <position>475,510</position>
         </textarea>
-        <textarea name="starttime_text" from="base_textarea">
-            <area>490,550,470,40</area>
+        <textarea name="starttime_text" from="title_text">
+            <position>475,540</position>
         </textarea>
 
-        <shape name="button_separator" from="base_separator_shape">
-            <area>310,600,650,1</area>
+        <shape name="button_separator" from="base_background_shape">
+            <area>301,585,678,1</area>
         </shape>
 
         <button name="cancel_button" from="base_button">
-            <position>310,620</position>
+            <position>400,600</position>
             <value>Cancel</value>
         </button>
         <button name="prev_button" from="base_button">
-            <position>640,620</position>
+            <position>565,600</position>
             <value>Previous</value>
         </button>
         <button name="next_button" from="base_button">
-            <position>810,620</position>
+            <position>730,600</position>
             <value>Next</value>
         </button>
 
     </window>
 
 
-    <!-- ================================================================== -->
+
+
+
+    <!-- UNFINISHED -->
     <!-- this is the screen where the user can see the info about the
         selected archive file -->
     <window name="importnative">
 
-        <!-- the background image -->
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background" />
 
-        <!-- The heading (name) of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
                 <value>Select Associated Channel</value>
             </textarea>
         </textarea>
-
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
 
         <!-- this is the background for the information at the bottom -->
         <shape name="topbackground" from="base_background_shape">
@@ -325,7 +210,7 @@
         </imagetype>
 
         <!-- the vertical separator -->
-        <shape name="preview_image_separator" from="base_separator_shape">
+        <shape name="preview_image_separator" from="base_background_shape">
             <area>370,130,1,160</area>
         </shape>
 
@@ -338,10 +223,9 @@
         </textarea>
         <textarea name="progdatetime" from="base_textarea">
             <area>390,169,740,20</area>
-            <font>text_small</font>
         </textarea>
 
-        <shape name="details_separator" from="base_separator_shape">
+        <shape name="details_separator" from="base_background_shape">
             <area>371,201,780,1</area>
         </shape>
         <textarea name="progdescription" from="base_textarea">
@@ -360,7 +244,7 @@
             <area>130,340,240,40</area>
             <value>Archived Channel</value>
         </textarea>
-        <shape name="archived_channel_title_separator" from="base_separator_shape">
+        <shape name="archived_channel_title_separator" from="base_background_shape">
             <area>370,345,1,70</area>
         </shape>
         <textarea name="chanid_label" from="base_textarea">
@@ -404,7 +288,7 @@
             <area>130,465,240,40</area>
             <value>Local Channel</value>
         </textarea>
-        <shape name="local_channel_title_separator" from="base_separator_shape">
+        <shape name="local_channel_title_separator" from="base_background_shape">
             <area>370,470,1,150</area>
         </shape>
 
@@ -452,7 +336,7 @@
             <area>960,505,200,40</area>
         </textarea>
 
-    <shape name="button_separator" from="base_separator_shape">
+        <shape name="button_separator" from="base_background_shape">
             <area>390,555,760,1</area>
         </shape>
 
@@ -468,6 +352,6 @@
             <position>1000,575</position>
         </button>
 
-</window>
+    </window>
 
 </mythuitheme>

@@ -3,218 +3,247 @@
 <mythuitheme>
 
 
-
-    <!-- previous track button -->
-    <button name="base_music_prevbutton">
-        <area>0,0,30,30</area>
+    <!-- a search button widget -->
+    <button name="base_add_button" from="base_searchbutton">
+        <area>0,0,36,36</area>
         <statetype name="buttonstate">
             <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/shared/music/skip-backward.png</filename>
-                    <area>2,2,26,26</area>
+                <imagetype name="image" from="base_image_active">
+                    <filename>images/icons/add.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
-            <state name="selected" from="active">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/shared/music/skip-backward.png</filename>
-                    <area>2,2,26,26</area>
+            <state name="selected">
+                <imagetype name="image" from="base_image_selected">
+                    <filename>images/icons/add.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
-            <state name="pushed" from="active">
-                <imagetype name="background" from="base_image_pushed">
-                    <filename>images/shared/music/skip-backward.png</filename>
-                    <area>2,2,26,26</area>
+            <state name="pushed">
+                <imagetype name="image" from="base_image_pushed">
+                    <filename>images/icons/add.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
         </statetype>
     </button>
-
-
-    <!-- rewind button -->
-    <button name="base_music_rewbutton">
-        <area>0,0,30,30</area>
+    
+    
+    <!-- a search button widget -->
+    <button name="base_delete_button" from="base_searchbutton">
+        <area>0,0,36,36</area>
         <statetype name="buttonstate">
             <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/shared/music/seek-backward.png</filename>
-                    <area>2,2,26,26</area>
+                <imagetype name="image" from="base_image_active">
+                    <filename>images/icons/delete.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
-            <state name="selected" from="active">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/shared/music/seek-backward.png</filename>
-                    <area>2,2,26,26</area>
+            <state name="selected">
+                <imagetype name="image" from="base_image_selected">
+                    <filename>images/icons/delete.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
-            <state name="pushed" from="active">
-                <imagetype name="background" from="base_image_pushed">
-                    <filename>images/shared/music/seek-backward.png</filename>
-                    <area>2,2,26,26</area>
+            <state name="pushed">
+                <imagetype name="image" from="base_image_pushed">
+                    <filename>images/icons/delete.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
         </statetype>
     </button>
-
-
-    <!-- pause button -->
-    <button name="base_music_pausebutton">
-        <area>0,0,30,30</area>
+    
+    
+    
+    <!-- a button widget to increase the music rating -->
+    <button name="base_rating_inc_button" from="base_searchbutton">
+        <area>0,0,36,36</area>
         <statetype name="buttonstate">
             <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/shared/music/pause.png</filename>
-                    <area>2,2,26,26</area>
+                <imagetype name="image" from="base_image_active">
+                    <filename>images/icons/increase_rating.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
-            <state name="selected" from="active">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/shared/music/pause.png</filename>
-                    <area>2,2,26,26</area>
+            <state name="selected">
+                <imagetype name="image" from="base_image_selected">
+                    <filename>images/icons/increase_rating.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
-            <state name="pushed" from="active">
-                <imagetype name="background" from="base_image_pushed">
-                    <filename>images/shared/music/pause.png</filename>
-                    <area>2,2,26,26</area>
+            <state name="pushed">
+                <imagetype name="image" from="base_image_pushed">
+                    <filename>images/icons/increase_rating.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
         </statetype>
     </button>
-
-
-    <!-- play button -->
-    <button name="base_music_playbutton">
-        <area>0,0,30,30</area>
+    
+    
+ 
+    <!-- a button widget to decrease the music rating -->
+    <button name="base_rating_dec_button" from="base_searchbutton">
+        <area>0,0,36,36</area>
         <statetype name="buttonstate">
             <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/shared/music/play.png</filename>
-                    <area>2,2,26,26</area>
+                <imagetype name="image" from="base_image_active">
+                    <filename>images/icons/decrease_rating.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
-            <state name="selected" from="active">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/shared/music/play.png</filename>
-                    <area>2,2,26,26</area>
+            <state name="selected">
+                <imagetype name="image" from="base_image_selected">
+                    <filename>images/icons/decrease_rating.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
-            <state name="pushed" from="active">
-                <imagetype name="background" from="base_image_pushed">
-                    <filename>images/shared/music/play.png</filename>
-                    <area>2,2,26,26</area>
+            <state name="pushed">
+                <imagetype name="image" from="base_image_pushed">
+                    <filename>images/icons/decrease_rating.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
         </statetype>
     </button>
-
-
-    <!-- stop button -->
-    <button name="base_music_stopbutton">
-        <area>0,0,30,30</area>
+    
+    
+    
+    <!-- a search button widget -->
+    <button name="base_sort_asc_button" from="base_searchbutton">
+        <area>0,0,36,36</area>
         <statetype name="buttonstate">
             <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/shared/music/stop.png</filename>
-                    <area>2,2,26,26</area>
+                <imagetype name="image" from="base_image_active">
+                    <filename>images/icons/sort_ascending.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
-            <state name="selected" from="active">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/shared/music/stop.png</filename>
-                    <area>2,2,26,26</area>
+            <state name="selected">
+                <imagetype name="image" from="base_image_selected">
+                    <filename>images/icons/sort_ascending.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
-            <state name="pushed" from="active">
-                <imagetype name="background" from="base_image_pushed">
-                    <filename>images/shared/music/stop.png</filename>
-                    <area>2,2,26,26</area>
+            <state name="pushed">
+                <imagetype name="image" from="base_image_pushed">
+                    <filename>images/icons/sort_ascending.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
         </statetype>
     </button>
-
-
-    <!-- fast forward button -->
-    <button name="base_music_ffbutton">
-        <area>0,0,30,30</area>
+    
+    
+    
+    <!-- a search button widget -->
+    <button name="base_sort_desc_button" from="base_searchbutton">
+        <area>0,0,36,36</area>
         <statetype name="buttonstate">
             <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/shared/music/seek-forward.png</filename>
-                    <area>2,2,26,26</area>
+                <imagetype name="image" from="base_image_active">
+                    <filename>images/icons/sort_descending.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
-            <state name="selected" from="active">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/shared/music/seek-forward.png</filename>
-                    <area>2,2,26,26</area>
+            <state name="selected">
+                <imagetype name="image" from="base_image_selected">
+                    <filename>images/icons/sort_descending.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
-            <state name="pushed" from="active">
-                <imagetype name="background" from="base_image_pushed">
-                    <filename>images/shared/music/seek-forward.png</filename>
-                    <area>2,2,26,26</area>
+            <state name="pushed">
+                <imagetype name="image" from="base_image_pushed">
+                    <filename>images/icons/sort_descending.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
         </statetype>
     </button>
-
-
-    <!-- next track button -->
-    <button name="base_music_nextbutton">
-        <area>0,0,30,30</area>
+    
+    
+    
+    <!-- a search button widget -->
+    <button name="base_move_up_button" from="base_searchbutton">
+        <area>0,0,36,36</area>
         <statetype name="buttonstate">
             <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/shared/music/skip-forward.png</filename>
-                    <area>2,2,26,26</area>
+                <imagetype name="image" from="base_image_active">
+                    <filename>images/icons/arrow_up.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
-            <state name="selected" from="active">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/shared/music/skip-forward.png</filename>
-                    <area>2,2,26,26</area>
+            <state name="selected">
+                <imagetype name="image" from="base_image_selected">
+                    <filename>images/icons/arrow_up.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
             <state name="disabled" from="active" />
-            <state name="pushed" from="active">
-                <imagetype name="background" from="base_image_pushed">
-                    <filename>images/shared/music/skip-forward.png</filename>
-                    <area>2,2,26,26</area>
+            <state name="pushed">
+                <imagetype name="image" from="base_image_pushed">
+                    <filename>images/icons/arrow_up.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
         </statetype>
     </button>
-
-
+    
+    
+    
+    <!-- a search button widget -->
+    <button name="base_move_down_button" from="base_searchbutton">
+        <area>0,0,36,36</area>
+        <statetype name="buttonstate">
+            <state name="active">
+                <imagetype name="image" from="base_image_active">
+                    <filename>images/icons/arrow_down.png</filename>
+                    <area>3,3,30,30</area>
+                </imagetype>
+            </state>
+            <state name="selected">
+                <imagetype name="image" from="base_image_selected">
+                    <filename>images/icons/arrow_down.png</filename>
+                    <area>3,3,30,30</area>
+                </imagetype>
+            </state>
+            <state name="disabled" from="active"/>
+            <state name="pushed">
+                <imagetype name="image" from="base_image_pushed">
+                    <filename>images/icons/arrow_down.png</filename>
+                    <area>3,3,30,30</area>
+                </imagetype>
+            </state>
+        </statetype>
+    </button>
+    
+    
+    
     <!-- Shows the playlist moving state as images -->
     <statetype name="base_music_movestate">
-        <area>0,0,30,30</area>
-
+        <area>0,0,36,36</area>
         <!-- workaround because the off state is not active as a default -->
-        <imagetype name="movestate_image">
-            <filename>images/shared/music/arrow_updown.png</filename>
-            <area>2,2,26,26</area>
-            <alpha>50</alpha>
+        <imagetype name="movestate_image" from="base_icon_inactive">
+            <filename>images/icons/move.png</filename>
+            <area>5,5,26,26</area>
         </imagetype>
-
         <state name="off">
-            <imagetype name="movestate_image">
-                <filename>images/shared/music/arrow_updown.png</filename>
-                <area>2,2,26,26</area>
-                <alpha>50</alpha>
+            <imagetype name="movestate_image" from="base_icon_inactive">
+                <filename>images/icons/move.png</filename>
+                <area>5,5,26,26</area>
             </imagetype>
         </state>
         <state name="on">
-            <imagetype name="movestate_image">
-                <filename>images/shared/music/arrow_updown.png</filename>
-                <area>2,2,26,26</area>
+            <imagetype name="movestate_image" from="base_icon_selected">
+                <filename>images/icons/move.png</filename>
+                <area>5,5,26,26</area>
             </imagetype>
         </state>
     </statetype>
@@ -222,18 +251,17 @@
 
     <!-- Shows if the track is in a playlist -->
     <statetype name="base_music_playliststate">
-        <area>0,0,30,30</area>
+        <area>0,0,36,36</area>
         <state name="off">
-            <imagetype name="playliststate_image">
-                <filename>images/shared/music/playlist.png</filename>
-                <area>2,2,26,26</area>
-                <alpha>50</alpha>
+            <imagetype name="playliststate_image" from="base_icon_inactive">
+                <filename>images/icons/playlist.png</filename>
+                <area>5,5,26,26</area>
             </imagetype>
         </state>
         <state name="on">
-            <imagetype name="playliststate_image">
-                <filename>images/shared/music/playlist.png</filename>
-                <area>2,2,26,26</area>
+            <imagetype name="playliststate_image" from="base_icon_selected">
+                <filename>images/icons/playlist.png</filename>
+                <area>5,5,26,26</area>
             </imagetype>
         </state>
     </statetype>
@@ -241,30 +269,29 @@
 
     <!-- Shows the playing state as images -->
     <statetype name="base_music_playstate">
-        <area>0,0,30,30</area>
+        <area>0,0,36,36</area>
         <state name="default">
-            <imagetype name="playstateimage">
-                <filename>images/shared/music/play.png</filename>
-                <area>2,2,26,26</area>
-                <alpha>50</alpha>
+            <imagetype name="playstateimage" from="base_icon_inactive">
+                <filename>images/icons/music_play.png</filename>
+                <area>5,5,26,26</area>
             </imagetype>
         </state>
         <state name="playing">
-            <imagetype name="playstateimage">
-                <filename>images/shared/music/play.png</filename>
-                <area>2,2,26,26</area>
+            <imagetype name="playstateimage" from="base_icon_selected">
+                <filename>images/icons/music_play.png</filename>
+                <area>5,5,26,26</area>
             </imagetype>
         </state>
         <state name="paused">
-            <imagetype name="playstateimage">
-                <filename>images/shared/music/pause.png</filename>
-                <area>2,2,26,26</area>
+            <imagetype name="playstateimage" from="base_icon_selected">
+                <filename>images/icons/music_pause.png</filename>
+                <area>5,5,26,26</area>
             </imagetype>
         </state>
         <state name="stopped">
-            <imagetype name="playstateimage">
-                <filename>images/shared/music/stop.png</filename>
-                <area>2,2,26,26</area>
+            <imagetype name="playstateimage" from="base_icon_selected">
+                <filename>images/icons/music_stop.png</filename>
+                <area>5,5,26,26</area>
             </imagetype>
         </state>
     </statetype>
@@ -272,24 +299,23 @@
 
     <!-- Shows the repeat types as images -->
     <statetype name="base_music_repeatstate">
-        <area>0,0,30,30</area>
+        <area>0,0,36,36</area>
         <state name="off">
-            <imagetype name="repeatstate_image">
-                <area>0,0,30,30</area>
-                <filename>images/shared/music/repeat_all.png</filename>
-                <alpha>50</alpha>
+            <imagetype name="repeatstate_image" from="base_icon_inactive">
+                <area>3,3,30,30</area>
+                <filename>images/icons/music_repeat_all.png</filename>
             </imagetype>
         </state>
         <state name="track">
-            <imagetype name="repeatstate_image">
-                <area>0,0,30,30</area>
-                <filename>images/shared/music/repeat_track.png</filename>
+            <imagetype name="repeatstate_image" from="base_icon_selected">
+                <area>3,3,30,30</area>
+                <filename>images/icons/music_repeat_track.png</filename>
             </imagetype>
         </state>
         <state name="all">
-            <imagetype name="repeatstate_image">
-                <area>0,0,30,30</area>
-                <filename>images/shared/music/repeat_all.png</filename>
+            <imagetype name="repeatstate_image" from="base_icon_selected">
+                <area>3,3,30,30</area>
+                <filename>images/icons/music_repeat_all.png</filename>
             </imagetype>
         </state>
     </statetype>
@@ -298,271 +324,167 @@
 
     <!-- Shows the shuffle types as images -->
     <statetype name="base_music_shufflestate">
-        <area>0,0,30,30</area>
+        <area>0,0,36,36</area>
         <state name="off">
-            <imagetype name="shufflestate_image">
-                <area>0,0,30,30</area>
-                <filename>images/shared/music/shuffle_random.png</filename>
-                <alpha>50</alpha>
+            <imagetype name="shufflestate_image" from="base_icon_inactive">
+                <area>3,3,30,30</area>
+                <filename>images/icons/music_shuffle_random.png</filename>
             </imagetype>
         </state>
         <state name="random">
-            <imagetype name="shufflestate_image">
-                <area>0,0,30,30</area>
-                <filename>images/shared/music/shuffle_random.png</filename>
+            <imagetype name="shufflestate_image" from="base_icon_selected">
+                <area>3,3,30,30</area>
+                <filename>images/icons/music_shuffle_random.png</filename>
             </imagetype>
         </state>
         <state name="intelligent">
-            <imagetype name="shufflestate_image">
-                <area>0,0,30,30</area>
-                <filename>images/shared/music/shuffle_intelligent.png</filename>
+            <imagetype name="shufflestate_image" from="base_icon_selected">
+                <area>3,3,30,30</area>
+                <filename>images/icons/music_shuffle_intelligent.png</filename>
             </imagetype>
         </state>
         <state name="album">
-            <imagetype name="shufflestate_image">
-                <area>0,0,30,30</area>
-                <filename>images/shared/music/shuffle_album.png</filename>
+            <imagetype name="shufflestate_image" from="base_icon_selected">
+                <area>3,3,30,30</area>
+                <filename>images/icons/music_shuffle_album.png</filename>
             </imagetype>
         </state>
         <state name="artist">
-            <imagetype name="shufflestate_image">
-                <area>0,0,30,30</area>
-                <filename>images/shared/music/shuffle_artist.png</filename>
+            <imagetype name="shufflestate_image" from="base_icon_selected">
+                <area>3,3,30,30</area>
+                <filename>images/icons/music_shuffle_artist.png</filename>
             </imagetype>
         </state>
     </statetype>
-
-
-
-    <!-- Shows the play, stop, pause, ... buttons -->
-    <group name="base_music_controls">
-        <area>0,0,240,30</area>
-        <button name="prev" from="base_music_prevbutton">
-            <position>0,0</position>
-        </button>
-        <button name="rew" from="base_music_rewbutton">
-            <position>35,0</position>
-        </button>
-        <button name="pause" from="base_music_pausebutton">
-            <position>70,0</position>
-        </button>
-        <button name="play" from="base_music_playbutton">
-            <position>105,0</position>
-        </button>
-        <button name="stop" from="base_music_stopbutton">
-            <position>140,0</position>
-        </button>
-        <button name="ff" from="base_music_ffbutton">
-            <position>175,0</position>
-        </button>
-        <button name="next" from="base_music_nextbutton">
-            <position>210,0</position>
-        </button>
-    </group>
-
-
-
-    <!-- The active playlist with more details about the tracks -->
-    <buttonlist name="base_music_currentplaylist" from="base_buttonlist_extra_wide">
-        <area>45,80,1190,331</area>
-
-        <statetype name="buttonitem">
-            <state name="active">
-
-                <!-- the background and the coverart -->
-                <shape name="buttonimage_background"
-                       from="base_background_shape">
-                    <area>3,3,34,34</area>
-                </shape>
-                <imagetype name="buttonimage">
-                    <area>4,4,32,32</area>
-                    <preserveaspect>true</preserveaspect>
-                </imagetype>
-
-                <!-- different information about the current song -->
-                <textarea name="tracknum" from="base_textarea">
-                    <area>50,5,50,30</area>
-                    <align>right,vcenter</align>
-                    <font>text_small</font>
-                    <cutdown>yes</cutdown>
-                    <template>%1 -</template>
-                </textarea>
-                <textarea name="title" from="base_textarea">
-                    <area>110,2,390,20</area>
-                    <align>left,vcenter</align>
-                    <font>text_small</font>
-                    <cutdown>yes</cutdown>
-                </textarea>
-                <textarea name="artist" from="title">
-                    <area>110,20,390,20</area>
-                    <font>text_very_small</font>
-                </textarea>
-                <textarea name="album" from="title">
-                    <area>510,5,210,30</area>
-                </textarea>
-                <textarea name="genre" from="title">
-                    <area>730,5,160,30</area>
-                    <align>right,vcenter</align>
-                </textarea>
-                <textarea name="length" from="title">
-                    <area>860,5,130,30</area>
-                    <align>right,vcenter</align>
-                </textarea>
-
-                <!-- The rating of the song -->
-                <imagetype name="ratingstate_background"
-                           from="base_rating_background">
-                    <position>1010,10</position>
-                </imagetype>
-                <statetype name="ratingstate" from="base_rating">
-                    <position>1010,10</position>
-                </statetype>
-
-                <statetype name="movestate" from="base_music_movestate">
-                    <area>1110,5,30,30</area>
-                </statetype>
-                <statetype name="playstate" from="base_music_playstate">
-                    <area>1150,5,30,30</area>
-                </statetype>
-
-            </state>
-            <state name="inactive" from="active"/>
-            <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground"
-                           from="base_image_selectedactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,1190,40</area>
-                </imagetype>
-            </state>
-            <state name="selectedinactive" from="active">
-                <imagetype name="buttonbackground"
-                           from="base_image_selectedinactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,1190,40</area>
-                </imagetype>
-            </state>
-        </statetype>
-    </buttonlist>
-
-
-
+    
+    
+    
+    
+    
     <!-- Shows track information and the shuffle and repeat states -->
-    <group name="base_music_playlistinfo_group">
-        <area>0,0,1190,40</area>
-
-        <!-- Current number in the playlist -->
-        <textarea name="playlistposition" from="base_textarea">
-            <area>45,0,110,40</area>
-            <font>text_small</font>
-        </textarea>
-
+    <group name="base_current_playlistinfo_group">
+        
         <!-- Current track name -->
         <textarea name="title" from="base_textarea">
-            <area>160,0,520,40</area>
-            <font>text_very_small</font>
-            <cutdown>yes</cutdown>
-            <multiline>yes</multiline>
+            <area>15,0,600,30</area>
+            <scroll direction="horizontal" />
             <template>Now Playing: %TITLE% by %ARTIST% on %ALBUM%</template>
         </textarea>
 
         <!-- Track length -->
         <textarea name="time" from="base_textarea">
-            <area>720,0,160,40</area>
-            <font>text_small</font>
+            <area>625,0,150,30</area>
             <align>right,vcenter</align>
         </textarea>
 
         <!-- Playlist time -->
         <textarea name="playlisttime" from="base_textarea">
-            <area>890,0,180,40</area>
-            <font>text_small</font>
+            <area>785,0,190,30</area>
             <align>right,vcenter</align>
         </textarea>
 
         <!-- Repeat state -->
         <statetype name="repeatstate" from="base_music_repeatstate">
-            <area>1090,5,30,30</area>
+            <area>995,-3,36,36</area>
         </statetype>
 
         <!-- Shuffle state -->
         <statetype name="shufflestate" from="base_music_shufflestate">
-            <area>1130,5,30,30</area>
+            <area>1035,-3,36,36</area>
         </statetype>
+        
+        <!-- Current number in the playlist -->
+        <textarea name="playlistposition" from="base_textarea">
+            <area>1075,0,160,30</area>
+            <align>right,vcenter</align>
+        </textarea>
+
     </group>
-
-
-
-    <!-- Shows the playlist with some track information at the bottom -->
-    <group name="base_music_playlist_group">
-        <position>0,0</position>
-
-        <shape name="base_music_playlist_group_background"
-               from="base_background_shape">
-            <area>25,0,1230,270</area>
-        </shape>
-
-        <!-- the playlist -->
-        <buttonlist name="currentplaylist" from="base_buttonlist_extra_wide">
-            <area>45,20,1190,213</area>
-            <spacing>1</spacing>
+    
+    
+    
+    
+    
+    <!-- The active playlist with more details about the tracks -->
+    <group name="base_current_playlist_group">
+    
+        <buttonlist name="currentplaylist" from="base_buttonlist">
+            <area>0,0,1210,125</area>
+            <buttonarea>0,0,100%,100%</buttonarea>
+            <spacing>3</spacing>
             <statetype name="buttonitem">
                 <state name="active">
+                    <area>0,0,1210,36</area>
 
-                    <!-- the background and the coverart -->
-                    <shape name="buttonimage_background"
-                           from="base_background_shape">
-                        <area>3,3,34,34</area>
-                    </shape>
                     <imagetype name="buttonimage">
-                        <area>4,4,32,32</area>
-                        <preserveaspect>true</preserveaspect>
+                        <area>5,4,28,28</area>
+                        <filename />
                     </imagetype>
-
-                    <!-- The title, artist and album name -->
+                    <shape name="buttonimage_background" from="base_background_shape">
+                        <area>4,3,30,30</area>
+                        <fill color="#000000" alpha="0" />
+                        <cornerradius>0</cornerradius>
+                    </shape>
+                    
                     <textarea name="title" from="base_textarea">
-                        <area>50,5,840,30</area>
-                        <font>text_small</font>
-                        <cutdown>yes</cutdown>
-                        <template>%TITLE% by %ARTIST% on %ALBUM%</template>
+                        <!--<area>8,3,742,30</area>-->
+                        <area>50,3,290,30</area>
+                        <scroll direction="horizontal" />
+                        <template>%TITLE%</template>
+                        <!--<template>%TITLE% by %ARTIST% on %ALBUM%</template>-->
                     </textarea>
-
+                    <textarea name="album" from="base_textarea">
+                        <area>350,3,240,30</area>
+                        <align>right,vcenter</align>
+                        <scroll direction="horizontal" />
+                        <template>%ALBUM%</template>
+                    </textarea>
+                    <textarea name="artist" from="base_textarea">
+                        <area>600,3,230,30</area>
+                        <align>right,vcenter</align>
+                        <scroll direction="horizontal" />
+                        <template>%ARTIST%</template>
+                    </textarea>
+                    <textarea name="genre" from="base_textarea">
+                        <!--<area>760,3,230,30</area>-->
+                        <area>840,3,170,30</area>
+                        <align>right,vcenter</align>
+                        <scroll direction="horizontal" />
+                        <template>%GENRE%</template>
+                    </textarea>
+                        
                     <textarea name="length" from="base_textarea">
-                        <area>980,5,120,30</area>
-                        <font>text_small</font>
+                        <area>1020,3,90,30</area>
                         <align>right,vcenter</align>
                     </textarea>
 
                     <statetype name="movestate" from="base_music_movestate">
-                        <area>1110,5,30,30</area>
+                        <area>1127,0,36,36</area>
                     </statetype>
                     <statetype name="playstate" from="base_music_playstate">
-                        <area>1150,5,30,30</area>
+                        <area>1167,0,36,36</area>
                     </statetype>
-
                 </state>
                 <state name="inactive" from="active"/>
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground"
-                               from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,1190,40</area>
-                    </imagetype>
+                    <area>0,0,1210,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                 </state>
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground"
-                               from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,1190,40</area>
-                    </imagetype>
+                    <area>0,0,1210,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
             </statetype>
+            
+            <statetype name="upscrollarrow">
+                <position>100%-30,100%-10</position>
+            </statetype>
+
+            <statetype name="downscrollarrow">
+                <position>100%-55,100%-10</position>
+            </statetype>
         </buttonlist>
-
-        <!-- shows some general information below the playlist -->
-        <group name="playlistinfo_group" from="base_music_playlistinfo_group">
-            <position>0,225</position>
-        </group>
-
+        
     </group>
-
+    
 </mythuitheme>

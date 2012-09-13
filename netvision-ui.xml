@@ -5,7 +5,7 @@
     <!-- shows a list of available sites that the user can search for videos
         the results will be presented on the right and information with a
         preview image at the bottom -->
-    <window name="netsearch">
+    <window name="netsearch" include="base_netvision.xml">
 
         <imagetype name="background" from="base_background"/>
 
@@ -16,195 +16,98 @@
             </textarea>
         </textarea>
 
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
         <!-- this is the background around the sites -->
-        <shape name="group_background" from="base_background_shape">
-            <area>25,60,1230,345</area>
+        <shape name="netsearch_background" from="base_background_shape">
+            <area>20,50,1240,395</area>
         </shape>
-
+        
+        <textarea name="nosites">
+            <area>220,50,840,395</area>
+            <multiline>yes</multiline>
+            <align>allcenter</align>
+            <value>Can't find any search scripts!\nThis usually indicates missing search script prerequisities.\nTry running a script from the command line.</value>
+        </textarea>
+        
         <textarea name="searchlab" from="base_textarea">
-            <area>45,80,350,40</area>
+            <area>35,65,350,36</area>
             <align>right,vcenter</align>
             <value>Search Term:</value>
         </textarea>
         <textedit name="search" from="base_textedit">
-            <position>412,80</position>
+            <position>395,65</position>
         </textedit>
-
-        <shape name="search_separator" from="base_separator_shape">
-            <area>45,140,1190,1</area>
-        </shape>
 
         <!-- the selection of available sites -->
         <buttonlist name="sites" from="base_buttonlist">
-            <area>45,160,350,227</area>
-            <spacing>4</spacing>
-            <wrapstyle>items</wrapstyle>
+            <area>35,110,350,316</area>
         </buttonlist>
 
-        <textarea name="length_status_label">
-            <area>970,120,110,20</area>
-            <align>right,vcenter</align>
-            <font>text_very_small</font>
-            <value>Date</value>
-        </textarea>
-        <textarea name="date_status_label">
-            <area>1100,120,140,20</area>
-            <align>allcenter</align>
-            <font>text_very_small</font>
-            <value>Time</value>
-        </textarea>
-
         <!-- the selection of the available results -->
-        <buttonlist name="results" from="base_buttonlist_very_wide">
-            <area>415,160,825,227</area>
-            <spacing>4</spacing>
-            <wrapstyle>captive</wrapstyle>
+        <buttonlist name="results" from="base_buttonlist">
+            <area>395,110,850,316</area>
             <statetype name="buttonitem">
                 <state name="active">
-                    <textarea name="title" from="base_textarea">
-                        <area>8,5,550,30</area>
-                        <align>left,vcenter</align>
-                        <cutdown>yes</cutdown>
+                    <area>0,0,850,36</area>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,590,36</area>
+                        <scroll direction="horizontal" />
                     </textarea>
                     <textarea name="length" from="base_textarea">
-                        <area>560,5,110,30</area>
+                        <area>620,0,90,36</area>
                         <align>right,vcenter</align>
                     </textarea>
                     <textarea name="date" from="base_textarea">
-                        <area>680,5,140,30</area>
-                        <align>allcenter</align>
+                        <area>720,0,120,36</area>
+                        <align>right,vcenter</align>
                     </textarea>
                 </state>
-
+                <state name="inactive" from="active"/>
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,820,40</area>
-                    </imagetype>
+                    <area>0,0,850,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                 </state>
-
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                        <area>0,0,820,40</area>
-                    </imagetype>
-                    <textarea name="buttontext">
-                        <font>text_inactive</font>
-                    </textarea>
+                    <area>0,0,850,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
             </statetype>
         </buttonlist>
 
-        <!-- this is the background for the information at the bottom -->
-        <shape name="video_background" from="base_background_shape">
-            <area>25,430,1230,265</area>
-        </shape>
-
-        <!-- the preview and the border around the preview -->
-        <shape name="preview_shape" from="base_background_shape">
-            <area>45,450,298,225</area>
-        </shape>
-        <imagetype name="preview">
-            <area>47,452,294,221</area>
-            <preserveaspect>yes</preserveaspect>
-        </imagetype>
-
-        <!-- the vertical separator -->
-        <shape name="video_description_separator" from="base_separator_shape">
-            <area>362,450,1,225</area>
-        </shape>
-        
-        <textarea name="title" from="base_textarea">
-            <area>380,450,850,30</area>
-            <cutdown>yes</cutdown>
-            <font>title</font>
-        </textarea>
-
-        <textarea name="author" from="base_textarea">
-            <area>380,500,500,20</area>
-            <cutdown>yes</cutdown>
-            <font>text_small</font>
-            <template>Author: %1</template>
-        </textarea>
-
-        <textarea name="filesize_str" from="base_textarea">
-            <area>990,500,250,20</area>
-            <font>text_small</font>
-            <cutdown>yes</cutdown>
-            <align>right,vcenter</align>
-            <template>Size: %1</template>
-        </textarea>
-
-        <!-- separates the title from the plot -->
-        <shape name="video_time_separator" from="base_separator_shape">
-            <area>380,535,855,1</area>
-        </shape>
-
-        <!-- show the plot of the video -->
-        <textarea name="description" from="base_textarea">
-            <area>380,550,855,130</area>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-            <align>left,top</align>
-            <font>text_small</font>
-            <template>Description: %1</template>
-        </textarea>
-
-        <textarea name="nosites" from="base_textarea">
-            <area>225,60,830,345</area>
-            <align>allcenter</align>
-            <multiline>yes</multiline>
-            <value>Can't find any search scripts! This usually indicates missing search script prerequisities. Try running a script from the command line.</value>
-        </textarea>
+        <group name="netvision_details_group" from="base_netvision_details_group">
+            <position>20,460</position>
+        </group>
 
     </window>
 
 
-
-
-
+    
+    
 
     <!-- shows a list of available sites that the user can activate -->
     <window name="treeeditor">
 
-        <imagetype name="background" from="base_background"/>
+        <shape name="darken_background" from="base_darken_background" />
 
-        <shape name="heading_background" from="base_background_shape">
-            <area>-4,-4,340,36</area>
+        <shape name="dialog_background" from="base_background_shape_dark">
+            <area>450,150,380,388</area>
         </shape>
+
         <textarea name="title" from="base_textarea">
-            <area>0,0,336,30</area>
-            <value>Manage Subscriptions</value>
+            <area>465,160,350,60</area>
+            <value>Choose the sites you wish to browse/search.</value>
             <align>allcenter</align>
+            <multiline>yes</multiline>
+            <scroll direction="vertical" />
         </textarea>
-        
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <shape name="settings_background" from="base_background_shape">
-            <area>300,130,690,480</area>
+        <shape name="title_separator" from="base_background_shape">
+            <area>451,230,378,1</area>
         </shape>
 
-        <imagetype name="title_background_overlay" from="base_popup_background">
-            <area>320,150,650,70</area>
-        </imagetype>        
-        <textarea name="subtitle" from="base_textarea">
-            <area>320,150,650,70</area>
-            <align>allcenter</align>
-            <value>Choose the sites you wish to browse/search.</value>
-        </textarea>
-
-        <buttonlist name="grabbers" from="base_buttonlist_wide">
-            <area>320,240,400,356</area>
+        <buttonlist name="grabbers" from="base_buttonlist">
+            <area>465,245,350,275</area>
         </buttonlist>
-        
-    </window>
 
+    </window>
 
 
 
@@ -216,97 +119,90 @@
 
         <imagetype name="background" from="base_background"/>
 
-        <shape name="heading_background" from="base_background_shape">
-            <area>-4,-4,340,36</area>
-        </shape>
-        <textarea name="site_title" from="base_textarea">
-            <area>0,0,336,30</area>
-            <value>Manage RSS Subscriptions</value>
-            <align>allcenter</align>
-        </textarea>
-        
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Manage RSS Subscriptions</value>
+            </textarea>
         </textarea>
 
-        <!-- this is the background shape -->
         <shape name="rsslist_background" from="base_background_shape">
-            <area>300,80,690,410</area>
+            <area>390,185,510,337</area>
         </shape>
-
-        <shape name="title_separator" from="base_separator_shape">
-            <area>320,150,650,1</area>
+       
+        <buttonlist name="sites" from="base_buttonlist">
+            <area>405,200,480,238</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,480,36</area>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,100%-16,36</area>
+                    </textarea>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive">
+                    <area>0,0,480,36</area>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,100%-16,36</area>
+                    </textarea>
+                </state>
+                <state name="selectedinactive">
+                    <area>0,0,480,36</area>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,100%-16,36</area>
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>       
+        
+        <shape name="button_separator" from="base_background_shape">
+            <area>391,455,508,1</area>
         </shape>
-
-        <buttonlist name="sites" from="base_buttonlist_wide">
-            <area>320,170,700,225</area>
-        </buttonlist>
-
-
-        <shape name="button_separator" from="base_separator_shape">
-            <area>320,410,650,1</area>
-            </shape>
 
         <button name="edit" from="base_button">
-            <position>395,430</position>
+            <position>405,470</position>
             <value>Edit</value>
         </button>
         <button name="new" from="base_button">
-            <position>565,430</position>
+            <position>570,470</position>
             <value>New</value>
         </button>
         <button name="delete" from="base_button">
-            <position>735,430</position>
-            <value>Remove</value>
+            <position>735,470</position>
+            <value>Delete</value>
         </button>
-
-        <!-- this is the background for the information at the bottom -->
-        <shape name="details_background" from="base_background_shape">
-            <area>110,515,1060,174</area>
+        
+        <shape name="netvision_details_background" from="base_background_shape">
+            <area>20,540,1240,165</area>
         </shape>
-
-        <!-- the shape around the thumbnail -->
-        <shape name="preview_shape" from="base_background_shape">
-            <area>130,537,170,129</area>
-        </shape>
-        <imagetype name="preview">
-            <area>132,539,166,125</area>
-            <preserveaspect>true</preserveaspect>
-        </imagetype>
-
-        <!-- the vertical separator -->
-        <shape name="description_separator" from="base_separator_shape">
-            <area>320,530,1,136</area>
-        </shape>
-
+               
         <textarea name="title" from="base_textarea">
-            <area>340,525,790,40</area>
-            <multiline>no</multiline>
-            <align>left,vcenter</align>
-            <cutdown>yes</cutdown>
+            <area>35,550,960,36</area>
             <font>title</font>
+            <scroll direction="horizontal" />
+        </textarea>
+
+        <textarea name="url" from="base_textarea">
+            <area>35,580,900,36</area>
         </textarea>
 
         <textarea name="author" from="base_textarea">
-            <area>340,571,300,20</area>
-            <font>text_small</font>
-            <template>Author: %1</template>
+            <area>945,580,300,36</area>
+            <align>right,vcenter</align>
         </textarea>
-
-        <shape name="details_separator" from="base_separator_shape">
-            <area>321,606,830,1</area>
+        
+        <shape name="description_separator" from="base_background_shape">
+            <area>21,617,1238,1</area>
         </shape>
 
         <textarea name="description" from="base_textarea">
-            <area>340,622,821,60</area>
+            <area>35,627,1210,63</area>
             <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-            <align>left,top</align>
-            <template>Description: %1</template>
+            <scroll direction="vertical" />
+            <align>left,bottom</align>
         </textarea>
 
     </window>
-
 
 
 
@@ -318,101 +214,101 @@
 
         <imagetype name="background" from="base_background"/>
 
-        <shape name="heading_background" from="base_background_shape">
-            <area>-4,-4,340,36</area>
-        </shape>
-        <textarea name="site_title" from="base_textarea">
-            <area>0,0,336,30</area>
-            <value>Manage RSS Subscriptions</value>
-            <align>allcenter</align>
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Manage RSS Subscriptions</value>
+            </textarea>
         </textarea>
 
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <!-- this is the background shape -->
-        <shape name="siteslist_background" from="base_background_shape">
-            <area>250,160,790,430</area>
+        <shape name="rsseditpopup_background" from="base_background_shape">
+            <area>265,185,765,332</area>
         </shape>
 
         <textarea name="title_label" from="base_textarea">
-            <area>370,180,265,40</area>
+            <area>280,200,350,36</area>
             <align>right,vcenter</align>
             <value>Feed Name:</value>
         </textarea>
         <textarea name="url_label" from="title_label">
-            <position>370,225</position>
+            <position>280,240</position>
             <value>Feed URL:</value>
         </textarea>
         <textarea name="desc_label" from="title_label">
-            <position>370,270</position>
+            <position>280,280</position>
             <value>Site Description:</value>
         </textarea>
         <textarea name="author_label" from="title_label">
-            <position>370,315</position>
+            <position>280,320</position>
             <value>Feed Author:</value>
         </textarea>
-        <textarea name="downloadlabel" from="base_textarea">
-            <area>225,360,410,40</area>
-            <align>right,vcenter</align>
+        <textarea name="downloadlabel" from="title_label">
+            <position>280,360</position>
             <value>Download this feed automatically:</value>
         </textarea>
-
+        <textarea name="browselabel" from="title_label">
+            <position>280,400</position>
+            <value>Choose Image:</value>
+        </textarea>
+        
         <textedit name="title" from="base_textedit">
-            <position>645,180</position>
+            <position>640,200</position>
         </textedit>
         <textedit name="url" from="base_textedit">
-            <position>645,225</position>
+            <position>640,240</position>
         </textedit>
         <textedit name="description" from="base_textedit">
-            <position>645,270</position>
+            <position>640,280</position>
         </textedit>
         <textedit name="author" from="base_textedit">
-            <position>645,315</position>
+            <position>640,320</position>
         </textedit>
         <checkbox name="download" from="base_checkbox">
-            <position>645,365</position>
+            <position>640,360</position>
         </checkbox>
-
-        <!-- the shape around the thumbnail -->
-        <shape name="preview_shape" from="base_background_shape">
-            <area>525,410,106,80</area>
-        </shape>
-        <imagetype name="preview">
-            <area>527,412,102,76</area>
-            <preserveaspect>true</preserveaspect>
-        </imagetype>
-
-        <button name="preview_browse" from="base_button_wide">
-            <position>645,410</position>
-            <value>Choose Image</value>
+        <button name="preview_browse" from="base_searchbutton">
+            <position>640,400</position>
         </button>
 
-        <shape name="button_separator" from="base_separator_shape">
-            <area>270,510,750,1</area>
+        <shape name="button_separator" from="base_background_shape">
+            <area>266,450,763,1</area>
         </shape>
 
         <button name="ok" from="base_button">
-            <position>485,530</position>
+            <position>485,465</position>
             <value>Save</value>
         </button>
         <button name="cancel" from="base_button">
-            <position>655,530</position>
+            <position>650,465</position>
             <value>Cancel</value>
         </button>
 
+        <imagetype name="preview_background_image">
+            <area>815,365,200,139</area>
+            <mask>images/shared/netvision/gallery_item_nfmask.png</mask>
+            <filename>images/shared/netvision/default_netvision.png</filename>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="preview_image_border">
+            <area>815,365,200,139</area>
+            <filename>images/shared/netvision/gallery_nfborder.png</filename>
+        </imagetype>
+        <imagetype name="preview">
+            <area>815,365,200,139</area>
+            <mask>images/shared/netvision/gallery_item_nfmask.png</mask>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        
     </window>
 
 
    
    
    
-   
     <!-- Shows a list of rss feeds and videos like in a file browser.
          there are three columns like in the video plugin where the user can navigate
          through the items and see some details at the bottom -->
-    <window name="tree">
+    <window name="tree" include="base_netvision.xml">
 
         <imagetype name="background" from="base_background"/>
         
@@ -423,95 +319,59 @@
             </textarea>
         </textarea>
 
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-
-        <!-- this is the background behind the video list -->
-        <shape name="video_tree_background" from="base_background_shape">
-            <area>80,100,1110,302</area>
+        <shape name="netvision_tree_background" from="base_background_shape">
+            <area>20,50,1240,385</area>
         </shape>
-
-        <!-- shows the directory structure of the videos -->
-        <buttontree name="videos">
-            <area>100,121,1080,149</area>
-            <numlists>3</numlists>
-            <buttonlist name="listtemplate" from="base_buttonlist" />
-        </buttontree>
-
         <textarea name="nosites" from="base_textarea">
-            <area>280,100,710,302</area>
+            <area>220,50,840,385</area>
             <align>allcenter</align>
             <multiline>yes</multiline>
             <value>You haven't added any Sites/RSS Feeds yet! To add a site, press MENU, then choose "Scan/Manage Subscriptions," then "Manage Site Subscriptions."</value>
         </textarea>
 
-        <!-- this is the background for the information at the bottom -->
-        <shape name="video_details_background" from="base_background_shape">
-            <area>80,430,1110,230</area>
-        </shape>
+        <textarea name="breadcrumbs" from="base_textarea">
+            <area>35,60,1210,36</area>
+            <cutdown>left</cutdown>
+        </textarea>
 
-        <shape name="preview_background" from="base_background_shape">
-            <area>100,450,190,190</area>
-        </shape>
-        <imagetype name="preview">
-            <area>102,452,186,186</area>
-            <filename />
-            <preserveaspect>true</preserveaspect>
-        </imagetype>
+        <buttontree name="videos">
+            <area>35,100,1210,316</area>
+            <numlists>3</numlists>
+            <spacing>10</spacing>
+            <buttonlist name="listtemplate" from="base_buttonlist">
+                <area>0,0,395,316</area>                
+                <statetype name="buttonitem">
+                    <state name="active">
+                        <area>0,0,395,36</area>
+                        <textarea name="buttontext" from="base_textarea">
+                            <area>8,0,100%-16,36</area>
+                            <scroll direction="horizontal" />
+                        </textarea>
+                    </state>
+                    <state name="inactive" from="active"/>
+                    <state name="selectedactive">
+                        <area>0,0,395,36</area>
+                        <shape name="background" from="base_button_shape_selectedactive" />
+                    </state>
+                    <state name="selectedinactive" from="active">
+                        <area>0,0,395,36</area>
+                        <shape name="background" from="base_button_shape_selectedinactive" />
+                    </state>
+                </statetype>
+                <statetype name="upscrollarrow">
+                    <position>100%-65,100%-5</position>
+                </statetype>
+                <statetype name="downscrollarrow">
+                    <position>100%-40,100%-5</position>
+                </statetype>
+            </buttonlist>
+        </buttontree>
 
-        <shape name="preview_separator" from="base_separator_shape">
-            <area>310,450,1,190</area>
-        </shape>
-        
-        <textarea name="title" from="base_textarea">
-            <area>330,450,840,30</area>
-            <multiline>no</multiline>
-            <font>title</font>
-            <cutdown>yes</cutdown>
-        </textarea>
-        
-        <shape name="title_separator" from="base_separator_shape">
-            <area>310,497,860,1</area>
-        </shape>
-
-        <textarea name="description" from="base_textarea">
-            <area>330,515,550,140</area>
-            <font>text_small</font>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-            <align>left,top</align>
-            <template>Description: %1</template>
-        </textarea>        
-        
-        <shape name="description_separator" from="base_separator_shape">
-            <area>900,497,1,143</area>
-        </shape>
-
-        <textarea name="date" from="base_textarea">
-            <area>920,515,250,30</area>
-            <font>text_small</font>
-            <template>Posted: %1</template>
-        </textarea>
-        <textarea name="length" from="base_textarea">
-            <area>920,548,250,30</area>
-            <font>text_small</font>
-            <template>Length: %1</template>
-        </textarea>
-        <textarea name="author" from="base_textarea">
-            <area>920,581,250,30</area>
-            <font>text_small</font>
-            <template>Author: %1</template>
-        </textarea>
-        <textarea name="filesize_str" from="base_textarea">
-            <area>920,615,250,30</area>
-            <font>text_small</font>
-            <template>Size: %1</template>
-        </textarea>
+        <group name="netvision_details_group" from="base_netvision_details_group">
+            <position>20,460</position>            
+        </group>
 
     </window>
-
 
 
 
@@ -520,7 +380,7 @@
     <!-- The Browser view shows a horizontal list of videos and only the
         cover and details of one video at a time. the preview is shown
         at the left and in the center of the screen some video details -->
-    <window name="browser">
+    <window name="browser" include="base_netvision.xml">
 
         <imagetype name="fanart" from="base_background"/>
 
@@ -531,287 +391,29 @@
             </textarea>
         </textarea>
 
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
+        <group name="netvision_details_group" from="base_netvision_details_group">
+            <position>20,270</position>
+        </group>
 
-        <!-- this is the background around the covers  -->
-        <shape name="video_details_background" from="base_background_shape">
-            <area>125,70,1030,436</area>
+        <shape name="netvision_videolist_background" from="base_background_shape">
+            <area>-15,535,1310,160</area>
         </shape>
-
-        <shape name="preview_shape" from="base_background_shape">
-            <area>145,90,226,398</area>
-        </shape>
-
-        <imagetype name="preview">
-            <area>148,93,220,328</area>
-            <filename />
-            <preserveaspect>true</preserveaspect>
-            <reflection axis="vertical" scale="65" length="32" />
-        </imagetype>
-
-        <textarea name="title" from="base_textarea">
-            <area>400,90,720,30</area>
-            <multiline>no</multiline>
-            <font>title</font>
-            <align>left</align>
-            <cutdown>yes</cutdown>
-        </textarea>
-
-        <shape name="title_separator" from="base_separator_shape">
-            <area>400,139,720,1</area>
-        </shape>
-
-        <textarea name="description" from="base_textarea">
-            <area>400,158,720,200</area>
-            <font>text</font>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-            <align>left,top</align>
-        </textarea>
-
+        
         <textarea name="nosites" from="base_textarea">
-            <area>400,174,720,160</area>
+            <area>220,535,840,160</area>
             <multiline>yes</multiline>
             <align>allcenter</align>
-            <value>You haven't added any Sites/RSS Feeds yet!  To add a site, press MENU, then choose "Scan/Manage Subscriptions," then "Manage Site Subscriptions."</value>
+            <value>You haven't added any Sites/RSS Feeds yet!\nTo add a site, press MENU, then choose "Scan/Manage Subscriptions," then "Manage Site Subscriptions."</value>
         </textarea>
 
-        <shape name="description_separator" from="base_separator_shape">
-            <area>400,370,720,1</area>
-        </shape>
-
-        <!-- show the name of the different labels -->
-        <textarea name="author_label" from="base_textarea">
-            <area>400,385,150,30</area>
-            <value>Author:</value>
-            <align>right,vcenter</align>
-        </textarea>
-        <textarea name="duration_label" from="author_label">
-            <position>400,420</position>
-            <value>Runtime:</value>
-        </textarea>
-        <textarea name="rating_label" from="author_label">
-            <position>400,455</position>
-            <value>Rating:</value>
-        </textarea>
-
-        <!-- show the values to the different labels -->
-        <textarea name="author" from="base_textarea">
-            <area>560,385,590,30</area>
-            <cutdown>yes</cutdown>
-        </textarea>
-        <textarea name="duration" from="author">
-            <position>560,420</position>
-        </textarea>
-        <textarea name="rating" from="author">
-            <position>560,455</position>
-        </textarea>
-
-        <!-- this is the background behind the horizontal video list -->
-        <shape name="video_browser_background" from="base_background_shape">
-            <area>25,528,1230,171</area>
-        </shape>
-
-        <buttonlist name="videos">
-            <area>47,549,1190,169</area>
-            <layout>horizontal</layout>
-            <wrapstyle>items</wrapstyle>
-            <scrollstyle>center</scrollstyle>
-            <spacing>9</spacing>
-            <buttonarea>0,0,1190,180</buttonarea>
-
-            <statetype name="buttonitem">
-                <state name="active">
-                    <area>0,0,90,122</area>
-
-                    <!-- marks the video as watched -->
-                    <statetype name="watchedstate">
-                        <state name="yes">
-                            <shape name="watched_background_shape">
-                                <area>30,123,36,4</area>
-                                <type>box</type>
-                                <fill color="#AAAAAA" alpha="255"/>
-                                <line color="#AAAAAA" alpha="255" width="1" />
-                            </shape>
-                        </state>
-                    </statetype>
-
-                    <!-- this is a background and the
-                        name of the video behind the cover -->
-                    <shape name="buttonimage_background_shape" from="base_background_shape">
-                        <area>3,3,88,120</area>
-                        <line color="#000000" alpha="0" width="1" />
-                    </shape>
-                    <textarea name="buttontext">
-                        <area>13,13,68,100</area>
-                        <font>text_very_small</font>
-                        <align>allcenter</align>
-                        <cutdown>yes</cutdown>
-                        <multiline>yes</multiline>
-                    </textarea>
-
-                    <!-- this is the cover image that will be shown if its
-                        available, otherwise only the borders are visible -->
-                    <imagetype name="buttonimage">
-                        <area>2,2,86,116</area>
-                        <alpha>255</alpha>
-                        <preserveaspect>yes</preserveaspect>
-                        <!-- this is the background behind a cover -->
-                        <shape name="buttonimage_shape">
-                            <area>0,0,90,122</area>
-                            <type>roundbox</type>
-                            <line color="#DDDDDD" alpha="180" width="1" />
-                            <cornerradius>2</cornerradius>
-                        </shape>
-                    </imagetype>
-
-                    <!-- the node is a folder and it is currently not selected -->
-                    <statetype name="nodetype">
-                        <position>0,0</position>
-                        <!-- the node is a subfolder -->
-                        <state name="subfolder">
-                            <shape name="icon_background_shape" from="base_background_shape">
-                                <area>3,92,88,31</area>
-                                <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
-                            </shape>
-                            <imagetype name="icon">
-                                <area>8,96,24,24</area>
-                                <filename>images/shared/folder.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
-                        <!-- the node is the one that goes one directry up -->
-                        <state name="upfolder">
-                            <imagetype name="icon">
-                                <area>18,16,60,105</area>
-                                <filename>images/shared/folder_up.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
-                    </statetype>
-
-                    <!-- show how many images / directories are in this directory -->
-                    <textarea name="childcount" from="base_textarea">
-                        <area>37,95,60,30</area>
-                        <font>text_small</font>
-                        <align>left,vcenter</align>
-                    </textarea>
-                </state>
-
-                <state name="selectedactive">
-                    <area>-10,-12,108,146</area>
-
-                    <!-- marks the video as watched -->
-                    <statetype name="watchedstate">
-                        <state name="yes">
-                            <shape name="watched_background_shape">
-                                <area>35,147,46,4</area>
-                                <type>box</type>
-                                <fill color="#DDDDDD" alpha="255"/>
-                                <line color="#DDDDDD" alpha="255" width="1" />
-                            </shape>
-                        </state>
-                    </statetype>
-
-                    <!-- this is a background and the
-                        name of the video behind the cover -->
-                    <shape name="buttonimage_background_shape" from="base_background_shape">
-                        <area>6,8,106,139</area>
-                        <line color="#000000" alpha="0" width="1" />
-                    </shape>
-                    <textarea name="buttontext">
-                        <area>22,23,68,100</area>
-                        <font>text_very_small</font>
-                        <align>allcenter</align>
-                        <cutdown>yes</cutdown>
-                        <multiline>yes</multiline>
-                    </textarea>
-
-                    <!-- this is the cover image that will be shown if its
-                        available, otherwise only the borders are visible -->
-                    <imagetype name="buttonimage">
-                        <area>3,3,104,140</area>
-                        <alpha>255</alpha>
-                        <preserveaspect>yes</preserveaspect>
-                        <!-- this is the background behind a cover -->
-                        <shape name="buttonimage_shape">
-                            <area>0,0,108,146</area>
-                            <type>roundbox</type>
-                            <line color="#DDDDDD" alpha="180" width="2" />
-                            <cornerradius>2</cornerradius>
-                        </shape>
-                    </imagetype>
-
-                    <!-- the node is a folder and it is currently selected -->
-                    <statetype name="nodetype">
-                        <position>0,0</position>
-                        <!-- the node is a subfolder -->
-                        <state name="subfolder">
-                            <shape name="icon_background_shape" from="base_background_shape">
-                                <area>6,110,102,36</area>
-                                <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
-                            </shape>
-                            <imagetype name="icon">
-                                <area>11,114,30,30</area>
-                                <filename>images/shared/folder_open.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
-                        <!-- the node is the one that goes one directry up -->
-                        <state name="upfolder">
-                            <imagetype name="icon">
-                                <area>28,28,60,105</area>
-                                <filename>images/shared/folder_up_open.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
-                    </statetype>
-
-                    <!-- show how many images / directories are in this directory -->
-                    <textarea name="childcount" from="base_textarea">
-                        <area>48,114,60,30</area>
-                        <font>text_small</font>
-                        <align>left,vcenter</align>
-                    </textarea>
-                </state>
-            </statetype>
-
-            <!-- Show the arrow image that indicates that there are
-                more menu entries above the first visible menu -->
-            <statetype name="upscrollarrow">
-                <position>-37,55</position>
-                <state type="off">
-                    <imagetype name="upon" from="base_arrow_inactive">
-                        <filename>images/shared/arrow_up.png</filename>
-                    </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="upoff" from="base_arrow_selectedactive">
-                        <filename>images/shared/arrow_up.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-
-            <!-- Show the arrow image that indicates that there are
-                more menu entries below the last visible menu -->
-            <statetype name="downscrollarrow">
-                <position>1215,55</position>
-                <state type="off">
-                    <imagetype name="dnon" from="base_arrow_inactive">
-                        <filename>images/shared/arrow_down.png</filename>
-                    </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="dnoff" from="base_arrow_selectedactive">
-                        <filename>images/shared/arrow_down.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-        </buttonlist>
+        <group name="netvision_videolist_group" from="base_netvision_videolist_group">
+            <area>35,548,1240,130</area>
+            <buttonlist name="videos">
+                <area>0,0,1230,130</area>
+                <scrollstyle>center</scrollstyle>
+                <buttonarea>0,0,1230,130</buttonarea>
+            </buttonlist>
+        </group>
 
     </window>
 
@@ -819,9 +421,8 @@
 
 
 
-
     <!-- The Gallery view shows a list of all videos side by side -->
-    <window name="gallery">
+    <window name="gallery" include="base_netvision.xml">
 
         <imagetype name="background" from="base_background"/>
         
@@ -832,274 +433,40 @@
             </textarea>
         </textarea>
 
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <!-- the shape where the imagelist is displayed -->
-        <shape name="video_background" from="base_background_shape">
-            <area>25,60,1230,633</area>
+        <shape name="netvision_gallery_list_background" from="base_background_shape">
+            <area>20,50,1240,570</area>
         </shape>
-
-        <!-- shows the name of the folder or image -->
-        <textarea name="title" from="base_textarea">
-            <area>45,80,900,30</area>
-            <cutdown>yes</cutdown>
-            <font>title</font>
-            <align>left,vcenter</align>
-        </textarea>
-
-        <!-- optional - shows current position in grid eg '1 of 123' -->
-        <textarea name="position" from="base_textarea">
-            <area>985,80,250,30</area>
-            <align>right,vcenter</align>
-        </textarea>
-
-        <textarea name="length" from="base_textarea">
-            <area>45,115,200,30</area>
-            <font>text_small</font>
-            <template>Length: %1</template>
-        </textarea>
-
-        <textarea name="author" from="base_textarea">
-            <area>250,115,700,30</area>
-            <cutdown>yes</cutdown>
-            <font>text_small</font>
-            <template>Author: %1</template>
-        </textarea>
         
         <textarea name="nosites" from="base_textarea">
-            <area>225,60,830,633</area>
-            <align>allcenter</align>
+            <area>220,50,840,570</area>
             <multiline>yes</multiline>
-            <value>You haven't added any Sites/RSS Feeds yet!  To add a site, press MENU, then choose "Scan/Manage Subscriptions," then "Manage Site Subscriptions."</value>
+            <align>allcenter</align>
+            <value>You haven't added any Sites/RSS Feeds yet! To add a site, press MENU, then choose "Scan/Manage Subscriptions," then "Manage Site Subscriptions."</value>
         </textarea>
 
-        <!-- the list that shows the images in the screen -->
-        <buttonlist name="videos">
-            <area>45,155,1170,535</area>
-            <buttonarea>0,0,1190,535</buttonarea>
-            <wrapstyle>flowing</wrapstyle>
-            <layout>grid</layout>
-            <spacing>7</spacing>
-            <statetype name="buttonitem">
-                
-                <state name="active">
-                    <area>0,0,164,124</area>
-                    
-                    <imagetype name="buttonimage_background">
-                        <shape name="buttonimage_background_shape" from="base_background_shape">
-                            <area>0,0,164,124</area>
-                            <line color="#000000" alpha="0" width="1" />
-                        </shape>
-                    </imagetype>
-                    
-                    <!-- this shows the actual image -->
-                    <imagetype name="buttonimage">
-                        <area>2,2,160,120</area>
-                        <preserveaspect>yes</preserveaspect>
-                    </imagetype>
-
-                    <imagetype name="buttonimage_border">
-                        <shape name="buttonimage_border_shape" from="base_background_shape">
-                            <area>0,0,164,124</area>
-                            <fill color="#000000" alpha="0" />
-                        </shape>
-                    </imagetype>
-                    
-                    <!-- shows that the image was marked/selected and
-                        might be manipulated with other images -->
-                    <statetype name="buttoncheck">
-                        <position>2,2</position>
-                        <showempty>yes</showempty>
-                        <state type="full">
-                            <shape name="marked_background" from="base_background_shape">
-                                <area>0,0,33,33</area>
-                                <line color="#000000" alpha="0" width="1" />
-                            </shape>
-                            <imagetype name="marked">
-                                <filename>images/shared/file_marked.png</filename>
-                            </imagetype>
-                        </state>
-                    </statetype>
-
-                    <!-- shows the name of the currently active file.
-                        this is the same as the title in the top -->
-                    <shape name="buttonimage_shape" from="base_background_shape">
-                        <area>1,1,162,26</area>
-                        <type>box</type>
-                        <line color="#000000" alpha="0" width="1" />
-                    </shape>
-                    <textarea name="buttontext">
-                        <area>0,4,164,20</area>
-                        <font>text_very_small</font>
-                        <align>allcenter</align>
-                        <cutdown>yes</cutdown>
-                    </textarea>
-
-                    <!-- show a folder above the image if its a folder and not an image.
-                        the node is a folder and it is currently not selected -->
-                    <statetype name="nodetype">
-                        <position>0,0</position>
-                        <state name="subfolder">
-                            <shape name="buttonimage_shape" from="base_background_shape">
-                                <area>1,93,162,30</area>
-                                <type>box</type>
-                                <line color="#000000" alpha="0" width="1" />
-                            </shape>
-                            <imagetype name="icon">
-                                <area>7,97,24,24</area>
-                                <filename>images/shared/folder.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
-                        <state name="upfolder">
-                            <shape name="buttonimage_shape" from="base_background_shape">
-                                <area>1,93,162,30</area>
-                                <type>box</type>
-                                <line color="#000000" alpha="0" width="1" />
-                            </shape>
-                            <imagetype name="icon">
-                                <area>7,97,24,24</area>
-                                <filename>images/shared/folder_up.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
-                    </statetype>
-
-                    <!-- show how many images / directories are in this directory -->
-                    <textarea name="childcount" from="base_textarea">
-                        <area>37,95,60,30</area>
-                        <font>text_small</font>
-                        <align>left,vcenter</align>
-                    </textarea>
-                </state>
-
-
-                <state name="selectedactive">
-                    <area>-38,-28,240,180</area>
-
-                    <imagetype name="buttonimage_background">
-                        <shape name="buttonimage_background_shape" from="base_background_shape_dark">
-                            <area>0,0,240,180</area>
-                            <line color="#000000" alpha="0" width="1" />
-                        </shape>
-                    </imagetype>
-                    
-                    <!-- this shows the actual image -->
-                    <imagetype name="buttonimage">
-                        <area>2,2,235,176</area>
-                        <preserveaspect>yes</preserveaspect>
-                    </imagetype>
-
-                    <imagetype name="buttonimage_border">
-                        <shape name="buttonimage_border_shape" from="base_background_shape">
-                            <area>0,0,240,180</area>
-                            <fill color="#000000" alpha="0" />
-                            <line color="#AAAAAA" alpha="150" width="2" />
-                        </shape>
-                    </imagetype>
-                    
-                    <!-- shows that the image was marked/selected and
-                        might be manipulated with other images -->
-                    <statetype name="buttoncheck">
-                        <position>2,2</position>
-                        <showempty>yes</showempty>
-                        <state type="full">
-                            <shape name="marked_background" from="base_background_shape">
-                                <area>0,0,33,33</area>
-                                <line color="#000000" alpha="0" width="1" />
-                            </shape>
-                            <imagetype name="marked">
-                                <filename>images/shared/file_marked.png</filename>
-                            </imagetype>
-                        </state>
-                    </statetype>
-
-                    <!-- shows the name of the currently active file.
-                        this is the same as the title in the top -->
-                    <shape name="buttonimage_shape" from="base_background_shape">
-                        <area>1,1,238,26</area>
-                        <type>box</type>
-                        <line color="#000000" alpha="0" width="1" />
-                    </shape>
-                    <textarea name="buttontext">
-                        <area>0,4,240,20</area>
-                        <font>text_very_small</font>
-                        <align>allcenter</align>
-                        <cutdown>yes</cutdown>
-                    </textarea>
-
-                    <!-- show a folder above the image if its a folder and not an image.
-                        the node is a folder and it is currently not selected -->
-                    <statetype name="nodetype">
-                        <position>0,0</position>
-                        <state name="subfolder">
-                            <shape name="buttonimage_shape" from="base_background_shape">
-                                <area>1,139,238,40</area>
-                                <line color="#000000" alpha="0" width="1" />
-                            </shape>
-                            <imagetype name="icon">
-                                <area>9,144,32,32</area>
-                                <filename>images/shared/folder_open.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
-                        <state name="upfolder">
-                            <shape name="buttonimage_shape" from="base_background_shape">
-                                <area>1,139,238,40</area>
-                                <line color="#000000" alpha="0" width="1" />
-                            </shape>
-                            <imagetype name="icon">
-                                <area>9,144,32,32</area>
-                                <filename>images/shared/folder_up_open.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
-                    </statetype>
-
-                    <!-- show how many images / directories are in this directory -->
-                    <textarea name="childcount" from="base_textarea">
-                        <area>49,145,60,30</area>
-                        <font>text_small</font>
-                        <align>left,vcenter</align>
-                    </textarea>
-
-                </state>
-            </statetype>
-
-            <!-- Show the arrow image that indicates that there are
-                more menu entries above the first visible menu -->
-            <statetype name="upscrollarrow">
-                <position>1135,-20</position>
-                <state type="off">
-                    <imagetype name="upon" from="base_arrow_inactive">
-                        <filename>images/shared/arrow_up.png</filename>
-                    </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="upoff" from="base_arrow_selectedactive">
-                        <filename>images/shared/arrow_up.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-
-            <!-- Show the arrow image that indicates that there are
-                more menu entries below the last visible menu -->
-            <statetype name="downscrollarrow">
-                <position>1160,-20</position>
-                <state type="off">
-                    <imagetype name="dnon" from="base_arrow_inactive">
-                        <filename>images/shared/arrow_down.png</filename>
-                    </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="dnoff" from="base_arrow_selectedactive">
-                        <filename>images/shared/arrow_down.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-        </buttonlist>
+        <group name="netvision_videolist_group" from="base_netvision_videolist_group">
+            <position>35,65</position>
+        </group>     
+        
+        <shape name="netvision_gallery_info_background" from="base_background_shape">
+            <area>-15,636,1310,70</area>
+        </shape>
+        <textarea name="title" from="base_textarea">
+            <area>25,640,1000,30</area>
+            <scroll direction="horizontal"/>
+        </textarea>
+        <textarea name="author" from="title">
+            <area>25,675,1000,20</area>
+            <template>Author: %1</template>
+        </textarea>
+        <textarea name="position" from="base_textarea">
+            <area>1100,640,155,30</area>
+            <align>right,vcenter</align>
+        </textarea>
+        <textarea name="length" from="position">
+            <area>1100,675,155,20</area>
+            <template>Length: %1</template>
+        </textarea>
 
     </window>
 

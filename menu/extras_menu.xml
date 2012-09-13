@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mythmenu name="EXTRAS_MENU">
+
+
+    <button>
+        <type>DVD_RIP</type>
+        <text>Import DVD</text>
+        <text lang="DE">DVD importieren</text>
+        <description>Import video from a movie DVD and convert it</description>
+        <description lang="DE">Filme von DVD importieren und konvertieren</description>
+        <action>JUMP Rip DVD</action>
+    </button>
+
+    <button>
+        <type>MUSIC_RIP</type>
+        <text>Import CD</text>
+        <text lang="DE">Musik-CDs importieren</text>
+        <description>Read music from a CD and convert it</description>
+        <description lang="DE">Musik von CD einlesen und konvertieren</description>
+        <action>JUMP Rip CD</action>
+        <depends>mythmusic</depends>
+    </button>
+
+    <button>
+        <type>ARCHIVE</type>
+        <text>Archive Files</text>
+        <text lang="DE">Videos archivieren</text>
+        <description>Write video to a data DVD</description>
+        <description lang="DE">Videos auf DVD brennen</description>
+        <action>PLUGIN mytharchive</action>
+        <depends>mytharchive</depends>
+    </button>
+
+    <button>
+        <type>TV_STATUS</type>
+        <text>System Status</text>
+        <text lang="DE">Systemstatus</text>
+        <description>What your system is doing right now</description>
+        <description lang="DE">Informationen rund um MythTV</description>
+        <action>TV_STATUS</action>
+    </button>
+
+    <button>
+        <type>MENU_UTILITIES_SETUP</type>
+        <text>Setup</text>
+        <description>Configure MythTV and plugins</description>
+        <action>MENU main_settings.xml</action>
+    </button>
+
+</mythmenu>
+

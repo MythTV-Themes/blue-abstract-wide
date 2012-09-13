@@ -14,8 +14,7 @@
          No widget should use this font -->
     <fontdef name="normal" face="DejaVu Sans">
         <color>#FFFFFF</color>
-        <pixelsize>20</pixelsize>
-        <weight>normal</weight>
+        <pixelsize>18</pixelsize>
     </fontdef>
 
 
@@ -26,7 +25,6 @@
         <weight>bold</weight>
     </fontdef>
     <fontdef name="menu_description" from="normal">
-        <pixelsize>18</pixelsize>
         <color>#CCCCCC</color>
     </fontdef>
 
@@ -49,7 +47,7 @@
     <fontdef name="text" from="normal">
     </fontdef>
     <fontdef name="text_inactive" from="text">
-        <color>#999999</color>
+        <color>#777777</color>
     </fontdef>
     <fontdef name="text_error" from="text">
         <color>#800600</color>
@@ -59,12 +57,12 @@
     </fontdef>
 
 
-    <!-- Other color variations on the normal text font -->
+    <!-- Other color variations of the normal text font -->
     <fontdef name="text_grey" from="text">
-        <color>#666666</color>
+        <color>#999999</color>
     </fontdef>
-    <fontdef name="text_black" from="text">
-        <color>#000000</color>
+    <fontdef name="text_light_grey" from="text">
+        <color>#BBBBBB</color>
     </fontdef>
     <fontdef name="text_yellow" from="text">
         <color>#FFFF33</color>
@@ -73,48 +71,12 @@
         <color>#FF3333</color>
     </fontdef>
 
-    <!-- Smaller font that is used in many screens -->
+    <!-- Smaller font that is used in some screens -->
     <fontdef name="text_small" from="normal">
-        <pixelsize>18</pixelsize>
-    </fontdef>
-    <fontdef name="text_small_inactive" from="text_small">
-        <color>#999999</color>
-    </fontdef>
-    <fontdef name="text_small_error" from="text_small">
-        <color>#800600</color>
-    </fontdef>
-    <fontdef name="text_small_warning" from="text_small">
-        <color>#FFFF33</color>
-    </fontdef>
-
-
-    <!-- Other color variations on the small text font -->
-    <fontdef name="text_small_grey" from="text_small">
-        <color>#666666</color>
-    </fontdef>
-    <fontdef name="text_small_black" from="text_small">
-        <color>#000000</color>
-    </fontdef>
-    <fontdef name="text_small_purple" from="text_small">
-        <color>#9999cc</color>
-    </fontdef>
-    <fontdef name="text_small_yellow" from="text_small">
-        <color>#FFFF33</color>
-    </fontdef>
-    <fontdef name="text_small_green" from="text_small">
-        <color>#80d400</color>
-    </fontdef>
-    <fontdef name="text_small_blue" from="text_small">
-        <color>#0492A7</color>
+        <pixelsize>16</pixelsize>
     </fontdef>
     <fontdef name="text_small_red" from="text_small">
         <color>#800900</color>
-    </fontdef>
-
-
-    <!-- Very small font that is used in many screens -->
-    <fontdef name="text_very_small" from="normal">
-        <pixelsize>14</pixelsize>
     </fontdef>
     
 
@@ -133,7 +95,7 @@
         <type>roundbox</type>
         <fill color="#000000" alpha="130" />
         <line color="#AAAAAA" alpha="150" width="1" />
-        <cornerradius>2</cornerradius>
+        <cornerradius>10</cornerradius>
     </shape>
     
     <!-- Rectangular shape used as background in popups -->
@@ -141,189 +103,189 @@
         <fill color="#000000" alpha="210" />
     </shape>
 
-
-    <!-- Horizontal line that acts as a visula separator on many screens -->
-    <shape name="base_separator_shape">
-        <area>0,0,100,1</area>
-        <type>box</type>
-        <line color="#AAAAAA" alpha="150" width="1" />
-    </shape>
-
-
     <!-- darkens the entire background so that popups are better readable -->
     <shape name="base_darken_background">
         <!--<area>0,0,1280,720</area>-->
-		<area>-100,-100,1480,920</area>
+        <area>-100,-100,1480,920</area>
         <type>box</type>
         <fill color="#000000" alpha="110" />
     </shape>
 
 
-    <!-- base class for setting the transparency 
-         of the images that are used in button widgets -->
+    <!-- base definitions for the transparency of the used images -->
     <imagetype name="base_image_active">
         <filename />
         <alpha>150</alpha>
     </imagetype>
     <imagetype name="base_image_selectedactive">
         <filename />
-        <alpha>220</alpha>
+        <alpha>200</alpha>
     </imagetype>
     <imagetype name="base_image_selectedinactive">
         <filename />
         <alpha>120</alpha>
     </imagetype>
 
-    <!-- the arrow is not selected and inactive -->
-    <imagetype name="base_image_inactive" from="base_image_selectedinactive" />
-    <!-- the arrow is selected and active (only for buttons) -->
+    <!-- the image is not selected and inactive -->
+    <imagetype name="base_image_inactive" from="base_image_active" />
+    <!-- the image is selected and active (only for buttons) -->
     <imagetype name="base_image_selected" from="base_image_selectedactive" />
     <!-- the image is selected and pushed (only for buttons) -->
-    <imagetype name="base_image_pushed" from="base_image_selectedinactive" />
+    <imagetype name="base_image_pushed" from="base_image_selectedactive" />
+    <!-- the image is not selected and disabled -->
+    <imagetype name="base_image_disabled" from="base_image_inactive" />
 
-
-    <!-- alpha values explicitly for the icons in the osd and recording screens -->
-    <!-- this is the default active statetype -->
-    <imagetype name="base_arrow_active">
-        <alpha>70</alpha>
-    </imagetype>
-    <!-- the arrow is not selected and inactive -->
-    <imagetype name="base_arrow_inactive">
-        <alpha>70</alpha>
-    </imagetype>  
-    <!-- the arrow is selected and active -->
-    <imagetype name="base_arrow_selectedactive" from="base_image_selectedactive" />
-    <!-- the arrow is selected and inactive -->
-    <imagetype name="base_arrow_selectedinactive" from="base_image_selectedinactive" />
-    <!-- the arrow is selected and active (only for buttons) -->
-    <imagetype name="base_arrow_selected" from="base_image_selectedactive" />
-    <!-- the arrow is selected and pushed (only for buttons) -->
-    <imagetype name="base_arrow_pushed" from="base_image_selectedinactive" />    
-   
     
     <!-- alpha values explicitly for the icons in the osd and recording screens -->
     <imagetype name="base_icon_selected">
-        <alpha>220</alpha>
+        <alpha>210</alpha>
     </imagetype>
     <imagetype name="base_icon_inactive">
-        <alpha>40</alpha>
+        <alpha>50</alpha>
     </imagetype>
-
-
-   <!-- the background image behind the popup title description -->
-    <imagetype name="base_popup_background" from="base_image_selected">
-        <area>0,0,350,90</area>
-        <filename>images/widgets/popup_background.png</filename>
-    </imagetype>
-    
         
+    
+    <!-- the definitions of the buttons and buttonlists in case the 
+         background images shall be discarded and shapes will be used. -->
+    <shape name="base_button_shape_active">
+        <area>0,0,100%,100%</area>
+        <type>roundbox</type>
+        <fill color="#535353" alpha="120" />
+        <line color="#535353" alpha="100" width="1" />
+        <cornerradius>8</cornerradius>
+    </shape>
+
+    <shape name="base_button_shape_selectedactive" from="base_button_shape_active">
+        <fill color="#3697ef" alpha="200" />
+        <line color="#3697ef" alpha="180" width="1" />
+    </shape>
+    
+    <shape name="base_button_shape_selectedinactive" from="base_button_shape_active">
+        <fill color="#1d68e0" alpha="100" />
+        <line color="#1d68e0" alpha="80" width="1" />
+    </shape>
+
+    <!-- these are the same as above but only to keep these names the 
+         same as the states in which they are used. These are pretty 
+         much only for buttons, checkboxes and similar widgets -->
+    <shape name="base_button_shape_inactive" from="base_button_shape_active" />
+    <shape name="base_button_shape_selected" from="base_button_shape_selectedactive" />
+    <shape name="base_button_shape_pushed"   from="base_button_shape_selectedinactive" />
+    <shape name="base_button_shape_disabled" from="base_button_shape_inactive" />
+    
+    
+    
+    
+    
     <!-- ===================================================== -->
     <!-- Below are the definitions of base widgets, their derivatives 
          and other widgets that are used troughout the theme -->
 
 
 
+    <!-- the textare widget that shows only text -->
+    <textarea name="base_textarea">
+        <area>0,0,30,30</area>
+        <font>text</font>
+        <multiline>no</multiline>
+        <cutdown>no</cutdown>
+        <align>left,vcenter</align>
+    </textarea>
+
+   
 
     <!-- the buttonlist widget with a width of 350px -->
     <buttonlist name="base_buttonlist">
-        <area>0,0,350,265</area>
+        <area>0,0,350,280</area>
         <layout>vertical</layout>
         <spacing>3</spacing>
         <scrollstyle>free</scrollstyle>
         <wrapstyle>selection</wrapstyle>
-        <buttonarea>0,0,100%,97%</buttonarea>
+        <buttonarea>0,0,100%,100%</buttonarea>
        
         <!-- states that the buttonlist can have -->
         <statetype name="buttonitem">
        
             <!-- active menu entry -->
             <state name="active">
-
-                <imagetype name="buttonbackground" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,350,40</area>
-                </imagetype>
+                <area>0,0,350,36</area>
+                
+                <shape name="background" from="base_button_shape_active" />
                 
                 <!-- the button's text -->
-                <textarea name="buttontext">
-                    <area>8,5,300,30</area>
-                    <font>text</font>
-                    <cutdown>yes</cutdown>
-                    <align>left,vcenter</align>
+                <textarea name="buttontext" from="base_textarea">
+                    <area>8,0,100%-50,36</area>
+                    <scroll direction="horizontal" />
                 </textarea>
                 
                 <!-- settings when the button has also a checkbox -->
                 <statetype name="buttoncheck">
-                    <position>313,5</position>
+                    <position>100%-37,0</position>
                     <state type="off">
                         <imagetype name="checkoff">
-                            <filename>images/widgets/checkbox_off.png</filename>
+                            <filename>images/icons/button_checkbox_off.png</filename>
+                            <area>5,5,26,26</area>
                         </imagetype>
                     </state>
                     <state type="half">
                     <imagetype name="checkhalf">
-                            <filename>images/widgets/checkbox_half.png</filename>
+                            <filename>images/icons/button_checkbox_half.png</filename>
+                            <area>5,5,26,26</area>
                         </imagetype>
                     </state>
                     <state type="full">
                         <imagetype name="checkfull">
-                            <filename>images/widgets/checkbox_full.png</filename>
+                            <filename>images/icons/button_checkbox_full.png</filename>
+                            <area>5,5,26,26</area>
                         </imagetype>
                     </state>
                 </statetype>
                 
                 <!-- indicates the button contains a submenu -->
-                <imagetype name="buttonarrow" from="base_arrow_active">
-                    <position>321,6</position>
-                    <filename>images/shared/arrow_right.png</filename>
+                <imagetype name="buttonarrow" from="base_icon_inactive">
+                    <position>100%-26,4</position>
+                    <filename>images/icons/button_arrow_right.png</filename>
                 </imagetype>
             </state>
             
             <!-- inactive menu entry -->
-            <state name="inactive" from="active" />
-
+            <state name="inactive" from="active">
+                <area>0,0,350,36</area>
+                <shape name="background" from="base_button_shape_inactive" />
+            </state>
+            
             <!-- menu entry has been selected and is active -->
             <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,350,40</area>
-                </imagetype>
-                <imagetype name="buttonarrow" from="base_arrow_selectedactive">
-                    <position>321,6</position>
-                    <filename>images/shared/arrow_right.png</filename>
+                <area>0,0,350,36</area>
+                <shape name="background" from="base_button_shape_selectedactive" />
+
+                <!-- indicates the button contains a submenu -->
+                <imagetype name="buttonarrow" from="base_icon_selected">
+                    <position>100%-26,4</position>
+                    <filename>images/icons/button_arrow_right.png</filename>
                 </imagetype>
             </state>
             
             <!-- menu entry has been selected and is inactive -->
             <state name="selectedinactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,350,40</area>
-                </imagetype>
-                
-                <textarea name="buttontext">
-                    <font>text_inactive</font>
-                </textarea>
-                
-                <imagetype name="buttonarrow" from="base_arrow_selectedinactive">
-                    <position>321,6</position>
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
+                <area>0,0,350,36</area>
+                <shape name="background" from="base_button_shape_selectedinactive" />
             </state>
+
         </statetype>
         
         <!-- show arrows to indicates that there are
              more menu entries above the first visible menu -->
         <statetype name="upscrollarrow">
-            <position>295,97%</position>
+            <position>100%-55,100%-5</position>
             <state type="off">
-                <imagetype name="upon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_up.png</filename>
+                <imagetype name="upon" from="base_icon_inactive">
+                    <filename>images/icons/button_arrow_up.png</filename>
                 </imagetype>
             </state>
             <state type="full">
-                <imagetype name="upoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_up.png</filename>
+                <imagetype name="upoff" from="base_icon_selected">
+                    <filename>images/icons/button_arrow_up.png</filename>
                 </imagetype>
             </state>
         </statetype>
@@ -331,509 +293,71 @@
         <!-- show arrows to indicates that there are
              more menu entries below the last visible menu -->
         <statetype name="downscrollarrow">
-            <position>320,97%</position>
+            <position>100%-30,100%-5</position>
             <state type="off">
-                <imagetype name="dnon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_down.png</filename>
+                <imagetype name="dnon" from="base_icon_inactive">
+                    <filename>images/icons/button_arrow_down.png</filename>
                 </imagetype>
             </state>
             <state type="full">
-                <imagetype name="dnoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_down.png</filename>
+                <imagetype name="dnoff" from="base_icon_selected">
+                    <filename>images/icons/button_arrow_down.png</filename>
                 </imagetype>
             </state>
         </statetype>
     </buttonlist>
 
-
-
-
-    <!-- the buttonlist widget with a width of 650px -->
-    <buttonlist name="base_buttonlist_wide">
-        <area>0,0,650,265</area>
-        <layout>vertical</layout>
-        <spacing>3</spacing>
-        <scrollstyle>free</scrollstyle>
-        <wrapstyle>items</wrapstyle>
-        <buttonarea>0,0,100%,97%</buttonarea>
-        
-        <statetype name="buttonitem">
-            <state name="active">
-                <imagetype name="buttonbackground" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,650,40</area>
-                </imagetype>
-                
-                <textarea name="buttontext">
-                    <area>8,5,600,30</area>
-                    <font>text</font>
-                    <cutdown>yes</cutdown>
-                    <align>left,vcenter</align>
-                </textarea>
-                
-                <statetype name="buttoncheck">
-                    <position>613,5</position>
-                    <state type="off">
-                        <imagetype name="checkoff">
-                            <filename>images/widgets/checkbox_off.png</filename>
-                        </imagetype>
-                    </state>
-                    <state type="half">
-                    <imagetype name="checkhalf">
-                            <filename>images/widgets/checkbox_half.png</filename>
-                        </imagetype>
-                    </state>
-                    <state type="full">
-                        <imagetype name="checkfull">
-                            <filename>images/widgets/checkbox_full.png</filename>
-                        </imagetype>
-                    </state>
-                </statetype>
-                
-                <imagetype name="buttonarrow" from="base_arrow_active">
-                    <position>622,6</position>
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-            
-            <state name="inactive" from="active" />
-            
-            <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedactive"> 
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,650,40</area>
-                </imagetype>
-                <imagetype name="buttonarrow" from="base_arrow_selectedactive">
-                    <position>622,6</position>
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-            
-            <state name="selectedinactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,650,40</area>
-                </imagetype>
-                <textarea name="buttontext">
-                    <font>text_inactive</font>
-                </textarea>
-                <imagetype name="buttonarrow" from="base_arrow_selectedinactive">
-                    <position>622,6</position>
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-        
-        <statetype name="upscrollarrow">
-            <position>595,97%</position>
-            <state type="off">
-                <imagetype name="upon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_up.png</filename>
-                </imagetype>
-            </state>
-            <state type="full">
-                <imagetype name="upoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_up.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-        
-        <statetype name="downscrollarrow">
-            <position>620,97%</position>
-            <state type="off">
-                <imagetype name="dnon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_down.png</filename>
-                </imagetype>
-            </state>
-            <state type="full">
-                <imagetype name="dnoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_down.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-    </buttonlist>
-
-
-    
-    
-    <!-- the buttonlist widget with a width of 820px -->
-    <buttonlist name="base_buttonlist_very_wide">
-        <area>0,0,820,265</area>
-        <layout>vertical</layout>
-        <spacing>3</spacing>
-        <scrollstyle>free</scrollstyle>
-        <wrapstyle>items</wrapstyle>
-        <buttonarea>0,0,100%,97%</buttonarea>
-        
-        <statetype name="buttonitem">
-            <state name="active">
-                <imagetype name="buttonbackground" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,820,40</area>
-                </imagetype>
-                
-                <textarea name="buttontext">
-                    <area>8,5,770,30</area>
-                    <font>text</font>
-                    <cutdown>yes</cutdown>
-                    <align>left,vcenter</align>
-                </textarea>
-
-                <statetype name="buttoncheck">
-                    <position>783,5</position>
-                    <state type="off">
-                        <imagetype name="checkoff">
-                            <filename>images/widgets/checkbox_off.png</filename>
-                        </imagetype>
-                    </state>
-                    <state type="half">
-                        <imagetype name="checkhalf">
-                            <filename>images/widgets/checkbox_half.png</filename>
-                        </imagetype>
-                    </state>
-                    <state type="full">
-                        <imagetype name="checkfull">
-                            <filename>images/widgets/checkbox_full.png</filename>
-                        </imagetype>
-                    </state>
-                </statetype>
-                
-                <imagetype name="buttonarrow" from="base_arrow_active">
-                    <position>792,6</position>
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-            
-            <state name="inactive" from="active" />
-
-            <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,820,40</area>
-                </imagetype>
-                <imagetype name="buttonarrow" from="base_arrow_selectedactive">
-                    <position>792,6</position>
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-
-            <state name="selectedinactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,820,40</area>
-                </imagetype>
-                <textarea name="buttontext">
-                    <font>text_inactive</font>
-                </textarea>
-                <imagetype name="buttonarrow" from="base_arrow_selectedinactive">
-                    <position>792,6</position>
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <statetype name="upscrollarrow">
-            <position>765,97%</position>
-            <state type="off">
-                <imagetype name="upon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_up.png</filename>
-                </imagetype>
-            </state>
-            <state type="full">
-                <imagetype name="upoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_up.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <statetype name="downscrollarrow">
-            <position>790,97%</position>
-            <state type="off">
-                <imagetype name="dnon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_down.png</filename>
-                </imagetype>
-            </state>
-            <state type="full">
-                <imagetype name="dnoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_down.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-    </buttonlist>
-
-
-
-
-    <!-- the buttonlist widget with a width of 1190px -->
-    <buttonlist name="base_buttonlist_extra_wide">
-        <area>0,0,1190,265</area>
-        <layout>vertical</layout>
-        <spacing>3</spacing>
-        <scrollstyle>free</scrollstyle>
-        <wrapstyle>items</wrapstyle>
-        <buttonarea>0,0,100%,97%</buttonarea>
-        
-        <statetype name="buttonitem">
-            <state name="active">
-                <imagetype name="buttonbackground" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,1190,40</area>
-                </imagetype>
-                
-                <textarea name="buttontext">
-                    <area>8,5,1140,30</area>
-                    <font>text</font>
-                    <cutdown>yes</cutdown>
-                    <align>left,vcenter</align>
-                </textarea>
-
-                <statetype name="buttoncheck">
-                    <position>1153,5</position>
-                    <state type="off">
-                        <imagetype name="checkoff">
-                            <filename>images/widgets/checkbox_off.png</filename>
-                        </imagetype>
-                    </state>
-                    <state type="half">
-                        <imagetype name="checkhalf">
-                            <filename>images/widgets/checkbox_half.png</filename>
-                        </imagetype>
-                    </state>
-                    <state type="full">
-                        <imagetype name="checkfull">
-                            <filename>images/widgets/checkbox_full.png</filename>
-                        </imagetype>
-                    </state>
-                </statetype>
-                
-                <imagetype name="buttonarrow" from="base_arrow_active">
-                    <position>1162,6</position>
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-            
-            <state name="inactive" from="active" />
-
-            <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,1190,40</area>
-                </imagetype>
-                <imagetype name="buttonarrow" from="base_arrow_selectedactive">
-                    <position>1162,6</position>
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-
-            <state name="selectedinactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,1190,40</area>
-                </imagetype>
-                <textarea name="buttontext">
-                    <font>text_inactive</font>
-                </textarea>
-                <imagetype name="buttonarrow" from="base_arrow_selectedinactive">
-                    <position>1162,6</position>
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <statetype name="upscrollarrow">
-            <position>1135,97%</position>
-            <state type="off">
-                <imagetype name="upon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_up.png</filename>
-                </imagetype>
-            </state>
-            <state type="full">
-                <imagetype name="upoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_up.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <statetype name="downscrollarrow">
-            <position>1160,97%</position>
-            <state type="off">
-                <imagetype name="dnon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_down.png</filename>
-                </imagetype>
-            </state>
-            <state type="full">
-                <imagetype name="dnoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_down.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-    </buttonlist>
-
-
-
-
-    <!-- the buttonlist widget with a width of 70px -->
-    <buttonlist name="base_buttonlist_narrow">
-        <area>0,0,70,265</area>
-        <layout>vertical</layout>
-        <spacing>3</spacing>
-        <scrollstyle>free</scrollstyle>
-        <wrapstyle>items</wrapstyle>
-        <buttonarea>0,0,100%,97%</buttonarea>
-        
-        <statetype name="buttonitem">
-            <state name="active">
-                <imagetype name="buttonbackground" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,70,40</area>
-                </imagetype>
-                
-                <textarea name="buttontext">
-                    <area>8,5,54,30</area>
-                    <font>text</font>
-                    <cutdown>yes</cutdown>
-                    <align>left,vcenter</align>
-                </textarea>
-
-                <statetype name="buttoncheck">
-                    <position>33,5</position>
-                    <state type="off">
-                        <imagetype name="checkoff">
-                            <filename>images/widgets/checkbox_off.png</filename>
-                        </imagetype>
-                    </state>
-                    <state type="half">
-                        <imagetype name="checkhalf">
-                            <filename>images/widgets/checkbox_half.png</filename>
-                        </imagetype>
-                    </state>
-                    <state type="full">
-                        <imagetype name="checkfull">
-                            <filename>images/widgets/checkbox_full.png</filename>
-                        </imagetype>
-                    </state>
-                </statetype>
-                
-                <imagetype name="buttonarrow" from="base_arrow_active">
-                    <position>42,6</position>
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-            
-            <state name="inactive" from="active" />
-
-            <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,70,40</area>
-                </imagetype>
-                <imagetype name="buttonarrow" from="base_arrow_selectedactive">
-                    <position>42,6</position>
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-
-            <state name="selectedinactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,70,40</area>
-                </imagetype>
-                <textarea name="buttontext">
-                    <font>text_inactive</font>
-                </textarea>
-                <imagetype name="buttonarrow" from="base_arrow_selectedinactive">
-                    <position>42,6</position>
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <statetype name="upscrollarrow">
-            <position>10,97%</position>
-            <state type="off">
-                <imagetype name="upon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_up.png</filename>
-                </imagetype>
-            </state>
-            <state type="full">
-                <imagetype name="upoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_up.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <statetype name="downscrollarrow">
-            <position>35,97%</position>
-            <state type="off">
-                <imagetype name="dnon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_down.png</filename>
-                </imagetype>
-            </state>
-            <state type="full">
-                <imagetype name="dnoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_down.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-    </buttonlist>
 
 
 
 
     <!-- Base definition of a buttonlist in 'selector' configuration with a width
-         of 220px. This is pretty much the same as the base_buttonlist -->
+         of 200px. This is pretty much the same as the base_buttonlist -->
     <buttonlist name="base_selector">
-        <area>0,0,200,39</area>
+        <area>0,0,200,36</area>
         <layout>horizontal</layout>
         <buttonarea>0,0,100%,100%</buttonarea>
-        
         <statetype name="buttonitem">
             <state name="active">
-                <imagetype name="buttonbackground" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,200,40</area>
-                </imagetype>
-                <textarea name="buttontext">
-                    <area>8,5,184,30</area>
-                    <font>text</font>
-                    <cutdown>yes</cutdown>
-                    <align>left,vcenter</align>
+                <area>0,0,200,36</area>
+                <shape name="background" from="base_button_shape_active" />
+                <textarea name="buttontext" from="base_textarea">
+                    <area>8,0,100%-16,36</area>
+                    <scroll direction="horizontal" />
                 </textarea>
             </state>
             <state name="inactive" from="active" />
             <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,200,40</area>
-                </imagetype>
+                <area>0,0,200,36</area>
+                <shape name="background" from="base_button_shape_selectedactive" />
             </state>
-            <state name="selectedinactive" from="active"/>
+            <state name="selectedinactive" from="active" />
         </statetype>
         
         <statetype name="downscrollarrow">
-            <position>202,-2</position>
+            <position>100%+2,-2</position>
             <state type="off">
-                <imagetype name="dnon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_right.png</filename>
+                <imagetype name="dnon" from="base_icon_inactive">
+                    <filename>images/icons/button_arrow_right.png</filename>
                 </imagetype>
             </state>
             <state type="full">
-                <imagetype name="dnoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_right.png</filename>
+                <imagetype name="dnoff" from="base_icon_selected">
+                    <filename>images/icons/button_arrow_right.png</filename>
                 </imagetype>
             </state>
         </statetype>
         
         <statetype name="upscrollarrow">
-            <position>203,14</position>
+            <position>100%+3,13</position>
             <state type="off">
-                <imagetype name="upon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_left.png</filename>
+                <imagetype name="upon" from="base_icon_inactive">
+                    <filename>images/icons/button_arrow_left.png</filename>
                 </imagetype>
             </state>
             <state type="full">
-                <imagetype name="upoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_left.png</filename>
+                <imagetype name="upoff" from="base_icon_selected">
+                    <filename>images/icons/button_arrow_left.png</filename>
                 </imagetype>
             </state>
         </statetype>
@@ -844,59 +368,20 @@
 
     <!-- Base definition of a buttonlist in wide 'selector' 
          configuration with a width of 350px -->
-    <buttonlist name="base_selector_wide">
-        <area>0,0,350,40</area>
-        <layout>horizontal</layout>
-        <buttonarea>0,0,100%,100%</buttonarea>
-        
+    <buttonlist name="base_selector_wide" from="base_selector">
+        <area>0,0,350,36</area>
         <statetype name="buttonitem">
             <state name="active">
-                <imagetype name="buttonbackground" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,350,40</area>
-                </imagetype>
-                <textarea name="buttontext">
-                    <area>8,5,334,30</area>
-                    <font>text</font>
-                    <cutdown>yes</cutdown>
-                    <align>left,vcenter</align>
-                </textarea>
+                <area>0,0,350,36</area>
             </state>
-            <state name="inactive" from="active" />
-            <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,350,40</area>
-                </imagetype>
+            <state name="inactive">
+                <area>0,0,350,36</area>
             </state>
-            <state name="selectedinactive" from="active"/>
-        </statetype>
-        
-        <statetype name="downscrollarrow">
-            <position>352,-2</position>
-            <state type="off">
-                <imagetype name="dnon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
+            <state name="selectedactive">
+                <area>0,0,350,36</area>
             </state>
-            <state type="full">
-                <imagetype name="dnoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-        
-        <statetype name="upscrollarrow">
-            <position>353,14</position>
-            <state type="off">
-                <imagetype name="upon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_left.png</filename>
-                </imagetype>
-            </state>
-            <state type="full">
-                <imagetype name="upoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_left.png</filename>
-                </imagetype>
+            <state name="selectedinactive">
+                <area>0,0,350,36</area>
             </state>
         </statetype>
     </buttonlist>
@@ -906,59 +391,20 @@
 
     <!-- Base definition of a buttonlist in wide 'selector' 
          configuration with a width of 650px -->
-    <buttonlist name="base_selector_very_wide">
-        <area>0,0,650,40</area>
-        <layout>horizontal</layout>
-        <buttonarea>0,0,100%,100%</buttonarea>
-        
+    <buttonlist name="base_selector_very_wide" from="base_selector">
+        <area>0,0,650,36</area>
         <statetype name="buttonitem">
             <state name="active">
-                <imagetype name="buttonbackground" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,650,40</area>
-                </imagetype>
-                <textarea name="buttontext">
-                    <area>8,5,634,30</area>
-                    <font>text</font>
-                    <cutdown>yes</cutdown>
-                    <align>left,vcenter</align>
-                </textarea>
+                <area>0,0,650,36</area>
             </state>
-            <state name="inactive" from="active"/>
-            <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,650,40</area>
-                </imagetype>
+            <state name="inactive">
+                <area>0,0,650,36</area>
             </state>
-            <state name="selectedinactive" from="active"/>
-        </statetype>
-        
-        <statetype name="downscrollarrow">
-            <position>652,-2</position>
-            <state type="off">
-                <imagetype name="dnon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
+            <state name="selectedactive">
+                <area>0,0,650,36</area>
             </state>
-            <state type="full">
-                <imagetype name="dnoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-        
-        <statetype name="upscrollarrow">
-            <position>653,14</position>
-            <state type="off">
-                <imagetype name="upon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_left.png</filename>
-                </imagetype>
-            </state>
-            <state type="full">
-                <imagetype name="upoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_left.png</filename>
-                </imagetype>
+            <state name="selectedinactive">
+                <area>0,0,650,36</area>
             </state>
         </statetype>
     </buttonlist>
@@ -968,19 +414,17 @@
 
     <!-- button widget with a width 150px -->
     <button name="base_button">
-        <area>0,0,150,40</area>
+        <area>0,0,150,36</area>
         
         <!-- states that the buttonlist can have -->
         <statetype name="buttonstate">
             
             <!-- an unselected, active button -->
             <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,150,40</area>
-                </imagetype>
+                <area>0,0,150,36</area>
+                <shape name="background" from="base_button_shape_active" />
                 <textarea name="text">
-                    <area>8,5,134,30</area>
+                    <area>8,0,100%-16,36</area>
                     <align>allcenter</align>
                     <font>text</font>
                     <font state="selected">text</font>
@@ -990,21 +434,20 @@
             
             <!-- a selected, active button -->
             <state name="selected" from="active">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,150,40</area>
-                </imagetype>
+                <area>0,0,150,36</area>
+                <shape name="background" from="base_button_shape_selected" />
             </state>
             
             <!-- unselected or a greyed out button -->
-            <state name="disabled" from="active" />
+            <state name="disabled" from="active">
+                <area>0,0,150,36</area>
+                <shape name="background" from="base_button_shape_disabled" />
+            </state>
             
             <!-- the down / pushed in state of a button -->
             <state name="pushed" from="active">
-                <imagetype name="background" from="base_image_pushed">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,150,40</area>
-                </imagetype>
+                <area>0,0,150,36</area>
+                <shape name="background" from="base_button_shape_pushed" />
             </state>
         </statetype>
     </button>
@@ -1013,342 +456,111 @@
 
 
     <!-- button widget with a width of 300px -->
-    <button name="base_button_wide">
-        <area>0,0,300,40</area>
-        
+    <button name="base_button_wide" from="base_button">
+        <area>0,0,300,36</area>
         <statetype name="buttonstate">
             <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,300,40</area>
-                </imagetype>
-                <textarea name="text">
-                    <area>8,5,284,30</area>
-                    <align>allcenter</align>
-                    <font>text</font>
-                    <font state="selected">text</font>
-                    <font state="disabled">text_inactive</font>
-                </textarea>
+                <area>0,0,300,36</area>
             </state>
-
-            <state name="selected" from="active">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,300,40</area>
-                </imagetype>
+            <state name="selected">
+                <area>0,0,300,36</area>
             </state>
-
-            <state name="disabled" from="active" />
-
-            <state name="pushed" from="active">
-                <imagetype name="background" from="base_image_pushed">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,300,40</area>
-                </imagetype>
+            <state name="disabled">
+                <area>0,0,300,36</area>
+            </state>
+            <state name="pushed">
+                <area>0,0,300,36</area>
             </state>
         </statetype>
     </button>
 
-
-
-
-    <!-- button widget with a width of 70px -->
-    <button name="base_button_narrow">
-        <area>0,0,70,40</area>
-        
-        <statetype name="buttonstate">
-            <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,70,40</area>
-                </imagetype>
-            </state>
-
-            <state name="selected" from="active">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,70,40</area>
-                </imagetype>
-            </state>
-
-            <state name="disabled" from="active" />
-
-            <state name="pushed" from="active">
-                <imagetype name="background" from="base_image_pushed">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,70,40</area>
-                </imagetype>
-            </state>
-        </statetype>
-    </button>
-
-
-
-
-    <!-- button widget that looks like a checkbox with a left arrow -->
-    <button name="base_button_prev">
-        <area>0,0,40,40</area>
-        
-        <statetype name="buttonstate">
-            <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,40,40</area>
-                </imagetype>
-                <imagetype name="arrow" from="base_arrow_active">
-                    <position>6,1</position>
-                    <filename>images/shared/arrow_left.png</filename>
-                </imagetype>
-            </state>
-            
-            <state name="selected" from="active">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,40,40</area>
-                </imagetype>
-                <imagetype name="arrow" from="base_arrow_selected">
-                    <filename>images/shared/arrow_left.png</filename>
-                </imagetype>
-            </state>
-            
-            <state name="disabled" from="active" />
-            <state name="pushed" from="active">
-                <imagetype name="background" from="base_image_pushed">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,40,40</area>
-                </imagetype>
-                <imagetype name="arrow" from="base_arrow_pushed">
-                    <filename>images/shared/arrow_left.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-    </button>
-
-
-
-
-    <!-- button widget that looks like a checkbox with a right arrow -->
-    <button name="base_button_next">
-        <area>0,0,40,40</area>
-        
-        <statetype name="buttonstate">
-            <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,40,40</area>
-                </imagetype>
-                <imagetype name="arrow" from="base_arrow_active">
-                    <position>6,1</position>
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-            
-            <state name="selected" from="active">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,40,40</area>
-                </imagetype>
-                <imagetype name="arrow" from="base_arrow_selected">
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-            
-            <state name="disabled" from="active" />
-            <state name="pushed" from="active">
-                <imagetype name="background" from="base_image_pushed">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,40,40</area>
-                </imagetype>
-                <imagetype name="arrow" from="base_arrow_pushed">
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-    </button>
-
-
-
-
-    <!-- the textare widget that shows only text -->
-    <textarea name="base_textarea">
-        <area>0,0,30,30</area>
-        <font>text</font>
-        <multiline>no</multiline>
-        <align>left,vcenter</align>
-    </textarea>
 
 
 
 
     <!-- textedit widget with a width 375px -->
     <textedit name="base_textedit">
-        <area>0,0,375,40</area>
-        
+        <area>0,0,375,36</area>
         <statetype name="background">
             <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,375,40</area>
-                </imagetype>
+                <area>0,0,375,36</area>
+                <shape name="background" from="base_button_shape_active" />
             </state>
             <state name="selected">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,375,40</area>
-                </imagetype>
+                <area>0,0,375,36</area>
+                <shape name="background" from="base_button_shape_selected" />
             </state>
             <state name="inactive">
-                <imagetype name="background" from="base_image_inactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,375,40</area>
-                </imagetype>
+                <area>0,0,375,36</area>
+                <shape name="background" from="base_button_shape_inactive" />
             </state>
         </statetype>
-        
         <imagetype name="cursor">
             <shape name="cursor_shape">
-                <area>0,-2,2,30</area>
+                <area>0,2,2,20</area>
                 <type>box</type>
                 <fill color="#FFFFFF" alpha="240" />
             </shape>
         </imagetype>
-        
-        <textarea name="text">
-            <area>8,0,365,40</area>
-            <font>text</font>
-            <align>left,vcenter</align>
+        <textarea name="text" from="base_textarea">
+            <area>8,0,100%-8,36</area>
         </textarea>
     </textedit>
 
 
 
 
-    <!-- textedit widget with a width 375px -->
+    <!-- textedit widget with a width 480px -->
     <textedit name="base_textedit_wide" from="base_textedit">
-        <area>0,0,650,40</area>
-        
+        <area>0,0,480,36</area>
         <statetype name="background">
             <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,650,40</area>
-                </imagetype>
+                <area>0,0,480,36</area>
             </state>
             <state name="selected">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,650,40</area>
-                </imagetype>
+                <area>0,0,480,36</area>
             </state>
             <state name="inactive">
-                <imagetype name="background" from="base_image_inactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,650,40</area>
-                </imagetype>
+                <area>0,0,480,36</area>
             </state>
         </statetype>
-        
-        <textarea name="text">
-            <area>8,0,634,40</area>
-            <font>text</font>
-            <align>left,vcenter</align>
-        </textarea>
-    </textedit>
-    
-    
-    
-    
-    <!-- textedit widget with a width 200px -->
-    <textedit name="base_textedit_narrow" from="base_textedit">
-        <area>0,0,200,40</area>
-        
-        <statetype name="background">
-            <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,200,40</area>
-                </imagetype>
-            </state>
-            <state name="selected">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,200,40</area>
-                </imagetype>
-            </state>
-            <state name="inactive">
-                <imagetype name="background" from="base_image_inactive">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,200,40</area>
-                </imagetype>
-            </state>
-        </statetype>
-        
-        <textarea name="text">
-            <area>8,0,195,40</area>
-            <font>text</font>
-            <align>left,vcenter</align>
-        </textarea>
     </textedit>
 
 
-
-
-    <!-- Multiline textedit widget with a width 375px -->
-    <textedit name="base_multiline_textedit" from="base_textedit">
-        <area>0,0,375,90</area>
-        
-		<statetype name="background">
-            <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,375,90</area>
-                </imagetype>
-            </state>
-            <state name="selected">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,375,90</area>
-                </imagetype>
-            </state>
-            <state name="inactive">
-                <imagetype name="background" from="base_image_inactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,375,90</area>
-                </imagetype>
-            </state>
-        </statetype>
-        
-        <textarea name="text">
-		    <area>10,0,355,90</area>
-            <multiline>true</multiline>
-        </textarea>
-    </textedit>
-
-
-
+    
+    
 
     <!-- a search button widget -->
-    <button name="base_searchbutton">
-        <area>0,0,32,32</area>
+    <button name="base_searchbutton" from="base_button">
+        <area>0,0,36,36</area>
         <statetype name="buttonstate">
+            <area>0,0,36,36</area>
             <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,32,32</area>
+                <area>0,0,36,36</area>
+                <imagetype name="image" from="base_image_active">
+                    <filename>images/icons/search.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
-            <state name="selected" from="active">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,32,32</area>
+            <state name="selected">
+                <area>0,0,36,36</area>
+                <imagetype name="image" from="base_image_selected">
+                    <filename>images/icons/search.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
-            <state name="disabled" from="active" />
-            <state name="pushed" from="active">
-                <imagetype name="background" from="base_image_pushed">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,32,32</area>
-                    <alpha>200</alpha>
+            <state name="disabled">
+                <area>0,0,36,36</area>
+                <imagetype name="image" from="base_image_disabled">
+                    <filename>images/icons/search.png</filename>
+                    <area>3,3,30,30</area>
+                </imagetype>
+            </state>
+            <state name="pushed">
+                <area>0,0,36,36</area>
+                <imagetype name="image" from="base_image_pushed">
+                    <filename>images/icons/search.png</filename>
+                    <area>3,3,30,30</area>
                 </imagetype>
             </state>
         </statetype>
@@ -1359,25 +571,24 @@
 
     <!-- checkbox widget -->
     <checkbox name="base_checkbox">
-        <area>0,0,30,30</area>
+        <area>0,0,36,36</area>
         
         <!-- Active is a functional checkbox which is not highlighted. 
              Selected is a functional, highlighted checkbox. 
              Disabled is a non-functional "greyed out" checkbox -->
         <statetype name="background">
             <state name="active">
-                <imagetype name="background" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,30,30</area>
-                </imagetype>
+                <area>0,0,36,36</area>
+                <shape name="background" from="base_button_shape_active" />
             </state>
             <state name="selected">
-                <imagetype name="background" from="base_image_selected">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,30,30</area>
-                </imagetype>
+                <area>0,0,36,36</area>
+                <shape name="background" from="base_button_shape_selected"/>
             </state>
-            <state name="disabled" />
+            <state name="disabled">
+                <area>0,0,36,36</area>
+                <shape name="background" from="base_button_shape_disabled"/>
+            </state>
         </statetype>
         
         <!-- three states to indicate the fill status of the checkbox. 
@@ -1385,20 +596,23 @@
              unfilled checkbox. Half is a half-checked box. 
              Full is a fully checked checkbox -->
         <statetype name="checkstate">
-            <area>0,0,30,30</area>
+            <area>0,0,36,36</area>
             <state type="off">
-                <imagetype name="background">
-                    <filename>images/widgets/checkbox_off.png</filename>
+                <imagetype name="checkstate_image" from="base_image_selected">
+                    <area>5,5,26,26</area>
+                    <filename>images/icons/button_checkbox_off.png</filename>
                 </imagetype>
             </state>
             <state type="half">
-                <imagetype name="background">
-                    <filename>images/widgets/checkbox_half.png</filename>
+                <imagetype name="checkstate_image" from="base_image_selected">
+                    <area>5,5,26,26</area>
+                    <filename>images/icons/button_checkbox_half.png</filename>
                 </imagetype>
             </state>
             <state type="full">
-                <imagetype name="mark">
-                    <filename>images/widgets/checkbox_full.png</filename>
+                <imagetype name="checkstate_image" from="base_image_selected">
+                    <area>5,5,26,26</area>
+                    <filename>images/icons/button_checkbox_full.png</filename>
                 </imagetype>
             </state>
         </statetype>
@@ -1409,30 +623,27 @@
 
     <!-- Spinbox widget with a width 90px -->
     <spinbox name="base_spinbox">
-        <area>0,0,70,40</area>
+        <area>0,0,70,36</area>
         <layout>horizontal</layout>
         <statetype name="buttonitem">
             
             <!-- available but not highlighted -->
             <state name="active">
-                <imagetype name="buttonbackground" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,70,40</area>
-                </imagetype>
-                <textarea name="buttontext">
-                    <area>8,5,54,30</area>
+                <area>0,0,70,36</area>
+                <shape name="background" from="base_button_shape_active" />
+                <textarea name="buttontext" from="base_textarea">
+                    <area>8,0,100%-8,36</area>
                     <font>text</font>
-                    <cutdown>yes</cutdown>
-                    <align>right,vcenter</align>
+                    <scroll direction="horizontal" />
                 </textarea>
             </state>
             
+            <state name="inactive" from="active" />
+                
             <!-- available and highlighted -->
             <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,70,40</area>
-                </imagetype>
+                <area>0,0,70,36</area>
+                <shape name="background" from="base_button_shape_selectedactive" />
             </state>
             
             <!-- unavailable and unhighlighted -->
@@ -1440,29 +651,29 @@
         </statetype>
 
         <statetype name="downscrollarrow">
-            <position>72,-2</position>
+            <position>100%+2,0</position>
             <state type="off">
-                <imagetype name="dnon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_right.png</filename>
+                <imagetype name="dnon" from="base_icon_inactive">
+                    <filename>images/icons/button_arrow_right.png</filename>
                 </imagetype>
             </state>
             <state type="full">
-                <imagetype name="dnoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_right.png</filename>
+                <imagetype name="dnoff" from="base_icon_selected">
+                    <filename>images/icons/button_arrow_right.png</filename>
                 </imagetype>
             </state>
         </statetype>
         
         <statetype name="upscrollarrow">
-            <position>73,14</position>
+            <position>100%+3,13</position>
             <state type="off">
-                <imagetype name="upon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_left.png</filename>
+                <imagetype name="upon" from="base_icon_inactive">
+                    <filename>images/icons/button_arrow_left.png</filename>
                 </imagetype>
             </state>
             <state type="full">
-                <imagetype name="upoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_left.png</filename>
+                <imagetype name="upoff" from="base_icon_selected">
+                    <filename>images/icons/button_arrow_left.png</filename>
                 </imagetype>
             </state>
         </statetype>
@@ -1472,57 +683,20 @@
 
 
     <!-- Spinbox widget with a width 350px -->
-    <spinbox name="base_spinbox_wide">
-        <area>0,0,350,40</area>
-        <layout>horizontal</layout>
-        
+    <spinbox name="base_spinbox_wide" from="base_spinbox">
+        <area>0,0,350,36</area>
         <statetype name="buttonitem">
             <state name="active">
-                <imagetype name="buttonbackground" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,350,40</area>
-                </imagetype>
-                <textarea name="buttontext">
-                    <area>8,5,334,30</area>
-                    <font>text</font>
-                    <cutdown>yes</cutdown>
-                    <align>left,vcenter</align>
-                </textarea>
+                <area>0,0,350,36</area>
             </state>
-            <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,350,40</area>
-                </imagetype>
+            <state name="inactive">
+                <area>0,0,650,36</area>
             </state>
-            <state name="selectedinactive" from="active"/>
-        </statetype>
-
-        <statetype name="downscrollarrow">
-            <position>352,-2</position>
-            <state type="off">
-                <imagetype name="dnon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
+            <state name="selectedactive">
+                <area>0,0,350,36</area>
             </state>
-            <state type="full">
-                <imagetype name="dnoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-        
-        <statetype name="upscrollarrow">
-            <position>353,14</position>
-            <state type="off">
-                <imagetype name="upon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_left.png</filename>
-                </imagetype>
-            </state>
-            <state type="full">
-                <imagetype name="upoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_left.png</filename>
-                </imagetype>
+            <state name="selectedinactive">
+                <area>0,0,350,36</area>
             </state>
         </statetype>
     </spinbox>
@@ -1531,57 +705,20 @@
 
 
     <!-- Spinbox with a width of 650px -->
-    <spinbox name="base_spinbox_very_wide">
-        <area>0,0,650,40</area>
-        <layout>horizontal</layout>
-        
+    <spinbox name="base_spinbox_very_wide" from="base_spinbox">
+        <area>0,0,650,36</area>
         <statetype name="buttonitem">
             <state name="active">
-                <imagetype name="buttonbackground" from="base_image_active">
-                    <filename>images/widgets/widget_inactive.png</filename>
-                    <area>0,0,650,40</area>
-                </imagetype>
-                <textarea name="buttontext">
-                    <area>8,5,634,30</area>
-                    <font>text</font>
-                    <cutdown>yes</cutdown>
-                    <align>left,vcenter</align>
-                </textarea>
+                <area>0,0,650,36</area>
             </state>
-            <state name="selectedactive" from="active">
-                <imagetype name="buttonbackground" from="base_image_selectedactive">
-                    <filename>images/widgets/widget_active.png</filename>
-                    <area>0,0,650,40</area>
-                </imagetype>
+            <state name="inactive">
+                <area>0,0,650,36</area>
             </state>
-            <state name="selectedinactive" from="active"/>
-        </statetype>
-
-        <statetype name="downscrollarrow">
-            <position>652,-2</position>
-            <state type="off">
-                <imagetype name="dnon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
+            <state name="selectedactive">
+                <area>0,0,650,36</area>
             </state>
-            <state type="full">
-                <imagetype name="dnoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_right.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
-        
-        <statetype name="upscrollarrow">
-            <position>653,14</position>
-            <state type="off">
-                <imagetype name="upon" from="base_arrow_inactive">
-                    <filename>images/shared/arrow_left.png</filename>
-                </imagetype>
-            </state>
-            <state type="full">
-                <imagetype name="upoff" from="base_arrow_selectedactive">
-                    <filename>images/shared/arrow_left.png</filename>
-                </imagetype>
+            <state name="selectedinactive">
+                <area>0,0,650,36</area>
             </state>
         </statetype>
     </spinbox>
@@ -1593,7 +730,7 @@
          shows only the inactive stars -->
     <imagetype name="base_rating_background">
         <area>0,0,90,18</area>
-        <filename>images/widgets/rating/stars_background.png</filename>
+        <filename>images/icons/ratings/stars_bg.png</filename>
         <preserveaspect>true</preserveaspect>
     </imagetype>
 
@@ -1607,52 +744,52 @@
         <state name="0" />
         <state name="1">
             <imagetype name="stars">
-                <filename>images/widgets/rating/0.5_star.png</filename>
+                <filename>images/icons/ratings/0.5_star.png</filename>
             </imagetype>
         </state>
         <state name="2">
             <imagetype name="stars">
-                <filename>images/widgets/rating/1.0_star.png</filename>
+                <filename>images/icons/ratings/1.0_star.png</filename>
             </imagetype>
         </state>
         <state name="3">
             <imagetype name="stars">
-                <filename>images/widgets/rating/1.5_stars.png</filename>
+                <filename>images/icons/ratings/1.5_stars.png</filename>
             </imagetype>
         </state>
         <state name="4">
             <imagetype name="stars">
-                <filename>images/widgets/rating/2.0_stars.png</filename>
+                <filename>images/icons/ratings/2.0_stars.png</filename>
             </imagetype>
         </state>
         <state name="5">
             <imagetype name="stars">
-                <filename>images/widgets/rating/2.5_stars.png</filename>
+                <filename>images/icons/ratings/2.5_stars.png</filename>
             </imagetype>
         </state>
         <state name="6">
             <imagetype name="stars">
-                <filename>images/widgets/rating/3.0_stars.png</filename>
+                <filename>images/icons/ratings/3.0_stars.png</filename>
             </imagetype>
         </state>
         <state name="7">
             <imagetype name="stars">
-                <filename>images/widgets/rating/3.5_stars.png</filename>
+                <filename>images/icons/ratings/3.5_stars.png</filename>
             </imagetype>
         </state>
         <state name="8">
             <imagetype name="stars">
-                <filename>images/widgets/rating/4.0_stars.png</filename>
+                <filename>images/icons/ratings/4.0_stars.png</filename>
             </imagetype>
         </state>
         <state name="9">
             <imagetype name="stars">
-                <filename>images/widgets/rating/4.5_stars.png</filename>
+                <filename>images/icons/ratings/4.5_stars.png</filename>
             </imagetype>
         </state>
         <state name="10">
             <imagetype name="stars">
-                <filename>images/widgets/rating/5.0_stars.png</filename>
+                <filename>images/icons/ratings/5.0_stars.png</filename>
             </imagetype>
         </state>
     </statetype>
@@ -1664,7 +801,7 @@
         that shows only the inactive stars-->
     <imagetype name="base_parentallevel_background">
         <area>0,0,72,18</area>
-        <filename>images/widgets/parentallevel/background.png</filename>
+        <filename>images/icons/ratings/parentallevel_bg.png</filename>
         <preserveaspect>true</preserveaspect>
     </imagetype>
 
@@ -1676,115 +813,64 @@
         <area>0,0,72,18</area>
         <state name="Lowest">
             <imagetype name="icon">
-                <filename>images/widgets/parentallevel/lowest.png</filename>
+                <filename>images/icons/ratings//parentallevel_1.png</filename>
             </imagetype>
         </state>
         <state name="Low" from="Lowest">
             <imagetype name="icon">
-                <filename>images/widgets/parentallevel/low.png</filename>
+                <filename>images/icons/ratings//parentallevel_2.png</filename>
             </imagetype>
         </state>
         <state name="Medium" from="Lowest">
             <imagetype name="icon">
-                <filename>images/widgets/parentallevel/medium.png</filename>
+                <filename>images/icons/ratings//parentallevel_3.png</filename>
             </imagetype>
         </state>
         <state name="High" from="Lowest">
             <imagetype name="icon">
-                <filename>images/widgets/parentallevel/high.png</filename>
+                <filename>images/icons/ratings//parentallevel_4.png</filename>
             </imagetype>
         </state>
     </statetype>
 
 
 
-
-    <!-- Progressbar widget with a width of 500px and a height of 40px -->
+    <!-- Progressbar widget with a width of 500px -->
     <progressbar name="base_progressbar">
-        <area>0,0,500,40</area>
+        <area>0,0,500,20</area>
         <layout>horizontal</layout>
         <style>reveal</style>
         
         <!-- the background when the progressbar has 0% -->
-        <imagetype name="background" from="base_image_active">
-            <filename>images/widgets/progressbar/progressbar_inactive.png</filename>
-            <area>0,0,500,40</area>
-        </imagetype>
+        <shape name="background" from="base_button_shape_active" />
         
         <!-- the image when the progressbar has 100% -->
         <imagetype name="progressimage" from="base_image_selected">
-            <filename>images/widgets/progressbar/progressbar_active.png</filename>
-            <area>0,0,500,40</area>
-        </imagetype>
-    </progressbar>
-
-
-
-
-    <!-- Progressbar widget with a width of 500px and only a height of 20px -->
-    <progressbar name="base_progressbar_flat">
-        <area>0,0,500,20</area>
-        <layout>horizontal</layout>
-        <style>reveal</style>
-        <imagetype name="background" from="base_image_active">
-            <filename>images/widgets/progressbar/progressbar_inactive.png</filename>
-            <area>0,0,500,20</area>
-        </imagetype>
-        <imagetype name="progressimage" from="base_image_selected">
-            <filename>images/widgets/progressbar/progressbar_active.png</filename>
+            <filename>images/icons/progressbar.png</filename>
             <area>0,0,500,20</area>
         </imagetype>
     </progressbar>
-
-
-
-
-    <!-- Progressbar widget with a width of 800px and only a height of 20px -->
-    <progressbar name="base_progressbar_wide_flat">
-        <area>0,0,800,20</area>
-        <layout>horizontal</layout>
-        <style>reveal</style>
-        <imagetype name="background" from="base_image_active">
-            <filename>images/widgets/progressbar/progressbar_inactive.png</filename>
-            <area>0,0,800,20</area>
-        </imagetype>
-        <imagetype name="progressimage" from="base_image_selected">
-            <filename>images/widgets/progressbar/progressbar_active.png</filename>
-            <area>0,0,800,20</area>
-        </imagetype>
-    </progressbar>
-
-
-
-
-    <!-- the name of the screen that is shown 
+    
+    
+    
+    <!-- Shows the clock and the name of the screen  
          in the top left corner of each screen -->
     <textarea name="base_heading">
-        <shape name="heading_background" from="base_background_shape">
-            <area>-4,-4,240,36</area>
-        </shape>
-        <textarea name="text" from="base_textarea">
-            <area>0,0,236,30</area>
-            <font>text</font>
-            <align>allcenter</align>
-        </textarea>
-    </textarea>
-
-
-
-
-    <!-- The clock that is shown at the top right of each screen -->
-    <textarea name="base_clock">
-        <shape name="clock_background" from="base_background_shape">
-            <area>0,-4,244,36</area>
-        </shape>
-        <clock name="text">
-            <area>0,0,244,30</area>
+        <imagetype name="header_background">
+            <area>-1,-1,560,50</area>
+            <filename>images/media/header_left.png</filename>
+        </imagetype>
+        <clock name="clock">
+            <area>10,0,200,30</area>
             <font>text</font>
             <template>%DATE%, %TIME%</template>
-            <align>allcenter</align>
-            <alpha>255</alpha>
+            <align>left,vcenter</align>
         </clock>
+        <textarea name="text" from="base_textarea">
+            <area>215,0,300,30</area>
+            <align>allcenter</align>
+            <scroll direction="horizontal" />
+        </textarea>
     </textarea>
 
 
@@ -1822,23 +908,24 @@
 
         <!-- the background image of the popup dialog box -->
         <shape name="dialog_background" from="base_background_shape_dark">
-            <area>450,130,380,428</area>
+            <area>450,130,380,388</area>
         </shape>
 
-        <!-- background image that is shown behind the message text -->
-        <imagetype name="message_background_overlay" from="base_popup_background">
-            <area>465,145,350,90</area>
-        </imagetype>
         <textarea name="messagearea" from="base_textarea">
-            <area>485,145,320,90</area>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
+            <area>465,140,350,60</area>
+            <value>Search Term</value>
             <align>allcenter</align>
+            <multiline>yes</multiline>
+            <scroll direction="vertical"/>
         </textarea>
+
+        <shape name="messagearea_separator" from="base_background_shape">
+            <area>451,210,378,1</area>
+        </shape>
 
         <!-- the list of buttons -->
         <buttonlist name="list" from="base_buttonlist">
-            <area>465,275,350,268</area>
+            <area>465,225,350,275</area>
             <drawfrombottom>yes</drawfrombottom>
             <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
@@ -1846,24 +933,28 @@
             <statetype name="buttonitem">
                 <state name="active">
                     <textarea name="buttontext">
-                        <area>0,6,350,30</area>
+                        <area>8,0,100%-16,36</area>
+                        <scroll direction="horizontal" />
                         <align>allcenter</align>
                     </textarea>
                 </state>
                 <state name="selectedinactive">
                     <textarea name="buttontext">
-                        <area>0,6,350,30</area>
+                        <area>8,0,100%-16,36</area>
+                        <scroll direction="horizontal" />
                         <align>allcenter</align>
                     </textarea>
                 </state>
                 <state name="selectedactive">
                     <textarea name="buttontext">
-                        <area>0,6,350,30</area>
+                        <area>8,0,100%-16,36</area>
+                        <scroll direction="horizontal" />
                         <align>allcenter</align>
                     </textarea>
                 </state>
             </statetype>
         </buttonlist>
+
     </window>
 
 
@@ -1894,23 +985,23 @@
 
         <!-- the background image of the popup dialog box -->
         <shape name="dialog_background" from="base_background_shape_dark">
-            <area>450,130,380,428</area>
+            <area>450,130,380,388</area>
         </shape>
 
-        <!-- background image that is shown behind the message text -->
-        <imagetype name="message_background_overlay" from="base_popup_background">
-            <area>465,145,350,90</area>
-        </imagetype>
         <textarea name="messagearea" from="base_textarea">
-            <area>485,145,320,90</area>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
+            <area>465,140,350,60</area>
             <align>allcenter</align>
+            <multiline>yes</multiline>
+            <scroll direction="vertical"/>
         </textarea>
+
+        <shape name="messagearea_separator" from="base_background_shape">
+            <area>451,210,378,1</area>
+        </shape>
 
         <!-- the list of buttons -->
         <buttonlist name="list" from="base_buttonlist">
-            <area>465,275,350,268</area>
+            <area>465,225,350,275</area>
             <drawfrombottom>yes</drawfrombottom>
             <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
@@ -1918,26 +1009,29 @@
             <statetype name="buttonitem">
                 <state name="active">
                     <textarea name="buttontext">
-                        <area>0,6,350,30</area>
+                        <area>8,0,100%-16,36</area>
+                        <scroll direction="horizontal" />
                         <align>allcenter</align>
                     </textarea>
                 </state>
                 <state name="selectedinactive">
                     <textarea name="buttontext">
-                        <area>0,6,350,30</area>
+                        <area>8,0,100%-16,36</area>
+                        <scroll direction="horizontal" />
                         <align>allcenter</align>
                     </textarea>
                 </state>
                 <state name="selectedactive">
                     <textarea name="buttontext">
-                        <area>0,6,350,30</area>
+                        <area>8,0,100%-16,36</area>
+                        <scroll direction="horizontal" />
                         <align>allcenter</align>
                     </textarea>
                 </state>
             </statetype>
         </buttonlist>
-    </window>
 
+    </window>
 
 
 
@@ -1963,26 +1057,25 @@
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
-            <area>350,275,580,165</area>
+            <area>350,300,580,95</area>
         </shape>
 
+        <textarea name="message" from="base_textarea">
+            <area>365,310,550,60</area>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+            <scroll direction="vertical"/>
+        </textarea>
+
         <imagetype name="animation">
-            <area>415,340,33,33</area>
-            <filepattern low="0" high="11">images/widgets/busy/busy_%1.png</filepattern>
-            <delay>100</delay>
+            <area>610,370,60,10</area>
+            <filepattern low="1" high="5">images/icons/animation/busy_%1.png</filepattern>
+            <delay>200</delay>
         </imagetype>
 
-        <textarea name="message" from="base_textarea">
-            <area>480,295,390,125</area>
-            <font>text</font>
-            <align>allcenter</align>
-            <cutdown>yes</cutdown>
-            <multiline>yes</multiline>
-        </textarea>
     </window>
 
 
-    
     
     <!-- Shows a progressbar when mythtv is busy doing stuff -->
     <window name="MythProgressDialog">
@@ -2006,31 +1099,30 @@
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
-            <area>370,285,540,150</area>
+            <area>375,285,530,135</area>
         </shape>
 
-        <!-- the title of the dialog -->
         <textarea name="message" from="base_textarea">
-            <area>390,305,500,30</area>
-            <font>text</font>
+            <area>390,300,500,60</area>
             <align>allcenter</align>
+            <multiline>yes</multiline>
+            <scroll direction="vertical"/>
         </textarea>
 
-        <!-- separates the title and the progress bar -->
-        <shape name="title_separator" from="base_separator_shape">
-            <area>390,355,500,1</area>
+        <shape name="message_separator" from="base_background_shape">
+            <area>376,365,528,1</area>
         </shape>
 
         <progressbar name="progressbar" from="base_progressbar">
-            <position>390,375</position>
+            <position>390,380</position>
         </progressbar>
         <textarea name="progresstext" from="base_textarea">
-            <area>390,375,500,40</area>
+            <area>390,381,500,20</area>
             <align>allcenter</align>
             <value>0%</value>
         </textarea>
-    </window>
 
+    </window>
 
 
 
@@ -2057,31 +1149,30 @@
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
-            <area>320,260,640,200</area>
+            <area>320,295,640,137</area>
         </shape>
 
-        <!-- the title of the dialog -->
         <textarea name="message" from="base_textarea">
-            <area>340,270,600,100</area>
+            <area>335,300,610,60</area>
             <align>allcenter</align>
             <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
+            <scroll direction="vertical"/>
         </textarea>
 
-        <shape name="message_separator" from="base_separator_shape">
-            <area>340,380,600,1</area>
+        <shape name="message_separator" from="base_background_shape">
+            <area>321,365,638,1</area>
         </shape>
 
         <button name="ok" from="base_button">
-            <position>565,400</position>
+            <position>570,380</position>
             <value>Ok</value>
         </button>
         <button name="cancel" from="base_button">
-            <position>755,400</position>
+            <position>735,380</position>
             <value>Cancel</value>
         </button>
-    </window>
 
+    </window>
 
 
 
@@ -2104,37 +1195,40 @@
             </section>
         </animation>
         
-        <shape name="darken_background" from="base_darken_background"/>
+        <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
-            <area>350,265,580,205</area>
+            <area>437,245,405,212</area>
         </shape>
 
-        <!-- the title of the dialog -->
         <textarea name="message" from="base_textarea">
-            <area>375,277,530,50</area>
+            <area>452,255,375,60</area>
             <align>allcenter</align>
-            <cutdown>yes</cutdown>
+            <multiline>yes</multiline>
+            <scroll direction="vertical"/>
         </textarea>
+        <shape name="message_separator" from="base_background_shape">
+            <area>438,325,403,1</area>
+        </shape>
 
         <textedit name="input" from="base_textedit">
-            <position>452,334</position>
+            <position>452,340</position>
         </textedit>
 
-        <shape name="input_separator" from="base_separator_shape">
-            <area>375,390,530,1</area>
+        <shape name="button_separator" from="base_background_shape">
+            <area>438,390,403,1</area>
         </shape>
 
         <button name="ok" from="base_button">
-            <position>440,410</position>
-            <value>Ok</value>
+            <position>485,405</position>
+            <value>OK</value>
         </button>
         <button name="cancel" from="base_button">
-            <position>688,410</position>
+            <position>650,405</position>
             <value>Cancel</value>
         </button>
-    </window>
 
+    </window>
 
 
 
@@ -2156,77 +1250,74 @@
                 <zoom start="100" end="50" easingcurve="InQuart"/>
                 <position start="0,0" end="-150,0"/>
             </section>
-        </animation>
+        </animation>      
         
         <shape name="darken_background" from="base_darken_background"/>
 
-        <shape name="dialog_background" from="base_background_shape_dark">
-            <area>300,90,690,535</area>
+        <shape name="phrasepopup_background" from="base_background_shape_dark">
+            <area>390,150,510,425</area>
         </shape>
 
         <!-- the title of the window -->
-        <imagetype name="title_background" from="base_popup_background">
-            <area>320,110,650,70</area>
-        </imagetype>
         <textarea name="title" from="base_textarea">
-            <area>340,110,610,70</area>
+            <area>405,165,480,60</area>
+            <value>Search Term</value>
             <align>allcenter</align>
-            <font>text</font>
+            <multiline>yes</multiline>
+            <scroll direction="vertical"/>
         </textarea>
 
-        <!-- the search field -->
-        <textedit name="input" from="base_textedit_wide">
-            <position>320,200</position>
-        </textedit>
-
-        <buttonlist name="itemlist" from="base_buttonlist_wide">
-            <area>320,260,650,270</area>
+        <shape name="title_separator" from="base_background_shape">
+            <area>391,230,508,1</area>
+        </shape>
+        
+        <!-- list with the search phrases -->
+        <buttonlist name="itemlist" from="base_buttonlist">
+            <area>405,245,480,198</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,480,36</area>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive">
+                    <area>0,0,480,36</area>
+                </state>
+                <state name="selectedinactive">
+                    <area>0,0,480,36</area>
+                </state>
+            </statetype>
         </buttonlist>
 
-        <shape name="button_separator" from="base_separator_shape">
-            <area>320,545,650,1</area>
+        <textedit name="input" from="base_textedit_wide">
+            <position>405,460</position>
+        </textedit>
+
+        <shape name="button_separator" from="base_background_shape">
+            <area>391,510,508,1</area>
         </shape>
 
         <button name="ok" from="base_button">
-            <position>452,565</position>
+            <position>485,525</position>
             <value>OK</value>
         </button>
         <button name="cancel" from="base_button">
-            <position>669,565</position>
+            <position>650,525</position>
             <value>Cancel</value>
         </button>
+
     </window>
     
     
     
     
+    <!-- TODO - aspect ratio broken? -->
     <!-- Dialog that is used to select a file from the filesystem
          and show a preview of the file if it is an image 
          The dialog is like a full screen with a header and clock -->
     <window name="MythFileBrowser">
-
-        <animation trigger="AboutToShow">
-            <section centre="left" duration="250">
-                <alpha start="0" end="255" easingcurve="Linear"/>
-                <zoom start="50" end="100" easingcurve="OutQuart"/>
-                <position start="-150,0" end="0,0"/>
-            </section>
-        </animation>
-
-        <animation trigger="AboutToHide">
-            <section centre="left" duration="250">
-                <alpha start="255" end="0" easingcurve="Linear"/>
-                <zoom start="100" end="50" easingcurve="InQuart"/>
-                <position start="0,0" end="-150,0"/>
-            </section>
-        </animation>
         
-        <imagetype name="background">
-            <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
-        </imagetype>
+        <imagetype name="background" from="base_background" />
 
-        <!-- The name of the screen -->
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
@@ -2234,330 +1325,258 @@
             </textarea>
         </textarea>
 
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
-        <!-- this is the background around the file browser -->
-        <shape name="filebrowser_background" from="base_background_shape">
-            <area>80,80,1120,600</area>
+        <shape name="preview_background" from="base_background_shape">
+            <area>20,90,275,410</area>
         </shape>
 
-        <!-- the filename -->
+        <!-- the preview image of the selected item -->
+        <imagetype name="preview_background_image">
+            <area>35,105,245,355</area>
+            <mask>images/media/movie_cover_mask.png</mask>
+            <filename>images/media/movie_bg.png</filename>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="preview">
+            <area>35,105,245,355</area>
+            <mask>images/media/movie_cover_mask.png</mask>
+        </imagetype>
+        <imagetype name="preview_border">
+            <area>35,105,245,355</area>
+            <filename>images/media/movie_cover_border.png</filename>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
+        <!-- information about the preview image -->
+        <textarea name="info" from="base_textarea">
+            <area>35,460,245,36</area>
+            <align>allcenter</align>
+        </textarea>
+        
+        <!-- this is the background around the file browser -->
+        <shape name="filebrowser_background" from="base_background_shape">
+            <area>310,90,830,577</area>
+        </shape>
+
         <textarea name="filename_label" from="base_textarea">
-            <area>100,100,140,30</area>
+            <area>325,100,140,36</area>
             <align>right,vcenter</align>
-            <cutdown>yes</cutdown>
             <value>Filename:</value>
         </textarea>
 
         <textarea name="filename" from="base_textarea">
-            <area>250,100,650,30</area>
-            <cutdown>yes</cutdown>
-            <align>left,vcenter</align>
-            <font>text</font>
+            <area>475,100,650,36</area>
             <value>Filename</value>
+            <scroll direction="horizontal" />
         </textarea>
 
         <!-- the path where the files are -->
         <textarea name="location_label" from="base_textarea">
-            <area>100,140,140,40</area>
+            <area>325,140,140,36</area>
             <align>right,vcenter</align>
-            <cutdown>yes</cutdown>
             <value>Directory:</value>
         </textarea>
 
         <textedit name="location" from="base_textedit_wide">
-            <position>250,140</position>
+            <position>475,140</position>
         </textedit>
 
-        <!-- the buttons to go back or to the users home dir -->
-        <button name="back" from="base_button_narrow">
-            <position>1030,140</position>
-            <imagetype name="folderimage">
-                <area>18,3,34,34</area>
-                <filename>images/shared/back.png</filename>
-                <preserveaspect>yes</preserveaspect>
-            </imagetype>
+        <!-- the buttons to go back up directory -->
+        <button name="back" from="base_button">
+            <area>1000,140,54,36</area>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_icon_selected">
+                        <filename>images/icons/arrow_left.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_icon_selected">
+                        <filename>images/icons/arrow_left.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="disabled" from="active"/>
+                <state name="pushed" from="selected"/>
+            </statetype>
         </button>
-        
-        <button name="home" from="base_button_narrow">
-            <position>1110,140</position>
-            <imagetype name="folderimage">
-                <area>18,4,34,34</area>
-                <filename>images/shared/folder_up_open.png</filename>
-                <preserveaspect>yes</preserveaspect>
-            </imagetype>
+
+        <!-- the button to go to the users home directory -->
+        <button name="home" from="base_button">
+            <area>1070,140,54,36</area>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_icon_selected">
+                        <filename>images/icons/home.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <area>0,0,54,36</area>
+                    <imagetype name="image" from="base_image_selected">
+                        <filename>images/icons/home.png</filename>
+                        <area>12,3,30,30</area>
+                    </imagetype>
+                </state>
+                <state name="disabled" from="active"/>
+                <state name="pushed" from="selected"/>
+            </statetype>
         </button>
 
         <!-- separates the result text from the buttons -->
-        <shape name="filename_separator" from="base_separator_shape">
-            <area>100,200,1080,1</area>
+        <shape name="filename_separator" from="base_background_shape">
+            <area>311,190,828,1</area>
         </shape>
 
         <!-- the list of the available videos -->
         <buttonlist name="filelist">
-            <area>100,220,815,380</area>
+            <area>325,205,820,400</area>
             <layout>grid</layout>
-            <spacing>18</spacing>
-            <wrapstyle>flowing</wrapstyle>
-            <buttonarea>0,0,815,380</buttonarea>
+            <spacing>1</spacing>
+            <buttonarea>0,0,100%,100%</buttonarea>
+            
             <statetype name="buttonitem">
                 <state name="active">
-                    <area>0,0,116,170</area>
 
-                    <!-- this is a background and the name of the video behind the cover -->
-                    <shape name="buttonimage_background_shape" from="base_background_shape">
-                        <area>2,2,114,168</area>
-                        <line color="#000000" alpha="0" width="1" />
-                    </shape>
-                    <textarea name="buttontext">
-                        <area>6,6,104,158</area>
-                        <font>text_small</font>
-                        <align>allcenter</align>
-                        <cutdown>yes</cutdown>
-                        <multiline>yes</multiline>
-                    </textarea>
-
-                    <!-- this is the cover image that will be shown if its
-                        available, otherwise only the border is visible -->
-                    <imagetype name="buttonimage">
-                        <area>1,1,114,168</area>
-                        <preserveaspect>true</preserveaspect>
-                        <shape name="buttonimage_border_shape">
-                            <area>0,0,116,170</area>
-                            <type>roundbox</type>
-                            <line color="#AAAAAA" alpha="255" width="1" />
-                            <cornerradius>1</cornerradius>
-                        </shape>
+                    <imagetype name="background_image">
+                        <area>0,0,133,192</area>
+                        <mask>images/media/movie_item_nfmask.png</mask>
+                        <filename>images/media/movie_bg.png</filename>
                     </imagetype>
 
-                    <!-- the statetypes of the node -->
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>15,15,100,20</area>
+                    </textarea>
+                    
+                    <!-- this is the actual cover image that will be shown if its
+                        available, otherwise only the background image is visible -->
+                    <imagetype name="buttonimage">
+                        <area>0,0,133,192</area>
+                        <mask>images/media/movie_item_nfmask.png</mask>
+                        <preserveaspect>false</preserveaspect>
+                    </imagetype>
+
+                    <!-- the node is a folder and it is currently not selected -->
                     <statetype name="nodetype">
                         <position>0,0</position>
-                        
-                        <!-- the node is a subfolder -->
                         <state name="subfolder">
-                            <shape name="icon_background_shape" from="base_background_shape">
-                                <area>2,138,114,32</area>
-                                <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
-                            </shape>
-                            <imagetype name="icon">
-                                <area>8,142,24,24</area>
-                                <filename>images/shared/folder.png</filename>
-                                <preserveaspect>yes</preserveaspect>
+                            <imagetype name="node_icon" from="base_icon_inactive">
+                                <area>12,160,24,24</area>
+                                <filename>images/icons/folder.png</filename>
                             </imagetype>
                         </state>
-                        
-                        <!-- the node is the one that goes one directry up -->
                         <state name="upfolder">
-                            <shape name="icon_background_shape" from="base_background_shape">
-                                <area>2,138,114,32</area>
-                                <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
-                            </shape>
-                            <imagetype name="icon">
-                                <area>8,142,24,24</area>
-                                <filename>images/shared/folder_up.png</filename>
-                                <preserveaspect>yes</preserveaspect>
+                            <imagetype name="node_icon" from="base_icon_inactive">
+                                <area>12,160,24,24</area>
+                                <filename>images/icons/folder_up.png</filename>
                             </imagetype>
                         </state>
-                        
-                        <!-- the node is a file -->
                         <state name="file">
-                            <shape name="icon_background_shape" from="base_background_shape">
-                                <area>2,138,114,32</area>
-                                <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
-                            </shape>
-                            <imagetype name="icon">
-                                <area>8,142,24,24</area>
-                                <filename>images/shared/folder_open.png</filename>
-                                <preserveaspect>yes</preserveaspect>
+                            <imagetype name="node_icon" from="base_icon_inactive">
+                                <area>12,160,24,24</area>
+                                <filename>images/icons/file.png</filename>
                             </imagetype>
                         </state>
-                    
-                        <!-- the node is a executable file -->
                         <state name="executable">
-                            <shape name="icon_background_shape" from="base_background_shape">
-                                <area>2,138,114,32</area>
-                                <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
-                            </shape>
-                            <imagetype name="icon">
-                                <area>8,142,24,24</area>
-                                <filename>images/shared/folder_open.png</filename>
-                                <preserveaspect>yes</preserveaspect>
+                            <imagetype name="node_icon" from="base_icon_inactive">
+                                <area>12,160,24,24</area>
+                                <filename>images/icons/file_executable.png</filename>
                             </imagetype>
                         </state>
                     </statetype>
+                    
+                    <imagetype name="background_image_border">
+                        <area>0,0,133,192</area>
+                        <filename>images/media/movie_item_nfborder.png</filename>
+                    </imagetype>
                 </state>
 
-                <state name="inactive" from="active" />
+                <!-- These two states are not used -->
+                <state name="inactive" from="active"/>
+                <state name="selectedinactive" from="active"/>
                     
-                <state name="selectedactive" from="active">
-                    <area>-27,-39,170,248</area>
-
-                    <!-- this is a background and the name of the video behind the cover -->
-                    <shape name="buttonimage_background_shape" from="base_background_shape_dark">
-                        <area>2,2,168,246</area>
-                        <line color="#000000" alpha="0" width="1" />
-                    </shape>
-                    <textarea name="buttontext">
-                        <area>6,6,158,236</area>
-                        <font>text_small</font>
-                        <align>allcenter</align>
-                        <cutdown>yes</cutdown>
-                        <multiline>yes</multiline>
-                    </textarea>
-
-                    <!-- this is the cover image that will be shown if its
-                        available, otherwise only the borders are visible -->
-                    <imagetype name="buttonimage">
-                        <area>1,1,168,246</area>
-                        <preserveaspect>true</preserveaspect>
-                        <shape name="buttonimage_border_shape">
-                            <area>0,0,170,248</area>
-                            <type>roundbox</type>
-                            <line color="#AAAAAA" alpha="255" width="2" />
-                            <cornerradius>2</cornerradius>
-                        </shape>
+                <state name="selectedactive">
+                    <area>-26,-37,133,192</area>
+                    
+                    <imagetype name="background_image">
+                        <area>0,0,185,267</area>
+                        <mask>images/media/movie_item_fmask.png</mask>
+                        <filename>images/media/movie_bg.png</filename>
                     </imagetype>
 
-                    <!-- the statetypes of the node -->
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>20,20,150,20</area>
+                    </textarea>
+                    
+                    <!-- this is the actual cover image that will be shown if its
+                        available, otherwise only the background image is visible -->
+                    <imagetype name="buttonimage">
+                        <area>0,0,185,267</area>
+                        <mask>images/media/movie_item_fmask.png</mask>
+                        <preserveaspect>false</preserveaspect>
+                    </imagetype>
+
+                    <!-- the node is a folder and it is currently selected -->
                     <statetype name="nodetype">
                         <position>0,0</position>
-                        
-                        <!-- the node is a subfolder -->
                         <state name="subfolder">
-                            <shape name="icon_background_shape" from="base_background_shape">
-                                <area>3,212,166,36</area>
-                                <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
-                            </shape>
-                            <imagetype name="icon">
-                                <area>9,216,30,30</area>
-                                <filename>images/shared/folder_open.png</filename>
-                                <preserveaspect>yes</preserveaspect>
+                            <imagetype name="node_icon" from="base_icon_selected">
+                                <area>16,225,30,30</area>
+                                <filename>images/icons/folder_selected.png</filename>
                             </imagetype>
                         </state>
-                        
-                        <!-- the node is the one that goes one directry up -->
                         <state name="upfolder">
-                            <shape name="icon_background_shape" from="base_background_shape">
-                                <area>3,212,166,36</area>
-                                <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
-                            </shape>
-                            <imagetype name="icon">
-                                <area>9,216,30,30</area>
-                                <filename>images/shared/folder_up_open.png</filename>
-                                <preserveaspect>yes</preserveaspect>
+                            <imagetype name="node_icon" from="base_icon_selected">
+                                <area>16,225,30,30</area>
+                                <filename>images/icons/folder_up_selected.png</filename>
                             </imagetype>
                         </state>
-                        
-                        <!-- the node is a file -->
                         <state name="file">
-                            <shape name="icon_background_shape" from="base_background_shape">
-                                <area>3,212,166,36</area>
-                                <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
-                            </shape>
-                            <imagetype name="icon">
-                                <area>9,216,30,30</area>
-                                <filename>images/shared/folder_open.png</filename>
-                                <preserveaspect>yes</preserveaspect>
+                            <imagetype name="node_icon" from="base_icon_selected">
+                                <area>16,225,30,30</area>
+                                <filename>images/icons/file.png</filename>
                             </imagetype>
                         </state>
-                    
-                        <!-- the node is a executable file -->
                         <state name="executable">
-                            <shape name="icon_background_shape" from="base_background_shape">
-                                <area>3,212,166,36</area>
-                                <line color="#000000" alpha="0" width="1" />
-                                <cornerradius>0</cornerradius>
-                            </shape>
-                            <imagetype name="icon">
-                                <area>9,216,30,30</area>
-                                <filename>images/shared/folder_open.png</filename>
-                                <preserveaspect>yes</preserveaspect>
+                            <imagetype name="node_icon" from="base_icon_selected">
+                                <area>16,225,30,30</area>
+                                <filename>images/icons/file_executable.png</filename>
                             </imagetype>
                         </state>
                     </statetype>
-                </state>
-                
-                <state name="selectedinactive" from="active" />
-            </statetype>
-            
-            <!-- Show the arrow image that indicates that there are
-                more menu entries above the first visible menu -->
-            <statetype name="upscrollarrow">
-                <position>795,0</position>
-                <state type="off">
-                    <imagetype name="upon">
-                        <filename>images/shared/arrow_up.png</filename>
-                        <alpha>90</alpha>
+
+                    <imagetype name="background_image_border">
+                        <area>0,0,185,267</area>
+                        <filename>images/media/movie_item_fborder.png</filename>
                     </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="upoff">
-                        <filename>images/shared/arrow_up.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-            
-            <!-- Show the arrow image that indicates that there are
-                more menu entries below the last visible menu -->
-            <statetype name="downscrollarrow">
-                <position>795,342</position>
-                <state type="off">
-                    <imagetype name="dnon">
-                        <filename>images/shared/arrow_down.png</filename>
-                        <alpha>90</alpha>
-                    </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="dnoff">
-                        <filename>images/shared/arrow_down.png</filename>
-                    </imagetype>
+
                 </state>
             </statetype>
         </buttonlist>
 
-        <!-- the preview image on the right side -->
-        <shape name="preview_shape" from="base_background_shape">
-            <area>955,220,225,330</area>
-        </shape>
-        <imagetype name="preview">
-            <area>957,222,221,326</area>
-            <preserveaspect>true</preserveaspect>
-        </imagetype>
         
-        <!-- information about the preview image -->
-        <textarea name="info" from="base_textarea">
-            <area>955,560,225,25</area>
-            <align>allcenter</align>
-            <font>text_small</font>
-        </textarea>
-
         <!-- separates the result text from the buttons -->
-        <shape name="button_separator" from="base_separator_shape">
-            <area>100,600,1080,1</area>
+        <shape name="button_separator" from="base_background_shape">
+            <area>311,600,828,1</area>
         </shape>
 
         <!-- buttons -->
         <button name="ok" from="base_button">
-            <position>485,620</position>
+            <position>570,615</position>
             <value>OK</value>
         </button>
         <button name="cancel" from="base_button">
-            <position>655,620</position>
+            <position>735,615</position>
             <value>Cancel</value>
         </button>
+
     </window>
 
+    
+    
 
     <!-- Template screen type for screens using a date and time buttonlist.
          Allows the user to select how (timewise) the schedule will be recorded. -->
@@ -2579,40 +1598,43 @@
             </section>
         </animation>
         
-        <shape name="darken_background" from="base_darken_background"/>
+        <shape name="darken_background" from="base_darken_background" />
 
-        <!-- the title of the window -->
-        <imagetype name="title_background" from="base_popup_background">
-            <area>395,120,490,70</area>
-        </imagetype>
-        <textarea name="title_text" from="base_textarea">
-            <area>415,265,450,30</area>
-            <value>Select Time</value>
-            <align>allcenter</align>
-        </textarea>
-        <shape name="title_separator" from="base_separator_shape">
-           <area>395,315,490,1</area>
+        <shape name="dialog_background" from="base_background_shape_dark">
+            <area>340,245,590,215</area>
         </shape>
 
+        <textarea name="title" from="base_textarea">
+            <area>355,255,560,60</area>
+            <value>Select Time</value>
+            <align>allcenter</align>
+            <scroll direction="vertical" />
+        </textarea>
+        <shape name="title_separator" from="base_background_shape">
+            <area>341,345,588,1</area>
+        </shape>
+        
         <buttonlist name="date_list" from="base_selector">
-            <position>390,335</position>
+            <position>360,340</position>
         </buttonlist>
         <buttonlist name="time_list" from="base_selector">
-            <position>650,335</position>
+            <position>585,340</position>
         </buttonlist>
 
-        <shape name="selector_separator" from="base_separator_shape">
-            <area>395,315,295,1</area>
+        <shape name="button_separator" from="base_background_shape">
+            <area>341,390,588,1</area>
         </shape>
 
         <button name="ok_button" from="base_button">
-            <position>565,405</position>
+            <position>560,405</position>
             <value>OK</value>
         </button>
+
     </window>
 
 
 
+    
     <!-- Screen that shows the please wait and a progressbar -->
     <window name="videowindow">
 
@@ -2622,11 +1644,6 @@
             <fill color="#000000" alpha="255"></fill>
         </shape>
 
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1040,0</position>
-        </textarea>
-
         <textarea name="title" from="base_textarea">
             <area>450,335,380,60</area>
             <font>title_wait</font>
@@ -2634,11 +1651,11 @@
             <value>Please Wait...</value>
         </textarea>
 
-        <progressbar name="progress" from="base_progressbar_flat">
+        <progressbar name="progress" from="base_progressbar">
             <position>372,435</position>
         </progressbar>
-    </window>
 
+    </window>
 
 
 
@@ -2662,66 +1679,214 @@
                 <position start="0,0" end="-150,0"/>
             </section>
         </animation>
-        
-        <shape name="darken_background" from="base_darken_background"/>
 
-        <shape name="metadata_selection_background" from="base_background_shape_dark">
-            <area>295,100,690,475</area>
+        <shape name="darken_background" from="base_darken_background" />
+
+        <shape name="dialog_background" from="base_background_shape_dark">
+            <area>350,130,580,388</area>
         </shape>
 
-        <imagetype name="title_background" from="base_popup_background">
-            <area>315,120,650,70</area>
-        </imagetype>
         <textarea name="title" from="base_textarea">
-            <area>335,120,610,70</area>
+            <area>365,140,550,60</area>
             <value>Metadata Search Results</value>
             <align>allcenter</align>
+            <multiline>yes</multiline>
+            <scroll direction="vertical"/>
         </textarea>
+        <shape name="title_separator" from="base_background_shape">
+            <area>351,210,578,1</area>
+        </shape>
 
-        <buttonlist name="results" from="base_buttonlist_wide">
-            <area>315,205,650,356</area>
+        <buttonlist name="results" from="base_buttonlist">
+            <area>365,225,550,275</area>
             <statetype name="buttonitem">
                 <state name="active">
+                    <area>0,0,550,36</area>
                     <textarea name="buttontext" from="base_textarea">
-                        <area>8,5,350,30</area>
-                        <cutdown>yes</cutdown>
+                        <area>8,0,350,36</area>
+                        <scroll direction="horizontal"/>
                     </textarea>
+                    
                     <textarea name="year" from="base_textarea">
-                        <area>380,5,260,30</area>
+                        <area>365,0,170,36</area>
                         <align>right,vcenter</align>
                         <template>Released %1</template>
+                        <scroll direction="horizontal"/>
                     </textarea>
                 </state>
                 <state name="inactive" from="active" />
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                    </imagetype>
+                    <area>0,0,550,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive"/>
                 </state>
                 <state name="selectedinactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selectedinactive">
-                        <filename>images/widgets/widget_active.png</filename>
-                    </imagetype>
+                    <area>0,0,550,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive"/>
                 </state>
             </statetype>
         </buttonlist>
+
     </window>
 
 
 
 
 
-
+    <!-- TODO - aspect ratio broken? -->
     <!-- Shows the screen where the user can select the different
          artwork choices that the search has returned -->
-    <!--<window name="MythArtworkResults">-->
+    <window name="MythArtworkResults">
+        
+        <animation trigger="AboutToShow">
+            <section centre="left" duration="250">
+                <alpha start="0" end="255" easingcurve="Linear"/>
+                <zoom start="50" end="100" easingcurve="OutQuart"/>
+                <position start="-150,0" end="0,0"/>
+            </section>
+        </animation>
+
+        <animation trigger="AboutToHide">
+            <section centre="left" duration="250">
+                <alpha start="255" end="0" easingcurve="Linear"/>
+                <zoom start="100" end="50" easingcurve="InQuart"/>
+                <position start="0,0" end="-150,0"/>
+            </section>
+        </animation>
+
+        <shape name="darken_background" from="base_darken_background" />
+
+        <shape name="dialog_background" from="base_background_shape_dark">
+            <area>350,170,575,300</area>
+        </shape>
+
+        <textarea name="title" from="base_textarea">
+            <area>365,180,545,60</area>
+            <value>Artwork Search Results</value>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+            <scroll direction="vertical"/>
+        </textarea>
+
+        <shape name="title_separator" from="base_background_shape">
+            <area>351,250,573,1</area>
+        </shape>
+
+        <buttonlist name="results">
+            <area>370,265,540,195</area>
+            <layout>grid</layout>
+            <wrapstyle>flowing</wrapstyle>
+            <spacing>1</spacing>
+            <buttonarea>0,0,100%,100%</buttonarea>
+            
+            <statetype name="buttonitem">
+                <state name="active">
+
+                    <imagetype name="background_image">
+                        <area>0,0,133,192</area>
+                        <mask>images/media/movie_item_nfmask.png</mask>
+                        <filename>images/media/movie_bg.png</filename>
+                    </imagetype>
+                    
+                    <!-- this is the actual cover image that will be shown if its
+                        available, otherwise only the background image is visible -->
+                    <imagetype name="buttonimage">
+                        <area>0,0,133,192</area>
+                        <mask>images/media/movie_item_nfmask.png</mask>
+                    </imagetype>
+                    
+                    <shape name="resolution_background" from="base_background_shape_dark">
+                        <area>3,158,130,32</area>
+                        <line color="#AAAAAA" alpha="0" width="0" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
+                    <textarea name="resolution" from="base_textarea">
+                        <area>15,155,103,36</area>
+                        <align>allcenter</align>
+                    </textarea>
+
+                    <imagetype name="background_image_border">
+                        <area>0,0,133,192</area>
+                        <filename>images/media/movie_item_nfborder.png</filename>
+                    </imagetype>
+
+                </state>
+
+                <!-- These two states are not used -->
+                <state name="inactive" from="active"/>
+                <state name="selectedinactive" from="active"/>
+                    
+                <state name="selectedactive">
+                    <area>-26,-37,133,192</area>
+                    
+                    <imagetype name="background_image">
+                        <area>0,0,185,267</area>
+                        <mask>images/media/movie_item_fmask.png</mask>
+                        <filename>images/media/movie_bg.png</filename>
+                    </imagetype>
+
+                    <imagetype name="buttonimage">
+                        <area>0,0,185,267</area>
+                        <mask>images/media/movie_item_fmask.png</mask>
+                        <preserveaspect>false</preserveaspect>
+                    </imagetype>
+
+                    <shape name="resolution_background" from="base_background_shape_dark">
+                        <area>7,225,180,37</area>
+                        <line color="#AAAAAA" alpha="0" width="0" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
+                    <textarea name="resolution" from="base_textarea">
+                        <area>10,225,165,36</area>
+                        <align>allcenter</align>
+                    </textarea>
+                    
+                    <imagetype name="background_image_border">
+                        <area>0,0,185,267</area>
+                        <filename>images/media/movie_item_fborder.png</filename>
+                    </imagetype>
+
+                </state>
+            </statetype>
+                
+            <!-- show arrows to indicates that there are
+                more menu entries above the first visible menu -->
+            <statetype name="upscrollarrow">
+                <position>-17,85</position>
+                <state type="off">
+                    <imagetype name="upon" from="base_icon_inactive">
+                        <filename>images/icons/button_arrow_left.png</filename>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="upoff" from="base_icon_selected">
+                        <filename>images/icons/button_arrow_left.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+            
+            <!-- show arrows to indicates that there are
+                more menu entries below the last visible menu -->
+            <statetype name="downscrollarrow">
+                <position>100%-5,85</position>
+                <state type="off">
+                    <imagetype name="dnon" from="base_icon_inactive">
+                        <filename>images/icons/button_arrow_right.png</filename>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="dnoff" from="base_icon_selected">
+                        <filename>images/icons/button_arrow_right.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>            
+        </buttonlist>
+
+    </window>
 
 
 
 
-
-
-    <!-- Popup search dialog used to search button lists -->
+    <!-- Popup search dialog used to search for something -->
     <window name="MythSearchListDialog">
        
         <animation trigger="AboutToShow">
@@ -2743,57 +1908,85 @@
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
-            <area>440,210,405,300</area>
+            <area>340,225,590,252</area>
         </shape>
 
-        <imagetype name="title_background_overlay" from="base_popup_background">
-            <area>455,225,375,90</area>
-        </imagetype>
         <textarea name="title" from="base_textarea">
-            <area>475,225,350,90</area>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
+            <area>355,235,560,60</area>
+            <value>Search</value>
             <align>allcenter</align>
-            <value>Search List</value>
+            <scroll direction="vertical" />
+        </textarea>
+        <shape name="title_separator" from="base_background_shape">
+            <area>341,305,588,1</area>
+        </shape>
+
+        <textarea name="searchedit_label" from="base_textarea">
+            <area>360,320,170,36</area>
+            <align>right,vcenter</align>
+            <value>Search Term:</value>
+        </textarea>
+        <textarea name="searchstate_label" from="base_textarea">
+            <area>360,360,170,36</area>
+            <align>right,vcenter</align>
+            <value>Search State:</value>
         </textarea>
 
         <!-- the search field -->
         <textedit name="searchedit" from="base_textedit">
-            <position>455,340</position>
+            <position>540,320</position>
         </textedit>
 
         <statetype name="searchstate">
-            <area>455,390,375,40</area>
+            <area>540,360,375,36</area>
             <state name="found">
                 <textarea name="statustext" from="base_textarea">
-                    <area>0,0,375,40</area>
-                    <align>allcenter</align>
+                    <area>0,0,375,36</area>
+                    <align>left,center</align>
                     <value>Found</value>
                 </textarea>
             </state>
             <state name="notfound">
                 <textarea name="statustext" from="base_textarea">
-                    <area>0,0,375,40</area>
-                    <align>allcenter</align>
+                    <area>0,0,375,36</area>
+                    <align>left,vcenter</align>
                     <value>Not Found</value>
                 </textarea>
             </state>
         </statetype>
         
-        <shape name="button_separator" from="base_separator_shape">
-            <area>455,440,375,1</area>
+        <shape name="button_separator" from="base_background_shape">
+            <area>341,410,588,1</area>
         </shape>
 
         <button name="prevbutton" from="base_button">
-            <position>455,455</position>
+            <position>455,425</position>
             <value>Previous</value>
         </button>
-
         <button name="nextbutton" from="base_button">
-            <position>680,455</position>
+            <position>680,425</position>
             <value>Next</value>
         </button>
 
     </window>
+
+
+
+
+
+    <!-- Shows the help description in the setting windows -->
+    <group name="base_helptext_group">
+
+        <shape name="helptext_background_bottom" from="base_background_shape">
+            <area>-15,0,1310,90</area>
+        </shape>
+        <textarea name="helptext" from="base_textarea">
+            <area>120,0,1040,90</area>
+            <scroll direction="vertical"/>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+        </textarea>
+
+    </group>
 
 </mythuitheme>

@@ -3,39 +3,30 @@
 <mythuitheme>
 
     <!-- ported to 0.22 by warpme@o2.pl Contact for any bugs/comments-->
-        
+
+    <!-- UNFINISHED -->        
     <window name="functionpopup">
 
         <!-- darkens the entire background so that the popup is better readable -->
-        <shape name="darken_background1">
-            <area>0,0,1280,720</area>
-            <type>box</type>
-            <fill color="#000000" alpha="127" />
-        </shape>
+        <shape name="darken_background" from="base_darken_background" />
 
-        <shape name="groupselector_background">
+        <shape name="functionpopup_background" from="base_background_shape">
             <area>455,148,400,285</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="255" />
-            <line color="#CCCCCC" alpha="255" width="1" />
-            <cornerradius>2</cornerradius>
         </shape>
 
         <textarea name="title" from="base_textarea">
-            <area>485,168,350,30</area>
+            <area>485,168,350,36</area>
             <value>Edit Monitor Function</value>
             <align>allcenter</align>
             <font>popup_title</font>
         </textarea>
         
-        <shape name="title_separator" from="base_separator_shape">
+        <shape name="title_separator" from="base_background_shape">
             <area>475,218,360,1</area>
         </shape>
 
-        <textarea name="caption_text">
-            <area>480,228,350,30</area>
-            <font>text</font>
-            <align>hcenter,top</align>
+        <textarea name="caption_text" from="base_textarea">
+            <area>480,228,350,36</area>
         </textarea>
 
         <buttonlist name="function_list" from="base_selector_wide">
@@ -59,6 +50,10 @@
     </window>
 
 
+
+
+
+    <!-- UNFINISHED -->
     <window name="zmconsole">
 
         <fontdef name="running" from="title">
@@ -70,21 +65,15 @@
         
         
         <!-- the background image of the screen -->
-        <imagetype name="background">
+        <imagetype name="background" from="base_background">
             <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
         </imagetype>
 
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
-        <value>ZoneMinder Console</value>
+                <value>ZoneMinder Console</value>
             </textarea>
-        </textarea>
-        
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1065,0</position>	
         </textarea>
 
         <!-- This is the background in which the infos are displayed -->
@@ -143,86 +132,67 @@
 
         <textarea name="label1">
             <area>75,200,130,30</area>
-            <font>text_very_small</font>
+            <font>text_small</font>
             <value>Camera</value>
         </textarea>
 
         <textarea name="label2">
             <area>380,200,130,30</area>
-            <font>text_very_small</font>
+            <font>text_small</font>
             <value>Function</value>
         </textarea>
 
         <textarea name="label3">
             <area>730,200,130,30</area>
-            <font>text_very_small</font>
+            <font>text_small</font>
             <value>Source</value>
         </textarea>
 
         <textarea name="label4">
             <area>1020,200,100,30</area>
-            <font>text_very_small</font>
+            <font>text_small</font>
             <align>right</align>
             <value>Events</value>
         </textarea>
 
-        <buttonlist name="monitor_list" from="base_buttonlist_extra_wide">
+        <buttonlist name="monitor_list" from="base_buttonlist">
             <area>45,220,1170,370</area>
-            <layout>vertical</layout>
-            <spacing>0</spacing>
-            <buttonarea>0,0,1170,380</buttonarea>
-
             <statetype name="buttonitem">
                 <state name="active">
-            <imagetype name="buttonbackground" from="base_image_active">
-                        <filename>images/widgets/buttonlist_inactive_extra_wide.png</filename>
-                    </imagetype>
-                    <textarea name="buttontext">
-                        <area>20,4,250,30</area>
-            <align>left,vcenter</align>
-                        <font>text</font>
+                    <area>0,0,1170,36</area>
+                    <shape name="background" from="base_button_shape_active" />
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>20,0,250,36</area>
                     </textarea>
-                    <textarea name="name" from="buttontext">
-                        <area>20,4,200,25</area>
+                    <textarea name="name" from="base_textarea">
+                        <area>20,0,200,36</area>
                     </textarea>
-                    <textarea name="zmcstatus" from="buttontext">
-                        <area>330,4,200,25</area>
+                    <textarea name="zmcstatus" from="base_textarea">
+                        <area>330,0,200,36</area>
                     </textarea>
-                    <textarea name="zmastatus" from="buttontext">
-                        <area>640,4,350,25</area>
+                    <textarea name="zmastatus" from="base_textarea">
+                        <area>640,0,350,36</area>
                     </textarea>
-                    <textarea name="eventcount" from="buttontext">
-                        <area>950,4,100,25</area>
-                        <align>right</align>
+                    <textarea name="eventcount" from="base_textarea">
+                        <area>950,0,100,36</area>
+                        <align>right,vcenter</align>
                     </textarea>
                 </state>
+                <state name="inactive" from="active" />                
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selected">
-                        <filename>images/widgets/buttonlist_active_extra_wide.png</filename>
-                        <!--<alphapulse min="160" max="255" change="2"/>-->
-                    </imagetype>
-                    <textarea name="buttontext">
-                        <font>text</font>
-                    </textarea>
-                    <textarea name="name">
-                        <font>text</font>
-                    </textarea>
-                    <textarea name="zmcstatus">
-                        <font>text</font>
-                    </textarea>
-                    <textarea name="zmastatus">
-                        <font>text</font>
-                    </textarea>
-                    <textarea name="eventcount">
-                        <font>text</font>
-                    </textarea>
+                    <area>0,0,1170,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
+                </state>
+                <state name="selectedinactive" from="active">
+                    <area>0,0,1170,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
             </statetype>
             <statetype name="upscrollarrow">
                 <position>1140,360</position>
                 <state type="on">
                     <imagetype name="upon">
-                        <filename>images/shared/arrow_up.png</filename>
+                        <filename>images/icons/button_arrow_up.png</filename>
                     </imagetype>
                 </state>
             </statetype>
@@ -230,7 +200,7 @@
                 <position>1165,360</position>
                 <state type="on">
                     <imagetype name="dnon">
-                        <filename>images/shared/arrow_down.png</filename>
+                        <filename>images/icons/button_arrow_down.png</filename>
                     </imagetype>
                 </state>
             </statetype>
@@ -239,7 +209,7 @@
         <textarea name="label">
             <area>340,565,600,40</area>
             <align>allcenter</align>
-            <font>text_very_small</font>
+            <font>text_small</font>
             <multiline>no</multiline>
             <value>[R] = Running [S] = Stopped</value>
         </textarea>
@@ -247,6 +217,10 @@
     </window>
 
 
+
+
+
+    <!-- UNFINISHED -->
     <window name="zmevents">
 
         <!-- the background image of the screen -->
@@ -255,17 +229,12 @@
             <filename>images/background.png</filename>
         </imagetype>
 
-    <textarea name="heading" from="base_heading">
+        <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
-        <value>ZoneMinder Events</value>
+                <value>ZoneMinder Events</value>
             </textarea>
-    </textarea>
-        
-    <!-- The clock that is shown at the top right of each screen -->
-    <textarea name="clock" from="base_clock">
-            <position>1065,0</position>	
-    </textarea>
+        </textarea>
 
         <!-- This is the background in which the listboxes are displayed -->
         <shape name="topbackground" from="base_background_shape">
@@ -278,7 +247,7 @@
         </shape>
 
     
-    <!-- This is the background in which the buttons are displayed -->
+        <!-- This is the background in which the buttons are displayed -->
         <shape name="bottombackground" from="base_background_shape">
             <area>20,620,1240,80</area>
         </shape>
@@ -287,7 +256,7 @@
         <textarea name="label1">
             <area>95,70,200,50</area>
             <align>right,vcenter</align>
-            <font>text_very_small</font>
+            <font>text_small</font>
             <value>Select Camera</value>
         </textarea>
 
@@ -295,7 +264,7 @@
         <textarea name="label2">
             <area>595,70,200,50</area>
             <align>right,vcenter</align>
-            <font>text_very_small</font>
+            <font>text_small</font>
             <value>Select Date</value>
         </textarea>
 
@@ -317,118 +286,78 @@
             <value>0/0</value>
         </textarea>
 
-    <!--+++++++++++++++++++ layout 1 - list view +++++++++++++++++++++++++-->
+        <!--+++++++++++++++++++ layout 1 - list view +++++++++++++++++++++++++-->
         <textarea name="layout1_title1">
             <!--<context>1</context>-->
             <area>60,190,130,30</area>
             <align>right,vcenter</align>
-            <font>text_very_small</font>
+            <font>text_small</font>
             <value>Event Name</value>
         </textarea>
 
         <textarea name="layout1_title2">
             <area>360,190,130,30</area>
             <align>right,vcenter</align>
-            <font>text_very_small</font>
+            <font>text_small</font>
             <value>Camera</value>
         </textarea>
 
         <textarea name="layout1_title3">
             <area>745,190,130,30</area>
             <align>right,vcenter</align>
-            <font>text_very_small</font>
+            <font>text_small</font>
             <value>Date/Time</value>
         </textarea>
 
         <textarea name="layout1_title4">
             <area>1000,190,130,30</area>
             <align>right,vcenter</align>
-            <font>text_very_small</font>
+            <font>text_small</font>
             <value>Length</value>
         </textarea>
 
-        <buttonlist name="layout1_eventlist" from="base_buttonlist_extra_wide">
+        <buttonlist name="layout1_eventlist" from="base_buttonlist">
             <area>45,220,1170,370</area>
-            <layout>vertical</layout>
-            <spacing>0</spacing>
-            <buttonarea>0,0,1170,380</buttonarea>
             <statetype name="buttonitem">
                 <state name="active">
-            <imagetype name="buttonbackground" from="base_image_active">
-                        <filename>images/widgets/buttonlist_inactive_extra_wide.png</filename>
-                    </imagetype>
+                    <area>0,0,1170,36</area>
+                    <shape name="background" from="base_button_shape_active" />
                     <textarea name="buttontext" from="base_textarea">
-                        <area>35,4,385,25</area>
-                        <font>text</font>
+                        <area>35,0,385,36</area>
                     </textarea>
                     <textarea name="camera" from="buttontext">
-                        <area>370,4,300,25</area>
+                        <area>370,0,300,36</area>
                     </textarea>
                     <textarea name="time" from="buttontext">
-                        <area>680,4,300,25</area>
+                        <area>680,0,300,36</area>
                     </textarea>
                     <textarea name="length" from="buttontext">
-                        <area>950,4,130,25</area>
-                        <align>right</align>
+                        <area>950,0,130,36</area>
+                        <align>right,vcenter</align>
                     </textarea>
                 </state>
+                <state name="inactive" from="active" />                
                 <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground" from="base_image_selected">
-                        <filename>images/widgets/buttonlist_active_extra_wide.png</filename>
-                        <!--<alphapulse min="160" max="255" change="2"/>-->
-                    </imagetype>
-                    <textarea name="buttontext">
-                        <font>text</font>
-                    </textarea>
-                    <textarea name="camera">
-                        <font>text</font>
-                    </textarea>
-                    <textarea name="time">
-                        <font>text</font>
-                    </textarea>
-                    <textarea name="length">
-                        <font>text</font>
-                    </textarea>
+                    <area>0,0,1170,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                 </state>
                 <state name="selectedinactive" from="active">
-            <imagetype name="buttonbackground" from="base_image_inactive">
-                        <filename>images/widgets/buttonlist_active_extra_wide.png</filename>
-                    </imagetype>
-                    <textarea name="buttontext">
-                        <font>text_inactive</font>
-                    </textarea>
-                    <textarea name="camera">
-                        <font>text_inactive</font>
-                    </textarea>
-                    <textarea name="time">
-                        <font>text_inactive</font>
-                    </textarea>
-                    <textarea name="length">
-                        <font>text_inactive</font>
-                    </textarea>
+                    <area>0,0,1170,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
             </statetype>
 
         </buttonlist>
 
         <!--+++++++++++++++++++ layout 2 - 1 row +++++++++++++++++++++++++-->
-        <buttonlist name="layout2_eventlist">
+        <buttonlist name="layout2_eventlist" from="base_buttonlist">
             <area>220,200,800,390</area>
             <layout>grid</layout>
             <spacing>10</spacing>
-            <buttonarea>0,0,800,380</buttonarea>
-
             <statetype name="buttonitem">
-                <area>0,0,800,400</area>
-
                 <state name="active">
-            <shape name="image_background1">
-                <area>0,0,800,390</area>
-            <type>roundbox</type>
-            <fill color="#202020" alpha="180" />
-            <line color="#a0a0a0" alpha="128" width="2" />
-            <cornerradius>15</cornerradius>
-            </shape> 
+                    <area>0,0,800,400</area>
+                    <shape name="background" from="base_button_shape_active" />
                     <imagetype name="buttonimage">
                         <area>10,10,500,370</area>
                     </imagetype>
@@ -465,21 +394,17 @@
                         <area>515,265,285,30</area>
                     </textarea>
                 </state>
-                
+                <state name="inactive" from="active" />     
                 <state name="selectedactive" from="active">
-                    <shape name="image_inactive" from="image_background1">
-                <fill color="#202020" alpha="0" />
-                        <line color="#6060ff" alpha="255" width="3" />
-                    </shape>
+                    <area>0,0,800,400</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                     <textarea name="buttontext">
                         <font>text_small</font>
                     </textarea>
                 </state>
-            <state name="selectedinactive" from="active">
-                    <shape name="image_inactive" from="image_background1">
-                <fill color="#202020" alpha="0" />
-                        <line color="#606060" alpha="128" width="2" />
-                    </shape>
+                <state name="selectedinactive" from="active">
+                    <area>0,0,800,400</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                     <textarea name="buttontext">
                         <font>text_small</font>
                     </textarea>
@@ -490,7 +415,7 @@
                 <position>240,270</position>
                 <state type="on">
                     <imagetype name="upon">
-                        <filename>images/shared/arrow_up.png</filename>
+                        <filename>images/icons/button_arrow_up.png</filename>
                     </imagetype>
                 </state>
             </statetype>
@@ -498,29 +423,20 @@
                 <position>456,270</position>
                 <state type="on">
                     <imagetype name="down">
-                        <filename>images/shared/arrow_down.png</filename>
+                        <filename>images/icons/button_arrow_down.png</filename>
                     </imagetype>
                 </state>
             </statetype>
         </buttonlist>
 
         <!--+++++++++++++++++++ layout 3 - grid view 6x2 +++++++++++++++++++++++++-->
-        <buttonlist name="layout3_eventlist">
+        <buttonlist name="layout3_eventlist" from="base_buttonlist">
             <area>65,200,1170,380</area>
             <layout>grid</layout>
             <spacing>10</spacing>
-            <buttonarea>0,0,1170,400</buttonarea>
-
             <statetype name="buttonitem">
-                <area>0,0,280,195</area>
                 <state name="active">
-            <shape name="image_background">
-                <area>0,0,280,190</area>
-            <type>roundbox</type>
-            <fill color="#202020" alpha="180" />
-            <line color="#a0a0a0" alpha="128" width="2" />
-            <cornerradius>15</cornerradius>
-            </shape> 
+                    <area>0,0,280,195</area>
                     <imagetype name="buttonimage">
                         <area>20,15,240,150</area>
                     </imagetype>
@@ -530,30 +446,22 @@
                         <font>text_small</font>
                     </textarea>
                 </state>
+                <state name="inactive" from="active" />                
                 <state name="selectedactive" from="active">
-                    <shape name="image_active" from="image_background">
-                        <fill color="#202020" alpha="0" />
-                    <line color="#6060ff" alpha="255" width="3" />
-                    </shape>
-                    <textarea name="buttontext">
-                        <font>text_small</font>
-                    </textarea>
+                    <area>0,0,280,195</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
                 </state>
-            <state name="selectedinactive" from="active">
-                    <shape name="image_inactive" from="image_background">
-                        <fill color="#202020" alpha="0" />
-                    <line color="#ffffff" alpha="128" width="2" />
-                    </shape>
-                    <textarea name="buttontext">
-                        <font>text_small</font>
-                    </textarea>
+                <state name="selectedinactive" from="active">
+                    <area>0,0,280,195</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
                 </state>
             </statetype>
+
             <statetype name="upscrollarrow">
                 <position>240,270</position>
                 <state type="on">
                     <imagetype name="upon">
-                        <filename>images/shared/arrow_up.png</filename>
+                        <filename>images/icons/button_arrow_up.png</filename>
                     </imagetype>
                 </state>
             </statetype>
@@ -561,13 +469,12 @@
                 <position>456,270</position>
                 <state type="on">
                     <imagetype name="down">
-                        <filename>images/shared/arrow_down.png</filename>
+                        <filename>images/icons/button_arrow_down.png</filename>
                     </imagetype>
                 </state>
             </statetype>
         </buttonlist>
 
-        <!--+++++++++++++++++++ buttons  +++++++++++++++++++++++++-->
         <button name="delete_button" from="base_button">
             <position>920,640</position>
         </button>
@@ -579,25 +486,23 @@
     </window>
 
 
+
+
+
+    <!-- UNFINISHED -->
     <window name="zmplayer">
 
         <!-- the background image of the screen -->
-        <imagetype name="background">
+        <imagetype name="background" from="base_background">
             <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
         </imagetype>
 
-    <textarea name="heading" from="base_heading">
+        <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
-        <value>ZoneMinder Event Player</value>
+                <value>ZoneMinder Event Player</value>
             </textarea>
-    </textarea>
-        
-    <!-- The clock that is shown at the top right of each screen -->
-    <textarea name="clock" from="base_clock">
-            <position>1065,0</position>	
-    </textarea>
+        </textarea>
 
         <!-- This is the background in which the listboxes are displayed -->
         <shape name="topbackground" from="base_background_shape">
@@ -609,7 +514,7 @@
             <area>20,185,1240,420</area>
         </shape>
     
-    <!-- This is the background in which the buttons are displayed -->
+        <!-- This is the background in which the buttons are displayed -->
         <shape name="bottombackground" from="base_background_shape">
             <area>20,620,1240,80</area>
         </shape>
@@ -693,6 +598,10 @@
     </window>
 
 
+
+
+
+    <!-- UNFINISHED -->
     <window name="zmliveplayer">
 
         <fontdef name="monitor" from="text_small">
@@ -712,21 +621,15 @@
         </fontdef>
 
         <!-- the background image of the screen -->
-        <imagetype name="background">
+        <imagetype name="background" from="base_background">
             <area>0,0,1280,720</area>
-            <filename>images/background.png</filename>
         </imagetype>
 
         <textarea name="heading" from="base_heading">
             <position>0,0</position>
             <textarea name="text">
-        <value>ZoneMinder Live</value>
+                <value>ZoneMinder Live</value>
             </textarea>
-        </textarea>
-        
-        <!-- The clock that is shown at the top right of each screen -->
-        <textarea name="clock" from="base_clock">
-            <position>1065,0</position>	
         </textarea>
 
         <!-- This is the background in which the zmevents are displayed -->
@@ -734,7 +637,7 @@
             <area>20,95,1240,600</area>
         </shape>
 
-    <!--+++++++++++++++++++ one monitor view +++++++++++++++++++++++++-->
+        <!--+++++++++++++++++++ one monitor view +++++++++++++++++++++++++-->
         <textarea name="name1-1">
             <area>320,120,320,70</area>
             <font>monitor</font>
