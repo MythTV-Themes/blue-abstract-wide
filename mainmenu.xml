@@ -26,6 +26,7 @@
         <description>Listen to your music or from the internet</description>
         <description lang="DE">Höre Deine Musik oder aus dem Internet</description>
         <action>MENU menu/music_menu.xml</action>
+        <depends>mythmusic</depends>
     </button>
 
     <button>
