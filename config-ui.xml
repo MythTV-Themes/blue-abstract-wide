@@ -724,12 +724,12 @@
             <position>605,400</position>
         </buttonlist>
 
-        <button name="testsd" from="base_button">
+        <button name="testsd" from="base_button_wide">
             <position>605,440</position>
             <value>Test Standard Definition</value>
         </button>
 
-        <button name="testhd" from="base_button">
+        <button name="testhd" from="base_button_wide">
             <position>605,480</position>
             <value>Test High Definition</value>
         </button>
