@@ -680,7 +680,7 @@
         
         <button name="previous" from="base_button">
             <position>485,545</position>
-            <value>Next</value>
+            <value>Previous</value>
         </button>
         <button name="next" from="base_button">
             <position>650,545</position>
@@ -740,11 +740,11 @@
         
         <button name="previous" from="base_button">
             <position>485,545</position>
-            <value>Next</value>
+            <value>Previous</value>
         </button>
         <button name="next" from="base_button">
             <position>650,545</position>
-            <value>Next</value>
+            <value>Finish</value>
         </button>
         
         <group name="base_helptext_group" from="base_helptext_group">
