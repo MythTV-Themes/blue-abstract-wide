@@ -127,6 +127,10 @@
             <textarea name="subtitle" from="base_textarea">
                 <area>270,50,705,30</area>
             </textarea>     
+            <!-- The horizontal separator above the description -->
+            <shape name="description_separator" from="base_background_shape">
+                <area>255,77,984,1</area>
+            </shape>
 
             <!-- show the plot of the recording -->
             <textarea name="description" from="base_textarea">
@@ -148,7 +152,7 @@
         </shape>
         <!-- the vertical separator -->
         <shape name="video_separator" from="base_background_shape">
-            <area>275,546,1,163</area>
+            <area>275,541,1,163</area>
         </shape>
         
     </window>
