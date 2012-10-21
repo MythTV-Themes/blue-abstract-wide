@@ -231,7 +231,7 @@
                         <align>allcenter</align>
                     </textarea>
                     <textarea name="filesize_str" from="base_textarea">
-                        <area>700,6,100,36</area>
+                        <area>700,0,100,36</area>
                         <align>right,vcenter</align>
                     </textarea>
                     
