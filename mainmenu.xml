@@ -5,7 +5,7 @@
         <type>MENU_TV</type>
         <text>Watch TV</text>
         <text lang="DE">Fernsehen</text>
-        <description>Watch live TV or schedule recordeding</description>
+        <description>Watch live TV or schedule recordings</description>
         <description lang="DE">TV und Aufnahmen anschauen oder planen</description>
         <action>MENU menu/tv_menu.xml</action>
     </button>
