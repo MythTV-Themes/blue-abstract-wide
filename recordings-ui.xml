@@ -261,7 +261,7 @@
                 <template>%"|SUBTITLE|" %%(|ORIGINALAIRDATE|) %%(|STARS|) %%DESCRIPTION%</template>
             </textarea>
 
-            <progressbar name="usedbar" from="base_progressbar_flat">
+            <progressbar name="usedbar" from="base_progressbar">
                 <position>420,205</position>
             </progressbar>
 
