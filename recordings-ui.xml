@@ -191,6 +191,24 @@
         <!-- the selection of available recording groups -->
         <buttonlist name="groups" from="base_buttonlist">
             <area>35,65,350,355</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,350,36</area>
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>8,0,100%-16,36</area>
+                        <scroll direction="horizontal" />
+                    </textarea>
+                </state>
+                <state name="inactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <area>0,0,350,36</area>
+                    <shape name="background" from="base_button_shape_selectedactive" />
+                </state>
+                <state name="selectedinactive" from="active">
+                    <area>0,0,350,36</area>
+                    <shape name="background" from="base_button_shape_selectedinactive" />
+                </state>
+            </statetype>
         </buttonlist>
 
         <!-- the selection of the available recordings in the group -->
