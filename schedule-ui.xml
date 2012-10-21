@@ -120,13 +120,21 @@
         <group name="program_details_group" from="base_program_details_group">
             <position>20,540</position>
             <textarea name="title" from="base_textarea">
-                <area>270,15,705,30</area>
+                <area>270,15,600,30</area>
                 <font>title</font>
                 <scroll direction="horizontal" />
             </textarea>
             <textarea name="subtitle" from="base_textarea">
-                <area>270,50,705,30</area>
-            </textarea>     
+                <area>270,50,600,30</area>
+            </textarea>
+
+            <textarea name="template" from="base_textarea">
+                <area>880,10,0,36</area>
+            </textarea>
+            <textarea name="channel" from="base_textarea">
+                <area>880,40,0,36</area>
+            </textarea>
+
             <!-- The horizontal separator above the description -->
             <shape name="description_separator" from="base_background_shape">
                 <area>255,77,984,1</area>
