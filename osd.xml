@@ -515,6 +515,12 @@
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
+            <state name="WMAV2">
+                <imagetype name="image" from="base_icon_selected">
+                    <filename>images/icons/audio_codec/wmav2.png</filename>
+                    <area>0,0,78,30</area>
+                </imagetype>
+            </state>
             <state name="DTS">
                 <imagetype name="image" from="base_icon_selected">
                     <filename>images/icons/audio_codec/dts.png</filename>
@@ -524,6 +530,12 @@
             <state name="AAC">
                 <imagetype name="image" from="base_icon_selected">
                     <filename>images/icons/audio_codec/aac.png</filename>
+                    <area>0,0,78,30</area>
+                </imagetype>
+            </state>
+            <state name="AAC/LATM">
+                <imagetype name="image" from="base_icon_selected">
+                    <filename>images/icons/audio_codec/aac_latm.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
