@@ -273,6 +273,12 @@
                     <area>0,0,44,33</area>
                 </imagetype>
             </state>
+            <state name="damaged">
+                <imagetype name="damaged" from="base_icon_selected">
+                    <filename>images/icons/video/damaged.png</filename>
+                    <area>0,0,44,33</area>
+                </imagetype>
+            </state>
         </statetype>
     
     </group>
