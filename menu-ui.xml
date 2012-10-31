@@ -15,8 +15,7 @@
         </clock>
 
         <!-- Shows different background images for different menus 
-			 Only the main menu entries have extra backgrounds. 
-			 The actual screens and settings do not. -->
+             Only the main menu entries have extra backgrounds. -->
         <statetype name="watermarks">
             <position>0,0</position>
         
@@ -64,6 +63,22 @@
                 </imagetype>
             </state>
             <state name="MENU_EXTRAS">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermarks/custom.jpg</filename>
+                    <area>0,0,1280,720</area>
+                </imagetype>
+            </state>
+            <!-- TODO change image -->
+            <state name="MENU_PLUGINS">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermarks/custom.jpg</filename>
+                    <area>0,0,1280,720</area>
+                </imagetype>
+            </state>
+            <!-- TODO change image -->
+            <state name="MENU_ADVANCED">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
                     <filename>images/watermarks/custom.jpg</filename>
@@ -120,6 +135,13 @@
                 </imagetype>
             </state>
             <state name="DISC_PLAY">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermarks/playdisc.jpg</filename>
+                    <area>0,0,1280,720</area>
+                </imagetype>
+            </state>
+            <state name="DVD_PLAY">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
                     <filename>images/watermarks/playdisc.jpg</filename>
