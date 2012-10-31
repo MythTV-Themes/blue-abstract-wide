@@ -71,7 +71,7 @@
         <color>#FF3333</color>
     </fontdef>
     <fontdef name="text_blue" from="text">
-        <color>#0040FF</color>
+        <color>#3694ED</color>
     </fontdef>
     <fontdef name="text_orange" from="text">
         <color>#FFBF00</color>
