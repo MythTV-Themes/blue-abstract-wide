@@ -1122,23 +1122,24 @@
 
             <shape name="background">
                 <area>0,0,800,20</area>
-                <type>roundbox</type>
                 <fill color="#535353" alpha="120" />
                 <line color="#535353" alpha="100" width="1" />
-                <cornerradius>8</cornerradius>
             </shape>
-
-            <imagetype name="progressimage">
-                <area>0,0,800,20</area>
-                <filename>images/icons/progressbar.png</filename>
-                <alpha>200</alpha>
-            </imagetype>
 
             <shape name="position">
                 <area>0,-13,2,18</area>
                 <fill color="#FFFFFF" alpha="255" />
             </shape>
-            
+
+            <shape name="keep">
+                <area>0,0,2,20</area>
+                <fill color="#3694ED" alpha="255" />
+            </shape>
+            <shape name="cut">
+                <area>0,0,2,20</area>
+                <fill color="#FF0000" alpha="255" />
+            </shape>
+
             <shape name="cuttoright">
                 <area>0,16,2,20</area>
                 <fill color="#AAAAAA" alpha="255" />
