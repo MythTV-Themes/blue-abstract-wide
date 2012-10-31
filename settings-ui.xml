@@ -92,11 +92,11 @@
 
         <!-- this is the background for the themelist and the large preview at the top -->
         <shape name="themechooser_background" from="base_background_shape">
-            <area>90,110,1105,350</area>
+            <area>90,100,1105,350</area>
         </shape>
 
         <buttonlist name="themes" from="base_buttonlist">
-            <area>105,125,480,317</area>
+            <area>105,115,480,317</area>
             <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <triggerevent context="Global" action="MENU">RIGHT</triggerevent>
             <statetype name="buttonitem">
@@ -155,64 +155,73 @@
         </buttonlist>
         
         <shape name="preview_separator" from="base_background_shape">
-            <area>600,111,1,348</area>
+            <area>600,101,1,348</area>
         </shape>
         
         <!-- shows a preview image of the theme on the right side -->
         <imagetype name="preview_image_border">
-            <area>610,120,576,330</area>
+            <area>610,110,576,330</area>
             <filename>images/media/themechooser_border.png</filename>
         </imagetype>
         <imagetype name="preview_background_image">
-            <area>610,120,576,330</area>
+            <area>610,110,576,330</area>
             <filename>images/media/themechooser_bg.png</filename>
             <mask>images/media/themechooser_mask.png</mask>
         </imagetype>
         <imagetype name="preview">
-            <area>610,120,576,330</area>
+            <area>610,110,576,330</area>
             <mask>images/media/themechooser_mask.png</mask>
         </imagetype>        
 
         <!-- this is the background for the descriptions and the small preview at the bottom -->
         <shape name="theme_details_background" from="base_background_shape">
-            <area>90,480,1105,165</area>
+            <area>90,470,1105,186</area>
         </shape>
 
         <!-- shows the name, resolution and aspect ratio of the selected theme -->
         <textarea name="name" from="base_textarea">
-            <area>105,490,960,36</area>
+            <area>105,480,520,30</area>
             <font>title</font>
             <scroll direction="horizontal" />
         </textarea>
 
-        <textarea name="resolution" from="base_textarea">
-            <area>105,520,130,36</area>
-        </textarea>
-
         <textarea name="aspect" from="base_textarea">
-            <area>270,520,100,36</area>
+            <area>105,512,805,30</area>
+            <scroll direction="horizontal" />
+            <template>For %ASPECT% displays.% By |AUTHORNAME%% &lt;|AUTHOREMAIL|&gt;%.</template>
         </textarea> 
 
-        <!-- separates the time and channel and the status icons from the plot -->
-        <shape name="theme_description_separator" from="base_background_shape">
-            <area>91,557,1103,1</area>
-        </shape>
-
-        <textarea name="description" from="base_textarea">
-            <area>105,568,1050,63</area>
-            <multiline>yes</multiline>
-            <scroll direction="vertical" />
-            <align>left,bottom</align>
+        <textarea name="resolution" from="base_textarea">
+            <area>925,512,250,30</area>
+            <align>right,vcenter</align>
+            <template>Resolution: %RESOLUTION%</template>
         </textarea>
 
         <textarea name="downloadprogress_label" from="base_textarea">
-            <area>685,490,500,36</area>
-            <align>allcenter</align>
+            <area>640,480,230,30</area>
+            <align>right,vcenter</align>
             <value>Download progress:</value>
         </textarea>
         <progressbar name="downloadprogressbar" from="base_progressbar">
-            <position>685,525</position>
-        </progressbar>        
+            <area>880,485,300,20</area>
+            <imagetype name="progressimage" from="base_image_selected">
+                <area>0,0,300,20</area>
+                <filename>images/icons/progressbar.png</filename>
+            </imagetype>
+        </progressbar>
+
+        <!-- separates the time and channel and the status icons from the plot -->
+        <shape name="theme_description_separator" from="base_background_shape">
+            <area>91,547,1103,1</area>
+        </shape>
+
+        <textarea name="description" from="base_textarea">
+            <area>105,558,1075,84</area>
+            <multiline>yes</multiline>
+            <scroll direction="vertical" />
+            <align>left,top</align>
+            <template>Description: %DESCRIPTION%\nErrata: %ERRATA%</template>
+        </textarea>
 
         <!-- shows a large preview image of the theme -->
         <statetype name="fullpreviewstate">
