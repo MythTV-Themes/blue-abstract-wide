@@ -301,7 +301,7 @@
             <statetype name="buttonitem">
                 <state name="active">
                     <area>0,0,995,36</area>
-                    <textarea name="shortstarttimedate" from="buttontext">
+                    <textarea name="shortstarttimedate" from="base_textarea">
                         <area>8,0,204,36</area>
                     </textarea>
                     <textarea name="channel" from="shortstarttimedate">
@@ -311,7 +311,15 @@
                         <area>410,0,540,36</area>
                     </textarea>
                     <textarea name="card" from="shortstarttimedate">
-                        <area>970,0,30,36</area>
+                        <area>960,0,30,36</area>
+                        <font>text</font>
+                        <font state="running">text_green</font>
+                        <font state="disabled">text_grey</font>
+                        <font state="error">text_red</font>
+                        <font state="normal">text</font>
+                        <font state="warning">text_orange</font>
+                        <align>allcenter</align>
+                        <template>%1</template>
                     </textarea>
                 </state>
                 <state name="inactive" from="active"/>
@@ -875,10 +883,18 @@
                         <area>220,0,160,36</area>
                     </textarea>
                     <textarea name="titlesubtitle" from="shortstarttimedate">
-                        <area>410,0,740,36</area>
+                        <area>410,0,750,36</area>
                     </textarea>
                     <textarea name="card" from="shortstarttimedate">
-                        <area>1180,0,30,36</area>
+                        <area>1175,0,30,36</area>
+                        <font>text</font>
+                        <font state="running">text_green</font>
+                        <font state="disabled">text_grey</font>
+                        <font state="error">text_red</font>
+                        <font state="normal">text</font>
+                        <font state="warning">text_orange</font>
+                        <align>allcenter</align>
+                        <template>%1</template>
                     </textarea>
                 </state>
                 <state name="inactive" from="active"/>

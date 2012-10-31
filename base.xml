@@ -70,6 +70,12 @@
     <fontdef name="text_red" from="text">
         <color>#FF3333</color>
     </fontdef>
+    <fontdef name="text_blue" from="text">
+        <color>#0040FF</color>
+    </fontdef>
+    <fontdef name="text_orange" from="text">
+        <color>#FFBF00</color>
+    </fontdef>
 
     <!-- Smaller font that is used in some screens -->
     <fontdef name="text_small" from="normal">
