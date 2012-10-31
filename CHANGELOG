@@ -1,4 +1,27 @@
 ===========================================================
+31.10.2012 - Version 1.9
+===========================================================
+
+Bug #311: Increase date width
+Bug #312: Change video background image brightness
+Bug #313: Missing background images
+Bug #316: Typo in watch recording description
+Bug #317: Add mythmusic dependency to the main menu
+Bug #318: Show cutpoints in the OSD
+Bug #319: Incorrect button names in setup wizard
+Bug #320: Text is cut off in setup wizard
+Bug #323: Delete recording screen widget misplacement
+Bug #336: Planning screen with EPG and video has misalignments
+Feature #147: Add damaged video property for poor recordings
+Feature #203: Add nightmode indication to OSD
+Feature #275: Add media type as a statetype to the OSD
+Feature #321: Change textcolor of upcoming recordings
+Feature #338: Add missing statetypes to OSD
+Feature #339: Some audio icons are hard to distinguish
+
+
+
+===========================================================
 01.08.2012 - Version 1.8
 ===========================================================
 

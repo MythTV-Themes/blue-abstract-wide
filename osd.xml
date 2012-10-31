@@ -12,13 +12,13 @@
             <filename>images/media/header_left.png</filename>
         </imagetype>
         <clock name="clock">
-            <area>10,0,200,30</area>
+            <area>10,0,230,30</area>
             <font>text</font>
             <template>%DATE%, %TIME%</template>
             <align>left,vcenter</align>
         </clock>
         <textarea name="text">
-            <area>215,0,300,30</area>
+            <area>245,0,270,30</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
@@ -172,13 +172,13 @@
             <filename>images/media/header_left.png</filename>
         </imagetype>
         <clock name="clock">
-            <area>10,0,200,30</area>
+            <area>10,0,230,30</area>
             <font>text</font>
             <template>%DATE%, %TIME%</template>
             <align>left,vcenter</align>
         </clock>
         <textarea name="message_text">
-            <area>215,0,300,30</area>
+            <area>245,0,270,30</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
@@ -203,13 +203,13 @@
             <filename>images/media/header_left.png</filename>
         </imagetype>
         <clock name="clock">
-            <area>10,0,200,30</area>
+            <area>10,0,230,30</area>
             <font>text</font>
             <template>%DATE%, %TIME%</template>
             <align>left,vcenter</align>
         </clock>
         <textarea name="osd_number_entry">
-            <area>215,0,300,30</area>
+            <area>245,0,270,30</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
@@ -236,7 +236,7 @@
             <filename>images/media/header_left.png</filename>
         </imagetype>
         <clock name="clock">
-            <area>10,0,200,30</area>
+            <area>10,0,230,30</area>
             <font>text</font>
             <template>%DATE%, %TIME%</template>
             <align>left,vcenter</align>
@@ -304,7 +304,7 @@
             <filename>images/media/header_left.png</filename>
         </imagetype>
         <clock name="clock">
-            <area>10,0,200,30</area>
+            <area>10,0,230,30</area>
             <font>text</font>
             <template>%DATE%, %TIME%</template>
             <align>left,vcenter</align>
@@ -321,7 +321,7 @@
 
         <!-- shows the title and the plot of the selected video -->
         <textarea name="title">
-            <area>120,460,820,36</area>
+            <area>120,460,620,36</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
@@ -345,12 +345,7 @@
 
         <!-- show the channel or the channel name if 
              no channel icon is available -->
-        <imagetype name="iconpath_background_image">
-            <area>120,550,133,100</area>
-            <mask>images/media/channel_nfmask.png</mask>
-            <filename>images/media/channel_bg.png</filename>
-        </imagetype>
-        
+<!--
         <textarea name="callsign">
             <area>130,560,113,80</area>
             <align>allcenter</align>
@@ -359,6 +354,13 @@
             <scroll direction="vertical"/>
             <font>text</font>
         </textarea>
+-->
+        <imagetype name="iconpath_background_image">
+            <area>120,550,133,100</area>
+            <mask>images/media/channel_nfmask.png</mask>
+            <filename>images/media/channel_bg.png</filename>
+            <alpha>180</alpha>
+        </imagetype>
         
         <imagetype name="iconpath">
             <area>120,550,133,100</area>
@@ -396,6 +398,57 @@
             <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
 
+        <!-- show some images about the type of media -->
+        <textarea name="mediatypestring">
+            <align>right,vcenter</align>
+            <area>808,452,200,36</area>
+            <font>text</font>
+        </textarea>
+<!--
+        <statetype name="mediatype">
+            <position>908,452</position>
+            <state name="video">
+                <textarea name="mediatype_label">
+                    <align>right,vcenter</align>
+                    <area>0,0,100,36</area>
+                    <font>text</font>
+                    <value>Video</value>
+                </textarea>
+            </state>
+            <state name="dvd">
+                <textarea name="mediatype_label">
+                    <align>right,vcenter</align>
+                    <area>0,0,100,36</area>
+                    <font>text</font>
+                    <value>DVD</value>
+                </textarea>
+            </state>
+            <state name="httpstream">
+                <textarea name="mediatype_label">
+                    <align>right,vcenter</align>
+                    <area>0,0,100,36</area>
+                    <font>text</font>
+                    <value>HTTP Streaming</value>
+                </textarea>
+            </state>
+            <state name="rtspstream">
+                <textarea name="mediatype_label">
+                    <align>right,vcenter</align>
+                    <area>0,0,100,36</area>
+                    <font>text</font>
+                    <value>RTSP Streaming</value>
+                </textarea>
+            </state>
+            <state name="bluraydisc">
+                <textarea name="mediatype_label">
+                    <align>right,vcenter</align>
+                    <area>0,0,100,36</area>
+                    <font>text</font>
+                    <value>Blu-Ray Disc</value>
+                </textarea>
+            </state>
+        </statetype>
+-->
         <!-- show some images about the type of recording, audio and video codecs -->
         <statetype name="tvstate">
             <position>1058,452</position>
@@ -447,6 +500,18 @@
                     <value>Recording</value>
                 </textarea>
             </state>
+        </statetype>
+
+        <!-- Nightmode indication -->
+        <statetype name="nightmode">
+            <position>768,493</position>
+            <state name="yes">
+                <imagetype name="image" from="base_icon_selected">
+                    <filename>images/icons/nightmode.png</filename>
+                    <area>0,0,30,30</area>
+                </imagetype>
+            </state>
+            <state name="no" />
         </statetype>
 
         <statetype name="videodescrip">
@@ -515,6 +580,12 @@
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
+            <state name="WMAV2">
+                <imagetype name="image" from="base_icon_selected">
+                    <filename>images/icons/audio_codec/wmav2.png</filename>
+                    <area>0,0,78,30</area>
+                </imagetype>
+            </state>
             <state name="DTS">
                 <imagetype name="image" from="base_icon_selected">
                     <filename>images/icons/audio_codec/dts.png</filename>
@@ -524,6 +595,12 @@
             <state name="AAC">
                 <imagetype name="image" from="base_icon_selected">
                     <filename>images/icons/audio_codec/aac.png</filename>
+                    <area>0,0,78,30</area>
+                </imagetype>
+            </state>
+            <state name="AAC/LATM">
+                <imagetype name="image" from="base_icon_selected">
+                    <filename>images/icons/audio_codec/aac_latm.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
@@ -558,6 +635,18 @@
             <state name="2">
                 <imagetype name="image" from="base_icon_selected">
                     <filename>images/icons/audio/2.0.png</filename>
+                    <area>0,0,78,30</area>
+                </imagetype>
+            </state>
+            <state name="3">
+                <imagetype name="image" from="base_icon_selected">
+                    <filename>images/icons/audio/3.0.png</filename>
+                    <area>0,0,78,30</area>
+                </imagetype>
+            </state>
+            <state name="4">
+                <imagetype name="image" from="base_icon_selected">
+                    <filename>images/icons/audio/4.0.png</filename>
                     <area>0,0,78,30</area>
                 </imagetype>
             </state>
@@ -652,7 +741,7 @@
             <filename>images/media/header_left.png</filename>
         </imagetype>
         <clock name="clock">
-            <area>10,0,200,30</area>
+            <area>10,0,230,30</area>
             <font>text</font>
             <template>%DATE%, %TIME%</template>
             <align>left,vcenter</align>
@@ -693,12 +782,7 @@
 
         <!-- show the channel or the channel name if 
              no channel icon is available -->
-        <imagetype name="iconpath_background_image">
-            <area>120,550,133,100</area>
-            <mask>images/media/channel_nfmask.png</mask>
-            <filename>images/media/channel_bg.png</filename>
-        </imagetype>
-        
+<!--
         <textarea name="callsign">
             <area>130,560,113,80</area>
             <align>allcenter</align>
@@ -707,6 +791,13 @@
             <scroll direction="vertical"/>
             <font>text</font>
         </textarea>
+-->
+        <imagetype name="iconpath_background_image">
+            <area>120,550,133,100</area>
+            <mask>images/media/channel_nfmask.png</mask>
+            <filename>images/media/channel_bg.png</filename>
+            <alpha>180</alpha>
+        </imagetype>
         
         <imagetype name="iconpath">
             <area>120,550,133,100</area>
@@ -782,13 +873,13 @@
             <filename>images/media/header_left.png</filename>
         </imagetype>
         <clock name="clock">
-            <area>10,0,200,30</area>
+            <area>10,0,230,30</area>
             <font>text</font>
             <template>%DATE%, %TIME%</template>
             <align>left,vcenter</align>
         </clock>
         <textarea name="text">
-            <area>215,0,300,30</area>
+            <area>245,0,270,30</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
@@ -973,7 +1064,7 @@
             <filename>images/media/header_left.png</filename>
         </imagetype>
         <clock name="clock">
-            <area>10,0,200,30</area>
+            <area>10,0,230,30</area>
             <font>text</font>
             <template>%DATE%, %TIME%</template>
             <align>left,vcenter</align>
@@ -1031,23 +1122,24 @@
 
             <shape name="background">
                 <area>0,0,800,20</area>
-                <type>roundbox</type>
                 <fill color="#535353" alpha="120" />
                 <line color="#535353" alpha="100" width="1" />
-                <cornerradius>8</cornerradius>
             </shape>
-
-            <imagetype name="progressimage">
-                <area>0,0,800,20</area>
-                <filename>images/icons/progressbar.png</filename>
-                <alpha>200</alpha>
-            </imagetype>
 
             <shape name="position">
                 <area>0,-13,2,18</area>
                 <fill color="#FFFFFF" alpha="255" />
             </shape>
-            
+
+            <shape name="keep">
+                <area>0,0,2,20</area>
+                <fill color="#3694ED" alpha="255" />
+            </shape>
+            <shape name="cut">
+                <area>0,0,2,20</area>
+                <fill color="#FF0000" alpha="255" />
+            </shape>
+
             <shape name="cuttoright">
                 <area>0,16,2,20</area>
                 <fill color="#AAAAAA" alpha="255" />
@@ -1234,5 +1326,171 @@
             </statetype>
         </buttonlist>
     </window>
+
+
+
+
+
+    <!-- dialog box that shows the most 
+         important options and controls -->
+    <window name="MythDialogBox">
     
+        <!-- darkens the entire background so 
+             that the popup is better readable -->
+        <shape name="darken_background">
+            <type>box</type>
+            <fill color="#000000" alpha="110" />
+        </shape>
+        
+        <!-- the background image of the popup dialog box -->
+        <shape name="dialog_background">
+            <area>450,130,380,388</area>
+            <type>roundbox</type>
+            <fill color="#000000" alpha="210" />
+            <line color="#AAAAAA" alpha="150" width="1" />
+            <cornerradius>10</cornerradius>
+        </shape>
+
+        <textarea name="messagearea">
+            <area>465,140,350,60</area>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+            <cutdown>no</cutdown>
+            <font>text</font>
+            <scroll direction="vertical"/>
+        </textarea>
+        
+        <!-- this needs to be here to prevent errors in the logs. -->
+        <textarea name="title" from="messagearea">
+            <area>465,140,350,60</area>
+        </textarea>
+        
+        <shape name="messagearea_separator">
+            <area>451,210,378,1</area>
+            <type>roundbox</type>
+            <fill color="#000000" alpha="130" />
+            <line color="#AAAAAA" alpha="150" width="1" />
+            <cornerradius>10</cornerradius>
+        </shape>
+
+        <buttonlist name="list">
+            <area>465,225,350,275</area>
+            <layout>vertical</layout>
+            <spacing>3</spacing>
+            <scrollstyle>free</scrollstyle>
+            <wrapstyle>selection</wrapstyle>
+            <buttonarea>0,0,100%,100%</buttonarea>
+        
+            <!-- states that the buttonlist can have -->
+            <statetype name="buttonitem">
+        
+                <!-- active menu entry -->
+                <state name="active">
+                    <area>0,0,350,36</area>
+                    
+                    <shape name="background">
+                        <area>0,0,100%,100%</area>
+                        <type>roundbox</type>
+                        <fill color="#535353" alpha="120" />
+                        <line color="#535353" alpha="100" width="1" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
+                    
+                    <!-- the button's text -->
+                    <textarea name="buttontext">
+                        <area>8,0,100%-16,36</area>
+                        <font>text</font>
+                        <multiline>no</multiline>
+                        <cutdown>no</cutdown>
+                        <align>left,vcenter</align>
+                        <scroll direction="horizontal" />
+                    </textarea>
+                    
+                    <!-- indicates the button contains a submenu -->
+                    <imagetype name="buttonarrow">
+                        <area>100%-26,4,18,27</area>
+                        <alpha>50</alpha>
+                        <filename>images/icons/button_arrow_right.png</filename>
+                    </imagetype>
+                </state>
+                
+                <!-- inactive menu entry -->
+                <state name="inactive" from="active">
+                    <area>0,0,350,36</area>
+                </state>
+                
+                <!-- menu entry has been selected and is active -->
+                <state name="selectedactive" from="active">
+                    <area>0,0,350,36</area>
+                    <shape name="background">
+                        <area>0,0,100%,100%</area>
+                        <type>roundbox</type>
+                        <fill color="#3697ef" alpha="220" />
+                        <line color="#3697ef" alpha="200" width="1" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
+                    
+                    <!-- indicates the button contains a submenu -->
+                    <imagetype name="buttonarrow">
+                        <area>100%-26,4,18,27</area>
+                        <alpha>220</alpha>
+                        <filename>images/icons/button_arrow_right.png</filename>
+                    </imagetype>
+                </state>
+                
+                <!-- menu entry has been selected and is inactive -->
+                <state name="selectedinactive" from="active">
+                    <area>0,0,350,36</area>
+                    <shape name="background">
+                        <area>0,0,100%,100%</area>
+                        <type>roundbox</type>
+                        <fill color="#1d68e0" alpha="100" />
+                        <line color="#1d68e0" alpha="80" width="1" />
+                        <cornerradius>8</cornerradius>
+                    </shape>
+                </state>
+            </statetype>
+            
+            <!-- show arrows to indicates that there are
+                more menu entries above the first visible menu -->
+            <statetype name="upscrollarrow">
+                <area>100%-55,100%-5,27,18</area>
+                <state type="off">
+                    <imagetype name="upon">
+                        <filename>images/icons/button_arrow_up.png</filename>
+                        <area>0,0,27,18</area>
+                        <alpha>50</alpha>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="upoff">
+                        <filename>images/icons/button_arrow_up.png</filename>
+                        <area>0,0,27,18</area>
+                        <alpha>220</alpha>
+                    </imagetype>
+                </state>
+            </statetype>
+            
+            <!-- show arrows to indicates that there are
+                more menu entries below the last visible menu -->
+            <statetype name="downscrollarrow">
+                <area>100%-30,100%-5,27,18</area>
+                <state type="off">
+                    <imagetype name="dnon">
+                        <filename>images/icons/button_arrow_down.png</filename>
+                        <area>0,0,27,18</area>
+                        <alpha>50</alpha>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="dnoff">
+                        <filename>images/icons/button_arrow_down.png</filename>
+                        <area>0,0,27,18</area>
+                        <alpha>220</alpha>
+                    </imagetype>
+                </state>
+            </statetype>
+        </buttonlist>
+    </window>
+
 </mythuitheme>

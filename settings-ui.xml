@@ -233,7 +233,7 @@
                     </textarea>
                 </textarea>                
                 <textarea name="fullscreenname" from="base_textarea">
-                    <area>215,0,300,30</area>
+                    <area>245,0,270,30</area>
                     <align>allcenter</align>
                 </textarea>
             </state>

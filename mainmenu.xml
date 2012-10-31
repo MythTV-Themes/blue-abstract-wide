@@ -5,7 +5,7 @@
         <type>MENU_TV</type>
         <text>Watch TV</text>
         <text lang="DE">Fernsehen</text>
-        <description>Watch live TV or schedule recordeding</description>
+        <description>Watch live TV or schedule recordings</description>
         <description lang="DE">TV und Aufnahmen anschauen oder planen</description>
         <action>MENU menu/tv_menu.xml</action>
     </button>
@@ -26,6 +26,7 @@
         <description>Listen to your music or from the internet</description>
         <description lang="DE">Höre Deine Musik oder aus dem Internet</description>
         <action>MENU menu/music_menu.xml</action>
+        <depends>mythmusic</depends>
     </button>
 
     <button>
@@ -61,7 +62,7 @@
     </button>
 
     <button>
-        <type>MENU_INFO</type>
+        <type>MENU_INFO_CENTER</type>
         <text>Internet and Information</text>
         <text lang="DE">Internet und Infos</text>
         <description>Surf the net, read news and more</description>
