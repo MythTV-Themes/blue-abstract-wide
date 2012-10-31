@@ -398,27 +398,6 @@
             <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
 
-        <!-- Nightmode indication -->
-        <statetype name="nightmode">
-            <position>540,495</position>
-            <state name="yes">
-                <textarea name="nightmode_label">
-                    <align>allcenter</align>
-                    <area>0,0,200,36</area>
-                    <font>text</font>
-                    <value>Nightmode Active</value>
-                </textarea>
-            </state>
-            <state name="no">
-                <textarea name="nightmode_label">
-                    <align>allcenter</align>
-                    <area>0,0,200,36</area>
-                    <font>text</font>
-                    <value>Nightmode Not Active</value>
-                </textarea>
-            </state>
-        </statetype>
-
         <!-- show some images about the type of media -->
         <textarea name="mediatypestring">
             <align>right,vcenter</align>
@@ -521,6 +500,18 @@
                     <value>Recording</value>
                 </textarea>
             </state>
+        </statetype>
+
+        <!-- Nightmode indication -->
+        <statetype name="nightmode">
+            <position>768,493</position>
+            <state name="yes">
+                <imagetype name="image" from="base_icon_selected">
+                    <filename>images/icons/nightmode.png</filename>
+                    <area>0,0,30,30</area>
+                </imagetype>
+            </state>
+            <state name="no" />
         </statetype>
 
         <statetype name="videodescrip">
