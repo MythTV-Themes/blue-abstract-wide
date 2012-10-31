@@ -345,12 +345,7 @@
 
         <!-- show the channel or the channel name if 
              no channel icon is available -->
-        <imagetype name="iconpath_background_image">
-            <area>120,550,133,100</area>
-            <mask>images/media/channel_nfmask.png</mask>
-            <filename>images/media/channel_bg.png</filename>
-        </imagetype>
-        
+<!--
         <textarea name="callsign">
             <area>130,560,113,80</area>
             <align>allcenter</align>
@@ -359,6 +354,13 @@
             <scroll direction="vertical"/>
             <font>text</font>
         </textarea>
+-->
+        <imagetype name="iconpath_background_image">
+            <area>120,550,133,100</area>
+            <mask>images/media/channel_nfmask.png</mask>
+            <filename>images/media/channel_bg.png</filename>
+            <alpha>180</alpha>
+        </imagetype>
         
         <imagetype name="iconpath">
             <area>120,550,133,100</area>
@@ -768,12 +770,7 @@
 
         <!-- show the channel or the channel name if 
              no channel icon is available -->
-        <imagetype name="iconpath_background_image">
-            <area>120,550,133,100</area>
-            <mask>images/media/channel_nfmask.png</mask>
-            <filename>images/media/channel_bg.png</filename>
-        </imagetype>
-        
+<!--
         <textarea name="callsign">
             <area>130,560,113,80</area>
             <align>allcenter</align>
@@ -782,6 +779,13 @@
             <scroll direction="vertical"/>
             <font>text</font>
         </textarea>
+-->
+        <imagetype name="iconpath_background_image">
+            <area>120,550,133,100</area>
+            <mask>images/media/channel_nfmask.png</mask>
+            <filename>images/media/channel_bg.png</filename>
+            <alpha>180</alpha>
+        </imagetype>
         
         <imagetype name="iconpath">
             <area>120,550,133,100</area>
