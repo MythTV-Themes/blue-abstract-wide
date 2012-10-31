@@ -20,7 +20,7 @@
     </button>
 
     <button>
-        <type>DISC_PLAY</type>
+        <type>DVD_PLAY</type>
         <text>Play DVD</text>
         <text lang="DE">DVD abspielen</text>
         <description>Play a film on Blu-ray or DVD</description>

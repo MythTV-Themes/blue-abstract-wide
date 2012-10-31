@@ -62,7 +62,7 @@
     </button>
 
     <button>
-        <type>MENU_INFO</type>
+        <type>MENU_INFO_CENTER</type>
         <text>Internet and Information</text>
         <text lang="DE">Internet und Infos</text>
         <description>Surf the net, read news and more</description>
