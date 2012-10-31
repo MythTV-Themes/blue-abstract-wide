@@ -321,7 +321,7 @@
 
         <!-- shows the title and the plot of the selected video -->
         <textarea name="title">
-            <area>120,460,820,36</area>
+            <area>120,460,620,36</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
@@ -397,6 +397,27 @@
             <font>text</font>
             <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
+
+        <!-- Nightmode indication -->
+        <statetype name="nightmode">
+            <position>540,495</position>
+            <state name="yes">
+                <textarea name="nightmode_label">
+                    <align>allcenter</align>
+                    <area>0,0,200,36</area>
+                    <font>text</font>
+                    <value>Nightmode Active</value>
+                </textarea>
+            </state>
+            <state name="no">
+                <textarea name="nightmode_label">
+                    <align>allcenter</align>
+                    <area>0,0,200,36</area>
+                    <font>text</font>
+                    <value>Nightmode Not Active</value>
+                </textarea>
+            </state>
+        </statetype>
 
         <!-- show some images about the type of media -->
         <textarea name="mediatypestring">
