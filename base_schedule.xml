@@ -132,8 +132,15 @@
         </textarea>
         <textarea name="rectypestatus" from="base_textarea">
             <area>825,40,400,36</area>
-            <align>right,vcenter</align>
             <scroll direction="horizontal" />
+            <font>text</font>
+            <font state="running">text_green</font>
+            <font state="disabled">text_grey</font>
+            <font state="error">text_red</font>
+            <font state="normal">text</font>
+            <font state="warning">text_orange</font>
+            <align>right,vcenter</align>
+            <template>%1</template>
         </textarea>
 
         <shape name="description_separator" from="base_background_shape">

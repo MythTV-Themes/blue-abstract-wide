@@ -680,7 +680,7 @@
         
         <button name="previous" from="base_button">
             <position>485,545</position>
-            <value>Next</value>
+            <value>Previous</value>
         </button>
         <button name="next" from="base_button">
             <position>650,545</position>
@@ -724,12 +724,12 @@
             <position>605,400</position>
         </buttonlist>
 
-        <button name="testsd" from="base_button">
+        <button name="testsd" from="base_button_wide">
             <position>605,440</position>
             <value>Test Standard Definition</value>
         </button>
 
-        <button name="testhd" from="base_button">
+        <button name="testhd" from="base_button_wide">
             <position>605,480</position>
             <value>Test High Definition</value>
         </button>
@@ -740,11 +740,11 @@
         
         <button name="previous" from="base_button">
             <position>485,545</position>
-            <value>Next</value>
+            <value>Previous</value>
         </button>
         <button name="next" from="base_button">
             <position>650,545</position>
-            <value>Next</value>
+            <value>Finish</value>
         </button>
         
         <group name="base_helptext_group" from="base_helptext_group">

@@ -4,19 +4,18 @@
     <window name="mainmenu">  
 
         <imagetype name="header_background">
-            <area>-320,-1,560,50</area>
+            <area>-290,-1,560,50</area>
             <filename>images/media/header_left.png</filename>
         </imagetype>
         <clock name="clock">
-            <area>10,0,200,30</area>
+            <area>10,0,230,30</area>
             <font>text</font>
             <template>%DATE%, %TIME%</template>
             <align>left,vcenter</align>
         </clock>
 
         <!-- Shows different background images for different menus 
-			 Only the main menu entries have extra backgrounds. 
-			 The actual screens and settings do not. -->
+             Only the main menu entries have extra backgrounds. -->
         <statetype name="watermarks">
             <position>0,0</position>
         
@@ -56,7 +55,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
-            <state name="MENU_INFO">
+            <state name="MENU_INFO_CENTER">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
                     <filename>images/watermarks/scripts.jpg</filename>
@@ -119,7 +118,7 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
-            <state name="DISC_PLAY">
+            <state name="DVD_PLAY">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
                     <filename>images/watermarks/playdisc.jpg</filename>
@@ -142,7 +141,6 @@
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
-
             <!-- Background images for the Music menu -->
             <state name="MUSIC_PLAY">
                 <imagetype name="watermark">
@@ -231,6 +229,37 @@
                 </imagetype>
             </state>
             <state name="MENU_UTILITIES_SETUP">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermarks/custom.jpg</filename>
+                    <area>0,0,1280,720</area>
+                </imagetype>
+            </state>
+
+            <!-- The following states are not part of the blue-abstract menu
+                 and have only been added for consistency with other menus -->
+            <state name="MENU_MANAGE_RECORDINGS">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermarks/videos.jpg</filename>
+                    <area>0,0,1280,720</area>
+                </imagetype>
+            </state>
+            <state name="MENU_OPTICAL_DISKS">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermarks/playdisc.jpg</filename>
+                    <area>0,0,1280,720</area>
+                </imagetype>
+            </state>
+            <state name="MENU_PLUGINS">
+                <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
+                    <filename>images/watermarks/custom.jpg</filename>
+                    <area>0,0,1280,720</area>
+                </imagetype>
+            </state>
+            <state name="MENU_ADVANCED">
                 <imagetype name="watermark">
                     <mask>images/background_mask.png</mask>
                     <filename>images/watermarks/custom.jpg</filename>
