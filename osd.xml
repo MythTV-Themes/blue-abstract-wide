@@ -396,6 +396,57 @@
             <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
 
+        <!-- show some images about the type of media -->
+        <textarea name="mediatypestring">
+            <align>right,vcenter</align>
+            <area>808,452,200,36</area>
+            <font>text</font>
+        </textarea>
+<!--
+        <statetype name="mediatype">
+            <position>908,452</position>
+            <state name="video">
+                <textarea name="mediatype_label">
+                    <align>right,vcenter</align>
+                    <area>0,0,100,36</area>
+                    <font>text</font>
+                    <value>Video</value>
+                </textarea>
+            </state>
+            <state name="dvd">
+                <textarea name="mediatype_label">
+                    <align>right,vcenter</align>
+                    <area>0,0,100,36</area>
+                    <font>text</font>
+                    <value>DVD</value>
+                </textarea>
+            </state>
+            <state name="httpstream">
+                <textarea name="mediatype_label">
+                    <align>right,vcenter</align>
+                    <area>0,0,100,36</area>
+                    <font>text</font>
+                    <value>HTTP Streaming</value>
+                </textarea>
+            </state>
+            <state name="rtspstream">
+                <textarea name="mediatype_label">
+                    <align>right,vcenter</align>
+                    <area>0,0,100,36</area>
+                    <font>text</font>
+                    <value>RTSP Streaming</value>
+                </textarea>
+            </state>
+            <state name="bluraydisc">
+                <textarea name="mediatype_label">
+                    <align>right,vcenter</align>
+                    <area>0,0,100,36</area>
+                    <font>text</font>
+                    <value>Blu-Ray Disc</value>
+                </textarea>
+            </state>
+        </statetype>
+-->
         <!-- show some images about the type of recording, audio and video codecs -->
         <statetype name="tvstate">
             <position>1058,452</position>
