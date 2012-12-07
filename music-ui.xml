@@ -419,7 +419,6 @@
                         <shape name="buttontext_background" from="base_background_shape">
                             <area>3,81,127,49</area>
                             <line color="#AAAAAA" alpha="0" width="0" />
-                            <cornerradius>8</cornerradius>
                         </shape>
                         
                         <!-- The actual album name that is shown when no icon is available -->
@@ -592,7 +591,6 @@
                         <shape name="buttontext_background" from="base_background_shape_dark">
                             <area>7,118,171,60</area>
                             <line color="#AAAAAA" alpha="0" width="0" />
-                            <cornerradius>10</cornerradius>
                         </shape>
                         <textarea name="buttontext" from="base_textarea">
                             <area>20,124,145,45</area>
@@ -1974,7 +1972,6 @@
                     <shape name="buttontext_background" from="base_background_shape">
                         <area>3,81,127,49</area>
                         <line color="#AAAAAA" alpha="0" width="0" />
-                        <cornerradius>8</cornerradius>
                     </shape>
                     
                     <!-- The actual album name that is shown when no icon is available -->
@@ -2014,7 +2011,6 @@
                     <shape name="buttontext_background" from="base_background_shape_dark">
                         <area>7,118,171,60</area>
                         <line color="#AAAAAA" alpha="0" width="0" />
-                        <cornerradius>10</cornerradius>
                     </shape>
                     <textarea name="buttontext" from="base_textarea">
                         <area>20,124,145,45</area>
