@@ -1803,7 +1803,6 @@
                     <shape name="resolution_background" from="base_background_shape_dark">
                         <area>3,158,130,32</area>
                         <line color="#AAAAAA" alpha="0" width="0" />
-                        <cornerradius>8</cornerradius>
                     </shape>
                     <textarea name="resolution" from="base_textarea">
                         <area>15,155,103,36</area>
@@ -1839,7 +1838,6 @@
                     <shape name="resolution_background" from="base_background_shape_dark">
                         <area>7,225,180,37</area>
                         <line color="#AAAAAA" alpha="0" width="0" />
-                        <cornerradius>8</cornerradius>
                     </shape>
                     <textarea name="resolution" from="base_textarea">
                         <area>10,225,165,36</area>
