@@ -48,7 +48,7 @@
             <recordstatus type="ChannelRecord"  image="images/icons/schedule_channel.png"/>
             <recordstatus type="AllRecord"      image="images/icons/schedule_all.png"/>
             <recordstatus type="WeekslotRecord" image="images/icons/schedule_weekslot.png"/>
-            <recordstatus type="FindOneRecord"  image="images/icons/schedule_findone.png"/>
+            <recordstatus type="FindOneRecord"  image="images/icons/schedule_find_one.png"/>
             <recordstatus type="OverrideRecord" image="images/icons/schedule_override.png"/>
             <arrow direction="left" image="images/icons/button_arrow_left.png"/>
             <arrow direction="right" image="images/icons/button_arrow_right.png"/>
@@ -109,7 +109,7 @@
             <recordstatus type="ChannelRecord"  image="images/icons/schedule_channel.png"/>
             <recordstatus type="AllRecord"      image="images/icons/schedule_all.png"/>
             <recordstatus type="WeekslotRecord" image="images/icons/schedule_weekslot.png"/>
-            <recordstatus type="FindOneRecord"  image="images/icons/schedule_findone.png"/>
+            <recordstatus type="FindOneRecord"  image="images/icons/schedule_find_one.png"/>
             <recordstatus type="OverrideRecord" image="images/icons/schedule_override.png"/>
             <arrow direction="left" image="images/icons/button_arrow_left.png"/>
             <arrow direction="right" image="images/icons/button_arrow_right.png"/>
