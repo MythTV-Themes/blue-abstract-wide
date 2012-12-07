@@ -79,7 +79,7 @@
                         <position>775,0</position>
                         <state name="recording">
                             <imagetype name="background" from="base_icon_selected">
-                                <filename>images/icons/processing.png</filename>
+                                <filename>images/icons/recording.png</filename>
                                 <area>3,3,30,30</area>
                             </imagetype>
                             <imagetype name="status" from="base_icon_selected">
