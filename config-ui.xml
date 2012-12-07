@@ -461,43 +461,67 @@
         </textarea>
 
         <shape name="grabbersettings_background" from="base_background_shape">
-            <area>185,345,900,252</area>
+            <area>185,225,900,372</area>
         </shape>
         
         <textarea name="moviegrabber_text" from="base_textarea">
-            <area>200,360,490,36</area>
+            <area>200,240,490,36</area>
             <align>right,vcenter</align>
             <value>Movie Metadata Source:</value>
         </textarea>
+        <textarea name="moviegrabberlanguage_text" from="moviegrabber_text">
+            <position>200,280</position>
+            <value>Use this language for the Movie Metadata</value>
+        </textarea>
+        
         <textarea name="tvgrabber_text" from="moviegrabber_text">
-            <position>200,400</position>
+            <position>200,320</position>
             <value>Television Metadata Source:</value>
         </textarea>
+        <textarea name="tvgrabberlanguage_text" from="moviegrabber_text">
+            <position>200,360</position>
+            <value>Use this language for TV Metadata</value>
+        </textarea>
+        
         <textarea name="gamegrabber_text" from="moviegrabber_text">
-            <position>200,440</position>
+            <position>200,400</position>
             <value>Game Metadata Source:</value>
         </textarea>
+        <textarea name="gamegrabberlanguage_text" from="moviegrabber_text">
+            <position>200,440</position>
+            <value>Use this language for Game Metadata</value>
+        </textarea>
+        
         <textarea name="dailyupdates_text" from="moviegrabber_text">
             <position>200,480</position>
             <value>Perform daily updates of recording artwork</value>
         </textarea>
 
         <buttonlist name="moviegrabber" from="base_selector_wide">
-            <position>700,360</position>
+            <position>700,240</position>
+        </buttonlist>
+        <buttonlist name="moviegrabberlanguage" from="base_selector_wide">
+            <position>700,280</position>
         </buttonlist>
 
         <buttonlist name="tvgrabber" from="base_selector_wide">
+            <position>700,320</position>
+        </buttonlist>
+        <buttonlist name="tvgrabberlanguage" from="base_selector_wide">
+            <position>700,360</position>
+        </buttonlist>
+        
+        <buttonlist name="gamegrabber" from="base_selector_wide">
             <position>700,400</position>
         </buttonlist>
-
-        <buttonlist name="gamegrabber" from="base_selector_wide">
+        <buttonlist name="gamegrabberlanguage" from="base_selector_wide">
             <position>700,440</position>
         </buttonlist>
-
+        
         <checkbox name="dailyupdates" from="base_checkbox">
             <position>700,480</position>
         </checkbox>
-  
+
         <shape name="button_separator" from="base_background_shape">
             <area>186,530,898,1</area>
         </shape>
