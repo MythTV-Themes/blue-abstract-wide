@@ -101,7 +101,7 @@
         <type>roundbox</type>
         <fill color="#000000" alpha="130" />
         <line color="#AAAAAA" alpha="150" width="1" />
-        <cornerradius>4</cornerradius>
+        <cornerradius>10</cornerradius>
     </shape>
     
     <!-- Rectangular shape used as background in popups -->
@@ -158,7 +158,7 @@
         <type>roundbox</type>
         <fill color="#535353" alpha="120" />
         <line color="#535353" alpha="100" width="1" />
-        <cornerradius>4</cornerradius>
+        <cornerradius>8</cornerradius>
     </shape>
 
     <shape name="base_button_shape_selectedactive" from="base_button_shape_active">
