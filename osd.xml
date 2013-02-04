@@ -1132,11 +1132,11 @@
             </shape>
 
             <shape name="keep">
-                <area>0,0,2,20</area>
+                <area>0,0,800,20</area>
                 <fill color="#3694ED" alpha="255" />
             </shape>
             <shape name="cut">
-                <area>0,0,2,20</area>
+                <area>0,0,800,20</area>
                 <fill color="#FF0000" alpha="255" />
             </shape>
 
