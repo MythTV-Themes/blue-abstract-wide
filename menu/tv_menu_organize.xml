@@ -20,15 +20,6 @@
     </button>
 
     <button>
-        <type>TV_DELETE</type>
-        <text>Delete Recordings</text>
-        <text lang="DE">Aufnahmen löschen</text>
-        <description>Remove television recordings</description>
-        <description lang="DE">TV-Aufnahmen löschen</description>
-        <action>TV_DELETE</action>
-    </button>
-
-    <button>
         <type>TV_PREVIOUS</type>
         <text>Previously Recorded</text>
         <text lang="DE">Alte Aufnahmen</text>
