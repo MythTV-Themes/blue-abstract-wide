@@ -15,18 +15,19 @@
             <area>350,250,580,220</area>
         </shape>
 
-        <imagetype name="topleft" from="base_icon_selected">
-            <position>0,0</position>
-            <filename>images/icons/calibrate_top_left.png</filename>
-        </imagetype>
-        <imagetype name="bottomright" from="base_icon_selected">
-            <position>1216,576</position>
-            <filename>images/icons/calibrate_bottom_right.png</filename>
+        <shape name="blackout">
+            <type>box</type>
+            <fill style="solid" color="#000000"></fill>
+        </shape>
+
+        <imagetype name="preview">
+            <filename>preview.png</filename>
+            <preserveaspect>false</preserveaspect>
         </imagetype>
 
         <textarea name="part1" from="base_textarea">
             <area>370,250,540,100</area>
-            <value>Move the selected arrow to the corner of the TV screen. Press SELECT to edit the other arrow. Press MENU for options and ESC to quit.</value>
+            <value>Move the selected corner of the preview image to the corner of the TV screen.  Press SELECT to edit the other corner.  Press MENU for options and ESC to quit.</value>
             <multiline>yes</multiline>
             <align>allcenter</align>
         </textarea>
