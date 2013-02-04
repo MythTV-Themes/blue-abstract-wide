@@ -33,7 +33,7 @@
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>4</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
         
         <textarea name="filename_label">
@@ -56,7 +56,7 @@
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>4</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
         
         <!-- First column with information -->
@@ -248,7 +248,7 @@
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>4</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
 
         <textarea name="title">
@@ -276,7 +276,7 @@
                 <type>roundbox</type>
                 <fill color="#535353" alpha="120" />
                 <line color="#535353" alpha="100" width="1" />
-                <cornerradius>4</cornerradius>
+                <cornerradius>8</cornerradius>
             </shape>
 
             <imagetype name="progressimage">
@@ -316,7 +316,7 @@
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>4</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
 
         <!-- shows the title and the plot of the selected video -->
@@ -753,7 +753,7 @@
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>4</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
 
         <!-- shows the title and the plot of the selected video -->
@@ -845,7 +845,7 @@
                 <type>roundbox</type>
                 <fill color="#535353" alpha="120" />
                 <line color="#535353" alpha="100" width="1" />
-                <cornerradius>4</cornerradius>
+                <cornerradius>8</cornerradius>
             </shape>
 
             <imagetype name="progressimage">
@@ -894,7 +894,7 @@
             <type>roundbox</type>
             <fill color="#000000" alpha="210" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>4</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
 
         <!-- shows the title -->
@@ -910,7 +910,7 @@
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>4</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
 
         <textarea name="callsign_label">
@@ -945,7 +945,7 @@
                         <type>roundbox</type>
                         <fill color="#535353" alpha="120" />
                         <line color="#535353" alpha="100" width="1" />
-                        <cornerradius>4</cornerradius>
+                        <cornerradius>8</cornerradius>
                     </shape>
                 </state>
                 <state name="selected">
@@ -955,7 +955,7 @@
                         <type>roundbox</type>
                         <fill color="#3697ef" alpha="220" />
                         <line color="#3697ef" alpha="200" width="1" />
-                        <cornerradius>4</cornerradius>
+                        <cornerradius>8</cornerradius>
                     </shape>
                 </state>
                 <state name="inactive" from="active">
@@ -993,7 +993,7 @@
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>4</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
         
         <button name="probe">
@@ -1006,7 +1006,7 @@
                         <type>roundbox</type>
                         <fill color="#535353" alpha="120" />
                         <line color="#535353" alpha="100" width="1" />
-                        <cornerradius>4</cornerradius>
+                        <cornerradius>8</cornerradius>
                     </shape>
                     <textarea name="text">
                         <area>8,3,134,30</area>
@@ -1024,7 +1024,7 @@
                         <type>roundbox</type>
                         <fill color="#3697ef" alpha="220" />
                         <line color="#3697ef" alpha="200" width="1" />
-                        <cornerradius>4</cornerradius>
+                        <cornerradius>8</cornerradius>
                     </shape>
                 </state>
                 <state name="disabled" from="active" />
@@ -1035,7 +1035,7 @@
                         <type>roundbox</type>
                         <fill color="#1d68e0" alpha="100" />
                         <line color="#1d68e0" alpha="80" width="1" />
-                        <cornerradius>4</cornerradius>
+                        <cornerradius>8</cornerradius>
                     </shape>
                 </state>
             </statetype>
@@ -1076,7 +1076,7 @@
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>4</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
 
         <textarea name="title">
@@ -1182,7 +1182,7 @@
             <type>roundbox</type>
             <fill color="#000000" alpha="210" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>4</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
 
         <textarea name="messagearea">
@@ -1204,7 +1204,7 @@
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>4</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
 
         <buttonlist name="list">
@@ -1227,7 +1227,7 @@
                         <type>roundbox</type>
                         <fill color="#535353" alpha="120" />
                         <line color="#535353" alpha="100" width="1" />
-                        <cornerradius>4</cornerradius>
+                        <cornerradius>8</cornerradius>
                     </shape>
                     
                     <!-- the button's text -->
@@ -1261,7 +1261,7 @@
                         <type>roundbox</type>
                         <fill color="#3697ef" alpha="220" />
                         <line color="#3697ef" alpha="200" width="1" />
-                        <cornerradius>4</cornerradius>
+                        <cornerradius>8</cornerradius>
                     </shape>
                     
                     <!-- indicates the button contains a submenu -->
@@ -1280,7 +1280,7 @@
                         <type>roundbox</type>
                         <fill color="#1d68e0" alpha="100" />
                         <line color="#1d68e0" alpha="80" width="1" />
-                        <cornerradius>4</cornerradius>
+                        <cornerradius>8</cornerradius>
                     </shape>
                 </state>
             </statetype>
@@ -1348,7 +1348,7 @@
             <type>roundbox</type>
             <fill color="#000000" alpha="210" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>4</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
 
         <textarea name="messagearea">
@@ -1370,7 +1370,7 @@
             <type>roundbox</type>
             <fill color="#000000" alpha="130" />
             <line color="#AAAAAA" alpha="150" width="1" />
-            <cornerradius>4</cornerradius>
+            <cornerradius>10</cornerradius>
         </shape>
 
         <buttonlist name="list">
@@ -1393,7 +1393,7 @@
                         <type>roundbox</type>
                         <fill color="#535353" alpha="120" />
                         <line color="#535353" alpha="100" width="1" />
-                        <cornerradius>4</cornerradius>
+                        <cornerradius>8</cornerradius>
                     </shape>
                     
                     <!-- the button's text -->
@@ -1427,7 +1427,7 @@
                         <type>roundbox</type>
                         <fill color="#3697ef" alpha="220" />
                         <line color="#3697ef" alpha="200" width="1" />
-                        <cornerradius>4</cornerradius>
+                        <cornerradius>8</cornerradius>
                     </shape>
                     
                     <!-- indicates the button contains a submenu -->
@@ -1446,7 +1446,7 @@
                         <type>roundbox</type>
                         <fill color="#1d68e0" alpha="100" />
                         <line color="#1d68e0" alpha="80" width="1" />
-                        <cornerradius>4</cornerradius>
+                        <cornerradius>8</cornerradius>
                     </shape>
                 </state>
             </statetype>
