@@ -37,7 +37,7 @@
             <area>350,260,600,70</area>
             <multiline>yes</multiline>
             <cutdown>no</cutdown>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10"/>
             <align>left,vcenter</align>
         </textarea>
 

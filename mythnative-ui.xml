@@ -111,7 +111,7 @@
                     </imagetype>
                     <textarea name="buttontext" from="base_textarea">
                         <area>50,0,100%-58,36</area>
-                        <scroll direction="horizontal"/>
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                 </state>
                 <state name="inactive" from="active" />

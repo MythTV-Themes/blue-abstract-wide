@@ -24,24 +24,24 @@
 
                     <textarea name="buttontext" from="base_textarea">
                         <area>8,0,450,36</area>
-                        <scroll direction="horizontal"/>
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
 
                     <textarea name="date" from="base_textarea">
                         <area>475,0,130,36</area>
-                        <scroll direction="horizontal"/>
+                        <scroll direction="horizontal" rate="35"/>
                         <align>right,vcenter</align>
                     </textarea>
 
                     <textarea name="size" from="base_textarea">
                         <area>620,0,120,36</area>
-                        <scroll direction="horizontal"/>
+                        <scroll direction="horizontal" rate="35"/>
                         <align>right,vcenter</align>
                     </textarea>
 
                     <textarea name="profile" from="base_textarea">
                         <area>760,0,150,36</area>
-                        <scroll direction="horizontal"/>
+                        <scroll direction="horizontal" rate="35"/>
                         <align>right,vcenter</align>
                     </textarea>
 
