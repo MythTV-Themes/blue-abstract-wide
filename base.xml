@@ -881,7 +881,46 @@
 
 
 
+    <!-- Base definition of a vertical scrollbar -->
+    <scrollbar name="base_vertical_scrollbar">
+        <area>1250,0,15,690</area>
+        <layout>vertical</layout>
+        <hidedelay>1000</hidedelay>
+        <shape name="background" from="base_button_shape_active">
+            <area>0,0,100%,100%</area>
+            <cornerradius>3</cornerradius> 
+        </shape>
+        <shape name="slider" from="base_button_shape_selectedactive">
+            <area>0,0,15,40</area>
+            <cornerradius>3</cornerradius> 
+        </shape>
+    </scrollbar>
 
+    <!-- Base definition of a horizontal scrollbar -->
+    <scrollbar name="base_horizontal_scrollbar" from="base_vertical_scrollbar">
+        <area>15,690,1250,14</area>
+        <layout>horizontal</layout>
+        <shape name="slider" from="base_button_shape_selectedactive">
+            <area>0,0,40,14</area>
+        </shape>
+    </scrollbar>
+
+    <!-- Base definition of a webbrowser -->
+    <webbrowser name="base_webbrowser">
+        <area>0,0,1280,720</area>
+        <browserarea>0,0,100%,100%</browserarea>
+        <zoom>1.0</zoom>
+        <scrollduration>500</scrollduration>
+        <scrollbar name="vertscrollbar" from="base_vertical_scrollbar">
+            <area>100%-21,0,14,100%-28</area>
+        </scrollbar>
+        <scrollbar name="horizscrollbar" from="base_horizontal_scrollbar">
+            <area>0,100%-21,100%-28,14</area>
+        </scrollbar>
+    </webbrowser>
+
+    
+    
     <!-- ===================================================== -->
     <!-- Below are the definitions of popup dialogs that are 
          based on the base conponents are specified here -->
