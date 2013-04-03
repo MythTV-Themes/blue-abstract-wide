@@ -281,12 +281,12 @@
             <statetype name="buttonitem">
                 <!-- General settings for the menu entry -->
                 <state name="active">
-                    <area>0,0,450,56</area>
+                    <area>0,0,550,56</area>
                     <imagetype name="background">
                         <filename />
                     </imagetype>
                     <textarea name="buttontext">
-                        <area>8,0,420,40</area>
+                        <area>8,0,520,40</area>
                         <font>menu</font>
                         <align>left,vcenter</align>
                         <cutdown>yes</cutdown>
@@ -300,7 +300,7 @@
                         <alpha>200</alpha>
                     </imagetype>
                     <textarea name="description">
-                        <area>8,35,420,21</area>
+                        <area>8,35,520,21</area>
                         <font>menu_description</font>
                         <align>left,vcenter</align>
                         <cutdown>yes</cutdown>
