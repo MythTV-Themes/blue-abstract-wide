@@ -122,7 +122,7 @@
             <textarea name="title" from="base_textarea">
                 <area>270,15,600,30</area>
                 <font>title</font>
-                <scroll direction="horizontal" />
+                <scroll direction="horizontal" rate="35"/>
             </textarea>
             <textarea name="subtitle" from="base_textarea">
                 <area>270,50,600,30</area>
@@ -1430,7 +1430,7 @@
                     </textarea>
                     <textarea name="titlesubtitle" from="base_textarea">
                         <area>360,0,730,36</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                     <textarea name="statusbefore" from="base_textarea">
                         <area>1120,0,30,36</area>

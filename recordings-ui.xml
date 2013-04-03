@@ -37,7 +37,7 @@
                     <area>0,0,350,36</area>
                     <textarea name="buttontext" from="base_textarea">
                         <area>8,0,100%-16,36</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35" />
                     </textarea>
                 </state>
                 <state name="inactive" from="active" />
@@ -60,7 +60,7 @@
                     <area>0,0,850,36</area>
                     <textarea name="titlesubtitle" from="base_textarea">
                         <area>8,0,535,36</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35" />
                     </textarea>
                     <textarea name="shortstartdate" from="base_textarea">
                         <area>550,0,110,36</area>
@@ -163,7 +163,7 @@
             <area>435,140,420,60</area>
             <value>Change View</value>
             <align>allcenter</align>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10" />
         </textarea>
         <shape name="title_separator" from="base_background_shape">
             <area>421,210,448,1</area>
@@ -256,7 +256,7 @@
             <area>355,235,560,60</area>
             <value>Change Password</value>
             <align>allcenter</align>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10" />
         </textarea>
 
         <shape name="title_separator" from="base_background_shape">
@@ -310,7 +310,7 @@
             <area>465,140,350,60</area>
             <value>Change Groups</value>
             <align>allcenter</align>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10" />
         </textarea>
         <shape name="title_separator" from="base_background_shape">
             <area>451,210,378,1</area>
@@ -341,7 +341,7 @@
             <area>465,140,350,60</area>
             <value>Status Icons</value>
             <align>allcenter</align>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10" />
         </textarea>
 
         <shape name="title_separator" from="base_background_shape">
@@ -485,7 +485,7 @@
                     <textarea name="buttontext" from="base_textarea">
                         <area>100,0,240,36</area>
                         <multiline>no</multiline>
-                        <scroll direction="horizontal"/>
+                        <scroll direction="horizontal" rate="35" />
                     </textarea>
                 </state>
 

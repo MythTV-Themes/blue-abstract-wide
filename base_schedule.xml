@@ -51,7 +51,7 @@
                         <font state="favourite">text_yellow</font>
                         <font state="unavailable">text_blue</font>
                         <font state="favunavailable">text_purple</font>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                 </state>
                 <state name="inactive" from="active"/>
@@ -109,20 +109,20 @@
         <textarea name="title" from="base_textarea">
             <area>15,10,600,36</area>
             <font>title</font>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
         <textarea name="subtitle" from="base_textarea">
             <area>15,40,600,36</area>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
         <textarea name="template" from="base_textarea">
             <area>625,10,300,36</area>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
             <template>%Using |TEMPLATE| Template%</template>
         </textarea>
         <textarea name="channel" from="base_textarea">
             <area>625,40,200,36</area>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
             <template>Channel: %1</template>
         </textarea>
         <textarea name="timedate" from="base_textarea">
@@ -132,7 +132,7 @@
         </textarea>
         <textarea name="rectypestatus" from="base_textarea">
             <area>825,40,400,36</area>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
             <font>text</font>
             <font state="running">text_green</font>
             <font state="disabled">text_grey</font>
@@ -151,7 +151,7 @@
         <textarea name="description" from="base_textarea">
             <area>15,87,1210,63</area>
             <multiline>yes</multiline>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10"/>
             <align>left,bottom</align>
             <template>%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
