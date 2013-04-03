@@ -2,6 +2,27 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
+    <!-- defines the display of the subtitles -->
+    <!-- The following example forces .srt subtitles to be rendered in
+    blue text, FreeSans font, black shadow, with a translucent black
+    background. The fontdef and shape names are "text" since the
+    subtitles come from a .srt file.  Note that in this example, color
+    formatting controls in the .srt file will be ignored due to the
+    explicit setting of blue text. -->
+    <window name="osd_subtitle">
+        <fontdef name="text" face="FreeSans" from="provider">
+            <color>#1d68e0</color>
+            <shadowoffset>2,2</shadowoffset>
+            <shadowcolor>#000000</shadowcolor>
+        </fontdef>
+        <shape name="text" from="provider">
+            <fill color="#000000" alpha="100" />
+        </shape>
+    </window>
+
+
+
+
     <!-- shows some debug information on the screen -->
     <window name="osd_debug">
         
