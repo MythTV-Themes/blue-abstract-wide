@@ -367,7 +367,7 @@
         <!-- Current track name -->
         <textarea name="title" from="base_textarea">
             <area>15,0,600,30</area>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
             <template>Now Playing: %TITLE% by %ARTIST% on %ALBUM%</template>
         </textarea>
 
@@ -429,27 +429,27 @@
                     <textarea name="title" from="base_textarea">
                         <!--<area>8,3,742,30</area>-->
                         <area>50,3,290,30</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                         <template>%TITLE%</template>
                         <!--<template>%TITLE% by %ARTIST% on %ALBUM%</template>-->
                     </textarea>
                     <textarea name="album" from="base_textarea">
                         <area>350,3,240,30</area>
                         <align>right,vcenter</align>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                         <template>%ALBUM%</template>
                     </textarea>
                     <textarea name="artist" from="base_textarea">
                         <area>600,3,230,30</area>
                         <align>right,vcenter</align>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                         <template>%ARTIST%</template>
                     </textarea>
                     <textarea name="genre" from="base_textarea">
                         <!--<area>760,3,230,30</area>-->
                         <area>840,3,170,30</area>
                         <align>right,vcenter</align>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                         <template>%GENRE%</template>
                     </textarea>
                         
