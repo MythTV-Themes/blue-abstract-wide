@@ -800,9 +800,8 @@
 			<fill color="#000000" alpha="0" />
         </shape>
 
-        <webbrowser name="browser">
+        <webbrowser name="browser" from="base_webbrowser">
             <area>22,52,1236,651</area>
-            <zoom>1.0</zoom>
             <background color="#000000" alpha="0" />
         </webbrowser>
 
