@@ -797,7 +797,7 @@
 
         <shape name="progdetails_background" from="base_background_shape">
             <area>20,50,1240,655</area>
-			<fill color="#000000" alpha="0" />
+            <fill color="#000000" alpha="0" />
         </shape>
 
         <webbrowser name="browser" from="base_webbrowser">
