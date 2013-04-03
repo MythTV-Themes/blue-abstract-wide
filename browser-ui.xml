@@ -33,6 +33,7 @@
                     </statetype>
                     <textarea name="buttontext" from="base_textarea">
                         <area>45,0,100%-53,36</area>
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                 </state>
                 <state name="inactive" from="active"/>

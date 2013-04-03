@@ -31,7 +31,7 @@
             <area>335,280,610,80</area>
             <align>allcenter</align>
             <multiline>yes</multiline>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
         </textarea>
         <shape name="message_separator" from="base_background_shape">
             <area>421,365,438,1</area>
@@ -112,7 +112,7 @@
         </shape>
         <textarea name="description" from="base_textarea">
             <area>120,612,1040,90</area>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
             <align>allcenter</align>
             <multiline>yes</multiline>
             <value>This screen displays the status of various system components</value>

@@ -67,7 +67,7 @@
         <textarea name="label-text" from="base_textarea">
             <area>120,612,1040,90</area>
             <value>Search Term</value>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
             <align>allcenter</align>
             <multiline>yes</multiline>
         </textarea>
@@ -182,12 +182,12 @@
         <textarea name="name" from="base_textarea">
             <area>105,480,520,30</area>
             <font>title</font>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
         <textarea name="aspect" from="base_textarea">
             <area>105,512,805,30</area>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
             <template>For %ASPECT% displays.% By |AUTHORNAME%% &lt;|AUTHOREMAIL|&gt;%.</template>
         </textarea> 
 
@@ -218,7 +218,7 @@
         <textarea name="description" from="base_textarea">
             <area>105,558,1075,84</area>
             <multiline>yes</multiline>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10"/>
             <align>left,top</align>
             <template>Description: %DESCRIPTION%\nErrata: %ERRATA%</template>
         </textarea>

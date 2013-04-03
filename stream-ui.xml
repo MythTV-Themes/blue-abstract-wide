@@ -44,12 +44,12 @@
 
                     <textarea name="station" from="base_textarea">
                         <area>55,2,200,30</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                     <textarea name="channel" from="base_textarea">
                         <area>55,27,200,20</area>
                         <font>text_small</font>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
 
                     <!-- optional textarea name="genre" -->
@@ -103,16 +103,16 @@
                     </textarea>
                     <textarea name="title" from="base_textarea">
                         <area>105,3,300,30</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                     <textarea name="artist" from="base_textarea">
                         <area>420,3,320,30</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                     <textarea name="length" from="base_textarea">
                         <area>760,3,95,30</area>
                         <align>right,vcenter</align>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                 </state>
                 <state name="inactive" from="active"/>
@@ -174,18 +174,18 @@
         <textarea name="title" from="base_textarea">
             <area>200,560,770,30</area>
             <font>title</font>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
         <textarea name="artist" from="base_textarea">
             <area>200,595,870,30</area>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
         <textarea name="channel" from="base_textarea">
             <area>200,630,600,30</area>
             <font>text_grey</font>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
             <template>%STATION% - %CHANNEL%</template>
         </textarea>
 
@@ -422,13 +422,13 @@
 
                     <textarea name="station" from="base_textarea">
                         <area>50,0,400,36</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                         <template>%STATION% - %Channel%</template>
                     </textarea>
 
                     <textarea name="genre" from="base_textarea">
                         <area>460,0,465,36</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                 </state>
                 <state name="inactive" from="active"/>

@@ -79,7 +79,7 @@
                         <area>8,0,117,100</area>
                         <font>text_small</font>
                         <multiline>yes</multiline>
-                        <scroll direction="vertical" />
+                        <scroll direction="vertical" rate="10"/>
                         <align>allcenter</align>
                     </textarea>
 
@@ -112,7 +112,7 @@
                     <textarea name="buttontext" from="base_textarea">
                         <area>8,0,169,138</area>
                         <multiline>yes</multiline>
-                        <scroll direction="vertical" />
+                        <scroll direction="vertical" rate="10"/>
                         <align>allcenter</align>
                     </textarea>
 
@@ -189,12 +189,12 @@
                     </textarea>
                     <textarea name="name" from="base_textarea">
                         <area>150,2,185,30</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                     <textarea name="sourcename" from="base_textarea">
                         <area>150,27,185,20</area>
                         <font>text_small</font>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
 
                 </state>
@@ -372,7 +372,7 @@
                     <textarea name="nativecountry" from="base_textarea">
                         <area>70,27,100%-78,20</area>
                         <font>text_small</font>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
 
                 </state>
@@ -405,7 +405,7 @@
                     <textarea name="language" from="base_textarea">
                         <area>8,27,100%-16,20</area>
                         <font>text_small</font>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
 
                 </state>
@@ -569,7 +569,7 @@
         </textarea>
         <textarea name="profiletext" from="base_textarea">
             <area>510,415,470,36</area>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
         <shape name="button1_separator" from="base_background_shape">
