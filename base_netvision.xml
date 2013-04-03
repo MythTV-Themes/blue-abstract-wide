@@ -90,7 +90,7 @@
                     <textarea name="buttontext" from="base_textarea">
                         <area>20,131,145,42</area>
                         <multiline>yes</multiline>
-                        <scroll direction="vertical" />
+                        <scroll direction="vertical" rate="10"/>
                         <align>allcenter</align>
                     </textarea>
 
@@ -171,13 +171,13 @@
         
         <textarea name="title" from="base_textarea">
             <area>425,15,800,30</area>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
             <font>title</font>
         </textarea>
         
         <textarea name="author" from="base_textarea">
             <area>425,45,230,30</area>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
             <template>Author: %1</template>
         </textarea>
         <textarea name="date" from="author">
@@ -194,7 +194,7 @@
         </textarea>
         <textarea name="rating" from="author">
             <position>1000,45</position>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
             <template>Rating: %1</template>
         </textarea>
          <textarea name="filesize_str" from="author">
@@ -208,7 +208,7 @@
         <textarea name="description" from="base_textarea">
             <area>420,125,805,108</area>
             <multiline>yes</multiline>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
             <align>left,top</align>
         </textarea>
 
