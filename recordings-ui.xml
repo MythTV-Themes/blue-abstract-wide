@@ -37,7 +37,7 @@
                     <area>0,0,350,36</area>
                     <textarea name="buttontext" from="base_textarea">
                         <area>8,0,100%-16,36</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35" />
                     </textarea>
                 </state>
                 <state name="inactive" from="active" />
@@ -60,7 +60,7 @@
                     <area>0,0,850,36</area>
                     <textarea name="titlesubtitle" from="base_textarea">
                         <area>8,0,535,36</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35" />
                     </textarea>
                     <textarea name="shortstartdate" from="base_textarea">
                         <area>550,0,110,36</area>
@@ -79,7 +79,7 @@
                         <position>775,0</position>
                         <state name="recording">
                             <imagetype name="background" from="base_icon_selected">
-                                <filename>images/icons/processing.png</filename>
+                                <filename>images/icons/recording.png</filename>
                                 <area>3,3,30,30</area>
                             </imagetype>
                             <imagetype name="status" from="base_icon_selected">
@@ -149,152 +149,6 @@
 
     
 
-    <!-- shows a list of available recording groups and its recordings
-        together with some detail information about the recording -->
-    <window name="deleterecordings" include="base_recording.xml">
-
-        <!-- background, name of screen -->
-        <imagetype name="fanart" from="base_background" />
-        
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Delete Recordings</value>
-            </textarea>
-        </textarea>
-
-        <!-- this is the background around the recording information -->
-        <shape name="group_background" from="base_background_shape">
-            <area>20,50,1240,390</area>
-        </shape>
-
-        <!-- text that is displayed when there are no recordings availble -->
-        <textarea name="norecordings">
-            <area>220,50,840,390</area>
-            <multiline>yes</multiline>
-            <align>allcenter</align>
-        </textarea>
-        
-        <!--<textarea name="recdate_status_label">
-            <area>970,40,80,20</area>
-            <align>allcenter</align>
-            <font>text_small</font>
-            <value>Date</value>
-        </textarea>
-        <textarea name="rectime_status_label">
-            <area>1060,40,90,20</area>
-            <align>allcenter</align>
-            <font>text_small</font>
-            <value>Time</value>
-        </textarea>-->
-
-        <!-- the selection of available recording groups -->
-        <buttonlist name="groups" from="base_buttonlist">
-            <area>35,65,350,355</area>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <area>0,0,350,36</area>
-                    <textarea name="buttontext" from="base_textarea">
-                        <area>8,0,100%-16,36</area>
-                        <scroll direction="horizontal" />
-                    </textarea>
-                </state>
-                <state name="inactive" from="active" />
-                <state name="selectedactive" from="active">
-                    <area>0,0,350,36</area>
-                    <shape name="background" from="base_button_shape_selectedactive" />
-                </state>
-                <state name="selectedinactive" from="active">
-                    <area>0,0,350,36</area>
-                    <shape name="background" from="base_button_shape_selectedinactive" />
-                </state>
-            </statetype>
-        </buttonlist>
-
-        <!-- the selection of the available recordings in the group -->
-        <buttonlist name="recordings" from="base_buttonlist">
-            <area>395,65,850,355</area>            
-            <statetype name="buttonitem">
-                <state name="active">
-                    <area>0,0,850,36</area>
-                    
-                    <textarea name="title" from="base_textarea">
-                        <area>8,0,455,36</area>
-                        <scroll direction="horizontal" />
-                    </textarea>
-                    <textarea name="startdate" from="base_textarea">
-                        <area>470,0,110,36</area>
-                        <align>right,vcenter</align>
-                    </textarea>
-                    <textarea name="starttime" from="base_textarea">
-                        <area>590,0,100,36</area>
-                        <align>allcenter</align>
-                    </textarea>
-                    <textarea name="filesize_str" from="base_textarea">
-                        <area>700,0,100,36</area>
-                        <align>right,vcenter</align>
-                    </textarea>
-                    
-                    <statetype name="watched">
-                        <position>810,0</position>
-                        <state name="no">
-                            <imagetype name="watchedoff" from="base_icon_inactive">
-                                <area>3,3,30,30</area>
-                                <filename>images/icons/selected.png</filename>
-                            </imagetype>
-                        </state>
-                        <state name="yes">
-                            <imagetype name="watched" from="base_icon_selected">
-                                <area>3,3,30,30</area>
-                                <filename>images/icons/selected.png</filename>
-                            </imagetype>
-                        </state>
-                    </statetype>
-                </state>
-
-                <state name="inactive" from="active" />
-                <state name="selectedactive" from="active">
-                    <area>0,0,850,36</area>
-                    <shape name="background" from="base_button_shape_selectedactive" />
-                </state>
-                <state name="selectedinactive" from="active">
-                    <area>0,0,850,36</area>
-                    <shape name="background" from="base_button_shape_selectedinactive" />
-                    <textarea name="buttontext">
-                        <font>text_inactive</font>
-                    </textarea>
-                </state>
-            </statetype>
-        </buttonlist>
-
-        <!-- The preview image and the details to the selected recording -->
-        <group name="recording_details_group" from="base_recording_details_group">
-            <position>20,460</position>
-
-            <textarea name="description" from="base_textarea">
-                <area>420,125,805,65</area>
-                <multiline>yes</multiline>
-                <cutdown>yes</cutdown>
-                <align>left,top</align>
-                <template>%"|SUBTITLE|" %%(|ORIGINALAIRDATE|) %%(|STARS|) %%DESCRIPTION%</template>
-            </textarea>
-
-            <progressbar name="usedbar" from="base_progressbar">
-                <position>420,205</position>
-            </progressbar>
-
-            <textarea name="freereport" from="base_textarea">
-                <area>920,200,300,30</area>
-                <align>right,vcenter</align>
-            </textarea>
-        </group>
-
-    </window>
-
-    
-    
-    
-
     <!-- The Change View popup.
         Shows a list of icons that describe the status of a recording  -->
     <window name="changeview">
@@ -309,7 +163,7 @@
             <area>435,140,420,60</area>
             <value>Change View</value>
             <align>allcenter</align>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10" />
         </textarea>
         <shape name="title_separator" from="base_background_shape">
             <area>421,210,448,1</area>
@@ -402,7 +256,7 @@
             <area>355,235,560,60</area>
             <value>Change Password</value>
             <align>allcenter</align>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10" />
         </textarea>
 
         <shape name="title_separator" from="base_background_shape">
@@ -456,7 +310,7 @@
             <area>465,140,350,60</area>
             <value>Change Groups</value>
             <align>allcenter</align>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10" />
         </textarea>
         <shape name="title_separator" from="base_background_shape">
             <area>451,210,378,1</area>
@@ -487,7 +341,7 @@
             <area>465,140,350,60</area>
             <value>Status Icons</value>
             <align>allcenter</align>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10" />
         </textarea>
 
         <shape name="title_separator" from="base_background_shape">
@@ -631,7 +485,7 @@
                     <textarea name="buttontext" from="base_textarea">
                         <area>100,0,240,36</area>
                         <multiline>no</multiline>
-                        <scroll direction="horizontal"/>
+                        <scroll direction="horizontal" rate="35" />
                     </textarea>
                 </state>
 

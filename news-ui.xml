@@ -37,7 +37,7 @@
                     <area>0,0,650,36</area>
                     <textarea name="buttontext" from="base_textarea">
                         <area>8,0,100%-16,36</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                 </state>
                 <state name="inactive" from="active" />
@@ -52,7 +52,7 @@
                     <area>0,0,650,36</area>
                     <textarea name="buttontext" from="base_textarea">
                         <area>8,0,100%-16,36</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                 </state>
             </statetype>
@@ -65,7 +65,7 @@
         <textarea name="title" from="base_textarea">
             <area>35,550,1210,36</area>
             <font>title</font>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
         <textarea name="updated" from="base_textarea">
             <area>35,580,900,36</area>
@@ -84,7 +84,7 @@
         <textarea name="description" from="base_textarea">
             <area>35,627,1210,63</area>
             <multiline>yes</multiline>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10"/>
             <align>left,bottom</align>
         </textarea>
 
@@ -115,7 +115,7 @@
         <textarea name="title" from="base_textarea">
             <area>315,195,640,60</area>
             <align>allcenter</align>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10"/>
         </textarea>
 
         <shape name="title_separator" from="base_background_shape">

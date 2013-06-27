@@ -38,7 +38,6 @@
                     <shape name="buttontext_background" from="base_background_shape">
                         <area>3,99,127,31</area>
                         <line color="#AAAAAA" alpha="0" width="0" />
-                        <cornerradius>8</cornerradius>
                     </shape>
                     <textarea name="buttontext" from="base_textarea">
                         <area>10,105,110,20</area>
@@ -68,7 +67,6 @@
                             <shape name="buttoncheck_background" from="base_background_shape">
                                 <area>0,0,34,34</area>
                                 <line color="#AAAAAA" alpha="0" width="0" />
-                                <cornerradius>10</cornerradius>
                             </shape>
                             <imagetype name="checkfull" from="base_icon_selected">
                                 <area>4,3,28,28</area>
@@ -85,7 +83,6 @@
                             <shape name="subfolder_background" from="base_background_shape">
                                 <area>2,2,129,36</area>
                                 <line color="#AAAAAA" alpha="0" width="0" />
-                                <cornerradius>10</cornerradius>
                             </shape>
                             <imagetype name="subfolder_icon">
                                 <area>10,6,28,28</area>
@@ -123,7 +120,6 @@
                     <shape name="buttontext_background" from="base_background_shape_dark">
                         <area>7,118,171,60</area>
                         <line color="#AAAAAA" alpha="0" width="0" />
-                        <cornerradius>10</cornerradius>
                     </shape>
                     <textarea name="buttontext" from="base_textarea">
                         <area>20,131,145,42</area>
@@ -153,7 +149,6 @@
                             <shape name="buttoncheck_background" from="base_background_shape">
                                 <area>0,0,36,36</area>
                                 <line color="#AAAAAA" alpha="0" width="0" />
-                                <cornerradius>10</cornerradius>
                             </shape>
                             <imagetype name="checkfull" from="base_icon_selected">
                                 <area>3,3,30,30</area>
@@ -170,7 +165,6 @@
                             <shape name="subfolder_background" from="base_background_shape">
                                 <area>7,7,171,40</area>
                                 <line color="#AAAAAA" alpha="0" width="0" />
-                                <cornerradius>10</cornerradius>
                             </shape>
                             <imagetype name="subfolder_icon">
                                 <area>15,12,30,30</area>

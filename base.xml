@@ -221,7 +221,7 @@
                 <!-- the button's text -->
                 <textarea name="buttontext" from="base_textarea">
                     <area>8,0,100%-50,36</area>
-                    <scroll direction="horizontal" />
+                    <scroll direction="horizontal" rate="35"/>
                 </textarea>
                 
                 <!-- settings when the button has also a checkbox -->
@@ -329,7 +329,7 @@
                 <shape name="background" from="base_button_shape_active" />
                 <textarea name="buttontext" from="base_textarea">
                     <area>8,0,100%-16,36</area>
-                    <scroll direction="horizontal" />
+                    <scroll direction="horizontal" rate="35"/>
                 </textarea>
             </state>
             <state name="inactive" from="active" />
@@ -640,7 +640,7 @@
                 <textarea name="buttontext" from="base_textarea">
                     <area>8,0,100%-8,36</area>
                     <font>text</font>
-                    <scroll direction="horizontal" />
+                    <scroll direction="horizontal" rate="35"/>
                 </textarea>
             </state>
             
@@ -875,13 +875,52 @@
         <textarea name="text" from="base_textarea">
             <area>245,0,270,30</area>
             <align>allcenter</align>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
     </textarea>
 
 
 
+    <!-- Base definition of a vertical scrollbar -->
+    <scrollbar name="base_vertical_scrollbar">
+        <area>1250,0,15,690</area>
+        <layout>vertical</layout>
+        <hidedelay>1000</hidedelay>
+        <shape name="background" from="base_button_shape_active">
+            <area>0,0,100%,100%</area>
+            <cornerradius>3</cornerradius> 
+        </shape>
+        <shape name="slider" from="base_button_shape_selectedactive">
+            <area>0,0,15,40</area>
+            <cornerradius>3</cornerradius> 
+        </shape>
+    </scrollbar>
 
+    <!-- Base definition of a horizontal scrollbar -->
+    <scrollbar name="base_horizontal_scrollbar" from="base_vertical_scrollbar">
+        <area>15,690,1250,14</area>
+        <layout>horizontal</layout>
+        <shape name="slider" from="base_button_shape_selectedactive">
+            <area>0,0,40,14</area>
+        </shape>
+    </scrollbar>
+
+    <!-- Base definition of a webbrowser -->
+    <webbrowser name="base_webbrowser">
+        <area>0,0,1280,720</area>
+        <browserarea>0,0,100%,100%</browserarea>
+        <zoom>1.0</zoom>
+        <scrollduration>500</scrollduration>
+        <scrollbar name="vertscrollbar" from="base_vertical_scrollbar">
+            <area>100%-21,0,14,100%-28</area>
+        </scrollbar>
+        <scrollbar name="horizscrollbar" from="base_horizontal_scrollbar">
+            <area>0,100%-21,100%-28,14</area>
+        </scrollbar>
+    </webbrowser>
+
+    
+    
     <!-- ===================================================== -->
     <!-- Below are the definitions of popup dialogs that are 
          based on the base conponents are specified here -->
@@ -922,7 +961,7 @@
             <value>Search Term</value>
             <align>allcenter</align>
             <multiline>yes</multiline>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
         </textarea>
 
         <shape name="messagearea_separator" from="base_background_shape">
@@ -940,21 +979,21 @@
                 <state name="active">
                     <textarea name="buttontext">
                         <area>8,0,100%-16,36</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                         <align>allcenter</align>
                     </textarea>
                 </state>
                 <state name="selectedinactive">
                     <textarea name="buttontext">
                         <area>8,0,100%-16,36</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                         <align>allcenter</align>
                     </textarea>
                 </state>
                 <state name="selectedactive">
                     <textarea name="buttontext">
                         <area>8,0,100%-16,36</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                         <align>allcenter</align>
                     </textarea>
                 </state>
@@ -998,7 +1037,7 @@
             <area>465,140,350,60</area>
             <align>allcenter</align>
             <multiline>yes</multiline>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
         </textarea>
 
         <shape name="messagearea_separator" from="base_background_shape">
@@ -1016,21 +1055,21 @@
                 <state name="active">
                     <textarea name="buttontext">
                         <area>8,0,100%-16,36</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                         <align>allcenter</align>
                     </textarea>
                 </state>
                 <state name="selectedinactive">
                     <textarea name="buttontext">
                         <area>8,0,100%-16,36</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                         <align>allcenter</align>
                     </textarea>
                 </state>
                 <state name="selectedactive">
                     <textarea name="buttontext">
                         <area>8,0,100%-16,36</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                         <align>allcenter</align>
                     </textarea>
                 </state>
@@ -1070,7 +1109,7 @@
             <area>365,310,550,60</area>
             <align>allcenter</align>
             <multiline>yes</multiline>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
         </textarea>
 
         <imagetype name="animation">
@@ -1112,7 +1151,7 @@
             <area>390,300,500,60</area>
             <align>allcenter</align>
             <multiline>yes</multiline>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
         </textarea>
 
         <shape name="message_separator" from="base_background_shape">
@@ -1162,7 +1201,7 @@
             <area>335,300,610,60</area>
             <align>allcenter</align>
             <multiline>yes</multiline>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
         </textarea>
 
         <shape name="message_separator" from="base_background_shape">
@@ -1211,7 +1250,7 @@
             <area>452,255,375,60</area>
             <align>allcenter</align>
             <multiline>yes</multiline>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
         </textarea>
         <shape name="message_separator" from="base_background_shape">
             <area>438,325,403,1</area>
@@ -1270,7 +1309,7 @@
             <value>Search Term</value>
             <align>allcenter</align>
             <multiline>yes</multiline>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
         </textarea>
 
         <shape name="title_separator" from="base_background_shape">
@@ -1372,7 +1411,7 @@
         <textarea name="filename" from="base_textarea">
             <area>475,100,650,36</area>
             <value>Filename</value>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal"  rate="35"/>
         </textarea>
 
         <!-- the path where the files are -->
@@ -1614,7 +1653,7 @@
             <area>355,255,560,60</area>
             <value>Select Time</value>
             <align>allcenter</align>
-            <scroll direction="vertical" />
+            <scroll direction="vertical"  rate="10"/>
         </textarea>
         <shape name="title_separator" from="base_background_shape">
             <area>341,345,588,1</area>
@@ -1697,7 +1736,7 @@
             <value>Metadata Search Results</value>
             <align>allcenter</align>
             <multiline>yes</multiline>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
         </textarea>
         <shape name="title_separator" from="base_background_shape">
             <area>351,210,578,1</area>
@@ -1710,14 +1749,14 @@
                     <area>0,0,550,36</area>
                     <textarea name="buttontext" from="base_textarea">
                         <area>8,0,350,36</area>
-                        <scroll direction="horizontal"/>
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                     
                     <textarea name="year" from="base_textarea">
                         <area>365,0,170,36</area>
                         <align>right,vcenter</align>
                         <template>Released %1</template>
-                        <scroll direction="horizontal"/>
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                 </state>
                 <state name="inactive" from="active" />
@@ -1770,7 +1809,7 @@
             <value>Artwork Search Results</value>
             <align>allcenter</align>
             <multiline>yes</multiline>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
         </textarea>
 
         <shape name="title_separator" from="base_background_shape">
@@ -1803,7 +1842,6 @@
                     <shape name="resolution_background" from="base_background_shape_dark">
                         <area>3,158,130,32</area>
                         <line color="#AAAAAA" alpha="0" width="0" />
-                        <cornerradius>8</cornerradius>
                     </shape>
                     <textarea name="resolution" from="base_textarea">
                         <area>15,155,103,36</area>
@@ -1839,7 +1877,6 @@
                     <shape name="resolution_background" from="base_background_shape_dark">
                         <area>7,225,180,37</area>
                         <line color="#AAAAAA" alpha="0" width="0" />
-                        <cornerradius>8</cornerradius>
                     </shape>
                     <textarea name="resolution" from="base_textarea">
                         <area>10,225,165,36</area>
@@ -1921,7 +1958,7 @@
             <area>355,235,560,60</area>
             <value>Search</value>
             <align>allcenter</align>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10"/>
         </textarea>
         <shape name="title_separator" from="base_background_shape">
             <area>341,305,588,1</area>
@@ -1988,7 +2025,7 @@
         </shape>
         <textarea name="helptext" from="base_textarea">
             <area>120,0,1040,90</area>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
             <align>allcenter</align>
             <multiline>yes</multiline>
         </textarea>

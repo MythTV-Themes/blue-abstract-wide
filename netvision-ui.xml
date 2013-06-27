@@ -50,7 +50,7 @@
                     <area>0,0,850,36</area>
                     <textarea name="buttontext" from="base_textarea">
                         <area>8,0,590,36</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                     <textarea name="length" from="base_textarea">
                         <area>620,0,90,36</area>
@@ -97,7 +97,7 @@
             <value>Choose the sites you wish to browse/search.</value>
             <align>allcenter</align>
             <multiline>yes</multiline>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10"/>
         </textarea>
         <shape name="title_separator" from="base_background_shape">
             <area>451,230,378,1</area>
@@ -179,7 +179,7 @@
         <textarea name="title" from="base_textarea">
             <area>35,550,960,36</area>
             <font>title</font>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
         <textarea name="url" from="base_textarea">
@@ -198,7 +198,7 @@
         <textarea name="description" from="base_textarea">
             <area>35,627,1210,63</area>
             <multiline>yes</multiline>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10"/>
             <align>left,bottom</align>
         </textarea>
 
@@ -345,7 +345,7 @@
                         <area>0,0,395,36</area>
                         <textarea name="buttontext" from="base_textarea">
                             <area>8,0,100%-16,36</area>
-                            <scroll direction="horizontal" />
+                            <scroll direction="horizontal" rate="35"/>
                         </textarea>
                     </state>
                     <state name="inactive" from="active"/>
@@ -453,7 +453,7 @@
         </shape>
         <textarea name="title" from="base_textarea">
             <area>25,640,1000,30</area>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
         <textarea name="author" from="title">
             <area>25,675,1000,20</area>

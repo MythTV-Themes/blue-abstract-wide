@@ -2,6 +2,27 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
+    <!-- defines the display of the subtitles -->
+    <!-- The following example forces .srt subtitles to be rendered in
+    blue text, FreeSans font, black shadow, with a translucent black
+    background. The fontdef and shape names are "text" since the
+    subtitles come from a .srt file.  Note that in this example, color
+    formatting controls in the .srt file will be ignored due to the
+    explicit setting of blue text. -->
+    <window name="osd_subtitle">
+        <fontdef name="text" face="FreeSans" from="provider">
+            <color>#1d68e0</color>
+            <shadowoffset>2,2</shadowoffset>
+            <shadowcolor>#000000</shadowcolor>
+        </fontdef>
+        <shape name="text" from="provider">
+            <fill color="#000000" alpha="100" />
+        </shape>
+    </window>
+
+
+
+
     <!-- shows some debug information on the screen -->
     <window name="osd_debug">
         
@@ -23,7 +44,7 @@
             <multiline>no</multiline>
             <cutdown>no</cutdown>
             <font>text</font>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
             <value>OSD Debug Information</value>
         </textarea>
 
@@ -183,7 +204,7 @@
             <multiline>no</multiline>
             <cutdown>no</cutdown>
             <font>text</font>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
        
     </window>
@@ -214,7 +235,7 @@
             <multiline>no</multiline>
             <cutdown>no</cutdown>
             <font>text</font>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
             <value>OSD Input</value>
         </textarea>
 
@@ -256,7 +277,7 @@
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
             <font>text</font>
         </textarea>
         
@@ -325,7 +346,7 @@
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
             <font>title</font>
         </textarea>
 
@@ -351,7 +372,7 @@
             <align>allcenter</align>
             <multiline>yes</multiline>
             <cutdown>no</cutdown>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
             <font>text</font>
         </textarea>
 -->
@@ -376,7 +397,7 @@
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
             <font>text</font>
             <template>Channel: %1</template>
         </textarea>
@@ -392,7 +413,7 @@
             <area>279,550,870,125</area>
             <multiline>yes</multiline>
             <cutdown>no</cutdown>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
             <align>left,top</align>
             <font>text</font>
             <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
@@ -762,7 +783,7 @@
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
             <font>title</font>
         </textarea>
 
@@ -788,7 +809,7 @@
             <align>allcenter</align>
             <multiline>yes</multiline>
             <cutdown>no</cutdown>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
             <font>text</font>
         </textarea>
 -->
@@ -813,7 +834,7 @@
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
             <font>text</font>
             <template>Channel: %1</template>
         </textarea>
@@ -829,7 +850,7 @@
             <area>279,550,870,125</area>
             <multiline>yes</multiline>
             <cutdown>no</cutdown>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
             <align>left,top</align>
             <font>text</font>
             <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
@@ -884,7 +905,7 @@
             <multiline>no</multiline>
             <cutdown>no</cutdown>
             <font>text</font>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
             <value>Channel Editor</value>
         </textarea>
 
@@ -919,7 +940,7 @@
             <multiline>no</multiline>
             <cutdown>no</cutdown>
             <font>text</font>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
             <value>Callsign</value>
         </textarea>
         <textarea name="channum_label" from="callsign_label">
@@ -1084,7 +1105,7 @@
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
             <font>text</font>
         </textarea>
 
@@ -1132,11 +1153,11 @@
             </shape>
 
             <shape name="keep">
-                <area>0,0,2,20</area>
+                <area>0,0,800,20</area>
                 <fill color="#3694ED" alpha="255" />
             </shape>
             <shape name="cut">
-                <area>0,0,2,20</area>
+                <area>0,0,800,20</area>
                 <fill color="#FF0000" alpha="255" />
             </shape>
 
@@ -1191,7 +1212,7 @@
             <multiline>yes</multiline>
             <cutdown>no</cutdown>
             <font>text</font>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
         </textarea>
         
         <!-- this needs to be here to prevent errors in the logs. -->
@@ -1237,7 +1258,7 @@
                         <multiline>no</multiline>
                         <cutdown>no</cutdown>
                         <align>left,vcenter</align>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                     
                     <!-- indicates the button contains a submenu -->
@@ -1357,7 +1378,7 @@
             <multiline>yes</multiline>
             <cutdown>no</cutdown>
             <font>text</font>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
         </textarea>
         
         <!-- this needs to be here to prevent errors in the logs. -->
@@ -1403,7 +1424,7 @@
                         <multiline>no</multiline>
                         <cutdown>no</cutdown>
                         <align>left,vcenter</align>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                     
                     <!-- indicates the button contains a submenu -->

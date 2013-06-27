@@ -33,6 +33,7 @@
                     </statetype>
                     <textarea name="buttontext" from="base_textarea">
                         <area>45,0,100%-53,36</area>
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                 </state>
                 <state name="inactive" from="active"/>
@@ -45,8 +46,9 @@
 
         </buttonlist>
 
-        <webbrowser name="webbrowser">
-            <area>0,45,1280,675</area>
+        <webbrowser name="webbrowser" from="base_webbrowser">
+            <area>15,45,1265,675</area>
+            <browserarea>0,0,100%-28,100%-28</browserarea>
         </webbrowser>
 
         <!-- additonally an optional progressbar 

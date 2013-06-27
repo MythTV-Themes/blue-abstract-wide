@@ -57,7 +57,7 @@
         <textarea name="description" from="base_textarea">
             <area>15,95,350,285</area>
             <multiline>yes</multiline>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10"/>
             <align>right,top</align>
         </textarea>        
 
@@ -99,17 +99,17 @@
         <!-- shows the values to the different details -->
         <textarea name="director" from="base_textarea">
             <area>535,15,170,30</area>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10"/>
         </textarea>
         <textarea name="cast" from="base_textarea">
             <area>535,55,170,85</area>
             <align>left,top</align>
             <multiline>yes</multiline>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10"/>
         </textarea>
         <textarea name="genres" from="base_textarea" from="cast">
             <area>535,155,170,65</area>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10"/>
         </textarea>
         <textarea name="season" from="director">
             <area>395,225,160,30</area>
@@ -174,7 +174,7 @@
         <textarea name="description" from="base_textarea">
             <area>15,92,690,105</area>
             <multiline>yes</multiline>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10"/>
             <align>left,top</align>
         </textarea>
 
@@ -234,13 +234,13 @@
         <!-- shows the values to the different details -->
         <textarea name="director" from="base_textarea">
             <area>145,15,180,30</area>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
         <textarea name="cast" from="base_textarea">
             <area>145,50,335,55</area>
             <align>left,top</align>
             <multiline>yes</multiline>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
         <textarea name="season" from="director">
             <position>145,105</position>

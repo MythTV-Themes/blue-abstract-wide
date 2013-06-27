@@ -18,7 +18,7 @@
         <textarea name="header" from="base_textarea">
             <area>215,0,300,30</area>
             <align>allcenter</align>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
         <imagetype name="status_background">
@@ -37,7 +37,7 @@
         <textarea name="update_text" from="base_textarea">
             <area>910,675,350,30</area>
             <align>right,vcenter</align>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
     </window>
@@ -57,13 +57,13 @@
         <textarea name="cclocation" from="base_textarea">
             <area>900,0,365,30</area>
             <align>right,vcenter</align>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
         <textarea name="observation_time" from="base_textarea">
             <area>910,675,350,30</area>
             <align>right,vcenter</align>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
         <!-- the icon and the temp information -->
@@ -136,7 +136,7 @@
 
         <textarea name="copyright" from="base_textarea">
             <area>35,675,700,30</area>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
     </window>
@@ -150,7 +150,7 @@
         <textarea name="3dlocation" from="base_textarea">
             <area>900,0,365,30</area>
             <align>right,vcenter</align>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
         <shape name="background-0" from="base_background_shape">
@@ -217,7 +217,7 @@
 
         <textarea name="copyright" from="base_textarea">
             <area>35,675,700,30</area>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
     </window>
@@ -231,7 +231,7 @@
         <textarea name="6dlocation" from="base_textarea">
             <area>900,0,365,30</area>
             <align>right,vcenter</align>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
         <shape name="background-0" from="base_background_shape">
@@ -343,7 +343,7 @@
 
         <textarea name="copyright" from="base_textarea">
             <area>35,675,700,30</area>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
     </window>
@@ -358,7 +358,7 @@
         <textarea name="18hrlocation" from="base_textarea">
             <area>900,0,365,30</area>
             <align>right,vcenter</align>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
         <shape name="background-0" from="base_background_shape">
@@ -470,7 +470,7 @@
 
         <textarea name="copyright" from="base_textarea">
             <area>35,675,700,30</area>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
     </window>
@@ -507,7 +507,7 @@
 
         <textarea name="copyright" from="base_textarea">
             <area>35,675,700,30</area>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
     </window>
@@ -544,7 +544,7 @@
 
         <textarea name="copyright" from="base_textarea">
             <area>35,675,700,30</area>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
     </window>
@@ -573,7 +573,7 @@
         <textarea name="alerts" from="base_textarea">
             <area>305,140,667,500</area>
             <align>left,top</align>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10"/>
         </textarea>
 
         <!-- These two are shown at the bottom -->
@@ -583,7 +583,7 @@
 
         <textarea name="copyright" from="base_textarea">
             <area>35,675,700,30</area>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
     </window>
@@ -642,7 +642,7 @@
         </shape>
         <textarea name="helptext" from="base_textarea">
             <area>120,615,1040,90</area>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
             <align>allcenter</align>
             <multiline>yes</multiline>
             <value>This screen governs the behavior of the weather screens. You can enable a background weather update which will run regardless of being on the weather screen, and configure how many seconds each screen will display. When you are done configuring the weather plugin, click "Finish" to continue.</value>
@@ -706,7 +706,7 @@
         </shape>
         <textarea name="helptxt" from="base_textarea">
             <area>120,615,1040,90</area>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
             <align>allcenter</align>
             <multiline>yes</multiline>
         </textarea>
@@ -760,7 +760,7 @@
         <textarea name="srcinfo" from="base_textarea">
             <area>600,435,475,90</area>
             <multiline>yes</multiline>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
             <align>right,vcenter</align>
         </textarea>
 
@@ -858,7 +858,7 @@
         </shape>
         <textarea name="helptext" from="base_textarea">
             <area>120,615,1040,90</area>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
             <align>allcenter</align>
             <multiline>yes</multiline>
             <value>Enter your current location, nearest large town or city. In some countries postal codes are also supported.</value>

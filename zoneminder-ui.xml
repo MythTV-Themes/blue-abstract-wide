@@ -656,14 +656,9 @@
 
         <imagetype name="frame1-1">
             <area>320,155,640,480</area>
-            <shape name="image_background1">
+            <shape name="image_background1" from="base_background_shape">
                 <area>-10,-10,660,500</area>
-                <type>roundbox</type>
-                <fill color="#202020" alpha="0" />
-                <line color="#a0a0a0" alpha="128" width="2" />
-                <cornerradius>15</cornerradius>
-                </shape> 
-            <area>320,155,640,480</area>
+            </shape> 
             <filename>mz_testcard.png</filename>
         </imagetype>
 
@@ -679,15 +674,10 @@
         </textarea>
 
         <imagetype name="frame2-1">
-        <area>60,185,560,420</area>
-            <shape name="image_background2">
-            <area>-10,-10,580,440</area>
-                <type>roundbox</type>
-                <fill color="#202020" alpha="0" />
-                <line color="#a0a0a0" alpha="128" width="2" />
-                <cornerradius>15</cornerradius>
-                </shape> 
             <area>60,185,560,420</area>
+            <shape name="image_background2" from="base_background_shape">
+                <area>-10,-10,580,440</area>
+            </shape>
             <filename>mz_testcard.png</filename>
         </imagetype>
 
@@ -703,14 +693,9 @@
 
         <imagetype name="frame2-2">
             <area>660,185,560,420</area>
-            <shape name="image_background3">
+            <shape name="image_background3" from="base_background_shape">
                 <area>-10,-10,580,440</area>
-                <type>roundbox</type>
-                <fill color="#202020" alpha="0" />
-                <line color="#a0a0a0" alpha="128" width="2" />
-                <cornerradius>15</cornerradius>
-            </shape> 
-            <area>660,185,560,420</area>
+            </shape>
             <filename>mz_testcard.png</filename>
         </imagetype>
 
@@ -728,14 +713,9 @@
 
         <imagetype name="frame3-1">
             <area>280,140,320,240</area>
-            <shape name="image_background4">
+            <shape name="image_background4" from="base_background_shape">
                 <area>-10,-10,340,260</area>
-                <type>roundbox</type>
-                <fill color="#202020" alpha="0" />
-                <line color="#a0a0a0" alpha="128" width="2" />
-                <cornerradius>15</cornerradius>
-            </shape> 
-            <area>280,140,320,240</area>
+            </shape>
             <filename>mz_testcard.png</filename>
         </imagetype>
 
@@ -751,14 +731,9 @@
 
         <imagetype name="frame3-2">
             <area>680,140,320,240</area>
-                <shape name="image_background5">
+            <shape name="image_background5" from="base_background_shape">
                 <area>-10,-10,340,260</area>
-                <type>roundbox</type>
-                <fill color="#202020" alpha="0" />
-                <line color="#a0a0a0" alpha="128" width="2" />
-                <cornerradius>15</cornerradius>
-            </shape> 
-            <area>680,140,320,240</area>
+            </shape>
             <filename>mz_testcard.png</filename>
         </imagetype>
 
@@ -774,14 +749,9 @@
 
         <imagetype name="frame3-3">
             <area>280,425,320,240</area>
-                <shape name="image_background6">
+            <shape name="image_background6" from="base_background_shape">
                 <area>-10,-10,340,260</area>
-                <type>roundbox</type>
-                <fill color="#202020" alpha="0" />
-                <line color="#a0a0a0" alpha="128" width="2" />
-                <cornerradius>15</cornerradius>
             </shape> 
-            <area>280,425,320,240</area>
             <filename>mz_testcard.png</filename>
         </imagetype>
 
@@ -797,14 +767,9 @@
 
         <imagetype name="frame3-4">
             <area>680,425,320,240</area>
-            <shape name="image_background7">
+            <shape name="image_background7" from="base_background_shape">
                 <area>-10,-10,340,260</area>
-                <type>roundbox</type>
-                <fill color="#202020" alpha="0" />
-                <line color="#a0a0a0" alpha="128" width="2" />
-                <cornerradius>15</cornerradius>
             </shape> 
-            <area>680,425,320,240</area>
             <filename>mz_testcard.png</filename>
         </imagetype>
 

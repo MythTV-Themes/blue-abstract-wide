@@ -97,18 +97,18 @@
         <textarea name="title" from="base_textarea">
             <area>200,555,770,30</area>
             <font>title</font>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
             <template>%TITLE%</template>
         </textarea>
         <textarea name="album" from="base_textarea">
             <area>200,590,870,30</area>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
             <template>From the album %ALBUM% by the artist %ARTIST%</template>
         </textarea>
         <textarea name="nexttitle" from="base_textarea">
             <area>200,625,600,30</area>
             <font>text_grey</font>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
             <template>Next: %NEXTTITLE% by %NEXTARTIST%</template>
         </textarea>
 
@@ -419,7 +419,6 @@
                         <shape name="buttontext_background" from="base_background_shape">
                             <area>3,81,127,49</area>
                             <line color="#AAAAAA" alpha="0" width="0" />
-                            <cornerradius>8</cornerradius>
                         </shape>
                         
                         <!-- The actual album name that is shown when no icon is available -->
@@ -427,7 +426,7 @@
                             <area>10,85,110,40</area>
                             <font>text_small</font>
                             <multiline>yes</multiline>
-                            <scroll direction="vertical" />
+                            <scroll direction="vertical" rate="10"/>
                             <align>allcenter</align>
                         </textarea>
                         
@@ -592,12 +591,11 @@
                         <shape name="buttontext_background" from="base_background_shape_dark">
                             <area>7,118,171,60</area>
                             <line color="#AAAAAA" alpha="0" width="0" />
-                            <cornerradius>10</cornerradius>
                         </shape>
                         <textarea name="buttontext" from="base_textarea">
                             <area>20,124,145,45</area>
                             <multiline>yes</multiline>
-                            <scroll direction="vertical" />
+                            <scroll direction="vertical" rate="10"/>
                             <align>allcenter</align>
                         </textarea>
                         
@@ -697,7 +695,7 @@
                     <area>0,0,850,36</area>
                     <textarea name="title" from="base_textarea">
                         <area>8,3,790,30</area>
-                        <scroll direction="horizontal" /> 
+                        <scroll direction="horizontal" rate="35"/> 
                         <template>%TITLE% by %ARTIST% on %ALBUM%</template>
                     </textarea>
                     <statetype name="selectedstate" from="base_music_playliststate">
@@ -784,12 +782,12 @@
         <textarea name="title_label" from="base_textarea">
             <area>580,140,200,30</area>
             <align>right,vcenter</align>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
             <value>Title:</value>
         </textarea>
         <textarea name="title" from="base_textarea">
             <area>790,140,400,30</area>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
         <textarea name="album_label" from="title_label">
@@ -907,7 +905,7 @@
             <area>790,504,395,65</area>
             <align>left,top</align>
             <multiline>yes</multiline>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
         </textarea>
 
     </window>
@@ -1161,7 +1159,7 @@
         
         <textarea name="title" from="base_textarea">
             <area>740,555,460,30</area>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
             <font>title</font>
         </textarea>
 
@@ -1428,13 +1426,13 @@
             <area>720,258,330,65</area>
             <align>left,top</align>
             <multiline>yes</multiline>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
         </textarea>
         <textarea name="destination" from="base_textarea">
             <area>720,338,330,65</area>
             <align>left,top</align>
             <multiline>yes</multiline>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
         </textarea>
 
         <shape name="button_separator" from="base_background_shape">
@@ -1539,7 +1537,7 @@
 
         <textarea name="filename" from="base_textarea">
             <area>380,170,740,36</area>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
         <checkbox name="compilation" from="base_checkbox">
             <position>380,210</position>
@@ -1790,11 +1788,11 @@
                     </textarea>
                     <textarea name="title" from="base_textarea">
                         <area>90,0,295,36</area>
-                        <scroll direction="horizontal"/>
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                     <textarea name="artist" from="base_textarea">
                         <area>400,0,275,36</area>
-                        <scroll direction="horizontal"/>
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                     <textarea name="length" from="base_textarea">
                         <area>690,0,110,36</area>
@@ -1854,7 +1852,7 @@
             <area>490,245,300,65</area>
             <align>allcenter</align>
             <multiline>yes</multiline>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
         </textarea>
 
         <shape name="title_separator" from="base_background_shape">
@@ -1869,7 +1867,7 @@
 
         <textarea name="track" from="base_textarea">
             <area>570,330,320,36</area>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
         <textarea name="status_label" from="base_textarea">
@@ -1974,7 +1972,6 @@
                     <shape name="buttontext_background" from="base_background_shape">
                         <area>3,81,127,49</area>
                         <line color="#AAAAAA" alpha="0" width="0" />
-                        <cornerradius>8</cornerradius>
                     </shape>
                     
                     <!-- The actual album name that is shown when no icon is available -->
@@ -1982,7 +1979,7 @@
                         <area>10,85,110,40</area>
                         <font>text_small</font>
                         <multiline>yes</multiline>
-                        <scroll direction="vertical" />
+                        <scroll direction="vertical" rate="10"/>
                         <align>allcenter</align>
                     </textarea>
                     <imagetype name="background_image_border">
@@ -2014,12 +2011,11 @@
                     <shape name="buttontext_background" from="base_background_shape_dark">
                         <area>7,118,171,60</area>
                         <line color="#AAAAAA" alpha="0" width="0" />
-                        <cornerradius>10</cornerradius>
                     </shape>
                     <textarea name="buttontext" from="base_textarea">
                         <area>20,124,145,45</area>
                         <multiline>yes</multiline>
-                        <scroll direction="vertical" />
+                        <scroll direction="vertical" rate="10"/>
                         <align>allcenter</align>
                     </textarea>
                     <imagetype name="background_image_border">
@@ -2522,25 +2518,25 @@
                     <area>0,0,1210,36</area>
                     <textarea name="title" from="base_textarea">
                         <area>8,3,330,30</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                         <template>%TITLE%</template>
                     </textarea>
                     <textarea name="album" from="base_textarea">
                         <area>355,3,270,30</area>
                         <align>right,vcenter</align>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                         <template>%ALBUM%</template>
                     </textarea>
                     <textarea name="artist" from="base_textarea">
                         <area>640,3,260,30</area>
                         <align>right,vcenter</align>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                         <template>%ARTIST%</template>
                     </textarea>
                     <textarea name="genre" from="base_textarea">
                         <area>920,3,180,30</area>
                         <align>right,vcenter</align>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                         <template>%GENRE%</template>
                     </textarea>
                         
@@ -2740,7 +2736,7 @@
         
         <textarea name="title" from="base_textarea">
             <area>740,555,460,30</area>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
             <font>title</font>
         </textarea>
 

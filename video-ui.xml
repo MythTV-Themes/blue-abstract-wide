@@ -16,7 +16,7 @@
             <area>465,160,350,60</area>
             <value>Cast</value>
             <align>allcenter</align>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10"/>
         </textarea>
 
         <shape name="title_separator" from="base_background_shape">
@@ -60,7 +60,7 @@
             <area>355,255,580,238</area>
             <multiline>yes</multiline>
             <align>left,top</align>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
         </textarea>
         
         <shape name="button_separator" from="base_background_shape">
@@ -98,7 +98,7 @@
             <area>20,675,1240,30</area>
             <multiline>yes</multiline>
             <align>allcenter</align>
-            <value>No videos in library or file are being loaded..."</value>
+            <value>No videos in library or files are being loaded..."</value>
         </textarea>
 
         <!-- Show the title, season, episode and time -->
@@ -585,7 +585,7 @@
 
         <textarea name="title_text" from="base_textarea">
             <area>325,105,150,36</area>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
             <value>Title:</value>
         </textarea>
         <textarea name="subtitle_text" from="title_text">
@@ -739,7 +739,7 @@
         <textarea name="coverart_text" from="base_textarea">
             <area>1090,305,160,36</area>
             <value>Undefined</value>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
 
         <textarea name="banner_text_label" from="title_text">

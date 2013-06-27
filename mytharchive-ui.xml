@@ -121,7 +121,7 @@
                     <area>0,0,350,36</area>
                     <textarea name="buttontext" from="base_textarea">
                         <area>8,0,100%-16,36</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                 </state>
                 <state name="inactive" from="active" />
@@ -144,7 +144,7 @@
                     <area>0,0,850,36</area>
                     <textarea name="buttontext" from="base_textarea">
                         <area>8,0,100%-50,36</area>
-                        <scroll direction="horizontal" />
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                 </state>
                 <state name="inactive" from="active" />
@@ -187,7 +187,7 @@
 
         <textarea name="progtitle" from="base_textarea">
             <area>440,475,465,36</area>
-            <scroll direction="horizontal" />
+            <scroll direction="horizontal" rate="35"/>
             <font>title</font>
         </textarea>
 
@@ -209,7 +209,7 @@
         <textarea name="progdescription" from="base_textarea">
             <area>440,567,805,128</area>
             <multiline>yes</multiline>
-            <scroll direction="vertical"/>
+            <scroll direction="vertical" rate="10"/>
             <align>left,top</align>
             <template>%"|SUBTITLE|" %%(|ORIGINALAIRDATE|) %%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
@@ -315,7 +315,7 @@
                     </imagetype>
                     <textarea name="buttontext" from="base_textarea">
                         <area>50,0,100%-58,36</area>
-                        <scroll direction="horizontal"/>
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                 </state>
                 <state name="inactive" from="active" />
@@ -395,7 +395,7 @@
         <textarea name="videotitle" from="base_textarea">
             <area>440,185,350,30</area>
             <font>title</font>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
         </textarea>
         <textarea name="filesize" from="base_textarea">
             <area>440,215,200,30</area>
@@ -415,7 +415,7 @@
         <textarea name="videoplot" from="base_textarea">
             <area>440,265,350,230</area>
             <multiline>yes</multiline>
-            <scroll direction="vertical" />
+            <scroll direction="vertical" rate="10"/>
             <align>left,top</align>
         </textarea>
 
@@ -490,7 +490,7 @@
                     <area>0,0,1050,36</area>
                     <textarea name="buttontext" from="base_textarea">
                         <area>8,0,100%-16,36</area>
-                        <scroll direction="horizontal"/>
+                        <scroll direction="horizontal" rate="35"/>
                     </textarea>
                 </state>
                 <state name="inactive" from="active" />

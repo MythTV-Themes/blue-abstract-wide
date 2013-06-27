@@ -20,7 +20,7 @@
 
         <textarea name="musiclocation_label" from="base_textarea">
             <area>210,100,430,36</area>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
             <align>right,vcenter</align>
             <value>Directory to hold music:</value>
         </textarea> 
@@ -286,7 +286,7 @@
         <textarea name="paranoialevel_label" from="base_textarea">
             <area>260,175,380,36</area>
             <align>right,vcenter</align>
-            <scroll direction="horizontal"/>
+            <scroll direction="horizontal" rate="35"/>
             <value>Paranoia Level:</value>
         </textarea>
         <buttonlist name="paranoialevel" from="base_selector_wide">

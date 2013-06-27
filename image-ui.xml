@@ -38,7 +38,6 @@
                     <shape name="buttontext_background" from="base_background_shape">
                         <area>3,99,127,31</area>
                         <line color="#AAAAAA" alpha="0" width="0" />
-                        <cornerradius>8</cornerradius>
                     </shape>
                     <textarea name="buttontext" from="base_textarea">
                         <area>10,105,110,20</area>
@@ -56,22 +55,22 @@
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
 
-                    <!--<imagetype name="thumbimage1">
-                        <area>10,10,44,33</area>
-                        <preserveaspect>true</preserveaspect>
+                    <imagetype name="thumbimage1">
+                        <area>10,10,60,45</area>
+                        <preserveaspect>false</preserveaspect>
                     </imagetype>
                     <imagetype name="thumbimage2">
-                        <area>66,10,44,33</area>
-                        <preserveaspect>true</preserveaspect>
+                        <area>66,10,60,45</area>
+                        <preserveaspect>false</preserveaspect>
                     </imagetype>
                     <imagetype name="thumbimage3">
-                        <area>10,50,44,33</area>
-                        <preserveaspect>true</preserveaspect>
+                        <area>10,55,60,45</area>
+                        <preserveaspect>false</preserveaspect>
                     </imagetype>
                     <imagetype name="thumbimage4">
-                        <area>66,50,44,33</area>
-                        <preserveaspect>true</preserveaspect>
-                    </imagetype>-->
+                        <area>66,55,60,45</area>
+                        <preserveaspect>false</preserveaspect>
+                    </imagetype>
 
                     <imagetype name="buttonimage">
                         <area>0,0,133,133</area>
@@ -86,7 +85,6 @@
                             <shape name="buttoncheck_background" from="base_background_shape">
                                 <area>0,0,34,34</area>
                                 <line color="#AAAAAA" alpha="0" width="0" />
-                                <cornerradius>10</cornerradius>
                             </shape>
                             <imagetype name="checkfull" from="base_icon_selected">
                                 <area>4,3,28,28</area>
@@ -102,7 +100,6 @@
                             <shape name="buttoncheck_background" from="base_background_shape">
                                 <area>0,0,34,34</area>
                                 <line color="#AAAAAA" alpha="0" width="0" />
-                                <cornerradius>10</cornerradius>
                             </shape>
                             <imagetype name="hidden" from="base_icon_selected">
                                 <area>4,3,28,28</area>
@@ -119,7 +116,6 @@
                             <shape name="subfolder_background" from="base_background_shape">
                                 <area>2,2,129,36</area>
                                 <line color="#AAAAAA" alpha="0" width="0" />
-                                <cornerradius>10</cornerradius>
                             </shape>
                             <imagetype name="subfolder_icon">
                                 <area>10,6,28,28</area>
@@ -166,7 +162,6 @@
                     <shape name="buttontext_background" from="base_background_shape_dark">
                         <area>7,118,171,60</area>
                         <line color="#AAAAAA" alpha="0" width="0" />
-                        <cornerradius>10</cornerradius>
                     </shape>
                     <textarea name="buttontext" from="base_textarea">
                         <area>20,131,145,42</area>
@@ -183,22 +178,22 @@
                         <filename>images/media/image_item_bg.png</filename>
                     </imagetype>     
 
-                    <!--<imagetype name="thumbimage1">
-                        <area>10,10,44,33</area>
-                        <preserveaspect>true</preserveaspect>
+                    <imagetype name="thumbimage1">
+                        <area>20,20,80,60</area>
+                        <preserveaspect>false</preserveaspect>
                     </imagetype>
                     <imagetype name="thumbimage2">
-                        <area>66,10,44,33</area>
-                        <preserveaspect>true</preserveaspect>
+                        <area>85,20,80,60</area>
+                        <preserveaspect>false</preserveaspect>
                     </imagetype>
                     <imagetype name="thumbimage3">
-                        <area>10,50,44,33</area>
-                        <preserveaspect>true</preserveaspect>
+                        <area>20,70,80,60</area>
+                        <preserveaspect>false</preserveaspect>
                     </imagetype>
                     <imagetype name="thumbimage4">
-                        <area>66,50,44,33</area>
-                        <preserveaspect>true</preserveaspect>
-                    </imagetype>-->
+                        <area>85,70,80,60</area>
+                        <preserveaspect>false</preserveaspect>
+                    </imagetype>
 
                     <imagetype name="buttonimage">
                         <area>0,0,185,185</area>
@@ -213,7 +208,6 @@
                             <shape name="buttoncheck_background" from="base_background_shape">
                                 <area>0,0,36,36</area>
                                 <line color="#AAAAAA" alpha="0" width="0" />
-                                <cornerradius>10</cornerradius>
                             </shape>
                             <imagetype name="checkfull" from="base_icon_selected">
                                 <area>3,3,30,30</area>
@@ -229,7 +223,6 @@
                             <shape name="buttoncheck_background" from="base_background_shape">
                                 <area>0,0,36,36</area>
                                 <line color="#AAAAAA" alpha="0" width="0" />
-                                <cornerradius>10</cornerradius>
                             </shape>
                             <imagetype name="hidden" from="base_icon_selected">
                                 <area>3,3,30,30</area>
@@ -246,7 +239,6 @@
                             <shape name="subfolder_background" from="base_background_shape">
                                 <area>7,7,171,40</area>
                                 <line color="#AAAAAA" alpha="0" width="0" />
-                                <cornerradius>10</cornerradius>
                             </shape>
                             <imagetype name="subfolder_icon">
                                 <area>15,12,30,30</area>
@@ -341,54 +333,75 @@
 
         <!-- the shape where the imagelist is displayed -->
         <shape name="galleryconfig_background" from="base_background_shape">
-            <area>160,265,960,332</area>
+            <area>160,225,960,372</area>
         </shape>
 
         <textarea name="sgname_label" from="base_textarea">
-            <area>180,280,540,36</area>
+            <area>180,240,540,36</area>
             <align>right,vcenter</align>
             <value>Name of the storage group for the images:</value>
         </textarea>
         <textarea name="sortorder_label" from="sgname_label">
-            <position>180,320</position>
+            <position>180,260</position>
             <value>Sorting order of the shown images:</value>
         </textarea>
         <textarea name="slideshowtime_label" from="sgname_label">
-            <position>180,360</position>
+            <position>180,320</position>
             <value>Time to display each image during a slideshow (ms):</value>
         </textarea>
         <textarea name="transitiontype_label" from="sgname_label">
-            <position>180,400</position>
+            <position>180,360</position>
             <value>Type of transition between two images:</value>
         </textarea>
         <textarea name="transitiontime_label" from="sgname_label">
-            <position>180,440</position>
+            <position>180,400</position>
             <value>Duration of an image transition (ms):</value>
         </textarea>
         <textarea name="showhiddenfiles_label" from="sgname_label">
-            <position>180,480</position>
+            <position>180,440</position>
             <value>Show files that are marked as hidden:</value>
         </textarea>
-
+        <textarea name="cleardatabase_label" from="sgname_label">
+            <position>180,480</position>
+            <value>Clear database contents (Resync required):</value>
+        </textarea>
+        
         <textedit name="storagegroupname" from="base_textedit">
-            <position>730,280</position>
+            <position>730,240</position>
         </textedit>
         <buttonlist name="sortorder" from="base_selector_wide">
-            <position>730,320</position>
+            <position>730,280</position>
         </buttonlist>
         <spinbox name="slideshowtime" from="base_spinbox">
-            <position>730,360</position>
+            <position>730,320</position>
         </spinbox>
         <buttonlist name="transitiontype" from="base_selector">
-            <position>730,400</position>
+            <position>730,360</position>
         </buttonlist>
         <spinbox name="transitiontime" from="base_spinbox">
-            <position>730,440</position>
+            <position>730,400</position>
         </spinbox>
         <checkbox name="showhiddenfiles" from="base_checkbox">
-            <position>730,480</position>
+            <position>730,440</position>
         </checkbox>
-
+        <button name="cleardatabase" from="base_button">
+            <area>730,480,36,36</area>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <area>0,0,36,36</area>
+                </state>
+                <state name="selected">
+                    <area>0,0,36,36</area>
+                </state>
+                <state name="disabled">
+                    <area>0,0,36,36</area>
+                </state>
+                <state name="pushed">
+                    <area>0,0,36,36</area>
+                </state>
+            </statetype>
+        </button>
+        
         <shape name="button_separator" from="base_background_shape">
             <area>161,530,958,1</area>
         </shape>
