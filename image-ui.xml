@@ -333,42 +333,35 @@
 
         <!-- the shape where the imagelist is displayed -->
         <shape name="galleryconfig_background" from="base_background_shape">
-            <area>160,225,960,372</area>
+            <area>160,265,960,332</area>
         </shape>
 
-        <textarea name="sgname_label" from="base_textarea">
-            <area>180,240,540,36</area>
+        <textarea name="sortorder_label">
+            <area>180,280,540,36</area>
             <align>right,vcenter</align>
-            <value>Name of the storage group for the images:</value>
-        </textarea>
-        <textarea name="sortorder_label" from="sgname_label">
-            <position>180,260</position>
             <value>Sorting order of the shown images:</value>
         </textarea>
-        <textarea name="slideshowtime_label" from="sgname_label">
+        <textarea name="slideshowtime_label" from="sortorder_label">
             <position>180,320</position>
             <value>Time to display each image during a slideshow (ms):</value>
         </textarea>
-        <textarea name="transitiontype_label" from="sgname_label">
+        <textarea name="transitiontype_label" from="sortorder_label">
             <position>180,360</position>
             <value>Type of transition between two images:</value>
         </textarea>
-        <textarea name="transitiontime_label" from="sgname_label">
+        <textarea name="transitiontime_label" from="sortorder_label">
             <position>180,400</position>
             <value>Duration of an image transition (ms):</value>
         </textarea>
-        <textarea name="showhiddenfiles_label" from="sgname_label">
+        <textarea name="showhiddenfiles_label" from="sortorder_label">
             <position>180,440</position>
             <value>Show files that are marked as hidden:</value>
         </textarea>
-        <textarea name="cleardatabase_label" from="sgname_label">
+        <textarea name="cleardatabase_label" from="sortorder_label">
             <position>180,480</position>
             <value>Clear database contents (Resync required):</value>
         </textarea>
-        
-        <textedit name="storagegroupname" from="base_textedit">
-            <position>730,240</position>
-        </textedit>
+
         <buttonlist name="sortorder" from="base_selector_wide">
             <position>730,280</position>
         </buttonlist>
