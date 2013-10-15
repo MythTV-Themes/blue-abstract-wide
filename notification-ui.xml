@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.xsd">
+
+<mythuitheme>
+
+    <baseres>1280x720</baseres>
+
+    <window name="notification">
+        <area>100%-700,20,660,150</area>
+
+        <shape name="background" from="base_background_shape_dark">
+            <area>0,0,100%,100%</area>
+        </shape>
+
+        <imagetype name="image" depends="!mediastate&amp;!errorstate">
+            <filename>damaged.png</filename>
+            <area>15,15,30,30</area>
+        </imagetype>
+
+        <textarea name="title" from="base_textarea">
+            <area>50,10,595,30</area>
+            <font>title</font>
+        </textarea>
+
+        <textarea name="origin" from="base_textarea">
+            <area>50,45,595,20</area>
+        </textarea>
+
+        <textarea name="description" from="base_textarea" depends="progress">
+            <area>15,70,630,20</area>
+        </textarea>
+
+        <textarea name="extra" from="base_textarea" depends="progress">
+            <area>15,90,630,20</area>
+        </textarea>
+
+        <textarea name="progress_text" from="base_textarea" depends="progress">
+            <area>15,110,190,20</area>
+            <align>right</align>
+        </textarea>
+
+        <progressbar name="progress" from="base_progressbar">
+            <area>220,110,390,20</area>
+        </progressbar>
+
+        <textarea name="description_noprogress" from="base_textarea" depends="!progress">
+            <area>15,70,630,65</area>
+            <multiline>yes</multiline>
+            <align>left,top</align>
+            <template>%DESCRIPTION%</template>
+        </textarea>
+    </window>
+
+
+
+
+    <window name="notification-image">
+        <area>100%-700,20,660,150</area>
+
+        <shape name="background" from="base_background_shape_dark">
+            <area>0,0,100%,100%</area>
+        </shape>
+
+        <statetype name="mediastate">
+            <area>0,0,100%,100%</area>
+            <state name="ok"/>
+            <state name="noartwork">
+                <area>0,0,100%,100%</area>
+                <imagetype name="imageartwork">
+                    <!-- Artist: Vargas21 http://www.iconarchive.com/show/aquave-metal-icons-by-vargas21/Music-icon.html -->
+                    <filename>noartwork.png</filename>
+                    <area>12,12,26,26</area>
+                </imagetype>
+            </state>
+        </statetype>
+
+        <statetype name="errorstate">
+            <area>0,0,100%,100%</area>
+            <state name="ok"/>
+            <state name="error">
+                <area>0,0,100%,100%</area>
+                <imagetype name="imageerror">
+                    <!-- Artist: Kyo-Tux http://www.iconarchive.com/show/phuzion-icons-by-kyo-tux/Sign-Error-icon.html -->
+                    <filename>error.png</filename>
+                    <area>12,12,26,26</area>
+                </imagetype>
+            </state>
+            <state name="check">
+                <area>0,0,100%,100%</area>
+                <imagetype name="imageerror">
+                    <!-- Artist: Kyo-Tux http://www.iconarchive.com/show/phuzion-icons-by-kyo-tux/Sign-Select-icon.html -->
+                    <filename>check.png</filename>
+                    <area>12,12,26,26</area>
+                </imagetype>
+            </state>
+            <state name="warning">
+                <area>0,0,100%,100%</area>
+                <imagetype name="imageerror">
+                    <!-- Artist: Kyo-Tux http://www.iconarchive.com/show/phuzion-icons-by-kyo-tux/Sign-Alert-icon.html -->
+                    <filename>warning.png</filename>
+                    <area>12,12,26,26</area>
+                </imagetype>
+            </state>
+            <state name="busy">
+                <area>0,0,100%,100%</area>
+                <imagetype name="animation">
+                    <area>610,370,60,10</area>
+                    <filepattern low="1" high="5">images/icons/animation/busy_%1.png</filepattern>
+                    <delay>200</delay>
+                </imagetype>
+            </state>
+        </statetype>
+
+        <imagetype name="image" depends="!mediastate&amp;!errorstate">
+            <filename>damaged.png</filename>
+            <area>15,15,30,30</area>
+        </imagetype>
+
+        <textarea name="title" from="base_textarea">
+            <area>50,10,595,30</area>
+            <font>title</font>
+        </textarea>
+
+        <textarea name="origin" from="base_textarea">
+            <area>50,45,595,20</area>
+        </textarea>
+
+        <textarea name="description" from="base_textarea" depends="progress">
+            <area>15,70,630,20</area>
+        </textarea>
+
+        <textarea name="extra" from="base_textarea" depends="progress">
+            <area>15,90,630,20</area>
+        </textarea>
+
+        <textarea name="progress_text" from="base_textarea" depends="progress">
+            <area>15,110,190,20</area>
+            <align>right</align>
+        </textarea>
+
+        <progressbar name="progress" from="base_progressbar">
+            <area>220,110,390,20</area>
+        </progressbar>
+
+        <textarea name="description_noprogress" from="base_textarea" depends="!progress">
+            <area>15,70,630,65</area>
+            <multiline>yes</multiline>
+            <align>left,top</align>
+            <template>%DESCRIPTION%</template>
+        </textarea>
+    </window>    
+    
+    
+    
+    
+    <window name="notification-full">
+        <area>0,0,100%,100%</area>
+
+        <shape name="background" from="base_background_shape_dark">
+            <area>0,0,100%,100%</area>
+        </shape>
+
+        <statetype name="mediastate">
+            <area>0,0,100%,100%</area>
+            <state name="ok"/>
+            <state name="noartwork">
+                <area>0,0,100%,100%</area>
+                <imagetype name="imageartwork">
+                    <!-- Artist: Vargas21 http://www.iconarchive.com/show/aquave-metal-icons-by-vargas21/Music-icon.html -->
+                    <filename>noartwork.png</filename>
+                    <area>12,12,26,26</area>
+                </imagetype>
+            </state>
+        </statetype>
+
+        <statetype name="errorstate">
+            <area>0,0,100%,100%</area>
+            <state name="ok"/>
+            <state name="error">
+                <area>0,0,100%,100%</area>
+                <imagetype name="imageerror">
+                    <!-- Artist: Kyo-Tux http://www.iconarchive.com/show/phuzion-icons-by-kyo-tux/Sign-Error-icon.html -->
+                    <filename>error.png</filename>
+                    <area>12,12,26,26</area>
+                </imagetype>
+            </state>
+            <state name="check">
+                <area>0,0,100%,100%</area>
+                <imagetype name="imageerror">
+                    <!-- Artist: Kyo-Tux http://www.iconarchive.com/show/phuzion-icons-by-kyo-tux/Sign-Select-icon.html -->
+                    <filename>check.png</filename>
+                    <area>12,12,26,26</area>
+                </imagetype>
+            </state>
+            <state name="warning">
+                <area>0,0,100%,100%</area>
+                <imagetype name="imageerror">
+                    <!-- Artist: Kyo-Tux http://www.iconarchive.com/show/phuzion-icons-by-kyo-tux/Sign-Alert-icon.html -->
+                    <filename>warning.png</filename>
+                    <area>12,12,26,26</area>
+                </imagetype>
+            </state>
+            <state name="busy">
+                <area>0,0,100%,100%</area>
+                <imagetype name="animation">
+                    <area>610,370,60,10</area>
+                    <filepattern low="1" high="5">images/icons/animation/busy_%1.png</filepattern>
+                    <delay>200</delay>
+                </imagetype>
+            </state>
+        </statetype>
+
+        <imagetype name="image" depends="!mediastate&amp;!errorstate">
+            <filename>damaged.png</filename>
+            <area>15,15,30,30</area>
+        </imagetype>
+
+        <textarea name="title" from="base_textarea">
+            <area>50,10,595,30</area>
+            <font>title</font>
+        </textarea>
+
+        <textarea name="origin" from="base_textarea">
+            <area>50,45,595,20</area>
+        </textarea>
+
+        <textarea name="description" from="base_textarea" depends="progress">
+            <area>15,70,630,20</area>
+        </textarea>
+
+        <textarea name="extra" from="base_textarea" depends="progress">
+            <area>15,90,630,20</area>
+        </textarea>
+
+        <textarea name="progress_text" from="base_textarea" depends="progress">
+            <area>15,110,190,20</area>
+            <align>right</align>
+        </textarea>
+
+        <progressbar name="progress" from="base_progressbar">
+            <area>220,110,390,20</area>
+        </progressbar>
+
+        <textarea name="description_noprogress" from="base_textarea" depends="!progress">
+            <area>15,70,630,65</area>
+            <multiline>yes</multiline>
+            <align>left,top</align>
+            <template>%DESCRIPTION%</template>
+        </textarea>
+    </window>
+
+</mythuitheme>
