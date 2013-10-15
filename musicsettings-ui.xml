@@ -15,73 +15,73 @@
         </textarea>
 
         <shape name="generalsettings_background" from="base_background_shape">
-            <area>195,85,890,512</area>
+            <area>195,125,890,472</area>
         </shape>
 
         <textarea name="musiclocation_label" from="base_textarea">
-            <area>210,100,430,36</area>
+            <area>210,140,430,36</area>
             <scroll direction="horizontal" rate="35"/>
             <align>right,vcenter</align>
             <value>Directory to hold music:</value>
         </textarea> 
         <textedit name="musiclocation" from="base_textedit">
-            <position>650,100</position>
+            <position>650,140</position>
         </textedit>
         <button name="findlocation" from="base_searchbutton">
-            <position>1035,100</position>
+            <position>1035,140</position>
         </button>
 
         <textarea name="musiccddevice_label" from="musiclocation_label">
-            <position>210,150</position>
+            <position>210,190</position>
             <value>CD device:</value>
         </textarea>
         <textedit name="musiccddevice" from="base_textedit">
-            <position>650,150</position>
+            <position>650,190</position>
         </textedit>
 
         <textarea name="musicaudiodevice_label" from="musiclocation_label">
-            <position>210,190</position>
+            <position>210,230</position>
             <value>Audio device:</value>
         </textarea>
         <textedit name="musicaudiodevice" from="base_textedit">
-            <position>650,190</position>
+            <position>650,230</position>
         </textedit>
         
         <textarea name="musicdefaultupmix_label" from="musiclocation_label">
-            <position>210,230</position>
+            <position>210,270</position>
             <value>Convert stereo to 5.1 sound:</value>
         </textarea>
         <checkbox name="musicdefaultupmix" from="base_checkbox">
-            <position>650,230</position>
+            <position>650,270</position>
         </checkbox>
 
         <shape name="settings_separator" from="base_background_shape">
-            <area>196,280,888,1</area>
+            <area>196,320,888,1</area>
         </shape>
 
         <textarea name="nonid3filenameformat_label" from="musiclocation_label">
-            <position>210,295</position>
+            <position>210,335</position>
             <value>Filename Format:</value>
         </textarea>
         <textedit name="nonid3filenameformat" from="base_textedit">
-            <position>650,295</position>
+            <position>650,335</position>
         </textedit>
 
         <textarea name="ignoreid3tags_label" from="musiclocation_label">
-            <position>210,335</position>
+            <position>210,375</position>
             <value>Ignore ID3 Tags:</value>
         </textarea>
         <checkbox name="ignoreid3tags" from="base_checkbox">
-            <position>650,335</position>
+            <position>650,375</position>
         </checkbox>
 
-        <textarea name="tagencoding_label" from="musiclocation_label">
+<!--        <textarea name="tagencoding_label" from="musiclocation_label">
             <position>210,375</position>
             <value>Tag Encoding:</value>
         </textarea>
         <buttonlist name="tagencoding" from="base_selector">
             <position>650,375</position>
-        </buttonlist>
+        </buttonlist>-->
 
         <textarea name="allowtagwriting_label" from="musiclocation_label">
             <position>210,415</position>
