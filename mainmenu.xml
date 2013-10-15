@@ -28,7 +28,7 @@
         <action>MENU menu/music_menu.xml</action>
         <depends>mythmusic</depends>
     </button>
-
+<!--
     <button>
         <type>MENU_PICTURES</type>
         <text>Pictures</text>
@@ -38,10 +38,10 @@
         <action>PLUGIN mythgallery</action>
         <depends>mythgallery</depends>
     </button>
-
+-->
 <!-- This is the new gallery plugin which is integrated into the forntend. Until 
      its added to MythTV the menu entry must be uncommented manually. -->
-<!--
+
     <button>
         <type>MENU_IMAGES</type>
         <text>Pictures</text>
@@ -50,7 +50,7 @@
         <description lang="DE">Bilder aus deiner Sammlung anschauen</description>
         <action>JUMP Gallery Default</action>
     </button>
--->
+
     <button>
         <type>MENU_GAMES</type>
         <text>Games</text>
