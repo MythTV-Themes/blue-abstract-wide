@@ -104,7 +104,7 @@
             <state name="busy">
                 <area>0,0,100%,100%</area>
                 <imagetype name="animation">
-                    <area>610,370,60,10</area>
+                    <area>300,125,60,10</area>
                     <filepattern low="1" high="5">images/icons/animation/busy_%1.png</filepattern>
                     <delay>200</delay>
                 </imagetype>
@@ -203,7 +203,7 @@
             <state name="busy">
                 <area>0,0,100%,100%</area>
                 <imagetype name="animation">
-                    <area>610,370,60,10</area>
+                    <area>300,125,60,10</area>
                     <filepattern low="1" high="5">images/icons/animation/busy_%1.png</filepattern>
                     <delay>200</delay>
                 </imagetype>
