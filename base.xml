@@ -1728,32 +1728,33 @@
         <shape name="darken_background" from="base_darken_background" />
 
         <shape name="dialog_background" from="base_background_shape_dark">
-            <area>350,130,580,388</area>
+            <area>300,130,680,388</area>
         </shape>
 
         <textarea name="title" from="base_textarea">
-            <area>365,140,550,60</area>
+            <area>315,140,650,60</area>
             <value>Metadata Search Results</value>
             <align>allcenter</align>
             <multiline>yes</multiline>
             <scroll direction="vertical" rate="10"/>
         </textarea>
         <shape name="title_separator" from="base_background_shape">
-            <area>351,210,578,1</area>
+            <area>301,210,678,1</area>
         </shape>
 
         <buttonlist name="results" from="base_buttonlist">
-            <area>365,225,550,275</area>
+            <area>315,225,650,275</area>
+            <arrange>stack</arrange> 
             <statetype name="buttonitem">
                 <state name="active">
-                    <area>0,0,550,36</area>
+                    <area>0,0,650,36</area>
                     <textarea name="buttontext" from="base_textarea">
-                        <area>8,0,350,36</area>
+                        <area>8,0,450,36</area>
                         <scroll direction="horizontal" rate="35"/>
                     </textarea>
-                    
+
                     <textarea name="year" from="base_textarea">
-                        <area>365,0,170,36</area>
+                        <area>465,0,170,36</area>
                         <align>right,vcenter</align>
                         <template>Released %1</template>
                         <scroll direction="horizontal" rate="35"/>
@@ -1761,11 +1762,43 @@
                 </state>
                 <state name="inactive" from="active" />
                 <state name="selectedactive" from="active">
-                    <area>0,0,550,36</area>
+                    <area>0,0,650,110</area>
                     <shape name="background" from="base_button_shape_selectedactive"/>
+
+                    <imagetype name="buttonimage">
+                        <area>10,10,60,90</area>
+                        <mask>images/media/movie_cover_mask.png</mask>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
+                    <imagetype name="buttonimage_border">
+                        <area>10,10,60,90</area>
+                        <filename>images/media/movie_cover_border.png</filename>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
+
+                    <textarea name="buttontext" from="base_textarea">
+                        <area>78,0,370,36</area>
+                        <scroll direction="horizontal" rate="35"/>
+                    </textarea>
+
+                    <textarea name="year" from="base_textarea">
+                        <area>465,0,170,36</area>
+                        <align>right,vcenter</align>
+                        <template>Released %1</template>
+                        <scroll direction="horizontal" rate="35"/>
+                    </textarea>
+
+                    <textarea name="description" from="base_textarea">
+                        <area>78,35,564,65</area>
+                        <align>left,top</align>
+                        <multiline>yes</multiline>
+                        <template>%DESCRIPTION%</template>
+                        <scroll direction="vertical" rate="35"/>
+                    </textarea>
+
                 </state>
                 <state name="selectedinactive" from="active">
-                    <area>0,0,550,36</area>
+                    <area>0,0,650,36</area>
                     <shape name="background" from="base_button_shape_selectedinactive"/>
                 </state>
             </statetype>
