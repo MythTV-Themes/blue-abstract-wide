@@ -734,61 +734,81 @@
             <value>Cover Art:</value>
         </textarea>
         <button name="coverart_button" from="base_searchbutton">
-            <area>1045,305,32,32</area>
+            <area>1055,305,32,32</area>
         </button>
-        <textarea name="coverart_text" from="base_textarea">
-            <area>1090,305,160,36</area>
+        <button name="net_coverart_button" from="base_button">
+            <area>1100,305,32,32</area>
+            <value>Find Online...</value>
+        </button>
+        <!--<textarea name="coverart_text" from="base_textarea">
+            <area>1090,335,160,36</area>
             <value>Undefined</value>
             <scroll direction="horizontal" rate="35"/>
-        </textarea>
+        </textarea>-->
 
         <textarea name="banner_text_label" from="title_text">
             <position>885,345</position>
             <value>Banner:</value>
         </textarea>
         <button name="banner_button" from="base_searchbutton">
-            <position>1045,345</position>
+            <position>1055,345</position>
         </button>
-        <textarea name="banner_text" from="coverart_text">
+        <button name="net_banner_button" from="base_button">
+            <area>1100,345,32,32</area>
+            <value>Find Online...</value>
+        </button>
+        <!--<textarea name="banner_text" from="coverart_text">
             <position>1090,345</position>
             <value>Undefined</value>
-        </textarea>
+        </textarea>-->
 
         <textarea name="trailer_text_label" from="title_text">
             <position>885,385</position>
             <value>Trailer:</value>
         </textarea>
         <button name="trailer_button" from="base_searchbutton">
-            <position>1045,385</position>
+            <position>1055,385</position>
         </button>
-        <textarea name="trailer_text" from="coverart_text">
+        <button name="net_trailer_button" from="base_button">
+            <area>1100,385,32,32</area>
+            <value>Find Online...</value>
+        </button>
+        <!--<textarea name="trailer_text" from="coverart_text">
             <position>1090,385</position>
             <value>Undefined</value>
-        </textarea>
+        </textarea>-->
 
         <textarea name="fanart_text_label" from="title_text">
             <position>885,425</position>
             <value>Fanart:</value>
         </textarea>
         <button name="fanart_button" from="base_searchbutton">
-            <position>1045,425</position>
+            <position>1055,425</position>
         </button>
-        <textarea name="fanart_text" from="coverart_text">
+        <button name="net_fanart_button" from="base_button">
+            <area>1100,425,32,32</area>
+            <value>Find Online...</value>
+        </button>
+        <!--<textarea name="fanart_text" from="coverart_text">
             <position>1090,425</position>
             <value>Undefined</value>
-        </textarea>
+        </textarea>-->
 
         <textarea name="screenshot_text_label" from="title_text">
             <position>885,465</position>
             <value>Screenshot:</value>
         </textarea>
         <button name="screenshot_button" from="base_searchbutton">
-            <position>1045,465</position>
+            <position>1055,465</position>
         </button>
-        <textarea name="screenshot_text" from="coverart_text">
+        <button name="net_screenshot_button" from="base_button">
+            <area>1100,465,32,32</area>
+            <value>Find Online...</value>
+        </button>
+        <!--<textarea name="screenshot_text" from="coverart_text">
             <position>1090,465</position>
             <value>Undefined</value>
-        </textarea>
+        </textarea>-->
 
         <textarea name="player_text" from="title_text">
             <area>885,505,300,36</area>
