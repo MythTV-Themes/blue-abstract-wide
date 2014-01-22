@@ -800,7 +800,7 @@
             <fill color="#000000" alpha="0" />
         </shape>
 
-        <webbrowser name="browser" from="base_webbrowser">
+        <webbrowser name="browser">
             <area>22,52,1236,651</area>
             <background color="#000000" alpha="0" />
         </webbrowser>
