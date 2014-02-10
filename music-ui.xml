@@ -142,11 +142,11 @@
             <filename>images/media/music_visualization_bg.png</filename>
             <preserveaspect>true</preserveaspect>
         </imagetype>
-        <imagetype name="visualizer">
+        <video name="visualizer">
             <area>1110,556,133,133</area>
             <mask>images/media/music_item_nfmask.png</mask>
             <preserveaspect>true</preserveaspect>
-        </imagetype>
+        </video>
         <imagetype name="visualizer_border">
             <area>1110,556,133,133</area>
             <filename>images/media/music_item_nfborder.png</filename>
