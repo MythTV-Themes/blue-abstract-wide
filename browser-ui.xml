@@ -46,7 +46,7 @@
 
         </buttonlist>
 
-        <webbrowser name="webbrowser" from="base_webbrowser">
+        <webbrowser name="webbrowser">
             <area>15,45,1265,675</area>
             <browserarea>0,0,100%-28,100%-28</browserarea>
         </webbrowser>
