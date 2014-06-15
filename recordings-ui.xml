@@ -59,17 +59,21 @@
                 <state name="active">
                     <area>0,0,850,36</area>
                     <textarea name="titlesubtitle" from="base_textarea">
-                        <area>8,0,535,36</area>
-                        <scroll direction="horizontal" rate="35" />
+                        <area>8,0,512,36</area>
+                        <scroll direction="horizontal" />
+                    </textarea>
+                    <textarea name="00x00" from="base_textarea">
+                        <area>530,5,60,30</area>
+                        <align>right,vcenter</align>
                     </textarea>
                     <textarea name="shortstartdate" from="base_textarea">
-                        <area>550,0,110,36</area>
+                        <area>600,0,80,36</area>
                         <align>right,vcenter</align>
                     </textarea>
                     <textarea name="starttime" from="base_textarea">
-                        <area>670,0,100,36</area>
+                        <area>690,0,80,36</area>
                         <align>allcenter</align>
-                    </textarea>
+                    </textarea>                    
                     <imagetype name="no_jobstate" from="base_icon_inactive">
                         <filename>images/icons/processing.png</filename>
                         <area>778,3,30,30</area>
