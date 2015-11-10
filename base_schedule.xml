@@ -115,10 +115,8 @@
             <area>15,40,600,36</area>
             <scroll direction="horizontal" rate="35"/>
         </textarea>
-        <textarea name="template" from="base_textarea">
+        <textarea name="00x00" from="base_textarea">
             <area>625,10,300,36</area>
-            <scroll direction="horizontal" rate="35"/>
-            <template>%Using |TEMPLATE| Template%</template>
         </textarea>
         <textarea name="channel" from="base_textarea">
             <area>625,40,200,36</area>
