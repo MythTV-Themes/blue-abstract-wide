@@ -203,6 +203,10 @@
             <area>25,640,700,30</area>
         </textarea>
 
+        <textarea name="creationdate" from="base_textarea">
+            <area>525,640,300,30</area>
+        </textarea>
+
         <!-- optional - shows current position in grid eg '1 of 123' -->
         <textarea name="position" from="base_textarea">
             <area>1100,640,155,30</area>
