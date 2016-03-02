@@ -367,7 +367,7 @@
         <!-- show the channel or the channel name if 
              no channel icon is available -->
 
-        <textarea name="channame">
+        <textarea name="channame" depends="!iconpath">
             <area>130,560,113,80</area>
             <align>allcenter</align>
             <multiline>yes</multiline>
@@ -375,6 +375,10 @@
             <scroll direction="vertical" rate="10"/>
             <font>text</font>
         </textarea>
+		
+        <imagetype name="iconpath">
+            <area>126,550,120,90</area>
+        </imagetype>			
 <!--
         <imagetype name="iconpath_background_image">
             <area>120,550,133,100</area>
@@ -804,7 +808,7 @@
         <!-- show the channel or the channel name if 
              no channel icon is available -->
 
-        <textarea name="channame">
+        <textarea name="channame" depends="!iconpath">
             <area>130,560,113,80</area>
             <align>allcenter</align>
             <multiline>yes</multiline>
@@ -812,6 +816,11 @@
             <scroll direction="vertical" rate="10"/>
             <font>text</font>
         </textarea>
+
+        <imagetype name="iconpath">
+            <area>126,550,120,90</area>
+        </imagetype>
+
 <!--
         <imagetype name="iconpath_background_image">
             <area>120,550,133,100</area>
@@ -1515,3 +1524,4 @@
     </window>
 
 </mythuitheme>
+
