@@ -126,7 +126,7 @@
             <template>Channel: %1</template>
         </textarea>
         <textarea name="timedate" from="base_textarea">
-            <area>945,10,280,36</area>
+            <area>900,10,325,36</area>
             <align>right,vcenter</align>
             <cutdown>yes</cutdown>
         </textarea>
