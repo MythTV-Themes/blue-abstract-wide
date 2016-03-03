@@ -2,6 +2,100 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
+<window name="trackslyricsview" include="base_music.xml">
+
+
+    <textarea name="heading" from="base_heading">
+        <position>0,0</position>
+        <textarea name="text">
+            <value>Playlist View</value>
+        </textarea>
+    </textarea>
+
+    <shape name="playlist_background" from="base_background_shape">
+        <area>20,50,1240,610</area>
+    </shape>
+
+    <buttonlist name="lyrics_list">
+        <area>45,75,1190,575</area>
+            <buttonarea>0,0,1190,575</buttonarea>
+            <spacing>0</spacing>
+            <layout>vertical</layout>
+            <arrange>stack</arrange>
+            <showarrow>no</showarrow>
+            <searchposition>-1,410</searchposition>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,100%,30</area>
+                    <textarea name="buttontext">
+                        <area>0,0,100%,100%</area>
+                        <align>left,vcenter</align>
+                        <font>text_large</font>
+                    </textarea>
+                </state>
+                <state name="selectedactive" from="active">
+                    <textarea name="buttontext">
+                        <area>0,0,100%,100%</area>
+                        <align>left,vcenter</align>
+                        <font>text_large_yellow</font>
+                    </textarea>
+                </state>
+                <state name="selectedinactive" from="selectedactive">
+
+                </state>
+            </statetype>
+
+            <!--statetype name="upscrollarrow">
+                <position>1160,272</position>
+            </statetype>
+
+            <statetype name="downscrollarrow">
+                <position>1190,272</position>
+            </statetype-->
+        </buttonlist>
+
+        <statetype name="loading_state">
+            <position>587,167</position>
+            <state name="off"></state>
+            <state name="on">
+                <area>0,0,100%,100%</area>
+                <imagetype name="animation">
+                    <area>0,0,60,10</area>
+                    <filepattern low="1" high="5">images/icons/animation/busy_%1.png</filepattern>
+                    <delay>200</delay>
+                </imagetype>
+            </state>
+        </statetype>
+
+        <textarea name="status_text" from="basetextarea">
+            <area>100,280,1080,50</area>
+            <font>text</font>
+            <align>center</align>
+        </textarea>
+
+        <!-- The currently playing track, time, song count 
+             and other status information about the playlist -->
+        <shape name="current_playlistinfo_background" from="base_background_shape">
+            <area>-15,670,1310,38</area>
+        </shape>
+        <group name="current_playlistinfo_group" from="base_current_playlistinfo_group">
+            <position>20,675</position>
+        </group>
+        
+        <!-- This button is not visible and only included to take away 
+            the focus from the playlist. If this button has focus 
+            then the fast forward and backward action can be used >
+        <button name="musiccontrols" from="base_button">
+            <position>580,725</position>
+        </button-->
+
+<!--        <group name="trackinfopanel" from="baseinfopanel">
+            <area>0,440,1250,260</area>
+        </group>
+-->
+
+</window>
+
     <!-- Shows the current playlist and more detailed information about
         the current song. Also shows the coverart and the visualizer -->
     <window name="playlistview" include="base_music.xml">
@@ -160,6 +254,7 @@
         </button>
 
     </window>
+
 
 
 

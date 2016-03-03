@@ -84,7 +84,18 @@
     <fontdef name="text_small_red" from="text_small">
         <color>#800900</color>
     </fontdef>
-    
+    <fontdef name="text_small_yellow" from="text_small">
+        <color>#FFFF33</color>
+    </fontdef>
+
+    <!-- Smaller font that is used in some screens -->
+    <fontdef name="text_large" from="normal">
+        <pixelsize>24</pixelsize>
+    </fontdef>
+    <fontdef name="text_large_yellow" from="text_large">
+        <color>#FFFF33</color>
+    </fontdef>
+   
 
 
 
