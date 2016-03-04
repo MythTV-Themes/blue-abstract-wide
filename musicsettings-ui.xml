@@ -138,23 +138,50 @@
         </textarea>
 
         <shape name="playersettings_background" from="base_background_shape">
-            <area>285,345,710,252</area>
+            <area>285,225,710,372</area>
         </shape>
 
         <textarea name="resumemode_label" from="base_textarea">
-            <area>300,360,300,36</area>
+            <area>300,240,300,36</area>
             <align>right,vcenter</align>
             <value>Resume mode:</value>
         </textarea>
         <buttonlist name="resumemode" from="base_selector">
-            <position>610,360</position>
+            <position>610,240</position>
+        </buttonlist>
+
+        <textarea name="resumemodeeditor_label" from="base_textarea">
+            <area>300,280,300,36</area>
+            <align>right,vcenter</align>
+            <value>Resume mode (Playlist Editor):</value>
+        </textarea>
+        <buttonlist name="resumemodeeditor" from="base_selector">
+            <position>610,280</position>
+        </buttonlist>
+
+       <textarea name="resumemoderadio_label" from="base_textarea">
+            <area>300,320,300,36</area>
+            <align>right,vcenter</align>
+            <value>Resume mode (Radio):</value>
+        </textarea>
+        <buttonlist name="resumemoderadio" from="base_selector">
+            <position>610,320</position>
         </buttonlist>
 
         <textarea name="exitaction_label" from="resumemode_label">
-            <position>300,400</position>
+            <position>300,360</position>
             <value>Action on exit:</value>
         </textarea>
         <buttonlist name="exitaction" from="base_selector_wide">
+            <position>610,360</position>
+        </buttonlist>
+
+        <textarea name="jumpaction_label" from="base_textarea">
+            <area>300,400,300,36</area>
+            <align>right,vcenter</align>
+            <value>Action on jumppoint:</value>
+        </textarea>
+        <buttonlist name="jumpaction" from="base_selector">
             <position>610,400</position>
         </buttonlist>
 
