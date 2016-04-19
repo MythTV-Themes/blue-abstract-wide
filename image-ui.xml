@@ -23,8 +23,13 @@
             <area>220,50,840,570</area>
             <align>allcenter</align>
         </textarea>
+
+        <!-- Mandatory: Shows file info overlay -->
+        <buttonlist name="infolist" from="base_buttonlist">
+            <drawfrombottom>true</drawfrombottom>
+        </buttonlist>
         
-        <buttonlist name="images">
+        <buttonlist name="images0">
             <area>35,65,1220,540</area>
             <layout>grid</layout>
             <spacing>2</spacing>
@@ -36,46 +41,52 @@
                    
                     <!-- Shows the name of the item over a black background -->
                     <shape name="buttontext_background" from="base_background_shape">
-                        <area>3,99,127,31</area>
+                        <area>3,133,127,27</area>
                         <line color="#AAAAAA" alpha="0" width="0" />
                     </shape>
                     <textarea name="buttontext" from="base_textarea">
-                        <area>10,105,110,20</area>
+                        <area>10,139,110,20</area>
                         <font>text_small</font>
-                        <multiline>yes</multiline>
+                        <multiline>no</multiline>
                         <align>allcenter</align>
+                        <scroll direction="left" />
                     </textarea>
 
                     <!-- Shows the background image (if no thumbnail is available) or 
                          the actual thumbnail image and a border around it -->
-                    <imagetype name="background_image">
-                        <area>0,0,133,133</area>
-                        <mask>images/media/image_item_nfmask.png</mask>
-                        <filename>images/media/image_item_bg.png</filename>
+                    <!--imagetype name="background_image">
+                        <area>3,3,130,130</area-->
+                        <!--mask>images/media/image_item_nfmask.png</mask-->
+                        <!--filename>images/media/image_item_bg.png</filename>
+                        <preserveaspect>false</preserveaspect>
+                    </imagetype-->
+
+                    <shape name="buttonimage_background" from="base_background_shape">
+                        <area>3,3,127,130</area>
+                        <line color="#AAAAAA" alpha="0" width="0" />
+                    </shape>
+
+                    <imagetype name="thumbimage0">
+                        <area>6,6,60,62</area>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
-
                     <imagetype name="thumbimage1">
-                        <area>10,10,60,45</area>
-                        <preserveaspect>false</preserveaspect>
+                        <area>66,6,60,62</area>
+                        <preserveaspect>true</preserveaspect>
                     </imagetype>
                     <imagetype name="thumbimage2">
-                        <area>66,10,60,45</area>
-                        <preserveaspect>false</preserveaspect>
+                        <area>6,68,60,62</area>
+                        <preserveaspect>true</preserveaspect>
                     </imagetype>
                     <imagetype name="thumbimage3">
-                        <area>10,55,60,45</area>
-                        <preserveaspect>false</preserveaspect>
-                    </imagetype>
-                    <imagetype name="thumbimage4">
-                        <area>66,55,60,45</area>
-                        <preserveaspect>false</preserveaspect>
+                        <area>66,68,60,62</area>
+                        <preserveaspect>true</preserveaspect>
                     </imagetype>
 
                     <imagetype name="buttonimage">
-                        <area>0,0,133,133</area>
-                        <mask>images/media/image_item_nfmask.png</mask>
+                        <area>3,3,127,130</area>
                         <preserveaspect>true</preserveaspect>
+                        <align>allcenter</align>
                     </imagetype>
 
                     <!-- Shows if the item is marked or not -->
@@ -136,12 +147,13 @@
                                 <area>0,0,133,133</area>
                                 <filename>images/media/image_item_video.png</filename>
                                 <mask>images/media/image_item_nfmask.png</mask>
+                                <preserveaspect>false</preserveaspect>
                             </imagetype>
                         </state>
                     </statetype>
 
                     <imagetype name="background_image_border">
-                        <area>0,0,133,133</area>
+                        <area>0,0,133,165</area>
                         <filename>images/media/image_item_nfborder.png</filename>
                     </imagetype>
 
@@ -155,54 +167,54 @@
                 <state name="inactive" from="active"/>
                 <state name="selectedinactive" from="active"/>
                     
-                <state name="selectedactive" from="active">
-                    <area>-26,-26,133,133</area>
+                <state name="selectedactive">
+                    <area>-26,-26,185,216</area>
                     
                     <!-- Shows the name of the item over a black background -->
                     <shape name="buttontext_background" from="base_background_shape_dark">
-                        <area>7,118,171,60</area>
+                        <area>9,176,167,31</area>
                         <line color="#AAAAAA" alpha="0" width="0" />
                     </shape>
                     <textarea name="buttontext" from="base_textarea">
-                        <area>20,131,145,42</area>
-                        <multiline>yes</multiline>
-                        <scroll direction="vertical" />
+                        <area>15,179,155,25</area>
+                        <font>text_small</font>
+                        <multiline>no</multiline>
                         <align>allcenter</align>
+                        <scroll direction="left" />
                     </textarea>
                     
                     <!-- Shows the background image (if no thumbnail is available) or 
                          the actual thumbnail image and a border around it -->
-                    <imagetype name="background_image">
-                        <area>0,0,185,185</area>
-                        <mask>images/media/image_item_fmask.png</mask>
-                        <filename>images/media/image_item_bg.png</filename>
-                    </imagetype>     
+                    <shape name="background_image" from="base_background_shape">
+                        <area>9,9,167,167</area>
+                        <line color="#AAAAAA" alpha="0" width="0" />                        
+                    </shape>     
 
+                    <imagetype name="thumbimage0">
+                        <area>9,9,83,83</area>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
                     <imagetype name="thumbimage1">
-                        <area>20,20,80,60</area>
-                        <preserveaspect>false</preserveaspect>
+                        <area>92,9,83,83</area>
+                        <preserveaspect>true</preserveaspect>
                     </imagetype>
                     <imagetype name="thumbimage2">
-                        <area>85,20,80,60</area>
-                        <preserveaspect>false</preserveaspect>
+                        <area>9,92,83,83</area>
+                        <preserveaspect>true</preserveaspect>
                     </imagetype>
                     <imagetype name="thumbimage3">
-                        <area>20,70,80,60</area>
-                        <preserveaspect>false</preserveaspect>
-                    </imagetype>
-                    <imagetype name="thumbimage4">
-                        <area>85,70,80,60</area>
-                        <preserveaspect>false</preserveaspect>
-                    </imagetype>
-
-                    <imagetype name="buttonimage">
-                        <area>0,0,185,185</area>
-                        <mask>images/media/image_item_fmask.png</mask>
+                        <area>92,92,83,83</area>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
 
+                    <imagetype name="buttonimage">
+                        <area>9,9,167,167</area>
+                        <preserveaspect>true</preserveaspect>
+                        <align>allcenter</align>
+                    </imagetype>
+
                     <!-- Shows if the item is marked or not -->
-                    <statetype name="nodecheck">
+                    <!--statetype name="nodecheck">
                         <position>143,7</position>
                         <state name="full">
                             <shape name="buttoncheck_background" from="base_background_shape">
@@ -214,10 +226,10 @@
                                 <filename>images/icons/selected.png</filename>
                             </imagetype>
                         </state>
-                    </statetype>
+                    </statetype-->
                     
                     <!-- Shows if the item is either hidden or visible -->
-                    <statetype name="nodevisibility">
+                    <!--statetype name="nodevisibility">
                         <position>107,7</position>
                         <state name="hidden">
                             <shape name="buttoncheck_background" from="base_background_shape">
@@ -229,15 +241,15 @@
                                 <filename>images/icons/hidden.png</filename>
                             </imagetype>
                         </state>
-                    </statetype>
+                    </statetype-->
 
                     <!-- Shows the type of the item. It can be either 
                          a subfolder, upfolder, image or a video -->
                     <statetype name="nodetype">
                         <position>0,0</position>
-                        <state name="subfolder">
+                        <!--state name="subfolder">
                             <shape name="subfolder_background" from="base_background_shape">
-                                <area>7,7,171,40</area>
+                                <area>6,6,173,40</area>
                                 <line color="#AAAAAA" alpha="0" width="0" />
                             </shape>
                             <imagetype name="subfolder_icon">
@@ -250,13 +262,13 @@
                                 <area>15,12,30,30</area>
                                 <filename>images/icons/folder_up_selected.png</filename>
                             </imagetype>
-                        </state>
+                        </state-->
                         <!-- Do not show something extra when the file 
                              is an image. The image preview is enough -->
                         <state name="image" />
                         <state name="video">
                             <imagetype name="videoimage_background">
-                                <area>0,0,185,185</area>
+                                <area>9,9,167,198</area>
                                 <filename>images/media/image_item_video.png</filename>
                                 <mask>images/media/image_item_fmask.png</mask>
                             </imagetype>
@@ -264,13 +276,13 @@
                     </statetype>
 
                     <imagetype name="background_image_border">
-                        <area>0,0,185,185</area>
-                        <filename>images/media/image_item_fborder.png</filename>
+                        <area>0,0,185,216</area>
+                        <filename>images/media/image_item_nfborder.png</filename>
                     </imagetype>
 
-                    <textarea name="childcount" from="base_textarea" depends="subfolder_icon">
+                    <!--textarea name="childcount" from="base_textarea" depends="subfolder_icon">
                         <area>50,12,80,30</area>
-                    </textarea>
+                    </textarea-->
                 </state>
             </statetype>
         </buttonlist>        
@@ -298,7 +310,7 @@
             <scroll direction="horizontal" />
         </textarea>
 
-        <textarea name="syncprogresstext" from="base_textarea">
+        <!--textarea name="syncprogresstext" from="base_textarea">
             <area>800,640,300,36</area>
             <align>right,vcenter</align>
             <template>Syncing image %1</template>
@@ -308,7 +320,30 @@
             <area>800,670,300,30</area>
             <align>right,vcenter</align>
             <template>Creating thumbnail %1</template>
-        </textarea>
+        </textarea-->
+
+        <group name="progress">
+            <area>100%-250,100%-20,500,20</area>
+            <animation trigger="AboutToShow">
+                <section duration="2000">
+                   <alpha start="0" end="255" easingcurve="OutQuad"/>
+                </section>
+            </animation>
+            <animation trigger="AboutToHide">
+                <section duration="2000">
+                    <alpha start="255" end="0" easingcurve="InQuad"/>
+                </section>
+            </animation>
+             <!-- Progress bar-->
+            <progressbar name="scanprogressbar" from="base_progressbar">
+                <position>0,0</position>
+            </progressbar>
+            <!--Shows numerical scan progress-->
+            <textarea name="scanprogresstext" from="base_textarea">
+                <area>130,2,230,15</area>
+                <align>center</align>
+            </textarea>
+        </group>
 
     </window>
 
@@ -428,32 +463,27 @@
             <line color="#000000" alpha="255" />
         </shape>
 
-        <!-- this is the image that shown in the foreground.
-             when fading is enabled this image is faded out. -->
-        <imagetype name="first_image">
+        <!-- this is the image shown . -->
+        <imagetype name="image">
             <area>0,0,1280,720</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
 
-        <!-- this is the image that shown in the background
-             when fading is enabled this image is faded in. -->
-        <imagetype name="second_image">
-            <area>0,0,1280,720</area>
-            <preserveaspect>yes</preserveaspect>
-        </imagetype>
+        <!-- Represents "Show Captions" state for use as a dependancy by other widgets
+         Set = Hide; empty = Show  -->
+        <textarea name="hidecaptions" from="base_textarea">
+            <area>0,0,0,0</area>
+        </textarea>
 
         <!-- shows some information if required -->
-        <textarea name="status" from="base_textarea">
-            <area>500,-10,280,38</area>
-            <shape name="background" from="base_background_shape">
-                <area>0,0,280,40</area>
-            </shape>
-            <textarea name="status_text" from="base_textarea">
-                <area>0,0,280,40</area>
-                <align>allcenter</align>
-                <value>Image Loading...</value>
-            </textarea>
+        <textarea name="status" from="base_textarea" depends="!hidecaptions">
+            <area>510,3,260,34</area>
+            <align>allcenter</align>
         </textarea>
+
+        <!--shape name="status_background" from="base_background_shape" depends="!hidecaptions">
+            <area>500,0,280,40</area>
+        </shape-->
 
         <!-- This list shows all the file information -->
         <buttonlist name="infolist" from="base_buttonlist">
