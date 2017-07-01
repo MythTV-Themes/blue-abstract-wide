@@ -22,12 +22,14 @@
             <!-- Background images for the main menu -->
             <state name="MENU_TV">
                 <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
                     <filename>images/watermarks/livetv.jpg</filename>
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
             <state name="MENU_VIDEOS">
                 <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
                     <filename>images/watermarks/videos.jpg</filename>
                     <area>0,0,1280,720</area>
                 </imagetype>
@@ -55,12 +57,14 @@
             </state>
             <state name="MENU_INFO_CENTER">
                 <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
                     <filename>images/watermarks/scripts.jpg</filename>
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
             <state name="MENU_EXTRAS">
                 <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
                     <filename>images/watermarks/custom.jpg</filename>
                     <area>0,0,1280,720</area>
                 </imagetype>
@@ -69,12 +73,14 @@
             <!-- Background images for the TV menu -->
             <state name="TV_WATCH_TV">
                 <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
                     <filename>images/watermarks/livetv.jpg</filename>
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
             <state name="TV_PROGRAM_GUIDE">
                 <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
                     <filename>images/watermarks/tvguide.jpg</filename>
                     <area>0,0,1280,720</area>
                 </imagetype>
@@ -89,6 +95,7 @@
             <!-- TODO change image -->
             <state name="TV_WATCH_RECORDINGS">
                 <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
                     <filename>images/watermarks/tvshow.jpg</filename>
                     <area>0,0,1280,720</area>
                 </imagetype>
@@ -97,6 +104,7 @@
             <!-- Background images for the Video menu -->
             <state name="VIDEO_BROWSER">
                 <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
                     <filename>images/watermarks/videos.jpg</filename>
                     <area>0,0,1280,720</area>
                 </imagetype>
@@ -104,12 +112,14 @@
             <!-- TODO change image -->
             <state name="TV_WATCH_RECORDINGS">
                 <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
                     <filename>images/watermarks/tvshow.jpg</filename>
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
             <state name="DVD_PLAY">
                 <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
                     <filename>images/watermarks/playdisc.jpg</filename>
                     <area>0,0,1280,720</area>
                 </imagetype>
@@ -211,6 +221,7 @@
             </state>
             <state name="MENU_UTILITIES_SETUP">
                 <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
                     <filename>images/watermarks/custom.jpg</filename>
                     <area>0,0,1280,720</area>
                 </imagetype>
@@ -220,12 +231,14 @@
                  and have only been added for consistency with other menus -->
             <state name="MENU_MANAGE_RECORDINGS">
                 <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
                     <filename>images/watermarks/videos.jpg</filename>
                     <area>0,0,1280,720</area>
                 </imagetype>
             </state>
             <state name="MENU_OPTICAL_DISKS">
                 <imagetype name="watermark">
+                    <mask>images/background_mask.png</mask>
                     <filename>images/watermarks/playdisc.jpg</filename>
                     <area>0,0,1280,720</area>
                 </imagetype>
