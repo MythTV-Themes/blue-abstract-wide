@@ -170,6 +170,23 @@
             </state>
         </statetype>
 
+        <!-- videoquality -->
+        <imagetype name="no_videoquality" from="base_icon_inactive">
+            <area>990,57,44,33</area>
+            <filename>images/icons/video/damaged.png</filename>
+        </imagetype>
+
+        <statetype name="videoquality">
+            <position>990,57</position>
+            <showempty>yes</showempty>
+            <state name="damaged">
+                <imagetype name="damaged" from="base_icon_selected">
+                    <filename>images/icons/video/damaged.png</filename>
+                    <area>0,0,44,33</area>
+                </imagetype>
+            </state>
+        </statetype>
+
         <!-- subtitle types -->
         <imagetype name="no_subtitletypes" from="base_icon_inactive">
             <area>1030,57,36,36</area>
@@ -270,12 +287,6 @@
             <state name="hd1080">
                 <imagetype name="hd1080" from="base_icon_selected">
                     <filename>images/icons/video/hdtv_1080.png</filename>
-                    <area>0,0,44,33</area>
-                </imagetype>
-            </state>
-            <state name="damaged">
-                <imagetype name="damaged" from="base_icon_selected">
-                    <filename>images/icons/video/damaged.png</filename>
                     <area>0,0,44,33</area>
                 </imagetype>
             </state>
