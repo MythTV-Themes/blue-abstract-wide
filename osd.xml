@@ -375,7 +375,7 @@
             <scroll direction="vertical" rate="10"/>
             <font>text</font>
         </textarea>
-<!--
+
         <imagetype name="iconpath_background_image">
             <area>120,550,133,100</area>
             <mask>images/media/channel_nfmask.png</mask>
@@ -391,7 +391,7 @@
             <area>120,550,133,100</area>
             <filename>images/media/channel_nfborder.png</filename>
         </imagetype>
--->
+
         <textarea name="channum">
             <area>120,650,133,36</area>
             <align>allcenter</align>
