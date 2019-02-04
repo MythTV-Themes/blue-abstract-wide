@@ -24,11 +24,6 @@
             <align>allcenter</align>
         </textarea>
 
-        <!-- Mandatory: Shows file info overlay -->
-        <buttonlist name="infolist" from="base_buttonlist">
-            <drawfrombottom>true</drawfrombottom>
-        </buttonlist>
-        
         <buttonlist name="images0">
             <area>35,65,1220,540</area>
             <layout>grid</layout>
@@ -86,13 +81,16 @@
                     <imagetype name="buttonimage">
                         <area>3,3,127,130</area>
                         <preserveaspect>true</preserveaspect>
-                        <align>allcenter</align>
                     </imagetype>
 
+                    <imagetype name="folderimage" from="buttonimage"/>
+
+                    <imagetype name="videoimage" from="buttonimage"/>
+
                     <!-- Shows if the item is marked or not -->
-                    <statetype name="nodecheck">
+                    <statetype name="buttoncheck">
                         <position>96,3</position>
-                        <state name="full">
+                        <state type="full">
                             <shape name="buttoncheck_background" from="base_background_shape">
                                 <area>0,0,34,34</area>
                                 <line color="#AAAAAA" alpha="0" width="0" />
@@ -105,7 +103,7 @@
                     </statetype>
                     
                     <!-- Shows if the item is either hidden or visible -->
-                    <statetype name="nodevisibility">
+                    <statetype name="buttonstate">
                         <position>62,3</position>
                         <state name="hidden">
                             <shape name="buttoncheck_background" from="base_background_shape">
@@ -121,7 +119,7 @@
 
                     <!-- Shows the type of the item. It can be either 
                          a subfolder, upfolder, image or a video -->
-                    <statetype name="nodetype">
+                    <statetype name="buttontype">
                         <position>0,0</position>
                         <state name="subfolder">
                             <shape name="subfolder_background" from="base_background_shape">
@@ -133,12 +131,7 @@
                                 <filename>images/icons/folder_selected.png</filename>
                             </imagetype>
                         </state>
-                        <state name="upfolder">
-                            <imagetype name="upfolder_icon">
-                                <area>10,6,28,28</area>
-                                <filename>images/icons/folder_up_selected.png</filename>
-                            </imagetype>
-                        </state>
+                        <state name="device" from="subfolder"/>
                         <!-- Do not show something extra when the file 
                              is an image. The image preview is enough -->
                         <state name="image" />
@@ -152,12 +145,23 @@
                         </state>
                     </statetype>
 
+                    <!-- Show up arrow on parent dir with ancestors -->
+                    <statetype name="parenttype">
+                        <position>0,0</position>
+                        <state name="upfolder">
+                            <imagetype name="upfolder_icon">
+                                <area>10,6,28,28</area>
+                                <filename>images/icons/folder_up_selected.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
+
                     <imagetype name="background_image_border">
                         <area>0,0,133,165</area>
                         <filename>images/media/image_item_nfborder.png</filename>
                     </imagetype>
 
-                    <textarea name="childcount" from="base_textarea" depends="subfolder_icon">
+                    <textarea name="childcount" from="base_textarea">
                         <area>45,3,80,36</area>
                     </textarea>
 
@@ -210,8 +214,11 @@
                     <imagetype name="buttonimage">
                         <area>9,9,167,167</area>
                         <preserveaspect>true</preserveaspect>
-                        <align>allcenter</align>
                     </imagetype>
+
+                    <imagetype name="folderimage" from="buttonimage"/>
+
+                    <imagetype name="videoimage" from="buttonimage"/>
 
                     <!-- Shows if the item is marked or not -->
                     <!--statetype name="nodecheck">
@@ -245,7 +252,7 @@
 
                     <!-- Shows the type of the item. It can be either 
                          a subfolder, upfolder, image or a video -->
-                    <statetype name="nodetype">
+                    <statetype name="buttontype">
                         <position>0,0</position>
                         <!--state name="subfolder">
                             <shape name="subfolder_background" from="base_background_shape">
@@ -257,15 +264,10 @@
                                 <filename>images/icons/folder_selected.png</filename>
                             </imagetype>
                         </state>
-                        <state name="upfolder">
-                            <imagetype name="upfolder_icon">
-                                <area>15,12,30,30</area>
-                                <filename>images/icons/folder_up_selected.png</filename>
-                            </imagetype>
-                        </state-->
+                        <state name="device" from="subfolder"/-->
                         <!-- Do not show something extra when the file 
                              is an image. The image preview is enough -->
-                        <state name="image" />
+                        <!--state name="image" /-->
                         <state name="video">
                             <imagetype name="videoimage_background">
                                 <area>9,9,167,198</area>
@@ -274,6 +276,17 @@
                             </imagetype>
                         </state>
                     </statetype>
+
+                    <!-- Show up arrow on parent dir with ancestors -->
+                    <!--statetype name="parenttype">
+                        <position>0,0</position>
+                        <state name="upfolder">
+                            <imagetype name="upfolder_icon">
+                                <area>15,12,30,30</area>
+                                <filename>images/icons/folder_up_selected.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype-->
 
                     <imagetype name="background_image_border">
                         <area>0,0,185,216</area>
@@ -294,8 +307,8 @@
 
 
         <!-- shows the name of the folder or image -->
-        <textarea name="title" from="base_textarea">
-            <area>25,640,770,30</area>
+        <textarea name="caption" from="base_textarea">
+            <area>25,640,970,30</area>
         </textarea>
 
         <!-- optional - shows current position in grid eg '1 of 123' -->
@@ -306,8 +319,20 @@
 
         <!-- shows path to current image -->
         <textarea name="breadcrumbs" from="base_textarea">
-            <area>25,670,770,30</area>
+            <area>25,670,970,30</area>
             <scroll direction="horizontal" />
+        </textarea>
+
+        <!-- optional - shows hide filter -->
+        <textarea name="typefilter" from="base_textarea">
+            <area>1020,670,135,36</area>
+            <align>center,vcenter</align>
+        </textarea>
+
+        <!-- optional - shows type filter -->
+        <textarea name="hidefilter" from="base_textarea">
+            <area>1120,670,135,36</area>
+            <align>right,vcenter</align>
         </textarea>
 
         <!--textarea name="syncprogresstext" from="base_textarea">
@@ -322,8 +347,31 @@
             <template>Creating thumbnail %1</template>
         </textarea-->
 
+        <!-- Mandatory: Shows file info overlay -->
+        <buttonlist name="infolist" from="base_buttonlist">
+            <shape name="infolist_background" from="base_background_shape">
+                <area>-15,-15,680,385</area>
+            </shape>
+            <area>315,190,650,354</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,650,36</area>
+                    <textarea name="name" from="base_textarea">
+                        <area>8,0,250,36</area>
+                    </textarea>
+                    <textarea name="value" from="base_textarea">
+                        <area>270,0,370,36</area>
+                        <scroll direction="horizontal"/>
+                    </textarea>
+                </state>
+                <state name="inactive" from="active"/>
+                <state name="selectedactive" from="active"/>
+                <state name="selectedinactive" from="active"/>
+            </statetype>
+        </buttonlist>
+        
         <group name="progress">
-            <area>100%-250,100%-20,500,20</area>
+            <area>50%-250,670,500,20</area>
             <animation trigger="AboutToShow">
                 <section duration="2000">
                    <alpha start="0" end="255" easingcurve="OutQuad"/>
@@ -348,112 +396,7 @@
     </window>
 
 
-
-
-
-    <!-- Configuration dialog. This is currently
-         used by the MythImage plugin only -->
-    <window name="galleryconfig">
-
-        <!-- the background image -->
-        <imagetype name="background" from="base_background"/>
-
-        <!-- The heading (name) of the screen -->
-        <textarea name="heading" from="base_heading">
-            <position>0,0</position>
-            <textarea name="text">
-                <value>Gallery Settings</value>
-            </textarea>
-        </textarea>
-
-        <!-- the shape where the imagelist is displayed -->
-        <shape name="galleryconfig_background" from="base_background_shape">
-            <area>160,265,960,332</area>
-        </shape>
-
-        <textarea name="sortorder_label">
-            <area>180,280,540,36</area>
-            <align>right,vcenter</align>
-            <value>Sorting order of the shown images:</value>
-        </textarea>
-        <textarea name="slideshowtime_label" from="sortorder_label">
-            <position>180,320</position>
-            <value>Time to display each image during a slideshow (ms):</value>
-        </textarea>
-        <textarea name="transitiontype_label" from="sortorder_label">
-            <position>180,360</position>
-            <value>Type of transition between two images:</value>
-        </textarea>
-        <textarea name="transitiontime_label" from="sortorder_label">
-            <position>180,400</position>
-            <value>Duration of an image transition (ms):</value>
-        </textarea>
-        <textarea name="showhiddenfiles_label" from="sortorder_label">
-            <position>180,440</position>
-            <value>Show files that are marked as hidden:</value>
-        </textarea>
-        <textarea name="cleardatabase_label" from="sortorder_label">
-            <position>180,480</position>
-            <value>Clear database contents (Resync required):</value>
-        </textarea>
-
-        <buttonlist name="sortorder" from="base_selector_wide">
-            <position>730,280</position>
-        </buttonlist>
-        <spinbox name="slideshowtime" from="base_spinbox">
-            <position>730,320</position>
-        </spinbox>
-        <buttonlist name="transitiontype" from="base_selector">
-            <position>730,360</position>
-        </buttonlist>
-        <spinbox name="transitiontime" from="base_spinbox">
-            <position>730,400</position>
-        </spinbox>
-        <checkbox name="showhiddenfiles" from="base_checkbox">
-            <position>730,440</position>
-        </checkbox>
-        <button name="cleardatabase" from="base_button">
-            <area>730,480,36,36</area>
-            <statetype name="buttonstate">
-                <state name="active">
-                    <area>0,0,36,36</area>
-                </state>
-                <state name="selected">
-                    <area>0,0,36,36</area>
-                </state>
-                <state name="disabled">
-                    <area>0,0,36,36</area>
-                </state>
-                <state name="pushed">
-                    <area>0,0,36,36</area>
-                </state>
-            </statetype>
-        </button>
-        
-        <shape name="button_separator" from="base_background_shape">
-            <area>161,530,958,1</area>
-        </shape>
-        
-        <button name="save" from="base_button">
-            <position>485,545</position>
-            <value>Save</value>
-        </button>
-        <button name="cancel" from="base_button">
-            <position>650,545</position>
-            <value>Cancel</value>
-        </button>
-        
-        <group name="base_helptext_group" from="base_helptext_group">
-            <position>0,615</position>
-        </group>
-
-    </window>
-
-
-
-
-    <!-- Slideshow window which shows the a single image only or a slideshow.
-         This is currently used by the MythImage plugin only -->
+    <!-- Slideshow window which shows the a single image only or a slideshow.-->
     <window name="slideshow">
 
         <!-- the background behind the images (black) -->
@@ -471,19 +414,18 @@
 
         <!-- Represents "Show Captions" state for use as a dependancy by other widgets
          Set = Hide; empty = Show  -->
-        <textarea name="hidecaptions" from="base_textarea">
-            <area>0,0,0,0</area>
-        </textarea>
+        <textarea name="hidecaptions"/>
 
-        <!-- shows some information if required -->
-        <textarea name="status" from="base_textarea" depends="!hidecaptions">
-            <area>510,3,260,34</area>
-            <align>allcenter</align>
-        </textarea>
-
-        <!--shape name="status_background" from="base_background_shape" depends="!hidecaptions">
-            <area>500,0,280,40</area>
-        </shape-->
+        <!-- Show status pop-up only when captions not hidden AND ('&') status text is set -->
+        <group name="status_group" depends="!hidecaptions&amp;status">
+            <shape name="status_background" from="base_background_shape">
+                <area>500,0,280,40</area>
+            </shape>
+            <textarea name="status" from="base_textarea" >
+                <area>510,3,260,34</area>
+                <align>allcenter</align>
+            </textarea>
+        </group>
 
         <!-- This list shows all the file information -->
         <buttonlist name="infolist" from="base_buttonlist">
