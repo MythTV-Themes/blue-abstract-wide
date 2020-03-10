@@ -116,16 +116,16 @@
             <position>200,665</position>
         </progressbar>
         <textarea name="time" from="base_textarea">
-            <area>715,660,140,30</area>
+            <area>715,660,125,30</area>
         </textarea>
         
         <textarea name="lastplayed" from="base_textarea">
-            <area>820,625,250,30</area>
+            <area>810,625,260,30</area>
             <align>right,vcenter</align>
             <template>Last played: %1</template>
         </textarea>
         <textarea name="playcount" from="base_textarea">
-            <area>860,660,210,30</area>
+            <area>850,660,220,30</area>
             <align>right,vcenter</align>
             <template>Played %1 times</template>
         </textarea>
