@@ -1011,12 +1011,13 @@
             <position>790,280</position>
         </textarea>
         
-        <textarea name="tracknum_label" from="title_label">
+        <textarea name="discnum_label" from="title_label">
             <position>580,310</position>
-            <value>Track No.:</value>
+            <value>Disc:</value>
         </textarea>
-        <textarea name="tracknum" from="title">
+        <textarea name="discnum" from="title">
             <position>790,310</position>
+            <value>%DISCNUM%/%DISCCOUNT%</value>
         </textarea>        
         <textarea name="length" from="title">
             <position>870,310</position>
@@ -1027,12 +1028,13 @@
             <template>Year: %1</template>
         </textarea>
 
-        <textarea name="trackcount_label" from="title_label">
+        <textarea name="tracknum_label" from="title_label">
             <position>580,340</position>
-            <value>Track Count:</value>
+            <value>Track:</value>
         </textarea>
-        <textarea name="trackcount" from="title">
+        <textarea name="tracknum" from="title">
             <position>790,340</position>
+            <value>%TRACKNUM%/%TRACKCOUNT%</value>
         </textarea>
 
         <!-- separates the title, album and artist information from the rest -->
