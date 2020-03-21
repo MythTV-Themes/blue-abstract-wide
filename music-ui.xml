@@ -999,7 +999,7 @@
             <position>580,250</position>
             <value>Compilation Artist:</value>
         </textarea>
-        <textarea name="comilationartist" from="title">
+        <textarea name="compilationartist" from="title">
             <position>790,250</position>
         </textarea>
         
