@@ -162,7 +162,7 @@
     </window>
 
 
-    <!-- Similar to the playlist view, but with lyrics in place ofthe playlist -->
+    <!-- Similar to the playlist view, but with lyrics in place of the playlist -->
     <window name="trackslyricsview" include="base_music.xml">
 
         <imagetype name="background" from="base_background"/>
