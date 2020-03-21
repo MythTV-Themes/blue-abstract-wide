@@ -103,7 +103,7 @@
         <textarea name="album" from="base_textarea">
             <area>200,590,870,30</area>
             <scroll direction="horizontal" rate="35"/>
-            <template>From the album %ALBUM% by the artist %ARTIST%</template>
+            <template>By the artist "%ARTIST%" from the album "%ALBUM%"</template>
         </textarea>
         <textarea name="nexttitle" from="base_textarea">
             <area>200,625,600,30</area>
@@ -293,7 +293,7 @@
         <textarea name="album" from="base_textarea">
             <area>200,590,870,30</area>
             <scroll direction="horizontal" rate="35"/>
-            <template>From the album %ALBUM% by the artist %ARTIST%</template>
+            <template>By the artist "%ARTIST%" from the album "%ALBUM%"</template>
         </textarea>
         <textarea name="nexttitle" from="base_textarea">
             <area>200,625,600,30</area>
