@@ -103,7 +103,7 @@
         <textarea name="album" from="base_textarea">
             <area>200,590,870,30</area>
             <scroll direction="horizontal" rate="35"/>
-            <template>From the album %ALBUM% by the artist %ARTIST%</template>
+            <template>By the artist "%ARTIST%" from the album "%ALBUM%"</template>
         </textarea>
         <textarea name="nexttitle" from="base_textarea">
             <area>200,625,600,30</area>
@@ -116,16 +116,16 @@
             <position>200,665</position>
         </progressbar>
         <textarea name="time" from="base_textarea">
-            <area>715,660,140,30</area>
+            <area>715,660,125,30</area>
         </textarea>
         
         <textarea name="lastplayed" from="base_textarea">
-            <area>820,625,250,30</area>
+            <area>810,625,260,30</area>
             <align>right,vcenter</align>
             <template>Last played: %1</template>
         </textarea>
         <textarea name="playcount" from="base_textarea">
-            <area>860,660,210,30</area>
+            <area>850,660,220,30</area>
             <align>right,vcenter</align>
             <template>Played %1 times</template>
         </textarea>
@@ -162,8 +162,193 @@
     </window>
 
 
+    <!-- Similar to the playlist view, but with lyrics in place of the playlist -->
+    <window name="trackslyricsview" include="base_music.xml">
 
+        <imagetype name="background" from="base_background"/>
 
+        <textarea name="heading" from="base_heading">
+            <position>0,0</position>
+            <textarea name="text">
+                <value>Lyrics View</value>
+            </textarea>
+        </textarea>
+
+        <shape name="lyricslist_background" from="base_background_shape">
+            <area>20,50,1240,430</area>
+	</shape>
+	<!-- The lyrics -->
+	<buttonlist name="lyrics_list">
+	    <!--<area>40,68,1200,370</area>-->
+	    <area>40,68,1200,400</area>
+            <buttonarea>0,0,115,400</buttonarea>
+            <spacing>0</spacing>
+            <layout>vertical</layout>
+            <arrange>stack</arrange>
+            <showarrow>yes</showarrow>
+            <searchposition>-1,410</searchposition>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,100%,30</area>
+                    <textarea name="buttontext">
+                        <area>0,0,100%,100%</area>
+                        <align>left,vcenter</align>
+                        <font>basesmall</font>
+                    </textarea>
+                </state>
+                <state name="selectedactive" from="active">
+                    <textarea name="buttontext">
+                        <area>0,0,100%,100%</area>
+                        <align>left,vcenter</align>
+                        <font>basesmallyellow</font>
+                    </textarea>
+                </state>
+                <state name="selectedinactive" from="selectedactive">
+
+                </state>
+            </statetype>
+        </buttonlist>
+	<statetype name="loading_state">
+            <position>587,167</position>
+            <state name="off"></state>
+            <state name="on">
+		<imagetype name="animation" from="base_icon_selected">
+		    <filename>images/icons/processing.png</filename>
+		    <area>4,4,28,28</area>
+		    <alphapulse min="100" max="220" change="2"/>
+		</imagetype>
+            </state>
+	</statetype>
+
+        <textarea name="status_text" from="basetextarea">
+            <area>100,280,1080,50</area>
+            <font>basemediumyellow</font>
+            <align>center</align>
+        </textarea>
+
+	<!-- From here is as playlist view -->
+
+        <!-- The currently playing track, time, song count
+             and other status information about the playlist -->
+        <shape name="current_playlistinfo_background" from="base_background_shape">
+            <area>-15,490,1310,40</area>
+        </shape>
+        <textarea name="playlisttime" from="base_textarea">
+            <area>765,492,220,36</area>
+            <align>right,vcenter</align>
+        </textarea>
+        <statetype name="repeatstate" from="base_music_repeatstate">
+            <area>992,492,36,36</area>
+        </statetype>
+        <statetype name="shufflestate" from="base_music_shufflestate">
+            <area>1032,492,36,36</area>
+        </statetype>
+        <textarea name="playlistposition" from="base_textarea">
+            <area>1075,492,180,36</area>
+            <align>right,vcenter</align>
+        </textarea>
+
+        <!-- this is the background for the information at the bottom like
+            shows coverart, track details, ratings and the visualizer -->
+        <shape name="trackdetails_background" from="base_background_shape">
+            <area>20,540,1240,165</area>
+        </shape>
+
+        <!-- this is the actual cover image that will be shown if its
+            available, otherwise only the background image is visible -->
+        <imagetype name="coverart_background_image">
+            <area>36,556,133,133</area>
+            <mask>images/media/music_item_nfmask.png</mask>
+            <filename>images/media/music_type/album.png</filename>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="coverart">
+            <area>36,556,133,133</area>
+            <mask>images/media/music_item_nfmask.png</mask>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <imagetype name="coverart_border">
+            <area>36,556,133,133</area>
+            <filename>images/media/music_item_nfborder.png</filename>
+        </imagetype>
+
+        <!-- the vertical separator -->
+        <shape name="cover_separator" from="base_background_shape">
+            <area>185,541,1,163</area>
+        </shape>
+
+        <imagetype name="ratingstate_background" from="base_rating_background">
+            <position>980,560</position>
+        </imagetype>
+        <statetype name="ratingstate" from="base_rating">
+            <position>980,560</position>
+        </statetype>
+
+        <textarea name="title" from="base_textarea">
+            <area>200,555,770,30</area>
+            <font>title</font>
+            <scroll direction="horizontal" rate="35"/>
+            <template>%TITLE%</template>
+        </textarea>
+        <textarea name="album" from="base_textarea">
+            <area>200,590,870,30</area>
+            <scroll direction="horizontal" rate="35"/>
+            <template>By the artist "%ARTIST%" from the album "%ALBUM%"</template>
+        </textarea>
+        <textarea name="nexttitle" from="base_textarea">
+            <area>200,625,600,30</area>
+            <font>text_grey</font>
+            <scroll direction="horizontal" rate="35"/>
+            <template>Next: %NEXTTITLE% by %NEXTARTIST%</template>
+        </textarea>
+
+        <progressbar name="progress" from="base_progressbar">
+            <position>200,665</position>
+        </progressbar>
+        <textarea name="time" from="base_textarea">
+            <area>715,660,140,30</area>
+        </textarea>
+
+        <textarea name="lastplayed" from="base_textarea">
+            <area>820,625,250,30</area>
+            <align>right,vcenter</align>
+            <template>Last played: %1</template>
+        </textarea>
+        <textarea name="playcount" from="base_textarea">
+            <area>860,660,210,30</area>
+            <align>right,vcenter</align>
+            <template>Played %1 times</template>
+        </textarea>
+
+        <!-- the vertical separator -->
+        <shape name="visualizer_separator" from="base_background_shape">
+            <area>1092,541,1,163</area>
+        </shape>
+
+        <!-- the visualizer and the border around it -->
+        <imagetype name="visualizer_background_image">
+            <area>1110,556,133,133</area>
+            <mask>images/media/music_item_nfmask.png</mask>
+            <filename>images/media/music_visualization_bg.png</filename>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+        <video name="visualizer">
+            <area>1110,556,133,133</area>
+            <mask>images/media/music_item_nfmask.png</mask>
+            <preserveaspect>true</preserveaspect>
+        </video>
+        <imagetype name="visualizer_border">
+            <area>1110,556,133,133</area>
+            <filename>images/media/music_item_nfborder.png</filename>
+        </imagetype>
+
+        <!-- This button is not visible and only included to take away
+            the focus from the playlist. If this button has focus
+            then the fast forward and backward action can be used -->
+        <button name="musiccontrols" from="base_button">
+            <position>580,720</position>
+        </button>
+    </window>
 
     <!-- Shows the buttonlist tree at the top and the playlist information
         at the bottom. The user can navigate and select / add music -->
@@ -814,7 +999,7 @@
             <position>580,250</position>
             <value>Compilation Artist:</value>
         </textarea>
-        <textarea name="comilationartist" from="title">
+        <textarea name="compilationartist" from="title">
             <position>790,250</position>
         </textarea>
         
