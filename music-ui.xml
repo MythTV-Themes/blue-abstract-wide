@@ -106,7 +106,7 @@
             <template>By the artist "%ARTIST%" from the album "%ALBUM%"</template>
         </textarea>
         <textarea name="nexttitle" from="base_textarea">
-            <area>200,625,600,30</area>
+            <area>200,625,560,30</area>
             <font>text_grey</font>
             <scroll direction="horizontal" rate="35"/>
             <template>Next: %NEXTTITLE% by %NEXTARTIST%</template>
@@ -120,7 +120,7 @@
         </textarea>
         
         <textarea name="lastplayed" from="base_textarea">
-            <area>810,625,260,30</area>
+            <area>770,625,300,30</area>
             <align>right,vcenter</align>
             <template>Last played: %1</template>
         </textarea>
@@ -296,7 +296,7 @@
             <template>By the artist "%ARTIST%" from the album "%ALBUM%"</template>
         </textarea>
         <textarea name="nexttitle" from="base_textarea">
-            <area>200,625,600,30</area>
+            <area>200,625,560,30</area>
             <font>text_grey</font>
             <scroll direction="horizontal" rate="35"/>
             <template>Next: %NEXTTITLE% by %NEXTARTIST%</template>
@@ -310,7 +310,7 @@
         </textarea>
 
         <textarea name="lastplayed" from="base_textarea">
-            <area>820,625,250,30</area>
+            <area>770,625,300,30</area>
             <align>right,vcenter</align>
             <template>Last played: %1</template>
         </textarea>
