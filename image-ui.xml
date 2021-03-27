@@ -14,12 +14,12 @@
 
         <!-- shows the name of the folder or image -->
         <textarea name="caption" from="base_textarea">
-            <area>25,640,770,30</area>
+            <area>25,650,770,30</area>
         </textarea>
 
         <!-- optional - shows current position in grid eg '1 of 123' -->
         <textarea name="position" from="base_textarea">
-            <area>1120,640,135,36</area>
+            <area>1120,670,135,30</area>
             <align>right,vcenter</align>
         </textarea>
 
@@ -115,7 +115,7 @@
 
         <!-- shows a message when no images are available
              in the current directory -->
-         <textarea name="noimages" from="basetextarea">
+         <textarea name="noimages" from="base_textarea">
              <area>0,0,100%,100%</area>
              <align>allcenter</align>
              <multiline>yes</multiline>
@@ -126,12 +126,50 @@
             <drawfrombottom>true</drawfrombottom>
         </buttonlist>
 
+        <!--Shows scan progress-->
+        <group name="progress">
+            <area>0,0,100%,100%</area>
+            <animation trigger="AboutToShow">
+                <section duration="2000">
+                    <alpha start="0" end="255" easingcurve="OutQuad"/>
+                </section>
+            </animation>
+            <animation trigger="AboutToHide">
+                <section duration="2000">
+                    <alpha start="255" end="0" easingcurve="InQuad"/>
+                </section>
+            </animation>
+            <!-- Progress bar-->
+            <progressbar name="scanprogressbar" from="base_progressbar"/>
+            <!--Shows numerical scan progress-->
+            <textarea name="scanprogresstext" from="base_textarea">
+                <area>20%,100%-29,75%,30</area>
+                <align>center</align>
+            </textarea>
+        </group>
+
+        <!-- shows state of type filter -->
+        <textarea name="typefilter" from="base_textarea">
+            <area>25,100%-29,180,30</area>
+            <align>vcenter</align>
+        </textarea>
+
+        <!-- shows state of hidden filter -->
+        <textarea name="hidefilter" from="base_textarea">
+            <area>100%-190,100%-29,165,30</area>
+            <align>vcenter,right</align>
+        </textarea>
+
     </window>
 
 
     <!-- Slideshow window which shows the a single image only or a slideshow.
          This is currently used by the MythImage plugin only -->
     <window name="slideshow">
+
+        <!-- Extra small text for Gallery images -->
+        <fontdef name="gallerytext" from="text_small">
+        </fontdef>
 
         <!-- the background behind the images (black) -->
         <shape name="background_shape" from="base_background_shape">
@@ -142,29 +180,37 @@
 
         <!-- this is the image that shown in the foreground.
              when fading is enabled this image is faded out. -->
-        <imagetype name="first_image">
+        <imagetype name="image">
             <area>0,0,1280,720</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
 
-        <!-- this is the image that shown in the background
-             when fading is enabled this image is faded in. -->
-        <imagetype name="second_image">
-            <area>0,0,1280,720</area>
-            <preserveaspect>yes</preserveaspect>
-        </imagetype>
+        <!-- Represents "Show Captions" state for use as a dependancy by other widgets
+         Set = Hide; empty = Show  -->
+        <textarea name="hidecaptions" from="base_textarea">
+            <area>0,0,0,0</area>
+        </textarea>
 
-        <!-- shows some information if required -->
-        <textarea name="status" from="base_textarea">
-            <area>500,-10,280,38</area>
-            <shape name="background" from="base_background_shape">
-                <area>0,0,280,40</area>
-            </shape>
-            <textarea name="status_text" from="base_textarea">
-                <area>0,0,280,40</area>
-                <align>allcenter</align>
-                <value>Image Loading...</value>
-            </textarea>
+        <!-- End/Loading/Failed to load status -->
+        <textarea name="status" from="base_textarea" depends="!hidecaptions">
+            <area>10,0,100%-200,30</area>
+            <font>gallerytext</font>
+        </textarea>
+
+        <!-- Slide count -->
+        <textarea name="slidecount" from="base_textarea" depends="!hidecaptions">
+            <area>100%-200,100%-32,190,30</area>
+            <font>gallerytext</font>
+            <align>right, vcentre</align>
+        </textarea>
+
+        <!-- Date/Comment -->
+        <textarea name="caption" from="base_textarea" depends="!hidecaptions">
+            <area>10,100%-28,100%-20,30</area>
+            <font>gallerytext</font>
+            <align>centre, vcentre</align>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal"/>
         </textarea>
 
         <!-- This list shows all the file information -->
