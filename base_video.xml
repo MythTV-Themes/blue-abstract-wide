@@ -107,7 +107,7 @@
             <multiline>yes</multiline>
             <scroll direction="vertical" rate="10"/>
         </textarea>
-        <textarea name="genres" from="base_textarea" from="cast">
+        <textarea name="genres" from="base_textarea">
             <area>535,155,170,65</area>
             <scroll direction="vertical" rate="10"/>
         </textarea>
