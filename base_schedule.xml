@@ -149,12 +149,28 @@
         
         <!-- show the plot of the recording -->
         <textarea name="description" from="base_textarea">
-            <area>15,87,1210,63</area>
+            <area>15,87,980,63</area>
             <multiline>yes</multiline>
             <scroll direction="vertical" rate="10"/>
             <align>left,bottom</align>
             <template>%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
+
+        <group name="recordedgroup" depends="recordedmagic">
+            <textarea name="recordedmagic">
+                <template>%recordedpercent%</template>
+            </textarea>
+            <area>1000,105,220,20</area>
+            <progressbar name="recordedprogressbar" from="base_progressbar">
+                <area>0,0,100%,100%</area>
+            </progressbar>
+            <textarea name="recordedpercent" from="base_textarea">
+                <area>0,0,100%,100%</area>
+                <font>test_small</font>
+                <align>hcenter,vcenter</align>
+                <template>%|recordedpercent|%% recorded</template>
+            </textarea>
+        </group>
 
     </group>
     

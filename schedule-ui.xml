@@ -302,13 +302,18 @@
                 <state name="active">
                     <area>0,0,995,36</area>
                     <textarea name="shortstarttimedate" from="base_textarea">
-                        <area>8,0,204,36</area>
+                        <area>8,0,182,36</area>
                     </textarea>
                     <textarea name="channel" from="shortstarttimedate">
-                        <area>220,0,160,36</area>
+                        <area>200,0,140,36</area>
                     </textarea>
                     <textarea name="titlesubtitle" from="shortstarttimedate">
-                        <area>410,0,540,36</area>
+                        <area>350,0,530,36</area>
+                    </textarea>
+                    <textarea name="recordedpercent" from="buttontext">
+                        <area>890,01,50,36</area>
+                        <align>right,vcenter</align>
+                        <template>%|recordedpercent|%%</template>
                     </textarea>
                     <textarea name="card" from="shortstarttimedate">
                         <area>960,0,30,36</area>

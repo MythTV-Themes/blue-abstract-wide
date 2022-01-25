@@ -66,12 +66,44 @@
 
         <!-- show the plot of the recording -->
         <textarea name="description" from="base_textarea">
-            <area>420,125,805,108</area>
+            <area>420,125,560,108</area>
             <multiline>yes</multiline>
             <scroll direction="vertical" rate="10" />
             <align>left,top</align>
             <template>%"|SUBTITLE|" %%(|ORIGINALAIRDATE|) %%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
+
+        <group name="recordedgroup" depends="recordedmagic">
+            <textarea name="recordedmagic">
+                <template>%recordedpercent%</template>
+            </textarea>
+            <area>1000,185,220,20</area>
+            <progressbar name="recordedprogressbar" from="base_progressbar">
+                <area>0,0,100%,100%</area>
+            </progressbar>
+            <textarea name="recordedpercent" from="base_textarea">
+                <area>0,0,100%,100%</area>
+                <font>test_small</font>
+                <align>hcenter,vcenter</align>
+                <template>%|recordedpercent|%% recorded</template>
+            </textarea>
+        </group>
+
+        <group name="wachedgroup" depends="watchedmagic">
+            <textarea name="watchedmagic">
+                <template>%watchedpercent%</template>
+            </textarea>
+            <area>1000,215,220,20</area>
+            <progressbar name="watchedprogressbar" from="base_progressbar">
+                <area>0,0,100%,100%</area>
+            </progressbar>
+            <textarea name="watchedpercent" from="base_textarea">
+                <area>0,0,100%,100%</area>
+                <font>test_small</font>
+                <align>hcenter,vcenter</align>
+                <template>%|watchedpercent|%% watched</template>
+            </textarea>
+        </group>
 
         <shape name="recording_icon_separator" from="base_background_shape">
             <area>985,1,1,109</area>
