@@ -273,7 +273,7 @@
         </shape>
 
         <textarea name="title">
-            <area>235,607,380,36</area>
+            <area>235,607,260,36</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
@@ -281,8 +281,13 @@
             <font>text</font>
         </textarea>
         
+        <textarea name="recordedtime" from="title">
+            <area>505,607,260,36</area>
+            <align>hcenter,vcenter</align>
+        </textarea>
+
         <textarea name="description" from="title">
-            <area>640,607,395,36</area>
+            <area>775,607,260,36</area>
             <align>right,vcenter</align>
             <template>%DESCRIPTION% %VALUE%%UNITS%</template>
         </textarea>
