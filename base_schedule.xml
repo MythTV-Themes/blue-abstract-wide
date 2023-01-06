@@ -128,7 +128,6 @@
         <textarea name="timedate" from="base_textarea">
             <area>900,10,320,36</area>
             <align>right,vcenter</align>
-            <cutdown>yes</cutdown>
         </textarea>
         <textarea name="rectypestatus" from="base_textarea">
             <area>825,40,400,36</area>
