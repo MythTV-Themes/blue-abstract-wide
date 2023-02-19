@@ -176,11 +176,11 @@
 
         <shape name="lyricslist_background" from="base_background_shape">
             <area>20,50,1240,430</area>
-	</shape>
-	<!-- The lyrics -->
-	<buttonlist name="lyrics_list">
-	    <!--<area>40,68,1200,370</area>-->
-	    <area>40,68,1200,400</area>
+        </shape>
+        <!-- The lyrics -->
+        <buttonlist name="lyrics_list">
+            <!--<area>40,68,1200,370</area>-->
+            <area>40,68,1200,400</area>
             <buttonarea>0,0,115,400</buttonarea>
             <spacing>0</spacing>
             <layout>vertical</layout>
@@ -208,17 +208,17 @@
                 </state>
             </statetype>
         </buttonlist>
-	<statetype name="loading_state">
+        <statetype name="loading_state">
             <position>587,167</position>
             <state name="off"></state>
             <state name="on">
-		<imagetype name="animation" from="base_icon_selected">
-		    <filename>images/icons/processing.png</filename>
-		    <area>4,4,28,28</area>
-		    <alphapulse min="100" max="220" change="2"/>
-		</imagetype>
+                <imagetype name="animation" from="base_icon_selected">
+                    <filename>images/icons/processing.png</filename>
+                    <area>4,4,28,28</area>
+                    <alphapulse min="100" max="220" change="2"/>
+                </imagetype>
             </state>
-	</statetype>
+        </statetype>
 
         <textarea name="status_text" from="basetextarea">
             <area>100,280,1080,50</area>
@@ -226,7 +226,7 @@
             <align>center</align>
         </textarea>
 
-	<!-- From here is as playlist view -->
+        <!-- From here is as playlist view -->
 
         <!-- The currently playing track, time, song count
              and other status information about the playlist -->
