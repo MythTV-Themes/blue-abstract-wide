@@ -273,7 +273,7 @@
         </shape>
 
         <textarea name="title">
-            <area>235,607,260,36</area>
+            <area>235,607,380,36</area>
             <align>left,vcenter</align>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
@@ -281,15 +281,10 @@
             <font>text</font>
         </textarea>
         
-        <textarea name="recordedtime" from="title">
-            <area>505,607,260,36</area>
-            <align>hcenter,vcenter</align>
-        </textarea>
-
         <textarea name="description" from="title">
-            <area>775,607,260,36</area>
+            <area>640,607,395,36</area>
             <align>right,vcenter</align>
-            <template>%DESCRIPTION% %VALUE%%UNITS%</template>
+            <template>%PLAYEDTIME% of %TOTALTIME% %(|REMAININGTIME| remaining)%%(|BEHINDTIME| behind)%</template>
         </textarea>
 
         <progressbar name="position">
@@ -358,7 +353,7 @@
         <textarea name="starttime" from="title">
             <area>120,495,400,36</area>
             <font>text</font>
-            <template>%STARTTIME%-%ENDTIME% : %LENMINS%</template>
+            <template>%STARTDATE% %STARTTIME%-%ENDTIME% : %LENMINS%</template>
         </textarea>
 
         <!-- separates the title and channel and the 
