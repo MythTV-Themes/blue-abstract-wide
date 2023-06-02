@@ -284,7 +284,7 @@
         <textarea name="description" from="title">
             <area>640,607,395,36</area>
             <align>right,vcenter</align>
-            <template>%PLAYEDTIME% of %TOTALTIME% %(|REMAININGTIME| remaining)%%(|BEHINDTIME| behind)%</template>
+            <template>%DESCRIPTION%% |VALUE%%UNITS%% (|REMAININGTIME| remaining)%% (|BEHINDTIME| behind)%</template>
         </textarea>
 
         <progressbar name="position">
